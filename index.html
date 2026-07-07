@@ -5,345 +5,447 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>북한산 연구 논문 아카이브</title>
 <style>
-:root {
-  --primary: #2d6a4f;
-  --primary-light: #52b788;
-  --secondary: #40916c;
-  --bg: #f4f6f8;
-  --border: #d1d5db;
-  --text: #111827;
-  --muted: #6b7280;
-  --cat-resource: #2563eb;
-  --cat-disaster: #dc2626;
-  --cat-tour: #d97706;
-  --cat-ecology: #059669;
-  --cat-history: #7c3aed;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: var(--bg); color: var(--text);
-  height: 100vh; display: flex; flex-direction: column; overflow: hidden;
-}
-header {
-  background: var(--primary); color: #fff;
-  padding: 12px 20px; display: flex; align-items: center;
-  justify-content: space-between; flex-shrink: 0;
-  border-bottom: 2px solid rgba(0,0,0,0.15);
-}
-.h-title { font-size: 18px; font-weight: 700; }
-.h-sub { font-size: 11px; opacity: 0.75; margin-top: 1px; }
-.h-stats { display: flex; gap: 24px; }
-.stat { text-align: right; }
-.stat-num { font-size: 22px; font-weight: 700; line-height: 1.1; }
-.stat-label { font-size: 10px; opacity: 0.75; }
-.body-wrap {
-  display: grid; grid-template-columns: 320px 1fr;
-  flex: 1; overflow: hidden;
-}
-/* 사이드바 */
-.sidebar {
-  background: #fff; border-right: 1px solid var(--border);
-  display: flex; flex-direction: column; overflow: hidden;
-}
-.sb-top { padding: 12px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
-.search-row { display: flex; gap: 6px; margin-bottom: 10px; }
-.search-input {
-  flex: 1; padding: 7px 10px; border: 1px solid var(--border);
-  border-radius: 6px; font-size: 13px; outline: none;
-}
-.search-input:focus { border-color: var(--primary-light); }
-.btn {
-  padding: 7px 13px; background: var(--primary); color: #fff;
-  border: none; border-radius: 6px; font-size: 12px;
-  font-weight: 600; cursor: pointer;
-}
-.btn:hover { background: var(--secondary); }
-.cat-tabs { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
-.cat-btn {
-  padding: 4px 10px; border: 1px solid var(--border);
-  border-radius: 4px; background: #fff; font-size: 11px;
-  font-weight: 600; cursor: pointer; color: var(--text);
-  transition: all 0.12s;
-}
-.cat-btn.active-all  { background: var(--primary); border-color: var(--primary); color: #fff; }
-.cat-btn.active-res  { background: var(--cat-resource); border-color: var(--cat-resource); color: #fff; }
-.cat-btn.active-dis  { background: var(--cat-disaster); border-color: var(--cat-disaster); color: #fff; }
-.cat-btn.active-tour { background: var(--cat-tour); border-color: var(--cat-tour); color: #fff; }
-.cat-btn.active-eco  { background: var(--cat-ecology); border-color: var(--cat-ecology); color: #fff; }
-.cat-btn.active-hist { background: var(--cat-history); border-color: var(--cat-history); color: #fff; }
-.status-bar {
-  display: flex; align-items: center; gap: 6px;
-  padding: 5px 9px; border-radius: 5px;
-  font-size: 11px; border: 1px solid;
-}
-.status-bar.ok   { background: #f0fdf4; border-color: #bbf7d0; color: #166534; }
-.status-bar.warn { background: #fefce8; border-color: #fde68a; color: #92400e; }
-.status-bar.err  { background: #fef2f2; border-color: #fecaca; color: #991b1b; }
-.dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-.dot.ok  { background: #059669; }
-.dot.warn{ background: #f59e0b; }
-.dot.err { background: #dc2626; }
-.paper-list { flex: 1; overflow-y: auto; padding: 10px; }
-.paper-card {
-  background: #fff; border: 1px solid var(--border);
-  border-radius: 7px; padding: 11px 12px 10px;
-  margin-bottom: 8px; cursor: pointer; transition: border-color 0.12s;
-}
-.paper-card:hover { border-color: var(--primary-light); }
-.paper-card.sel { border-left: 3px solid var(--primary); border-color: var(--primary); }
-.badge {
-  display: inline-block; padding: 2px 7px; border-radius: 3px;
-  font-size: 10px; font-weight: 700; color: #fff; margin-bottom: 5px;
-}
-.badge-자원조사 { background: var(--cat-resource); }
-.badge-재난    { background: var(--cat-disaster); }
-.badge-탐방    { background: var(--cat-tour); }
-.badge-생태    { background: var(--cat-ecology); }
-.badge-역사문화 { background: var(--cat-history); }
-.p-title { font-size: 12px; font-weight: 600; line-height: 1.45; margin-bottom: 4px; }
-.p-meta  { font-size: 10px; color: var(--muted); margin-bottom: 4px; }
-.p-summary {
-  font-size: 11px; color: var(--muted); line-height: 1.5;
-  display: -webkit-box; -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical; overflow: hidden;
-}
-.empty-msg {
-  text-align: center; padding: 40px 20px;
-  color: var(--muted); font-size: 13px;
-}
-/* 상세 패널 */
-.detail-panel {
-  background: #fff; overflow-y: auto; padding: 22px 26px;
-}
-.detail-empty {
-  height: 100%; display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  color: var(--muted); font-size: 13px; gap: 8px;
-}
-.detail-empty-icon { font-size: 32px; opacity: 0.25; }
-.d-title { font-size: 17px; font-weight: 700; line-height: 1.4; margin: 8px 0 14px; }
-.d-meta-grid {
-  display: grid; grid-template-columns: repeat(3,1fr);
-  gap: 8px; padding: 10px 12px; background: var(--bg);
-  border: 1px solid var(--border); border-radius: 7px; margin-bottom: 16px;
-}
-.d-meta-item label { font-size: 10px; color: var(--muted); display: block; margin-bottom: 2px; }
-.d-meta-item span  { font-size: 12px; font-weight: 500; }
-.d-section {
-  font-size: 12px; font-weight: 700; color: var(--primary);
-  border-bottom: 1px solid var(--border); padding-bottom: 3px; margin-bottom: 9px;
-}
-.d-summary { font-size: 13px; line-height: 1.8; margin-bottom: 16px; }
-.chip-row { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 16px; }
-.chip-kw {
-  padding: 3px 9px; background: #f3f4f6;
-  border: 1px solid var(--border); border-radius: 4px; font-size: 11px;
-}
-.btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
-.btn-riss {
-  display: inline-block; padding: 8px 18px;
-  background: var(--primary); color: #fff; border: none;
-  border-radius: 6px; font-size: 12px; font-weight: 600;
-  text-decoration: none; cursor: pointer;
-}
-.btn-riss:hover { background: var(--secondary); }
-.btn-riss.secondary {
-  background: #fff; color: var(--primary);
-  border: 1px solid var(--primary);
-}
-.btn-riss.secondary:hover { background: #f0fdf4; }
-.loading {
-  display: flex; align-items: center; justify-content: center;
-  height: 100%; color: var(--muted); font-size: 13px; gap: 8px;
-}
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', sans-serif; background: #f4f6f9; color: #222; }
+
+  /* 헤더 */
+  header {
+    background: #1a5c38;
+    color: white;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header h1 { font-size: 18px; font-weight: 700; }
+  header p { font-size: 11px; opacity: 0.75; margin-top: 2px; }
+  .header-stats { display: flex; gap: 24px; text-align: right; }
+  .stat-item { display: flex; flex-direction: column; align-items: center; }
+  .stat-num { font-size: 22px; font-weight: 700; }
+  .stat-label { font-size: 10px; opacity: 0.75; }
+
+  /* 검색바 */
+  .search-bar {
+    background: white;
+    border-bottom: 1px solid #ddd;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .search-bar input {
+    flex: 1;
+    min-width: 200px;
+    padding: 8px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+  }
+  .search-bar input:focus { border-color: #1a5c38; }
+  .search-bar button {
+    padding: 8px 18px;
+    background: #1a5c38;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  /* 필터 태그 */
+  .filter-bar {
+    background: white;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .filter-btn {
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: white;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .filter-btn:hover { border-color: #1a5c38; color: #1a5c38; }
+  .filter-btn.active { background: #1a5c38; color: white; border-color: #1a5c38; }
+
+  /* 상태 메시지 */
+  .status-bar {
+    padding: 8px 20px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .status-bar.success { background: #f0fdf4; color: #166534; }
+  .status-bar.error { background: #fef2f2; color: #991b1b; }
+  .status-bar.loading { background: #eff6ff; color: #1d4ed8; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+
+  /* 메인 레이아웃 */
+  .main { display: flex; height: calc(100vh - 160px); overflow: hidden; }
+
+  /* 논문 목록 */
+  .paper-list {
+    width: 300px;
+    min-width: 260px;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+    background: white;
+  }
+  .paper-count {
+    padding: 10px 16px;
+    font-size: 12px;
+    color: #666;
+    border-bottom: 1px solid #eee;
+    background: #fafafa;
+  }
+  .paper-item {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background 0.1s;
+  }
+  .paper-item:hover { background: #f5f9f6; }
+  .paper-item.selected { background: #e8f5ee; border-left: 3px solid #1a5c38; }
+  .paper-cat {
+    display: inline-block;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+  .cat-자원조사 { background: #2563eb; }
+  .cat-재난 { background: #dc2626; }
+  .cat-탐방 { background: #d97706; }
+  .cat-생태 { background: #16a34a; }
+  .cat-역사문화 { background: #7c3aed; }
+
+  .paper-title {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 4px;
+    color: #111;
+  }
+  .paper-meta { font-size: 11px; color: #888; }
+
+  /* 상세 보기 */
+  .paper-detail {
+    flex: 1;
+    overflow-y: auto;
+    padding: 28px 32px;
+    background: #fafafa;
+  }
+  .detail-placeholder {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    gap: 12px;
+  }
+  .detail-placeholder svg { width: 48px; height: 48px; opacity: 0.3; }
+
+  .detail-cat {
+    display: inline-block;
+    font-size: 11px;
+    padding: 3px 12px;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .detail-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.4;
+    margin-bottom: 18px;
+  }
+  .detail-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1px;
+    background: #ddd;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .detail-info-cell {
+    background: white;
+    padding: 12px 16px;
+  }
+  .detail-info-cell .label { font-size: 11px; color: #888; margin-bottom: 4px; }
+  .detail-info-cell .value { font-size: 14px; font-weight: 500; color: #222; }
+
+  .detail-section { margin-bottom: 20px; }
+  .detail-section h3 {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #eee;
+  }
+  .detail-abstract {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #333;
+    background: white;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+  }
+  .detail-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .detail-tag {
+    padding: 4px 12px;
+    background: #f3f4f6;
+    border-radius: 12px;
+    font-size: 12px;
+    color: #444;
+  }
+  .btn-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+  .btn-primary {
+    padding: 10px 22px;
+    background: #1a5c38;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .btn-secondary {
+    padding: 10px 22px;
+    background: white;
+    color: #1a5c38;
+    border: 2px solid #1a5c38;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: #145030; }
+  .btn-secondary:hover { background: #f0fdf4; }
+
+  .empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #aaa;
+    font-size: 14px;
+  }
+
+  /* 스크롤바 */
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: #f1f1f1; }
+  ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
 </style>
 </head>
 <body>
 
 <header>
   <div>
-    <div class="h-title">북한산 연구 논문 아카이브</div>
-    <div class="h-sub">Bukhansan National Park Research Archive</div>
+    <h1>북한산 연구 논문 아카이브</h1>
+    <p>Bukhansan National Park Research Archive</p>
   </div>
-  <div class="h-stats">
-    <div class="stat">
-      <div class="stat-num" id="cntTotal">0</div>
-      <div class="stat-label">총 논문</div>
+  <div class="header-stats">
+    <div class="stat-item">
+      <span class="stat-num" id="totalCount">-</span>
+      <span class="stat-label">총 논문</span>
     </div>
-    <div class="stat">
-      <div class="stat-num">5</div>
-      <div class="stat-label">분야</div>
+    <div class="stat-item">
+      <span class="stat-num" id="categoryCount">-</span>
+      <span class="stat-label">분야</span>
     </div>
   </div>
 </header>
 
-<div class="body-wrap">
-  <aside class="sidebar">
-    <div class="sb-top">
-      <div class="search-row">
-        <input type="text" class="search-input" id="searchInput"
-          placeholder="제목, 저자, 키워드 검색..."
-          onkeydown="if(event.key==='Enter') doSearch()">
-        <button class="btn" onclick="doSearch()">검색</button>
-      </div>
-      <div class="cat-tabs">
-        <button class="cat-btn active-all"  onclick="setCat('전체',this)">전체</button>
-        <button class="cat-btn"             onclick="setCat('자원조사',this)">자원조사</button>
-        <button class="cat-btn"             onclick="setCat('재난',this)">재난</button>
-        <button class="cat-btn"             onclick="setCat('탐방',this)">탐방</button>
-        <button class="cat-btn"             onclick="setCat('생태',this)">생태</button>
-        <button class="cat-btn"             onclick="setCat('역사문화',this)">역사문화</button>
-      </div>
-      <div class="status-bar warn" id="statusBar">
-        <div class="dot warn" id="statusDot"></div>
-        <span id="statusMsg">데이터 불러오는 중...</span>
-      </div>
-    </div>
-    <div class="paper-list" id="paperList">
-      <div class="loading">논문 목록을 불러오는 중...</div>
-    </div>
-  </aside>
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="제목, 저자, 키워드 검색..." oninput="renderList()">
+  <button onclick="renderList()">검색</button>
+</div>
 
-  <div class="detail-panel" id="detailPanel">
-    <div class="detail-empty" id="detailEmpty">
-      <div class="detail-empty-icon">&#128196;</div>
-      <div>왼쪽 목록에서 논문을 선택하면 상세 내용이 표시됩니다</div>
+<div class="filter-bar">
+  <button class="filter-btn active" data-cat="전체" onclick="setFilter('전체', this)">전체</button>
+  <button class="filter-btn" data-cat="자원조사" onclick="setFilter('자원조사', this)">자원조사</button>
+  <button class="filter-btn" data-cat="재난" onclick="setFilter('재난', this)">재난</button>
+  <button class="filter-btn" data-cat="탐방" onclick="setFilter('탐방', this)">탐방</button>
+  <button class="filter-btn" data-cat="생태" onclick="setFilter('생태', this)">생태</button>
+  <button class="filter-btn" data-cat="역사문화" onclick="setFilter('역사문화', this)">역사문화</button>
+</div>
+
+<div id="statusBar" class="status-bar loading">
+  <span class="dot"></span>
+  <span id="statusMsg">논문 데이터 불러오는 중...</span>
+</div>
+
+<div class="main">
+  <div class="paper-list">
+    <div class="paper-count" id="paperCount">0건</div>
+    <div id="paperListBody"></div>
+  </div>
+  <div class="paper-detail" id="paperDetail">
+    <div class="detail-placeholder">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+      </svg>
+      <span>왼쪽 목록에서 논문을 선택하세요</span>
     </div>
-    <div id="detailContent" style="display:none;"></div>
   </div>
 </div>
 
 <script>
-var allPapers = [];
-var filtered  = [];
-var currentCat = '전체';
-var currentQuery = '';
-var selectedId = null;
+let allPapers = [];
+let currentFilter = '전체';
+let selectedId = null;
 
-var CAT_ACTIVE = {
-  '전체':'active-all', '자원조사':'active-res',
-  '재난':'active-dis', '탐방':'active-tour',
-  '생태':'active-eco', '역사문화':'active-hist'
+const CAT_COLORS = {
+  '자원조사': '#2563eb',
+  '재난': '#dc2626',
+  '탐방': '#d97706',
+  '생태': '#16a34a',
+  '역사문화': '#7c3aed'
 };
 
-function setStatus(type, msg) {
-  var bar = document.getElementById('statusBar');
-  var dot = document.getElementById('statusDot');
-  bar.className = 'status-bar ' + type;
-  dot.className = 'dot ' + type;
-  document.getElementById('statusMsg').textContent = msg;
+async function loadPapers() {
+  const statusBar = document.getElementById('statusBar');
+  const statusMsg = document.getElementById('statusMsg');
+
+  try {
+    const res = await fetch('papers.json?t=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+
+    if (!Array.isArray(data) || data.length === 0) {
+      throw new Error('논문 데이터 없음');
+    }
+
+    allPapers = data;
+
+    statusBar.className = 'status-bar success';
+    statusMsg.textContent = 'RISS 데이터 로드 완료 — ' + allPapers.length + '건';
+
+    document.getElementById('totalCount').textContent = allPapers.length;
+    const cats = new Set(allPapers.map(p => p.category));
+    document.getElementById('categoryCount').textContent = cats.size;
+
+    renderList();
+
+  } catch (e) {
+    statusBar.className = 'status-bar error';
+    statusMsg.textContent = '데이터 로드 실패 — ' + e.message;
+  }
 }
 
-function loadPapers() {
-  fetch('papers.json?v=' + Date.now())
-    .then(function(r) {
-      if (!r.ok) throw new Error('papers.json 없음 (HTTP ' + r.status + ')');
-      return r.json();
-    })
-    .then(function(data) {
-      allPapers = data;
-      setStatus('ok', 'RISS 데이터 로드 완료 — ' + data.length + '편');
-      applyFilter();
-    })
-    .catch(function(e) {
-      setStatus('err', '데이터 없음 — GitHub Actions 실행 필요');
-      document.getElementById('paperList').innerHTML =
-        '<div class="empty-msg">papers.json이 아직 없습니다.<br>' +
-        'GitHub Actions 탭에서 Fetch RISS Papers를 실행하세요.</div>';
-    });
+function setFilter(cat, btn) {
+  currentFilter = cat;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderList();
 }
 
-function renderList(papers) {
-  filtered = papers;
-  var list = document.getElementById('paperList');
-  document.getElementById('cntTotal').textContent = papers.length;
+function getFiltered() {
+  const q = document.getElementById('searchInput').value.trim().toLowerCase();
+  return allPapers.filter(p => {
+    const catOk = currentFilter === '전체' || p.category === currentFilter;
+    if (!catOk) return false;
+    if (!q) return true;
+    return (
+      (p.title || '').toLowerCase().includes(q) ||
+      (p.authors || '').toLowerCase().includes(q) ||
+      (p.abstract || '').toLowerCase().includes(q) ||
+      (p.journal || '').toLowerCase().includes(q)
+    );
+  });
+}
 
-  if (!papers.length) {
-    list.innerHTML = '<div class="empty-msg">검색 결과가 없습니다</div>';
+function renderList() {
+  const filtered = getFiltered();
+  const body = document.getElementById('paperListBody');
+  document.getElementById('paperCount').textContent = filtered.length + '건';
+
+  if (filtered.length === 0) {
+    body.innerHTML = '<div class="empty-state">검색 결과가 없습니다</div>';
     return;
   }
 
-  list.innerHTML = papers.map(function(p) {
-    return '<div class="paper-card' + (selectedId === p.id ? ' sel' : '') +
-      '" onclick="selectPaper(' + p.id + ')">'  +
-      '<span class="badge badge-' + p.category + '">' + p.category + '</span>' +
-      '<div class="p-title">' + escHtml(p.title) + '</div>' +
-      '<div class="p-meta">' + escHtml(p.author || '저자 미상') +
-        (p.year ? ' · ' + p.year : '') +
-        (p.journal ? ' · ' + escHtml(p.journal) : '') + '</div>' +
-      '<div class="p-summary">' + escHtml(p.summary) + '</div>' +
-      '</div>';
-  }).join('');
+  body.innerHTML = filtered.map(p => `
+    <div class="paper-item ${selectedId === p.id ? 'selected' : ''}" onclick="selectPaper('${p.id}')">
+      <span class="paper-cat cat-${p.category}">${p.category}</span>
+      <div class="paper-title">${p.title}</div>
+      <div class="paper-meta">${p.authors || '저자 미상'} · ${p.year || '-'}</div>
+    </div>
+  `).join('');
 }
 
 function selectPaper(id) {
   selectedId = id;
-  var paper = allPapers.find(function(p){ return p.id === id; });
-  if (!paper) return;
+  renderList();
 
-  document.getElementById('detailEmpty').style.display = 'none';
-  var content = document.getElementById('detailContent');
-  content.style.display = 'block';
+  const p = allPapers.find(x => x.id === id);
+  if (!p) return;
 
-  var kwHtml = (paper.keywords || []).map(function(k){
-    return '<span class="chip-kw">' + escHtml(k) + '</span>';
-  }).join('');
+  const color = CAT_COLORS[p.category] || '#2563eb';
+  const detail = document.getElementById('paperDetail');
 
-  content.innerHTML =
-    '<span class="badge badge-' + paper.category + '" style="font-size:11px;">' + paper.category + '</span>' +
-    '<h2 class="d-title">' + escHtml(paper.title) + '</h2>' +
-    '<div class="d-meta-grid">' +
-      '<div class="d-meta-item"><label>저자</label><span>' + escHtml(paper.author || '미상') + '</span></div>' +
-      '<div class="d-meta-item"><label>발행연도</label><span>' + (paper.year || '–') + '</span></div>' +
-      '<div class="d-meta-item"><label>학술지</label><span>' + escHtml(paper.journal || '–') + '</span></div>' +
-    '</div>' +
-    '<div class="d-section">논문 요약</div>' +
-    '<div class="d-summary">' + escHtml(paper.summary) + '</div>' +
-    (kwHtml ? '<div class="d-section">키워드</div><div class="chip-row">' + kwHtml + '</div>' : '') +
-    '<div class="btn-row">' +
-      '<a href="' + paper.rissUrl + '" target="_blank" class="btn-riss">RISS에서 보기</a>' +
-    '</div>';
+  const fullTextBtn = p.full_text_url
+    ? `<a class="btn-primary" href="${p.full_text_url}" target="_blank">원문 보기</a>`
+    : '';
 
-  document.querySelectorAll('.paper-card').forEach(function(el, i) {
-    el.classList.toggle('sel', filtered[i] && filtered[i].id === id);
-  });
+  const rissBtn = p.riss_url
+    ? `<a class="btn-secondary" href="${p.riss_url}" target="_blank">RISS에서 보기</a>`
+    : '';
+
+  detail.innerHTML = `
+    <span class="detail-cat" style="background:${color}">${p.category}</span>
+    <div class="detail-title">${p.title}</div>
+
+    <div class="detail-info-grid">
+      <div class="detail-info-cell">
+        <div class="label">저자</div>
+        <div class="value">${p.authors || '미상'}</div>
+      </div>
+      <div class="detail-info-cell">
+        <div class="label">발행연도</div>
+        <div class="value">${p.year || '-'}</div>
+      </div>
+      <div class="detail-info-cell">
+        <div class="label">학술지</div>
+        <div class="value">${p.journal || '-'}</div>
+      </div>
+    </div>
+
+    ${p.abstract ? `
+    <div class="detail-section">
+      <h3>논문 요약</h3>
+      <div class="detail-abstract">${p.abstract}</div>
+    </div>` : ''}
+
+    <div class="detail-section">
+      <div class="btn-row">
+        ${fullTextBtn}
+        ${rissBtn}
+      </div>
+    </div>
+  `;
 }
 
-function setCat(cat, btn) {
-  currentCat = cat;
-  document.querySelectorAll('.cat-btn').forEach(function(b){ b.className = 'cat-btn'; });
-  btn.classList.add(CAT_ACTIVE[cat] || 'active-all');
-  applyFilter();
-}
-
-function doSearch() {
-  currentQuery = document.getElementById('searchInput').value.trim();
-  applyFilter();
-}
-
-function applyFilter() {
-  var q = currentQuery.toLowerCase();
-  var result = allPapers.filter(function(p) {
-    var catOk = currentCat === '전체' || p.category === currentCat;
-    var srcOk = !q ||
-      p.title.toLowerCase().includes(q) ||
-      (p.author || '').toLowerCase().includes(q) ||
-      (p.keywords || []).some(function(k){ return k.toLowerCase().includes(q); });
-    return catOk && srcOk;
-  });
-  renderList(result);
-}
-
-function escHtml(s) {
-  return String(s || '')
-    .replace(/&/g,'&amp;')
-    .replace(/</g,'&lt;')
-    .replace(/>/g,'&gt;')
-    .replace(/"/g,'&quot;');
-}
-
-window.onload = loadPapers;
+loadPapers();
 </script>
 </body>
 </html>
