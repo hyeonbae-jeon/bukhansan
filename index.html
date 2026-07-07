@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>북한산 연구 논문 아카이브</title>
-
-    <!-- ══════════════════════════════════════════════════════════════
-         [API 키 입력 위치 1] 카카오맵 API 키
-         아래 appkey= 뒤 값을 카카오 JavaScript 키로 교체하세요.
-    ══════════════════════════════════════════════════════════════ -->
+    <!--
+    ★★★ 카카오맵 API 키 위치 ★★★
+    아래 appkey= 뒤의 값을 카카오 JavaScript 키로 교체하세요.
+    -->
     <script type="text/javascript"
         src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9ec077ea84b6a8e3b5842e18758b00e1&libraries=services,clusterer">
     </script>
-
     <style>
         :root {
             --primary: #2d6a4f;
@@ -32,47 +30,27 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
+            background: var(--bg); color: var(--text);
+            height: 100vh; display: flex; flex-direction: column; overflow: hidden;
         }
         header {
-            background: var(--primary);
-            color: #fff;
-            padding: 12px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-shrink: 0;
+            background: var(--primary); color: #fff;
+            padding: 12px 20px; display: flex; align-items: center;
+            justify-content: space-between; flex-shrink: 0;
             border-bottom: 2px solid rgba(0,0,0,0.15);
         }
-        .header-title { font-size: 18px; font-weight: 700; letter-spacing: -0.3px; }
+        .header-title { font-size: 18px; font-weight: 700; }
         .header-sub { font-size: 11px; opacity: 0.75; margin-top: 1px; }
         .header-stats { display: flex; gap: 24px; }
         .stat { text-align: right; }
         .stat-num { font-size: 22px; font-weight: 700; line-height: 1.1; }
         .stat-label { font-size: 10px; opacity: 0.75; }
-        .body-wrap {
-            display: grid;
-            grid-template-columns: 310px 1fr;
-            flex: 1;
-            overflow: hidden;
-        }
+        .body-wrap { display: grid; grid-template-columns: 320px 1fr; flex: 1; overflow: hidden; }
         .sidebar {
-            background: var(--card-bg);
-            border-right: 1px solid var(--border);
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
+            background: var(--card-bg); border-right: 1px solid var(--border);
+            display: flex; flex-direction: column; overflow: hidden;
         }
-        .sidebar-top {
-            padding: 12px;
-            border-bottom: 1px solid var(--border);
-            flex-shrink: 0;
-        }
+        .sidebar-top { padding: 12px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
         .search-row { display: flex; gap: 6px; margin-bottom: 10px; }
         .search-input {
             flex: 1; padding: 7px 10px; border: 1px solid var(--border);
@@ -81,41 +59,43 @@
         .search-input:focus { border-color: var(--primary-light); }
         .btn {
             padding: 7px 13px; background: var(--primary); color: #fff;
-            border: none; border-radius: 6px; font-size: 12px;
-            font-weight: 600; cursor: pointer;
+            border: none; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer;
         }
         .btn:hover { background: var(--secondary); }
-        .cat-tabs { display: flex; flex-wrap: wrap; gap: 5px; }
+        .btn-sm {
+            padding: 5px 10px; font-size: 11px; background: var(--primary); color: #fff;
+            border: none; border-radius: 5px; font-weight: 600; cursor: pointer;
+        }
+        .btn-sm:hover { background: var(--secondary); }
+        .cat-tabs { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
         .cat-btn {
             padding: 4px 10px; border: 1px solid var(--border);
             border-radius: 4px; background: #fff; font-size: 11px;
             font-weight: 600; cursor: pointer; color: var(--text);
-            transition: background 0.12s, border-color 0.12s, color 0.12s;
         }
-        .cat-btn:hover { border-color: var(--primary-light); }
-        .cat-btn.active-all    { background: var(--primary);       border-color: var(--primary);       color: #fff; }
-        .cat-btn.active-res    { background: var(--cat-resource);  border-color: var(--cat-resource);  color: #fff; }
-        .cat-btn.active-dis    { background: var(--cat-disaster);  border-color: var(--cat-disaster);  color: #fff; }
-        .cat-btn.active-tour   { background: var(--cat-tour);      border-color: var(--cat-tour);      color: #fff; }
-        .cat-btn.active-eco    { background: var(--cat-ecology);   border-color: var(--cat-ecology);   color: #fff; }
-        .cat-btn.active-hist   { background: var(--cat-history);   border-color: var(--cat-history);   color: #fff; }
+        .cat-btn.active-all  { background: var(--primary);      border-color: var(--primary);      color: #fff; }
+        .cat-btn.active-res  { background: var(--cat-resource); border-color: var(--cat-resource); color: #fff; }
+        .cat-btn.active-dis  { background: var(--cat-disaster); border-color: var(--cat-disaster); color: #fff; }
+        .cat-btn.active-tour { background: var(--cat-tour);     border-color: var(--cat-tour);     color: #fff; }
+        .cat-btn.active-eco  { background: var(--cat-ecology);  border-color: var(--cat-ecology);  color: #fff; }
+        .cat-btn.active-hist { background: var(--cat-history);  border-color: var(--cat-history);  color: #fff; }
         .riss-bar {
             display: flex; align-items: center; gap: 6px;
-            margin-top: 10px; padding: 6px 10px;
-            background: #fefce8; border: 1px solid #fde68a;
+            padding: 6px 10px; background: #fefce8; border: 1px solid #fde68a;
             border-radius: 6px; font-size: 11px; color: #92400e;
         }
         .dot { width: 7px; height: 7px; border-radius: 50%; background: #f59e0b; flex-shrink: 0; }
         .dot.ok { background: #059669; }
+        .dot.err { background: #dc2626; }
         .paper-list { flex: 1; overflow-y: auto; padding: 10px; }
         .paper-card {
             background: #fff; border: 1px solid var(--border);
             border-radius: 7px; padding: 12px 12px 10px;
-            margin-bottom: 8px; cursor: pointer;
-            transition: border-color 0.12s;
+            margin-bottom: 8px; cursor: pointer; transition: border-color 0.12s;
         }
         .paper-card:hover { border-color: var(--primary-light); }
         .paper-card.sel { border-left: 3px solid var(--primary); border-color: var(--primary); }
+        .paper-card.riss-paper { border-left: 2px solid #e0e7ff; }
         .badge {
             display: inline-block; padding: 2px 7px; border-radius: 3px;
             font-size: 10px; font-weight: 700; color: #fff; margin-bottom: 5px;
@@ -125,6 +105,7 @@
         .badge-탐방    { background: var(--cat-tour); }
         .badge-생태    { background: var(--cat-ecology); }
         .badge-역사문화 { background: var(--cat-history); }
+        .badge-riss { background: #4f46e5; font-size: 9px; margin-left: 4px; }
         .p-title { font-size: 12px; font-weight: 600; line-height: 1.45; margin-bottom: 4px; }
         .p-meta { font-size: 10px; color: var(--text-muted); margin-bottom: 4px; }
         .p-summary {
@@ -133,7 +114,8 @@
             -webkit-box-orient: vertical; overflow: hidden;
         }
         .empty-msg { text-align: center; padding: 40px 20px; color: var(--text-muted); font-size: 13px; }
-        .right-panel { display: grid; grid-template-rows: 1fr 270px; overflow: hidden; }
+        .loading-msg { text-align: center; padding: 20px; color: var(--text-muted); font-size: 12px; }
+        .right-panel { display: grid; grid-template-rows: 1fr 260px; overflow: hidden; }
         .detail-panel {
             background: #fff; border-bottom: 1px solid var(--border);
             overflow-y: auto; padding: 18px 22px;
@@ -169,10 +151,10 @@
             display: inline-block; padding: 7px 16px;
             background: var(--primary); color: #fff; border: none;
             border-radius: 6px; font-size: 12px; font-weight: 600;
-            text-decoration: none; cursor: pointer;
+            text-decoration: none; cursor: pointer; margin-right: 8px;
         }
         .btn-riss:hover { background: var(--secondary); }
-        .map-wrap { position: relative; }
+        .map-wrap { position: relative; background: #f0f0f0; }
         .map-topbar {
             position: absolute; top: 0; left: 0; right: 0;
             padding: 6px 14px; background: rgba(255,255,255,0.95);
@@ -181,12 +163,43 @@
             font-size: 11px; color: var(--text-muted);
         }
         .map-topbar strong { color: var(--primary); }
-        #map { width: 100%; height: 100%; }
-        .map-nokey {
+        #map { width: 100%; height: 100%; padding-top: 30px; }
+        .map-error {
             display: flex; flex-direction: column; align-items: center;
-            justify-content: center; height: 100%;
-            background: #f9fafb; color: var(--text-muted); font-size: 12px; gap: 6px;
+            justify-content: center; height: 100%; padding: 16px;
+            background: #fef2f2; color: #7f1d1d; font-size: 12px; gap: 6px; text-align: center;
         }
+        .map-error a { color: #2563eb; }
+
+        /* 논문 추가 모달 */
+        .modal-overlay {
+            display: none; position: fixed; inset: 0;
+            background: rgba(0,0,0,0.5); z-index: 1000;
+            align-items: center; justify-content: center;
+        }
+        .modal-overlay.open { display: flex; }
+        .modal {
+            background: #fff; border-radius: 10px; padding: 24px;
+            width: 520px; max-height: 80vh; overflow-y: auto;
+        }
+        .modal h3 { font-size: 15px; font-weight: 700; margin-bottom: 16px; color: var(--primary); }
+        .form-row { margin-bottom: 12px; }
+        .form-row label { display: block; font-size: 11px; font-weight: 600; color: var(--text-muted); margin-bottom: 4px; }
+        .form-row input, .form-row select, .form-row textarea {
+            width: 100%; padding: 7px 10px; border: 1px solid var(--border);
+            border-radius: 6px; font-size: 12px; outline: none;
+            font-family: inherit;
+        }
+        .form-row textarea { height: 80px; resize: vertical; }
+        .form-row input:focus, .form-row select:focus, .form-row textarea:focus { border-color: var(--primary-light); }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .modal-btns { display: flex; gap: 8px; justify-content: flex-end; margin-top: 16px; }
+        .btn-cancel { padding: 7px 16px; background: #f3f4f6; color: var(--text); border: 1px solid var(--border); border-radius: 6px; font-size: 12px; cursor: pointer; }
+        .loc-add-row { display: flex; gap: 6px; align-items: flex-end; }
+        .loc-add-row input { flex: 1; }
+        .loc-list { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 4px; }
+        .loc-chip { padding: 3px 8px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 4px; font-size: 11px; display: flex; align-items: center; gap: 4px; }
+        .loc-chip button { border: none; background: none; cursor: pointer; color: #ef4444; font-size: 12px; padding: 0; line-height: 1; }
     </style>
 </head>
 <body>
@@ -218,23 +231,26 @@
             <div class="search-row">
                 <input type="text" class="search-input" id="searchInput"
                     placeholder="논문 제목, 저자, 키워드 검색..."
-                    onkeydown="if(event.key='Enter') doSearch()">
+                    onkeydown="if(event.key==='Enter') doSearch()">
                 <button class="btn" onclick="doSearch()">검색</button>
+                <button class="btn" onclick="openAddModal()" title="논문 직접 추가">+</button>
             </div>
             <div class="cat-tabs">
-                <button class="cat-btn active-all" data-cat="전체"    onclick="setCategory('전체',this)">전체</button>
-                <button class="cat-btn"            data-cat="자원조사" onclick="setCategory('자원조사',this)">자원조사</button>
-                <button class="cat-btn"            data-cat="재난"    onclick="setCategory('재난',this)">재난</button>
-                <button class="cat-btn"            data-cat="탐방"    onclick="setCategory('탐방',this)">탐방</button>
-                <button class="cat-btn"            data-cat="생태"    onclick="setCategory('생태',this)">생태</button>
-                <button class="cat-btn"            data-cat="역사문화" onclick="setCategory('역사문화',this)">역사문화</button>
+                <button class="cat-btn active-all" onclick="setCategory('전체',this)">전체</button>
+                <button class="cat-btn" onclick="setCategory('자원조사',this)">자원조사</button>
+                <button class="cat-btn" onclick="setCategory('재난',this)">재난</button>
+                <button class="cat-btn" onclick="setCategory('탐방',this)">탐방</button>
+                <button class="cat-btn" onclick="setCategory('생태',this)">생태</button>
+                <button class="cat-btn" onclick="setCategory('역사문화',this)">역사문화</button>
             </div>
             <div class="riss-bar">
                 <div class="dot" id="rissDot"></div>
                 <span id="rissMsg">RISS 연결 확인 중...</span>
             </div>
         </div>
-        <div class="paper-list" id="paperList"></div>
+        <div class="paper-list" id="paperList">
+            <div class="loading-msg">논문 목록을 불러오는 중...</div>
+        </div>
     </aside>
 
     <div class="right-panel">
@@ -255,168 +271,222 @@
     </div>
 </div>
 
+<!-- 논문 직접 추가 모달 -->
+<div class="modal-overlay" id="addModal">
+    <div class="modal">
+        <h3>논문 직접 추가</h3>
+        <div class="form-grid">
+            <div class="form-row">
+                <label>분야 *</label>
+                <select id="f-cat">
+                    <option value="자원조사">자원조사</option>
+                    <option value="재난">재난</option>
+                    <option value="탐방">탐방</option>
+                    <option value="생태">생태</option>
+                    <option value="역사문화">역사문화</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label>발행연도 *</label>
+                <input type="number" id="f-year" placeholder="2024" min="1900" max="2100">
+            </div>
+        </div>
+        <div class="form-row">
+            <label>논문 제목 *</label>
+            <input type="text" id="f-title" placeholder="논문 제목을 입력하세요">
+        </div>
+        <div class="form-grid">
+            <div class="form-row">
+                <label>저자</label>
+                <input type="text" id="f-author" placeholder="홍길동, 김철수">
+            </div>
+            <div class="form-row">
+                <label>학술지</label>
+                <input type="text" id="f-journal" placeholder="한국산림과학회지">
+            </div>
+        </div>
+        <div class="form-row">
+            <label>논문 요약</label>
+            <textarea id="f-summary" placeholder="논문의 주요 내용을 요약해서 입력하세요"></textarea>
+        </div>
+        <div class="form-row">
+            <label>키워드 (쉼표로 구분)</label>
+            <input type="text" id="f-keywords" placeholder="식물자원, GIS, 보전">
+        </div>
+        <div class="form-row">
+            <label>RISS 또는 원문 링크</label>
+            <input type="url" id="f-url" placeholder="https://www.riss.kr/...">
+        </div>
+        <div class="form-row">
+            <label>조사 위치 추가</label>
+            <div class="loc-add-row">
+                <input type="text" id="f-loc-name" placeholder="위치명 (예: 백운대)">
+                <input type="number" id="f-loc-lat" placeholder="위도 (예: 37.6579)" step="0.0001">
+                <input type="number" id="f-loc-lng" placeholder="경도 (예: 126.9767)" step="0.0001">
+                <button class="btn-sm" onclick="addLocChip()">추가</button>
+            </div>
+            <div class="loc-list" id="locChipList"></div>
+        </div>
+        <div class="modal-btns">
+            <button class="btn-cancel" onclick="closeAddModal()">취소</button>
+            <button class="btn" onclick="submitAddPaper()">저장</button>
+        </div>
+    </div>
+</div>
+
 <script>
-/* ════════════════════════════════════════════════════════════════
-   [API 키 입력 위치 2]  RISS Open API 키
-   아래 변수값을 RISS에서 발급받은 API 키로 교체하세요.
-   발급 주소: https://www.riss.kr/openapi/api-guide.do
-════════════════════════════════════════════════════════════════ */
+/* ════════════════════════════════════════
+   ★★★ RISS API 키 입력 위치 ★★★
+   아래 변수에 RISS에서 발급받은 API 키를 입력하세요.
+   발급: https://www.riss.kr/openapi/api-guide.do
+════════════════════════════════════════ */
 var RISS_API_KEY = '70aaa00wqm60acd00aaa00ab01za378a';
 
-/* ════════════════════════════════════════════════════════════════
-   샘플 논문 데이터 (RISS 연동 전 기본 표시 / 직접 추가 가능)
-════════════════════════════════════════════════════════════════ */
+/* ── 샘플 데이터 (기본 표시용) ── */
 var SAMPLE_PAPERS = [
     {
-        id: 1,
-        title: "북한산국립공원 식물자원 분포 현황 및 보전 방안 연구",
-        author: "김철수, 이영희",
-        year: 2023,
-        journal: "한국산림과학회지",
-        category: "자원조사",
-        summary: "북한산국립공원 내 식물자원 총 1,247종의 분포 현황을 GIS를 활용하여 조사하였다. 주요 식물군락의 분포 패턴과 외래종 침입 현황을 파악하고, 효과적인 보전 전략을 제안하였다. 특히 정상부와 계곡부의 식생 차이가 뚜렷하게 나타났다.",
+        id: 1, title: "북한산국립공원 식물자원 분포 현황 및 보전 방안 연구",
+        author: "김철수, 이영희", year: 2023, journal: "한국산림과학회지",
+        category: "자원조사", isRiss: false,
+        summary: "북한산국립공원 내 식물자원 총 1,247종의 분포 현황을 GIS를 활용하여 조사하였다. 주요 식물군락의 분포 패턴과 외래종 침입 현황을 파악하고, 효과적인 보전 전략을 제안하였다.",
         locations: [
-            { name: "백운대 정상부", lat: 37.6579, lng: 126.9767 },
-            { name: "우이동 계곡",   lat: 37.6521, lng: 127.0089 },
-            { name: "도봉산 정상",   lat: 37.7101, lng: 127.0194 }
+            {name:"백운대 정상부", lat:37.6579, lng:126.9767},
+            {name:"우이동 계곡",   lat:37.6521, lng:127.0089},
+            {name:"도봉산 정상",   lat:37.7101, lng:127.0194}
         ],
         rissUrl: "https://www.riss.kr/search/Search.do?queryText=북한산+식물자원",
-        keywords: ["식물자원", "GIS", "보전", "외래종", "식생"]
+        keywords: ["식물자원","GIS","보전","외래종","식생"]
     },
     {
-        id: 2,
-        title: "북한산 지역 산사태 위험지 분석 및 예측 모델 개발",
-        author: "박민준, 최수연",
-        year: 2022,
-        journal: "대한지질학회지",
-        category: "재난",
+        id: 2, title: "북한산 지역 산사태 위험지 분석 및 예측 모델 개발",
+        author: "박민준, 최수연", year: 2022, journal: "대한지질학회지",
+        category: "재난", isRiss: false,
         summary: "집중호우 시 발생하는 산사태 위험지역을 예측하는 모델을 개발하였다. 지형, 지질, 토양 특성을 종합적으로 분석하여 위험등급을 5단계로 분류하였으며, 북한산 서사면 일대가 가장 높은 위험등급으로 분류되었다.",
         locations: [
-            { name: "북한산 서사면", lat: 37.6612, lng: 126.9690 },
-            { name: "불광천 상류",   lat: 37.6350, lng: 126.9270 }
+            {name:"북한산 서사면", lat:37.6612, lng:126.9690},
+            {name:"불광천 상류",   lat:37.6350, lng:126.9270}
         ],
         rissUrl: "https://www.riss.kr/search/Search.do?queryText=북한산+산사태",
-        keywords: ["산사태", "위험도 분석", "집중호우", "예측모델", "지형분석"]
+        keywords: ["산사태","위험도 분석","집중호우","예측모델","지형분석"]
     },
     {
-        id: 3,
-        title: "북한산 둘레길 탐방객 행동 패턴과 생태계 영향 분석",
-        author: "정혜린, 송태영",
-        year: 2023,
-        journal: "국립공원연구지",
-        category: "탐방",
-        summary: "GPS 트래킹과 설문조사를 통해 탐방객 15,000명의 이동 경로를 분석하였다. 인기 탐방로 주변 토양 답압과 식생 훼손 정도를 측정하고, 용량 관리 방안을 제시하였다. 의상능선과 백운대 루트의 집중도가 가장 높게 나타났다.",
+        id: 3, title: "북한산 둘레길 탐방객 행동 패턴과 생태계 영향 분석",
+        author: "정혜린, 송태영", year: 2023, journal: "국립공원연구지",
+        category: "탐방", isRiss: false,
+        summary: "GPS 트래킹과 설문조사를 통해 탐방객 15,000명의 이동 경로를 분석하였다. 인기 탐방로 주변 토양 답압과 식생 훼손 정도를 측정하고, 용량 관리 방안을 제시하였다.",
         locations: [
-            { name: "의상능선",       lat: 37.6598, lng: 126.9621 },
-            { name: "백운대 탐방로",  lat: 37.6550, lng: 126.9740 },
-            { name: "둘레길 북쪽구간", lat: 37.6720, lng: 127.0050 }
+            {name:"의상능선",       lat:37.6598, lng:126.9621},
+            {name:"백운대 탐방로",  lat:37.6550, lng:126.9740},
+            {name:"둘레길 북쪽구간",lat:37.6720, lng:127.0050}
         ],
         rissUrl: "https://www.riss.kr/search/Search.do?queryText=북한산+탐방객",
-        keywords: ["탐방객", "GPS 트래킹", "생태계 영향", "용량 관리", "탐방로"]
+        keywords: ["탐방객","GPS 트래킹","생태계 영향","용량 관리","탐방로"]
     },
     {
-        id: 4,
-        title: "북한산 야생동물 서식지 현황 및 생태통로 확보 방안",
-        author: "윤성호, 강미래",
-        year: 2021,
-        journal: "한국환경생태학회지",
-        category: "생태",
+        id: 4, title: "북한산 야생동물 서식지 현황 및 생태통로 확보 방안",
+        author: "윤성호, 강미래", year: 2021, journal: "한국환경생태학회지",
+        category: "생태", isRiss: false,
         summary: "적외선 카메라 트랩과 흔적 조사를 통해 북한산 일대 포유류 32종의 서식 현황을 조사하였다. 도시화로 인한 서식지 단편화 문제를 분석하고, 생태통로 설치 우선순위 5개 위치를 제안하였다.",
         locations: [
-            { name: "북한산 북측 완충지역", lat: 37.6800, lng: 127.0000 },
-            { name: "사패산 연결구간",     lat: 37.7150, lng: 127.0300 }
+            {name:"북한산 북측 완충지역",lat:37.6800, lng:127.0000},
+            {name:"사패산 연결구간",     lat:37.7150, lng:127.0300}
         ],
         rissUrl: "https://www.riss.kr/search/Search.do?queryText=북한산+야생동물",
-        keywords: ["야생동물", "서식지", "생태통로", "카메라트랩", "포유류"]
+        keywords: ["야생동물","서식지","생태통로","카메라트랩","포유류"]
     },
     {
-        id: 5,
-        title: "북한산성 성곽 주변 지반 안전성 평가",
-        author: "임동현, 한지수",
-        year: 2022,
-        journal: "문화재보존과학회",
-        category: "역사문화",
+        id: 5, title: "북한산성 성곽 주변 지반 안전성 평가",
+        author: "임동현, 한지수", year: 2022, journal: "문화재보존과학회",
+        category: "역사문화", isRiss: false,
         summary: "북한산성 성곽 주변 지반 안전성을 지구물리탐사와 토질조사로 평가하였다. 동문·북문 일대의 지반 침하 위험이 높게 확인되었으며, 보수 우선순위와 보강 공법을 제안하였다.",
         locations: [
-            { name: "북한산성 동문", lat: 37.6687, lng: 126.9762 },
-            { name: "북한산성 북문", lat: 37.6748, lng: 126.9798 }
+            {name:"북한산성 동문",lat:37.6687, lng:126.9762},
+            {name:"북한산성 북문",lat:37.6748, lng:126.9798}
         ],
         rissUrl: "https://www.riss.kr/search/Search.do?queryText=북한산성+지반",
-        keywords: ["북한산성", "문화재", "지반조사", "안전성", "성곽"]
+        keywords: ["북한산성","문화재","지반조사","안전성","성곽"]
     },
     {
-        id: 6,
-        title: "북한산국립공원 탄소저장량 추정 및 탄소흡수원 기능 평가",
-        author: "조예린, 김태균",
-        year: 2023,
-        journal: "한국임학회지",
-        category: "자원조사",
+        id: 6, title: "북한산국립공원 탄소저장량 추정 및 탄소흡수원 기능 평가",
+        author: "조예린, 김태균", year: 2023, journal: "한국임학회지",
+        category: "자원조사", isRiss: false,
         summary: "원격탐사와 현지 조사를 결합하여 북한산국립공원 전체의 탄소저장량을 추정하였다. 산림의 탄소흡수원 기능이 연간 약 12,500톤CO2eq에 해당하는 것으로 산정되었으며, 낙엽활엽수림의 기여도가 가장 높았다.",
-        locations: [
-            { name: "북한산 중부 산림지대", lat: 37.6600, lng: 126.9750 }
-        ],
+        locations: [{name:"북한산 중부 산림지대",lat:37.6600, lng:126.9750}],
         rissUrl: "https://www.riss.kr/search/Search.do?queryText=북한산+탄소저장",
-        keywords: ["탄소저장량", "원격탐사", "탄소흡수원", "산림", "기후변화"]
+        keywords: ["탄소저장량","원격탐사","탄소흡수원","산림","기후변화"]
     },
     {
-        id: 7,
-        title: "북한산 화강암 지역 토사재해 발생 특성 분석",
-        author: "이재원, 문상훈",
-        year: 2020,
-        journal: "한국방재학회논문집",
-        category: "재난",
+        id: 7, title: "북한산 화강암 지역 토사재해 발생 특성 분석",
+        author: "이재원, 문상훈", year: 2020, journal: "한국방재학회논문집",
+        category: "재난", isRiss: false,
         summary: "북한산 화강암 풍화대에서 발생하는 토사재해의 특성을 현장 조사 및 강우 데이터 분석으로 규명하였다. 선행강우량 및 토양수분 지수가 토사재해 발생과 강한 상관관계를 가지는 것으로 분석되었다.",
         locations: [
-            { name: "우이령 일대",    lat: 37.6750, lng: 127.0050 },
-            { name: "정릉계곡 상류", lat: 37.6400, lng: 126.9870 }
+            {name:"우이령 일대",   lat:37.6750, lng:127.0050},
+            {name:"정릉계곡 상류",lat:37.6400, lng:126.9870}
         ],
         rissUrl: "https://www.riss.kr/search/Search.do?queryText=북한산+토사재해",
-        keywords: ["토사재해", "화강암", "선행강우", "토양수분", "방재"]
+        keywords: ["토사재해","화강암","선행강우","토양수분","방재"]
     }
 ];
 
-/* ── 전역 상태 ─────────────────────────────────────────────── */
-var allPapers  = SAMPLE_PAPERS.slice();
-var filtered   = SAMPLE_PAPERS.slice();
-var currentCat = '전체';
-var currentQuery = '';
-var selectedId = null;
-var map = null;
-var markers = [];
+/* ── 전역 상태 ── */
+var allPapers    = SAMPLE_PAPERS.slice();
+var filtered     = SAMPLE_PAPERS.slice();
+var currentCat   = "전체";
+var currentQuery = "";
+var selectedId   = null;
+var map          = null;
+var markers      = [];
+var openInfoWin  = null;
+var modalLocs    = [];
+var userPaperIdCounter = 100;
 
 var CAT_ACTIVE = {
-    '전체':'active-all','자원조사':'active-res',
-    '재난':'active-dis','탐방':'active-tour',
-    '생태':'active-eco','역사문화':'active-hist'
+    "전체":"active-all","자원조사":"active-res",
+    "재난":"active-dis","탐방":"active-tour",
+    "생태":"active-eco","역사문화":"active-hist"
 };
 
-/* ══════════════════════════════════════════════════════════════
+/* ════════════════════════════════════════
    카카오맵 초기화
-══════════════════════════════════════════════════════════════ */
+════════════════════════════════════════ */
 function initMap() {
+    if (typeof kakao === "undefined" || typeof kakao.maps === "undefined") {
+        showMapError("카카오 SDK를 불러오지 못했습니다.<br>API 키와 도메인 등록을 확인하세요.");
+        return;
+    }
     try {
-        var container = document.getElementById('map');
+        var container = document.getElementById("map");
         map = new kakao.maps.Map(container, {
             center: new kakao.maps.LatLng(37.6600, 126.9800),
             level: 6
         });
-        map.addControl(new kakao.maps.ZoomControl(), kakao.maps.ControlPosition.RIGHT);
+        map.addControl(new kakao.maps.ZoomControl(),    kakao.maps.ControlPosition.RIGHT);
         map.addControl(new kakao.maps.MapTypeControl(), kakao.maps.ControlPosition.TOPRIGHT);
         placeAllMarkers(allPapers);
     } catch(e) {
-        document.getElementById('map').innerHTML =
-            '<div class="map-nokey">' +
-            '<div style="font-size:22px;opacity:0.3;">&#128506;</div>' +
-            '<div>카카오맵을 표시하려면</div>' +
-            '<div>index.html의 <strong>9ec077ea84b6a8e3b5842e18758b00e1</strong>를 실제 키로 교체하세요</div>' +
-            '</div>';
+        showMapError(
+            "카카오맵 초기화 오류: " + e.message + "<br><br>" +
+            "카카오 개발자 콘솔에서 아래 도메인을 등록했는지 확인하세요:<br>" +
+            "<strong>" + location.origin + "</strong><br>" +
+            "경로: 플랫폼 키 → JavaScript 키 → JavaScript SDK 도메인"
+        );
     }
 }
 
-/* ── 마커 관리 ─────────────────────────────────────────────── */
+function showMapError(msg) {
+    document.getElementById("map").innerHTML =
+        "<div class=\"map-error\" style=\"margin-top:30px;\">" +
+        "<div style=\"font-size:22px;opacity:0.4;\">&#128506;</div>" +
+        "<div>" + msg + "</div>" +
+        "</div>";
+}
+
+/* ── 마커 관리 ── */
 function clearMarkers() {
     markers.forEach(function(m){ m.setMap(null); });
     markers = [];
+    if (openInfoWin) { openInfoWin.close(); openInfoWin = null; }
 }
 
 function placeAllMarkers(papers) {
@@ -426,7 +496,7 @@ function placeAllMarkers(papers) {
     papers.forEach(function(p){
         p.locations.forEach(function(loc){ addMarker(loc, p); count++; });
     });
-    document.getElementById('markerMsg').textContent = '마커 ' + count + '개';
+    document.getElementById("markerMsg").textContent = "마커 " + count + "개";
 }
 
 function addMarker(loc, paper) {
@@ -436,137 +506,195 @@ function addMarker(loc, paper) {
         title: loc.name
     });
     var iw = new kakao.maps.InfoWindow({
-        content: '<div style="padding:8px 12px;font-size:12px;max-width:220px;">' +
-            '<b>' + loc.name + '</b><br>' +
-            '<span style="color:#6b7280;font-size:10px;">' + paper.category + ' | ' + paper.year + '</span><br>' +
-            '<span style="font-size:11px;">' + paper.title.slice(0,35) + '...</span>' +
-            '</div>'
+        content: "<div style=\"padding:8px 12px;font-size:12px;max-width:220px;\">" +
+            "<b>" + loc.name + "</b><br>" +
+            "<span style=\"color:#6b7280;font-size:10px;\">" + paper.category + " | " + paper.year + "</span><br>" +
+            "<span style=\"font-size:11px;\">" + paper.title.slice(0,40) + "...</span>" +
+            "</div>",
+        removable: true
     });
-    kakao.maps.event.addListener(marker, 'click', function() {
+    kakao.maps.event.addListener(marker, "click", function() {
+        if (openInfoWin) openInfoWin.close();
         iw.open(map, marker);
+        openInfoWin = iw;
         selectPaper(paper.id);
     });
     markers.push(marker);
 }
 
-function focusMap(lat, lng) {
-    if (!map) return;
+function focusMap(lat, lng, locName) {
+    if (!map) {
+        alert("지도가 로드되지 않았습니다. 카카오맵 API 키 설정을 확인하세요.");
+        return;
+    }
     map.setCenter(new kakao.maps.LatLng(lat, lng));
     map.setLevel(4);
-}
-
-/* ══════════════════════════════════════════════════════════════
-   RISS API 연동
-   ※ CORS 문제로 브라우저 직접 호출이 안 될 경우
-     RISS 원문 보기 링크로 연결되며, 샘플 데이터는 정상 표시됩니다.
-══════════════════════════════════════════════════════════════ */
-function checkRissKey() {
-    /* ── [API 키 입력 위치 2] ──────────────────────────────────
-       위 RISS_API_KEY 변수에 실제 키를 입력하면 이 조건이 통과됩니다.
-    ─────────────────────────────────────────────────────────── */
-    if (!RISS_API_KEY || RISS_API_KEY === 'YOUR_RISS_API_KEY') {
-        setRissStatus(false, 'RISS API 키 미입력 — 샘플 데이터 표시 중');
-        return false;
-    }
-    return true;
-}
-
-async function fetchRISS(query) {
-    if (!checkRissKey()) return null;
-    try {
-        var url = 'https://www.riss.kr/openapi/search' +
-            '?apiKey=' + RISS_API_KEY +
-            '&query=' + encodeURIComponent('북한산 ' + query) +
-            '&start=1&display=30&format=json';
-        var res = await fetch(url);
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        var data = await res.json();
-        setRissStatus(true, 'RISS 연결됨 — ' + (data.total || 0) + '건 조회');
-        return convertRissData(data);
-    } catch(e) {
-        if (e.message.includes('Failed to fetch') || e.message.includes('CORS')) {
-            setRissStatus(false, 'RISS CORS 오류 — 샘플 데이터 표시 중 (키는 정상)');
-        } else {
-            setRissStatus(false, 'RISS 오류: ' + e.message);
+    /* 해당 마커의 인포윈도우 자동 열기 */
+    markers.forEach(function(m){
+        if (m.getTitle() === locName) {
+            kakao.maps.event.trigger(m, "click");
         }
-        return null;
-    }
-}
-
-function convertRissData(data) {
-    if (!data || !data.items) return [];
-    return data.items.map(function(item, i) {
-        return {
-            id: 'riss_' + i,
-            title: item.title || '제목 없음',
-            author: item.author || '저자 미상',
-            year: item.pubYear || '',
-            journal: item.journalName || item.publisher || '',
-            category: autoCategory(item.title + ' ' + (item.keyword || '')),
-            summary: item.abstract || '초록 정보가 없습니다.',
-            locations: autoLocations(item.title + ' ' + (item.abstract || '')),
-            rissUrl: item.link || 'https://www.riss.kr',
-            keywords: (item.keyword || '').split(',').map(function(k){ return k.trim(); }).filter(Boolean)
-        };
     });
 }
 
+/* ════════════════════════════════════════
+   RISS API 연동
+   ★ CORS 우회를 위해 corsproxy.io 사용
+════════════════════════════════════════ */
+function isRissKeyValid() {
+    return RISS_API_KEY && RISS_API_KEY !== "70aaa00wqm60acd00aaa00ab01za378a" && RISS_API_KEY.trim() !== "";
+}
+
+function setRissStatus(state, msg) {
+    var dot = document.getElementById("rissDot");
+    dot.className = "dot" + (state === "ok" ? " ok" : state === "err" ? " err" : "");
+    document.getElementById("rissMsg").textContent = msg;
+}
+
+async function fetchRISS(query) {
+    if (!isRissKeyValid()) {
+        setRissStatus("warn", "RISS API 키 미입력 — 샘플 데이터 표시 중");
+        return null;
+    }
+    setRissStatus("warn", "RISS 검색 중...");
+    try {
+        var rissUrl = "https://www.riss.kr/openapi/search" +
+            "?apiKey=" + RISS_API_KEY +
+            "&query=" + encodeURIComponent("북한산 " + (query || "")) +
+            "&start=1&display=50&format=json";
+
+        /* CORS 우회 프록시 1순위: corsproxy.io */
+        var proxyUrl = "https://corsproxy.io/?" + encodeURIComponent(rissUrl);
+
+        var res = await fetch(proxyUrl, { headers: { "X-Requested-With": "XMLHttpRequest" } });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        var data = await res.json();
+
+        /* RISS 응답 구조 파싱 (result 또는 최상위) */
+        var result = data.result || data;
+        var items  = result.items || result.item || data.items || [];
+        var total  = result.totalCount || result.total || items.length;
+
+        setRissStatus("ok", "RISS 연결됨 — " + total + "건 검색됨");
+        return convertRissData(items);
+    } catch(e) {
+        /* 2순위 프록시 시도 */
+        try {
+            var rissUrl2 = "https://www.riss.kr/openapi/search" +
+                "?apiKey=" + RISS_API_KEY +
+                "&query=" + encodeURIComponent("북한산 " + (query || "")) +
+                "&start=1&display=50&format=json";
+            var proxy2 = "https://api.allorigins.win/raw?url=" + encodeURIComponent(rissUrl2);
+            var res2 = await fetch(proxy2);
+            if (!res2.ok) throw new Error("HTTP " + res2.status);
+            var data2 = await res2.json();
+            var result2 = data2.result || data2;
+            var items2  = result2.items || result2.item || data2.items || [];
+            setRissStatus("ok", "RISS 연결됨 — " + items2.length + "건 검색됨");
+            return convertRissData(items2);
+        } catch(e2) {
+            setRissStatus("err", "RISS 연결 실패 (CORS 오류) — 샘플 데이터 표시 중");
+            return null;
+        }
+    }
+}
+
+function convertRissData(items) {
+    if (!Array.isArray(items)) return [];
+    var result = [];
+    items.forEach(function(item, i) {
+        /* RISS API 필드명 유연하게 처리 */
+        var title   = item.title_name || item.title || item.item_name || "제목 없음";
+        var author  = item.author_name || item.author || item.creator || "저자 미상";
+        var year    = item.pub_year || item.pubYear || item.pub_date || item.year || "";
+        var journal = item.journal_name || item.journalName || item.publisher || item.pub_name || "";
+        var summary = item.abstract || item.content || item.description || "초록 정보가 없습니다.";
+        var url     = item.url || item.link || item.control_no
+            ? ("https://www.riss.kr/link?id=" + (item.control_no || ""))
+            : "https://www.riss.kr";
+        var kwRaw   = item.key_word || item.keyword || item.subject || "";
+        var kw      = kwRaw ? kwRaw.split(/[,;|]/).map(function(k){ return k.trim(); }).filter(Boolean) : [];
+
+        /* 제목 HTML 태그 제거 */
+        title = title.replace(/<[^>]+>/g, "");
+
+        result.push({
+            id: "riss_" + i + "_" + Date.now(),
+            title: title,
+            author: author,
+            year: year ? String(year).slice(0,4) : "",
+            journal: journal,
+            category: autoCategory(title + " " + kwRaw),
+            summary: summary.replace(/<[^>]+>/g, "").slice(0, 300),
+            locations: autoLocations(title + " " + summary),
+            rissUrl: item.url || url,
+            keywords: kw,
+            isRiss: true
+        });
+    });
+    return result;
+}
+
 function autoCategory(text) {
-    if (/산사태|홍수|재난|토사|침수|피해|위험/.test(text)) return '재난';
-    if (/탐방|등산|이용객|방문자|탐방로|관광/.test(text)) return '탐방';
-    if (/식물|동물|조류|곤충|서식지|생태계|군락|종다양/.test(text)) return '생태';
-    if (/문화재|성곽|유적|역사|전통|사찰/.test(text)) return '역사문화';
-    return '자원조사';
+    if (/산사태|홍수|재난|토사|침수|피해|위험|방재|재해/.test(text)) return "재난";
+    if (/탐방|등산|이용객|방문자|탐방로|관광|등반/.test(text))       return "탐방";
+    if (/식물|동물|조류|곤충|서식지|생태계|군락|종다양|버섯|양서/.test(text)) return "생태";
+    if (/문화재|성곽|유적|역사|전통|사찰|사지|고분/.test(text))      return "역사문화";
+    return "자원조사";
 }
 
 var LOC_DB = {
-    '백운대':  {lat:37.6579, lng:126.9767},
-    '인수봉':  {lat:37.6556, lng:126.9782},
-    '만경대':  {lat:37.6571, lng:126.9740},
-    '도봉산':  {lat:37.7101, lng:127.0194},
-    '우이동':  {lat:37.6521, lng:127.0089},
-    '정릉':    {lat:37.6350, lng:126.9870},
-    '북한산성':{lat:37.6700, lng:126.9780},
-    '사패산':  {lat:37.7150, lng:127.0300},
-    '의상능선':{lat:37.6598, lng:126.9621},
-    '진관사':  {lat:37.6458, lng:126.9498}
+    "백운대":  {lat:37.6579, lng:126.9767},
+    "인수봉":  {lat:37.6556, lng:126.9782},
+    "만경대":  {lat:37.6571, lng:126.9740},
+    "노적봉":  {lat:37.6560, lng:126.9750},
+    "도봉산":  {lat:37.7101, lng:127.0194},
+    "우이동":  {lat:37.6521, lng:127.0089},
+    "정릉":    {lat:37.6350, lng:126.9870},
+    "북한산성":{lat:37.6700, lng:126.9780},
+    "사패산":  {lat:37.7150, lng:127.0300},
+    "의상능선":{lat:37.6598, lng:126.9621},
+    "진관사":  {lat:37.6458, lng:126.9498},
+    "불광":    {lat:37.6300, lng:126.9330},
+    "우이령":  {lat:37.6720, lng:127.0070},
+    "삼각산":  {lat:37.6570, lng:126.9770},
+    "형제봉":  {lat:37.6490, lng:126.9540},
+    "구기":    {lat:37.6420, lng:126.9600}
 };
 
 function autoLocations(text) {
     var found = [];
     Object.keys(LOC_DB).forEach(function(name) {
-        if (text.includes(name)) found.push({name:name, lat:LOC_DB[name].lat, lng:LOC_DB[name].lng});
+        if (text.indexOf(name) !== -1) {
+            found.push({name:name, lat:LOC_DB[name].lat, lng:LOC_DB[name].lng});
+        }
     });
-    return found.length ? found : [{name:'북한산 일대', lat:37.6600, lng:126.9800}];
+    return found.length ? found : [{name:"북한산 일대", lat:37.6600, lng:126.9800}];
 }
 
-function setRissStatus(ok, msg) {
-    document.getElementById('rissDot').className = 'dot' + (ok ? ' ok' : '');
-    document.getElementById('rissMsg').textContent = msg;
-}
-
-/* ══════════════════════════════════════════════════════════════
+/* ════════════════════════════════════════
    논문 목록 렌더링
-══════════════════════════════════════════════════════════════ */
+════════════════════════════════════════ */
 function renderList(papers) {
     filtered = papers;
-    var list = document.getElementById('paperList');
+    var list = document.getElementById("paperList");
     if (!papers.length) {
-        list.innerHTML = '<div class="empty-msg">검색 결과가 없습니다</div>';
+        list.innerHTML = "<div class=\"empty-msg\">검색 결과가 없습니다</div>";
     } else {
         list.innerHTML = papers.map(function(p) {
-            return '<div class="paper-card' + (selectedId === p.id ? ' sel' : '') +
-                '" onclick="selectPaper(' + JSON.stringify(p.id) + ')">' +
-                '<span class="badge badge-' + p.category + '">' + p.category + '</span>' +
-                '<div class="p-title">' + p.title + '</div>' +
-                '<div class="p-meta">' + p.author + ' · ' + p.year + ' · ' + p.journal + '</div>' +
-                '<div class="p-summary">' + p.summary + '</div>' +
-                '</div>';
-        }).join('');
+            return "<div class=\"paper-card" + (p.isRiss ? " riss-paper" : "") + (selectedId === p.id ? " sel" : "") +
+                "\" onclick=\"selectPaper(" + JSON.stringify(p.id) + ")\">" +
+                "<span class=\"badge badge-" + p.category + "\">" + p.category + "</span>" +
+                (p.isRiss ? "<span class=\"badge badge-riss\">RISS</span>" : "") +
+                "<div class=\"p-title\">" + p.title + "</div>" +
+                "<div class=\"p-meta\">" + p.author + " · " + p.year + (p.journal ? " · " + p.journal : "") + "</div>" +
+                "<div class=\"p-summary\">" + p.summary + "</div>" +
+                "</div>";
+        }).join("");
     }
-    document.getElementById('cnt-total').textContent = papers.length;
+    document.getElementById("cnt-total").textContent  = papers.length;
     var totalLoc = papers.reduce(function(s,p){ return s + p.locations.length; }, 0);
-    document.getElementById('cnt-loc').textContent = totalLoc;
+    document.getElementById("cnt-loc").textContent = totalLoc;
 }
 
 function selectPaper(id) {
@@ -574,31 +702,34 @@ function selectPaper(id) {
     var paper = allPapers.find(function(p){ return p.id === id; });
     if (!paper) return;
 
-    document.getElementById('detailPlaceholder').style.display = 'none';
-    var content = document.getElementById('detailContent');
-    content.style.display = 'block';
+    document.getElementById("detailPlaceholder").style.display = "none";
+    var content = document.getElementById("detailContent");
+    content.style.display = "block";
     content.innerHTML =
-        '<span class="badge badge-' + paper.category + '" style="font-size:11px;">' + paper.category + '</span>' +
-        '<h2 class="d-title">' + paper.title + '</h2>' +
-        '<div class="d-meta-grid">' +
-            '<div class="d-meta-item"><label>저자</label><span>' + paper.author + '</span></div>' +
-            '<div class="d-meta-item"><label>발행연도</label><span>' + paper.year + '</span></div>' +
-            '<div class="d-meta-item"><label>학술지</label><span>' + paper.journal + '</span></div>' +
-        '</div>' +
-        '<div class="d-section-title">논문 요약</div>' +
-        '<div class="d-summary-text">' + paper.summary + '</div>' +
-        '<div class="d-section-title">조사 위치 (클릭 시 지도 이동)</div>' +
-        '<div class="chip-row">' +
+        "<span class=\"badge badge-" + paper.category + "\" style=\"font-size:11px;\">" + paper.category + "</span>" +
+        (paper.isRiss ? " <span class=\"badge badge-riss\">RISS 검색 결과</span>" : "") +
+        "<h2 class=\"d-title\">" + paper.title + "</h2>" +
+        "<div class=\"d-meta-grid\">" +
+            "<div class=\"d-meta-item\"><label>저자</label><span>" + (paper.author || "-") + "</span></div>" +
+            "<div class=\"d-meta-item\"><label>발행연도</label><span>" + (paper.year || "-") + "</span></div>" +
+            "<div class=\"d-meta-item\"><label>학술지</label><span>" + (paper.journal || "-") + "</span></div>" +
+        "</div>" +
+        "<div class=\"d-section-title\">논문 요약</div>" +
+        "<div class=\"d-summary-text\">" + paper.summary + "</div>" +
+        "<div class=\"d-section-title\">조사 위치 (클릭하면 지도 이동)</div>" +
+        "<div class=\"chip-row\">" +
             paper.locations.map(function(l){
-                return '<span class="chip-loc" onclick="focusMap(' + l.lat + ',' + l.lng + ')">' + l.name + '</span>';
-            }).join('') +
-        '</div>' +
-        '<div class="d-section-title">키워드</div>' +
-        '<div class="chip-row" style="margin-bottom:16px;">' +
-            paper.keywords.map(function(k){ return '<span class="chip-kw">' + k + '</span>'; }).join('') +
-        '</div>' +
-        '<a href="' + paper.rissUrl + '" target="_blank" class="btn-riss">RISS 원문 보기</a>';
+                return "<span class=\"chip-loc\" onclick=\"focusMap(" + l.lat + "," + l.lng + ",'" + l.name + "')\">" + l.name + "</span>";
+            }).join("") +
+        "</div>" +
+        (paper.keywords.length ?
+            "<div class=\"d-section-title\">키워드</div>" +
+            "<div class=\"chip-row\" style=\"margin-bottom:16px;\">" +
+                paper.keywords.map(function(k){ return "<span class=\"chip-kw\">" + k + "</span>"; }).join("") +
+            "</div>" : "") +
+        "<a href=\"" + paper.rissUrl + "\" target=\"_blank\" class=\"btn-riss\">RISS 원문 보기</a>";
 
+    /* 지도: 해당 논문 위치로 이동 */
     if (map) {
         clearMarkers();
         paper.locations.forEach(function(l){ addMarker(l, paper); });
@@ -606,27 +737,35 @@ function selectPaper(id) {
             map.setCenter(new kakao.maps.LatLng(paper.locations[0].lat, paper.locations[0].lng));
             map.setLevel(5);
         }
-        document.getElementById('markerMsg').textContent = '마커 ' + paper.locations.length + '개';
+        document.getElementById("markerMsg").textContent = "마커 " + paper.locations.length + "개";
     }
 
-    document.querySelectorAll('.paper-card').forEach(function(el, i) {
-        el.classList.toggle('sel', filtered[i] && filtered[i].id === id);
+    /* 목록 활성 카드 갱신 */
+    document.querySelectorAll(".paper-card").forEach(function(el, i) {
+        el.classList.toggle("sel", filtered[i] && filtered[i].id === id);
     });
 }
 
+/* ── 필터/검색 ── */
 function setCategory(cat, btn) {
     currentCat = cat;
-    document.querySelectorAll('.cat-btn').forEach(function(b){ b.className = 'cat-btn'; });
-    btn.classList.add(CAT_ACTIVE[cat] || 'active-all');
+    document.querySelectorAll(".cat-btn").forEach(function(b){ b.className = "cat-btn"; });
+    btn.classList.add(CAT_ACTIVE[cat] || "active-all");
     applyFilter();
 }
 
 function doSearch() {
-    currentQuery = document.getElementById('searchInput').value.trim();
-    if (checkRissKey() && currentQuery) {
+    currentQuery = document.getElementById("searchInput").value.trim();
+    if (isRissKeyValid() && currentQuery) {
         fetchRISS(currentQuery).then(function(results) {
-            if (results && results.length) allPapers = SAMPLE_PAPERS.concat(results);
+            if (results && results.length) {
+                /* 중복 제거 후 병합 */
+                var existingTitles = SAMPLE_PAPERS.map(function(p){ return p.title; });
+                var newOnes = results.filter(function(r){ return existingTitles.indexOf(r.title) === -1; });
+                allPapers = SAMPLE_PAPERS.concat(newOnes);
+            }
             applyFilter();
+            placeAllMarkers(filtered);
         });
     } else {
         applyFilter();
@@ -635,10 +774,10 @@ function doSearch() {
 
 function applyFilter() {
     var result = allPapers.filter(function(p) {
-        var catOk  = currentCat === '전체' || p.category === currentCat;
+        var catOk  = currentCat === "전체" || p.category === currentCat;
         var srchOk = !currentQuery ||
             p.title.includes(currentQuery) ||
-            p.author.includes(currentQuery) ||
+            (p.author && p.author.includes(currentQuery)) ||
             p.keywords.some(function(k){ return k.includes(currentQuery); });
         return catOk && srchOk;
     });
@@ -646,11 +785,105 @@ function applyFilter() {
     placeAllMarkers(result);
 }
 
-/* ── 초기화 ────────────────────────────────────────────────── */
+/* ════════════════════════════════════════
+   논문 직접 추가 (모달)
+════════════════════════════════════════ */
+function openAddModal() {
+    modalLocs = [];
+    document.getElementById("f-title").value   = "";
+    document.getElementById("f-author").value  = "";
+    document.getElementById("f-year").value    = new Date().getFullYear();
+    document.getElementById("f-journal").value = "";
+    document.getElementById("f-summary").value = "";
+    document.getElementById("f-keywords").value= "";
+    document.getElementById("f-url").value     = "";
+    document.getElementById("f-loc-name").value= "";
+    document.getElementById("f-loc-lat").value = "";
+    document.getElementById("f-loc-lng").value = "";
+    renderLocChips();
+    document.getElementById("addModal").classList.add("open");
+}
+
+function closeAddModal() {
+    document.getElementById("addModal").classList.remove("open");
+}
+
+function addLocChip() {
+    var name = document.getElementById("f-loc-name").value.trim();
+    var lat  = parseFloat(document.getElementById("f-loc-lat").value);
+    var lng  = parseFloat(document.getElementById("f-loc-lng").value);
+    if (!name) { alert("위치명을 입력하세요."); return; }
+    /* 이름만 있으면 LOC_DB에서 자동 조회 */
+    if (isNaN(lat) || isNaN(lng)) {
+        if (LOC_DB[name]) { lat = LOC_DB[name].lat; lng = LOC_DB[name].lng; }
+        else { alert("위도/경도를 입력하세요."); return; }
+    }
+    modalLocs.push({name:name, lat:lat, lng:lng});
+    document.getElementById("f-loc-name").value = "";
+    document.getElementById("f-loc-lat").value  = "";
+    document.getElementById("f-loc-lng").value  = "";
+    renderLocChips();
+}
+
+function renderLocChips() {
+    var html = modalLocs.map(function(l, i) {
+        return "<span class=\"loc-chip\">" + l.name + " (" + l.lat + "," + l.lng + ")" +
+            "<button onclick=\"removeLocChip(" + i + ")\">x</button></span>";
+    }).join("");
+    document.getElementById("locChipList").innerHTML = html;
+}
+
+function removeLocChip(i) {
+    modalLocs.splice(i, 1);
+    renderLocChips();
+}
+
+function submitAddPaper() {
+    var title = document.getElementById("f-title").value.trim();
+    if (!title) { alert("논문 제목을 입력하세요."); return; }
+    var kw = document.getElementById("f-keywords").value.split(",")
+        .map(function(k){ return k.trim(); }).filter(Boolean);
+    var locs = modalLocs.length ? modalLocs : [{name:"북한산 일대", lat:37.6600, lng:126.9800}];
+    var newPaper = {
+        id: userPaperIdCounter++,
+        title: title,
+        author: document.getElementById("f-author").value.trim() || "미상",
+        year: parseInt(document.getElementById("f-year").value) || new Date().getFullYear(),
+        journal: document.getElementById("f-journal").value.trim(),
+        category: document.getElementById("f-cat").value,
+        summary: document.getElementById("f-summary").value.trim() || "요약 없음",
+        locations: locs,
+        rissUrl: document.getElementById("f-url").value.trim() || "https://www.riss.kr",
+        keywords: kw,
+        isRiss: false
+    };
+    allPapers.unshift(newPaper);
+    closeAddModal();
+    applyFilter();
+    selectPaper(newPaper.id);
+}
+
+/* ════════════════════════════════════════
+   초기화
+════════════════════════════════════════ */
 window.onload = function() {
-    checkRissKey();
-    renderList(allPapers);
-    initMap();
+    if (!isRissKeyValid()) {
+        setRissStatus("warn", "RISS API 키 미입력 — 샘플 데이터 표시 중");
+        renderList(allPapers);
+        initMap();
+    } else {
+        setRissStatus("warn", "RISS 논문 불러오는 중...");
+        /* 페이지 로드 시 자동으로 북한산 논문 검색 */
+        fetchRISS("").then(function(results) {
+            if (results && results.length) {
+                var existingTitles = SAMPLE_PAPERS.map(function(p){ return p.title; });
+                var newOnes = results.filter(function(r){ return existingTitles.indexOf(r.title) === -1; });
+                allPapers = SAMPLE_PAPERS.concat(newOnes);
+            }
+            renderList(allPapers);
+            initMap();
+        });
+    }
 };
 </script>
 </body>
