@@ -1,247 +1,215 @@
-import requests
-import xml.etree.ElementTree as ET
-from bs4 import BeautifulSoup
 import json
 import re
-import time
 import sys
-from datetime import datetime
+import time
 
-RISS_API_KEY = "70aaa00wqm60acd00aaa00ab01za378a"
+from playwright.sync_api import sync_playwright
+from bs4 import BeautifulSoup
 
-def categorize(text):
-    t = text or ""
-    if re.search(r"산사태|홍수|재난|토사|침수|피해|위험|붕괴|산불|방재|재해", t):
-        return "재난"
-    if re.search(r"탐방|등산|이용객|방문자|탐방로|관광|탐방객|입산|등반", t):
-        return "탐방"
-    if re.search(r"식물|동물|조류|곤충|서식지|생태계|군락|종다양|식생|야생|포유", t):
-        return "생태"
-    if re.search(r"문화재|성곽|유적|역사|전통|사찰|불교|문화|사적|건축|유물", t):
-        return "역사문화"
-    return "자원조사"
 
-def make_paper(idx, title, author, year, journal, abstract, link, keyword):
-    cat_text = f"{title} {abstract} {keyword}"
-    keywords = [k.strip() for k in (keyword or "").split(",") if k.strip()]
-    return {
-        "id": f"riss_{idx}",
-        "title": (title or "").strip() or "제목 없음",
-        "author": (author or "").strip() or "저자 미상",
-        "year": str(year or "").strip(),
-        "journal": (journal or "").strip(),
-        "category": categorize(cat_text),
-        "summary": (abstract or "").strip() or "초록 정보가 없습니다.",
-        "rissUrl": (link or "").strip() or "https://www.riss.kr/search/Search.do?queryText=북한산",
-        "keywords": keywords,
-        "hasFulltext": bool(link and ("viewer" in link.lower() or "fulltext" in link.lower()))
-    }
+def auto_category(text):
+    if re.search(r'산사태|홍수|재난|토사|침수|붕괴|피해|위험|방재', text):
+        return '재난'
+    if re.search(r'탐방|등산|이용객|방문자|탐방로|관광|입산', text):
+        return '탐방'
+    if re.search(r'식물|동물|조류|곤충|서식지|생태계|군락|종다양|생태|야생', text):
+        return '생태'
+    if re.search(r'문화재|성곽|유적|역사|전통|사찰|불교', text):
+        return '역사문화'
+    return '자원조사'
 
-# ───────────────────────────────────────────────────────────────
-# 방법 1: RISS OpenAPI (XML)
-# ───────────────────────────────────────────────────────────────
-def try_api():
-    print("[API] RISS OpenAPI 시도 중...")
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-        "Accept": "text/xml, application/xml, */*",
-        "Referer": "https://www.riss.kr"
-    }
-    url = (
-        f"https://www.riss.kr/openapi/search"
-        f"?apiKey={RISS_API_KEY}"
-        f"&query=%EB%B6%81%ED%95%9C%EC%82%B0"
-        f"&start=1&display=100&sortType=RANK"
-    )
-    try:
-        resp = requests.get(url, headers=headers, timeout=30)
-        print(f"[API] 상태코드: {resp.status_code}")
-        text = resp.text.strip()
-        print(f"[API] 응답 앞부분: {text[:200]}")
 
-        if text.startswith("<!DOCTYPE") or text.lower().startswith("<html"):
-            print("[API] HTML 응답 수신 — API 미작동, 스크래핑으로 전환")
-            return None
+def parse_items(html, query):
+    soup = BeautifulSoup(html, 'lxml')
+    title_tag = soup.title.get_text(strip=True) if soup.title else '없음'
+    print(f'  페이지 타이틀: {title_tag}')
 
-        root = ET.fromstring(text)
-        items = root.findall(".//item")
-        print(f"[API] 아이템 수: {len(items)}")
-        if not items:
-            return None
+    selectors = [
+        '#srchResultListW li',
+        'ul.srchResultListW li',
+        '.srchResultListW li',
+        '#resultListArea li',
+        '.result_list_wrap li',
+        'li.result_item',
+        'div.result_item',
+        '.thesis_item',
+        'ul#thesisResult li',
+        '#listForm li',
+        '.listBtnWrap li',
+        'ul > li[class]',
+        '.srch_result_list > li',
+        '[id*="result"] li',
+        '[class*="result"] li',
+    ]
 
-        papers = []
-        for i, item in enumerate(items):
-            papers.append(make_paper(
-                i,
-                item.findtext("title", ""),
-                item.findtext("author", ""),
-                item.findtext("pubYear", ""),
-                item.findtext("journalName", "") or item.findtext("publisher", ""),
-                item.findtext("abstract", ""),
-                item.findtext("link", ""),
-                item.findtext("keyword", "")
-            ))
-        print(f"[API] 파싱 완료: {len(papers)}건")
-        return papers
+    items = []
+    for sel in selectors:
+        found = soup.select(sel)
+        if found:
+            print(f'  선택자 매치: "{sel}" → {len(found)}개')
+            items = found
+            break
 
-    except Exception as e:
-        print(f"[API] 오류: {e}")
-        return None
+    if not items:
+        print('  !! 선택자 모두 실패 — 페이지 id/class 목록:')
+        seen_cls = set()
+        for tag in soup.find_all(True):
+            if tag.get('id'):
+                print(f'    id="{tag["id"]}" ({tag.name})')
+            elif tag.get('class'):
+                cls = ' '.join(tag['class'])
+                if cls not in seen_cls and len(seen_cls) < 50:
+                    seen_cls.add(cls)
+                    print(f'    class="{cls}" ({tag.name})')
+        # 구조 파악을 위해 HTML 일부 저장
+        with open('debug_riss.html', 'w', encoding='utf-8') as f:
+            f.write(html[:20000])
+        print('  debug_riss.html 저장됨')
+        return []
 
-# ───────────────────────────────────────────────────────────────
-# 방법 2: RISS 검색 결과 페이지 스크래핑
-# ───────────────────────────────────────────────────────────────
-def try_scraping():
-    print("[SCRAPE] RISS 페이지 스크래핑 시도 중...")
-    session = requests.Session()
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
-        "Accept-Encoding": "gzip, deflate, br",
-        "Connection": "keep-alive",
-        "Upgrade-Insecure-Requests": "1"
-    }
+    papers = []
+    for item in items:
+        title_el = (
+            item.select_one('a.lnk_name') or
+            item.select_one('.tit a') or
+            item.select_one('.title a') or
+            item.select_one('h4 a') or
+            item.select_one('h3 a') or
+            item.select_one('h2 a') or
+            item.select_one('a[href*="detail"]') or
+            item.select_one('a[href*="Search"]') or
+            item.select_one('a')
+        )
+        if not title_el:
+            continue
+        title = title_el.get_text(strip=True)
+        if not title or len(title) < 4:
+            continue
 
-    try:
-        # 세션 쿠키 수집
-        session.get("https://www.riss.kr", headers=headers, timeout=30)
-        time.sleep(2)
-    except Exception as e:
-        print(f"[SCRAPE] 홈 접속 오류 (무시): {e}")
+        href = title_el.get('href', '')
+        if href and not href.startswith('http'):
+            href = 'https://www.riss.kr' + href
+        riss_url = href or f'https://www.riss.kr/search/Search.do?queryText={query}'
 
-    # 검색어 목록 (분야별 수집)
-    queries = ["북한산", "북한산 생태", "북한산 재난", "북한산 탐방", "북한산 역사"]
+        author_el = (
+            item.select_one('.writer') or
+            item.select_one('.author') or
+            item.select_one('[class*="author"]') or
+            item.select_one('[class*="writer"]')
+        )
+        author = author_el.get_text(strip=True) if author_el else ''
+
+        year = ''
+        m = re.search(r'\b(19|20)\d{2}\b', item.get_text())
+        if m:
+            year = m.group()
+
+        journal_el = (
+            item.select_one('.journal_name') or
+            item.select_one('[class*="journal"]') or
+            item.select_one('.publisher')
+        )
+        journal = journal_el.get_text(strip=True) if journal_el else ''
+
+        abstract_el = (
+            item.select_one('.abstract') or
+            item.select_one('[class*="abstract"]') or
+            item.select_one('.summary')
+        )
+        summary = abstract_el.get_text(strip=True) if abstract_el else ''
+
+        kw_els = item.select('.keyword a, [class*="keyword"] a, .tag a')
+        keywords = [k.get_text(strip=True) for k in kw_els]
+
+        papers.append({
+            'title': title,
+            'author': author,
+            'year': year,
+            'journal': journal,
+            'category': auto_category(title + ' ' + summary),
+            'summary': summary or '초록 정보 없음',
+            'rissUrl': riss_url,
+            'keywords': keywords,
+        })
+
+    return papers
+
+
+def main():
+    queries = [
+        '북한산',
+        '북한산 생태',
+        '북한산 재난',
+        '북한산 탐방',
+        '북한산 역사',
+        '북한산 자원',
+    ]
+
     all_papers = []
     seen_titles = set()
 
-    for q_idx, query in enumerate(queries):
-        print(f"[SCRAPE] 검색어: {query}")
-        url = "https://www.riss.kr/search/Search.do"
-        params = {
-            "queryText": query,
-            "searchGubun": "true",
-            "strQuery": query,
-            "detailSearch": "false",
-            "orderBy": "RANK",
-            "onlyAbstract": "false",
-            "isDetailSearch": "N",
-            "FullTextYn": "N",
-            "start": 1,
-            "display": 100
-        }
-
-        try:
-            resp = session.get(url, params=params, headers=headers, timeout=30)
-            print(f"[SCRAPE] 상태코드: {resp.status_code}, 길이: {len(resp.text)}")
-        except Exception as e:
-            print(f"[SCRAPE] 요청 오류: {e}")
-            continue
-
-        soup = BeautifulSoup(resp.text, "lxml")
-
-        # 여러 셀렉터 시도
-        items = (
-            soup.select("ul.result_list > li") or
-            soup.select(".result_list li") or
-            soup.select("li.list_item") or
-            soup.select(".srch_result li") or
-            soup.select("#content li") or
-            []
+    with sync_playwright() as pw:
+        browser = pw.chromium.launch(
+            args=[
+                '--no-sandbox',
+                '--disable-setuid-sandbox',
+                '--disable-dev-shm-usage',
+                '--disable-blink-features=AutomationControlled',
+            ]
         )
-        print(f"[SCRAPE] 검색어 '{query}': {len(items)}개 항목")
+        ctx = browser.new_context(
+            user_agent=(
+                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '                'AppleWebKit/537.36 (KHTML, like Gecko) '                'Chrome/120.0.0.0 Safari/537.36'
+            ),
+            locale='ko-KR',
+            viewport={'width': 1280, 'height': 800},
+        )
 
-        for i, item in enumerate(items):
-            # 제목 + 링크
-            title_elem = (
-                item.select_one("a.title") or
-                item.select_one(".title a") or
-                item.select_one("strong.title") or
-                item.select_one("a[class*=title]") or
-                item.select_one("dt a") or
-                item.select_one("h3 a") or
-                item.select_one("h4 a")
-            )
-            if not title_elem:
-                continue
+        for query in queries:
+            print(f'\n[검색] "{query}"')
+            try:
+                page = ctx.new_page()
+                url = (
+                    'https://www.riss.kr/search/Search.do'
+                    f'?queryText={query}'
+                    '&isDetailSearch=N&searchGubun=true&gubun=t'
+                    '&sortOrder=RANK&saveSrchHistory=Y'
+                )
+                resp = page.goto(url, wait_until='networkidle', timeout=30000)
+                print(f'  HTTP {resp.status}')
+                time.sleep(3)
 
-            title = title_elem.get_text(strip=True)
-            if not title or title in seen_titles:
-                continue
-            seen_titles.add(title)
+                html = page.content()
+                print(f'  HTML 길이: {len(html)}')
 
-            link = title_elem.get("href", "")
-            if link and not link.startswith("http"):
-                link = "https://www.riss.kr" + link
+                papers = parse_items(html, query)
+                print(f'  수집: {len(papers)}편')
 
-            # 저자
-            author = ""
-            for sel in [".author", "[class*=author]", ".writer", ".people"]:
-                el = item.select_one(sel)
-                if el:
-                    author = el.get_text(strip=True)
-                    break
+                for paper in papers:
+                    if paper['title'] not in seen_titles:
+                        seen_titles.add(paper['title'])
+                        paper['id'] = len(all_papers) + 1
+                        all_papers.append(paper)
 
-            # 연도
-            year = ""
-            year_text = item.get_text()
-            m = re.search(r"(19|20)\d{2}", year_text)
-            if m:
-                year = m.group()
+                page.close()
+                time.sleep(1)
 
-            # 학술지/출판사
-            journal = ""
-            for sel in [".journal", "[class*=journal]", ".source", ".publisher", ".org"]:
-                el = item.select_one(sel)
-                if el:
-                    journal = el.get_text(strip=True)
-                    break
+            except Exception as exc:
+                import traceback
+                print(f'  오류: {exc}')
+                traceback.print_exc()
 
-            # 초록
-            abstract = ""
-            for sel in [".abstract", "[class*=abstract]", ".summary", ".desc", "p"]:
-                el = item.select_one(sel)
-                if el:
-                    txt = el.get_text(strip=True)
-                    if len(txt) > 30:
-                        abstract = txt
-                        break
+        browser.close()
 
-            paper = make_paper(
-                q_idx * 1000 + i,
-                title, author, year, journal, abstract, link, ""
-            )
-            all_papers.append(paper)
-            print(f"  [{len(all_papers)}] {title[:60]}")
+    print(f'\n=== 총 수집: {len(all_papers)}편 ===')
 
-        time.sleep(1.5)
+    with open('papers.json', 'w', encoding='utf-8') as f:
+        json.dump(all_papers, f, ensure_ascii=False, indent=2)
+    print('papers.json 저장 완료')
 
-    print(f"[SCRAPE] 총 수집: {len(all_papers)}건")
-    return all_papers if all_papers else None
-
-# ───────────────────────────────────────────────────────────────
-# 메인
-# ───────────────────────────────────────────────────────────────
-def main():
-    papers = try_api()
-
-    if not papers:
-        papers = try_scraping()
-
-    if not papers:
-        print("ERROR: API와 스크래핑 모두 실패")
+    if not all_papers:
+        print('ERROR: 논문 0편')
         sys.exit(1)
 
-    output = {
-        "updated": datetime.now().isoformat(),
-        "total": len(papers),
-        "papers": papers
-    }
 
-    with open("papers.json", "w", encoding="utf-8") as f:
-        json.dump(output, f, ensure_ascii=False, indent=2)
-
-    print(f"\n✅ papers.json 저장 완료: {len(papers)}건")
-
-if __name__ == "__main__":
-    main()
+main()
