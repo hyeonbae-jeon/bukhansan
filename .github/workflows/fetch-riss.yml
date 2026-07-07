@@ -21,18 +21,24 @@ jobs:
           python-version: "3.11"
 
       - name: Install Python packages
-        run: pip install playwright beautifulsoup4 lxml
+        run: pip install requests beautifulsoup4 lxml playwright
 
       - name: Install Playwright browsers
-        run: playwright install chromium --with-deps
+        run: playwright install chromium
 
       - name: Run fetch script
         run: python fetch_riss.py
+
+      - name: Check papers.json exists
+        run: |
+          ls -la papers.json
+          echo "파일 크기: $(wc -c < papers.json) bytes"
 
       - name: Commit papers.json
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add papers.json debug_riss.html || true
-          git diff --cached --quiet || git commit -m "Update papers.json [skip ci]"
+          git add -f papers.json
+          git status
+          git commit -m "Update papers.json [skip ci]" || echo "변경사항 없음"
           git push
