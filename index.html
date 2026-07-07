@@ -340,7 +340,7 @@
    아래 변수에 RISS에서 발급받은 API 키를 입력하세요.
    발급: https://www.riss.kr/openapi/api-guide.do
 ════════════════════════════════════════ */
-var RISS_API_KEY = '70aaa00wqm60acd00aaa00ab01za378a';
+var RISS_API_KEY = 'YOUR_RISS_API_KEY';
 
 /* ── 샘플 데이터 (기본 표시용) ── */
 var SAMPLE_PAPERS = [
@@ -542,7 +542,7 @@ function focusMap(lat, lng, locName) {
    ★ CORS 우회를 위해 corsproxy.io 사용
 ════════════════════════════════════════ */
 function isRissKeyValid() {
-    return RISS_API_KEY && RISS_API_KEY !== "70aaa00wqm60acd00aaa00ab01za378a" && RISS_API_KEY.trim() !== "";
+    return RISS_API_KEY && RISS_API_KEY !== "YOUR_RISS_API_KEY" && RISS_API_KEY.trim() !== "";
 }
 
 function setRissStatus(state, msg) {
