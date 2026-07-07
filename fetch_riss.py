@@ -1,215 +1,151 @@
+import asyncio
 import json
 import re
-import sys
-import time
+from playwright.async_api import async_playwright
 
-from playwright.sync_api import sync_playwright
-from bs4 import BeautifulSoup
+CATEGORY_KEYWORDS = {
+    "재난": ["산사태", "홍수", "토사", "붕괴", "재난", "위험", "지반", "침수", "산불", "사면", "위협", "낙석"],
+    "탐방": ["탐방", "등산", "이용객", "입산", "등반", "방문", "탐방객", "행동", "트레킹", "방문객", "탐방로"],
+    "생태": ["식물", "동물", "조류", "군락", "생태", "식생", "서식", "야생", "포유", "곤충", "양서", "어류", "균류"],
+    "역사문화": ["문화재", "성곽", "유적", "사찰", "역사", "문화", "북한산성", "사적", "불교", "절", "성지", "고적"],
+}
 
+def classify(title, abstract=""):
+    text = title + " " + abstract
+    for cat, keywords in CATEGORY_KEYWORDS.items():
+        for kw in keywords:
+            if kw in text:
+                return cat
+    return "자원조사"
 
-def auto_category(text):
-    if re.search(r'산사태|홍수|재난|토사|침수|붕괴|피해|위험|방재', text):
-        return '재난'
-    if re.search(r'탐방|등산|이용객|방문자|탐방로|관광|입산', text):
-        return '탐방'
-    if re.search(r'식물|동물|조류|곤충|서식지|생태계|군락|종다양|생태|야생', text):
-        return '생태'
-    if re.search(r'문화재|성곽|유적|역사|전통|사찰|불교', text):
-        return '역사문화'
-    return '자원조사'
+async def fetch_papers():
+    papers = {}
 
-
-def parse_items(html, query):
-    soup = BeautifulSoup(html, 'lxml')
-    title_tag = soup.title.get_text(strip=True) if soup.title else '없음'
-    print(f'  페이지 타이틀: {title_tag}')
-
-    selectors = [
-        '#srchResultListW li',
-        'ul.srchResultListW li',
-        '.srchResultListW li',
-        '#resultListArea li',
-        '.result_list_wrap li',
-        'li.result_item',
-        'div.result_item',
-        '.thesis_item',
-        'ul#thesisResult li',
-        '#listForm li',
-        '.listBtnWrap li',
-        'ul > li[class]',
-        '.srch_result_list > li',
-        '[id*="result"] li',
-        '[class*="result"] li',
-    ]
-
-    items = []
-    for sel in selectors:
-        found = soup.select(sel)
-        if found:
-            print(f'  선택자 매치: "{sel}" → {len(found)}개')
-            items = found
-            break
-
-    if not items:
-        print('  !! 선택자 모두 실패 — 페이지 id/class 목록:')
-        seen_cls = set()
-        for tag in soup.find_all(True):
-            if tag.get('id'):
-                print(f'    id="{tag["id"]}" ({tag.name})')
-            elif tag.get('class'):
-                cls = ' '.join(tag['class'])
-                if cls not in seen_cls and len(seen_cls) < 50:
-                    seen_cls.add(cls)
-                    print(f'    class="{cls}" ({tag.name})')
-        # 구조 파악을 위해 HTML 일부 저장
-        with open('debug_riss.html', 'w', encoding='utf-8') as f:
-            f.write(html[:20000])
-        print('  debug_riss.html 저장됨')
-        return []
-
-    papers = []
-    for item in items:
-        title_el = (
-            item.select_one('a.lnk_name') or
-            item.select_one('.tit a') or
-            item.select_one('.title a') or
-            item.select_one('h4 a') or
-            item.select_one('h3 a') or
-            item.select_one('h2 a') or
-            item.select_one('a[href*="detail"]') or
-            item.select_one('a[href*="Search"]') or
-            item.select_one('a')
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True)
+        context = await browser.new_context(
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            viewport={"width": 1920, "height": 1080}
         )
-        if not title_el:
-            continue
-        title = title_el.get_text(strip=True)
-        if not title or len(title) < 4:
-            continue
+        page = await context.new_page()
 
-        href = title_el.get('href', '')
-        if href and not href.startswith('http'):
-            href = 'https://www.riss.kr' + href
-        riss_url = href or f'https://www.riss.kr/search/Search.do?queryText={query}'
-
-        author_el = (
-            item.select_one('.writer') or
-            item.select_one('.author') or
-            item.select_one('[class*="author"]') or
-            item.select_one('[class*="writer"]')
-        )
-        author = author_el.get_text(strip=True) if author_el else ''
-
-        year = ''
-        m = re.search(r'\b(19|20)\d{2}\b', item.get_text())
-        if m:
-            year = m.group()
-
-        journal_el = (
-            item.select_one('.journal_name') or
-            item.select_one('[class*="journal"]') or
-            item.select_one('.publisher')
-        )
-        journal = journal_el.get_text(strip=True) if journal_el else ''
-
-        abstract_el = (
-            item.select_one('.abstract') or
-            item.select_one('[class*="abstract"]') or
-            item.select_one('.summary')
-        )
-        summary = abstract_el.get_text(strip=True) if abstract_el else ''
-
-        kw_els = item.select('.keyword a, [class*="keyword"] a, .tag a')
-        keywords = [k.get_text(strip=True) for k in kw_els]
-
-        papers.append({
-            'title': title,
-            'author': author,
-            'year': year,
-            'journal': journal,
-            'category': auto_category(title + ' ' + summary),
-            'summary': summary or '초록 정보 없음',
-            'rissUrl': riss_url,
-            'keywords': keywords,
-        })
-
-    return papers
-
-
-def main():
-    queries = [
-        '북한산',
-        '북한산 생태',
-        '북한산 재난',
-        '북한산 탐방',
-        '북한산 역사',
-        '북한산 자원',
-    ]
-
-    all_papers = []
-    seen_titles = set()
-
-    with sync_playwright() as pw:
-        browser = pw.chromium.launch(
-            args=[
-                '--no-sandbox',
-                '--disable-setuid-sandbox',
-                '--disable-dev-shm-usage',
-                '--disable-blink-features=AutomationControlled',
-            ]
-        )
-        ctx = browser.new_context(
-            user_agent=(
-                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '                'AppleWebKit/537.36 (KHTML, like Gecko) '                'Chrome/120.0.0.0 Safari/537.36'
-            ),
-            locale='ko-KR',
-            viewport={'width': 1280, 'height': 800},
+        search_url = (
+            "https://www.riss.kr/search/Search.do"
+            "?query=%EB%B6%81%ED%95%9C%EC%82%B0"
+            "&isDetailSearch=N&searchGubun=true"
+            "&colName=re_a_kor&pageSize=100&orderBy=score"
         )
 
-        for query in queries:
-            print(f'\n[검색] "{query}"')
+        print(f"[1] RISS 접속 중...")
+        await page.goto(search_url, wait_until="networkidle", timeout=60000)
+        await page.wait_for_timeout(5000)
+
+        # 디버그용 HTML 저장
+        html = await page.content()
+        with open("debug_riss.html", "w", encoding="utf-8") as f:
+            f.write(html)
+        print(f"[2] HTML 저장 완료 (길이: {len(html)})")
+
+        # 핵심: RISS 상세 페이지 링크를 가진 <a> 태그만 추출
+        # 논문 상세 링크는 반드시 DetailView.do 또는 searchdetail/DetailView 포함
+        all_links = await page.query_selector_all("a[href]")
+        print(f"[3] 전체 링크 수: {len(all_links)}")
+
+        detail_links = []
+        for link in all_links:
+            href = await link.get_attribute("href") or ""
+            if "DetailView" in href or "detail/Detail" in href:
+                detail_links.append(link)
+
+        print(f"[4] 상세 링크 수: {len(detail_links)}")
+
+        for link in detail_links:
             try:
-                page = ctx.new_page()
-                url = (
-                    'https://www.riss.kr/search/Search.do'
-                    f'?queryText={query}'
-                    '&isDetailSearch=N&searchGubun=true&gubun=t'
-                    '&sortOrder=RANK&saveSrchHistory=Y'
-                )
-                resp = page.goto(url, wait_until='networkidle', timeout=30000)
-                print(f'  HTTP {resp.status}')
-                time.sleep(3)
+                href = await link.get_attribute("href") or ""
+                if not href.startswith("http"):
+                    href = "https://www.riss.kr" + href
 
-                html = page.content()
-                print(f'  HTML 길이: {len(html)}')
+                title = (await link.inner_text()).strip()
+                title = re.sub(r"\s+", " ", title)
 
-                papers = parse_items(html, query)
-                print(f'  수집: {len(papers)}편')
+                # 제목 필터: 한국어 10자 이상
+                if len(title) < 10:
+                    continue
+                if not re.search(r"[가-힣]", title):
+                    continue
 
-                for paper in papers:
-                    if paper['title'] not in seen_titles:
-                        seen_titles.add(paper['title'])
-                        paper['id'] = len(all_papers) + 1
-                        all_papers.append(paper)
+                # 부모 요소에서 추가 정보 추출
+                parent_text = await link.evaluate("""el => {
+                    let p = el.closest("li") || el.closest("tr") || el.parentElement;
+                    return p ? p.innerText : "";
+                }""")
 
-                page.close()
-                time.sleep(1)
+                # 연도 추출
+                year_match = re.search(r"\b(19|20)\d{2}\b", parent_text)
+                year = year_match.group() if year_match else ""
 
-            except Exception as exc:
-                import traceback
-                print(f'  오류: {exc}')
-                traceback.print_exc()
+                # 저자 추출 (연도 앞 텍스트에서)
+                author = ""
+                if year:
+                    before_year = parent_text[:parent_text.find(year)]
+                    lines = [l.strip() for l in before_year.split("\n") if l.strip()]
+                    if len(lines) >= 2:
+                        author = lines[-1][:50]
 
-        browser.close()
+                # 학술지명 추출 (연도 뒤 텍스트)
+                journal = ""
+                if year:
+                    after_year = parent_text[parent_text.find(year) + 4:].strip()
+                    lines = [l.strip() for l in after_year.split("\n") if l.strip() and len(l.strip()) > 2]
+                    if lines:
+                        journal = lines[0][:60]
 
-    print(f'\n=== 총 수집: {len(all_papers)}편 ===')
+                paper_id = re.sub(r"[^\w]", "_", title[:40])
 
-    with open('papers.json', 'w', encoding='utf-8') as f:
-        json.dump(all_papers, f, ensure_ascii=False, indent=2)
-    print('papers.json 저장 완료')
+                if paper_id not in papers:
+                    papers[paper_id] = {
+                        "id": paper_id,
+                        "title": title,
+                        "authors": author,
+                        "year": year,
+                        "journal": journal,
+                        "abstract": "",
+                        "category": classify(title),
+                        "riss_url": href,
+                        "full_text_url": ""
+                    }
+                    print(f"  수집: {title[:60]}")
 
-    if not all_papers:
-        print('ERROR: 논문 0편')
-        sys.exit(1)
+            except Exception as e:
+                print(f"  오류: {e}")
+                continue
+
+        print(f"[5] 총 {len(papers)}건 수집")
+
+        # 결과 없으면 구조 디버그 출력
+        if len(papers) == 0:
+            print("[DEBUG] 페이지 내 모든 ID 목록:")
+            ids = await page.evaluate("""
+                () => Array.from(document.querySelectorAll("[id]"))
+                    .map(e => e.id + " / " + e.tagName)
+                    .slice(0, 30)
+            """)
+            for i in ids:
+                print(f"  {i}")
+
+        await browser.close()
+
+    return list(papers.values())
 
 
-main()
+if __name__ == "__main__":
+    papers = asyncio.run(fetch_papers())
+
+    if papers:
+        with open("papers.json", "w", encoding="utf-8") as f:
+            json.dump(papers, f, ensure_ascii=False, indent=2)
+        print(f"=== 총 수집: {len(papers)}건 ===")
+        print("papers.json 저장 완료")
+    else:
+        print("ERROR: 수집된 논문 없음 — debug_riss.html 확인 필요")
+        raise SystemExit(1)
