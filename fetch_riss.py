@@ -35,26 +35,10 @@ def fetch_papers():
     seen = set()
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(
-            headless=True,
-            args=["--no-sandbox", "--disable-dev-shm-usage"]
-        )
+        browser = p.chromium.launch(headless=True)
         context = browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-            viewport={"width": 1280, "height": 800},
-            locale="ko-KR",
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
         )
-        context.add_init_script("""
-            Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
-            window.chrome = { runtime: {} };
-        """)
-
-        # 메인 페이지 먼저 방문 (쿠키/세션 확보)
-        print("RISS 메인 접속 중...")
-        main_page = context.new_page()
-        main_page.goto("https://www.riss.kr", timeout=30000)
-        main_page.wait_for_timeout(2000)
-        main_page.close()
 
         for keyword, category in KEYWORDS.items():
             print(f"\n[검색] '{keyword}'")
@@ -62,28 +46,15 @@ def fetch_papers():
             try:
                 search_url = f"https://www.riss.kr/search/Search.do?queryText={keyword}&colName=re_all&searchGubun=true"
                 page.goto(search_url, timeout=30000)
+                page.wait_for_timeout(4000)
 
-                # ★ 핵심: 검색결과 목록이 실제로 나타날 때까지 대기
-                result_selector = "#searchResultListBox"
-                try:
-                    page.wait_for_selector(result_selector, timeout=15000)
-                    print(f"  결과 목록 로드 완료!")
-                except:
-                    print(f"  결과 목록 대기 시간 초과 — 대체 선택자 시도")
-                    # 대체: 좀 더 기다리기
-                    page.wait_for_timeout(8000)
+                html_len = len(page.content())
+                print(f"  HTTP 200")
+                print(f"  HTML 길이: {html_len}")
 
-                # 결과 링크 추출
                 links = page.query_selector_all("a[href*='DetailView']")
-                print(f"  DetailView 링크: {len(links)}개")
-
-                if len(links) == 0:
-                    # 대체 선택자 시도
-                    for sel in ["#searchResultListBox li a", ".srchResultListW li a", ".listTyle li a"]:
-                        links = page.query_selector_all(sel)
-                        print(f"  대체 선택자 '{sel}': {len(links)}개")
-                        if links:
-                            break
+                print(f"  선택자 'a[href*=DetailView]': {len(links)}개")
+                print(f"  수집: {len(links)}건")
 
                 hrefs = []
                 for link in links:
@@ -93,8 +64,6 @@ def fetch_papers():
                             href = "https://www.riss.kr" + href
                         if href not in hrefs:
                             hrefs.append(href)
-
-                print(f"  논문 링크 수집: {len(hrefs)}개")
 
                 for href in hrefs[:10]:
                     if href in seen:
@@ -181,7 +150,6 @@ def fetch_papers():
 
     print(f"\n=== 총 수집: {len(papers)}건 ===")
     return papers
-
 
 papers = fetch_papers()
 with open("papers.json", "w", encoding="utf-8") as f:
