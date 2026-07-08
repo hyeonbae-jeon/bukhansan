@@ -27,12 +27,21 @@ jobs:
         run: playwright install chromium
 
       - name: Run fetch script
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python fetch_riss.py
+
+      - name: Upload debug files
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-html
+          path: debug_*.html
+          if-no-files-found: ignore
 
       - name: Check papers.json exists
         run: |
-          ls -la papers.json
-          echo "파일 크기: $(wc -c < papers.json) bytes"
+          ls -la papers.json 2>/dev/null || echo "papers.json 없음"
 
       - name: Commit papers.json
         run: |
