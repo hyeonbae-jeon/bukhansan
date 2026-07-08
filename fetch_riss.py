@@ -37,101 +37,66 @@ def fetch_papers():
     with sync_playwright() as p:
         browser = p.chromium.launch(
             headless=True,
-            args=[
-                "--no-sandbox",
-                "--disable-blink-features=AutomationControlled",
-                "--disable-dev-shm-usage",
-            ]
+            args=["--no-sandbox", "--disable-dev-shm-usage"]
         )
         context = browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
             viewport={"width": 1280, "height": 800},
             locale="ko-KR",
-            java_script_enabled=True,
         )
-
-        # 봇 감지 우회
         context.add_init_script("""
             Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
-            Object.defineProperty(navigator, 'plugins', { get: () => [1,2,3,4,5] });
-            Object.defineProperty(navigator, 'languages', { get: () => ['ko-KR','ko','en-US','en'] });
             window.chrome = { runtime: {} };
         """)
 
-        # 먼저 메인 페이지 방문해서 쿠키/세션 확보
-        print("RISS 메인 페이지 접속 중...")
+        # 메인 페이지 먼저 방문 (쿠키/세션 확보)
+        print("RISS 메인 접속 중...")
         main_page = context.new_page()
         main_page.goto("https://www.riss.kr", timeout=30000)
-        main_page.wait_for_timeout(3000)
-        print(f"  메인 페이지 로드 완료: {len(main_page.content())} bytes")
+        main_page.wait_for_timeout(2000)
         main_page.close()
 
         for keyword, category in KEYWORDS.items():
             print(f"\n[검색] '{keyword}'")
             page = context.new_page()
-
-            # XHR 응답 캡처
-            captured_links = []
-
-            def handle_response(response):
-                url = response.url
-                if "DetailView" in url and url not in captured_links:
-                    captured_links.append(url)
-
-            page.on("response", handle_response)
-
             try:
                 search_url = f"https://www.riss.kr/search/Search.do?queryText={keyword}&colName=re_all&searchGubun=true"
                 page.goto(search_url, timeout=30000)
 
-                # networkidle 대기 (JS 렌더링 완료까지)
+                # ★ 핵심: 검색결과 목록이 실제로 나타날 때까지 대기
+                result_selector = "#searchResultListBox"
                 try:
-                    page.wait_for_load_state("networkidle", timeout=15000)
+                    page.wait_for_selector(result_selector, timeout=15000)
+                    print(f"  결과 목록 로드 완료!")
                 except:
-                    pass
-                page.wait_for_timeout(5000)
+                    print(f"  결과 목록 대기 시간 초과 — 대체 선택자 시도")
+                    # 대체: 좀 더 기다리기
+                    page.wait_for_timeout(8000)
 
-                html_content = page.content()
-                print(f"  HTML 길이: {len(html_content)}")
+                # 결과 링크 추출
+                links = page.query_selector_all("a[href*='DetailView']")
+                print(f"  DetailView 링크: {len(links)}개")
 
-                # 첫 번째 검색어만 디버그 저장
-                if keyword == "북한산":
-                    with open("debug_main.html", "w", encoding="utf-8") as f:
-                        f.write(html_content)
-                    print("  debug_main.html 저장됨")
+                if len(links) == 0:
+                    # 대체 선택자 시도
+                    for sel in ["#searchResultListBox li a", ".srchResultListW li a", ".listTyle li a"]:
+                        links = page.query_selector_all(sel)
+                        print(f"  대체 선택자 '{sel}': {len(links)}개")
+                        if links:
+                            break
 
-                # 선택자 시도
-                links = []
-                selectors = [
-                    "a[href*='DetailView']",
-                    "a[href*='detail']",
-                    ".srchResultListW li a",
-                    "#searchResultListBox li a",
-                    ".listTyle li a",
-                    "ul.resultList li a",
-                ]
-                for sel in selectors:
-                    found = page.query_selector_all(sel)
-                    print(f"  선택자 '{sel}': {len(found)}개")
-                    if found:
-                        links = found
-                        break
-
-                # XHR로 캡처된 링크도 활용
-                print(f"  XHR 캡처 링크: {len(captured_links)}개")
-
-                hrefs = set()
+                hrefs = []
                 for link in links:
                     href = link.get_attribute("href") or ""
-                    if "Detail" in href:
+                    if "DetailView" in href:
                         if not href.startswith("http"):
                             href = "https://www.riss.kr" + href
-                        hrefs.add(href)
-                hrefs.update(captured_links)
+                        if href not in hrefs:
+                            hrefs.append(href)
 
-                print(f"  총 논문 링크: {len(hrefs)}개")
+                print(f"  논문 링크 수집: {len(hrefs)}개")
 
-                for href in list(hrefs)[:10]:
+                for href in hrefs[:10]:
                     if href in seen:
                         continue
                     seen.add(href)
@@ -139,10 +104,6 @@ def fetch_papers():
                     detail = context.new_page()
                     try:
                         detail.goto(href, timeout=30000)
-                        try:
-                            detail.wait_for_load_state("networkidle", timeout=10000)
-                        except:
-                            pass
                         detail.wait_for_timeout(2000)
 
                         title = ""
@@ -159,14 +120,14 @@ def fetch_papers():
                             continue
 
                         author = ""
-                        for sel in [".author", ".writer", "dd.author", ".artiWriter", ".authorName"]:
+                        for sel in [".author", ".writer", "dd.author", ".artiWriter"]:
                             el = detail.query_selector(sel)
                             if el:
                                 author = el.inner_text().strip()
                                 break
 
                         year = ""
-                        for sel in [".year", ".pubYear", "dd.year", ".pubInfo"]:
+                        for sel in [".year", ".pubYear", "dd.year"]:
                             el = detail.query_selector(sel)
                             if el:
                                 year = el.inner_text().strip()[:4]
@@ -180,7 +141,7 @@ def fetch_papers():
                                 break
 
                         abstract = ""
-                        for sel in [".abstractTxt", ".abstract", "#abstract", ".cont_abstract", ".summary"]:
+                        for sel in [".abstractTxt", ".abstract", "#abstract", ".cont_abstract"]:
                             el = detail.query_selector(sel)
                             if el:
                                 abstract = el.inner_text().strip()
@@ -190,7 +151,7 @@ def fetch_papers():
 
                         summary = ""
                         if abstract and GEMINI_API_KEY:
-                            print(f"    요약 중...")
+                            print(f"    Gemini 요약 중...")
                             summary = summarize(abstract)
                             time.sleep(1.5)
 
