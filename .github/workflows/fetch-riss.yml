@@ -21,10 +21,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install Python packages
-        run: pip install requests beautifulsoup4 lxml playwright
-
-      - name: Install Playwright browsers
-        run: playwright install chromium
+        run: pip install requests beautifulsoup4 lxml
 
       - name: Run fetch script
         env:
