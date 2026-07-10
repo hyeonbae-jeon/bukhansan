@@ -21,12 +21,15 @@ jobs:
           python-version: "3.11"
 
       - name: Install Python packages
-        run: pip install requests beautifulsoup4 lxml
+        run: pip install requests
 
       - name: Run fetch script
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
         run: python fetch_riss.py
+
 
       - name: Upload debug files
         if: always()
