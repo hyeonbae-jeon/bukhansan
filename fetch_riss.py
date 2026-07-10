@@ -1,4 +1,6 @@
-import os, json, time, requests
+import os, json, time
+import requests
+from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
@@ -30,6 +32,17 @@ def summarize(text):
         print(f"  요약 실패: {e}")
     return ""
 
+def extract_hrefs(html_bytes):
+    soup = BeautifulSoup(html_bytes, "html.parser")
+    hrefs = []
+    for link in soup.find_all("a", href=True):
+        href = link["href"]
+        if "DetailView" in href:
+            if not href.startswith("http"):
+                href = "https://www.riss.kr" + href
+            hrefs.append(href)
+    return list(set(hrefs))
+
 def fetch_papers():
     papers = []
     seen = set()
@@ -43,27 +56,55 @@ def fetch_papers():
         for keyword, category in KEYWORDS.items():
             print(f"\n[검색] '{keyword}'")
             page = context.new_page()
+
+            # 모든 네트워크 응답 캡처
+            all_riss_responses = {}
+
+            def on_response(resp):
+                if "riss.kr" not in resp.url:
+                    return
+                try:
+                    body = resp.body()
+                    all_riss_responses[resp.url] = body
+                    if b"DetailView" in body:
+                        print(f"  ★ DetailView 포함 응답: {len(body)}bytes | {resp.url[-70:]}")
+                except:
+                    pass
+
+            page.on("response", on_response)
+
             try:
                 search_url = f"https://www.riss.kr/search/Search.do?queryText={keyword}&colName=re_all&searchGubun=true"
-                page.goto(search_url, timeout=30000)
-                page.wait_for_timeout(4000)
+                page.goto(search_url, timeout=60000)
+                page.wait_for_timeout(12000)
 
-                html_len = len(page.content())
-                print(f"  HTTP 200")
-                print(f"  HTML 길이: {html_len}")
-
-                links = page.query_selector_all("a[href*='DetailView']")
-                print(f"  선택자 'a[href*=DetailView]': {len(links)}개")
-                print(f"  수집: {len(links)}건")
-
+                # 방법 1: 캡처된 응답에서 링크 추출
                 hrefs = []
-                for link in links:
-                    href = link.get_attribute("href") or ""
-                    if "DetailView" in href:
-                        if not href.startswith("http"):
-                            href = "https://www.riss.kr" + href
-                        if href not in hrefs:
+                for url, body in all_riss_responses.items():
+                    found = extract_hrefs(body)
+                    if found:
+                        hrefs.extend(found)
+                        print(f"  응답에서 {len(found)}개 링크 추출: {url[-50:]}")
+
+                # 방법 2: DOM에서 추출 (혹시 DOM에 있을 경우)
+                if not hrefs:
+                    dom_links = page.query_selector_all("a[href*='DetailView']")
+                    print(f"  DOM 링크: {len(dom_links)}개")
+                    for link in dom_links:
+                        href = link.get_attribute("href") or ""
+                        if "DetailView" in href:
+                            if not href.startswith("http"):
+                                href = "https://www.riss.kr" + href
                             hrefs.append(href)
+
+                hrefs = list(set(hrefs))
+                print(f"  총 논문 링크: {len(hrefs)}개")
+
+                # 전체 네트워크 응답 요약 출력 (디버그)
+                print(f"  캡처된 RISS 응답 수: {len(all_riss_responses)}개")
+                for url, body in all_riss_responses.items():
+                    has_detail = "★" if b"DetailView" in body else " "
+                    print(f"    {has_detail} {len(body)}bytes | {url[-80:]}")
 
                 for href in hrefs[:10]:
                     if href in seen:
@@ -89,7 +130,7 @@ def fetch_papers():
                             continue
 
                         author = ""
-                        for sel in [".author", ".writer", "dd.author", ".artiWriter"]:
+                        for sel in [".author", ".writer", "dd.author"]:
                             el = detail.query_selector(sel)
                             if el:
                                 author = el.inner_text().strip()
@@ -103,7 +144,7 @@ def fetch_papers():
                                 break
 
                         journal = ""
-                        for sel in [".journalInfo", ".publisher", "dd.journal", ".journalName"]:
+                        for sel in [".journalInfo", ".publisher", "dd.journal"]:
                             el = detail.query_selector(sel)
                             if el:
                                 journal = el.inner_text().strip()
