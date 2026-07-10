@@ -1,7 +1,5 @@
-import os, json, time
-import requests
+import os, json, time, requests
 from bs4 import BeautifulSoup
-from playwright.sync_api import sync_playwright
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
@@ -13,6 +11,15 @@ KEYWORDS = {
     "북한산 탐방": "탐방",
     "북한산 역사": "역사문화",
     "북한산 자원": "자원조사",
+}
+
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+    "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Referer": "https://www.riss.kr",
 }
 
 def summarize(text):
@@ -32,162 +39,134 @@ def summarize(text):
         print(f"  요약 실패: {e}")
     return ""
 
-def extract_hrefs(html_bytes):
-    soup = BeautifulSoup(html_bytes, "html.parser")
-    hrefs = []
-    for link in soup.find_all("a", href=True):
-        href = link["href"]
-        if "DetailView" in href:
-            if not href.startswith("http"):
-                href = "https://www.riss.kr" + href
-            hrefs.append(href)
-    return list(set(hrefs))
-
 def fetch_papers():
     papers = []
     seen = set()
 
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        context = browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-        )
+    session = requests.Session()
+    session.headers.update(HEADERS)
 
-        for keyword, category in KEYWORDS.items():
-            print(f"\n[검색] '{keyword}'")
-            page = context.new_page()
+    # 메인 페이지 먼저 방문 → 쿠키 확보
+    print("RISS 메인 접속 중...")
+    try:
+        session.get("https://www.riss.kr", timeout=30)
+        print("  메인 접속 완료")
+        time.sleep(2)
+    except Exception as e:
+        print(f"  메인 접속 실패: {e}")
 
-            # 모든 네트워크 응답 캡처
-            all_riss_responses = {}
+    for keyword, category in KEYWORDS.items():
+        print(f"\n[검색] '{keyword}'")
+        try:
+            search_url = "https://www.riss.kr/search/Search.do"
+            params = {
+                "queryText": keyword,
+                "colName": "re_all",
+                "searchGubun": "true",
+                "isDetailSearch": "N",
+                "viewYn": "OP",
+                "strSort": "RANK",
+                "pageScale": "20",
+                "iStartCount": "0",
+            }
+            resp = session.get(search_url, params=params, timeout=30)
+            print(f"  HTTP {resp.status_code} / HTML 길이: {len(resp.text)}")
 
-            def on_response(resp):
-                if "riss.kr" not in resp.url:
-                    return
+            soup = BeautifulSoup(resp.text, "html.parser")
+            links = soup.find_all("a", href=lambda h: h and "DetailView" in h)
+            print(f"  DetailView 링크: {len(links)}개")
+
+            hrefs = []
+            for link in links:
+                href = link["href"]
+                if not href.startswith("http"):
+                    href = "https://www.riss.kr" + href
+                if href not in hrefs:
+                    hrefs.append(href)
+
+            print(f"  논문 링크: {len(hrefs)}개")
+
+            for href in hrefs[:10]:
+                if href in seen:
+                    continue
+                seen.add(href)
+
                 try:
-                    body = resp.body()
-                    all_riss_responses[resp.url] = body
-                    if b"DetailView" in body:
-                        print(f"  ★ DetailView 포함 응답: {len(body)}bytes | {resp.url[-70:]}")
-                except:
-                    pass
-
-            page.on("response", on_response)
-
-            try:
-                search_url = f"https://www.riss.kr/search/Search.do?queryText={keyword}&colName=re_all&searchGubun=true"
-                page.goto(search_url, timeout=60000)
-                page.wait_for_timeout(12000)
-
-                # 방법 1: 캡처된 응답에서 링크 추출
-                hrefs = []
-                for url, body in all_riss_responses.items():
-                    found = extract_hrefs(body)
-                    if found:
-                        hrefs.extend(found)
-                        print(f"  응답에서 {len(found)}개 링크 추출: {url[-50:]}")
-
-                # 방법 2: DOM에서 추출 (혹시 DOM에 있을 경우)
-                if not hrefs:
-                    dom_links = page.query_selector_all("a[href*='DetailView']")
-                    print(f"  DOM 링크: {len(dom_links)}개")
-                    for link in dom_links:
-                        href = link.get_attribute("href") or ""
-                        if "DetailView" in href:
-                            if not href.startswith("http"):
-                                href = "https://www.riss.kr" + href
-                            hrefs.append(href)
-
-                hrefs = list(set(hrefs))
-                print(f"  총 논문 링크: {len(hrefs)}개")
-
-                # 전체 네트워크 응답 요약 출력 (디버그)
-                print(f"  캡처된 RISS 응답 수: {len(all_riss_responses)}개")
-                for url, body in all_riss_responses.items():
-                    has_detail = "★" if b"DetailView" in body else " "
-                    print(f"    {has_detail} {len(body)}bytes | {url[-80:]}")
-
-                for href in hrefs[:10]:
-                    if href in seen:
-                        continue
-                    seen.add(href)
-
-                    detail = context.new_page()
-                    try:
-                        detail.goto(href, timeout=30000)
-                        detail.wait_for_timeout(2000)
-
-                        title = ""
-                        for sel in ["h3.title", ".cont_inner h3", "h2.title", ".thesisInfo h3", ".titArea h3"]:
-                            el = detail.query_selector(sel)
-                            if el:
-                                t = el.inner_text().strip()
-                                if len(t) > 5:
-                                    title = t
-                                    break
-
-                        if not title or len(title) < 4:
-                            detail.close()
-                            continue
-
-                        author = ""
-                        for sel in [".author", ".writer", "dd.author"]:
-                            el = detail.query_selector(sel)
-                            if el:
-                                author = el.inner_text().strip()
-                                break
-
-                        year = ""
-                        for sel in [".year", ".pubYear", "dd.year"]:
-                            el = detail.query_selector(sel)
-                            if el:
-                                year = el.inner_text().strip()[:4]
-                                break
-
-                        journal = ""
-                        for sel in [".journalInfo", ".publisher", "dd.journal"]:
-                            el = detail.query_selector(sel)
-                            if el:
-                                journal = el.inner_text().strip()
-                                break
-
-                        abstract = ""
-                        for sel in [".abstractTxt", ".abstract", "#abstract", ".cont_abstract"]:
-                            el = detail.query_selector(sel)
-                            if el:
-                                abstract = el.inner_text().strip()
-                                break
-
-                        print(f"  수집: {title[:40]}")
-
-                        summary = ""
-                        if abstract and GEMINI_API_KEY:
-                            print(f"    Gemini 요약 중...")
-                            summary = summarize(abstract)
-                            time.sleep(1.5)
-
-                        papers.append({
-                            "title": title,
-                            "author": author or "미상",
-                            "year": year or "-",
-                            "journal": journal or "-",
-                            "abstract": abstract,
-                            "summary": summary,
-                            "category": category,
-                            "url": href
-                        })
-
-                    except Exception as e:
-                        print(f"  상세 오류: {e}")
-                    finally:
-                        detail.close()
                     time.sleep(1)
+                    detail_resp = session.get(href, timeout=30)
+                    detail_soup = BeautifulSoup(detail_resp.text, "html.parser")
 
-            except Exception as e:
-                print(f"  검색 오류: {e}")
-            finally:
-                page.close()
+                    # 제목
+                    title = ""
+                    for sel in ["h3.title", "h2.title", ".titArea h3", ".cont_inner h3"]:
+                        el = detail_soup.select_one(sel)
+                        if el:
+                            t = el.get_text(strip=True)
+                            if len(t) > 5:
+                                title = t
+                                break
 
-        browser.close()
+                    if not title or len(title) < 4:
+                        continue
+
+                    # 저자
+                    author = ""
+                    for sel in [".author", ".writer", "dd.author"]:
+                        el = detail_soup.select_one(sel)
+                        if el:
+                            author = el.get_text(strip=True)
+                            break
+
+                    # 연도
+                    year = ""
+                    for sel in [".year", ".pubYear", "dd.year"]:
+                        el = detail_soup.select_one(sel)
+                        if el:
+                            year = el.get_text(strip=True)[:4]
+                            break
+
+                    # 학술지
+                    journal = ""
+                    for sel in [".journalInfo", ".publisher", "dd.journal", ".journalName"]:
+                        el = detail_soup.select_one(sel)
+                        if el:
+                            journal = el.get_text(strip=True)
+                            break
+
+                    # 초록
+                    abstract = ""
+                    for sel in [".abstractTxt", ".abstract", "#abstract", ".cont_abstract"]:
+                        el = detail_soup.select_one(sel)
+                        if el:
+                            abstract = el.get_text(strip=True)
+                            break
+
+                    print(f"  수집: {title[:40]}")
+
+                    summary = ""
+                    if abstract and GEMINI_API_KEY:
+                        print(f"    Gemini 요약 중...")
+                        summary = summarize(abstract)
+                        time.sleep(1.5)
+
+                    papers.append({
+                        "title": title,
+                        "author": author or "미상",
+                        "year": year or "-",
+                        "journal": journal or "-",
+                        "abstract": abstract,
+                        "summary": summary,
+                        "category": category,
+                        "url": href
+                    })
+
+                except Exception as e:
+                    print(f"  상세 오류: {e}")
+
+            time.sleep(2)
+
+        except Exception as e:
+            print(f"  검색 오류: {e}")
 
     print(f"\n=== 총 수집: {len(papers)}건 ===")
     return papers
