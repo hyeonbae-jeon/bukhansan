@@ -36,16 +36,21 @@ def summarize(text):
 
 def search_naver(keyword, display=10):
     if not NAVER_CLIENT_ID or not NAVER_CLIENT_SECRET:
-        print("  ⚠ Naver API 키 없음 — Secrets 확인 필요")
+        print("  ⚠ Naver API 키 없음")
         return []
     try:
         resp = requests.get(
-            "https://openapi.naver.com/v1/search/academic.json",
+            "https://openapi.naver.com/v1/search/doc.json",
             headers={
                 "X-Naver-Client-Id": NAVER_CLIENT_ID,
                 "X-Naver-Client-Secret": NAVER_CLIENT_SECRET,
             },
-            params={"query": keyword, "display": display, "start": 1, "sort": "sim"},
+            params={
+                "query": keyword,
+                "display": display,
+                "start": 1,
+                "sort": "sim"
+            },
             timeout=30
         )
         print(f"  Naver API HTTP {resp.status_code}")
