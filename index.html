@@ -1,287 +1,277 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>북한산 학술 논문 아카이브</title>
-    <style>
-        body {
-            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            font-size: 15px;
-            line-height: 1.7;
-            color: #334155;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 24px;
-            background-color: #ffffff;
-        }
-
-        h1 {
-            font-size: 28px;
-            font-weight: 700;
-            color: #0f172a;
-            margin: 0 0 8px 0;
-            letter-spacing: -0.02em;
-            border-bottom: 2px solid #f1f5f9;
-            padding-bottom: 15px;
-        }
-
-        .subtitle {
-            font-size: 14px;
-            color: #64748b;
-            margin-bottom: 32px;
-            font-weight: 500;
-        }
-
-        /* 카테고리 필터 및 검색 바 */
-        .controls-wrapper {
-            background-color: #f8fafc;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            border: 1px solid #e2e8f0;
-        }
-
-        .search-box {
-            width: 100%;
-            box-sizing: border-box;
-            padding: 10px 14px;
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
-            font-size: 14px;
-            margin-bottom: 12px;
-            outline: none;
-        }
-        .search-box:focus {
-            border-color: #94a3b8;
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            padding: 6px 14px;
-            border: 1px solid #cbd5e1;
-            background-color: #ffffff;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 13px;
-            font-weight: 500;
-            color: #475569;
-            transition: all 0.15s ease;
-        }
-        .filter-btn.active, .filter-btn:hover {
-            background-color: #0f172a;
-            color: #ffffff;
-            border-color: #0f172a;
-        }
-
-        /* 변경 내용 표(Table) 스타일 적용 */
-        .table-title {
-            font-size: 18px;
-            font-weight: 700;
-            margin: 30px 0 10px 0;
-            color: #1e293b;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 40px;
-            font-size: 14px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f8fafc;
-            color: #475569;
-            font-weight: 600;
-            padding: 12px 16px;
-            border-top: 1px solid #cbd5e1;
-            border-bottom: 2px solid #cbd5e1;
-        }
-
-        td {
-            padding: 16px;
-            border-bottom: 1px solid #e2e8f0;
-            vertical-align: top;
-            color: #334155;
-        }
-
-        tr:hover td {
-            background-color: #f8fafc;
-        }
-
-        /* Badge 스타일 */
-        .badge {
-            display: inline-block;
-            padding: 2px 8px;
-            font-size: 11px;
-            font-weight: 600;
-            border-radius: 4px;
-            text-transform: uppercase;
-        }
-        .badge.resource { background-color: #e0f2fe; color: #0369a1; }
-        .badge.disaster { background-color: #fee2e2; color: #b91c1c; }
-        .badge.tour { background-color: #dcfce7; color: #15803d; }
-
-        /* 요약문 마크다운 인용구 스타일 */
-        .summary-box {
-            font-size: 13.5px;
-            color: #475569;
-            line-height: 1.6;
-            margin: 6px 0 0 0;
-            padding-left: 12px;
-            border-left: 3px solid #cbd5e1;
-        }
-
-        /* 링크 버튼 */
-        .origin-link {
-            font-size: 13px;
-            color: #2563eb;
-            text-decoration: none;
-            font-weight: 500;
-            display: inline-block;
-            margin-top: 8px;
-        }
-        .origin-link:hover {
-            text-decoration: underline;
-        }
-
-        .no-data {
-            text-align: center;
-            padding: 40px;
-            color: #94a3b8;
-            font-size: 14px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>북한산 논문 아카이브</title>
+<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_KAKAO_APP_KEY&autoload=false"></script>
+<style>
+  :root{
+    --bg:#f6f4ef;
+    --ink:#1f2a1f;
+    --line:#d9d3c4;
+    --card:#ffffff;
+    --cat-resource:#5b7a5b;
+    --cat-disaster:#b4472e;
+    --cat-tour:#3a6ea5;
+    --cat-eco:#7a9a3e;
+    --cat-culture:#9b6b34;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:"Pretendard","Apple SD Gothic Neo",sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+  }
+  header{
+    padding:28px 24px 18px;
+    border-bottom:1px solid var(--line);
+  }
+  header h1{
+    margin:0 0 4px;
+    font-size:26px;
+    letter-spacing:-0.5px;
+  }
+  header p{
+    margin:0;
+    color:#5a5a52;
+    font-size:14px;
+  }
+  #layout{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:0;
+  }
+  @media (max-width: 900px){
+    #layout{ grid-template-columns: 1fr; }
+  }
+  #map{
+    height: calc(100vh - 90px);
+    min-height:420px;
+    position: sticky;
+    top:90px;
+    border-right:1px solid var(--line);
+  }
+  #panel{
+    padding:20px 24px;
+  }
+  #controls{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:14px;
+  }
+  .cat-btn{
+    border:1px solid var(--line);
+    background:var(--card);
+    padding:6px 14px;
+    border-radius:999px;
+    font-size:13px;
+    cursor:pointer;
+    color:var(--ink);
+  }
+  .cat-btn.active{
+    background:var(--ink);
+    color:#fff;
+    border-color:var(--ink);
+  }
+  #search{
+    width:100%;
+    padding:9px 12px;
+    border:1px solid var(--line);
+    border-radius:8px;
+    margin-bottom:16px;
+    font-size:14px;
+  }
+  #status{
+    font-size:13px;
+    color:#8a8578;
+    margin-bottom:12px;
+  }
+  .paper{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:16px 18px;
+    margin-bottom:12px;
+    cursor:pointer;
+    transition:box-shadow .15s;
+  }
+  .paper:hover{
+    box-shadow:0 2px 10px rgba(0,0,0,.06);
+  }
+  .badge{
+    display:inline-block;
+    font-size:11px;
+    color:#fff;
+    padding:2px 9px;
+    border-radius:999px;
+    margin-bottom:8px;
+  }
+  .badge-자원조사{ background:var(--cat-resource); }
+  .badge-재난{ background:var(--cat-disaster); }
+  .badge-탐방{ background:var(--cat-tour); }
+  .badge-생태{ background:var(--cat-eco); }
+  .badge-역사문화{ background:var(--cat-culture); }
+  .paper h3{
+    margin:0 0 6px;
+    font-size:16px;
+    line-height:1.4;
+  }
+  .meta{
+    font-size:12.5px;
+    color:#7a7a6f;
+    margin-bottom:8px;
+  }
+  .summary{
+    font-size:13.5px;
+    line-height:1.6;
+    color:#3a3a34;
+    margin-bottom:8px;
+  }
+  .paper a{
+    font-size:12.5px;
+    color:var(--cat-tour);
+    text-decoration:none;
+  }
+  #empty{
+    padding:40px 10px;
+    text-align:center;
+    color:#8a8578;
+    font-size:14px;
+  }
+</style>
 </head>
 <body>
 
-<h1>북한산 학술 논문 아카이브</h1>
-<div class="subtitle" id="current-date">자동 업데이트 시스템</div>
+<header>
+  <h1>북한산 논문 아카이브</h1>
+  <p id="status">불러오는 중…</p>
+</header>
 
-<div class="controls-wrapper">
-    <input type="text" id="search-input" class="search-box" placeholder="논문 제목, 저자 또는 요약 키워드 검색..." oninput="filterData()">
-    <div class="btn-group">
-        <button class="filter-btn active" onclick="changeCategory('all', this)">전체보기</button>
-        <button class="filter-btn" onclick="changeCategory('resource', this)">자원조사</button>
-        <button class="filter-btn" onclick="changeCategory('disaster', this)">재난방재</button>
-        <button class="filter-btn" onclick="changeCategory('tour', this)">탐방이용</button>
+<div id="layout">
+  <div id="map"></div>
+  <div id="panel">
+    <input id="search" type="text" placeholder="제목·키워드로 검색">
+    <div id="controls">
+      <button class="cat-btn active" data-cat="전체">전체</button>
+      <button class="cat-btn" data-cat="자원조사">자원조사</button>
+      <button class="cat-btn" data-cat="재난">재난</button>
+      <button class="cat-btn" data-cat="탐방">탐방</button>
+      <button class="cat-btn" data-cat="생태">생태</button>
+      <button class="cat-btn" data-cat="역사문화">역사문화</button>
     </div>
+    <div id="list"></div>
+    <div id="empty" style="display:none;">조건에 맞는 논문이 없습니다.</div>
+  </div>
 </div>
 
-<div class="table-title">검색된 학술 자료 목록 (<span id="total-count" style="font-weight: 700;">0</span>건)</div>
-
-<table>
-    <thead>
-        <tr>
-            <th style="width: 15%;">분류</th>
-            <th style="width: 55%;">논문 정보 및 AI 초록 요약</th>
-            <th style="width: 15%;">출처</th>
-            <th style="width: 15%;">원문</th>
-        </tr>
-    </thead>
-    <tbody id="paper-table-body">
-        <tr>
-            <td colspan="4" class="no-data">논문 데이터를 불러오는 중입니다...</td>
-        </tr>
-    </tbody>
-</table>
-
 <script>
-    let allPapers = [];
-    let currentCategory = 'all';
+let ALL_PAPERS = [];
+let currentCat = "전체";
+let map, markers = [];
 
-    // 오늘 날짜 표시 (첨부파일 스타일 감성)
-    const today = new Date();
-    document.getElementById('current-date').innerText = today.toISOString().split('T')[0];
+function initMap(){
+  const container = document.getElementById('map');
+  const options = {
+    center: new kakao.maps.LatLng(37.6585, 126.9770),
+    level: 6
+  };
+  map = new kakao.maps.Map(container, options);
+}
 
-    // papers.json 데이터 비동기 로드 (하드코딩 예시 없음)
-    window.onload = function() {
-        fetch('papers.json')
-            .then(res => res.json())
-            .then(data => {
-                allPapers = data;
-                renderTable();
-            })
-            .catch(err => {
-                document.getElementById('paper-table-body').innerHTML = 
-                    `<tr><td colspan="4" class="no-data">수집된 논문 데이터 파일(papers.json)이 없거나 아직 첫 자동 수집이 실행되지 않았습니다. GitHub Actions 탭에서 봇을 가동해 보세요.</td></tr>`;
-            });
-    };
+function clearMarkers(){
+  markers.forEach(m => m.setMap(null));
+  markers = [];
+}
 
-    function changeCategory(cat, btn) {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        currentCategory = cat;
-        renderTable();
-    }
+function renderMarkers(papers){
+  clearMarkers();
+  papers.forEach(p => {
+    if(!p.location) return;
+    const pos = new kakao.maps.LatLng(p.location.lat, p.location.lng);
+    const marker = new kakao.maps.Marker({ position: pos, map: map });
+    const info = new kakao.maps.InfoWindow({
+      content: `<div style="padding:6px 10px;font-size:12px;max-width:220px;">${p.title}</div>`
+    });
+    kakao.maps.event.addListener(marker, 'mouseover', () => info.open(map, marker));
+    kakao.maps.event.addListener(marker, 'mouseout', () => info.close());
+    markers.push(marker);
+  });
+}
 
-    function filterData() {
-        renderTable();
-    }
+function panTo(loc){
+  if(!map || !loc) return;
+  map.panTo(new kakao.maps.LatLng(loc.lat, loc.lng));
+}
 
-    function renderTable() {
-        const tbody = document.getElementById('paper-table-body');
-        const keyword = document.getElementById('search-input').value.toLowerCase();
-        tbody.innerHTML = '';
-        
-        let filtered = allPapers.filter(paper => {
-            const matchesCat = (currentCategory === 'all' || paper.category === currentCategory);
-            const matchesKey = (
-                paper.title.toLowerCase().includes(keyword) || 
-                paper.summary.toLowerCase().includes(keyword) ||
-                (paper.author_source && paper.author_source.toLowerCase().includes(keyword))
-            );
-            return matchesCat && matchesKey;
-        });
+function renderList(){
+  const q = document.getElementById('search').value.trim().toLowerCase();
+  const filtered = ALL_PAPERS.filter(p => {
+    const catOk = currentCat === "전체" || p.category === currentCat;
+    const text = `${p.title} ${p.summary} ${p.abstract}`.toLowerCase();
+    const qOk = !q || text.includes(q);
+    return catOk && qOk;
+  });
 
-        document.getElementById('total-count').innerText = filtered.length;
+  const list = document.getElementById('list');
+  const empty = document.getElementById('empty');
+  list.innerHTML = "";
 
-        if (filtered.length === 0) {
-            tbody.innerHTML = `<tr><td colspan="4" class="no-data">조회된 논문 내역이 없습니다.</td></tr>`;
-            return;
-        }
+  if(filtered.length === 0){
+    empty.style.display = "block";
+  } else {
+    empty.style.display = "none";
+    filtered.forEach(p => {
+      const el = document.createElement('div');
+      el.className = "paper";
+      el.innerHTML = `
+        <span class="badge badge-${p.category}">${p.category}</span>
+        <h3>${p.title}</h3>
+        <div class="meta">${p.author} · ${p.journal} · ${p.year}</div>
+        <div class="summary">${p.summary || p.abstract || "요약 정보가 없습니다."}</div>
+        ${p.url ? `<a href="${p.url}" target="_blank" rel="noopener">원문 보기 →</a>` : ""}
+      `;
+      el.addEventListener('click', () => panTo(p.location));
+      list.appendChild(el);
+    });
+  }
 
-        filtered.forEach(paper => {
-            const tr = document.createElement('tr');
+  if(typeof kakao !== 'undefined' && map){
+    renderMarkers(filtered);
+  }
+}
 
-            // 1. 카테고리 뱃지 세팅
-            let catLabel = '자원조사';
-            if (paper.category === 'disaster') catLabel = '재난방재';
-            if (paper.category === 'tour') catLabel = '탐방이용';
-            const catTd = `<td><span class="badge ${paper.category}">${catLabel}</span></td>`;
+document.querySelectorAll('.cat-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentCat = btn.dataset.cat;
+    renderList();
+  });
+});
+document.getElementById('search').addEventListener('input', renderList);
 
-            // 2. 논문 정보 및 AI 요약 세팅 (인용구 스타일 포함)
-            const infoTd = `
-                <td>
-                    <div style="font-weight: 600; color: #0f172a; font-size: 15px;">${paper.title}</div>
-                    <div style="font-size: 12.5px; color: #64748b; margin-top: 2px;">${paper.author_source || '연구자 미상'}</div>
-                    <div class="summary-box">
-                        <span style="font-weight:600; font-size:11px; color:#1e293b; display:block; margin-bottom:2px;">✨ AI 요약</span>
-                        ${paper.summary}
-                    </div>
-                </td>
-            `;
+async function loadPapers(){
+  const status = document.getElementById('status');
+  try{
+    const res = await fetch('papers.json', { cache: "no-store" });
+    if(!res.ok) throw new Error("papers.json 없음");
+    const data = await res.json();
+    ALL_PAPERS = data.papers || [];
+    status.textContent = `총 ${ALL_PAPERS.length}건 · 마지막 업데이트 ${data.updated || "-"}`;
+  }catch(e){
+    status.textContent = "papers.json을 아직 불러오지 못했습니다. GitHub Actions가 한 번 실행된 뒤 새로고침해 주세요.";
+    ALL_PAPERS = [];
+  }
+  renderList();
+}
 
-            // 3. 출처 정보 세팅
-            const sourceTd = `<td style="color: #64748b; font-size: 13px; font-weight: 500;">${paper.origin_site || '학술정보'}</td>`;
-
-            // 4. 원문 링크 세팅
-            const linkTd = `
-                <td>
-                    <a href="${paper.link}" target="_blank" class="origin-link">원문 보기 ➔</a>
-                </td>
-            `;
-
-            tr.innerHTML = catTd + infoTd + sourceTd + linkTd;
-            tbody.appendChild(tr);
-        });
-    }
+if(typeof kakao !== 'undefined'){
+  kakao.maps.load(initMap);
+}
+loadPapers();
 </script>
 
 </body>
