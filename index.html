@@ -210,7 +210,7 @@ function renderList(){
   const q = document.getElementById('search').value.trim().toLowerCase();
   const filtered = ALL_PAPERS.filter(p => {
     const catOk = currentCat === "전체" || p.category === currentCat;
-    const text = `${p.title} ${p.summary} ${p.abstract}`.toLowerCase();
+    const text = `${p.title} ${p.description}`.toLowerCase();
     const qOk = !q || text.includes(q);
     return catOk && qOk;
   });
@@ -230,7 +230,7 @@ function renderList(){
         <span class="badge badge-${p.category}">${p.category}</span>
         <h3>${p.title}</h3>
         <div class="meta">${p.year !== '-' ? p.year : '연도 미상'}</div>
-        <div class="summary">${p.summary || p.abstract || "요약 정보가 없습니다."}</div>
+        <div class="summary">${p.description || "설명 정보가 없습니다."}</div>
         ${p.url ? `<a href="${p.url}" target="_blank" rel="noopener">원문 보기 →</a>` : ""}
       `;
       el.addEventListener('click', () => panTo(p.location));
