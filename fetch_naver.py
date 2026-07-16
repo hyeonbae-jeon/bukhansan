@@ -1,6 +1,8 @@
 """
-북한산 관련 논문을 네이버 학술정보(검색) API에서 수집해 papers.json으로 저장한다.
-GitHub Actions에서 실행되며(서버 IP), 브라우저에서 직접 호출하지 않는다 — 
+북한산 관련 논문을 네이버 "전문자료 검색"(doc) API에서 수집해 papers.json으로 저장한다.
+※ 네이버에는 "academic" 검색 API가 별도로 없다 — 논문/보고서류를 다루는 것은
+   https://openapi.naver.com/v1/search/doc.json ("전문자료 검색")이다.
+GitHub Actions에서 실행되며(서버 IP), 브라우저에서 직접 호출하지 않는다 —
 네이버 API도 CORS로 브라우저 직접 호출을 막기 때문에 반드시 서버(Actions)에서 실행해야 한다.
 """
 import os
@@ -95,7 +97,7 @@ def search_naver(keyword: str, display: int = 30):
         return []
     try:
         resp = requests.get(
-            "https://openapi.naver.com/v1/search/academic.json",
+            "https://openapi.naver.com/v1/search/doc.json",
             headers={
                 "X-Naver-Client-Id": NAVER_CLIENT_ID,
                 "X-Naver-Client-Secret": NAVER_CLIENT_SECRET,
@@ -133,11 +135,13 @@ def fetch_papers():
                 continue
             seen_titles.add(title)
 
-            author = strip_html(item.get("author", "")) or "미상"
-            journal = strip_html(item.get("publisher", "")) or "-"
-            pub = item.get("pubdate", "")
-            year = pub[:4] if pub else "-"
-            url = item.get("link", "") or item.get("doi", "")
+            # 네이버 "전문자료 검색"(doc) API는 title/link/description 3개 필드만 준다.
+            # author·publisher·pubdate 필드는 존재하지 않으므로, 제목/설명 텍스트에서 연도만 정규식으로 추출한다.
+            author = "미상"
+            journal = "-"
+            year_match = re.search(r"(19|20)\d{2}", f"{title} {abstract}")
+            year = year_match.group(0) if year_match else "-"
+            url = item.get("link", "")
             category = classify(title, abstract)
             location = guess_location(title, abstract)
 
