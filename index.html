@@ -229,7 +229,7 @@ function renderList(){
       el.innerHTML = `
         <span class="badge badge-${p.category}">${p.category}</span>
         <h3>${p.title}</h3>
-        <div class="meta">${p.author} · ${p.journal} · ${p.year}</div>
+        <div class="meta">${p.year !== '-' ? p.year : '연도 미상'}</div>
         <div class="summary">${p.summary || p.abstract || "요약 정보가 없습니다."}</div>
         ${p.url ? `<a href="${p.url}" target="_blank" rel="noopener">원문 보기 →</a>` : ""}
       `;
