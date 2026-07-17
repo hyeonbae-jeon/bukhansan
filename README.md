@@ -1,8 +1,8 @@
-# 북한산 논문 아카이브 — 설정 가이드
+# 국립공원 논문 아카이브 — 설정 가이드
 
 ## 파일 구성
 - `index.html` — 실제 보여지는 사이트 (GitHub Pages로 배포)
-- `fetch_naver.py` — 네이버 학술정보(academic.naver.com)에서 논문을 수집하는 스크립트 (GitHub Actions가 실행)
+- `fetch_naver.py` — 전국 24개 국립공원 관련 논문을 네이버 학술정보(academic.naver.com)에서 수집하는 스크립트 (GitHub Actions가 실행)
 - `.github/workflows/fetch-naver.yml` — 매주 자동으로 `fetch_naver.py`를 실행해 `papers.json`을 갱신하는 워크플로우
 - `papers.json` — 수집된 논문 데이터 (최초 실행 전에는 없음, Actions가 처음 실행되면 자동 생성됨)
 
@@ -17,8 +17,8 @@
 3. 이 키가 없으면 AI 분류/요약/활용방안 없이 기존 규칙기반 분류만으로 동작합니다 (사이트는 정상 작동, 이 기능만 빠짐).
 
 ## 3. 첫 실행
-저장소 상단 **Actions** 탭 → **Fetch Bukhansan Papers (Naver)** 선택 → **Run workflow** 버튼 클릭.
-검색어가 많고(17개) 논문 하나하나 AI 분석까지 하기 때문에 **꽤 오래 걸릴 수 있어요(수십 분 단위)**. Actions 탭에서 실행 로그로 진행 상황을 확인할 수 있습니다.
+저장소 상단 **Actions** 탭 → **Fetch National Park Papers (Naver)** 선택 → **Run workflow** 버튼 클릭.
+전국 24개 국립공원 × 검색어 4종 × 논문마다 AI 분석까지 하기 때문에 **꽤 오래 걸립니다(공원 수가 많아 1시간 이상 걸릴 수 있어요).** Actions 탭에서 실행 로그로 어느 공원, 어느 검색어를 처리 중인지 실시간으로 확인할 수 있습니다. 시간이 너무 오래 걸리면 `fetch_naver.py`의 `MAX_PAGES_PER_KEYWORD`(현재 3)나 `KEYWORD_SUFFIXES` 개수를 줄여서 범위를 좁힐 수 있어요.
 
 ## 4. 카카오맵 키 입력
 `index.html` 안의 `YOUR_KAKAO_APP_KEY`를 카카오 개발자센터의 JavaScript 키로 교체하세요.
