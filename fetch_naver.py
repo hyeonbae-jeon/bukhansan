@@ -23,7 +23,13 @@ HEADERS = {
                   "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 }
 
-SEARCH_KEYWORDS = ["북한산", "북한산국립공원", "북한산 생태", "북한산 재난", "북한산 탐방", "북한산 역사", "북한산성"]
+SEARCH_KEYWORDS = [
+    "북한산", "북한산국립공원", "북한산 생태", "북한산 재난", "북한산 탐방", "북한산 역사", "북한산성",
+    "북한산 등산로", "북한산 산림", "북한산 문화재", "북한산 사찰", "북한산 산사태",
+    "북한산 식생", "북한산 둘레길", "북한산 지질", "북한산 토양", "북한산 관리",
+]
+RESULTS_PER_PAGE = 20   # academic.naver.com 한 페이지당 결과 수(확인된 값)
+MAX_PAGES_PER_KEYWORD = 5  # 검색어당 최대 5페이지(최대 100건)까지 시도
 
 CATEGORY_RULES = [
     ("재난", r"산사태|홍수|재난|토사|침수|피해|위험|산불|붕괴|안전사고"),
@@ -93,17 +99,18 @@ def fetch_abstract_detail(detail_url: str) -> dict:
     return result
 
 
-def search_academic(keyword: str):
-    """academic.naver.com 검색결과 페이지를 읽어 논문 목록을 파싱한다."""
+def search_academic(keyword: str, start: int = 1):
+    """academic.naver.com 검색결과 페이지를 읽어 논문 목록을 파싱한다.
+    start: 결과 시작 위치(1부터). 페이지네이션에 사용."""
     items = []
     try:
         resp = requests.get(
             SEARCH_URL,
             headers=HEADERS,
-            params={"field": 0, "docType": 1, "query": keyword},
+            params={"field": 0, "docType": 1, "query": keyword, "start": start},
             timeout=15,
         )
-        print(f"  '{keyword}' → HTTP {resp.status_code}")
+        print(f"  '{keyword}' (start={start}) → HTTP {resp.status_code}")
         if resp.status_code != 200:
             print(f"  응답 실패: {resp.text[:200]}")
             return items
@@ -162,39 +169,53 @@ def fetch_papers():
 
     for keyword in SEARCH_KEYWORDS:
         print(f"\n[검색] '{keyword}'")
-        items = search_academic(keyword)
 
-        for item in items:
-            title = item["title"]
-            if not title or title in seen_titles:
-                continue
-            if "북한산" not in f"{title} {item['snippet']}":
-                continue
-            seen_titles.add(title)
+        for page in range(MAX_PAGES_PER_KEYWORD):
+            start = 1 + page * RESULTS_PER_PAGE
+            items = search_academic(keyword, start=start)
 
-            category = classify(title, item["snippet"])
-            location = guess_location(title, item["snippet"])
+            if not items:
+                break  # 더 이상 결과가 없으면 이 검색어는 종료
 
-            print(f"  수집: [{category}] {title[:50]}")
-            detail = fetch_abstract_detail(item["detail_url"])
+            new_count = 0
+            for item in items:
+                title = item["title"]
+                if not title or title in seen_titles:
+                    continue
+                if "북한산" not in f"{title} {item['snippet']}":
+                    continue
+                seen_titles.add(title)
+                new_count += 1
+
+                category = classify(title, item["snippet"])
+                location = guess_location(title, item["snippet"])
+
+                print(f"  수집: [{category}] {title[:50]}")
+                detail = fetch_abstract_detail(item["detail_url"])
+                time.sleep(0.5)
+
+                pub_info_parts = [p for p in [item["journal"], item["year"], f"{item['cited']}회 피인용" if item["cited"] else ""] if p and p != "-"]
+
+                papers.append({
+                    "title": title,
+                    "description": item["snippet"],
+                    "year": item["year"],
+                    "authors": item["authors"],
+                    "journal": item["journal"],
+                    "institution": detail["institution"],
+                    "pub_info": " · ".join(pub_info_parts),
+                    "abstract": detail["abstract"],
+                    "category": category,
+                    "location": location,
+                    "url": item["detail_url"],
+                    "is_free": item["is_free"],
+                })
+
+            print(f"  → 이 페이지에서 새로 추가된 논문 {new_count}건")
             time.sleep(0.5)
 
-            pub_info_parts = [p for p in [item["journal"], item["year"], f"{item['cited']}회 피인용" if item["cited"] else ""] if p and p != "-"]
-
-            papers.append({
-                "title": title,
-                "description": item["snippet"],
-                "year": item["year"],
-                "authors": item["authors"],
-                "journal": item["journal"],
-                "institution": detail["institution"],
-                "pub_info": " · ".join(pub_info_parts),
-                "abstract": detail["abstract"],
-                "category": category,
-                "location": location,
-                "url": item["detail_url"],
-                "is_free": item["is_free"],
-            })
+            if new_count == 0:
+                break  # 새로운 결과가 없으면(중복만 반복되면) 페이지네이션 파라미터가 안 먹히는 것 → 다음 검색어로
 
         time.sleep(0.5)
 
