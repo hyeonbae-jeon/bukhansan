@@ -66,7 +66,8 @@ def guess_location(title: str, desc: str):
 
 def fetch_abstract_detail(detail_url: str) -> dict:
     """상세 페이지(article.naver?doc_id=...)에서 초록/소속을 읽어온다.
-    실제 구조를 아직 100% 확인 못해 여러 방식으로 시도하고, 다 실패하면 빈 값을 준다."""
+    초록은 <div id="div_abstract"><p class="ui_enddetail_txt"> 안에 한글 초록과
+    영어 초록이 <br><br>로 구분되어 함께 들어있다 (실제 페이지 HTML로 확인됨)."""
     result = {"abstract": "", "institution": ""}
     try:
         resp = requests.get(detail_url, headers=HEADERS, timeout=10)
@@ -74,32 +75,12 @@ def fetch_abstract_detail(detail_url: str) -> dict:
             return result
         soup = BeautifulSoup(resp.text, "html.parser")
 
-        # 시도 1: "초록"이라는 글자가 들어간 제목(h1~h5, strong, dt 등) 다음에 오는 텍스트
-        for tag in soup.find_all(["h2", "h3", "h4", "h5", "strong", "dt", "span", "div"]):
-            label = tag.get_text(strip=True)
-            if label == "초록" or label == "Abstract":
-                nxt = tag.find_next(["p", "div", "dd"])
-                if nxt:
-                    text = nxt.get_text(" ", strip=True)
-                    if len(text) > 20:
-                        result["abstract"] = text
-                        break
+        abstract_p = soup.select_one("div#div_abstract p.ui_enddetail_txt")
+        if abstract_p:
+            raw = abstract_p.get_text("\n", strip=True)
+            result["abstract"] = re.sub(r"\n{2,}", "\n\n", raw).strip()
 
-        # 시도 2: class 이름에 abstract/abst 가 들어간 요소
-        if not result["abstract"]:
-            el = soup.find(class_=re.compile("abstract|abst", re.I))
-            if el:
-                text = el.get_text(" ", strip=True)
-                if len(text) > 20:
-                    result["abstract"] = text
-
-        # 시도 3: citation_abstract 메타태그 (구글 스칼라 표준, 혹시 있을 경우)
-        if not result["abstract"]:
-            meta = soup.find("meta", attrs={"name": "citation_abstract"})
-            if meta and meta.get("content"):
-                result["abstract"] = meta["content"].strip()
-
-        # 소속: "소속" 글자가 들어간 라벨 다음 텍스트
+        # 소속 정보는 이 페이지에서 확인되지 않음 (있으면 아래에서 시도, 없으면 빈 값 유지)
         for tag in soup.find_all(["dt", "span", "div", "th"]):
             if tag.get_text(strip=True) == "소속":
                 nxt = tag.find_next(["dd", "span", "div", "td"])
