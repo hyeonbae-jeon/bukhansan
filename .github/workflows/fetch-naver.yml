@@ -24,9 +24,6 @@ jobs:
         run: pip install requests beautifulsoup4
 
       - name: Run fetch script
-        env:
-          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
-          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
         run: python fetch_naver.py
 
       - name: Commit papers.json
