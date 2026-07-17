@@ -304,11 +304,20 @@ function selectPaper(p, el){
   }
 }
 
+function paperExcerpt(p){
+  // 초록이 있으면 그중 한글 부분(첫 문단)만 발췌, 없으면 검색결과 스니펫으로 대체
+  const source = p.abstract || p.description || "";
+  if(!source) return "설명 정보가 없습니다.";
+  const firstParagraph = source.split(/\n\s*\n/)[0].trim();
+  const text = firstParagraph || source;
+  return text.length > 150 ? text.slice(0, 150) + "…" : text;
+}
+
 function renderList(){
   const q = document.getElementById('search').value.trim().toLowerCase();
   const filtered = ALL_PAPERS.filter(p => {
     const catOk = currentCat === "전체" || p.category === currentCat;
-    const text = `${p.title} ${p.description}`.toLowerCase();
+    const text = `${p.title} ${p.description} ${p.abstract}`.toLowerCase();
     const qOk = !q || text.includes(q);
     return catOk && qOk;
   });
@@ -333,7 +342,7 @@ function renderList(){
         <span class="badge badge-${p.category}">${p.category}</span>
         <h3>${p.title}</h3>
         <div class="meta">${metaParts.join('') || '<span>정보 없음</span>'}</div>
-        <div class="summary">${p.description || "설명 정보가 없습니다."}</div>
+        <div class="summary">${paperExcerpt(p)}</div>
         ${p.url ? `<a href="${p.url}" target="_blank" rel="noopener">원문 보기 →</a>` : ""}
       `;
       el.addEventListener('click', () => selectPaper(p, el));
