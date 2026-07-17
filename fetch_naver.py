@@ -27,7 +27,7 @@ HEADERS = {
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 GEMINI_URL = (
     "https://generativelanguage.googleapis.com/v1beta/models/"
-    f"gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
+    f"gemini-2.5-flash-lite:generateContent?key={GEMINI_API_KEY}"
 )
 CATEGORY_LABELS = ["자원조사", "재난", "탐방", "생태", "역사문화"]
 
