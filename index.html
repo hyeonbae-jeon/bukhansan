@@ -201,6 +201,15 @@
     color:var(--cat-tour);
     text-decoration:none;
   }
+  #ai-summary-row .value, #ai-usage-row .value{
+    background:#f1f0e8;
+    border-left:3px solid var(--cat-resource);
+    padding:10px 12px;
+    border-radius:6px;
+  }
+  #ai-summary-row .label, #ai-usage-row .label{
+    color:var(--cat-resource);
+  }
 </style>
 </head>
 <body>
@@ -251,6 +260,14 @@
         <div class="label">초록</div>
         <div class="value" id="detail-abstract"></div>
       </div>
+      <div class="detail-row" id="ai-summary-row">
+        <div class="label">AI 요약</div>
+        <div class="value" id="detail-ai-summary"></div>
+      </div>
+      <div class="detail-row" id="ai-usage-row">
+        <div class="label">AI 활용 방안 제안</div>
+        <div class="value" id="detail-ai-usage"></div>
+      </div>
       <div class="detail-row">
         <a id="detail-link" href="#" target="_blank" rel="noopener">원문 페이지에서 보기 →</a>
       </div>
@@ -290,6 +307,21 @@ function selectPaper(p, el){
   document.getElementById('detail-journal').textContent = p.journal || "정보 없음";
   document.getElementById('detail-pubinfo').textContent = p.pub_info || (p.year !== '-' ? p.year : "정보 없음");
   document.getElementById('detail-abstract').textContent = p.abstract || p.description || "정보 없음";
+
+  const summaryRow = document.getElementById('ai-summary-row');
+  const usageRow = document.getElementById('ai-usage-row');
+  if(p.ai_summary){
+    document.getElementById('detail-ai-summary').textContent = p.ai_summary;
+    summaryRow.style.display = "block";
+  } else {
+    summaryRow.style.display = "none";
+  }
+  if(p.ai_usage){
+    document.getElementById('detail-ai-usage').textContent = p.ai_usage;
+    usageRow.style.display = "block";
+  } else {
+    usageRow.style.display = "none";
+  }
 
   const link = document.getElementById('detail-link');
   if(p.url){
