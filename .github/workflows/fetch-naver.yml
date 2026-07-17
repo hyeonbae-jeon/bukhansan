@@ -1,4 +1,4 @@
-name: Fetch Bukhansan Papers (Naver)
+name: Fetch National Park Papers (Naver)
 
 on:
   workflow_dispatch: {}      # Actions 탭에서 수동 실행 버튼
@@ -11,6 +11,7 @@ permissions:
 jobs:
   fetch:
     runs-on: ubuntu-latest
+    timeout-minutes: 300      # 국립공원 24개를 다 도는 데 시간이 오래 걸릴 수 있어 여유있게 설정
     steps:
       - name: Checkout
         uses: actions/checkout@v4
