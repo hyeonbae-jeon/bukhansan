@@ -1,28 +1,28 @@
 """
-북한산 관련 논문/자료를 네이버 "전문자료 검색"(doc) API에서 수집해 papers.json으로 저장한다.
-AI 요약 기능 없이, 검색 결과의 title/link/description을 기본으로 쓰고,
-각 논문의 원문 링크 페이지에서 citation_* 메타태그(구글 스칼라 색인 표준)를 읽어
-저자/소속/학술지/발행정보/초록을 최대한 보강한다.
+북한산 관련 논문을 네이버 학술정보(academic.naver.com) 검색결과 페이지에서
+직접 읽어와(스크래핑) papers.json으로 저장한다.
 
-※ 네이버에는 "academic" 검색 API가 없다. 논문류를 다루는 것은
-   https://openapi.naver.com/v1/search/doc.json ("전문자료 검색")이다.
-※ 이 API 자체는 title, link, description 3개 필드만 준다 — 저자/학술지/초록 등은
-   원문 페이지의 citation_* 메타태그에서 별도로 읽어와야 한다. 사이트에 따라
-   이 메타태그가 없을 수도 있고, 그런 경우 해당 필드는 빈 값으로 남는다.
+※ openapi.naver.com의 "doc.json" API는 title/link/description 3개 필드뿐이라
+   저자·학술지·연도 정보가 부실해서, 실제 웹페이지(academic.naver.com)를 직접 읽는 방식으로 변경.
+※ 아래 CSS 선택자(ui_listing_info 등)는 실제 페이지 HTML을 보고 확인한 것.
+   초록(abstract)·소속(institution)은 상세 페이지(article.naver?doc_id=...)에만 있는데
+   그 페이지 구조는 추정치라, 실제로 안 맞으면 상세 페이지 HTML을 한 번 더 확인해서 고쳐야 한다.
 GitHub Actions에서 실행한다 (브라우저 직접 호출은 CORS로 막혀서 불가능).
 """
-import os
 import re
 import json
 import time
 import requests
+from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 
-NAVER_CLIENT_ID = os.environ.get("NAVER_CLIENT_ID", "")
-NAVER_CLIENT_SECRET = os.environ.get("NAVER_CLIENT_SECRET", "")
-HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; BukhansanArchiveBot/1.0)"}
+BASE = "https://academic.naver.com"
+SEARCH_URL = f"{BASE}/search.naver"
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                  "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+}
 
-# 검색어를 다양하게 던져서 최대한 많이 모으고, 실제 카테고리는 내용으로 재분류한다.
 SEARCH_KEYWORDS = ["북한산", "북한산국립공원", "북한산 생태", "북한산 재난", "북한산 탐방", "북한산 역사", "북한산성"]
 
 CATEGORY_RULES = [
@@ -47,10 +47,6 @@ LOCATION_TABLE = [
 DEFAULT_LOCATION = (37.6585, 126.9770)
 
 
-def strip_html(text: str) -> str:
-    return re.sub(r"<[^>]+>", "", text or "").strip()
-
-
 def classify(title: str, desc: str) -> str:
     text = f"{title} {desc}"
     for category, pattern in CATEGORY_RULES:
@@ -68,129 +64,160 @@ def guess_location(title: str, desc: str):
     return {"name": "북한산 일대", "lat": lat, "lng": lng}
 
 
-def enrich_from_link(url: str) -> dict:
-    """원문 페이지의 citation_* 메타태그에서 상세 정보를 읽어온다. 실패하면 빈 값을 돌려준다."""
-    empty = {"authors": "", "institution": "", "journal": "", "pub_info": "", "abstract": ""}
-    if not url:
-        return empty
+def fetch_abstract_detail(detail_url: str) -> dict:
+    """상세 페이지(article.naver?doc_id=...)에서 초록/소속을 읽어온다.
+    실제 구조를 아직 100% 확인 못해 여러 방식으로 시도하고, 다 실패하면 빈 값을 준다."""
+    result = {"abstract": "", "institution": ""}
     try:
-        resp = requests.get(url, headers=HEADERS, timeout=8)
+        resp = requests.get(detail_url, headers=HEADERS, timeout=10)
         if resp.status_code != 200:
-            return empty
+            return result
         soup = BeautifulSoup(resp.text, "html.parser")
 
-        def meta_all(name):
-            return [
-                m.get("content", "").strip()
-                for m in soup.find_all("meta", attrs={"name": name})
-                if m.get("content")
-            ]
+        # 시도 1: "초록"이라는 글자가 들어간 제목(h1~h5, strong, dt 등) 다음에 오는 텍스트
+        for tag in soup.find_all(["h2", "h3", "h4", "h5", "strong", "dt", "span", "div"]):
+            label = tag.get_text(strip=True)
+            if label == "초록" or label == "Abstract":
+                nxt = tag.find_next(["p", "div", "dd"])
+                if nxt:
+                    text = nxt.get_text(" ", strip=True)
+                    if len(text) > 20:
+                        result["abstract"] = text
+                        break
 
-        def meta_one(name):
-            vals = meta_all(name)
-            return vals[0] if vals else ""
+        # 시도 2: class 이름에 abstract/abst 가 들어간 요소
+        if not result["abstract"]:
+            el = soup.find(class_=re.compile("abstract|abst", re.I))
+            if el:
+                text = el.get_text(" ", strip=True)
+                if len(text) > 20:
+                    result["abstract"] = text
 
-        authors = meta_all("citation_author")
-        institutions = meta_all("citation_author_institution")
-        journal = meta_one("citation_journal_title") or meta_one("citation_conference_title")
-        volume = meta_one("citation_volume")
-        issue = meta_one("citation_issue")
-        pages = f"{meta_one('citation_firstpage')}-{meta_one('citation_lastpage')}".strip("-")
-        date = meta_one("citation_publication_date") or meta_one("citation_date")
-        abstract = meta_one("citation_abstract")
+        # 시도 3: citation_abstract 메타태그 (구글 스칼라 표준, 혹시 있을 경우)
+        if not result["abstract"]:
+            meta = soup.find("meta", attrs={"name": "citation_abstract"})
+            if meta and meta.get("content"):
+                result["abstract"] = meta["content"].strip()
 
-        pub_info_parts = [p for p in [journal, f"{volume}권" if volume else "", f"{issue}호" if issue else "", pages, date] if p]
+        # 소속: "소속" 글자가 들어간 라벨 다음 텍스트
+        for tag in soup.find_all(["dt", "span", "div", "th"]):
+            if tag.get_text(strip=True) == "소속":
+                nxt = tag.find_next(["dd", "span", "div", "td"])
+                if nxt:
+                    result["institution"] = nxt.get_text(" ", strip=True)
+                    break
 
-        return {
-            "authors": ", ".join(authors),
-            "institution": ", ".join(institutions),
-            "journal": journal,
-            "pub_info": " · ".join(pub_info_parts),
-            "abstract": strip_html(abstract),
-        }
     except Exception as e:
-        print(f"    (상세 정보 보강 실패: {e})")
-        return empty
+        print(f"    (상세페이지 읽기 실패: {e})")
+    return result
 
 
-def search_naver(keyword: str, display: int = 100):
-    if not NAVER_CLIENT_ID or not NAVER_CLIENT_SECRET:
-        print("  ⚠ NAVER_CLIENT_ID / NAVER_CLIENT_SECRET 시크릿이 비어있음")
-        return []
+def search_academic(keyword: str):
+    """academic.naver.com 검색결과 페이지를 읽어 논문 목록을 파싱한다."""
+    items = []
     try:
         resp = requests.get(
-            "https://openapi.naver.com/v1/search/doc.json",
-            headers={
-                "X-Naver-Client-Id": NAVER_CLIENT_ID,
-                "X-Naver-Client-Secret": NAVER_CLIENT_SECRET,
-            },
-            params={"query": keyword, "display": display, "start": 1},
-            timeout=30,
+            SEARCH_URL,
+            headers=HEADERS,
+            params={"field": 0, "docType": 1, "query": keyword},
+            timeout=15,
         )
         print(f"  '{keyword}' → HTTP {resp.status_code}")
-        if resp.status_code == 200:
-            data = resp.json()
-            items = data.get("items", [])
-            print(f"  API가 돌려준 원본 결과: {len(items)}건 (전체 {data.get('total', '?')}건 중)")
+        if resp.status_code != 200:
+            print(f"  응답 실패: {resp.text[:200]}")
             return items
-        print(f"  오류 응답: {resp.text[:300]}")
+
+        soup = BeautifulSoup(resp.text, "html.parser")
+        blocks = soup.select("div.ui_listing_info")
+        print(f"  결과 블록 {len(blocks)}건 발견")
+
+        for block in blocks:
+            title_a = block.select_one("h4 a.ui_listing_subtit")
+            if not title_a:
+                continue
+            title = title_a.get_text(strip=True)
+            detail_url = urljoin(BASE, title_a.get("href", ""))
+
+            free_badge = block.select_one("h4 span.spimg")
+            is_free = "무료" in free_badge.get_text(strip=True) if free_badge else False
+
+            year, journal, authors = "", "", []
+            desc_div = block.select_one("div.ui_listing_desc")
+            if desc_div:
+                for src in desc_div.select("span.ui_listing_source"):
+                    text = src.get_text(strip=True)
+                    if src.find("a"):
+                        journal = text
+                    elif re.fullmatch(r"(19|20)\d{2}", text):
+                        year = text
+                    elif text:
+                        authors.append(text)
+
+            cited_el = block.select_one("span.ui_listing_cited_num")
+            cited = cited_el.get_text(strip=True) if cited_el else ""
+
+            snippet_el = block.select_one("p.ui_listing_txt")
+            snippet = snippet_el.get_text(strip=True) if snippet_el else ""
+
+            items.append({
+                "title": title,
+                "detail_url": detail_url,
+                "is_free": is_free,
+                "year": year or "-",
+                "journal": journal,
+                "authors": ", ".join(authors),
+                "cited": cited,
+                "snippet": snippet,
+            })
+
     except Exception as e:
         print(f"  검색 오류: {e}")
-    return []
+    return items
 
 
 def fetch_papers():
     papers = []
     seen_titles = set()
-    skipped_irrelevant = 0
 
     for keyword in SEARCH_KEYWORDS:
         print(f"\n[검색] '{keyword}'")
-        items = search_naver(keyword)
+        items = search_academic(keyword)
 
         for item in items:
-            title = strip_html(item.get("title", ""))
-            desc = strip_html(item.get("description", ""))
-
-            if not title:
+            title = item["title"]
+            if not title or title in seen_titles:
                 continue
-            # 북한산과 무관해 보이는 결과는 제외 (제목이나 설명 어디에도 "북한산"이 없는 경우)
-            if "북한산" not in f"{title} {desc}":
-                skipped_irrelevant += 1
-                continue
-            if title in seen_titles:
+            if "북한산" not in f"{title} {item['snippet']}":
                 continue
             seen_titles.add(title)
 
-            url = item.get("link", "")
-            category = classify(title, desc)
-            location = guess_location(title, desc)
-            year_match = re.search(r"(19|20)\d{2}", f"{title} {desc}")
-            year = year_match.group(0) if year_match else "-"
+            category = classify(title, item["snippet"])
+            location = guess_location(title, item["snippet"])
 
             print(f"  수집: [{category}] {title[:50]}")
-            detail = enrich_from_link(url)
-            time.sleep(0.5)  # 원문 사이트 부담을 줄이기 위한 텀
+            detail = fetch_abstract_detail(item["detail_url"])
+            time.sleep(0.5)
 
-            papers.append(
-                {
-                    "title": title,
-                    "description": desc,
-                    "year": year,
-                    "category": category,
-                    "location": location,
-                    "url": url,
-                    "authors": detail["authors"],
-                    "institution": detail["institution"],
-                    "journal": detail["journal"],
-                    "pub_info": detail["pub_info"],
-                    "abstract": detail["abstract"],
-                }
-            )
+            pub_info_parts = [p for p in [item["journal"], item["year"], f"{item['cited']}회 피인용" if item["cited"] else ""] if p and p != "-"]
 
-        time.sleep(0.3)
+            papers.append({
+                "title": title,
+                "description": item["snippet"],
+                "year": item["year"],
+                "authors": item["authors"],
+                "journal": item["journal"],
+                "institution": detail["institution"],
+                "pub_info": " · ".join(pub_info_parts),
+                "abstract": detail["abstract"],
+                "category": category,
+                "location": location,
+                "url": item["detail_url"],
+                "is_free": item["is_free"],
+            })
 
-    print(f"\n=== 총 수집: {len(papers)}건 (북한산 무관으로 제외: {skipped_irrelevant}건) ===")
+        time.sleep(0.5)
+
+    print(f"\n=== 총 수집: {len(papers)}건 ===")
     return papers
 
 
