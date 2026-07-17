@@ -5,10 +5,11 @@
 ※ openapi.naver.com의 "doc.json" API는 title/link/description 3개 필드뿐이라
    저자·학술지·연도 정보가 부실해서, 실제 웹페이지(academic.naver.com)를 직접 읽는 방식으로 변경.
 ※ 아래 CSS 선택자(ui_listing_info 등)는 실제 페이지 HTML을 보고 확인한 것.
-   초록(abstract)·소속(institution)은 상세 페이지(article.naver?doc_id=...)에만 있는데
-   그 페이지 구조는 추정치라, 실제로 안 맞으면 상세 페이지 HTML을 한 번 더 확인해서 고쳐야 한다.
+※ 제목+초록을 Gemini(AI)에 보내 카테고리 분류 / 내용 요약 / 활용방안을 받아온다.
+   GEMINI_API_KEY가 없으면 AI 호출을 건너뛰고 기존 규칙기반 분류만 사용한다.
 GitHub Actions에서 실행한다 (브라우저 직접 호출은 CORS로 막혀서 불가능).
 """
+import os
 import re
 import json
 import time
@@ -23,13 +24,20 @@ HEADERS = {
                   "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 }
 
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
+GEMINI_URL = (
+    "https://generativelanguage.googleapis.com/v1beta/models/"
+    f"gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
+)
+CATEGORY_LABELS = ["자원조사", "재난", "탐방", "생태", "역사문화"]
+
 SEARCH_KEYWORDS = [
     "북한산", "북한산국립공원", "북한산 생태", "북한산 재난", "북한산 탐방", "북한산 역사", "북한산성",
     "북한산 등산로", "북한산 산림", "북한산 문화재", "북한산 사찰", "북한산 산사태",
     "북한산 식생", "북한산 둘레길", "북한산 지질", "북한산 토양", "북한산 관리",
 ]
 RESULTS_PER_PAGE = 20   # academic.naver.com 한 페이지당 결과 수(확인된 값)
-MAX_PAGES_PER_KEYWORD = 5  # 검색어당 최대 5페이지(최대 100건)까지 시도
+MAX_PAGES_PER_KEYWORD = 30  # 검색어당 최대 30페이지(최대 600건)까지 — "새 결과 0건"이면 자동으로 더 일찍 멈춤
 
 CATEGORY_RULES = [
     ("재난", r"산사태|홍수|재난|토사|침수|피해|위험|산불|붕괴|안전사고"),
@@ -59,6 +67,44 @@ def classify(title: str, desc: str) -> str:
         if re.search(pattern, text):
             return category
     return "자원조사"
+
+
+def analyze_with_ai(title: str, abstract: str, snippet: str) -> dict:
+    """제목+초록을 AI(Gemini)에 보내 분류/요약/활용방안을 받아온다.
+    GEMINI_API_KEY가 없거나 호출이 실패하면 None을 반환하고, 호출부에서 규칙기반 분류로 대체한다."""
+    if not GEMINI_API_KEY:
+        return None
+    text = abstract or snippet or title
+    if not text:
+        return None
+    prompt = f"""아래는 북한산 관련 논문의 제목과 초록이다. 이 논문을 분석해서 정확히 아래 JSON 형식으로만 답하라. 다른 말은 절대 하지 마라.
+
+제목: {title}
+초록: {text[:1800]}
+
+{{
+  "category": "다음 5개 중 내용에 가장 맞는 것 하나만: 자원조사, 재난, 탐방, 생태, 역사문화",
+  "summary": "이 논문이 어떤 내용인지 2~3문장 한국어 요약",
+  "usage": "이 논문 결과를 실제로 어떻게 활용할 수 있는지 2~3문장 한국어로 제안"
+}}"""
+    try:
+        resp = requests.post(
+            GEMINI_URL,
+            json={"contents": [{"parts": [{"text": prompt}]}]},
+            timeout=30,
+        )
+        if resp.status_code != 200:
+            print(f"    (AI 분석 실패: HTTP {resp.status_code} {resp.text[:150]})")
+            return None
+        raw = resp.json()["candidates"][0]["content"]["parts"][0]["text"]
+        cleaned = re.sub(r"```json|```", "", raw).strip()
+        data = json.loads(cleaned)
+        if data.get("category") not in CATEGORY_LABELS:
+            data["category"] = None
+        return data
+    except Exception as e:
+        print(f"    (AI 분석 실패: {e})")
+        return None
 
 
 def guess_location(title: str, desc: str):
@@ -187,12 +233,26 @@ def fetch_papers():
                 seen_titles.add(title)
                 new_count += 1
 
-                category = classify(title, item["snippet"])
                 location = guess_location(title, item["snippet"])
 
-                print(f"  수집: [{category}] {title[:50]}")
+                print(f"  수집: {title[:50]}")
                 detail = fetch_abstract_detail(item["detail_url"])
                 time.sleep(0.5)
+
+                ai = analyze_with_ai(title, detail["abstract"], item["snippet"])
+                if GEMINI_API_KEY:
+                    time.sleep(4.5)  # Gemini 무료 티어 분당 호출 제한 고려
+
+                if ai and ai.get("category"):
+                    category = ai["category"]
+                    ai_summary = ai.get("summary", "")
+                    ai_usage = ai.get("usage", "")
+                else:
+                    category = classify(title, item["snippet"])
+                    ai_summary = ""
+                    ai_usage = ""
+
+                print(f"    → 분류: [{category}]" + (" (AI)" if ai and ai.get("category") else " (규칙기반)"))
 
                 pub_info_parts = [p for p in [item["journal"], item["year"], f"{item['cited']}회 피인용" if item["cited"] else ""] if p and p != "-"]
 
@@ -205,6 +265,8 @@ def fetch_papers():
                     "institution": detail["institution"],
                     "pub_info": " · ".join(pub_info_parts),
                     "abstract": detail["abstract"],
+                    "ai_summary": ai_summary,
+                    "ai_usage": ai_usage,
                     "category": category,
                     "location": location,
                     "url": item["detail_url"],
