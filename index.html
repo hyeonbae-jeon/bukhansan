@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>국립공원 논문 아카이브</title>
+<title>북한산 논문 아카이브</title>
 <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_KAKAO_APP_KEY&autoload=false"></script>
 <style>
   :root{
@@ -71,16 +71,6 @@
     background:var(--ink);
     color:#fff;
     border-color:var(--ink);
-  }
-  #park-select{
-    width:100%;
-    padding:9px 12px;
-    border:1px solid var(--line);
-    border-radius:8px;
-    margin-bottom:10px;
-    font-size:14px;
-    background:var(--card);
-    color:var(--ink);
   }
   #search{
     width:100%;
@@ -238,29 +228,17 @@
     color:var(--cat-tour);
     text-decoration:none;
   }
-  #ai-summary-row .value, #ai-usage-row .value{
-    background:#f1f0e8;
-    border-left:3px solid var(--cat-resource);
-    padding:10px 12px;
-    border-radius:6px;
-  }
-  #ai-summary-row .label, #ai-usage-row .label{
-    color:var(--cat-resource);
-  }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>국립공원 논문 아카이브</h1>
+  <h1>북한산 논문 아카이브</h1>
   <p id="status">불러오는 중…</p>
 </header>
 
 <div id="layout">
   <div id="panel">
-    <select id="park-select">
-      <option value="전체">전체 국립공원</option>
-    </select>
     <input id="search" type="text" placeholder="제목·키워드로 검색">
     <div id="controls">
       <button class="cat-btn active" data-cat="전체">전체</button>
@@ -279,7 +257,6 @@
     <div id="detail-empty">목록에서 논문을 선택하면<br>상세 정보가 여기에 표시됩니다.</div>
     <div id="detail-content">
       <div id="detail-map"></div>
-      <span id="detail-park" style="font-size:12.5px;color:#8a8578;margin-right:8px;"></span>
       <span id="detail-badge" class="badge"></span>
       <h2 id="detail-title"></h2>
       <div class="detail-row">
@@ -302,14 +279,6 @@
         <div class="label">초록</div>
         <div class="value" id="detail-abstract"></div>
       </div>
-      <div class="detail-row" id="ai-summary-row">
-        <div class="label">AI 요약</div>
-        <div class="value" id="detail-ai-summary"></div>
-      </div>
-      <div class="detail-row" id="ai-usage-row">
-        <div class="label">AI 활용 방안 제안</div>
-        <div class="value" id="detail-ai-usage"></div>
-      </div>
       <div class="detail-row">
         <a id="detail-link" href="#" target="_blank" rel="noopener">원문 페이지에서 보기 →</a>
       </div>
@@ -320,7 +289,6 @@
 <script>
 let ALL_PAPERS = [];
 let currentCat = "전체";
-let currentPark = "전체";
 let detailMap, detailMarker;
 
 function initDetailMap(lat, lng){
@@ -342,7 +310,6 @@ function selectPaper(p, el){
   document.getElementById('detail-empty').style.display = 'none';
   document.getElementById('detail-content').style.display = 'block';
 
-  document.getElementById('detail-park').textContent = p.park && p.park.name ? p.park.name : "";
   document.getElementById('detail-badge').textContent = p.category;
   document.getElementById('detail-badge').className = `badge badge-${p.category}`;
   document.getElementById('detail-title').textContent = p.title;
@@ -351,21 +318,6 @@ function selectPaper(p, el){
   document.getElementById('detail-journal').textContent = p.journal || "정보 없음";
   document.getElementById('detail-pubinfo').textContent = p.pub_info || (p.year !== '-' ? p.year : "정보 없음");
   document.getElementById('detail-abstract').textContent = p.abstract || p.description || "정보 없음";
-
-  const summaryRow = document.getElementById('ai-summary-row');
-  const usageRow = document.getElementById('ai-usage-row');
-  if(p.ai_summary){
-    document.getElementById('detail-ai-summary').textContent = p.ai_summary;
-    summaryRow.style.display = "block";
-  } else {
-    summaryRow.style.display = "none";
-  }
-  if(p.ai_usage){
-    document.getElementById('detail-ai-usage').textContent = p.ai_usage;
-    usageRow.style.display = "block";
-  } else {
-    usageRow.style.display = "none";
-  }
 
   const link = document.getElementById('detail-link');
   if(p.url){
@@ -393,10 +345,9 @@ function renderList(){
   const q = document.getElementById('search').value.trim().toLowerCase();
   const filtered = ALL_PAPERS.filter(p => {
     const catOk = currentCat === "전체" || p.category === currentCat;
-    const parkOk = currentPark === "전체" || (p.park && p.park.name === currentPark);
     const text = `${p.title} ${p.description} ${p.abstract}`.toLowerCase();
     const qOk = !q || text.includes(q);
-    return catOk && parkOk && qOk;
+    return catOk && qOk;
   });
 
   const list = document.getElementById('list');
@@ -409,7 +360,6 @@ function renderList(){
     empty.style.display = "none";
     filtered.forEach(p => {
       const metaParts = [];
-      if(p.park && p.park.name) metaParts.push(`<span>${p.park.name}</span>`);
       if(p.year && p.year !== '-') metaParts.push(`<span>${p.year}</span>`);
       if(p.authors) metaParts.push(`<span>${p.authors}</span>`);
       if(p.journal) metaParts.push(`<span>${p.journal}</span>`);
@@ -439,23 +389,7 @@ document.querySelectorAll('.cat-btn').forEach(btn => {
     renderList();
   });
 });
-document.getElementById('park-select').addEventListener('change', (e) => {
-  currentPark = e.target.value;
-  renderList();
-});
 document.getElementById('search').addEventListener('input', renderList);
-
-function populateParkOptions(){
-  const select = document.getElementById('park-select');
-  const names = [...new Set(ALL_PAPERS.map(p => p.park && p.park.name).filter(Boolean))];
-  names.sort((a, b) => a.localeCompare(b, 'ko'));
-  names.forEach(name => {
-    const opt = document.createElement('option');
-    opt.value = name;
-    opt.textContent = name;
-    select.appendChild(opt);
-  });
-}
 
 function renderKeywords(keywords){
   const box = document.getElementById('keywords');
@@ -486,7 +420,6 @@ async function loadPapers(){
     status.textContent = "papers.json을 아직 불러오지 못했습니다. GitHub Actions가 한 번 실행된 뒤 새로고침해 주세요.";
     ALL_PAPERS = [];
   }
-  populateParkOptions();
   renderList();
 }
 
