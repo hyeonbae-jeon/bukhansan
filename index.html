@@ -90,6 +90,33 @@
     margin-bottom:16px;
     font-size:14px;
   }
+  #keywords{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-bottom:16px;
+  }
+  .kw-chip{
+    border:1px solid var(--line);
+    background:#f1f0e8;
+    color:#5a5a52;
+    padding:3px 10px;
+    border-radius:999px;
+    font-size:12px;
+    cursor:pointer;
+  }
+  .kw-chip:hover{
+    background:var(--ink);
+    color:#fff;
+    border-color:var(--ink);
+  }
+  .kw-chip .kw-count{
+    color:#a19b8a;
+    margin-left:3px;
+  }
+  .kw-chip:hover .kw-count{
+    color:#ddd;
+  }
   #status{
     font-size:13px;
     color:#8a8578;
@@ -243,6 +270,7 @@
       <button class="cat-btn" data-cat="생태">생태</button>
       <button class="cat-btn" data-cat="역사문화">역사문화</button>
     </div>
+    <div id="keywords"></div>
     <div id="list"></div>
     <div id="empty" style="display:none;">조건에 맞는 논문이 없습니다.</div>
   </div>
@@ -429,6 +457,22 @@ function populateParkOptions(){
   });
 }
 
+function renderKeywords(keywords){
+  const box = document.getElementById('keywords');
+  box.innerHTML = "";
+  if(!keywords || keywords.length === 0) return;
+  keywords.forEach(k => {
+    const chip = document.createElement('span');
+    chip.className = "kw-chip";
+    chip.innerHTML = `${k.word}<span class="kw-count">${k.count}</span>`;
+    chip.addEventListener('click', () => {
+      document.getElementById('search').value = k.word;
+      renderList();
+    });
+    box.appendChild(chip);
+  });
+}
+
 async function loadPapers(){
   const status = document.getElementById('status');
   try{
@@ -437,6 +481,7 @@ async function loadPapers(){
     const data = await res.json();
     ALL_PAPERS = data.papers || [];
     status.textContent = `총 ${ALL_PAPERS.length}건 · 마지막 업데이트 ${data.updated || "-"}`;
+    renderKeywords(data.keywords);
   }catch(e){
     status.textContent = "papers.json을 아직 불러오지 못했습니다. GitHub Actions가 한 번 실행된 뒤 새로고침해 주세요.";
     ALL_PAPERS = [];
