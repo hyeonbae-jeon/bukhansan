@@ -1,16 +1,26 @@
 """
 북한산 관련 논문을 네이버 학술정보(academic.naver.com) 검색결과 페이지에서
-직접 읽어와(스크래핑) papers.json으로 저장한다. (AI 연동 없음 — 규칙기반 분류만 사용)
+직접 읽어와(스크래핑) papers.json으로 저장한다. (AI 연동 없음, 지도 연동 없음 — 규칙기반 분류만 사용)
 
 ※ openapi.naver.com의 "doc.json" API는 title/link/description 3개 필드뿐이라
    저자·학술지·연도 정보가 부실해서, 실제 웹페이지(academic.naver.com)를 직접 읽는 방식을 쓴다.
 ※ 아래 CSS 선택자(ui_listing_info 등)는 실제 페이지 HTML을 보고 확인한 것.
-GitHub Actions에서 실행한다 (브라우저 직접 호출은 CORS로 막혀서 불가능).
+
+GitHub Actions에서 실행한다. 예전에 짧은 시간에 요청이 몰려서 서버가 응답을 늦추는(추정)
+현상이 있었기 때문에:
+  1) 요청마다 2~5초 랜덤 대기를 둬서 서버 부담을 줄이고
+  2) 한 번 실행할 때 검색어를 전부 다 돌지 않고 일부(BATCH_SIZE개)만 처리한 뒤,
+     다음 실행 때 이어서 나머지를 처리하는 "배치" 방식을 쓴다.
+     어디까지 처리했는지는 fetch_state.json에 저장된다.
+  3) 새로 수집한 결과는 기존 papers.json에 이어붙인다(덮어쓰지 않음).
+워크플로우를 여러 번(수동으로 또는 매일 자동으로) 실행하면 검색어를 한 바퀴 다 돌 때까지
+데이터가 점점 쌓인다.
 """
 import re
 import json
 import time
 import random
+import os
 from collections import Counter
 import requests
 from urllib.parse import urljoin
@@ -29,8 +39,13 @@ HEADERS = {
 SESSION = requests.Session()
 SESSION.headers.update(HEADERS)
 
-REQUEST_TIMEOUT = 30
-MAX_RETRIES = 4
+REQUEST_TIMEOUT = 25
+MAX_RETRIES = 3
+MIN_DELAY, MAX_DELAY = 2.0, 5.0   # 요청 사이 랜덤 대기 (서버 부담 완화)
+
+PAPERS_FILE = "papers.json"
+STATE_FILE = "fetch_state.json"
+BATCH_SIZE = 3   # 한 번 실행에 검색어 3개만 처리
 
 # 검색어를 다양하게 던져서 최대한 많이 모으고, 실제 카테고리는 내용으로 재분류한다.
 SEARCH_KEYWORDS = [
@@ -39,7 +54,7 @@ SEARCH_KEYWORDS = [
     "북한산 식생", "북한산 둘레길", "북한산 지질", "북한산 토양", "북한산 관리",
 ]
 RESULTS_PER_PAGE = 20      # academic.naver.com 한 페이지당 결과 수(확인된 값)
-MAX_PAGES_PER_KEYWORD = 30  # 검색어당 최대 30페이지(최대 600건) — 새 결과 없으면 자동으로 더 일찍 멈춤
+MAX_PAGES_PER_KEYWORD = 30  # 검색어당 최대 30페이지 — 새 결과 없으면 자동으로 더 일찍 멈춤
 
 CATEGORY_RULES = [
     ("재난", r"산사태|홍수|재난|토사|침수|피해|위험|산불|붕괴|안전사고"),
@@ -47,20 +62,6 @@ CATEGORY_RULES = [
     ("생태", r"생태|식생|서식지|동식물|종다양성|산림|곤충|조류|식물상"),
     ("역사문화", r"역사|문화재|유적|사찰|성곽|북한산성|전통"),
 ]
-
-LOCATION_TABLE = [
-    ("백운대", 37.6585, 126.9765),
-    ("인수봉", 37.6600, 126.9775),
-    ("만경대", 37.6580, 126.9760),
-    ("북한산성", 37.6505, 126.9660),
-    ("도봉산", 37.6890, 127.0110),
-    ("우이동", 37.6630, 127.0075),
-    ("정릉", 37.6070, 127.0075),
-    ("구기동", 37.6115, 126.9615),
-    ("불광동", 37.6115, 126.9295),
-    ("의상능선", 37.6480, 126.9640),
-]
-DEFAULT_LOCATION = (37.6585, 126.9770)
 
 STOPWORDS = {
     "논문", "연구", "분석", "결과", "본", "통해", "대한", "위한", "이번", "그리고", "또한",
@@ -73,14 +74,18 @@ JOSA_SUFFIXES = ["으로부터", "에서의", "로서의", "이라는", "하는"
                   "의", "은", "는", "이", "가", "을", "를", "에", "로", "와", "과", "도", "만"]
 
 
+def polite_sleep():
+    time.sleep(random.uniform(MIN_DELAY, MAX_DELAY))
+
+
 def polite_get(url, params=None):
-    """academic.naver.com에 재시도 + 점점 길어지는 대기시간을 적용해 요청한다."""
+    """academic.naver.com에 재시도 + 대기시간을 적용해 요청한다."""
     for attempt in range(1, MAX_RETRIES + 1):
         try:
             resp = SESSION.get(url, params=params, timeout=REQUEST_TIMEOUT)
             return resp
         except requests.exceptions.RequestException as e:
-            wait = attempt * 8 + random.uniform(0, 4)
+            wait = attempt * 6 + random.uniform(0, 3)
             print(f"    (요청 실패, {attempt}/{MAX_RETRIES}회차: {e} — {wait:.0f}초 대기 후 재시도)")
             if attempt < MAX_RETRIES:
                 time.sleep(wait)
@@ -93,15 +98,6 @@ def classify(title: str, desc: str) -> str:
         if re.search(pattern, text):
             return category
     return "자원조사"
-
-
-def guess_location(title: str, desc: str):
-    text = f"{title} {desc}"
-    for name, lat, lng in LOCATION_TABLE:
-        if name in text:
-            return {"name": name, "lat": lat, "lng": lng}
-    lat, lng = DEFAULT_LOCATION
-    return {"name": "북한산 일대", "lat": lat, "lng": lng}
 
 
 def fetch_abstract_detail(detail_url: str) -> dict:
@@ -211,16 +207,38 @@ def extract_keywords(papers: list, top_n: int = 30):
     return [{"word": w, "count": c} for w, c in counter.most_common(top_n)]
 
 
-def fetch_papers():
-    papers = []
-    seen_titles = set()
+def load_state():
+    if os.path.exists(STATE_FILE):
+        try:
+            with open(STATE_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return {"batch_index": 0}
 
-    for keyword in SEARCH_KEYWORDS:
+
+def load_existing_papers():
+    if os.path.exists(PAPERS_FILE):
+        try:
+            with open(PAPERS_FILE, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                return data.get("papers", [])
+        except Exception:
+            pass
+    return []
+
+
+def fetch_batch(keywords: list, seen_titles: set):
+    """검색어 목록(이번 배치분)만 처리해서 새로 찾은 논문 리스트를 돌려준다."""
+    new_papers = []
+
+    for keyword in keywords:
         print(f"\n[검색] '{keyword}'")
 
         for page in range(MAX_PAGES_PER_KEYWORD):
             start = 1 + page * RESULTS_PER_PAGE
             items = search_academic(keyword, start=start)
+            polite_sleep()
 
             if not items:
                 break
@@ -236,15 +254,14 @@ def fetch_papers():
                 new_count += 1
 
                 category = classify(title, item["snippet"])
-                location = guess_location(title, item["snippet"])
 
                 print(f"  수집: [{category}] {title[:50]}")
                 detail = fetch_abstract_detail(item["detail_url"])
-                time.sleep(1.5 + random.uniform(0, 1))
+                polite_sleep()
 
                 pub_info_parts = [p for p in [item["journal"], item["year"], f"{item['cited']}회 피인용" if item["cited"] else ""] if p and p != "-"]
 
-                papers.append({
+                new_papers.append({
                     "title": title,
                     "description": item["snippet"],
                     "year": item["year"],
@@ -254,31 +271,50 @@ def fetch_papers():
                     "pub_info": " · ".join(pub_info_parts),
                     "abstract": detail["abstract"],
                     "category": category,
-                    "location": location,
                     "url": item["detail_url"],
                     "is_free": item["is_free"],
                 })
 
             print(f"  → 이 페이지에서 새로 추가된 논문 {new_count}건")
-            time.sleep(1.5 + random.uniform(0, 1))
 
             if new_count == 0:
                 break
 
-        time.sleep(2 + random.uniform(0, 1.5))
-
-    print(f"\n=== 총 수집: {len(papers)}건 ===")
-    return papers
+    return new_papers
 
 
 if __name__ == "__main__":
-    papers = fetch_papers()
-    keywords = extract_keywords(papers)
-    with open("papers.json", "w", encoding="utf-8") as f:
+    state = load_state()
+    batch_index = state.get("batch_index", 0)
+
+    total_batches = (len(SEARCH_KEYWORDS) + BATCH_SIZE - 1) // BATCH_SIZE
+    current_batch = batch_index % total_batches
+    start_i = current_batch * BATCH_SIZE
+    end_i = start_i + BATCH_SIZE
+    batch_keywords = SEARCH_KEYWORDS[start_i:end_i]
+
+    print(f"=== 배치 {current_batch + 1}/{total_batches} 처리: {batch_keywords} ===")
+
+    existing_papers = load_existing_papers()
+    seen_titles = {p["title"] for p in existing_papers}
+    print(f"기존에 저장된 논문 {len(existing_papers)}건 (이어서 진행)")
+
+    new_papers = fetch_batch(batch_keywords, seen_titles)
+    all_papers = existing_papers + new_papers
+    keywords = extract_keywords(all_papers)
+
+    with open(PAPERS_FILE, "w", encoding="utf-8") as f:
         json.dump(
-            {"updated": time.strftime("%Y-%m-%d %H:%M:%S"), "papers": papers, "keywords": keywords},
+            {"updated": time.strftime("%Y-%m-%d %H:%M:%S"), "papers": all_papers, "keywords": keywords},
             f,
             ensure_ascii=False,
             indent=2,
         )
-    print("papers.json 저장 완료")
+
+    next_batch_index = current_batch + 1
+    with open(STATE_FILE, "w", encoding="utf-8") as f:
+        json.dump({"batch_index": next_batch_index, "total_batches": total_batches}, f, ensure_ascii=False, indent=2)
+
+    print(f"\n=== 이번 배치에서 새로 수집: {len(new_papers)}건 / 전체 누적: {len(all_papers)}건 ===")
+    print(f"다음 실행은 배치 {(next_batch_index % total_batches) + 1}/{total_batches}부터 이어집니다.")
+    print("papers.json / fetch_state.json 저장 완료")
