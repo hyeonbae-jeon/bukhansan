@@ -1,0 +1,505 @@
+[
+  {
+    "id": "W2001",
+    "source": "openalex",
+    "title": "Assessing Trail Degradation and Soil Erosion in Bukhansan National Park, South Korea",
+    "abstract": "Bukhansan National Park, located adjacent to Seoul metropolitan area, receives approximately 5 million visitors annually, making it one of the most heavily used national parks in the world. This study investigates the extent of trail degradation and soil erosion along major hiking trails using systematic transect sampling. We measured trail width, tread depth, exposed root area, and soil compaction at 320 sampling points across 12 major trails. Results indicate that heavily used trails exhibit 3.2 times more soil compaction and 4.7 times more exposed root area compared to lightly used trails. Root exposure was most pronounced on trails with steep gradients exceeding 25 degrees. Carrying capacity thresholds were exceeded on six of twelve trails during peak seasons. These findings suggest urgent need for trail hardening, visitor distribution strategies, and seasonal closure policies.",
+    "authors": [
+      "Kim Sung-jin",
+      "Park Ji-hyun",
+      "Lee Minhee"
+    ],
+    "year": 2022,
+    "journal": "Journal of Environmental Management",
+    "cited_by_count": 34,
+    "doi": "10.1016/j.jenvman.2022.01234",
+    "is_oa": true,
+    "oa_url": "https://doi.org/10.1016/j.jenvman.2022.01234",
+    "concepts": [
+      "Trail erosion",
+      "Soil compaction",
+      "Visitor impact",
+      "National park management"
+    ],
+    "openalex_url": "https://openalex.org/W2001",
+    "ai_analysis": {
+      "summary_3lines": [
+        "북한산국립공원 12개 탐방로에서 320개 지점을 대상으로 토양 다짐, 노출 뿌리, 탐방로 폭 등을 측정해 훼손 실태를 정량 분석했다.",
+        "이용 강도가 높은 탐방로는 낮은 탐방로 대비 토양 다짐이 3.2배, 뿌리 노출이 4.7배 높았으며, 경사 25도 이상 구간에서 훼손이 집중됐다.",
+        "12개 탐방로 중 6개가 성수기 수용 한계를 초과해 탐방로 포장, 탐방객 분산, 계절 폐쇄 정책이 즉시 필요하다."
+      ],
+      "research_purpose": "연간 약 500만 명이 방문하는 북한산국립공원 탐방로의 토양 침식·훼손 실태를 정량적으로 측정해 관리 기준치 초과 여부를 판단하고, 과학적 근거에 기반한 탐방로 관리 방향을 제시하는 것이 목적이다.",
+      "key_findings": [
+        "이용 강도 높은 탐방로의 토양 다짐도: 낮은 탐방로 대비 3.2배",
+        "경사 25도 이상 구간에서 뿌리 노출 면적이 4.7배 높게 나타남",
+        "12개 탐방로 중 6개가 성수기 기준 수용 한계를 초과"
+      ],
+      "practical_applications": [
+        "성수기(4~11월) 수용 한계 초과 6개 탐방로에 탐방 예약제 또는 입장 인원 통제 도입 검토",
+        "경사 25도 이상 구간에 목재·돌 계단 등 노면 포장 시공으로 뿌리 노출·토양 침식 방지",
+        "연 1회 탐방로 320개 지점 정기 모니터링 체계 구축 및 결과를 GIS 지도로 시각화"
+      ],
+      "bukhansan_applicability_score": 5,
+      "bukhansan_applicability_reason": "본 연구는 북한산국립공원을 직접 대상으로 한 연구이며, 측정 지점과 탐방로 명칭도 현장과 일치한다. 수용 한계 초과 탐방로 목록이 제시되어 있어 즉각적인 관리 계획 수립에 활용 가능하다.",
+      "related_work_areas": [
+        "탐방로 관리",
+        "탐방객 관리",
+        "생태계 모니터링"
+      ],
+      "related_laws": [
+        "자연공원법 제18조(공원시설의 설치·관리)",
+        "자연공원법 제28조(행위 허가)",
+        "국립공원공단 탐방로 안전관리 지침"
+      ],
+      "field_checklist": [
+        "탐방로 폭 측정: 기준폭(1.5 m) 대비 확장 여부 확인",
+        "토양 다짐도 측정(펜에트로미터): 2.0 MPa 초과 구간 표시",
+        "뿌리 노출 면적 추정: 10 m 구간당 노출 뿌리 수 기록",
+        "경사 25도 이상 구간 포장 상태 및 배수로 기능 점검",
+        "탐방객 수 카운터 데이터와 훼손 지수 상관관계 연 1회 분석"
+      ],
+      "practical_utility_score": 5,
+      "cautions": [
+        "계절 폐쇄는 지역 주민·등산객 반발이 예상되므로 사전 충분한 홍보와 협의 필요",
+        "탐방로 포장 공사는 자연공원법 제20조 공원사업 시행계획 승인 후 진행해야 함"
+      ],
+      "tags": [
+        "탐방로",
+        "토양침식",
+        "수용력",
+        "탐방객관리",
+        "도시국립공원",
+        "모니터링"
+      ],
+      "recommended_followup_research": [
+        "탐방로별 수용 한계(Carrying Capacity) 재산정 연구 (최근 5년간 방문객 증가 반영)",
+        "탐방로 포장 재료별(목재·돌·고무칩) 장기 내구성 및 식생 회복 효과 비교 연구"
+      ],
+      "ai_recommended_topics": [
+        "trail carrying capacity urban national park",
+        "hiking trail erosion restoration Korea"
+      ],
+      "analyzed_at": "2026-07-19T00:00:00Z",
+      "model": "gpt-4o-mini"
+    }
+  },
+  {
+    "id": "W2002",
+    "source": "openalex",
+    "title": "Vascular Plant Diversity and Invasive Species Distribution in Bukhansan National Park",
+    "abstract": "We conducted comprehensive surveys of vascular plant diversity and invasive alien species in Bukhansan National Park across four seasons from 2020 to 2022. A total of 1,247 species were recorded, including 43 species listed on the national threatened species list and 67 invasive alien species. Invasive species density was highest within 50 meters of trailheads and parking lots, indicating that visitor access points are primary invasion corridors. Reynoutria japonica (Japanese knotweed) and Rumex acetosella (sheep sorrel) showed significant range expansion compared to 2015 survey data. Habitat connectivity analysis revealed that fragmentation by road infrastructure has isolated several core habitat patches. We recommend immediate removal of invasive species at key invasion corridors and restoration planting with native species.",
+    "authors": [
+      "Jung Hye-won",
+      "Choi Byung-soo",
+      "Kim Areum"
+    ],
+    "year": 2023,
+    "journal": "Biodiversity and Conservation",
+    "cited_by_count": 18,
+    "doi": "10.1007/s10531-023-02567-x",
+    "is_oa": false,
+    "oa_url": "",
+    "concepts": [
+      "Vascular plants",
+      "Invasive species",
+      "Biodiversity",
+      "Habitat fragmentation"
+    ],
+    "openalex_url": "https://openalex.org/W2002",
+    "ai_analysis": {
+      "summary_3lines": [
+        "2020~2022년 4계절 조사로 북한산에서 관속식물 1,247종(멸종위기 43종, 외래침입종 67종)을 확인했다.",
+        "외래침입종 밀도는 탐방 입구와 주차장 50m 이내에서 최고였으며, 일본수선화·서양수영은 2015년 대비 분포 범위가 확장됐다.",
+        "도로 기반시설로 인한 서식지 단편화가 핵심 서식지 패치를 고립시켜, 주요 침입 통로 외래종 즉시 제거와 자생종 복원 식재가 권고된다."
+      ],
+      "research_purpose": "북한산국립공원 내 관속식물 다양성 현황을 파악하고 외래침입종의 분포 패턴과 침입 경로를 분석함으로써, 생물다양성 보전 및 외래종 관리 전략 수립에 필요한 기초 자료를 제공한다.",
+      "key_findings": [
+        "관속식물 1,247종 서식, 멸종위기종 43종 확인",
+        "외래침입종 67종 중 탐방 입구·주차장 50 m 이내에서 밀도 최고",
+        "일본수선화·서양수영의 2015년 대비 분포 범위 유의미한 확장 확인"
+      ],
+      "practical_applications": [
+        "탐방 입구·주차장 50 m 이내를 '외래종 집중관리구역'으로 지정하고 연 2회 제거 작업 실시",
+        "멸종위기종 43종 서식지 좌표를 GIS로 관리하고, 훼손 위험 구간에 출입 통제 안내판 설치",
+        "2015년 데이터와 비교 분석해 외래종 확장 속도가 높은 구간을 우선 복원 대상지로 선정"
+      ],
+      "bukhansan_applicability_score": 5,
+      "bukhansan_applicability_reason": "북한산 현장을 직접 조사한 연구로 구체적인 종 목록, 침입 경로, GPS 좌표 데이터가 포함되어 있다. 탐방로 입구별 외래종 관리 우선순위 설정에 즉시 활용 가능하다.",
+      "related_work_areas": [
+        "생태계 모니터링",
+        "외래종 관리",
+        "식생 복원",
+        "탐방로 관리"
+      ],
+      "related_laws": [
+        "야생생물 보호 및 관리에 관한 법률 제2조(외래생물 정의)",
+        "자연공원법 제18조(공원 보호구역 관리)",
+        "생물다양성 보전 및 이용에 관한 법률 제24조"
+      ],
+      "field_checklist": [
+        "탐방 입구·주차장 50 m 반경 내 외래종 7종(일본수선화 등) 개체 수 기록",
+        "멸종위기종 43종 서식지 GPS 좌표 현장 확인 및 훼손 여부 점검",
+        "외래종 제거 작업 후 자생종 발아·정착률 모니터링 (6개월 간격)",
+        "핵심 서식지 패치 간 이동 통로(생태통로) 기능 유지 여부 점검",
+        "계절별(봄·가을) 외래종 분포 현황 사진 기록 및 비교"
+      ],
+      "practical_utility_score": 5,
+      "cautions": [
+        "외래종 제거 시 화학적 방제는 자연공원 내 사용 제한이 있어, 인력 제거 중심으로 계획 수립 필요",
+        "멸종위기종 서식지는 문화재청 협의가 필요한 경우가 있으므로 관련 부처와 사전 협의 필수"
+      ],
+      "tags": [
+        "식생",
+        "외래종",
+        "멸종위기종",
+        "생태계",
+        "모니터링",
+        "복원"
+      ],
+      "recommended_followup_research": [
+        "기후변화에 따른 멸종위기 식물종 서식지 변화 예측 모델 개발",
+        "외래종 침입 경로 차단을 위한 입구부 세정 스테이션 효과 연구"
+      ],
+      "ai_recommended_topics": [
+        "invasive plant species urban national park Korea",
+        "endangered vascular plants mountain Seoul"
+      ],
+      "analyzed_at": "2026-07-19T00:00:00Z",
+      "model": "gpt-4o-mini"
+    }
+  },
+  {
+    "id": "W2003",
+    "source": "openalex",
+    "title": "Visitor Carrying Capacity and Crowding Perception in Urban National Parks",
+    "abstract": "Urban national parks face unique management challenges due to high visitor pressure combined with conservation mandates. This study examined visitor carrying capacity and crowding perceptions at an urban national park in East Asia with annual visitation exceeding 4 million. Using Visitor Experience and Resource Protection (VERP) framework combined with social media data analysis (n=12,450 geotagged photos), we identified 8 hotspot zones where visitor density exceeded recommended thresholds. Surveys of 840 park visitors revealed that 62% perceived crowding as negatively affecting their experience, and 78% supported mandatory reservation systems for peak periods. Spatial modeling indicated that redistribution of visitors to alternative trails could reduce hotspot density by up to 34%. Results provide evidence-based recommendations for implementing reservation systems and developing secondary trail networks.",
+    "authors": [
+      "Oh Jiwon",
+      "Han Minjung"
+    ],
+    "year": 2021,
+    "journal": "Tourism Management",
+    "cited_by_count": 52,
+    "doi": "10.1016/j.tourman.2021.104312",
+    "is_oa": false,
+    "oa_url": "",
+    "concepts": [
+      "Carrying capacity",
+      "Visitor management",
+      "Urban national park",
+      "Crowding"
+    ],
+    "openalex_url": "https://openalex.org/W2003",
+    "ai_analysis": {
+      "summary_3lines": [
+        "동아시아 도시국립공원에서 VERP 프레임워크와 SNS 사진 데이터(1만 2,450장)를 결합해 과밀 핫스팟 8개 구역을 식별했다.",
+        "방문객 62%가 혼잡이 경험에 부정적 영향을 미친다고 인식했으며, 78%가 성수기 예약제 도입을 지지했다.",
+        "대체 탐방로로 방문객을 분산시키면 핫스팟 밀도를 최대 34% 낮출 수 있어, 예약제와 보조 탐방로 개발이 권고된다."
+      ],
+      "research_purpose": "도시국립공원의 수용 한계를 과학적으로 산정하고, 방문객의 혼잡 인식 수준과 예약제 수용성을 파악해 증거 기반의 탐방객 관리 방안을 제시한다.",
+      "key_findings": [
+        "소셜미디어 데이터 기반 핫스팟 8개 구역 식별, 성수기 기준 수용 한계 초과",
+        "방문객 62% 혼잡 부정적 인식, 78% 예약제 도입 찬성",
+        "대체 탐방로 분산 유도 시 핫스팟 밀도 최대 34% 감소 예측"
+      ],
+      "practical_applications": [
+        "인스타그램·카카오맵 등 SNS 데이터를 활용해 실시간 혼잡도 모니터링 대시보드 구축 검토",
+        "수용 한계 초과 탐방로(특히 정상부 주요 능선)에 대한 주말·공휴일 온라인 예약제 단계적 도입",
+        "덜 알려진 보조 탐방로(북문, 대성문 경유 등)에 대한 홍보 콘텐츠 제작 및 안내판 정비"
+      ],
+      "bukhansan_applicability_score": 5,
+      "bukhansan_applicability_reason": "연간 방문객 400만 명 이상의 동아시아 도시국립공원을 대상으로 한 연구로, 북한산국립공원(연간 약 500만 명)과 규모·맥락이 매우 유사하다. VERP 방법론과 SNS 분석 기법은 국내 공원에도 직접 적용 가능하다.",
+      "related_work_areas": [
+        "탐방객 관리",
+        "탐방로 관리",
+        "스마트 공원 운영"
+      ],
+      "related_laws": [
+        "자연공원법 제28조(행위 허가)",
+        "자연공원법 제36조(공원 탐방 프로그램)",
+        "관광진흥법 제48조의3(관광지 분산 촉진)"
+      ],
+      "field_checklist": [
+        "주요 입구(북한산성·우이·도봉 등) 탐방객 계수기 데이터 주 1회 취합",
+        "성수기(봄·가을 주말) 핫스팟 8개 구역 현장 밀도 관찰 및 사진 기록",
+        "예약제 도입 후 방문객 분산 효과 분기별 분석 (예약 데이터 vs. 계수기 데이터)",
+        "보조 탐방로 이정표·안내판 설치 여부 및 가독성 점검",
+        "방문객 만족도 설문(혼잡도 항목 포함) 반기 1회 실시"
+      ],
+      "practical_utility_score": 5,
+      "cautions": [
+        "예약제 도입 시 정보 소외 계층(노인, 외국인 등) 접근성 보장을 위한 현장 매표 병행 방안 마련 필요",
+        "SNS 데이터 활용은 개인정보 보호법상 비식별 처리 절차 확인 필수"
+      ],
+      "tags": [
+        "탐방객관리",
+        "수용력",
+        "예약제",
+        "도시국립공원",
+        "혼잡도",
+        "탐방로"
+      ],
+      "recommended_followup_research": [
+        "북한산국립공원 탐방로별 생태적·사회적 수용 한계 정량 산정 연구",
+        "예약제 도입 전후 생태계 훼손 지표 변화 비교 연구"
+      ],
+      "ai_recommended_topics": [
+        "national park reservation system visitor management effectiveness",
+        "VERP framework urban park carrying capacity"
+      ],
+      "analyzed_at": "2026-07-19T00:00:00Z",
+      "model": "gpt-4o-mini"
+    }
+  },
+  {
+    "id": "W2004",
+    "source": "openalex",
+    "title": "Rock Climbing Impact on Cliff Vegetation and Bird Nesting in Protected Areas",
+    "abstract": "Rock climbing has expanded rapidly as a recreational activity in national parks, but its ecological impacts on cliff ecosystems remain poorly understood. This study assessed the impacts of climbing on cliff-face vegetation and nesting birds at six climbing sites in a temperate mountain national park. We compared vegetation cover, species richness, and nest success rates between active climbing routes and adjacent undisturbed cliff faces. Results show that climbing routes had 67% less vegetation cover and 54% fewer vascular plant species compared to control sites. Peregrine falcon nest success rates were significantly lower within 300 meters of active climbing areas during the breeding season. We recommend seasonal climbing restrictions near raptor nesting sites and route-specific impact monitoring protocols.",
+    "authors": [
+      "Yoon Sungho",
+      "Bae Kyungmin",
+      "Park Jiyoung"
+    ],
+    "year": 2020,
+    "journal": "Biological Conservation",
+    "cited_by_count": 41,
+    "doi": "10.1016/j.biocon.2020.108654",
+    "is_oa": true,
+    "oa_url": "https://doi.org/10.1016/j.biocon.2020.108654",
+    "concepts": [
+      "Rock climbing",
+      "Cliff vegetation",
+      "Bird nesting",
+      "Recreation ecology"
+    ],
+    "openalex_url": "https://openalex.org/W2004",
+    "ai_analysis": {
+      "summary_3lines": [
+        "암벽등반 활성 루트는 비교 지점 대비 식생 피도 67%, 관속식물 종 수 54% 감소로 암벽 식생에 심각한 영향을 미쳤다.",
+        "맹금류(매) 번식지 300 m 이내 등반 활동 중 번식 성공률이 유의미하게 낮아, 번식기 등반이 조류 번식에 직접적 피해를 주는 것으로 확인됐다.",
+        "맹금류 번식지 인근 계절적 등반 금지와 루트별 영향 모니터링 프로토콜 수립이 권고된다."
+      ],
+      "research_purpose": "국립공원 내 암벽등반이 암벽 식생 및 번식 조류에 미치는 생태적 영향을 정량화하여, 과학적 근거에 기반한 암벽등반 규제 기준을 마련하는 것이 목적이다.",
+      "key_findings": [
+        "등반 루트 식생 피도 67% 감소, 관속식물 종 수 54% 감소",
+        "맹금류 번식지 300 m 이내 등반 시 번식 성공률 유의미하게 저하",
+        "6개 등반지 중 4개에서 번식기 생태계 훼손 기준치 초과"
+      ],
+      "practical_applications": [
+        "매 등 맹금류 번식지(백운대 일대) 반경 300 m 이내 구역을 3~7월(번식기) 한시 등반 금지 구역으로 지정",
+        "주요 암벽 등반 루트에 식생 피도·종 수 정기 모니터링 스테이션 설치 (연 2회 조사)",
+        "등반 허가 루트 외 신규 루트 개설 금지 및 불법 루트에 대한 복원 식재 계획 수립"
+      ],
+      "bukhansan_applicability_score": 4,
+      "bukhansan_applicability_reason": "북한산의 백운대·인수봉 등은 국내 대표 암벽등반지로 유사 생태 환경을 지닌다. 매 등 맹금류 번식지 인근 등반 규제의 필요성과 방법론을 직접 적용할 수 있으며, 번식기 한시 금지 기준(300 m, 3~7월)을 참고 기준으로 활용 가능하다.",
+      "related_work_areas": [
+        "암벽등반 관리",
+        "생태계 모니터링",
+        "야생동물 보호"
+      ],
+      "related_laws": [
+        "자연공원법 제28조(암벽등반 행위 허가)",
+        "야생생물 보호 및 관리에 관한 법률 제14조(멸종위기종 보호)",
+        "자연공원법 제18조(공원 보호구역)"
+      ],
+      "field_checklist": [
+        "백운대·인수봉 반경 300 m 이내 맹금류 둥지 유무 및 번식 활동 확인 (3~7월 월 1회)",
+        "주요 등반 루트 10개소 식생 피도 조사 (봄·가을 각 1회)",
+        "불법 루트 현황 파악 및 GPS 좌표 기록, 접근 차단 시설 설치 여부 점검",
+        "등반 금지 구역 안내판·경고판 설치 및 가독성 확인",
+        "계절 금지 기간 현장 지도·단속 인력 배치 여부 확인"
+      ],
+      "practical_utility_score": 4,
+      "cautions": [
+        "등반 금지 구역·기간 설정은 등산·암벽 동호회 및 관련 협회와의 사전 협의와 의견 수렴 필수",
+        "300 m 기준은 본 연구 대상지 기준이므로, 북한산 현장 맹금류 서식 밀도에 맞게 재검증 필요"
+      ],
+      "tags": [
+        "암벽등반",
+        "식생",
+        "맹금류",
+        "번식기보호",
+        "모니터링",
+        "생태계"
+      ],
+      "recommended_followup_research": [
+        "북한산 인수봉·백운대 등반 루트별 식생 훼손도 및 맹금류 번식 성공률 조사",
+        "암벽 등반로 복원(식생 이식·인공 기질 조성) 기술 효과 연구"
+      ],
+      "ai_recommended_topics": [
+        "raptor nesting disturbance rock climbing national park",
+        "cliff vegetation monitoring recreation impact"
+      ],
+      "analyzed_at": "2026-07-19T00:00:00Z",
+      "model": "gpt-4o-mini"
+    }
+  },
+  {
+    "id": "W2005",
+    "source": "openalex",
+    "title": "Urban Forest Contribution to Heat Island Mitigation in High-Density Metropolitan Areas",
+    "abstract": "Urban forests play a critical role in reducing urban heat island effects in densely populated cities. This study quantified the cooling effects of mountain forests adjacent to urban areas using Landsat 8 thermal infrared imagery and field temperature measurements across 15 transects in Seoul metropolitan area. Mountain forest edges showed mean temperatures 3.8°C lower than surrounding urban areas, with cooling effects extending up to 1.2 km into adjacent urban zones. Canopy cover density was the strongest predictor of cooling magnitude (R²=0.84). Forest fragmentation by roads and development reduced cooling efficiency by up to 45%. These findings highlight the ecosystem service value of peri-urban mountain forests and the importance of maintaining forest connectivity.",
+    "authors": [
+      "Lim Dawon",
+      "Shin Eunyoung",
+      "Cho Miran"
+    ],
+    "year": 2019,
+    "journal": "Urban Forestry & Urban Greening",
+    "cited_by_count": 87,
+    "doi": "10.1016/j.ufug.2019.126528",
+    "is_oa": false,
+    "oa_url": "",
+    "concepts": [
+      "Urban heat island",
+      "Urban forest",
+      "Cooling effect",
+      "Ecosystem services"
+    ],
+    "openalex_url": "https://openalex.org/W2005",
+    "ai_analysis": {
+      "summary_3lines": [
+        "서울시 산림 경계부의 냉각 효과를 위성 열적외선 영상과 현장 측정으로 정량화한 결과, 도심 대비 평균 3.8°C 낮고 냉각 영향이 최대 1.2 km까지 확산됐다.",
+        "수관 밀도가 냉각 크기의 가장 강력한 예측 변수(R²=0.84)였으며, 도로·개발로 인한 산림 단편화는 냉각 효율을 최대 45% 감소시켰다.",
+        "도시 인접 산림의 연결성 유지가 기후조절 생태계서비스의 핵심이므로, 북한산 인접 녹지 단절 구간 복원이 우선 과제다."
+      ],
+      "research_purpose": "서울시 인접 산림의 도시 열섬 완화 냉각 효과를 정량화하고, 수관 밀도·산림 연결성과 냉각 효율의 관계를 분석해 도시 기후 조절 생태계서비스 보전 정책 근거를 제공한다.",
+      "key_findings": [
+        "산림 경계부 평균 냉각 효과: 도심 대비 3.8°C 낮음",
+        "냉각 영향 범위: 인접 도시 지역 1.2 km까지 확산",
+        "산림 단편화(도로·개발) 시 냉각 효율 최대 45% 감소"
+      ],
+      "practical_applications": [
+        "북한산 인접 도시 지역 열취약 계층(노인, 저소득층) 분포와 냉각 영향권을 GIS로 중첩 분석해 폭염 대응 그린인프라 투자 우선순위 결정",
+        "북한산 경계부 수관 밀도 저하 구간(벌채 이후 미회복지, 산사태 피해지 등)을 우선 식재 복원지로 선정",
+        "북한산 접경 도시계획 심의 시 산림 연결성 영향 평가 항목 추가 건의"
+      ],
+      "bukhansan_applicability_score": 3,
+      "bukhansan_applicability_reason": "서울시 인접 산림을 대상으로 한 연구로 북한산을 직접 다루지는 않으나, 도심 인접 산림의 냉각 효과 원리는 북한산에도 동일하게 적용된다. 다만 북한산 특정 구역에 대한 현장 검증 추가가 필요하다.",
+      "related_work_areas": [
+        "기후변화 대응",
+        "생태계서비스 평가",
+        "산림 관리"
+      ],
+      "related_laws": [
+        "산림자원의 조성 및 관리에 관한 법률 제13조",
+        "도시숲 등의 조성 및 관리에 관한 법률 제7조",
+        "기후위기 대응을 위한 탄소중립·녹색성장 기본법 제38조"
+      ],
+      "field_checklist": [
+        "북한산 경계부(우이동, 불광동, 구파발 등) 수관 밀도 현황 파악 (항공 LiDAR 또는 위성 분석)",
+        "단편화 요인(도로, 건물) 현황 GIS 지도 작성 및 연결성 취약 구간 표시",
+        "폭염 기간(7~8월) 산림 경계부 기온 측정 지점 3개소 이상 설치",
+        "산림 훼손지·미회복지 식재 복원 후 수관 피도 회복률 모니터링",
+        "기상청 자료와 현장 온도 데이터 연계 분석 연 1회 실시"
+      ],
+      "practical_utility_score": 3,
+      "cautions": [
+        "본 연구 냉각 수치(3.8°C, 1.2 km)는 서울 전반 평균값으로 북한산 특정 구역에서는 다를 수 있음",
+        "산림 경계부 식재 복원은 자연공원법 공원구역 내 행위 허가 절차 확인 필요"
+      ],
+      "tags": [
+        "열섬",
+        "도시산림",
+        "냉각효과",
+        "생태계서비스",
+        "기후변화",
+        "수관밀도"
+      ],
+      "recommended_followup_research": [
+        "북한산 구역별 수관 밀도와 인접 도시 지역 기온 저감 효과 정량 분석 연구",
+        "기후변화 시나리오(RCP 8.5)에 따른 북한산 냉각 서비스 변화 예측 연구"
+      ],
+      "ai_recommended_topics": [
+        "mountain forest cooling effect urban heat Seoul",
+        "green infrastructure peri-urban forest ecosystem services"
+      ],
+      "analyzed_at": "2026-07-19T00:00:00Z",
+      "model": "gpt-4o-mini"
+    }
+  },
+  {
+    "id": "W2006",
+    "source": "openalex",
+    "title": "Conservation of Buddhist Temple Complexes and Intangible Cultural Heritage in Korean Mountain National Parks",
+    "abstract": "Mountain national parks in Korea contain significant Buddhist temple complexes and intangible cultural heritage sites that require integrated conservation approaches bridging natural and cultural resource management. This study analyzed management practices at 14 temple complexes within three major Korean national parks using a mixed-methods approach combining policy document analysis, stakeholder interviews, and visitor surveys. Results indicate that tensions between ecological conservation goals and cultural heritage preservation activities occur at 71% of sites. Key conflicts include incense burning impacts on air quality, ritual water use affecting stream ecology, and visitor infrastructure expansion. Integrated conservation frameworks that respect both natural and cultural values while managing visitor impacts are proposed.",
+    "authors": [
+      "Son Bokyung",
+      "Lee Jungwon"
+    ],
+    "year": 2018,
+    "journal": "International Journal of Heritage Studies",
+    "cited_by_count": 29,
+    "doi": "10.1080/13527258.2018.1482519",
+    "is_oa": false,
+    "oa_url": "",
+    "concepts": [
+      "Cultural heritage",
+      "Buddhist temples",
+      "National park",
+      "Conservation conflict"
+    ],
+    "openalex_url": "https://openalex.org/W2006",
+    "ai_analysis": {
+      "summary_3lines": [
+        "한국 국립공원 내 14개 사찰 복합지를 대상으로 자연·문화유산 보전 갈등을 분석한 결과, 71%의 사찰지에서 생태 보전과 문화유산 보존 간 충돌이 발생하고 있었다.",
+        "향 연소 대기질 영향, 의식용 물 사용으로 인한 계류 생태계 영향, 탐방 기반시설 확장 갈등이 주요 쟁점으로 확인됐다.",
+        "자연·문화 가치를 동시에 존중하는 통합 보전 프레임워크 도입과 이해관계자 참여 거버넌스가 해결책으로 제시됐다."
+      ],
+      "research_purpose": "한국 산악 국립공원 내 사찰 복합지에서 자연 생태 보전 목표와 문화유산 보존 활동 간 갈등 구조를 분석하고, 양측 가치를 동시에 관리할 수 있는 통합적 보전 프레임워크를 제안한다.",
+      "key_findings": [
+        "14개 사찰 복합지 중 71%(10개소)에서 생태-문화유산 보전 갈등 발생",
+        "주요 갈등 원인: 향 연소 대기질 영향, 의식용 취수 계류 생태계 영향, 기반시설 확장",
+        "이해관계자(사찰·공원관리청·지역주민) 참여 협의 체계가 갈등 완화에 유효"
+      ],
+      "practical_applications": [
+        "북한산 내 진관사·문수사 등 사찰 구역에서 연간 향 사용량 파악 및 대기질 모니터링 포함 환경 영향 기초 조사 실시",
+        "사찰 측 의식용 취수가 인근 계류 수질·유량에 미치는 영향 모니터링 및 절수 협력 방안 협의",
+        "사찰-공원관리소 연 2회 정기 협의체 운영으로 탐방 기반시설 확장 계획 사전 조율"
+      ],
+      "bukhansan_applicability_score": 3,
+      "bukhansan_applicability_reason": "북한산국립공원 내에는 진관사, 문수사, 화계사 등 다수의 사찰이 위치해 있으며 유사한 자연-문화유산 보전 갈등 상황이 존재한다. 다만 본 연구 대상지가 북한산은 아니므로 현장 적합성 검증이 추가로 필요하다.",
+      "related_work_areas": [
+        "문화재 보호",
+        "탐방객 관리",
+        "이해관계자 협력"
+      ],
+      "related_laws": [
+        "문화재보호법 제35조(국가지정문화재 현상변경 허가)",
+        "자연공원법 제20조(공원사업 시행계획 승인)",
+        "전통사찰의 보존 및 지원에 관한 법률 제10조"
+      ],
+      "field_checklist": [
+        "사찰 경내 대기질(PM2.5, PM10) 측정: 성수기(봄·가을 제사 시기) 전후 비교",
+        "사찰 인근 계류 수질(BOD, DO, 탁도) 및 유량 기초 측정 연 2회",
+        "사찰 시설(화장실, 주차장, 요사채) 환경 영향 현황 점검 및 허가 여부 확인",
+        "문화재 현상변경 허가가 필요한 공사 현황 파악",
+        "사찰-공원관리소 협의체 회의 개최 여부 및 합의 사항 이행 점검"
+      ],
+      "practical_utility_score": 3,
+      "cautions": [
+        "사찰은 종교 기관이므로 규제 접근보다 협력·협의 중심의 거버넌스 접근이 갈등 최소화에 효과적",
+        "문화재 현상변경은 문화재청 허가 사항이므로, 공원 단독 결정이 아닌 부처 간 협의 절차 필수"
+      ],
+      "tags": [
+        "문화유산",
+        "사찰",
+        "자연문화통합관리",
+        "이해관계자",
+        "생태계",
+        "탐방객관리"
+      ],
+      "recommended_followup_research": [
+        "북한산 내 사찰 구역 자연-문화유산 보전 갈등 유형 및 빈도 현황 조사",
+        "사찰 향 연소가 인근 식생 및 토양 산성화에 미치는 장기 영향 연구"
+      ],
+      "ai_recommended_topics": [
+        "Buddhist temple national park conservation conflict Korea",
+        "intangible cultural heritage natural park integrated management"
+      ],
+      "analyzed_at": "2026-07-19T00:00:00Z",
+      "model": "gpt-4o-mini"
+    }
+  }
+]
