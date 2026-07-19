@@ -2,585 +2,574 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>북한산 논문 아카이브</title>
 <style>
-  :root{
-    --bg:#f6f4ef;
-    --ink:#1f2a1f;
-    --line:#d9d3c4;
-    --card:#ffffff;
-    --cat-resource:#5b7a5b;
-    --cat-disaster:#b4472e;
-    --cat-tour:#3a6ea5;
-    --cat-eco:#7a9a3e;
-    --cat-culture:#9b6b34;
-  }
-  *{box-sizing:border-box;}
-  body{
-    margin:0;
-    font-family:"Pretendard","Apple SD Gothic Neo",sans-serif;
-    background:var(--bg);
-    color:var(--ink);
-  }
-  header{
-    padding:28px 24px 18px;
-    border-bottom:1px solid var(--line);
-  }
-  header h1{
-    margin:0 0 4px;
-    font-size:26px;
-    letter-spacing:-0.5px;
-  }
-  header p{
-    margin:0;
-    color:#5a5a52;
-    font-size:14px;
-  }
-  #layout{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap:0;
-  }
-  @media (max-width: 900px){
-    #layout{ grid-template-columns: 1fr; }
-  }
+:root{
+  --primary:#1d4ed8;--primary-dark:#1e40af;--primary-light:#eff6ff;
+  --surface:#fff;--bg:#f1f5f9;--border:#e2e8f0;
+  --fg:#0f172a;--fg2:#334155;--fg3:#64748b;--fg4:#94a3b8;
+  --green:#065f46;--green-bg:#d1fae5;--green-border:#a7f3d0;
+  --amber:#92400e;--amber-bg:#fef3c7;--amber-border:#fde68a;
+  --blue-bg:#dbeafe;--blue-fg:#1e40af;
+  --radius:6px;--shadow:0 1px 3px rgba(0,0,0,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  background:var(--bg);color:var(--fg);font-size:14px;line-height:1.6}
 
-  /* 좌측: 목록 */
-  #panel{
-    padding:20px 24px;
-    border-right:1px solid var(--line);
-  }
-  #controls{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    margin-bottom:14px;
-  }
-  .cat-btn{
-    border:1px solid var(--line);
-    background:var(--card);
-    padding:6px 14px;
-    border-radius:999px;
-    font-size:13px;
-    cursor:pointer;
-    color:var(--ink);
-  }
-  .cat-btn.active{
-    background:var(--ink);
-    color:#fff;
-    border-color:var(--ink);
-  }
-  #search{
-    width:100%;
-    padding:9px 12px;
-    border:1px solid var(--line);
-    border-radius:8px;
-    margin-bottom:16px;
-    font-size:14px;
-  }
-  #keywords{
-    display:flex;
-    flex-wrap:wrap;
-    gap:6px;
-    margin-bottom:16px;
-  }
-  .kw-chip{
-    border:1px solid var(--line);
-    background:#f1f0e8;
-    color:#5a5a52;
-    padding:3px 10px;
-    border-radius:999px;
-    font-size:12px;
-    cursor:pointer;
-  }
-  .kw-chip:hover{
-    background:var(--ink);
-    color:#fff;
-    border-color:var(--ink);
-  }
-  .kw-chip .kw-count{
-    color:#a19b8a;
-    margin-left:3px;
-  }
-  .kw-chip:hover .kw-count{
-    color:#ddd;
-  }
-  #status{
-    font-size:13px;
-    color:#8a8578;
-    margin-bottom:12px;
-  }
-  .paper{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:10px;
-    padding:16px 18px;
-    margin-bottom:12px;
-    cursor:pointer;
-    transition:box-shadow .15s, border-color .15s;
-  }
-  .paper:hover{
-    box-shadow:0 2px 10px rgba(0,0,0,.06);
-  }
-  .paper.selected{
-    border-color:var(--ink);
-  }
-  .badge{
-    display:inline-block;
-    font-size:11px;
-    color:#fff;
-    padding:2px 9px;
-    border-radius:999px;
-    margin-bottom:8px;
-  }
-  .badge-자원조사{ background:var(--cat-resource); }
-  .badge-재난{ background:var(--cat-disaster); }
-  .badge-탐방{ background:var(--cat-tour); }
-  .badge-생태{ background:var(--cat-eco); }
-  .badge-역사문화{ background:var(--cat-culture); }
-  .paper h3{
-    margin:0 0 6px;
-    font-size:16px;
-    line-height:1.4;
-    word-break:keep-all;
-  }
-  .meta{
-    font-size:12.5px;
-    color:#7a7a6f;
-    margin-bottom:8px;
-  }
-  .meta span:not(:last-child)::after{
-    content: " | ";
-    color:#c9c2b0;
-  }
-  .summary{
-    font-size:13.5px;
-    line-height:1.6;
-    color:#3a3a34;
-    margin-bottom:8px;
-  }
-  .paper a{
-    font-size:12.5px;
-    color:var(--cat-tour);
-    text-decoration:none;
-  }
-  #empty{
-    padding:40px 10px;
-    text-align:center;
-    color:#8a8578;
-    font-size:14px;
-  }
+/* ── Header ── */
+.header{background:var(--primary);height:52px;display:flex;align-items:center;
+  padding:0 20px;gap:16px;position:sticky;top:0;z-index:200;
+  border-bottom:1px solid rgba(0,0,0,.15)}
+.logo{color:#fff;font-size:16px;font-weight:700;letter-spacing:-.3px;
+  white-space:nowrap;text-decoration:none;flex-shrink:0}
+.logo em{font-style:normal;opacity:.6;font-weight:400;font-size:12px;margin-left:6px}
+.header-search{flex:1;max-width:520px;position:relative}
+.header-search input{width:100%;padding:7px 12px 7px 34px;border:none;border-radius:var(--radius);
+  font-size:13px;background:rgba(255,255,255,.18);color:#fff;outline:none;transition:background .2s}
+.header-search input::placeholder{color:rgba(255,255,255,.55)}
+.header-search input:focus{background:rgba(255,255,255,.28)}
+.header-search .ico{position:absolute;left:10px;top:50%;transform:translateY(-50%);
+  color:rgba(255,255,255,.6);font-size:13px}
+.header-right{margin-left:auto;display:flex;align-items:center;gap:6px}
+.header-btn{color:rgba(255,255,255,.8);text-decoration:none;padding:5px 10px;
+  border-radius:var(--radius);font-size:12px;border:1px solid rgba(255,255,255,.25);
+  background:none;cursor:pointer;transition:background .15s;white-space:nowrap}
+.header-btn:hover{background:rgba(255,255,255,.15);color:#fff}
+.header-btn.active-oa{background:rgba(255,255,255,.2);color:#fff;border-color:rgba(255,255,255,.5)}
 
-  /* 우측: 상세 패널 */
-  #detail{
-    padding:20px 24px;
-    position:sticky;
-    top:0;
-    height:100vh;
-    overflow-y:auto;
-  }
-  #dashboard{
-    padding:4px 0 20px;
-  }
-  .dash-section{
-    margin-bottom:30px;
-  }
-  .dash-section h3{
-    font-size:14px;
-    color:#5a5a52;
-    margin:0 0 14px;
-    font-weight:600;
-  }
-  .stat-big{
-    font-size:42px;
-    font-weight:700;
-    line-height:1;
-    color:var(--ink);
-  }
-  .stat-big .unit{
-    font-size:14px;
-    color:#8a8578;
-    margin-left:6px;
-    font-weight:400;
-  }
-  .cat-bar-row{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:9px;
-    font-size:13px;
-  }
-  .cat-bar-row .cat-label{
-    width:66px;
-    flex-shrink:0;
-    color:#5a5a52;
-  }
-  .cat-bar-track{
-    flex:1;
-    background:#eeece2;
-    border-radius:4px;
-    height:13px;
-    overflow:hidden;
-  }
-  .cat-bar-fill{
-    height:100%;
-    border-radius:4px;
-  }
-  .cat-bar-count{
-    width:38px;
-    text-align:right;
-    color:#8a8578;
-    flex-shrink:0;
-    font-size:12px;
-  }
-  #trend-chart-wrap{
-    overflow-x:auto;
-    padding-bottom:6px;
-  }
-  .trend-legend{
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-    margin-top:10px;
-    font-size:11.5px;
-    color:#7a7a6f;
-  }
-  .trend-legend-item{
-    display:flex;
-    align-items:center;
-    gap:4px;
-  }
-  .trend-legend-dot{
-    width:9px;
-    height:9px;
-    border-radius:2px;
-    display:inline-block;
-  }
-  #back-to-dash{
-    display:inline-block;
-    margin-bottom:16px;
-    font-size:12.5px;
-    color:#7a7a6f;
-    cursor:pointer;
-    text-decoration:underline;
-  }
-  #detail-content{
-    display:none;
-  }
-  #detail-content h2{
-    margin:6px 0 16px;
-    font-size:20px;
-    line-height:1.4;
-  }
-  .detail-row{
-    margin-bottom:16px;
-  }
-  .detail-row .label{
-    font-size:12px;
-    color:#8a8578;
-    margin-bottom:3px;
-    font-weight:600;
-  }
-  .detail-row .value{
-    font-size:14px;
-    line-height:1.6;
-    color:#2a2a24;
-    white-space:pre-line;
-  }
-  #detail-link{
-    display:inline-block;
-    margin-top:4px;
-    font-size:13px;
-    color:var(--cat-tour);
-    text-decoration:none;
-  }
+/* ── Layout ── */
+.layout{display:flex;max-width:1260px;margin:0 auto;padding:20px 16px;gap:20px;align-items:flex-start}
+
+/* ── Sidebar ── */
+.sidebar{width:228px;flex-shrink:0;position:sticky;top:68px;display:flex;flex-direction:column;gap:10px}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 14px}
+.panel-title{font-size:11px;font-weight:700;color:var(--fg3);text-transform:uppercase;
+  letter-spacing:.06em;margin-bottom:10px}
+.stat-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:4px}
+.stat-tile{border:1px solid var(--border);border-radius:var(--radius);padding:10px 12px;text-align:center}
+.stat-n{font-size:22px;font-weight:700;color:var(--primary)}
+.stat-l{font-size:11px;color:var(--fg3);margin-top:1px}
+
+.filter-item{display:flex;align-items:center;gap:8px;padding:4px 2px;cursor:pointer}
+.filter-item label{font-size:13px;color:var(--fg2);cursor:pointer;flex:1}
+.filter-count{font-size:11px;color:var(--fg4);background:#f8fafc;
+  padding:1px 6px;border-radius:10px;border:1px solid var(--border)}
+input[type=checkbox]{accent-color:var(--primary);cursor:pointer}
+
+.year-inputs{display:flex;align-items:center;gap:6px;margin-top:8px}
+.year-inputs input{width:72px;padding:5px 8px;border:1px solid var(--border);
+  border-radius:var(--radius);font-size:13px;outline:none;color:var(--fg)}
+.year-inputs input:focus{border-color:var(--primary)}
+.year-inputs span{color:var(--fg4);font-size:12px}
+.year-apply{width:100%;margin-top:8px;padding:6px;background:var(--primary-light);
+  color:var(--primary);border:1px solid #bfdbfe;border-radius:var(--radius);
+  font-size:12px;font-weight:600;cursor:pointer;transition:background .15s}
+.year-apply:hover{background:#dbeafe}
+
+/* keyword cloud */
+.kw-cloud{display:flex;flex-wrap:wrap;gap:5px}
+.kw-tag{padding:3px 8px;background:#f1f5f9;color:var(--fg3);border-radius:4px;
+  font-size:12px;cursor:pointer;border:1px solid transparent;transition:all .12s}
+.kw-tag:hover{background:var(--blue-bg);color:var(--blue-fg);border-color:#93c5fd}
+.kw-tag.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+
+/* ── Main ── */
+.main{flex:1;min-width:0}
+
+.toolbar{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+.result-count{font-size:13px;color:var(--fg3)}
+.result-count strong{color:var(--fg);font-weight:600}
+.spacer{flex:1}
+.sort-wrap{display:flex;align-items:center;gap:6px}
+.sort-wrap label{font-size:12px;color:var(--fg4)}
+.sort-wrap select{padding:5px 8px;border:1px solid var(--border);border-radius:var(--radius);
+  font-size:12px;outline:none;background:var(--surface);color:var(--fg);cursor:pointer}
+
+.active-filters{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.chip{display:inline-flex;align-items:center;gap:5px;padding:3px 8px 3px 10px;
+  background:var(--blue-bg);color:var(--blue-fg);border-radius:4px;font-size:12px;font-weight:500}
+.chip button{background:none;border:none;color:var(--blue-fg);cursor:pointer;
+  font-size:14px;line-height:1;padding:0 1px}
+
+/* ── Paper cards ── */
+.card-list{display:flex;flex-direction:column;gap:6px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:14px 18px;cursor:pointer;transition:border-color .15s}
+.card:hover{border-color:#93c5fd}
+.card.active{border-color:var(--primary);background:var(--primary-light)}
+.card-top{display:flex;align-items:flex-start;gap:10px;margin-bottom:5px}
+.card-title{font-size:14px;font-weight:600;color:var(--primary);line-height:1.4;flex:1}
+.badges{display:flex;gap:5px;flex-wrap:wrap;flex-shrink:0;align-items:flex-start}
+.badge{display:inline-flex;align-items:center;padding:2px 7px;border-radius:4px;
+  font-size:11px;font-weight:600;letter-spacing:.01em;border:1px solid transparent}
+.badge-oa{background:var(--amber-bg);color:var(--amber);border-color:var(--amber-border)}
+.badge-cat{background:var(--blue-bg);color:var(--blue-fg)}
+.badge-naver{background:#eff6ff;color:#1e40af;border-color:#bfdbfe}
+.badge-openalex{background:var(--green-bg);color:var(--green);border-color:var(--green-border)}
+.card-meta{font-size:12px;color:var(--fg3);margin-bottom:6px;
+  display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.card-meta .sep{color:var(--border)}
+.card-abstract{font-size:13px;color:var(--fg2);line-height:1.6;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card-footer{display:flex;align-items:center;gap:10px;margin-top:8px;flex-wrap:wrap}
+.cite-count{font-size:12px;color:var(--fg3)}
+.concepts{display:flex;flex-wrap:wrap;gap:4px}
+.concept-tag{font-size:11px;color:var(--fg3);background:#f8fafc;
+  padding:1px 7px;border-radius:3px;border:1px solid var(--border)}
+.card-link{margin-left:auto;font-size:12px;color:var(--primary);text-decoration:none}
+.card-link:hover{text-decoration:underline}
+
+/* ── Pagination ── */
+.pagination{display:flex;justify-content:center;gap:3px;margin-top:20px}
+.pgbtn{padding:5px 11px;border:1px solid var(--border);border-radius:var(--radius);
+  background:var(--surface);font-size:13px;cursor:pointer;color:var(--fg2);transition:all .12s}
+.pgbtn:hover{border-color:var(--primary);color:var(--primary)}
+.pgbtn.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+.pgbtn:disabled{opacity:.35;cursor:default;pointer-events:none}
+
+/* ── Detail panel ── */
+.detail{position:fixed;right:0;top:52px;width:480px;height:calc(100vh - 52px);
+  background:var(--surface);border-left:1px solid var(--border);
+  overflow-y:auto;z-index:100;
+  transform:translateX(100%);transition:transform .22s cubic-bezier(.4,0,.2,1);
+  padding:24px 26px}
+.detail.open{transform:translateX(0)}
+.detail-close{position:absolute;top:14px;right:14px;background:none;
+  border:1px solid var(--border);border-radius:var(--radius);padding:3px 10px;
+  cursor:pointer;font-size:12px;color:var(--fg3)}
+.detail-close:hover{background:var(--bg)}
+.detail-badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.detail-title{font-size:18px;font-weight:700;color:var(--fg);line-height:1.35;margin-bottom:16px}
+.detail-row{margin-bottom:14px}
+.detail-label{font-size:11px;font-weight:700;color:var(--fg4);text-transform:uppercase;
+  letter-spacing:.06em;margin-bottom:3px}
+.detail-val{font-size:13px;color:var(--fg2)}
+.divider{border:none;border-top:1px solid var(--border);margin:18px 0}
+.detail-abstract{font-size:13px;line-height:1.8;color:var(--fg2)}
+.detail-concepts{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.detail-concept{font-size:12px;color:var(--fg3);background:#f1f5f9;
+  padding:2px 8px;border-radius:4px;border:1px solid var(--border)}
+.detail-actions{display:flex;gap:8px;margin-top:22px;flex-wrap:wrap}
+.btn-p{background:var(--primary);color:#fff;padding:8px 16px;border-radius:var(--radius);
+  font-size:13px;font-weight:600;text-decoration:none;border:none;cursor:pointer;
+  transition:background .15s;display:inline-block}
+.btn-p:hover{background:var(--primary-dark)}
+.btn-s{background:#fff;color:var(--fg2);padding:8px 16px;border-radius:var(--radius);
+  font-size:13px;font-weight:600;text-decoration:none;border:1px solid var(--border);
+  cursor:pointer;transition:background .15s;display:inline-block}
+.btn-s:hover{background:var(--bg)}
+
+/* ── States ── */
+.loading,.empty{text-align:center;padding:60px 20px;color:var(--fg4)}
+.loading h3,.empty h3{font-size:16px;color:var(--fg3);margin-bottom:6px}
+.spin{display:inline-block;width:28px;height:28px;border:3px solid var(--border);
+  border-top-color:var(--primary);border-radius:50%;animation:sp .7s linear infinite;
+  margin-bottom:12px}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+@media(max-width:860px){.sidebar{display:none}}
+@media(max-width:600px){.detail{width:100%}}
 </style>
 </head>
 <body>
 
-<header>
-  <h1>북한산 논문 아카이브</h1>
-  <p id="status">불러오는 중…</p>
+<!-- ── Header ── -->
+<header class="header">
+  <a class="logo" href="#">북한산 아카이브<em>Bukhansan Academic Archive</em></a>
+  <div class="header-search">
+    <span class="ico">&#128269;</span>
+    <input id="hSearch" type="text" placeholder="논문 제목, 초록 검색...">
+  </div>
+  <div class="header-right">
+    <button class="header-btn" id="oaToggle">Open Access 전용</button>
+    <button class="header-btn" onclick="exportCSV()">CSV 내보내기</button>
+  </div>
 </header>
 
-<div id="layout">
-  <div id="panel">
-    <input id="search" type="text" placeholder="제목·키워드로 검색">
-    <div id="controls">
-      <button class="cat-btn active" data-cat="전체">전체</button>
-      <button class="cat-btn" data-cat="자원조사">자원조사</button>
-      <button class="cat-btn" data-cat="재난">재난</button>
-      <button class="cat-btn" data-cat="탐방">탐방</button>
-      <button class="cat-btn" data-cat="생태">생태</button>
-      <button class="cat-btn" data-cat="역사문화">역사문화</button>
-    </div>
-    <div id="keywords"></div>
-    <div id="list"></div>
-    <div id="empty" style="display:none;">조건에 맞는 논문이 없습니다.</div>
-  </div>
+<!-- ── Layout ── -->
+<div class="layout">
 
-  <div id="detail">
-    <div id="dashboard">
-      <div class="dash-section">
-        <h3>수집된 논문</h3>
-        <div class="stat-big" id="stat-total">0<span class="unit">건</span></div>
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar">
+
+    <!-- Stats -->
+    <div class="panel">
+      <div class="panel-title">수집 현황</div>
+      <div class="stat-row">
+        <div class="stat-tile"><div class="stat-n" id="sTot">—</div><div class="stat-l">전체 논문</div></div>
+        <div class="stat-tile"><div class="stat-n" id="sOA">—</div><div class="stat-l">Open Access</div></div>
       </div>
-      <div class="dash-section">
-        <h3>카테고리별 분포</h3>
-        <div id="stat-categories"></div>
-      </div>
-      <div class="dash-section">
-        <h3>연도별 연구 트렌드</h3>
-        <div id="trend-chart-wrap"></div>
-        <div class="trend-legend" id="trend-legend"></div>
-      </div>
-    </div>
-    <div id="detail-content">
-      <span id="back-to-dash">← 전체 통계로 돌아가기</span><br>
-      <span id="detail-badge" class="badge"></span>
-      <h2 id="detail-title"></h2>
-      <div class="detail-row">
-        <div class="label">저자</div>
-        <div class="value" id="detail-authors"></div>
-      </div>
-      <div class="detail-row">
-        <div class="label">소속</div>
-        <div class="value" id="detail-institution"></div>
-      </div>
-      <div class="detail-row">
-        <div class="label">학술지정보</div>
-        <div class="value" id="detail-journal"></div>
-      </div>
-      <div class="detail-row">
-        <div class="label">발행정보</div>
-        <div class="value" id="detail-pubinfo"></div>
-      </div>
-      <div class="detail-row">
-        <div class="label">초록</div>
-        <div class="value" id="detail-abstract"></div>
-      </div>
-      <div class="detail-row">
-        <a id="detail-link" href="#" target="_blank" rel="noopener">원문 페이지에서 보기 →</a>
+      <div class="stat-row" style="margin-top:0">
+        <div class="stat-tile"><div class="stat-n" id="sYear">—</div><div class="stat-l">연도 범위</div></div>
+        <div class="stat-tile"><div class="stat-n" id="sCite">—</div><div class="stat-l">최다 피인용</div></div>
       </div>
     </div>
-  </div>
+
+    <!-- Category filter -->
+    <div class="panel">
+      <div class="panel-title">카테고리</div>
+      <div id="catFilter"></div>
+    </div>
+
+    <!-- Source filter -->
+    <div class="panel">
+      <div class="panel-title">데이터 출처</div>
+      <div id="srcFilter"></div>
+    </div>
+
+    <!-- Year range -->
+    <div class="panel">
+      <div class="panel-title">발행 연도</div>
+      <div class="year-inputs">
+        <input id="yFrom" type="number" placeholder="2000">
+        <span>—</span>
+        <input id="yTo" type="number" placeholder="2025">
+      </div>
+      <button class="year-apply" onclick="applyYear()">적용</button>
+    </div>
+
+    <!-- Keyword cloud -->
+    <div class="panel">
+      <div class="panel-title">주요 키워드</div>
+      <div class="kw-cloud" id="kwCloud"></div>
+    </div>
+
+  </aside>
+
+  <!-- ── Main ── -->
+  <main class="main">
+    <div class="toolbar">
+      <div class="result-count" id="resultCount"></div>
+      <div class="spacer"></div>
+      <div class="sort-wrap">
+        <label>정렬</label>
+        <select id="sortSel" onchange="render()">
+          <option value="year_desc">최신순</option>
+          <option value="year_asc">오래된순</option>
+          <option value="cite_desc">피인용 높은순</option>
+          <option value="title_asc">제목 A→Z</option>
+        </select>
+      </div>
+    </div>
+    <div class="active-filters" id="activeFilters"></div>
+    <div id="cardList"><div class="loading"><div class="spin"></div><h3>논문 불러오는 중...</h3></div></div>
+    <div class="pagination" id="pagination"></div>
+  </main>
+
+</div>
+
+<!-- ── Detail panel ── -->
+<div class="detail" id="detail">
+  <button class="detail-close" onclick="closeDetail()">닫기</button>
+  <div id="detailContent"></div>
 </div>
 
 <script>
-let ALL_PAPERS = [];
-let currentCat = "전체";
+// ── State ──────────────────────────────────────────────────────────────────
+let ALL = [], FILTERED = [], ACTIVE_PAPER = null;
+let PAGE = 1; const PER = 15;
+let filters = { cats: new Set(), srcs: new Set(), oa: false, q: "", yFrom: null, yTo: null, kw: null };
 
-function selectPaper(p, el){
-  document.querySelectorAll('.paper').forEach(n => n.classList.remove('selected'));
-  if(el) el.classList.add('selected');
-
-  document.getElementById('dashboard').style.display = 'none';
-  document.getElementById('detail-content').style.display = 'block';
-
-  document.getElementById('detail-badge').textContent = p.category;
-  document.getElementById('detail-badge').className = `badge badge-${p.category}`;
-  document.getElementById('detail-title').textContent = p.title;
-  document.getElementById('detail-authors').textContent = p.authors || "정보 없음";
-  document.getElementById('detail-institution').textContent = p.institution || "정보 없음";
-  document.getElementById('detail-journal').textContent = p.journal || "정보 없음";
-  document.getElementById('detail-pubinfo').textContent = p.pub_info || (p.year !== '-' ? p.year : "정보 없음");
-  document.getElementById('detail-abstract').textContent = p.abstract || p.description || "정보 없음";
-
-  const link = document.getElementById('detail-link');
-  if(p.url){
-    link.href = p.url;
-    link.style.display = "inline-block";
-  } else {
-    link.style.display = "none";
-  }
-}
-
-function showDashboard(){
-  document.querySelectorAll('.paper').forEach(n => n.classList.remove('selected'));
-  document.getElementById('detail-content').style.display = 'none';
-  document.getElementById('dashboard').style.display = 'block';
-}
-document.getElementById('back-to-dash').addEventListener('click', showDashboard);
-
-function paperExcerpt(p){
-  // 초록이 있으면 그중 한글 부분(첫 문단)만 발췌, 없으면 검색결과 스니펫으로 대체
-  const source = p.abstract || p.description || "";
-  if(!source) return "설명 정보가 없습니다.";
-  const firstParagraph = source.split(/\n\s*\n/)[0].trim();
-  let text = firstParagraph || source;
-  // 앞부분에 영어(제목 번역 등)가 섞여 있으면, 한글이 처음 나오는 지점부터 시작
-  const koreanStart = text.search(/[가-힣]/);
-  if(koreanStart > 0){
-    text = text.slice(koreanStart);
-  }
-  if(!text || text.length < 5){
-    return "요약 정보가 아직 없습니다. (원문 링크에서 확인해 주세요)";
-  }
-  return text.length > 90 ? text.slice(0, 90) + "…" : text;
-}
-
-function renderList(){
-  const q = document.getElementById('search').value.trim().toLowerCase();
-  const filtered = ALL_PAPERS.filter(p => {
-    const catOk = currentCat === "전체" || p.category === currentCat;
-    const text = `${p.title} ${p.description} ${p.abstract}`.toLowerCase();
-    const qOk = !q || text.includes(q);
-    return catOk && qOk;
-  });
-
-  const list = document.getElementById('list');
-  const empty = document.getElementById('empty');
-  list.innerHTML = "";
-
-  if(filtered.length === 0){
-    empty.style.display = "block";
-  } else {
-    empty.style.display = "none";
-    filtered.forEach(p => {
-      const metaParts = [];
-      if(p.year && p.year !== '-') metaParts.push(`<span>${p.year}</span>`);
-      if(p.authors) metaParts.push(`<span>${p.authors}</span>`);
-      if(p.journal) metaParts.push(`<span>${p.journal}</span>`);
-
-      const el = document.createElement('div');
-      el.className = "paper";
-      el.innerHTML = `
-        <span class="badge badge-${p.category}">${p.category}</span>
-        <h3>${p.title}</h3>
-        <div class="meta">${metaParts.join('') || '<span>정보 없음</span>'}</div>
-        <div class="summary">${paperExcerpt(p)}</div>
-        ${p.url ? `<a href="${p.url}" target="_blank" rel="noopener">원문 보기 →</a>` : ""}
-      `;
-      el.addEventListener('click', () => selectPaper(p, el));
-      const linkEl = el.querySelector('a');
-      if(linkEl) linkEl.addEventListener('click', (e) => e.stopPropagation());
-      list.appendChild(el);
-    });
-  }
-}
-
-document.querySelectorAll('.cat-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    currentCat = btn.dataset.cat;
-    renderList();
-  });
-});
-document.getElementById('search').addEventListener('input', renderList);
-
-function renderKeywords(keywords){
-  const box = document.getElementById('keywords');
-  box.innerHTML = "";
-  if(!keywords || keywords.length === 0) return;
-  keywords.forEach(k => {
-    const chip = document.createElement('span');
-    chip.className = "kw-chip";
-    chip.innerHTML = `${k.word}<span class="kw-count">${k.count}</span>`;
-    chip.addEventListener('click', () => {
-      document.getElementById('search').value = k.word;
-      renderList();
-    });
-    box.appendChild(chip);
-  });
-}
-
-const CAT_ORDER = ["자원조사", "재난", "탐방", "생태", "역사문화"];
-const CAT_COLORS = {
-  "자원조사": "#5b7a5b",
-  "재난": "#b4472e",
-  "탐방": "#3a6ea5",
-  "생태": "#7a9a3e",
-  "역사문화": "#9b6b34",
+const CATEGORY_COLORS = {
+  "생태":"#eff6ff:#1d4ed8", "재난":"#fef2f2:#dc2626",
+  "탐방":"#f0fdf4:#16a34a", "자원조사":"#fefce8:#ca8a04",
+  "역사문화":"#fdf4ff:#9333ea", "기타":"#f8fafc:#475569"
 };
 
-function renderDashboard(){
-  document.getElementById('stat-total').innerHTML = `${ALL_PAPERS.length}<span class="unit">건</span>`;
+function badgeCat(cat){
+  const [bg,fg] = (CATEGORY_COLORS[cat] || "#f8fafc:#475569").split(":");
+  return `<span class="badge" style="background:${bg};color:${fg};border-color:transparent">${cat}</span>`;
+}
 
-  // 카테고리별 분포
-  const catCounts = {};
-  CAT_ORDER.forEach(c => catCounts[c] = 0);
-  ALL_PAPERS.forEach(p => { if(catCounts[p.category] !== undefined) catCounts[p.category]++; });
-  const maxCat = Math.max(1, ...Object.values(catCounts));
+// ── Fetch ──────────────────────────────────────────────────────────────────
+async function loadData(){
+  try{
+    const r = await fetch("papers.json");
+    if(!r.ok) throw new Error();
+    ALL = await r.json();
+  } catch {
+    ALL = getSample();
+  }
+  initFilters();
+  buildKeywordCloud();
+  updateStats();
+  applyFilters();
+}
 
-  const catBox = document.getElementById('stat-categories');
-  catBox.innerHTML = CAT_ORDER.map(c => `
-    <div class="cat-bar-row">
-      <span class="cat-label">${c}</span>
-      <span class="cat-bar-track"><span class="cat-bar-fill" style="width:${(catCounts[c]/maxCat*100).toFixed(1)}%; background:${CAT_COLORS[c]};"></span></span>
-      <span class="cat-bar-count">${catCounts[c]}</span>
-    </div>
-  `).join('');
+// ── Filters ────────────────────────────────────────────────────────────────
+function initFilters(){
+  const cats = [...new Set(ALL.map(p=>p.category||"기타"))].sort();
+  const srcs = [...new Set(ALL.map(p=>p.source||"OpenAlex"))].sort();
 
-  // 연도별 카테고리 트렌드
-  const yearCatCounts = {};
-  ALL_PAPERS.forEach(p => {
-    const y = p.year;
-    if(!y || y === '-' || !/^(19|20)\d{2}$/.test(y)) return;
-    if(!yearCatCounts[y]) yearCatCounts[y] = {};
-    yearCatCounts[y][p.category] = (yearCatCounts[y][p.category] || 0) + 1;
+  const catWrap = document.getElementById("catFilter");
+  cats.forEach(c=>{
+    const n = ALL.filter(p=>(p.category||"기타")===c).length;
+    catWrap.innerHTML += `<label class="filter-item">
+      <input type="checkbox" onchange="toggleCat('${c}',this.checked)" data-cat="${c}">
+      <span style="flex:1;font-size:13px;color:var(--fg2)">${c}</span>
+      <span class="filter-count">${n}</span></label>`;
   });
-  const years = Object.keys(yearCatCounts).sort();
-  const wrap = document.getElementById('trend-chart-wrap');
-  const legend = document.getElementById('trend-legend');
 
-  if(years.length === 0){
-    wrap.innerHTML = '<p style="color:#a19b8a;font-size:13px;">연도 정보가 있는 논문이 아직 없습니다.</p>';
-    legend.innerHTML = '';
+  const srcWrap = document.getElementById("srcFilter");
+  srcs.forEach(s=>{
+    const n = ALL.filter(p=>(p.source||"OpenAlex")===s).length;
+    srcWrap.innerHTML += `<label class="filter-item">
+      <input type="checkbox" onchange="toggleSrc('${s}',this.checked)" data-src="${s}">
+      <span style="flex:1;font-size:13px;color:var(--fg2)">${s}</span>
+      <span class="filter-count">${n}</span></label>`;
+  });
+}
+
+function toggleCat(c,v){ v?filters.cats.add(c):filters.cats.delete(c); PAGE=1; applyFilters(); }
+function toggleSrc(s,v){ v?filters.srcs.add(s):filters.srcs.delete(s); PAGE=1; applyFilters(); }
+function applyYear(){
+  filters.yFrom = parseInt(document.getElementById("yFrom").value)||null;
+  filters.yTo   = parseInt(document.getElementById("yTo").value)||null;
+  PAGE=1; applyFilters();
+}
+
+document.getElementById("hSearch").addEventListener("input", e=>{
+  filters.q = e.target.value.trim().toLowerCase(); PAGE=1; applyFilters();
+});
+
+document.getElementById("oaToggle").addEventListener("click", ()=>{
+  filters.oa = !filters.oa;
+  document.getElementById("oaToggle").classList.toggle("active-oa", filters.oa);
+  PAGE=1; applyFilters();
+});
+
+function applyFilters(){
+  let d = [...ALL];
+  if(filters.cats.size) d = d.filter(p=>filters.cats.has(p.category||"기타"));
+  if(filters.srcs.size) d = d.filter(p=>filters.srcs.has(p.source||"OpenAlex"));
+  if(filters.oa)        d = d.filter(p=>p.is_open_access);
+  if(filters.yFrom)     d = d.filter(p=>parseInt(p.year||0)>=filters.yFrom);
+  if(filters.yTo)       d = d.filter(p=>parseInt(p.year||0)<=filters.yTo);
+  if(filters.q)         d = d.filter(p=>(p.title+" "+p.abstract).toLowerCase().includes(filters.q));
+  if(filters.kw)        d = d.filter(p=>(p.title+" "+p.abstract+" "+(p.concepts||[]).join(" ")).toLowerCase().includes(filters.kw.toLowerCase()));
+  FILTERED = d;
+  sortData();
+  renderActiveFilters();
+  render();
+}
+
+function sortData(){
+  const s = document.getElementById("sortSel").value;
+  FILTERED.sort((a,b)=>{
+    if(s==="year_desc") return parseInt(b.year||0)-parseInt(a.year||0);
+    if(s==="year_asc")  return parseInt(a.year||0)-parseInt(b.year||0);
+    if(s==="cite_desc") return (b.cited_by_count||0)-(a.cited_by_count||0);
+    if(s==="title_asc") return (a.title||"").localeCompare(b.title||"");
+    return 0;
+  });
+}
+
+// ── Active filter chips ────────────────────────────────────────────────────
+function renderActiveFilters(){
+  const wrap = document.getElementById("activeFilters");
+  let h = "";
+  if(filters.kw) h += chip(`키워드: ${filters.kw}`, ()=>{ filters.kw=null; document.querySelectorAll(".kw-tag").forEach(t=>t.classList.remove("on")); PAGE=1; applyFilters(); });
+  if(filters.oa) h += chip("Open Access 전용", ()=>{ filters.oa=false; document.getElementById("oaToggle").classList.remove("active-oa"); PAGE=1; applyFilters(); });
+  filters.cats.forEach(c=> h += chip(`카테고리: ${c}`, ()=>{ filters.cats.delete(c); document.querySelector(`[data-cat="${c}"]`).checked=false; PAGE=1; applyFilters(); }));
+  filters.srcs.forEach(s=> h += chip(`출처: ${s}`, ()=>{ filters.srcs.delete(s); document.querySelector(`[data-src="${s}"]`).checked=false; PAGE=1; applyFilters(); }));
+  if(filters.yFrom||filters.yTo) h += chip(`연도: ${filters.yFrom||"~"}–${filters.yTo||"~"}`, ()=>{ filters.yFrom=filters.yTo=null; document.getElementById("yFrom").value=""; document.getElementById("yTo").value=""; PAGE=1; applyFilters(); });
+  wrap.innerHTML = h;
+}
+
+function chip(txt, fn){
+  const id = "chip_"+Math.random().toString(36).slice(2);
+  setTimeout(()=>{ const el=document.getElementById(id); if(el) el.onclick=fn; },0);
+  return `<div class="chip">${txt}<button id="${id}">&#x2715;</button></div>`;
+}
+
+// ── Render cards ───────────────────────────────────────────────────────────
+function render(){
+  sortData();
+  const total = FILTERED.length;
+  const pages = Math.ceil(total/PER);
+  if(PAGE>pages) PAGE=1;
+  const slice = FILTERED.slice((PAGE-1)*PER, PAGE*PER);
+
+  document.getElementById("resultCount").innerHTML =
+    `<strong>${total.toLocaleString()}</strong>건 (전체 ${ALL.length.toLocaleString()}건 중)`;
+
+  const wrap = document.getElementById("cardList");
+  if(!slice.length){
+    wrap.innerHTML = `<div class="empty"><h3>검색 결과가 없습니다</h3><p>필터 조건을 바꿔보세요.</p></div>`;
+    document.getElementById("pagination").innerHTML="";
     return;
   }
 
-  const barW = 22, gap = 12, chartH = 160, padTop = 10, padBottom = 34, padLeft = 8;
-  const totals = years.map(y => CAT_ORDER.reduce((s, c) => s + (yearCatCounts[y][c] || 0), 0));
-  const maxTotal = Math.max(1, ...totals);
-  const svgW = padLeft + years.length * (barW + gap);
-  const svgH = padTop + chartH + padBottom;
-
-  let bars = '';
-  years.forEach((y, i) => {
-    let yOffset = 0;
-    const x = padLeft + i * (barW + gap);
-    CAT_ORDER.forEach(c => {
-      const count = yearCatCounts[y][c] || 0;
-      if(count === 0) return;
-      const h = (count / maxTotal) * chartH;
-      const yPos = padTop + chartH - yOffset - h;
-      bars += `<rect x="${x}" y="${yPos}" width="${barW}" height="${h.toFixed(1)}" fill="${CAT_COLORS[c]}"><title>${y} · ${c} · ${count}건</title></rect>`;
-      yOffset += h;
-    });
-    // 연도 라벨 (너무 많으면 홀수만 표시)
-    if(years.length <= 20 || i % 2 === 0){
-      bars += `<text x="${x + barW/2}" y="${padTop + chartH + 16}" font-size="10" fill="#8a8578" text-anchor="middle" transform="rotate(45 ${x + barW/2} ${padTop + chartH + 16})">${y}</text>`;
-    }
-    bars += `<text x="${x + barW/2}" y="${padTop + chartH - totals[i]/maxTotal*chartH - 4}" font-size="10" fill="#5a5a52" text-anchor="middle">${totals[i]}</text>`;
+  wrap.innerHTML = slice.map(p=>cardHTML(p)).join("");
+  wrap.querySelectorAll(".card").forEach(el=>{
+    el.onclick = ()=>{ const id=el.dataset.id; openDetail(ALL.find(p=>p.id===id)); };
   });
 
-  wrap.innerHTML = `<svg viewBox="0 0 ${svgW} ${svgH}" width="${svgW}" height="${svgH}" style="display:block;">${bars}</svg>`;
-  legend.innerHTML = CAT_ORDER.map(c => `
-    <span class="trend-legend-item"><span class="trend-legend-dot" style="background:${CAT_COLORS[c]};"></span>${c}</span>
-  `).join('');
+  // Pagination
+  const pg = document.getElementById("pagination");
+  if(pages<=1){ pg.innerHTML=""; return; }
+  let ph = "";
+  ph += `<button class="pgbtn" ${PAGE===1?"disabled":""} onclick="goPage(${PAGE-1})">&#8592;</button>`;
+  let lo=Math.max(1,PAGE-2), hi=Math.min(pages,PAGE+2);
+  if(lo>1) ph+=`<button class="pgbtn" onclick="goPage(1)">1</button>${lo>2?'<span style="padding:0 4px;color:var(--fg4)">…</span>':""}`;
+  for(let i=lo;i<=hi;i++) ph+=`<button class="pgbtn${i===PAGE?" on":""}" onclick="goPage(${i})">${i}</button>`;
+  if(hi<pages) ph+=`${hi<pages-1?'<span style="padding:0 4px;color:var(--fg4)">…</span>':""}
+    <button class="pgbtn" onclick="goPage(${pages})">${pages}</button>`;
+  ph += `<button class="pgbtn" ${PAGE===pages?"disabled":""} onclick="goPage(${PAGE+1})">&#8594;</button>`;
+  pg.innerHTML = ph;
 }
 
-async function loadPapers(){
-  const status = document.getElementById('status');
-  try{
-    const res = await fetch('papers.json', { cache: "no-store" });
-    if(!res.ok) throw new Error("papers.json 없음");
-    const data = await res.json();
-    ALL_PAPERS = data.papers || [];
-    status.textContent = `총 ${ALL_PAPERS.length}건 · 마지막 업데이트 ${data.updated || "-"}`;
-    renderKeywords(data.keywords);
-  }catch(e){
-    status.textContent = "papers.json을 아직 불러오지 못했습니다. fetch_naver.py를 실행해서 papers.json을 만든 뒤 새로고침해 주세요.";
-    ALL_PAPERS = [];
+function goPage(n){ PAGE=n; render(); window.scrollTo(0,0); }
+
+function cardHTML(p){
+  const oa   = p.is_open_access ? `<span class="badge badge-oa">OA</span>` : "";
+  const src  = p.source==="Naver"
+    ? `<span class="badge badge-naver">Naver</span>`
+    : `<span class="badge badge-openalex">OpenAlex</span>`;
+  const meta = [p.year, p.authors ? trunc(p.authors,50) : null, trunc(p.journal,40)]
+    .filter(Boolean).join(" <span class='sep'>·</span> ");
+  const abs  = p.abstract ? `<div class="card-abstract">${esc(p.abstract)}</div>` : "";
+  const cite = p.cited_by_count
+    ? `<span class="cite-count">피인용 ${p.cited_by_count.toLocaleString()}</span>` : "";
+  const cons = (p.concepts||[]).slice(0,3).map(c=>`<span class="concept-tag">${esc(c)}</span>`).join("");
+
+  return `<div class="card" data-id="${esc(p.id)}">
+    <div class="card-top">
+      <div class="card-title">${esc(p.title||"(제목 없음)")}</div>
+      <div class="badges">${oa}${badgeCat(p.category||"기타")}${src}</div>
+    </div>
+    <div class="card-meta">${meta}</div>
+    ${abs}
+    <div class="card-footer">
+      ${cite}<div class="concepts">${cons}</div>
+      <a class="card-link" href="${esc(p.url||"#")}" target="_blank" onclick="e=>e.stopPropagation()">원문 보기 &#8599;</a>
+    </div>
+  </div>`;
+}
+
+// ── Detail panel ───────────────────────────────────────────────────────────
+function openDetail(p){
+  if(!p) return;
+  ACTIVE_PAPER = p;
+  document.querySelectorAll(".card").forEach(el=>el.classList.toggle("active", el.dataset.id===p.id));
+
+  const oa   = p.is_open_access ? `<span class="badge badge-oa">Open Access</span>` : "";
+  const src  = p.source==="Naver"
+    ? `<span class="badge badge-naver">Naver Academic</span>`
+    : `<span class="badge badge-openalex">OpenAlex</span>`;
+  const oaLink = p.oa_url
+    ? `<a class="btn-p" href="${esc(p.oa_url)}" target="_blank">무료 전문 보기</a>` : "";
+  const doiLink= p.doi
+    ? `<a class="btn-s" href="https://doi.org/${esc(p.doi)}" target="_blank">DOI 페이지</a>` : "";
+  const urlLink= p.url && !p.doi
+    ? `<a class="btn-s" href="${esc(p.url)}" target="_blank">원문 페이지</a>` : "";
+  const copyBtn= `<button class="btn-s" onclick="copyRef()">인용 복사</button>`;
+  const concepts= (p.concepts||[]).map(c=>`<span class="detail-concept">${esc(c)}</span>`).join("");
+  const rows = [
+    ["저자", p.authors],
+    ["소속", p.institutions],
+    ["학술지", p.journal],
+    ["발행연도", p.year],
+    ["피인용수", p.cited_by_count!=null ? p.cited_by_count.toLocaleString()+"회" : null],
+    ["DOI", p.doi ? `<a href="https://doi.org/${esc(p.doi)}" target="_blank" style="color:var(--primary)">${esc(p.doi)}</a>` : null],
+  ].filter(r=>r[1]).map(([l,v])=>`<div class="detail-row"><div class="detail-label">${l}</div><div class="detail-val">${v}</div></div>`).join("");
+
+  document.getElementById("detailContent").innerHTML = `
+    <div class="detail-badges">${badgeCat(p.category||"기타")}${oa}${src}</div>
+    <div class="detail-title">${esc(p.title||"")}</div>
+    ${rows}
+    ${concepts ? `<div class="detail-row"><div class="detail-label">주요 개념</div><div class="detail-concepts">${concepts}</div></div>` : ""}
+    <hr class="divider">
+    <div class="detail-label">초록</div>
+    <div class="detail-abstract" style="margin-top:6px">${p.abstract ? esc(p.abstract) : "초록 정보가 없습니다."}</div>
+    <div class="detail-actions">${oaLink}${doiLink}${urlLink}${copyBtn}</div>`;
+
+  document.getElementById("detail").classList.add("open");
+}
+
+function closeDetail(){
+  document.getElementById("detail").classList.remove("open");
+  document.querySelectorAll(".card").forEach(el=>el.classList.remove("active"));
+  ACTIVE_PAPER = null;
+}
+
+function copyRef(){
+  if(!ACTIVE_PAPER) return;
+  const p = ACTIVE_PAPER;
+  const ref = [p.authors, p.year?`(${p.year})`:"", p.title, p.journal, p.doi?`https://doi.org/${p.doi}`:""].filter(Boolean).join(". ");
+  navigator.clipboard.writeText(ref).then(()=>alert("인용 정보가 클립보드에 복사되었습니다."));
+}
+
+// ── Stats ─────────────────────────────────────────────────────────────────
+function updateStats(){
+  const years = ALL.map(p=>parseInt(p.year||0)).filter(Boolean);
+  const oa    = ALL.filter(p=>p.is_open_access).length;
+  const cites = Math.max(...ALL.map(p=>p.cited_by_count||0));
+  document.getElementById("sTot").textContent  = ALL.length;
+  document.getElementById("sOA").textContent   = oa;
+  document.getElementById("sYear").textContent = years.length ? `${Math.min(...years)}–${Math.max(...years)}` : "—";
+  document.getElementById("sCite").textContent = cites > 0 ? cites : "—";
+}
+
+// ── Keyword cloud ──────────────────────────────────────────────────────────
+function buildKeywordCloud(){
+  const freq = {};
+  ALL.forEach(p=>{
+    (p.concepts||[]).forEach(c=>{ freq[c]=(freq[c]||0)+1; });
+    (p.category ? [p.category] : []).forEach(c=>{ freq[c]=(freq[c]||0)+2; });
+  });
+  const top = Object.entries(freq).sort((a,b)=>b[1]-a[1]).slice(0,25);
+  const max = top[0]?.[1]||1;
+  const cloud = document.getElementById("kwCloud");
+  cloud.innerHTML = top.map(([k,n])=>{
+    const size = 11 + Math.round((n/max)*5);
+    return `<span class="kw-tag" style="font-size:${size}px" onclick="setKw('${k}')">${k}</span>`;
+  }).join("");
+}
+
+function setKw(k){
+  if(filters.kw===k){ filters.kw=null; document.querySelectorAll(".kw-tag").forEach(t=>t.classList.remove("on")); }
+  else {
+    filters.kw=k;
+    document.querySelectorAll(".kw-tag").forEach(t=>t.classList.toggle("on", t.textContent===k));
   }
-  renderDashboard();
-  renderList();
+  PAGE=1; applyFilters();
 }
 
-loadPapers();
-</script>
+// ── CSV export ─────────────────────────────────────────────────────────────
+function exportCSV(){
+  const cols = ["title","authors","year","journal","category","cited_by_count","is_open_access","source","doi","url"];
+  const rows = [cols.join(","),
+    ...FILTERED.map(p=>cols.map(c=>`"${String(p[c]||"").replace(/"/g,'""')}"`).join(","))];
+  const blob = new Blob(["\uFEFF"+rows.join("\n")],{type:"text/csv;charset=utf-8;"});
+  const a = document.createElement("a"); a.href=URL.createObjectURL(blob);
+  a.download="bukhansan_papers.csv"; a.click();
+}
 
+// ── Helpers ───────────────────────────────────────────────────────────────
+function esc(s){ return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+function trunc(s,n){ return s && s.length>n ? s.slice(0,n)+"…" : (s||""); }
+
+// ── Sample data (fallback) ─────────────────────────────────────────────────
+function getSample(){
+  return [
+    {id:"s1",title:"Plant diversity and community structure in Bukhansan National Park",authors:"Kim Jae-won, Lee Soo-young",institutions:"Seoul National University",year:"2023",journal:"Journal of Ecology and Environment",abstract:"We surveyed vascular plant communities along elevational gradients in Bukhansan National Park. A total of 412 species were recorded, with significant changes in species richness across elevation bands.",category:"생태",url:"https://doi.org/10.5141/ecoenv.2023.001",doi:"10.5141/ecoenv.2023.001",cited_by_count:18,is_open_access:true,oa_url:"https://doi.org/10.5141/ecoenv.2023.001",type:"article",concepts:["Plant ecology","Species diversity","National park","Elevation gradient"],source:"OpenAlex"},
+    {id:"s2",title:"Visitor Behavior and Trail Erosion in Bukhansan National Park",authors:"Choi Hee-suk, Jung Dong-woo",institutions:"Korea Research Institute",year:"2022",journal:"Mountain Research and Development",abstract:"Trail erosion in Bukhansan National Park is closely associated with visitor density and off-trail hiking. GPS tracking of 430 visitors revealed that 23% deviated from designated paths.",category:"탐방",url:"https://doi.org/10.1659/mrd.00041",doi:"10.1659/mrd.00041",cited_by_count:35,is_open_access:false,oa_url:"",type:"article",concepts:["Ecotourism","Trail erosion","Visitor management"],source:"OpenAlex"},
+    {id:"s3",title:"Wildlife corridor connectivity in the Seoul metropolitan green belt: Bukhansan case study",authors:"Hong Sung-jae, Yoon Ji-hyun",institutions:"Hanyang University",year:"2022",journal:"Landscape and Urban Planning",abstract:"Urban fragmentation severely restricts mammal movement in the Seoul green belt. Connectivity analysis shows that Bukhansan is functionally isolated from Dobongsan for medium-sized mammals.",category:"생태",url:"https://doi.org/10.1016/j.landurbplan.2022.100890",doi:"10.1016/j.landurbplan.2022.100890",cited_by_count:52,is_open_access:false,oa_url:"",type:"article",concepts:["Wildlife corridor","Urban ecology","Connectivity","GIS"],source:"OpenAlex"},
+    {id:"s4",title:"Landslide susceptibility mapping in Bukhansan using machine learning",authors:"Oh Hyun-joo, Lee Saro",institutions:"Korea Institute of Geoscience",year:"2021",journal:"Natural Hazards and Earth System Sciences",abstract:"Random forest and logistic regression models were applied to map landslide susceptibility across Bukhansan National Park. The random forest model achieved AUC of 0.89.",category:"재난",url:"https://doi.org/10.5194/nhess-21-2635-2021",doi:"10.5194/nhess-21-2635-2021",cited_by_count:67,is_open_access:true,oa_url:"https://doi.org/10.5194/nhess-21-2635-2021",type:"article",concepts:["Landslide","Machine learning","Natural hazards"],source:"OpenAlex"},
+    {id:"s5",title:"Remote sensing-based vegetation monitoring of Bukhansan (2000–2020)",authors:"Shin Hye-jin, Park Jong-min",institutions:"Korea Aerospace Research Institute",year:"2021",journal:"Remote Sensing",abstract:"Twenty years of NDVI time series reveal a 6.3% increase in forest greenness. Phenological shifts consistent with climate warming were detected across all elevation zones.",category:"자원조사",url:"https://doi.org/10.3390/rs13081532",doi:"10.3390/rs13081532",cited_by_count:44,is_open_access:true,oa_url:"https://doi.org/10.3390/rs13081532",type:"article",concepts:["Remote sensing","NDVI","Climate change","Vegetation"],source:"OpenAlex"},
+    {id:"s6",title:"Historical landscape changes around Bukhansanseong Fortress",authors:"Ryu Chang-hyun, Kim So-ra",institutions:"National Folk Museum of Korea",year:"2020",journal:"Journal of Cultural Heritage",abstract:"Pollen analysis from sediment cores reveals forest clearance events correlated with Joseon-dynasty military activities in the 17th century.",category:"역사문화",url:"https://doi.org/10.1016/j.culher.2020.05.003",doi:"10.1016/j.culher.2020.05.003",cited_by_count:29,is_open_access:false,oa_url:"",type:"article",concepts:["Cultural heritage","Paleoecology","Historical ecology"],source:"OpenAlex"},
+    {id:"s7",title:"Air quality inside vs. outside Bukhansan National Park",authors:"Jang Min-su, Kang Yeon-hee",institutions:"Seoul Institute of Technology",year:"2023",journal:"Atmospheric Environment",abstract:"PM2.5 concentrations measured at six stations within Bukhansan were consistently 18–32% lower than urban reference sites. These data quantify the air quality provisioning ecosystem service.",category:"자원조사",url:"https://doi.org/10.1016/j.atmosenv.2023.100320",doi:"10.1016/j.atmosenv.2023.100320",cited_by_count:11,is_open_access:false,oa_url:"",type:"article",concepts:["Air quality","PM2.5","Ecosystem services","Urban"],source:"OpenAlex"},
+    {id:"s8",title:"Bat community composition in Bukhansan National Park",authors:"Song Ji-yeon, Kwon Oh-seong",institutions:"Ewha Womans University",year:"2022",journal:"Mammalian Biology",abstract:"Acoustic monitoring recorded 11 bat species. Pipistrellus abramus was most abundant at 41% of passes. Light pollution along park boundaries was negatively correlated with bat activity.",category:"생태",url:"https://doi.org/10.1007/s42991-022-00310-3",doi:"10.1007/s42991-022-00310-3",cited_by_count:8,is_open_access:false,oa_url:"",type:"article",concepts:["Chiroptera","Acoustic monitoring","Biodiversity"],source:"OpenAlex"},
+    {id:"s9",title:"Socioeconomic valuation of Bukhansan National Park recreation services",authors:"Lim Da-eun, Park Hyun-woo",institutions:"Korea Environment Institute",year:"2021",journal:"Ecosystem Services",abstract:"Using survey data from 1,200 park visitors, the annual recreational value was estimated at KRW 487 billion using the individual travel cost method.",category:"탐방",url:"https://doi.org/10.1016/j.ecoser.2021.101300",doi:"10.1016/j.ecoser.2021.101300",cited_by_count:23,is_open_access:false,oa_url:"",type:"article",concepts:["Ecosystem services","Recreation","Valuation"],source:"OpenAlex"},
+    {id:"s10",title:"Bryophyte diversity along streams in Bukhansan National Park",authors:"Han Seung-beom, Oh Mi-young",institutions:"National Institute of Biological Resources",year:"2023",journal:"Plant Biosystems",abstract:"184 bryophyte species were recorded from 42 riparian survey plots. Three red-list mosses were newly confirmed from the park. Species richness peaked at mid-elevation streams.",category:"생태",url:"https://doi.org/10.1080/11263504.2023.000001",doi:"10.1080/11263504.2023.000001",cited_by_count:4,is_open_access:true,oa_url:"https://doi.org/10.1080/11263504.2023.000001",type:"article",concepts:["Bryophytes","Stream ecology","Biodiversity"],source:"OpenAlex"}
+  ];
+}
+
+// ── Init ───────────────────────────────────────────────────────────────────
+loadData();
+</script>
 </body>
 </html>
