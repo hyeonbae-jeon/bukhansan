@@ -33,7 +33,7 @@ jobs:
       - name: Run Enricher
         run: python enricher.py
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       # ── Step 3: Build index ──
       - name: Run Indexer
