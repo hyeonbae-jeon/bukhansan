@@ -24,7 +24,10 @@ jobs:
       - name: Install Python packages
         run: pip install requests beautifulsoup4
 
-      - name: Run fetch script (one batch)
+      - name: Run fetch script (one batch + API channel)
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
         run: python fetch_naver.py
 
       - name: Commit papers.json and fetch_state.json
