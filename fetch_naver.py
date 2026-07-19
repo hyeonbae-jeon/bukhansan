@@ -26,6 +26,14 @@ import requests
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 
+try:
+    from kiwipiepy import Kiwi
+    _KIWI = Kiwi()
+    print("[형태소 분석] kiwipiepy 로드 성공 — 정확한 명사 추출 사용")
+except Exception as e:
+    _KIWI = None
+    print(f"[형태소 분석] kiwipiepy 로드 실패({e}) — 정규식 휴리스틱으로 대체")
+
 BASE = "https://academic.naver.com"
 SEARCH_URL = f"{BASE}/search.naver"
 HEADERS = {
@@ -339,9 +347,27 @@ def enrich_api_papers(papers: list, limit: int = 15):
     return enriched
 
 
-def extract_keywords(papers: list, top_n: int = 30):
-    """수집된 논문들의 제목+초록에서 자주 나오는 한글 단어를 뽑아 빈도순으로 정리한다.
-    형태소 분석기 없이 정규식 + 조사 제거 휴리스틱만 쓰기 때문에 100% 정확하진 않다."""
+def extract_keywords_kiwi(papers: list, top_n: int = 30):
+    """kiwipiepy 형태소 분석기로 명사(NNG/NNP)만 정확히 뽑아 빈도순으로 정리한다."""
+    counter = Counter()
+    for p in papers:
+        text = f"{p['title']} {p.get('abstract', '')}"
+        try:
+            tokens = _KIWI.tokenize(text)
+        except Exception:
+            continue
+        for t in tokens:
+            word = t.form
+            if t.tag not in ("NNG", "NNP"):
+                continue
+            if len(word) < 2 or word in STOPWORDS:
+                continue
+            counter[word] += 1
+    return [{"word": w, "count": c} for w, c in counter.most_common(top_n)]
+
+
+def extract_keywords_regex(papers: list, top_n: int = 30):
+    """(폴백) 형태소 분석기 없이 정규식 + 조사 제거 휴리스틱만 쓴다. 100% 정확하진 않다."""
     counter = Counter()
     for p in papers:
         text = f"{p['title']} {p.get('abstract', '')}"
@@ -355,6 +381,14 @@ def extract_keywords(papers: list, top_n: int = 30):
                 continue
             counter[word] += 1
     return [{"word": w, "count": c} for w, c in counter.most_common(top_n)]
+
+
+def extract_keywords(papers: list, top_n: int = 30):
+    """수집된 논문들의 제목+초록에서 자주 나오는 명사를 뽑아 빈도순으로 정리한다.
+    kiwipiepy가 설치되어 있으면 정확한 형태소 분석을 쓰고, 없으면 정규식 휴리스틱으로 대체한다."""
+    if _KIWI is not None:
+        return extract_keywords_kiwi(papers, top_n)
+    return extract_keywords_regex(papers, top_n)
 
 
 def load_state():

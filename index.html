@@ -180,15 +180,90 @@
     height:100vh;
     overflow-y:auto;
   }
-  #detail-empty{
-    height:100%;
+  #dashboard{
+    padding:4px 0 20px;
+  }
+  .dash-section{
+    margin-bottom:30px;
+  }
+  .dash-section h3{
+    font-size:14px;
+    color:#5a5a52;
+    margin:0 0 14px;
+    font-weight:600;
+  }
+  .stat-big{
+    font-size:42px;
+    font-weight:700;
+    line-height:1;
+    color:var(--ink);
+  }
+  .stat-big .unit{
+    font-size:14px;
+    color:#8a8578;
+    margin-left:6px;
+    font-weight:400;
+  }
+  .cat-bar-row{
     display:flex;
     align-items:center;
-    justify-content:center;
-    color:#a19b8a;
-    font-size:14px;
-    text-align:center;
-    padding:40px;
+    gap:10px;
+    margin-bottom:9px;
+    font-size:13px;
+  }
+  .cat-bar-row .cat-label{
+    width:66px;
+    flex-shrink:0;
+    color:#5a5a52;
+  }
+  .cat-bar-track{
+    flex:1;
+    background:#eeece2;
+    border-radius:4px;
+    height:13px;
+    overflow:hidden;
+  }
+  .cat-bar-fill{
+    height:100%;
+    border-radius:4px;
+  }
+  .cat-bar-count{
+    width:38px;
+    text-align:right;
+    color:#8a8578;
+    flex-shrink:0;
+    font-size:12px;
+  }
+  #trend-chart-wrap{
+    overflow-x:auto;
+    padding-bottom:6px;
+  }
+  .trend-legend{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:10px;
+    font-size:11.5px;
+    color:#7a7a6f;
+  }
+  .trend-legend-item{
+    display:flex;
+    align-items:center;
+    gap:4px;
+  }
+  .trend-legend-dot{
+    width:9px;
+    height:9px;
+    border-radius:2px;
+    display:inline-block;
+  }
+  #back-to-dash{
+    display:inline-block;
+    margin-bottom:16px;
+    font-size:12.5px;
+    color:#7a7a6f;
+    cursor:pointer;
+    text-decoration:underline;
   }
   #detail-content{
     display:none;
@@ -246,8 +321,23 @@
   </div>
 
   <div id="detail">
-    <div id="detail-empty">목록에서 논문을 선택하면<br>상세 정보가 여기에 표시됩니다.</div>
+    <div id="dashboard">
+      <div class="dash-section">
+        <h3>수집된 논문</h3>
+        <div class="stat-big" id="stat-total">0<span class="unit">건</span></div>
+      </div>
+      <div class="dash-section">
+        <h3>카테고리별 분포</h3>
+        <div id="stat-categories"></div>
+      </div>
+      <div class="dash-section">
+        <h3>연도별 연구 트렌드</h3>
+        <div id="trend-chart-wrap"></div>
+        <div class="trend-legend" id="trend-legend"></div>
+      </div>
+    </div>
     <div id="detail-content">
+      <span id="back-to-dash">← 전체 통계로 돌아가기</span><br>
       <span id="detail-badge" class="badge"></span>
       <h2 id="detail-title"></h2>
       <div class="detail-row">
@@ -285,7 +375,7 @@ function selectPaper(p, el){
   document.querySelectorAll('.paper').forEach(n => n.classList.remove('selected'));
   if(el) el.classList.add('selected');
 
-  document.getElementById('detail-empty').style.display = 'none';
+  document.getElementById('dashboard').style.display = 'none';
   document.getElementById('detail-content').style.display = 'block';
 
   document.getElementById('detail-badge').textContent = p.category;
@@ -305,6 +395,13 @@ function selectPaper(p, el){
     link.style.display = "none";
   }
 }
+
+function showDashboard(){
+  document.querySelectorAll('.paper').forEach(n => n.classList.remove('selected'));
+  document.getElementById('detail-content').style.display = 'none';
+  document.getElementById('dashboard').style.display = 'block';
+}
+document.getElementById('back-to-dash').addEventListener('click', showDashboard);
 
 function paperExcerpt(p){
   // 초록이 있으면 그중 한글 부분(첫 문단)만 발췌, 없으면 검색결과 스니펫으로 대체
@@ -389,6 +486,82 @@ function renderKeywords(keywords){
   });
 }
 
+const CAT_ORDER = ["자원조사", "재난", "탐방", "생태", "역사문화"];
+const CAT_COLORS = {
+  "자원조사": "#5b7a5b",
+  "재난": "#b4472e",
+  "탐방": "#3a6ea5",
+  "생태": "#7a9a3e",
+  "역사문화": "#9b6b34",
+};
+
+function renderDashboard(){
+  document.getElementById('stat-total').innerHTML = `${ALL_PAPERS.length}<span class="unit">건</span>`;
+
+  // 카테고리별 분포
+  const catCounts = {};
+  CAT_ORDER.forEach(c => catCounts[c] = 0);
+  ALL_PAPERS.forEach(p => { if(catCounts[p.category] !== undefined) catCounts[p.category]++; });
+  const maxCat = Math.max(1, ...Object.values(catCounts));
+
+  const catBox = document.getElementById('stat-categories');
+  catBox.innerHTML = CAT_ORDER.map(c => `
+    <div class="cat-bar-row">
+      <span class="cat-label">${c}</span>
+      <span class="cat-bar-track"><span class="cat-bar-fill" style="width:${(catCounts[c]/maxCat*100).toFixed(1)}%; background:${CAT_COLORS[c]};"></span></span>
+      <span class="cat-bar-count">${catCounts[c]}</span>
+    </div>
+  `).join('');
+
+  // 연도별 카테고리 트렌드
+  const yearCatCounts = {};
+  ALL_PAPERS.forEach(p => {
+    const y = p.year;
+    if(!y || y === '-' || !/^(19|20)\d{2}$/.test(y)) return;
+    if(!yearCatCounts[y]) yearCatCounts[y] = {};
+    yearCatCounts[y][p.category] = (yearCatCounts[y][p.category] || 0) + 1;
+  });
+  const years = Object.keys(yearCatCounts).sort();
+  const wrap = document.getElementById('trend-chart-wrap');
+  const legend = document.getElementById('trend-legend');
+
+  if(years.length === 0){
+    wrap.innerHTML = '<p style="color:#a19b8a;font-size:13px;">연도 정보가 있는 논문이 아직 없습니다.</p>';
+    legend.innerHTML = '';
+    return;
+  }
+
+  const barW = 22, gap = 12, chartH = 160, padTop = 10, padBottom = 34, padLeft = 8;
+  const totals = years.map(y => CAT_ORDER.reduce((s, c) => s + (yearCatCounts[y][c] || 0), 0));
+  const maxTotal = Math.max(1, ...totals);
+  const svgW = padLeft + years.length * (barW + gap);
+  const svgH = padTop + chartH + padBottom;
+
+  let bars = '';
+  years.forEach((y, i) => {
+    let yOffset = 0;
+    const x = padLeft + i * (barW + gap);
+    CAT_ORDER.forEach(c => {
+      const count = yearCatCounts[y][c] || 0;
+      if(count === 0) return;
+      const h = (count / maxTotal) * chartH;
+      const yPos = padTop + chartH - yOffset - h;
+      bars += `<rect x="${x}" y="${yPos}" width="${barW}" height="${h.toFixed(1)}" fill="${CAT_COLORS[c]}"><title>${y} · ${c} · ${count}건</title></rect>`;
+      yOffset += h;
+    });
+    // 연도 라벨 (너무 많으면 홀수만 표시)
+    if(years.length <= 20 || i % 2 === 0){
+      bars += `<text x="${x + barW/2}" y="${padTop + chartH + 16}" font-size="10" fill="#8a8578" text-anchor="middle" transform="rotate(45 ${x + barW/2} ${padTop + chartH + 16})">${y}</text>`;
+    }
+    bars += `<text x="${x + barW/2}" y="${padTop + chartH - totals[i]/maxTotal*chartH - 4}" font-size="10" fill="#5a5a52" text-anchor="middle">${totals[i]}</text>`;
+  });
+
+  wrap.innerHTML = `<svg viewBox="0 0 ${svgW} ${svgH}" width="${svgW}" height="${svgH}" style="display:block;">${bars}</svg>`;
+  legend.innerHTML = CAT_ORDER.map(c => `
+    <span class="trend-legend-item"><span class="trend-legend-dot" style="background:${CAT_COLORS[c]};"></span>${c}</span>
+  `).join('');
+}
+
 async function loadPapers(){
   const status = document.getElementById('status');
   try{
@@ -402,6 +575,7 @@ async function loadPapers(){
     status.textContent = "papers.json을 아직 불러오지 못했습니다. fetch_naver.py를 실행해서 papers.json을 만든 뒤 새로고침해 주세요.";
     ALL_PAPERS = [];
   }
+  renderDashboard();
   renderList();
 }
 
