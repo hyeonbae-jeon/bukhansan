@@ -30,7 +30,7 @@ BASE = "https://academic.naver.com"
 SEARCH_URL = f"{BASE}/search.naver"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-                  "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+                  "(KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
     "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
     "Referer": "https://academic.naver.com/",
@@ -39,8 +39,8 @@ HEADERS = {
 SESSION = requests.Session()
 SESSION.headers.update(HEADERS)
 
-REQUEST_TIMEOUT = 25
-MAX_RETRIES = 3
+REQUEST_TIMEOUT = 60
+MAX_RETRIES = 5
 MIN_DELAY, MAX_DELAY = 2.0, 5.0   # 요청 사이 랜덤 대기 (서버 부담 완화)
 
 PAPERS_FILE = "papers.json"
@@ -85,7 +85,7 @@ def polite_get(url, params=None):
             resp = SESSION.get(url, params=params, timeout=REQUEST_TIMEOUT)
             return resp
         except requests.exceptions.RequestException as e:
-            wait = attempt * 6 + random.uniform(0, 3)
+            wait = random.uniform(20,40) * attempt + random.uniform(0, 3)
             print(f"    (요청 실패, {attempt}/{MAX_RETRIES}회차: {e} — {wait:.0f}초 대기 후 재시도)")
             if attempt < MAX_RETRIES:
                 time.sleep(wait)
