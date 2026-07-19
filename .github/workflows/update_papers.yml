@@ -1,13 +1,9 @@
 name: Update Papers Pipeline
 
 on:
+  schedule:
+    - cron: '0 0 * * 1'  # 매주 월요일 00:00 UTC
   workflow_dispatch: {}    # Actions 탭에서 수동 실행 버튼
-  push:
-    paths:
-      - 'collector.py'
-      - 'enricher.py'
-      - 'indexer.py'
-      - 'requirements.txt'
 
 permissions:
   contents: write
