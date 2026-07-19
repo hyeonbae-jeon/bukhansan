@@ -40,7 +40,7 @@ SESSION = requests.Session()
 SESSION.headers.update(HEADERS)
 
 REQUEST_TIMEOUT = 25
-MAX_RETRIES = 3
+MAX_RETRIES = 2
 MIN_DELAY, MAX_DELAY = 2.0, 5.0   # 요청 사이 랜덤 대기 (서버 부담 완화)
 
 NAVER_CLIENT_ID = os.environ.get("NAVER_CLIENT_ID", "")
@@ -76,6 +76,16 @@ STOPWORDS = {
 JOSA_SUFFIXES = ["으로부터", "에서의", "로서의", "이라는", "하는", "이나", "에서", "으로", "까지",
                   "부터", "에게", "에는", "이며", "하고", "하며", "이고", "만을",
                   "의", "은", "는", "이", "가", "을", "를", "에", "로", "와", "과", "도", "만"]
+
+
+def check_academic_reachable() -> bool:
+    """academic.naver.com이 지금 응답하는지 딱 한 번만, 짧게 확인한다.
+    막혀있으면 이번 실행에서 스크래핑/보강을 통째로 건너뛰어 시간 낭비를 막는다."""
+    try:
+        resp = SESSION.get(SEARCH_URL, params={"field": 0, "docType": 1, "query": "북한산", "start": 1}, timeout=12)
+        return resp.status_code == 200
+    except requests.exceptions.RequestException:
+        return False
 
 
 def polite_sleep():
@@ -439,11 +449,23 @@ if __name__ == "__main__":
     seen_titles = {p["title"] for p in existing_papers}
     print(f"기존에 저장된 논문 {len(existing_papers)}건 (이어서 진행)")
 
-    new_papers = fetch_batch(batch_keywords, seen_titles)
+    print("\n[헬스체크] academic.naver.com 응답 여부 확인 중...")
+    scraping_ok = check_academic_reachable()
+
+    if scraping_ok:
+        print("[헬스체크] 정상 응답 — 스크래핑/보강 진행")
+        new_papers = fetch_batch(batch_keywords, seen_titles)
+    else:
+        print("[헬스체크] 응답 없음/타임아웃 — 이번 실행은 스크래핑·보강을 건너뛰고 API 채널만 사용합니다.")
+        new_papers = []
+
     api_papers = fetch_all_from_api(seen_titles)
     all_papers = existing_papers + new_papers + api_papers
 
-    enriched_count = enrich_api_papers(all_papers, limit=15)
+    if scraping_ok:
+        enriched_count = enrich_api_papers(all_papers, limit=15)
+    else:
+        enriched_count = 0
 
     keywords = extract_keywords(all_papers)
 
@@ -455,10 +477,12 @@ if __name__ == "__main__":
             indent=2,
         )
 
-    next_batch_index = current_batch + 1
+    next_batch_index = current_batch + 1 if scraping_ok else current_batch
     with open(STATE_FILE, "w", encoding="utf-8") as f:
         json.dump({"batch_index": next_batch_index, "total_batches": total_batches}, f, ensure_ascii=False, indent=2)
 
     print(f"\n=== 이번 배치(스크래핑)에서 새로 수집: {len(new_papers)}건 / API 채널에서 새로 수집: {len(api_papers)}건 / 이번에 보강: {enriched_count}건 / 전체 누적: {len(all_papers)}건 ===")
+    if not scraping_ok:
+        print("(academic.naver.com이 응답하지 않아 이번 배치는 건너뛰었습니다 — 다음 실행 때 같은 배치를 다시 시도합니다.)")
     print(f"다음 실행은 배치 {(next_batch_index % total_batches) + 1}/{total_batches}부터 이어집니다.")
     print("papers.json / fetch_state.json 저장 완료")

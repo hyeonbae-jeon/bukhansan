@@ -312,10 +312,13 @@ function paperExcerpt(p){
   if(!source) return "설명 정보가 없습니다.";
   const firstParagraph = source.split(/\n\s*\n/)[0].trim();
   let text = firstParagraph || source;
-  // 영어로 시작하는 경우(제목 번역 등이 섞인 경우) 첫 한글 문장부터 다시 시작
-  const koreanStart = text.search(/[가-힣]{2,}/);
-  if(koreanStart > 15){
+  // 앞부분에 영어(제목 번역 등)가 섞여 있으면, 한글이 처음 나오는 지점부터 시작
+  const koreanStart = text.search(/[가-힣]/);
+  if(koreanStart > 0){
     text = text.slice(koreanStart);
+  }
+  if(!text || text.length < 5){
+    return "요약 정보가 아직 없습니다. (원문 링크에서 확인해 주세요)";
   }
   return text.length > 90 ? text.slice(0, 90) + "…" : text;
 }
