@@ -268,6 +268,67 @@ def fetch_all_from_api(seen_titles: set):
     return all_new
 
 
+def enrich_api_paper(paper: dict) -> bool:
+    """API로만 찾은 논문(저자/학술지/초록 없음)을 제목으로 academic.naver.com에서 다시 검색해서
+    같은 논문을 찾으면 저자/학술지/소속/초록을 보강한다. 매칭에 성공하면 True를 돌려준다."""
+    title = paper["title"]
+    items = search_academic(title, start=1)
+    polite_sleep()
+
+    match = None
+    for item in items:
+        # 완전히 똑같거나, 한쪽 제목이 다른 쪽에 포함되면 같은 논문으로 본다
+        # (전문자료 검색 API와 academic.naver.com 표기가 미세하게 다를 수 있어서)
+        if item["title"] == title or title in item["title"] or item["title"] in title:
+            match = item
+            break
+
+    if not match:
+        return False
+
+    detail = fetch_abstract_detail(match["detail_url"])
+    polite_sleep()
+
+    pub_info_parts = [p for p in [match["journal"], match["year"], f"{match['cited']}회 피인용" if match["cited"] else ""] if p and p != "-"]
+
+    paper["authors"] = match["authors"]
+    paper["journal"] = match["journal"]
+    paper["institution"] = detail["institution"]
+    paper["pub_info"] = " · ".join(pub_info_parts)
+    if detail["abstract"]:
+        paper["abstract"] = detail["abstract"]
+    if match["year"] and match["year"] != "-":
+        paper["year"] = match["year"]
+    paper["url"] = match["detail_url"]  # academic.naver.com 자체 링크로 교체 (더 안정적)
+    paper.pop("source", None)
+    return True
+
+
+def enrich_api_papers(papers: list, limit: int = 15):
+    """저자/학술지 정보가 없는 논문(주로 API 채널 수집분)을 최대 limit개까지 academic.naver.com에서
+    다시 찾아 보강한다. 한 번에 너무 많이 하면 다시 부담을 주니 개수를 제한한다."""
+    candidates = [p for p in papers if not p.get("authors") and not p.get("journal")]
+    if not candidates:
+        return 0
+
+    print(f"\n[보강] 저자/학술지 정보 없는 논문 {len(candidates)}건 중 최대 {limit}건 시도")
+    enriched = 0
+    for paper in candidates[:limit]:
+        print(f"  시도: {paper['title'][:50]}")
+        try:
+            ok = enrich_api_paper(paper)
+        except Exception as e:
+            print(f"    (보강 실패: {e})")
+            ok = False
+        if ok:
+            enriched += 1
+            print(f"    → 보강 성공 (저자: {paper['authors'] or '없음'}, 학술지: {paper['journal'] or '없음'})")
+        else:
+            print("    → 매칭되는 논문을 못 찾음")
+    print(f"[보강] {enriched}/{min(len(candidates), limit)}건 성공")
+    return enriched
+
+
 def extract_keywords(papers: list, top_n: int = 30):
     """수집된 논문들의 제목+초록에서 자주 나오는 한글 단어를 뽑아 빈도순으로 정리한다.
     형태소 분석기 없이 정규식 + 조사 제거 휴리스틱만 쓰기 때문에 100% 정확하진 않다."""
@@ -381,6 +442,9 @@ if __name__ == "__main__":
     new_papers = fetch_batch(batch_keywords, seen_titles)
     api_papers = fetch_all_from_api(seen_titles)
     all_papers = existing_papers + new_papers + api_papers
+
+    enriched_count = enrich_api_papers(all_papers, limit=15)
+
     keywords = extract_keywords(all_papers)
 
     with open(PAPERS_FILE, "w", encoding="utf-8") as f:
@@ -395,6 +459,6 @@ if __name__ == "__main__":
     with open(STATE_FILE, "w", encoding="utf-8") as f:
         json.dump({"batch_index": next_batch_index, "total_batches": total_batches}, f, ensure_ascii=False, indent=2)
 
-    print(f"\n=== 이번 배치(스크래핑)에서 새로 수집: {len(new_papers)}건 / API 채널에서 새로 수집: {len(api_papers)}건 / 전체 누적: {len(all_papers)}건 ===")
+    print(f"\n=== 이번 배치(스크래핑)에서 새로 수집: {len(new_papers)}건 / API 채널에서 새로 수집: {len(api_papers)}건 / 이번에 보강: {enriched_count}건 / 전체 누적: {len(all_papers)}건 ===")
     print(f"다음 실행은 배치 {(next_batch_index % total_batches) + 1}/{total_batches}부터 이어집니다.")
     print("papers.json / fetch_state.json 저장 완료")
