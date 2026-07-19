@@ -1,0 +1,47 @@
+name: Update Papers Pipeline
+
+on:
+  schedule:
+    - cron: '0 3 * * 2'   # 매주 화요일 03:00 UTC
+  workflow_dispatch:
+
+jobs:
+  update-papers:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 google-generativeai
+
+      - name: Run Collector
+        run: python collector.py
+        env:
+          OPENALEX_EMAIL: ${{ secrets.OPENALEX_EMAIL }}
+
+      - name: Run Enricher (AI 분석)
+        run: python enricher.py
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+      - name: Run Indexer
+        run: python indexer.py
+
+      - name: Commit & Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add papers.json fetch_state.json
+          git diff --cached --quiet || git commit -m "chore: auto-update papers $(date '+%Y-%m-%d')"
+          git push
