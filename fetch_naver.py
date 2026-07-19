@@ -1,20 +1,20 @@
 """
-북한산 관련 논문을 네이버 학술정보(academic.naver.com) 검색결과 페이지에서
-직접 읽어와(스크래핑) papers.json으로 저장한다. (AI 연동 없음, 지도 연동 없음 — 규칙기반 분류만 사용)
+북한산 관련 논문을 두 채널로 수집해 papers.json으로 저장한다:
+  1) academic.naver.com 검색결과 페이지 직접 읽기(스크래핑) — 저자/학술지/초록까지 상세히 얻을 수 있지만
+     사이트 상태에 따라 차단/타임아웃 위험이 있음.
+  2) openapi.naver.com의 "전문자료 검색"(doc.json) 공식 API — 정식 등록된 키로 쓰는 사이트라
+     차단될 위험이 거의 없지만, title/link/description 3개 필드만 줘서 저자·학술지·초록은 없음.
+     스크래핑이 막히더라도 이 채널은 계속 살아있도록 보조 채널로 병행 사용한다.
+     NAVER_CLIENT_ID / NAVER_CLIENT_SECRET 이 없으면 이 채널은 자동으로 건너뛴다.
 
-※ openapi.naver.com의 "doc.json" API는 title/link/description 3개 필드뿐이라
-   저자·학술지·연도 정보가 부실해서, 실제 웹페이지(academic.naver.com)를 직접 읽는 방식을 쓴다.
-※ 아래 CSS 선택자(ui_listing_info 등)는 실제 페이지 HTML을 보고 확인한 것.
-
-GitHub Actions에서 실행한다. 예전에 짧은 시간에 요청이 몰려서 서버가 응답을 늦추는(추정)
-현상이 있었기 때문에:
+GitHub Actions에서 실행한다. academic.naver.com 스크래핑은:
   1) 요청마다 2~5초 랜덤 대기를 둬서 서버 부담을 줄이고
   2) 한 번 실행할 때 검색어를 전부 다 돌지 않고 일부(BATCH_SIZE개)만 처리한 뒤,
      다음 실행 때 이어서 나머지를 처리하는 "배치" 방식을 쓴다.
      어디까지 처리했는지는 fetch_state.json에 저장된다.
   3) 새로 수집한 결과는 기존 papers.json에 이어붙인다(덮어쓰지 않음).
 워크플로우를 여러 번(수동으로 또는 매일 자동으로) 실행하면 검색어를 한 바퀴 다 돌 때까지
-데이터가 점점 쌓인다.
+데이터가 점점 쌓인다. 네이버 API 채널은 매 실행마다 전체 검색어를 다 돌린다(가볍고 안전해서 배치 불필요).
 """
 import re
 import json
@@ -30,7 +30,7 @@ BASE = "https://academic.naver.com"
 SEARCH_URL = f"{BASE}/search.naver"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-                  "(KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                  "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
     "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
     "Referer": "https://academic.naver.com/",
@@ -39,13 +39,17 @@ HEADERS = {
 SESSION = requests.Session()
 SESSION.headers.update(HEADERS)
 
-REQUEST_TIMEOUT = 60
-MAX_RETRIES = 5
+REQUEST_TIMEOUT = 25
+MAX_RETRIES = 3
 MIN_DELAY, MAX_DELAY = 2.0, 5.0   # 요청 사이 랜덤 대기 (서버 부담 완화)
+
+NAVER_CLIENT_ID = os.environ.get("NAVER_CLIENT_ID", "")
+NAVER_CLIENT_SECRET = os.environ.get("NAVER_CLIENT_SECRET", "")
+NAVER_DOC_API_URL = "https://openapi.naver.com/v1/search/doc.json"
 
 PAPERS_FILE = "papers.json"
 STATE_FILE = "fetch_state.json"
-BATCH_SIZE = 3   # 한 번 실행에 검색어 3개만 처리
+BATCH_SIZE = 3   # 한 번 실행에 검색어 3개만 처리 (스크래핑 채널에만 적용)
 
 # 검색어를 다양하게 던져서 최대한 많이 모으고, 실제 카테고리는 내용으로 재분류한다.
 SEARCH_KEYWORDS = [
@@ -85,7 +89,7 @@ def polite_get(url, params=None):
             resp = SESSION.get(url, params=params, timeout=REQUEST_TIMEOUT)
             return resp
         except requests.exceptions.RequestException as e:
-            wait = random.uniform(20,40) * attempt + random.uniform(0, 3)
+            wait = attempt * 6 + random.uniform(0, 3)
             print(f"    (요청 실패, {attempt}/{MAX_RETRIES}회차: {e} — {wait:.0f}초 대기 후 재시도)")
             if attempt < MAX_RETRIES:
                 time.sleep(wait)
@@ -187,6 +191,81 @@ def search_academic(keyword: str, start: int = 1):
     except Exception as e:
         print(f"  검색 오류: {e}")
     return items
+
+
+def fetch_from_api(keyword: str, seen_titles: set):
+    """openapi.naver.com의 공식 '전문자료 검색' API로 논문을 찾는다.
+    정식 등록된 키로 쓰는 공식 API라 차단될 위험이 거의 없지만,
+    title/link/description 3개 필드만 줘서 저자·학술지·초록 정보는 없다."""
+    new_papers = []
+    if not NAVER_CLIENT_ID or not NAVER_CLIENT_SECRET:
+        return new_papers
+
+    try:
+        resp = requests.get(
+            NAVER_DOC_API_URL,
+            headers={
+                "X-Naver-Client-Id": NAVER_CLIENT_ID,
+                "X-Naver-Client-Secret": NAVER_CLIENT_SECRET,
+            },
+            params={"query": keyword, "display": 100, "start": 1, "sort": "sim"},
+            timeout=15,
+        )
+        if resp.status_code != 200:
+            print(f"    (API 오류: HTTP {resp.status_code} {resp.text[:150]})")
+            return new_papers
+
+        items = resp.json().get("items", [])
+        print(f"  [API] '{keyword}' → {len(items)}건 응답")
+
+        for item in items:
+            title = re.sub(r"<[^>]+>", "", item.get("title", "")).strip()
+            desc = re.sub(r"<[^>]+>", "", item.get("description", "")).strip()
+            if not title or title in seen_titles:
+                continue
+            if "북한산" not in f"{title} {desc}":
+                continue
+            seen_titles.add(title)
+
+            year_match = re.search(r"(19|20)\d{2}", f"{title} {desc}")
+            year = year_match.group(0) if year_match else "-"
+
+            new_papers.append({
+                "title": title,
+                "description": desc,
+                "year": year,
+                "authors": "",
+                "journal": "",
+                "institution": "",
+                "pub_info": "",
+                "abstract": desc,   # 상세 초록은 없어서 짧은 설명으로 대체
+                "category": classify(title, desc),
+                "url": item.get("link", ""),
+                "is_free": None,
+                "source": "api",   # 스크래핑 결과와 구분하고 싶을 때 참고용
+            })
+
+    except Exception as e:
+        print(f"    (API 요청 실패: {e})")
+
+    return new_papers
+
+
+def fetch_all_from_api(seen_titles: set):
+    """모든 검색어에 대해 API 채널을 돈다. 가볍고 공식 채널이라 배치 없이 매번 전체를 처리한다."""
+    if not NAVER_CLIENT_ID or not NAVER_CLIENT_SECRET:
+        print("\n[API 채널] NAVER_CLIENT_ID/SECRET이 없어서 건너뜁니다 (스크래핑 결과만 사용).")
+        return []
+
+    print("\n[API 채널] 네이버 공식 전문자료 검색 API로 보조 수집 시작")
+    all_new = []
+    for keyword in SEARCH_KEYWORDS:
+        new_papers = fetch_from_api(keyword, seen_titles)
+        all_new.extend(new_papers)
+        print(f"  → 새로 추가 {len(new_papers)}건")
+        time.sleep(0.3)  # 공식 API는 부담이 적어서 짧게만 텀을 둔다
+    print(f"[API 채널] 총 {len(all_new)}건 추가 수집")
+    return all_new
 
 
 def extract_keywords(papers: list, top_n: int = 30):
@@ -300,7 +379,8 @@ if __name__ == "__main__":
     print(f"기존에 저장된 논문 {len(existing_papers)}건 (이어서 진행)")
 
     new_papers = fetch_batch(batch_keywords, seen_titles)
-    all_papers = existing_papers + new_papers
+    api_papers = fetch_all_from_api(seen_titles)
+    all_papers = existing_papers + new_papers + api_papers
     keywords = extract_keywords(all_papers)
 
     with open(PAPERS_FILE, "w", encoding="utf-8") as f:
@@ -315,6 +395,6 @@ if __name__ == "__main__":
     with open(STATE_FILE, "w", encoding="utf-8") as f:
         json.dump({"batch_index": next_batch_index, "total_batches": total_batches}, f, ensure_ascii=False, indent=2)
 
-    print(f"\n=== 이번 배치에서 새로 수집: {len(new_papers)}건 / 전체 누적: {len(all_papers)}건 ===")
+    print(f"\n=== 이번 배치(스크래핑)에서 새로 수집: {len(new_papers)}건 / API 채널에서 새로 수집: {len(api_papers)}건 / 전체 누적: {len(all_papers)}건 ===")
     print(f"다음 실행은 배치 {(next_batch_index % total_batches) + 1}/{total_batches}부터 이어집니다.")
     print("papers.json / fetch_state.json 저장 완료")
