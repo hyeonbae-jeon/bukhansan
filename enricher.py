@@ -1,141 +1,130 @@
-#!/usr/bin/env python3
 """
-Enricher
---------
-OpenAI API(gpt-4o-mini)로 논문 초록을 분석해
-북한산국립공원 실무 정보를 ai_analysis 필드에 저장합니다.
-역할: raw_papers.json 읽기 → AI 분석 → raw_papers.json 업데이트
+enricher.py — AI 분석 모듈 (Google Gemini)
+논문 초록을 분석하여 14개 실무 정보를 생성합니다.
+무료 한도: gemini-2.5-flash-lite 기준 하루 1,000회 요청 (신용카드 불필요)
 """
-import json, os, time
-from openai import OpenAI
+import json, time, re, os
+import google.generativeai as genai
 
-RAW_FILE = "raw_papers.json"
+MODEL_NAME        = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash-lite")
+RATE_LIMIT_DELAY  = 4   # 초 (무료 티어: 15 RPM → 4초 간격)
+MAX_ABSTRACT_CHARS = 2000
 
-SYSTEM = """당신은 북한산국립공원 관리 전문가입니다.
-논문 초록을 분석해 현장 실무자가 논문을 읽지 않아도 바로 업무에 적용할 수 있는
-구체적인 정보를 JSON으로 제공합니다. 학술 언어를 실무 언어로 바꿔 서술하세요."""
+PROMPT = """당신은 북한산국립공원 관리 전문가입니다.
+아래 논문 정보를 분석하여 현장 실무자가 논문을 읽지 않아도 바로 활용할 수 있는 정보를 JSON으로 생성하세요.
 
-USER_TMPL = """다음 논문을 분석하세요.
+논문 제목: {title}
+발행연도: {year}
+카테고리: {category}
+초록:
+{abstract}
 
-제목: {title}
-저자: {authors}
-학술지: {journal}  연도: {year}
-초록: {abstract}
-
-반드시 아래 JSON 형식으로만 응답하세요 (```json 마크다운 없이):
-
+아래 JSON 형식으로만 응답하세요 (다른 텍스트 없이):
 {{
-  "summary_3lines": [
-    "1줄: 연구 배경과 목적",
-    "2줄: 주요 방법과 결과",
-    "3줄: 결론 및 실무 시사점"
-  ],
-  "research_purpose": "연구 목적을 2~3문장으로 서술",
+  "summary_3lines": ["핵심 내용 1줄", "핵심 내용 2줄", "핵심 내용 3줄"],
+  "research_purpose": "연구 목적을 1~2문장으로",
   "key_findings": ["핵심 결과 1", "핵심 결과 2", "핵심 결과 3"],
-  "practical_applications": [
-    "실무 적용방안 1 (구체적 행동 중심)",
-    "실무 적용방안 2",
-    "실무 적용방안 3"
-  ],
-  "bukhansan_applicability_score": 4,
-  "bukhansan_applicability_reason": "북한산 지형·생태·탐방 특성을 근거로 적용 가능한 이유 서술",
-  "related_work_areas": ["탐방로 관리", "생태계 모니터링"],
-  "related_laws": ["자연공원법 제00조", "야생생물 보호 및 관리에 관한 법률 제00조"],
-  "field_checklist": [
-    "체크항목 1 (측정·확인 가능한 수준으로)",
-    "체크항목 2",
-    "체크항목 3",
-    "체크항목 4",
-    "체크항목 5"
-  ],
-  "practical_utility_score": 4,
-  "cautions": ["주의사항 1 (예산·법령·계절 제약 등)", "주의사항 2"],
-  "tags": ["태그1", "태그2", "태그3", "태그4", "태그5"],
-  "recommended_followup_research": ["후속 연구 필요 내용 1", "후속 연구 필요 내용 2"],
-  "ai_recommended_topics": ["유사 연구 검색 키워드 1", "유사 연구 검색 키워드 2"]
+  "practical_applications": ["실무 적용 방안 1", "실무 적용 방안 2", "실무 적용 방안 3"],
+  "bukhansan_applicability_score": 3,
+  "applicability_reason": "북한산에 적용 가능한 구체적 이유 1~2문장",
+  "related_tasks": ["탐방로 관리", "생태계 모니터링"],
+  "related_laws": ["자연공원법 제00조 (내용)", "관련 법령명"],
+  "field_checklist": ["현장 점검 항목 1", "현장 점검 항목 2", "현장 점검 항목 3"],
+  "practical_utility_score": 3,
+  "cautions": ["적용 시 주의사항 1", "주의사항 2"],
+  "tags": ["태그1", "태그2", "태그3", "태그4"],
+  "recommended_papers": ["추천 논문 주제/키워드 1", "추천 논문 주제/키워드 2"],
+  "future_research": ["후속 연구 필요 내용 1", "후속 연구 필요 내용 2"]
 }}
 
-점수 기준
-- bukhansan_applicability_score: 1(무관)~5(직접 관련)
-- practical_utility_score: 1(활용 어려움)~5(즉시 적용 가능)
+점수 기준:
+- bukhansan_applicability_score: 1(거의 무관) 2(간접 참고) 3(부분 적용 가능) 4(높은 적용성) 5(즉시 직접 적용)
+- practical_utility_score: 1(학술 참고만) 2(정책 참고) 3(중기 활용 가능) 4(단기 적용 가능) 5(즉시 현장 적용)
 
-참고 법령: 자연공원법, 국립공원공단법, 문화재보호법, 야생생물 보호 및 관리에 관한 법률,
-산림자원의 조성 및 관리에 관한 법률, 백두대간 보호에 관한 법률, 환경영향평가법"""
+모든 내용은 반드시 한국어로, 북한산국립공원 실무 맥락에 맞게 구체적으로 작성하세요."""
 
 
-def analyze(client: OpenAI, paper: dict) -> dict | None:
+def _default_analysis(reason: str = "") -> dict:
+    return {
+        "summary_3lines": ["분석 정보 없음"],
+        "research_purpose": reason or "초록 정보 부족으로 분석 불가",
+        "key_findings": [],
+        "practical_applications": [],
+        "bukhansan_applicability_score": 0,
+        "applicability_reason": "",
+        "related_tasks": [],
+        "related_laws": [],
+        "field_checklist": [],
+        "practical_utility_score": 0,
+        "cautions": [],
+        "tags": [],
+        "recommended_papers": [],
+        "future_research": [],
+    }
+
+
+def enrich_paper(paper: dict, model) -> dict:
+    """논문 1건 분석"""
     abstract = (paper.get("abstract") or "").strip()
-    if len(abstract) < 100:
-        return None
+    if len(abstract) < 50:
+        paper["ai_analysis"] = _default_analysis("초록 없음 또는 너무 짧음")
+        return paper
 
-    prompt = USER_TMPL.format(
-        title    = paper.get("title", ""),
-        authors  = ", ".join(paper.get("authors", [])[:3]) or "정보 없음",
-        journal  = paper.get("journal", "정보 없음"),
-        year     = paper.get("year", "정보 없음"),
-        abstract = abstract[:3000],
+    prompt = PROMPT.format(
+        title    = paper.get("title", "제목 없음"),
+        year     = paper.get("year", ""),
+        category = paper.get("category", ""),
+        abstract = abstract[:MAX_ABSTRACT_CHARS],
     )
-    try:
-        resp = client.chat.completions.create(
-            model           = "gpt-4o-mini",
-            messages        = [
-                {"role": "system", "content": SYSTEM},
-                {"role": "user",   "content": prompt},
-            ],
-            temperature     = 0.3,
-            max_tokens      = 2500,
-            response_format = {"type": "json_object"},
-        )
-        result = json.loads(resp.choices[0].message.content)
-        result["analyzed_at"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
-        result["model"]       = "gpt-4o-mini"
-        return result
-    except Exception as exc:
-        print(f"  [Enricher] 실패: {exc}")
-        return None
+
+    for attempt in range(3):
+        try:
+            response = model.generate_content(prompt)
+            text = response.text.strip()
+            # JSON 블록 추출
+            m = re.search(r'\{[\s\S]*\}', text)
+            if m:
+                analysis = json.loads(m.group())
+                paper["ai_analysis"] = analysis
+                paper["ai_analyzed"] = True
+                return paper
+            else:
+                raise ValueError("JSON 블록을 찾을 수 없음")
+        except Exception as e:
+            print(f"    시도 {attempt+1}/3 실패: {e}")
+            if attempt < 2:
+                time.sleep(RATE_LIMIT_DELAY * (attempt + 1))
+
+    paper["ai_analysis"] = _default_analysis("Gemini 응답 파싱 실패")
+    return paper
 
 
-def run():
-    api_key = os.getenv("GEMINI_API_KEY")
+def enrich_all(papers: list) -> list:
+    """전체 논문 목록 Gemini 분석"""
+    api_key = os.environ.get("GEMINI_API_KEY", "")
     if not api_key:
-        print("[Enricher] GEMINI_API_KEY 없음 — 건너뜁니다.")
-        return
+        print("[Enricher] GEMINI_API_KEY 없음 → AI 분석 건너뜀")
+        return papers
 
-    client = OpenAI(api_key=api_key)
+    genai.configure(api_key=api_key)
+    model = genai.GenerativeModel(
+        MODEL_NAME,
+        generation_config={"response_mime_type": "application/json"},
+    )
 
-    with open(RAW_FILE, encoding="utf-8") as f:
-        papers = json.load(f)
+    todo = [p for p in papers if not p.get("ai_analyzed")]
+    total = len(papers)
+    print(f"[Enricher] 분석 대상: {len(todo)}건 / 전체: {total}건")
+    print(f"[Enricher] 모델: {MODEL_NAME}  요청 간격: {RATE_LIMIT_DELAY}s")
 
-    pending = [p for p in papers
-               if p.get("ai_analysis") is None and len(p.get("abstract", "")) > 100]
-    print(f"[Enricher] 분석 대상: {len(pending)}건 / 전체 {len(papers)}건")
-
-    done = 0
     for i, paper in enumerate(papers):
-        if paper.get("ai_analysis") is not None:
+        if paper.get("ai_analyzed"):
             continue
-        if len(paper.get("abstract", "")) < 100:
-            continue
+        label = paper.get("title", "")[:45]
+        print(f"  [{i+1}/{total}] {label}...")
+        papers[i] = enrich_paper(paper, model)
+        time.sleep(RATE_LIMIT_DELAY)
 
-        preview = (paper.get("title") or "")[:50]
-        print(f"  [{i+1}/{len(papers)}] {preview}…")
-
-        result = analyze(client, paper)
-        if result:
-            paper["ai_analysis"] = result
-            done += 1
-
-        time.sleep(1.2)   # Rate-limit 방지
-
-        if done > 0 and done % 10 == 0:
-            with open(RAW_FILE, "w", encoding="utf-8") as f:
-                json.dump(papers, f, ensure_ascii=False, indent=2)
-            print(f"  [Enricher] 중간 저장 ({done}건 완료)")
-
-    with open(RAW_FILE, "w", encoding="utf-8") as f:
-        json.dump(papers, f, ensure_ascii=False, indent=2)
-    print(f"[Enricher] 완료: {done}건 분석됨")
-
-
-if __name__ == "__main__":
-    run()
+    analyzed = sum(1 for p in papers if p.get("ai_analyzed"))
+    print(f"[Enricher] 완료: {analyzed}/{total}건 분석")
+    return papers

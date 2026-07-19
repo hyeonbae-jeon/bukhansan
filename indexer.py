@@ -1,88 +1,62 @@
-#!/usr/bin/env python3
 """
-Indexer
--------
-raw_papers.json → papers.json 변환
-검색·필터·통계에 필요한 인덱스를 생성합니다.
+indexer.py — 검색 인덱스 및 통계 구축 모듈
+papers 리스트를 받아 검색용 필드와 통계를 추가합니다.
 """
-import json, os
 from collections import Counter
-from datetime import datetime
 
-RAW_FILE    = "raw_papers.json"
-OUTPUT_FILE = "papers.json"
-
-
-def sort_key(p: dict):
-    ai = p.get("ai_analysis") or {}
-    return (
-        -(ai.get("bukhansan_applicability_score") or 0),
-        -(ai.get("practical_utility_score") or 0),
-        -(p.get("cited_by_count") or 0),
-    )
-
-
-def build_stats(papers: list) -> dict:
-    analyzed = [p for p in papers if p.get("ai_analysis")]
-    app = [p["ai_analysis"]["bukhansan_applicability_score"]
-           for p in analyzed
-           if isinstance((p["ai_analysis"] or {}).get("bukhansan_applicability_score"), int)]
-    util = [p["ai_analysis"]["practical_utility_score"]
-            for p in analyzed
-            if isinstance((p["ai_analysis"] or {}).get("practical_utility_score"), int)]
-    year_dist = dict(sorted(Counter(p["year"] for p in papers if p.get("year")).items()))
-
-    return {
-        "total":                    len(papers),
-        "analyzed":                 len(analyzed),
-        "avg_applicability":        round(sum(app)  / len(app),  1) if app  else 0,
-        "avg_utility":              round(sum(util) / len(util), 1) if util else 0,
-        "high_applicability_count": sum(1 for s in app if s >= 4),
-        "score_distribution":       {str(s): app.count(s) for s in range(1, 6)},
-        "year_distribution":        year_dist,
-        "updated_at":               datetime.now().isoformat(),
-    }
-
-
-def build_tag_index(papers: list) -> dict:
-    c = Counter()
+def build_index(papers: list) -> dict:
+    """papers 리스트 → 검색 인덱스 + 통계가 포함된 최종 객체"""
     for p in papers:
-        for tag in (p.get("ai_analysis") or {}).get("tags", []):
-            c[tag] += 1
-    return dict(c.most_common(60))
+        ai = p.get("ai_analysis") or {}
+        tags  = ai.get("tags", [])
+        tasks = ai.get("related_tasks", [])
+        summary = " ".join(ai.get("summary_3lines", []))
 
+        # 전문 검색용 통합 텍스트
+        p["search_text"] = " ".join(filter(None, [
+            p.get("title", ""),
+            p.get("abstract", ""),
+            summary,
+            " ".join(tags),
+            " ".join(tasks),
+            " ".join(p.get("keywords", [])),
+            p.get("category", ""),
+        ])).lower()
 
-def build_work_area_index(papers: list) -> dict:
-    c = Counter()
-    for p in papers:
-        for area in (p.get("ai_analysis") or {}).get("related_work_areas", []):
-            c[area] += 1
-    return dict(c.most_common(30))
+        # 점수 정규화 (0 → None 처리)
+        for score_field in ("bukhansan_applicability_score", "practical_utility_score"):
+            val = ai.get(score_field, 0)
+            if not val:
+                ai[score_field] = None
 
+    # 통계
+    years      = [p["year"] for p in papers if p.get("year")]
+    categories = [p["category"] for p in papers if p.get("category")]
+    all_tags   = [t for p in papers for t in (p.get("ai_analysis") or {}).get("tags", [])]
+    all_tasks  = [t for p in papers for t in (p.get("ai_analysis") or {}).get("related_tasks", [])]
+    bk_scores  = [
+        (p.get("ai_analysis") or {}).get("bukhansan_applicability_score")
+        for p in papers
+        if (p.get("ai_analysis") or {}).get("bukhansan_applicability_score")
+    ]
+    ut_scores  = [
+        (p.get("ai_analysis") or {}).get("practical_utility_score")
+        for p in papers
+        if (p.get("ai_analysis") or {}).get("practical_utility_score")
+    ]
 
-def run():
-    if not os.path.exists(RAW_FILE):
-        print(f"[Indexer] {RAW_FILE} 없음")
-        return
-
-    with open(RAW_FILE, encoding="utf-8") as f:
-        papers = json.load(f)
-
-    papers.sort(key=sort_key)
-
-    output = {
-        "meta":             build_stats(papers),
-        "tag_index":        build_tag_index(papers),
-        "work_area_index":  build_work_area_index(papers),
-        "papers":           papers,
+    stats = {
+        "total":           len(papers),
+        "analyzed":        sum(1 for p in papers if p.get("ai_analyzed")),
+        "oa_count":        sum(1 for p in papers if p.get("is_oa")),
+        "year_dist":       dict(sorted(Counter(years).items())),
+        "category_dist":   dict(Counter(categories).most_common()),
+        "top_tags":        dict(Counter(all_tags).most_common(30)),
+        "top_tasks":       dict(Counter(all_tasks).most_common(20)),
+        "avg_bk_score":    round(sum(bk_scores)/len(bk_scores), 2) if bk_scores else 0,
+        "avg_util_score":  round(sum(ut_scores)/len(ut_scores), 2) if ut_scores else 0,
+        "high_priority":   sum(1 for s in bk_scores if s and s >= 4),
     }
-
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(output, f, ensure_ascii=False, indent=2)
-
-    m = output["meta"]
-    print(f"[Indexer] 완료: {m['total']}건 중 {m['analyzed']}건 분석됨 → {OUTPUT_FILE}")
-
-
-if __name__ == "__main__":
-    run()
+    print(f"[Indexer] 완료 | 전체 {stats['total']}건 | 분석 {stats['analyzed']}건 | "
+          f"평균 적용점수 {stats['avg_bk_score']}")
+    return {"papers": papers, "stats": stats}
