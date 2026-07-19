@@ -96,9 +96,9 @@ def analyze(client: OpenAI, paper: dict) -> dict | None:
 
 
 def run():
-    api_key = os.getenv("OPENAI_API_KEY")
+    api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
-        print("[Enricher] OPENAI_API_KEY 없음 — 건너뜁니다.")
+        print("[Enricher] GEMINI_API_KEY 없음 — 건너뜁니다.")
         return
 
     client = OpenAI(api_key=api_key)
