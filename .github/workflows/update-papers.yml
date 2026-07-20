@@ -1,0 +1,43 @@
+name: Update Papers Pipeline
+
+on:
+  schedule:
+    - cron: "0 18 * * *"  # 매일 UTC 18:00 (KST 03:00) 실행
+  workflow_dispatch: {}    # 수동 실행 버튼
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Collect papers (OpenAlex)
+        run: python collector.py
+
+      - name: Enrich papers (Gemini)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python gemini_enricher.py --input papers.json --limit 50
+
+      - name: Build index
+        run: python indexer.py --input papers.json --output index.json
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add papers.json index.json
+          git diff --cached --quiet || git commit -m "chore: update papers and index [skip ci]"
+          git push
