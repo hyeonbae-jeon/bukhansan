@@ -1,0 +1,50 @@
+name: Update Papers Pipeline
+
+on:
+  schedule:
+    - cron: '0 2 * * 1'   # 매주 월요일 오전 11시 KST (UTC 02:00)
+  workflow_dispatch:        # 수동 실행 버튼
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests openai
+
+      # ── Step 1: Collect papers from OpenAlex ──
+      - name: Run Collector
+        run: python collector.py
+        env:
+          OPENALEX_EMAIL: ${{ secrets.OPENALEX_EMAIL }}
+
+      # ── Step 2: Enrich with AI analysis ──
+      - name: Run Enricher
+        run: python enricher.py
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+      # ── Step 3: Build index ──
+      - name: Run Indexer
+        run: python indexer.py
+
+      # ── Commit & push ──
+      - name: Commit updated papers
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add papers.json raw_papers.json fetch_state.json
+          git diff --staged --quiet || \
+            git commit -m "chore: update papers [$(date -u +%Y-%m-%d)]"
+          git push
