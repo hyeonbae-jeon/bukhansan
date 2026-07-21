@@ -13,7 +13,8 @@ RAW_FILE  = "raw_papers.json"
 STATE_FILE = "fetch_state.json"
 
 # 국립공원 실무(탐방로 관리, 생태계 모니터링, 방문객 관리 등) 관련 검색어
-# 특정 공원명이 아니라 국립공원 관리 전반의 해외 연구를 폭넓게 수집
+# "national park"이 모든 검색어에 들어가도록 해서, 결과가 국립공원과 무관한
+# 논문(예: 의학·일반 생태학 논문)으로 새는 것을 최대한 줄입니다.
 QUERIES = [
     "national park trail management",
     "national park visitor management",
@@ -21,15 +22,25 @@ QUERIES = [
     "national park biodiversity conservation",
     "national park trail erosion",
     "national park wildlife management",
-    "protected area management effectiveness",
+    "national park management effectiveness",
     "national park climate change adaptation",
     "national park carrying capacity",
     "national park invasive species management",
     "national park fire management",
     "national park recreation ecology",
-    "protected area governance",
+    "national park governance",
     "national park restoration ecology",
     "national park human wildlife conflict",
+    "national park visitor experience",
+    "national park ranger management",
+    "national park tourism impact",
+    "national park boundary encroachment",
+    "national park zoning planning",
+    "national park cultural heritage management",
+    "national park entrance fee policy",
+    "national park signage interpretation",
+    "national park camping impact",
+    "national park air quality monitoring",
 ]
 
 
@@ -81,8 +92,7 @@ def fetch_query(query: str, email: str = "", limit: int = 100) -> list:
     while len(papers) < limit:
         batch  = min(25, limit - len(papers))
         params = {
-            "search":   query,
-            "filter":   "has_abstract:true",
+            "filter":   f"title_and_abstract.search:{query},has_abstract:true",
             "per-page": batch,
             "cursor":   cursor,
             "select":   select,

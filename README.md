@@ -62,6 +62,14 @@ Settings → Secrets and variables → Actions → New repository secret
 ### 4. 첫 실행
 Actions 탭 → `Update Papers Pipeline` → `Run workflow`
 
+> **분석 결과는 실행할 때마다 누적됩니다.** `collector.py`는 이미 수집된 논문(id 기준)은
+> 건드리지 않고 새 논문만 추가하며, 이미 AI 분석이 끝난 논문(`ai_analysis`가 채워진 것)은
+> `enricher.py`가 항상 건너뜁니다. 매 실행 끝에 `raw_papers.json` 등을 커밋·푸시해서
+> 다음 실행이 그 상태를 이어받습니다. 다만 두 실행이 겹치면(예: 스케줄 실행 중 수동 실행)
+> push 충돌로 한쪽 결과가 반영되지 않을 수 있어, 워크플로에 동시 실행 방지(concurrency)와
+> push 실패 시 자동 재시도를 넣어뒀습니다. 그래도 분석 결과가 사라진 것 같으면 저장소의
+> 커밋 히스토리에서 `chore: update papers` 커밋들이 실제로 쌓이고 있는지 확인해보세요.
+
 > **API 요청 한도(RPM 10 / TPM 250,000 / RPD 20)에 맞춘 기본 설정**
 > `enricher.py`는 요청 사이 간격을 약 7초(≈60초/10회)로 두어 분당 요청 수가 10건을
 > 넘지 않도록 하고, 건당 출력 토큰도 제한해 분당 토큰 수가 25만 토큰에 크게 못 미치도록

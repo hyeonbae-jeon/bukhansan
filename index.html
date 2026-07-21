@@ -77,8 +77,8 @@ body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI',
 .t-chip:hover, .t-chip.on { background: var(--primary-dim); color: var(--primary); border-color: #93c5fd; }
 
 /* ── Paper List ─────────────────────── */
-.pl { flex: 1; overflow: hidden; display: flex; flex-direction: column; }
-.pl-cards { flex: 1; overflow-y: auto; padding: 10px; display: flex; flex-direction: column; gap: 7px; }
+.pl { flex: 1; min-height: 0; overflow: hidden; display: flex; flex-direction: column; }
+.pl-cards { flex: 1; min-height: 0; overflow-y: auto; padding: 10px; display: flex; flex-direction: column; gap: 7px; }
 .pl-cards::-webkit-scrollbar { width: 5px; }
 .pl-cards::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 
@@ -121,7 +121,7 @@ body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI',
 .empty { padding: 32px 16px; text-align: center; color: var(--muted); font-size: 13px; line-height: 1.8; }
 
 /* ── Detail Panel ───────────────────── */
-.dp { width: 430px; flex-shrink: 0; background: var(--card); border-left: 1px solid var(--border);
+.dp { width: 560px; flex-shrink: 0; background: var(--card); border-left: 1px solid var(--border);
   overflow-y: auto; display: flex; flex-direction: column; }
 .dp::-webkit-scrollbar { width: 5px; }
 .dp::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
@@ -286,7 +286,7 @@ body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI',
 let ALL = [], FILTERED = [], tagIdx = {}, workIdx = {};
 const F = { q: '', app: new Set(), util: new Set(), work: new Set(), year: new Set(), tags: new Set() };
 let selId = null;
-let pageSize = 20;
+let pageSize = 10;
 let curPage = 1;
 
 /* ══════════════════════════════════════
