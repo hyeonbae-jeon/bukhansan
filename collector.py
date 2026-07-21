@@ -130,6 +130,9 @@ def run():
                 existing[p["id"]] = p
 
     before = len(existing)
+    before_analyzed = sum(1 for p in existing.values() if p.get("ai_analysis") is not None)
+    print(f"[Collector] 이번 실행 시작 시점 기존 데이터: 논문 {before}건 "
+          f"(그중 AI 분석 완료 {before_analyzed}건) — 이 값이 매 실행마다 유지·증가해야 정상 누적입니다.")
 
     for q in QUERIES:
         print(f"[Collector] 검색: {q}")
