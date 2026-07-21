@@ -13,6 +13,9 @@ on:
 jobs:
   pipeline:
     runs-on: ubuntu-latest
+    concurrency:
+      group: papers-pipeline
+      cancel-in-progress: false
     permissions:
       contents: write
 
@@ -52,6 +55,19 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add papers.json raw_papers.json fetch_state.json enrich_state.json
-          git diff --staged --quiet || \
-            git commit -m "chore: update papers [$(date -u +%Y-%m-%d)]"
-          git push
+          if git diff --staged --quiet; then
+            echo "변경 사항 없음 — 커밋 생략"
+            exit 0
+          fi
+          git commit -m "chore: update papers [$(date -u +%Y-%m-%d)]"
+          # 다른 실행(스케줄/수동)과 겹쳐서 push가 거부될 경우를 대비해
+          # 최신 원격 커밋을 rebase로 받아온 뒤 재시도합니다.
+          for i in 1 2 3 4 5; do
+            if git push; then
+              echo "push 성공"
+              break
+            fi
+            echo "push 실패 — 원격 변경분을 받아온 뒤 재시도합니다 ($i/5)"
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            sleep $((i * 5))
+          done
