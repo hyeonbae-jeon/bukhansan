@@ -7,18 +7,24 @@ Google Gemini API(gemini-2.5-flash-lite)로 논문 초록을 분석해
 2) 국립공원 실무 정보(ai_analysis)
 를 함께 생성합니다.
 역할: raw_papers.json 읽기 → AI 번역·분석 → raw_papers.json 업데이트
+
+무료/제한 등급 기준(RPM 10 / TPM 250,000 / RPD 20)에 맞춰
+요청 간격·건당 토큰·일일 요청 수를 모두 제한합니다.
 """
 import json, os, time, re
 import requests
 
-RAW_FILE = "raw_papers.json"
-GEMINI_MODEL = "gemini-2.5-flash-lite"
-GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
+RAW_FILE   = "raw_papers.json"
+STATE_FILE = "enrich_state.json"   # 일일 요청 수 누적 기록 (git에 커밋되어야 날짜가 바뀌기 전까지 유지됨)
 
-# Gemini 무료 등급 기준: 15 RPM(분당 요청 수) / 1,500 RPD(일일 요청 수)
-# 분당 15건을 넘지 않도록 요청 사이 최소 간격을 60/15초보다 넉넉하게 둡니다.
-GEMINI_RPM_LIMIT = 15
-REQUEST_INTERVAL_SEC = (60 / GEMINI_RPM_LIMIT) + 1   # ≈ 5초
+GEMINI_MODEL = "gemini-2.5-flash-lite"
+GEMINI_URL   = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
+
+# ── 요청 한도 (RPM 10 / TPM 250,000 / RPD 20) ──────────────────────
+GEMINI_RPM_LIMIT = 10
+GEMINI_RPD_LIMIT = 20
+MAX_OUTPUT_TOKENS = 2000   # 건당 입력+출력 토큰을 넉넉히 잡아도 10건/분 기준 TPM 250k에 크게 못 미침
+REQUEST_INTERVAL_SEC = (60 / GEMINI_RPM_LIMIT) + 1   # ≈ 7초, 분당 10건 이하로 유지
 
 SYSTEM = """당신은 국립공원(한국 국립공원 포함) 관리 실무 전문가입니다.
 해외 학술논문의 초록을 분석해 한국 국립공원 현장 실무자가 논문을 읽지 않아도
@@ -81,6 +87,29 @@ def extract_json(text: str) -> dict:
     return json.loads(text)
 
 
+def today_str() -> str:
+    return time.strftime("%Y-%m-%d", time.gmtime())
+
+
+def load_daily_state() -> dict:
+    """오늘 이미 사용한 요청 수를 읽어옵니다. 날짜가 바뀌었으면 0으로 초기화합니다."""
+    state = {}
+    if os.path.exists(STATE_FILE):
+        try:
+            with open(STATE_FILE, encoding="utf-8") as f:
+                state = json.load(f)
+        except Exception:
+            state = {}
+    if state.get("date") != today_str():
+        state = {"date": today_str(), "requests_today": 0}
+    return state
+
+
+def save_daily_state(state: dict) -> None:
+    with open(STATE_FILE, "w", encoding="utf-8") as f:
+        json.dump(state, f, ensure_ascii=False, indent=2)
+
+
 def analyze(api_key: str, paper: dict) -> dict | str | None:
     """성공 시 dict, 요청 한도 초과(429) 시 'RATE_LIMIT' 문자열, 그 외 실패 시 None을 반환합니다."""
     abstract = (paper.get("abstract") or "").strip()
@@ -100,7 +129,7 @@ def analyze(api_key: str, paper: dict) -> dict | str | None:
         "contents": [{"role": "user", "parts": [{"text": prompt}]}],
         "generationConfig": {
             "temperature": 0.3,
-            "maxOutputTokens": 3000,
+            "maxOutputTokens": MAX_OUTPUT_TOKENS,
             "responseMimeType": "application/json",
         },
     }
@@ -113,7 +142,7 @@ def analyze(api_key: str, paper: dict) -> dict | str | None:
             timeout=60,
         )
         if r.status_code == 429:
-            print("  [Enricher] 429 요청 한도 초과 (RPM/RPD)")
+            print("  [Enricher] 429 요청 한도 초과 (RPM/TPM/RPD)")
             return "RATE_LIMIT"
         r.raise_for_status()
         data = r.json()
@@ -128,14 +157,25 @@ def analyze(api_key: str, paper: dict) -> dict | str | None:
 
 
 def run():
+    # git add 대상 파일이 항상 존재하도록, API 키 유무와 무관하게 상태 파일을 먼저 기록합니다.
+    state = load_daily_state()
+    save_daily_state(state)
+
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
         print("[Enricher] GEMINI_API_KEY 없음 — 건너뜁니다.")
         return
 
-    # 무료 API 요청 한도를 넘지 않도록 한 번 실행에 분석할 건수를 제한합니다.
-    # 남은 논문은 처리하지 않고 그대로 두었다가 다음 실행(Actions) 때 이어서 분석합니다.
-    limit = int(os.getenv("ENRICH_LIMIT", "15"))
+    # ── 일일 요청 한도(RPD) 확인 ──
+    remaining_today = GEMINI_RPD_LIMIT - state["requests_today"]
+    if remaining_today <= 0:
+        print(f"[Enricher] 오늘({state['date']}) 일일 요청 한도({GEMINI_RPD_LIMIT}건)를 "
+              f"이미 모두 사용했습니다. 내일(UTC 기준) 다시 시도하세요.")
+        return
+
+    # 한 번 실행당 분석 건수 = min(ENRICH_LIMIT, 오늘 남은 한도)
+    requested_limit = int(os.getenv("ENRICH_LIMIT", str(GEMINI_RPD_LIMIT)))
+    limit = min(requested_limit, remaining_today)
 
     with open(RAW_FILE, encoding="utf-8") as f:
         papers = json.load(f)
@@ -143,11 +183,11 @@ def run():
     pending = [p for p in papers
                if p.get("ai_analysis") is None and len(p.get("abstract", "")) > 100]
     print(f"[Enricher] 분석 대상: {len(pending)}건 / 전체 {len(papers)}건 "
-          f"(이번 실행 최대 {limit}건)")
+          f"(오늘 남은 한도 {remaining_today}건, 이번 실행 최대 {limit}건)")
 
     done = 0
     fail_streak = 0
-    for i, paper in enumerate(papers):
+    for paper in papers:
         if done >= limit:
             print(f"[Enricher] 이번 실행 한도({limit}건) 도달 — 나머지는 다음 실행에서 처리")
             break
@@ -160,8 +200,13 @@ def run():
         print(f"  [{done+1}/{limit}] {preview}…")
 
         result = analyze(api_key, paper)
+
+        # 성공이든 실패든 요청 1건을 소비한 것으로 간주해 일일 카운터에 반영
+        state["requests_today"] += 1
+        save_daily_state(state)
+
         if result == "RATE_LIMIT":
-            print("[Enricher] 요청 한도(RPM/RPD) 초과로 이번 실행을 중단합니다. "
+            print("[Enricher] 요청 한도(RPM/TPM/RPD) 초과로 이번 실행을 중단합니다. "
                   "다음 실행 때 이어서 시도합니다.")
             break
         if result:
@@ -178,11 +223,16 @@ def run():
                       "다음 실행 때 이어서 시도합니다.")
                 break
 
-        time.sleep(REQUEST_INTERVAL_SEC)   # 15 RPM 한도 준수
+        if state["requests_today"] >= GEMINI_RPD_LIMIT:
+            print(f"[Enricher] 오늘 일일 요청 한도({GEMINI_RPD_LIMIT}건) 도달 — 실행을 중단합니다.")
+            break
+
+        time.sleep(REQUEST_INTERVAL_SEC)   # RPM 한도 준수
 
     with open(RAW_FILE, "w", encoding="utf-8") as f:
         json.dump(papers, f, ensure_ascii=False, indent=2)
-    print(f"[Enricher] 완료: {done}건 분석됨 (누적 대기 {len(pending)-done}건 남음)")
+    print(f"[Enricher] 완료: {done}건 분석됨 "
+          f"(오늘 사용 {state['requests_today']}/{GEMINI_RPD_LIMIT}건, 대기 {len(pending)-done}건 남음)")
 
 
 if __name__ == "__main__":

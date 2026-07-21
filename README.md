@@ -26,6 +26,7 @@ OpenAlex API ──▶ collector.py ──▶ raw_papers.json
 | `index.html` | 프론트엔드 (GitHub Pages) |
 | `papers.json` | 최종 데이터 (자동 생성) |
 | `raw_papers.json` | 수집 원본 데이터 (자동 생성) |
+| `enrich_state.json` | 일일 AI 요청 사용량 기록 (자동 생성) |
 
 ## 배포 방법
 
@@ -53,14 +54,16 @@ Settings → Secrets and variables → Actions → New repository secret
 ### 4. 첫 실행
 Actions 탭 → `Update Papers Pipeline` → `Run workflow`
 
-> **무료 Gemini API 한도(15 RPM / 1,500 RPD)에 맞춘 기본 설정**
-> `enricher.py`는 요청 사이 간격을 약 5초(≈60초/15회)로 두어 분당 요청 수가 15건을
-> 넘지 않도록 하고, 한 번 실행에 최대 `ENRICH_LIMIT`건(기본 15건)만 분석한 뒤 멈춥니다.
+> **API 요청 한도(RPM 10 / TPM 250,000 / RPD 20)에 맞춘 기본 설정**
+> `enricher.py`는 요청 사이 간격을 약 7초(≈60초/10회)로 두어 분당 요청 수가 10건을
+> 넘지 않도록 하고, 건당 출력 토큰도 제한해 분당 토큰 수가 25만 토큰에 크게 못 미치도록
+> 합니다. 그리고 `enrich_state.json`에 오늘 사용한 요청 수를 기록해, 하루 총 요청이
+> 20건을 넘지 않도록 자동으로 멈춥니다(날짜가 바뀌면 자동 초기화). 이 파일은 Actions가
+> 커밋해서 저장소에 남기 때문에, 같은 날 여러 번 실행해도 누적된 사용량이 유지됩니다.
 > 응답이 429(요청 한도 초과)로 오면 그 즉시 실행을 중단해 한도를 낭비하지 않습니다.
-> 이미 분석된 논문은 항상 건너뛰므로, Actions를 여러 번(또는 매주 스케줄대로) 실행할
-> 때마다 분석 결과가 이어서 누적됩니다.
-> `Run workflow` 클릭 시 나오는 `limit` 입력값에 `1`을 넣으면 논문 1건만 테스트로
-> 분석해볼 수 있고, 하루 여러 번 수동 실행해도 1,500건(RPD) 한도 안에서는 안전합니다.
+> 이미 분석된 논문은 항상 건너뛰므로, Actions를 실행할 때마다(하루 최대 20건씩) 분석
+> 결과가 이어서 누적됩니다. `Run workflow` 클릭 시 나오는 `limit` 입력값에 `1`을 넣으면
+> 논문 1건만 테스트로 분석해볼 수 있습니다.
 
 ---
 
