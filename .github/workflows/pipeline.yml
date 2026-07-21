@@ -2,13 +2,13 @@ name: Update Papers Pipeline
 
 on:
   schedule:
-    - cron: '0 2 * * 1'   # 매주 월요일 오전 11시 KST (UTC 02:00)
+    - cron: '0 3 * * *'   # 매일 낮 12시 KST (UTC 03:00) — Gemini 일일 한도가 자정(UTC) 기준으로 초기화되므로 그 이후 시간대로 설정
   workflow_dispatch:        # 수동 실행 버튼
     inputs:
       limit:
-        description: '이번 실행에서 AI 분석할 논문 건수 (일일 한도 20건 이하로 자동 조정됨)'
+        description: '이번 실행에서 AI 분석할 논문 건수 (일일 한도 이하로 자동 조정됨, 기본 100)'
         required: false
-        default: '20'
+        default: '100'
 
 jobs:
   pipeline:
@@ -43,7 +43,8 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ secrets.GEMINI_MODEL }}
-          ENRICH_LIMIT: ${{ github.event.inputs.limit || '20' }}
+          GEMINI_RPD_LIMIT: ${{ secrets.GEMINI_RPD_LIMIT }}
+          ENRICH_LIMIT: ${{ github.event.inputs.limit || '100' }}
 
       # ── Step 3: Build index ──
       - name: Run Indexer
