@@ -2,7 +2,7 @@
 """
 Enricher
 --------
-Google Gemini API(gemini-2.5-flash-lite)로 논문 초록을 분석해
+Google Gemini API(기본 모델: gemini-flash-lite-latest)로 논문 초록을 분석해
 1) 초록 한글 번역(abstract_ko)
 2) 국립공원 실무 정보(ai_analysis)
 를 함께 생성합니다.
@@ -17,7 +17,7 @@ import requests
 RAW_FILE   = "raw_papers.json"
 STATE_FILE = "enrich_state.json"   # 일일 요청 수 누적 기록 (git에 커밋되어야 날짜가 바뀌기 전까지 유지됨)
 
-GEMINI_MODEL = os.getenv("GEMINI_MODEL") or "gemini-2.5-flash-lite"
+GEMINI_MODEL = os.getenv("GEMINI_MODEL") or "gemini-flash-lite-latest"
 GEMINI_URL   = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
 LIST_MODELS_URL = "https://generativelanguage.googleapis.com/v1beta/models"
 
