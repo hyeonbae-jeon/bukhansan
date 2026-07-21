@@ -124,38 +124,52 @@ def run():
         print("[Enricher] GEMINI_API_KEY 없음 — 건너뜁니다.")
         return
 
+    # 무료 API 요청 한도를 넘지 않도록 한 번 실행에 분석할 건수를 제한합니다.
+    # 남은 논문은 처리하지 않고 그대로 두었다가 다음 실행(Actions) 때 이어서 분석합니다.
+    limit = int(os.getenv("ENRICH_LIMIT", "15"))
+
     with open(RAW_FILE, encoding="utf-8") as f:
         papers = json.load(f)
 
     pending = [p for p in papers
                if p.get("ai_analysis") is None and len(p.get("abstract", "")) > 100]
-    print(f"[Enricher] 분석 대상: {len(pending)}건 / 전체 {len(papers)}건")
+    print(f"[Enricher] 분석 대상: {len(pending)}건 / 전체 {len(papers)}건 "
+          f"(이번 실행 최대 {limit}건)")
 
     done = 0
+    fail_streak = 0
     for i, paper in enumerate(papers):
+        if done >= limit:
+            print(f"[Enricher] 이번 실행 한도({limit}건) 도달 — 나머지는 다음 실행에서 처리")
+            break
         if paper.get("ai_analysis") is not None:
             continue
         if len(paper.get("abstract", "")) < 100:
             continue
 
         preview = (paper.get("title") or "")[:50]
-        print(f"  [{i+1}/{len(papers)}] {preview}…")
+        print(f"  [{done+1}/{limit}] {preview}…")
 
         result = analyze(api_key, paper)
         if result:
             paper["ai_analysis"] = result
             done += 1
+            fail_streak = 0
+            # 건별로 즉시 저장 — 한도 초과·오류로 중단되어도 그때까지의 결과는 보존됩니다.
+            with open(RAW_FILE, "w", encoding="utf-8") as f:
+                json.dump(papers, f, ensure_ascii=False, indent=2)
+        else:
+            fail_streak += 1
+            if fail_streak >= 3:
+                print("[Enricher] 연속 3건 실패 — 무료 요청 한도(rate limit) 초과로 추정, "
+                      "이번 실행을 중단합니다. 다음 실행 때 이어서 시도합니다.")
+                break
 
         time.sleep(1.2)   # Rate-limit 방지
 
-        if done > 0 and done % 10 == 0:
-            with open(RAW_FILE, "w", encoding="utf-8") as f:
-                json.dump(papers, f, ensure_ascii=False, indent=2)
-            print(f"  [Enricher] 중간 저장 ({done}건 완료)")
-
     with open(RAW_FILE, "w", encoding="utf-8") as f:
         json.dump(papers, f, ensure_ascii=False, indent=2)
-    print(f"[Enricher] 완료: {done}건 분석됨")
+    print(f"[Enricher] 완료: {done}건 분석됨 (누적 대기 {len(pending)-done}건 남음)")
 
 
 if __name__ == "__main__":
