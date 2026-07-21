@@ -115,7 +115,11 @@ def list_generate_content_models(api_key: str) -> list[str] | None:
     """API 키로 실제 사용 가능한 모델 중 generateContent를 지원하는 모델 id 목록을 반환합니다.
     조회에 실패하면 None을 반환합니다."""
     try:
-        r = requests.get(LIST_MODELS_URL, params={"key": api_key}, timeout=30)
+        r = requests.get(
+            LIST_MODELS_URL,
+            headers={"x-goog-api-key": api_key},
+            timeout=30,
+        )
         r.raise_for_status()
         data = r.json()
         ids = []
@@ -156,7 +160,7 @@ def analyze(api_key: str, paper: dict) -> dict | str | None:
     try:
         r = requests.post(
             GEMINI_URL,
-            params={"key": api_key},
+            headers={"x-goog-api-key": api_key, "Content-Type": "application/json"},
             json=body,
             timeout=60,
         )
@@ -165,6 +169,7 @@ def analyze(api_key: str, paper: dict) -> dict | str | None:
             return "RATE_LIMIT"
         if r.status_code == 404:
             print(f"  [Enricher] 404 모델을 찾을 수 없음: {GEMINI_MODEL}")
+            print(f"  [Enricher] 응답 내용: {r.text[:300]}")
             return "NOT_FOUND"
         r.raise_for_status()
         data = r.json()
