@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>북한산 실무 AI 지식 플랫폼</title>
+<title>국립공원 실무 AI 지식 플랫폼</title>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
@@ -200,7 +200,7 @@ body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI',
 <body>
 
 <header class="hd">
-  <div class="hd-logo">북한산 <em>실무 AI 지식 플랫폼</em></div>
+  <div class="hd-logo">국립공원 <em>실무 AI 지식 플랫폼</em></div>
   <div class="hd-stats" id="hd-stats">로딩 중…</div>
 </header>
 
@@ -217,7 +217,7 @@ body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     <hr class="fl-divider">
 
     <div>
-      <div class="fl-title">북한산 적용 가능성</div>
+      <div class="fl-title">국립공원 적용 가능성</div>
       <div class="score-btns" id="app-btns"></div>
     </div>
 
@@ -401,7 +401,7 @@ function applyFilter() {
         ...(ai.related_work_areas||[])].join(' ').toLowerCase();
       if (!hay.includes(q)) return false;
     }
-    if (F.app.size  && !F.app.has(ai.bukhansan_applicability_score))  return false;
+    if (F.app.size  && !F.app.has(ai.korea_np_applicability_score))  return false;
     if (F.util.size && !F.util.has(ai.practical_utility_score))       return false;
     if (F.work.size && ![...(ai.related_work_areas||[])].some(a => F.work.has(a))) return false;
     if (F.year.size && !F.year.has(p.year)) return false;
@@ -422,7 +422,7 @@ function renderList() {
   }
   el.innerHTML = FILTERED.map((p,i) => {
     const ai   = p.ai_analysis || {};
-    const app  = ai.bukhansan_applicability_score;
+    const app  = ai.korea_np_applicability_score;
     const util = ai.practical_utility_score;
     const sum  = (ai.summary_3lines||[])[0] || '';
     const tags = (ai.tags||[]).slice(0,4);
@@ -465,7 +465,7 @@ function blist(items) {
 
 function renderDetail(p) {
   const ai   = p.ai_analysis || {};
-  const app  = ai.bukhansan_applicability_score;
+  const app  = ai.korea_np_applicability_score;
   const util = ai.practical_utility_score;
   const authors = (p.authors||[]).slice(0,4).join(', ')+(p.authors&&p.authors.length>4?` 외 ${p.authors.length-4}명`:'');
 
@@ -481,7 +481,7 @@ function renderDetail(p) {
 
   if (app || util) {
     html += `<div class="dh-scores">
-      ${app?`<div class="dsc app"><div class="dsc-lbl">북한산 적용 가능성</div>
+      ${app?`<div class="dsc app"><div class="dsc-lbl">국립공원 적용 가능성</div>
         <div class="dsc-num">${app}<span style="font-size:12px;font-weight:400;"> / 5</span></div>
         <div class="star-row">${stars(app)}</div></div>`:''}
       ${util?`<div class="dsc util"><div class="dsc-lbl">실무 활용도</div>
@@ -513,6 +513,11 @@ function renderDetail(p) {
         </div>
       </div>
 
+      ${ai.abstract_ko?`<div class="as">
+        <div class="as-title">초록 (한글 번역)</div>
+        <p class="purpose">${esc(ai.abstract_ko)}</p>
+      </div>`:''}
+
       <div class="as">
         <div class="as-title">연구 목적</div>
         <p class="purpose">${esc(ai.research_purpose||'정보 없음')}</p>
@@ -529,8 +534,8 @@ function renderDetail(p) {
       </div>
 
       <div class="as">
-        <div class="as-title">북한산 적용 가능성 — 적용 근거</div>
-        <div class="app-reason">${esc(ai.bukhansan_applicability_reason||'정보 없음')}</div>
+        <div class="as-title">국립공원 적용 가능성 — 적용 근거</div>
+        <div class="app-reason">${esc(ai.korea_np_applicability_reason||'정보 없음')}</div>
       </div>
 
       <div class="as">
@@ -574,7 +579,7 @@ function renderDetail(p) {
         <div class="tg-list">${(ai.ai_recommended_topics||[]).map(t=>`<span class="tg blue">${esc(t)}</span>`).join('')}</div>
       </div>
 
-      ${ai.analyzed_at?`<div class="ai-foot">AI 분석: ${ai.model||'GPT'} · ${ai.analyzed_at.slice(0,10)}</div>`:''}
+      ${ai.analyzed_at?`<div class="ai-foot">AI 분석: ${ai.model||'Gemini'} · ${ai.analyzed_at.slice(0,10)}</div>`:''}
     </div>`;
   }
 

@@ -16,7 +16,7 @@ OUTPUT_FILE = "papers.json"
 def sort_key(p: dict):
     ai = p.get("ai_analysis") or {}
     return (
-        -(ai.get("bukhansan_applicability_score") or 0),
+        -(ai.get("korea_np_applicability_score") or 0),
         -(ai.get("practical_utility_score") or 0),
         -(p.get("cited_by_count") or 0),
     )
@@ -24,9 +24,9 @@ def sort_key(p: dict):
 
 def build_stats(papers: list) -> dict:
     analyzed = [p for p in papers if p.get("ai_analysis")]
-    app = [p["ai_analysis"]["bukhansan_applicability_score"]
+    app = [p["ai_analysis"]["korea_np_applicability_score"]
            for p in analyzed
-           if isinstance((p["ai_analysis"] or {}).get("bukhansan_applicability_score"), int)]
+           if isinstance((p["ai_analysis"] or {}).get("korea_np_applicability_score"), int)]
     util = [p["ai_analysis"]["practical_utility_score"]
             for p in analyzed
             if isinstance((p["ai_analysis"] or {}).get("practical_utility_score"), int)]

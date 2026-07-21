@@ -8,7 +8,7 @@ import collector, enricher, indexer
 
 def main():
     print("=" * 55)
-    print("북한산 실무 AI 지식 플랫폼 — 파이프라인 시작")
+    print("국립공원 실무 AI 지식 플랫폼 — 파이프라인 시작")
     print("=" * 55)
     print("\n[1/3] Collector: 논문 수집 중…")
     collector.run()

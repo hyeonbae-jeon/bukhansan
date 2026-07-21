@@ -2,7 +2,7 @@
 """
 Collector
 ---------
-OpenAlex REST API에서 북한산 관련 논문을 수집합니다.
+OpenAlex REST API에서 해외 국립공원 관리·연구 관련 논문을 수집합니다.
 역할: 검색 → 정규화 → raw_papers.json에 누적 저장
 """
 import requests, json, os, time
@@ -12,14 +12,24 @@ OPENALEX = "https://api.openalex.org"
 RAW_FILE  = "raw_papers.json"
 STATE_FILE = "fetch_state.json"
 
-# 다양한 언어/표현으로 최대한 수집
+# 국립공원 실무(탐방로 관리, 생태계 모니터링, 방문객 관리 등) 관련 검색어
+# 특정 공원명이 아니라 국립공원 관리 전반의 해외 연구를 폭넓게 수집
 QUERIES = [
-    "Bukhansan National Park",
-    "Bukhansan mountain ecology",
-    "Bukhansan trail erosion",
-    "Bukhansan forest",
-    "Bukhansan biodiversity",
-    "Bukhan mountain Seoul",
+    "national park trail management",
+    "national park visitor management",
+    "national park ecosystem monitoring",
+    "national park biodiversity conservation",
+    "national park trail erosion",
+    "national park wildlife management",
+    "protected area management effectiveness",
+    "national park climate change adaptation",
+    "national park carrying capacity",
+    "national park invasive species management",
+    "national park fire management",
+    "national park recreation ecology",
+    "protected area governance",
+    "national park restoration ecology",
+    "national park human wildlife conflict",
 ]
 
 

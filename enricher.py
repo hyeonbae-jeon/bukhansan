@@ -2,29 +2,35 @@
 """
 Enricher
 --------
-OpenAI API(gpt-4o-mini)로 논문 초록을 분석해
-북한산국립공원 실무 정보를 ai_analysis 필드에 저장합니다.
-역할: raw_papers.json 읽기 → AI 분석 → raw_papers.json 업데이트
+Google Gemini API(gemini-2.5-flash-lite)로 논문 초록을 분석해
+1) 초록 한글 번역(abstract_ko)
+2) 국립공원 실무 정보(ai_analysis)
+를 함께 생성합니다.
+역할: raw_papers.json 읽기 → AI 번역·분석 → raw_papers.json 업데이트
 """
-import json, os, time
-from openai import OpenAI
+import json, os, time, re
+import requests
 
 RAW_FILE = "raw_papers.json"
+GEMINI_MODEL = "gemini-2.5-flash-lite"
+GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
 
-SYSTEM = """당신은 북한산국립공원 관리 전문가입니다.
-논문 초록을 분석해 현장 실무자가 논문을 읽지 않아도 바로 업무에 적용할 수 있는
-구체적인 정보를 JSON으로 제공합니다. 학술 언어를 실무 언어로 바꿔 서술하세요."""
+SYSTEM = """당신은 국립공원(한국 국립공원 포함) 관리 실무 전문가입니다.
+해외 학술논문의 초록을 분석해 한국 국립공원 현장 실무자가 논문을 읽지 않아도
+바로 업무에 적용할 수 있는 구체적인 정보를 JSON으로 제공합니다.
+또한 초록 전체를 자연스러운 한국어로 번역합니다. 학술 언어를 실무 언어로 바꿔 서술하세요."""
 
-USER_TMPL = """다음 논문을 분석하세요.
+USER_TMPL = """다음 해외 국립공원 관련 논문을 분석하세요.
 
 제목: {title}
 저자: {authors}
 학술지: {journal}  연도: {year}
-초록: {abstract}
+초록(원문): {abstract}
 
-반드시 아래 JSON 형식으로만 응답하세요 (```json 마크다운 없이):
+반드시 아래 JSON 형식으로만 응답하세요 (```json 마크다운 없이, 다른 설명 없이 JSON 객체만):
 
 {{
+  "abstract_ko": "초록 전체를 자연스러운 한국어로 번역한 내용",
   "summary_3lines": [
     "1줄: 연구 배경과 목적",
     "2줄: 주요 방법과 결과",
@@ -37,8 +43,8 @@ USER_TMPL = """다음 논문을 분석하세요.
     "실무 적용방안 2",
     "실무 적용방안 3"
   ],
-  "bukhansan_applicability_score": 4,
-  "bukhansan_applicability_reason": "북한산 지형·생태·탐방 특성을 근거로 적용 가능한 이유 서술",
+  "korea_np_applicability_score": 4,
+  "korea_np_applicability_reason": "한국 국립공원의 지형·생태·탐방 특성을 근거로 적용 가능한 이유 서술",
   "related_work_areas": ["탐방로 관리", "생태계 모니터링"],
   "related_laws": ["자연공원법 제00조", "야생생물 보호 및 관리에 관한 법률 제00조"],
   "field_checklist": [
@@ -56,14 +62,20 @@ USER_TMPL = """다음 논문을 분석하세요.
 }}
 
 점수 기준
-- bukhansan_applicability_score: 1(무관)~5(직접 관련)
+- korea_np_applicability_score: 1(무관)~5(직접 관련)
 - practical_utility_score: 1(활용 어려움)~5(즉시 적용 가능)
 
 참고 법령: 자연공원법, 국립공원공단법, 문화재보호법, 야생생물 보호 및 관리에 관한 법률,
 산림자원의 조성 및 관리에 관한 법률, 백두대간 보호에 관한 법률, 환경영향평가법"""
 
 
-def analyze(client: OpenAI, paper: dict) -> dict | None:
+def extract_json(text: str) -> dict:
+    text = text.strip()
+    text = re.sub(r"^```json\s*|^```\s*|```$", "", text, flags=re.MULTILINE).strip()
+    return json.loads(text)
+
+
+def analyze(api_key: str, paper: dict) -> dict | None:
     abstract = (paper.get("abstract") or "").strip()
     if len(abstract) < 100:
         return None
@@ -75,20 +87,30 @@ def analyze(client: OpenAI, paper: dict) -> dict | None:
         year     = paper.get("year", "정보 없음"),
         abstract = abstract[:3000],
     )
+
+    body = {
+        "system_instruction": {"parts": [{"text": SYSTEM}]},
+        "contents": [{"role": "user", "parts": [{"text": prompt}]}],
+        "generationConfig": {
+            "temperature": 0.3,
+            "maxOutputTokens": 3000,
+            "responseMimeType": "application/json",
+        },
+    }
+
     try:
-        resp = client.chat.completions.create(
-            model           = "gpt-4o-mini",
-            messages        = [
-                {"role": "system", "content": SYSTEM},
-                {"role": "user",   "content": prompt},
-            ],
-            temperature     = 0.3,
-            max_tokens      = 2500,
-            response_format = {"type": "json_object"},
+        r = requests.post(
+            GEMINI_URL,
+            params={"key": api_key},
+            json=body,
+            timeout=60,
         )
-        result = json.loads(resp.choices[0].message.content)
+        r.raise_for_status()
+        data = r.json()
+        text = data["candidates"][0]["content"]["parts"][0]["text"]
+        result = extract_json(text)
         result["analyzed_at"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
-        result["model"]       = "gpt-4o-mini"
+        result["model"]       = GEMINI_MODEL
         return result
     except Exception as exc:
         print(f"  [Enricher] 실패: {exc}")
@@ -96,12 +118,10 @@ def analyze(client: OpenAI, paper: dict) -> dict | None:
 
 
 def run():
-    api_key = os.getenv("OPENAI_API_KEY")
+    api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
-        print("[Enricher] OPENAI_API_KEY 없음 — 건너뜁니다.")
+        print("[Enricher] GEMINI_API_KEY 없음 — 건너뜁니다.")
         return
-
-    client = OpenAI(api_key=api_key)
 
     with open(RAW_FILE, encoding="utf-8") as f:
         papers = json.load(f)
@@ -120,7 +140,7 @@ def run():
         preview = (paper.get("title") or "")[:50]
         print(f"  [{i+1}/{len(papers)}] {preview}…")
 
-        result = analyze(client, paper)
+        result = analyze(api_key, paper)
         if result:
             paper["ai_analysis"] = result
             done += 1
