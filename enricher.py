@@ -17,8 +17,9 @@ import requests
 RAW_FILE   = "raw_papers.json"
 STATE_FILE = "enrich_state.json"   # 일일 요청 수 누적 기록 (git에 커밋되어야 날짜가 바뀌기 전까지 유지됨)
 
-GEMINI_MODEL = "gemini-2.5-flash-lite"
+GEMINI_MODEL = os.getenv("GEMINI_MODEL") or "gemini-2.5-flash-lite"
 GEMINI_URL   = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
+LIST_MODELS_URL = "https://generativelanguage.googleapis.com/v1beta/models"
 
 # ── 요청 한도 (RPM 10 / TPM 250,000 / RPD 20) ──────────────────────
 GEMINI_RPM_LIMIT = 10
@@ -110,8 +111,26 @@ def save_daily_state(state: dict) -> None:
         json.dump(state, f, ensure_ascii=False, indent=2)
 
 
+def list_generate_content_models(api_key: str) -> list[str] | None:
+    """API 키로 실제 사용 가능한 모델 중 generateContent를 지원하는 모델 id 목록을 반환합니다.
+    조회에 실패하면 None을 반환합니다."""
+    try:
+        r = requests.get(LIST_MODELS_URL, params={"key": api_key}, timeout=30)
+        r.raise_for_status()
+        data = r.json()
+        ids = []
+        for m in data.get("models", []):
+            if "generateContent" in m.get("supportedGenerationMethods", []):
+                ids.append(m.get("name", "").split("/")[-1])
+        return ids
+    except Exception as exc:
+        print(f"[Enricher] 모델 목록 조회 실패: {exc}")
+        return None
+
+
 def analyze(api_key: str, paper: dict) -> dict | str | None:
-    """성공 시 dict, 요청 한도 초과(429) 시 'RATE_LIMIT' 문자열, 그 외 실패 시 None을 반환합니다."""
+    """성공 시 dict, 요청 한도 초과(429) 시 'RATE_LIMIT', 모델을 찾을 수 없으면(404) 'NOT_FOUND',
+    그 외 실패 시 None을 반환합니다."""
     abstract = (paper.get("abstract") or "").strip()
     if len(abstract) < 100:
         return None
@@ -144,6 +163,9 @@ def analyze(api_key: str, paper: dict) -> dict | str | None:
         if r.status_code == 429:
             print("  [Enricher] 429 요청 한도 초과 (RPM/TPM/RPD)")
             return "RATE_LIMIT"
+        if r.status_code == 404:
+            print(f"  [Enricher] 404 모델을 찾을 수 없음: {GEMINI_MODEL}")
+            return "NOT_FOUND"
         r.raise_for_status()
         data = r.json()
         text = data["candidates"][0]["content"]["parts"][0]["text"]
@@ -164,6 +186,16 @@ def run():
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
         print("[Enricher] GEMINI_API_KEY 없음 — 건너뜁니다.")
+        return
+
+    # ── 모델 사전 점검: 잘못된 모델명으로 요청을 반복해 일일 한도를 낭비하지 않도록 확인 ──
+    available = list_generate_content_models(api_key)
+    if available is not None and GEMINI_MODEL not in available:
+        print(f"[Enricher] 설정된 모델 '{GEMINI_MODEL}'을(를) 이 API 키로 사용할 수 없습니다.")
+        print(f"[Enricher] 사용 가능한 모델 목록: {', '.join(available[:15])}"
+              + (" ..." if len(available) > 15 else ""))
+        print("[Enricher] 저장소 Secrets에 GEMINI_MODEL을(를) 위 목록 중 하나로 등록한 뒤 "
+              "다시 실행하세요. (예: gemini-flash-latest)")
         return
 
     # ── 일일 요청 한도(RPD) 확인 ──
@@ -201,7 +233,12 @@ def run():
 
         result = analyze(api_key, paper)
 
-        # 성공이든 실패든 요청 1건을 소비한 것으로 간주해 일일 카운터에 반영
+        if result == "NOT_FOUND":
+            # 설정 오류(모델명 문제)이지 실제 요청 소비가 아니므로 일일 카운터에는 반영하지 않습니다.
+            print("[Enricher] 모델 설정 오류로 이번 실행을 중단합니다. 일일 한도는 소비되지 않았습니다.")
+            break
+
+        # 성공이든 진짜 요청 실패든 요청 1건을 소비한 것으로 간주해 일일 카운터에 반영
         state["requests_today"] += 1
         save_daily_state(state)
 

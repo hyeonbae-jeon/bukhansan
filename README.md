@@ -46,10 +46,15 @@ Settings → Secrets and variables → Actions → New repository secret
 | Secret 이름 | 값 |
 |------------|-----|
 | `GEMINI_API_KEY` | Google Gemini API 키 (필수 — 초록 번역·AI 분석에 사용) |
+| `GEMINI_MODEL` | 사용할 모델 id (선택 — 기본값 `gemini-2.5-flash-lite`) |
 | `OPENALEX_EMAIL` | 이메일 주소 (선택 — API 요청 속도 향상) |
 
 > **Gemini API 키 발급**: https://aistudio.google.com/apikey
-> **모델**: `gemini-2.5-flash-lite` (무료 사용 가능)
+> **모델**: 기본값은 `gemini-2.5-flash-lite`이지만, API 키/리전에 따라 사용 가능한
+> 모델명이 다를 수 있습니다. Actions 로그에 `404 모델을 찾을 수 없음`이 뜨면, 같은 로그에
+> 그 키로 실제 사용 가능한 모델 목록이 함께 출력됩니다(모델 사전 점검 단계에서 자동 조회).
+> 그 목록 중 하나를 골라 `GEMINI_MODEL` 시크릿으로 등록하면 코드 수정 없이 바로 반영됩니다.
+> 이 사전 점검 덕분에 모델명이 잘못돼도 일일 요청 한도(RPD)는 소비되지 않습니다.
 
 ### 4. 첫 실행
 Actions 탭 → `Update Papers Pipeline` → `Run workflow`
