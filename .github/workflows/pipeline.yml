@@ -39,6 +39,7 @@ jobs:
         run: python enricher.py
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ secrets.GEMINI_MODEL }}
           ENRICH_LIMIT: ${{ github.event.inputs.limit || '20' }}
 
       # ── Step 3: Build index ──
