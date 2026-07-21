@@ -21,7 +21,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests openai
+        run: pip install requests
 
       # ── Step 1: Collect papers from OpenAlex ──
       - name: Run Collector
@@ -29,11 +29,11 @@ jobs:
         env:
           OPENALEX_EMAIL: ${{ secrets.OPENALEX_EMAIL }}
 
-      # ── Step 2: Enrich with AI analysis ──
+      # ── Step 2: Enrich with AI analysis (Gemini) ──
       - name: Run Enricher
         run: python enricher.py
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       # ── Step 3: Build index ──
       - name: Run Indexer
