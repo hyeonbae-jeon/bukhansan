@@ -292,7 +292,7 @@ let curPage = 1;
 /* ══════════════════════════════════════
    Load
 ══════════════════════════════════════ */
-fetch('papers.json')
+fetch('papers.json?v=' + Date.now(), { cache: 'no-store' })
   .then(r => r.json())
   .then(data => {
     ALL     = data.papers || [];
