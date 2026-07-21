@@ -53,11 +53,14 @@ Settings → Secrets and variables → Actions → New repository secret
 ### 4. 첫 실행
 Actions 탭 → `Update Papers Pipeline` → `Run workflow`
 
-> **무료 Gemini API를 쓰는 경우**: 한 번에 너무 많은 논문을 분석하면 무료 요청 한도(rate limit)에
-> 걸려 실패할 수 있습니다. `enricher.py`는 한 번 실행에 최대 `ENRICH_LIMIT`건(기본 15건)만
-> 분석하고 나머지는 건드리지 않습니다. 이미 분석된 논문은 건너뛰므로, Actions를 여러 번(또는
-> 매주 스케줄대로) 실행할 때마다 분석 결과가 누적됩니다.
-> `Run workflow` 클릭 시 나오는 `limit` 입력값에 `1`을 넣으면 논문 1건만 테스트로 분석해볼 수 있습니다.
+> **무료 Gemini API 한도(15 RPM / 1,500 RPD)에 맞춘 기본 설정**
+> `enricher.py`는 요청 사이 간격을 약 5초(≈60초/15회)로 두어 분당 요청 수가 15건을
+> 넘지 않도록 하고, 한 번 실행에 최대 `ENRICH_LIMIT`건(기본 15건)만 분석한 뒤 멈춥니다.
+> 응답이 429(요청 한도 초과)로 오면 그 즉시 실행을 중단해 한도를 낭비하지 않습니다.
+> 이미 분석된 논문은 항상 건너뛰므로, Actions를 여러 번(또는 매주 스케줄대로) 실행할
+> 때마다 분석 결과가 이어서 누적됩니다.
+> `Run workflow` 클릭 시 나오는 `limit` 입력값에 `1`을 넣으면 논문 1건만 테스트로
+> 분석해볼 수 있고, 하루 여러 번 수동 실행해도 1,500건(RPD) 한도 안에서는 안전합니다.
 
 ---
 

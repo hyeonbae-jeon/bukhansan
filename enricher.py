@@ -15,6 +15,11 @@ RAW_FILE = "raw_papers.json"
 GEMINI_MODEL = "gemini-2.5-flash-lite"
 GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
 
+# Gemini 무료 등급 기준: 15 RPM(분당 요청 수) / 1,500 RPD(일일 요청 수)
+# 분당 15건을 넘지 않도록 요청 사이 최소 간격을 60/15초보다 넉넉하게 둡니다.
+GEMINI_RPM_LIMIT = 15
+REQUEST_INTERVAL_SEC = (60 / GEMINI_RPM_LIMIT) + 1   # ≈ 5초
+
 SYSTEM = """당신은 국립공원(한국 국립공원 포함) 관리 실무 전문가입니다.
 해외 학술논문의 초록을 분석해 한국 국립공원 현장 실무자가 논문을 읽지 않아도
 바로 업무에 적용할 수 있는 구체적인 정보를 JSON으로 제공합니다.
@@ -76,7 +81,8 @@ def extract_json(text: str) -> dict:
     return json.loads(text)
 
 
-def analyze(api_key: str, paper: dict) -> dict | None:
+def analyze(api_key: str, paper: dict) -> dict | str | None:
+    """성공 시 dict, 요청 한도 초과(429) 시 'RATE_LIMIT' 문자열, 그 외 실패 시 None을 반환합니다."""
     abstract = (paper.get("abstract") or "").strip()
     if len(abstract) < 100:
         return None
@@ -106,6 +112,9 @@ def analyze(api_key: str, paper: dict) -> dict | None:
             json=body,
             timeout=60,
         )
+        if r.status_code == 429:
+            print("  [Enricher] 429 요청 한도 초과 (RPM/RPD)")
+            return "RATE_LIMIT"
         r.raise_for_status()
         data = r.json()
         text = data["candidates"][0]["content"]["parts"][0]["text"]
@@ -151,6 +160,10 @@ def run():
         print(f"  [{done+1}/{limit}] {preview}…")
 
         result = analyze(api_key, paper)
+        if result == "RATE_LIMIT":
+            print("[Enricher] 요청 한도(RPM/RPD) 초과로 이번 실행을 중단합니다. "
+                  "다음 실행 때 이어서 시도합니다.")
+            break
         if result:
             paper["ai_analysis"] = result
             done += 1
@@ -161,11 +174,11 @@ def run():
         else:
             fail_streak += 1
             if fail_streak >= 3:
-                print("[Enricher] 연속 3건 실패 — 무료 요청 한도(rate limit) 초과로 추정, "
-                      "이번 실행을 중단합니다. 다음 실행 때 이어서 시도합니다.")
+                print("[Enricher] 연속 3건 실패 — 이번 실행을 중단합니다. "
+                      "다음 실행 때 이어서 시도합니다.")
                 break
 
-        time.sleep(1.2)   # Rate-limit 방지
+        time.sleep(REQUEST_INTERVAL_SEC)   # 15 RPM 한도 준수
 
     with open(RAW_FILE, "w", encoding="utf-8") as f:
         json.dump(papers, f, ensure_ascii=False, indent=2)
