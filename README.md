@@ -40,7 +40,15 @@ git push -u origin main
 ### 2. GitHub Pages 활성화
 Settings → Pages → Source: `main` 브랜치, `/ (root)`
 
-### 3. Secrets 등록
+### 3. Actions 쓰기 권한 활성화 (필수 — 이게 꺼져 있으면 커밋이 절대 안 쌓입니다)
+Settings → Actions → General → 아래로 스크롤 → **Workflow permissions**에서
+**"Read and write permissions"**를 선택하고 저장하세요. 저장소를 새로 만들면 기본값이
+"Read repository contents permission"(읽기 전용)으로 되어 있는 경우가 많아서, 이 설정이
+꺼진 채로 두면 Actions가 `papers.json`/`raw_papers.json`을 아무리 잘 분석해도 커밋·푸시를
+못 하고 조용히(또는 워크플로 실패로) 끝나버립니다. 저장소 히스토리에 `chore: update papers`
+커밋이 전혀 쌓이지 않는다면 거의 항상 이 설정이 원인입니다.
+
+### 4. Secrets 등록
 Settings → Secrets and variables → Actions → New repository secret
 
 | Secret 이름 | 값 |
@@ -59,7 +67,7 @@ Settings → Secrets and variables → Actions → New repository secret
 > 그 목록 중 하나를 골라 `GEMINI_MODEL` 시크릿으로 등록하면 코드 수정 없이 바로 반영됩니다.
 > 이 사전 점검 덕분에 모델명이 잘못돼도 일일 요청 한도(RPD)는 소비되지 않습니다.
 
-### 4. 첫 실행
+### 5. 첫 실행
 Actions 탭 → `Update Papers Pipeline` → `Run workflow`
 
 > **분석 결과는 실행할 때마다 누적됩니다.** `collector.py`는 이미 수집된 논문(id 기준)은

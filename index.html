@@ -24,14 +24,14 @@
   --s1bg:#fee2e2; --s1tx:#991b1b;
 }
 body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: var(--bg); color: var(--text); height: 100vh; display: flex; flex-direction: column; overflow: hidden; font-size: 14px; }
+  background: var(--bg); color: var(--text); height: 100vh; display: flex; flex-direction: column; overflow: hidden; font-size: 15px; }
 
 /* ── Header ─────────────────────────── */
 .hd { height: 54px; background: var(--header); color: #f8fafc; display: flex; align-items: center;
   padding: 0 18px; gap: 20px; flex-shrink: 0; border-bottom: 1px solid #1e293b; }
-.hd-logo { font-size: 15px; font-weight: 700; letter-spacing: -0.3px; white-space: nowrap; }
+.hd-logo { font-size: 18px; font-weight: 700; letter-spacing: -0.3px; white-space: nowrap; }
 .hd-logo em { color: #60a5fa; font-style: normal; }
-.hd-stats { display: flex; gap: 14px; margin-left: auto; font-size: 12px; color: #94a3b8; flex-wrap: wrap; }
+.hd-stats { display: flex; gap: 14px; margin-left: auto; font-size: 13px; color: #94a3b8; flex-wrap: wrap; }
 .hd-stats strong { color: #e2e8f0; }
 
 /* ── Layout ──────────────────────────── */
@@ -45,34 +45,34 @@ body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI',
 
 .search-wrap { position: relative; }
 .search-wrap input { width: 100%; padding: 7px 10px 7px 30px; border: 1px solid var(--border);
-  border-radius: 6px; font-size: 13px; outline: none; font-family: inherit; background: var(--bg); }
+  border-radius: 6px; font-size: 14px; outline: none; font-family: inherit; background: var(--bg); }
 .search-wrap input:focus { border-color: var(--primary); background: #fff; }
 .search-icon { position: absolute; left: 9px; top: 50%; transform: translateY(-50%); color: var(--light);
-  font-size: 14px; pointer-events: none; }
+  font-size: 15px; pointer-events: none; }
 
-.fl-title { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase;
+.fl-title { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase;
   letter-spacing: 0.06em; margin-bottom: 8px; }
 .fl-divider { border: none; border-top: 1px solid var(--border-2); }
 
 /* Score filter buttons */
 .score-btns { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
 .score-btn { width: 28px; height: 28px; border-radius: 50%; border: 2px solid transparent; cursor: pointer;
-  font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; transition: border-color .15s; }
+  font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; transition: border-color .15s; }
 .score-btn:hover { opacity: 0.85; }
 .score-btn.active { border-color: currentColor !important; box-shadow: 0 0 0 2px rgba(0,0,0,.08); }
-.score-btn-reset { font-size: 11px; padding: 3px 8px; border: 1px solid var(--border); border-radius: 4px;
+.score-btn-reset { font-size: 12px; padding: 3px 8px; border: 1px solid var(--border); border-radius: 4px;
   cursor: pointer; color: var(--muted); background: white; margin-left: 2px; }
 .score-btn-reset:hover { background: var(--border-2); }
 
 /* Checkbox filter */
 .cb-row { display: flex; align-items: center; gap: 7px; padding: 3px 0; cursor: pointer; }
 .cb-row input { cursor: pointer; accent-color: var(--primary); }
-.cb-row label { font-size: 12px; cursor: pointer; flex: 1; line-height: 1.3; }
-.cb-count { font-size: 11px; color: var(--light); }
+.cb-row label { font-size: 13px; cursor: pointer; flex: 1; line-height: 1.3; }
+.cb-count { font-size: 12px; color: var(--light); }
 
 /* Tag cloud */
 .tag-cloud { display: flex; flex-wrap: wrap; gap: 5px; }
-.t-chip { font-size: 11px; padding: 2px 8px; background: var(--border-2); border: 1px solid var(--border);
+.t-chip { font-size: 12px; padding: 2px 8px; background: var(--border-2); border: 1px solid var(--border);
   border-radius: 4px; cursor: pointer; color: var(--muted); line-height: 1.5; }
 .t-chip:hover, .t-chip.on { background: var(--primary-dim); color: var(--primary); border-color: #93c5fd; }
 
@@ -84,16 +84,16 @@ body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI',
 
 .pl-pagination { flex-shrink: 0; display: flex; align-items: center; justify-content: space-between;
   gap: 10px; padding: 8px 12px; border-top: 1px solid var(--border); background: var(--card); }
-.pl-page-size { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }
-.pl-page-size select { font-size: 12px; padding: 3px 6px; border: 1px solid var(--border); border-radius: 4px;
+.pl-page-size { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); }
+.pl-page-size select { font-size: 13px; padding: 3px 6px; border: 1px solid var(--border); border-radius: 4px;
   background: white; cursor: pointer; color: var(--text); }
 .pl-page-nav { display: flex; align-items: center; gap: 4px; }
-.pl-page-btn { font-size: 12px; padding: 4px 9px; border: 1px solid var(--border); border-radius: 4px;
+.pl-page-btn { font-size: 13px; padding: 4px 9px; border: 1px solid var(--border); border-radius: 4px;
   background: white; cursor: pointer; color: var(--text); }
 .pl-page-btn:hover:not(:disabled) { border-color: #93c5fd; color: var(--primary); }
 .pl-page-btn:disabled { opacity: 0.4; cursor: not-allowed; }
 .pl-page-btn.cur { background: var(--primary); color: white; border-color: var(--primary); }
-.pl-page-info { font-size: 12px; color: var(--muted); white-space: nowrap; }
+.pl-page-info { font-size: 13px; color: var(--muted); white-space: nowrap; }
 
 .pc { background: var(--card); border: 1px solid var(--border); border-radius: 7px; padding: 12px 14px;
   cursor: pointer; transition: border-color .15s, box-shadow .15s; }
@@ -102,43 +102,43 @@ body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI',
 
 .pc-scores { display: flex; gap: 5px; margin-bottom: 7px; flex-wrap: wrap; align-items: center; }
 .sb-badge { display: inline-flex; align-items: center; gap: 3px; padding: 1px 7px; border-radius: 4px;
-  font-size: 11px; font-weight: 600; white-space: nowrap; }
-.sb-badge .n { font-size: 12px; }
+  font-size: 12px; font-weight: 600; white-space: nowrap; }
+.sb-badge .n { font-size: 13px; }
 .s5 { background: var(--s5bg); color: var(--s5tx); }
 .s4 { background: var(--s4bg); color: var(--s4tx); }
 .s3 { background: var(--s3bg); color: var(--s3tx); }
 .s2 { background: var(--s2bg); color: var(--s2tx); }
 .s1 { background: var(--s1bg); color: var(--s1tx); }
-.no-ai { background: var(--border-2); color: var(--muted); padding: 1px 8px; border-radius: 4px; font-size: 11px; }
+.no-ai { background: var(--border-2); color: var(--muted); padding: 1px 8px; border-radius: 4px; font-size: 12px; }
 
-.pc-title { font-size: 13px; font-weight: 600; line-height: 1.4; margin-bottom: 5px; color: var(--text); }
-.pc-meta { font-size: 11px; color: var(--muted); margin-bottom: 6px; line-height: 1.5; }
-.pc-sum { font-size: 12px; color: var(--muted); line-height: 1.5; margin-bottom: 6px;
+.pc-title { font-size: 14px; font-weight: 600; line-height: 1.4; margin-bottom: 5px; color: var(--text); }
+.pc-meta { font-size: 12px; color: var(--muted); margin-bottom: 6px; line-height: 1.5; }
+.pc-sum { font-size: 13px; color: var(--muted); line-height: 1.5; margin-bottom: 6px;
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .pc-tags { display: flex; flex-wrap: wrap; gap: 3px; }
-.pc-tag { font-size: 10px; padding: 1px 6px; background: var(--border-2); border-radius: 3px; color: var(--light); }
+.pc-tag { font-size: 11px; padding: 1px 6px; background: var(--border-2); border-radius: 3px; color: var(--light); }
 
-.empty { padding: 32px 16px; text-align: center; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.empty { padding: 32px 16px; text-align: center; color: var(--muted); font-size: 14px; line-height: 1.8; }
 
 /* ── Detail Panel ───────────────────── */
-.dp { width: 560px; flex-shrink: 0; background: var(--card); border-left: 1px solid var(--border);
+.dp { width: 700px; flex-shrink: 0; background: var(--card); border-left: 1px solid var(--border);
   overflow-y: auto; display: flex; flex-direction: column; }
 .dp::-webkit-scrollbar { width: 5px; }
 .dp::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 .dp-empty { flex: 1; display: flex; align-items: center; justify-content: center;
-  color: var(--muted); font-size: 13px; text-align: center; line-height: 1.7; padding: 24px; }
+  color: var(--muted); font-size: 14px; text-align: center; line-height: 1.7; padding: 24px; }
 
 /* Detail header */
 .dh { padding: 18px; border-bottom: 1px solid var(--border); }
-.dh-title { font-size: 15px; font-weight: 700; line-height: 1.45; margin-bottom: 10px; }
-.dh-title-orig { font-size: 12px; color: var(--muted); line-height: 1.4; margin: -6px 0 10px; }
-.dh-meta { display: flex; flex-wrap: wrap; gap: 10px; font-size: 11px; color: var(--muted); margin-bottom: 12px; }
+.dh-title { font-size: 16px; font-weight: 700; line-height: 1.45; margin-bottom: 10px; }
+.dh-title-orig { font-size: 13px; color: var(--muted); line-height: 1.4; margin: -6px 0 10px; }
+.dh-meta { display: flex; flex-wrap: wrap; gap: 10px; font-size: 12px; color: var(--muted); margin-bottom: 12px; }
 .dh-meta-item { display: flex; align-items: center; gap: 3px; }
 .dh-scores { display: flex; gap: 8px; margin-bottom: 12px; }
 .dsc { flex: 1; padding: 9px 11px; border-radius: 6px; border: 1px solid var(--border); }
-.dsc-lbl { font-size: 10px; color: var(--muted); margin-bottom: 3px; font-weight: 500; }
-.dsc-num { font-size: 20px; font-weight: 800; line-height: 1; }
-.dsc-sub { font-size: 10px; color: var(--muted); margin-top: 1px; }
+.dsc-lbl { font-size: 11px; color: var(--muted); margin-bottom: 3px; font-weight: 500; }
+.dsc-num { font-size: 21px; font-weight: 800; line-height: 1; }
+.dsc-sub { font-size: 11px; color: var(--muted); margin-top: 1px; }
 .dsc.app { background: #f0fdf4; }
 .dsc.app .dsc-num { color: #16a34a; }
 .dsc.util { background: #eff6ff; }
@@ -150,66 +150,66 @@ body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI',
 .star.f2 { background: #f97316; }
 .star.f1 { background: #dc2626; }
 .dh-links { display: flex; gap: 6px; flex-wrap: wrap; }
-.dh-link { font-size: 11px; padding: 4px 11px; border-radius: 4px; text-decoration: none;
+.dh-link { font-size: 12px; padding: 4px 11px; border-radius: 4px; text-decoration: none;
   border: 1px solid var(--border); color: var(--muted); }
 .dh-link:hover { background: var(--border-2); }
 .dh-link.pri { background: var(--primary); color: white; border-color: var(--primary); }
-.oa-badge { font-size: 10px; padding: 2px 7px; border-radius: 3px; background: #dcfce7; color: #16a34a;
+.oa-badge { font-size: 11px; padding: 2px 7px; border-radius: 3px; background: #dcfce7; color: #16a34a;
   border: 1px solid #86efac; font-weight: 600; }
 
 /* Analysis body */
 .ab { padding: 0 18px 18px; }
 .as { margin-top: 14px; }
-.as-title { font-size: 10px; font-weight: 700; color: var(--muted); text-transform: uppercase;
+.as-title { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase;
   letter-spacing: 0.07em; margin-bottom: 7px; padding-bottom: 5px; border-bottom: 1px solid var(--border-2); }
 
 /* Summary box */
 .sum-box { background: #f8fafc; border-left: 3px solid var(--primary); padding: 10px 12px;
   border-radius: 0 6px 6px 0; counter-reset: sl; }
-.sum-line { font-size: 12px; line-height: 1.65; padding: 2px 0; display: flex; gap: 6px; }
+.sum-line { font-size: 13px; line-height: 1.65; padding: 2px 0; display: flex; gap: 6px; }
 .sum-line::before { counter-increment: sl; content: counter(sl); color: var(--primary); font-weight: 700;
-  font-size: 11px; flex-shrink: 0; padding-top: 2px; }
+  font-size: 12px; flex-shrink: 0; padding-top: 2px; }
 
-.purpose { font-size: 12px; line-height: 1.7; color: var(--text); }
+.purpose { font-size: 13px; line-height: 1.7; color: var(--text); }
 
 /* Bullet list */
 .blist { list-style: none; display: flex; flex-direction: column; gap: 5px; }
-.blist li { font-size: 12px; line-height: 1.55; padding-left: 14px; position: relative; }
-.blist li::before { content: "▸"; position: absolute; left: 0; color: var(--primary); font-size: 9px; top: 3px; }
+.blist li { font-size: 13px; line-height: 1.55; padding-left: 14px; position: relative; }
+.blist li::before { content: "▸"; position: absolute; left: 0; color: var(--primary); font-size: 10px; top: 3px; }
 
 /* Checklist */
 .cklist { list-style: none; display: flex; flex-direction: column; gap: 6px; }
-.cklist li { display: flex; gap: 7px; font-size: 12px; line-height: 1.55; }
-.cklist li::before { content: "☐"; flex-shrink: 0; color: var(--muted); font-size: 13px; }
+.cklist li { display: flex; gap: 7px; font-size: 13px; line-height: 1.55; }
+.cklist li::before { content: "☐"; flex-shrink: 0; color: var(--muted); font-size: 14px; }
 
 /* Badge rows */
 .badge-row { display: flex; flex-wrap: wrap; gap: 5px; }
-.w-badge { font-size: 11px; padding: 2px 9px; background: #eff6ff; color: #1e40af; border-radius: 4px; }
-.l-badge { font-size: 11px; padding: 2px 9px; background: #faf5ff; color: #6b21a8; border-radius: 4px; }
+.w-badge { font-size: 12px; padding: 2px 9px; background: #eff6ff; color: #1e40af; border-radius: 4px; }
+.l-badge { font-size: 12px; padding: 2px 9px; background: #faf5ff; color: #6b21a8; border-radius: 4px; }
 
 /* App reason */
-.app-reason { font-size: 12px; line-height: 1.65; background: #f0fdf4; padding: 9px 11px; border-radius: 6px; }
+.app-reason { font-size: 13px; line-height: 1.65; background: #f0fdf4; padding: 9px 11px; border-radius: 6px; }
 
 /* Caution */
-.caution { font-size: 12px; line-height: 1.55; padding: 7px 11px; background: #fffbeb;
+.caution { font-size: 13px; line-height: 1.55; padding: 7px 11px; background: #fffbeb;
   border-left: 3px solid #f59e0b; border-radius: 0 6px 6px 0; margin-bottom: 5px; }
 
 /* Tag list */
 .tg-list { display: flex; flex-wrap: wrap; gap: 5px; }
-.tg { font-size: 11px; padding: 2px 9px; background: var(--border-2); color: var(--muted);
+.tg { font-size: 12px; padding: 2px 9px; background: var(--border-2); color: var(--muted);
   border: 1px solid var(--border); border-radius: 4px; }
 .tg.blue { background: #eff6ff; color: #1e40af; border-color: #bfdbfe; }
 
 /* Followup */
-.fu { font-size: 12px; line-height: 1.55; padding: 7px 10px; background: var(--border-2);
+.fu { font-size: 13px; line-height: 1.55; padding: 7px 10px; background: var(--border-2);
   border-radius: 6px; margin-bottom: 5px; }
 
 .ai-foot { margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--border-2);
-  font-size: 10px; color: var(--light); }
+  font-size: 11px; color: var(--light); }
 
 /* Abstract fallback */
 .abs-box { margin-top: 12px; }
-.abs-box p { font-size: 12px; line-height: 1.7; color: var(--text); }
+.abs-box p { font-size: 13px; line-height: 1.7; color: var(--text); }
 </style>
 </head>
 <body>
@@ -479,16 +479,16 @@ function renderList() {
 function renderPagination(totalPages) {
   const pagEl = document.getElementById('pl-pagination');
 
-  // 페이지 번호 버튼: 현재 페이지 주변 + 처음/끝만 표시
-  const pages = [];
-  for (let n = 1; n <= totalPages; n++) {
-    if (n === 1 || n === totalPages || Math.abs(n - curPage) <= 1) pages.push(n);
-    else if (pages[pages.length-1] !== '…') pages.push('…');
+  // 페이지 번호 버튼: 현재 페이지를 중심으로 최대 10개를 항상 일관되게 표시
+  const WINDOW = 10;
+  let start = Math.max(1, curPage - Math.floor(WINDOW / 2));
+  let end   = Math.min(totalPages, start + WINDOW - 1);
+  start     = Math.max(1, end - WINDOW + 1);
+
+  const pageBtns = [];
+  for (let n = start; n <= end; n++) {
+    pageBtns.push(`<button class="pl-page-btn${n===curPage?' cur':''}" onclick="goPage(${n})">${n}</button>`);
   }
-  const pageBtns = pages.map(n => n === '…'
-    ? `<span class="pl-page-info">…</span>`
-    : `<button class="pl-page-btn${n===curPage?' cur':''}" onclick="goPage(${n})">${n}</button>`
-  ).join('');
 
   pagEl.innerHTML = `
     <div class="pl-page-size">
@@ -498,9 +498,11 @@ function renderPagination(totalPages) {
       </select>
     </div>
     <div class="pl-page-nav">
+      <button class="pl-page-btn" onclick="goPage(1)" ${curPage<=1?'disabled':''}>맨처음</button>
       <button class="pl-page-btn" onclick="goPage(${curPage-1})" ${curPage<=1?'disabled':''}>이전</button>
-      ${pageBtns}
+      ${pageBtns.join('')}
       <button class="pl-page-btn" onclick="goPage(${curPage+1})" ${curPage>=totalPages?'disabled':''}>다음</button>
+      <button class="pl-page-btn" onclick="goPage(${totalPages})" ${curPage>=totalPages?'disabled':''}>맨끝</button>
     </div>`;
 }
 
@@ -533,7 +535,7 @@ function stars(score) {
 }
 
 function blist(items) {
-  if (!items||!items.length) return '<p style="font-size:12px;color:var(--muted)">정보 없음</p>';
+  if (!items||!items.length) return '<p style="font-size:13px;color:var(--muted)">정보 없음</p>';
   return `<ul class="blist">${items.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;
 }
 
@@ -557,10 +559,10 @@ function renderDetail(p) {
   if (app || util) {
     html += `<div class="dh-scores">
       ${app?`<div class="dsc app"><div class="dsc-lbl">국립공원 적용 가능성</div>
-        <div class="dsc-num">${app}<span style="font-size:12px;font-weight:400;"> / 5</span></div>
+        <div class="dsc-num">${app}<span style="font-size:13px;font-weight:400;"> / 5</span></div>
         <div class="star-row">${stars(app)}</div></div>`:''}
       ${util?`<div class="dsc util"><div class="dsc-lbl">실무 활용도</div>
-        <div class="dsc-num">${util}<span style="font-size:12px;font-weight:400;"> / 5</span></div>
+        <div class="dsc-num">${util}<span style="font-size:13px;font-weight:400;"> / 5</span></div>
         <div class="star-row">${stars(util)}</div></div>`:''}
     </div>`;
   }
@@ -573,7 +575,7 @@ function renderDetail(p) {
   </div></div>`;
 
   if (!app && !util) {
-    html += `<div style="padding:18px;text-align:center;color:var(--muted);font-size:12px;line-height:1.8;">
+    html += `<div style="padding:18px;text-align:center;color:var(--muted);font-size:13px;line-height:1.8;">
       AI 분석이 아직 완료되지 않았습니다.<br>
       <code style="background:var(--border-2);padding:2px 6px;border-radius:3px;">python run_pipeline.py</code><br>를 실행하면 분석이 생성됩니다.
       ${p.abstract?`<div class="abs-box"><div class="as-title" style="margin-top:14px;">초록</div><p>${esc(p.abstract.slice(0,600))}${p.abstract.length>600?'…':''}</p></div>`:''}
@@ -616,14 +618,14 @@ function renderDetail(p) {
       <div class="as">
         <div class="as-title">관련 업무 분야</div>
         <div class="badge-row">
-          ${(ai.related_work_areas||[]).map(a=>`<span class="w-badge">${esc(a)}</span>`).join('')||'<span style="font-size:12px;color:var(--muted)">정보 없음</span>'}
+          ${(ai.related_work_areas||[]).map(a=>`<span class="w-badge">${esc(a)}</span>`).join('')||'<span style="font-size:13px;color:var(--muted)">정보 없음</span>'}
         </div>
       </div>
 
       <div class="as">
         <div class="as-title">관련 법령</div>
         <div class="badge-row">
-          ${(ai.related_laws||[]).map(l=>`<span class="l-badge">${esc(l)}</span>`).join('')||'<span style="font-size:12px;color:var(--muted)">정보 없음</span>'}
+          ${(ai.related_laws||[]).map(l=>`<span class="l-badge">${esc(l)}</span>`).join('')||'<span style="font-size:13px;color:var(--muted)">정보 없음</span>'}
         </div>
       </div>
 
@@ -631,12 +633,12 @@ function renderDetail(p) {
         <div class="as-title">현장 점검 체크리스트</div>
         ${(ai.field_checklist||[]).length
           ? `<ul class="cklist">${(ai.field_checklist||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`
-          : '<p style="font-size:12px;color:var(--muted)">정보 없음</p>'}
+          : '<p style="font-size:13px;color:var(--muted)">정보 없음</p>'}
       </div>
 
       <div class="as">
         <div class="as-title">적용 시 주의사항</div>
-        ${(ai.cautions||[]).map(c=>`<div class="caution">${esc(c)}</div>`).join('')||'<p style="font-size:12px;color:var(--muted)">정보 없음</p>'}
+        ${(ai.cautions||[]).map(c=>`<div class="caution">${esc(c)}</div>`).join('')||'<p style="font-size:13px;color:var(--muted)">정보 없음</p>'}
       </div>
 
       <div class="as">
@@ -646,7 +648,7 @@ function renderDetail(p) {
 
       <div class="as">
         <div class="as-title">후속 연구 필요 내용</div>
-        ${(ai.recommended_followup_research||[]).map(r=>`<div class="fu">${esc(r)}</div>`).join('')||'<p style="font-size:12px;color:var(--muted)">정보 없음</p>'}
+        ${(ai.recommended_followup_research||[]).map(r=>`<div class="fu">${esc(r)}</div>`).join('')||'<p style="font-size:13px;color:var(--muted)">정보 없음</p>'}
       </div>
 
       <div class="as">
