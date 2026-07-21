@@ -99,9 +99,28 @@ def fetch_query(query: str, email: str = "", limit: int = 100) -> list:
         }
         if email:
             params["mailto"] = email
+
+        r = None
+        for attempt in range(5):
+            try:
+                r = requests.get(f"{OPENALEX}/works", params=params, timeout=30)
+                if r.status_code == 429:
+                    wait = int(r.headers.get("Retry-After", 0)) or (2 ** attempt) * 3
+                    print(f"[Collector] 429 (요청 과다) — {wait}초 대기 후 재시도 "
+                          f"({attempt+1}/5) [{query[:30]}]")
+                    time.sleep(wait)
+                    continue
+                r.raise_for_status()
+                break
+            except requests.exceptions.RequestException as exc:
+                print(f"[Collector] 오류 ({query[:30]}): {exc} — {2**attempt}초 후 재시도")
+                time.sleep(2 ** attempt)
+                r = None
+        if r is None or r.status_code != 200:
+            print(f"[Collector] 포기 ({query[:30]}): 재시도 5회 모두 실패")
+            break
+
         try:
-            r = requests.get(f"{OPENALEX}/works", params=params, timeout=30)
-            r.raise_for_status()
             data    = r.json()
             results = data.get("results", [])
             if not results:
@@ -113,9 +132,9 @@ def fetch_query(query: str, email: str = "", limit: int = 100) -> list:
             cursor = data.get("meta", {}).get("next_cursor")
             if not cursor:
                 break
-            time.sleep(0.35)
+            time.sleep(0.5)   # 요청 사이 간격을 조금 더 넉넉하게
         except Exception as exc:
-            print(f"[Collector] 오류 ({query[:30]}): {exc}")
+            print(f"[Collector] 파싱 오류 ({query[:30]}): {exc}")
             break
     return papers
 

@@ -85,7 +85,11 @@ USER_TMPL = """다음 해외 국립공원 관련 논문을 분석하세요.
 def extract_json(text: str) -> dict:
     text = text.strip()
     text = re.sub(r"^```json\s*|^```\s*|```$", "", text, flags=re.MULTILINE).strip()
-    return json.loads(text)
+    # 모델이 JSON 뒤에 여분의 텍스트(줄바꿈, 재출력 등)를 덧붙이는 경우가 있어
+    # json.loads 대신 raw_decode로 첫 번째 유효한 JSON 객체만 잘라서 파싱합니다.
+    decoder = json.JSONDecoder()
+    obj, _ = decoder.raw_decode(text)
+    return obj
 
 
 def today_str() -> str:
