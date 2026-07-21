@@ -6,9 +6,9 @@ on:
   workflow_dispatch:        # 수동 실행 버튼
     inputs:
       limit:
-        description: '이번 실행에서 AI 분석할 논문 건수 (무료 API 한도 테스트용, 기본 15)'
+        description: '이번 실행에서 AI 분석할 논문 건수 (일일 한도 20건 이하로 자동 조정됨)'
         required: false
-        default: '15'
+        default: '20'
 
 jobs:
   pipeline:
@@ -39,7 +39,7 @@ jobs:
         run: python enricher.py
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          ENRICH_LIMIT: ${{ github.event.inputs.limit || '15' }}
+          ENRICH_LIMIT: ${{ github.event.inputs.limit || '20' }}
 
       # ── Step 3: Build index ──
       - name: Run Indexer
@@ -50,7 +50,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add papers.json raw_papers.json fetch_state.json
+          git add papers.json raw_papers.json fetch_state.json enrich_state.json
           git diff --staged --quiet || \
             git commit -m "chore: update papers [$(date -u +%Y-%m-%d)]"
           git push
