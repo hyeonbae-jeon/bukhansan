@@ -60,14 +60,26 @@ jobs:
             exit 0
           fi
           git commit -m "chore: update papers [$(date -u +%Y-%m-%d)]"
+
           # 다른 실행(스케줄/수동)과 겹쳐서 push가 거부될 경우를 대비해
           # 최신 원격 커밋을 rebase로 받아온 뒤 재시도합니다.
+          pushed=0
           for i in 1 2 3 4 5; do
             if git push; then
               echo "push 성공"
+              pushed=1
               break
             fi
             echo "push 실패 — 원격 변경분을 받아온 뒤 재시도합니다 ($i/5)"
             git pull --rebase origin "${GITHUB_REF_NAME}"
             sleep $((i * 5))
           done
+
+          if [ "$pushed" -ne 1 ]; then
+            echo "::error::5회 재시도에도 push에 실패했습니다."
+            echo "가장 흔한 원인: 저장소 Settings → Actions → General → Workflow permissions에서"
+            echo "'Read and write permissions'이 선택되어 있는지 확인하세요."
+            echo "(기본값이 'Read repository contents permission'이면 Actions가 push할 수 없습니다.)"
+            echo "브랜치 보호 규칙(Branch protection rules)이 기본 브랜치 직접 push를 막고 있는지도 확인하세요."
+            exit 1
+          fi
