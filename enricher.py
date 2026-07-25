@@ -13,6 +13,7 @@ Google Gemini API(기본 모델: gemini-flash-lite-latest)로 논문 초록을 �
 """
 import json, os, time, re
 import requests
+import law_matcher
 
 RAW_FILE   = "raw_papers.json"
 STATE_FILE = "enrich_state.json"   # 일일 요청 수 누적 기록 (git에 커밋되어야 날짜가 바뀌기 전까지 유지됨)
@@ -25,7 +26,7 @@ LIST_MODELS_URL = "https://generativelanguage.googleapis.com/v1beta/models"
 # RPD는 실제 한도(500)보다 훨씬 낮게 잡아 여유를 둡니다. 필요하면 GEMINI_RPD_LIMIT/
 # ENRICH_LIMIT 환경변수(또는 워크플로 limit 입력값)로 언제든 더 올릴 수 있습니다.
 GEMINI_RPM_LIMIT = 15
-GEMINI_RPD_LIMIT = int(os.getenv("GEMINI_RPD_LIMIT") or 100)
+GEMINI_RPD_LIMIT = int(os.getenv("GEMINI_RPD_LIMIT") or 200)
 MAX_OUTPUT_TOKENS = 2000   # 건당 입력+출력 토큰을 넉넉히 잡아도 15건/분 기준 TPM 250k에 크게 못 미침
 REQUEST_INTERVAL_SEC = (60 / GEMINI_RPM_LIMIT) + 1   # ≈ 5초, 분당 15건 이하로 유지
 
@@ -47,9 +48,9 @@ USER_TMPL = """다음 해외 국립공원 관련 논문을 분석하세요.
   "title_ko": "논문 제목을 자연스러운 한국어로 번역한 내용",
   "abstract_ko": "초록 전체를 자연스러운 한국어로 번역한 내용",
   "summary_3lines": [
-    "1줄: 연구 배경과 목적",
-    "2줄: 주요 방법과 결과",
-    "3줄: 결론 및 실무 시사점"
+    "연구 배경과 목적을 한 문장으로 (숫자·라벨 없이 바로 문장으로 시작)",
+    "주요 방법과 결과를 한 문장으로",
+    "결론 및 실무 시사점을 한 문장으로"
   ],
   "research_purpose": "연구 목적을 2~3문장으로 서술",
   "key_findings": ["핵심 결과 1", "핵심 결과 2", "핵심 결과 3"],
@@ -183,6 +184,12 @@ def analyze(api_key: str, paper: dict) -> dict | str | None:
         result = extract_json(text)
         result["analyzed_at"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
         result["model"]       = GEMINI_MODEL
+
+        # LAW_API_OC가 설정되어 있으면 관련 법령을 실제 현행 법령과 대조합니다.
+        law_oc = os.getenv("LAW_API_OC")
+        if law_oc and result.get("related_laws"):
+            result["related_laws"] = law_matcher.verify_related_laws(result["related_laws"], law_oc)
+
         return result
     except Exception as exc:
         print(f"  [Enricher] 실패: {exc}")
