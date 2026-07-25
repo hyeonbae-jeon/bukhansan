@@ -81169,5 +81169,32 @@
     ],
     "openalex_url": "https://openalex.org/W2013289455",
     "ai_analysis": null
+  },
+  {
+    "id": "W153073038",
+    "source": "openalex",
+    "title": "Monitoring and Assessment of Wolf-Ungulate Interactions andPopulation Trends within the Greater Yellowstone Area,Southwestern Montana, and Montana Statewide",
+    "abstract": "The impacts of wolves on elk and other ungulates is perhaps one of the most controversial wildlife-related issues faced by people that co-inhabit landscapes with these species. This is certainly true in Montana, where the issue often involves widely disparate opinions and values. In the Greater Yellowstone Area (GYA) and southwest Montana in particular, public interest is heightened in this issue. The GYA and southwest Montana generate approximately half of the Montana statewide elk hunter days afield and elk harvest annually. The impacts of wolves on elk populations are front and center in the minds of many elk hunters and elk enthusiasts in the region. The region is also close to Yellowstone National Park, where wolf conservation efforts were bolstered in 1995-96 with the experimental restoration of wolves to an ecosystem that had been without wolves for much of the previous century. The region holds particular significance for wolf conservation enthusiasts, and the impacts of wolves on elk are fresh in their minds as well. Montana Fish, Wildlife, and Parks (MFWP) is entrusted to conserve and manage wildlife in the GYA and in southwest Montana. The state of Montana has been successful in efforts toward this endeavor since statehood was enacted in 1889. With the reestablishment of wolves in the region around the turn of the 21st century, however, wildlife managers were faced with a new challenge. Before this occurred, wildlife conservation and management programs were implemented without a thought given to wolves or their impacts on the ungulate populations the agency managed. Facts and data about the impacts of wolves on elk in the region were sorely needed for wildlife conservation and management programs to adapt and remain successful. With the intense public interest and the data needs of wildlife managers in mind, MFWP began a wolf-ungulate research project in 2001 to fill some large gaps in our knowledge base. This was a collaborative project with the Ecology Department at Montana State University, with involvement from Drs. Bob Garrott and Scott Creel. The project was designed to incorporate both intensive and extensive data collection efforts. Intensive study sites were identified, and individual project cooperators ran efforts at these sites. Data collection at the intensive study sites was intended to provide the detailed comparisons needed to understand the range of effects that wolves can have on elk population dynamics and behavior. Additionally, as a part of this overall effort, MFWP agreed to bolster ungulate monitoring efforts in a more extensive region in southwest Montana, as well as to continue monitoring programs elsewhere in the state to provide insights regarding the effects of wolves on ungulate populations over a larger area. Due to the immediate need for information to inform the public conversation, scientific debates, and wildlife management programs, much of what has been learned from this research effort was published during the course of the project, in scientific journals and in agency annual reports. A list of scientific publications resulting from this project is contained in this final report. Further, Hamlin et al. (2008) summarizes much of the knowledge gained via comparisons between data collected at the intensive study sites through 2007. This report updates these comparisons with more recent data, and provides a more in-depth look at wolf-elk interactions in the Northern Yellowstone elk herd, which was lacking in previous publications and reports. This report also provides summaries from more extensive data collection efforts and MFWP monitoring programs, which have been absent from previous publications and reports, including summaries of data collected for deer and moose populations. The major, overriding result from this research effort has been that one-size-fitsall explanations of wolf-elk interactions across large areas do not exist. However, we have learned that elk populations tend to become limited by predators when high ratios of predators to elk are reached, and this typically has occurred when multiple predator species are numerous within the range of one elk population. This limitation of elk populations in areas with numerous predators appears to become manifest through direct impacts on elk calf survival and recruitment. The research presented in this report results from an active MFWP applied wildlife research program. Montana’s wildlife management programs have long been built upon the scientific investigations of a dependable team of research scientists working in close conjunction with very talented and dedicated staff wildlife biologists and managers. This particular research project is no exception to that trend, and it will undoubtedly serve as the basis of wildlife management programs and decisions well into the future.",
+    "authors": [
+      "Kenneth L. Hamlin",
+      "Julie A. Cunningham",
+      "Kurt Alt"
+    ],
+    "year": 2009,
+    "journal": "Lincoln (University of Nebraska)",
+    "cited_by_count": 19,
+    "doi": "",
+    "is_oa": true,
+    "oa_url": "http://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1027&context=wolfrecovery",
+    "concepts": [
+      "Ungulate",
+      "Geography",
+      "Archaeology",
+      "Forestry",
+      "Ecology",
+      "Habitat"
+    ],
+    "openalex_url": "https://openalex.org/W153073038",
+    "ai_analysis": null
   }
 ]
