@@ -27,7 +27,8 @@ LIST_MODELS_URL = "https://generativelanguage.googleapis.com/v1beta/models"
 # ENRICH_LIMIT 환경변수(또는 워크플로 limit 입력값)로 언제든 더 올릴 수 있습니다.
 GEMINI_RPM_LIMIT = 15
 GEMINI_RPD_LIMIT = int(os.getenv("GEMINI_RPD_LIMIT") or 200)
-MAX_OUTPUT_TOKENS = 2000   # 건당 입력+출력 토큰을 넉넉히 잡아도 15건/분 기준 TPM 250k에 크게 못 미침
+MAX_OUTPUT_TOKENS = 4096   # 스키마가 크고(제목·초록 번역 포함) 2000으로는 응답이 중간에 잘렸음.
+                            # 15건/분 기준으로도 TPM 250k에는 여전히 크게 못 미침
 REQUEST_INTERVAL_SEC = (60 / GEMINI_RPM_LIMIT) + 1   # ≈ 5초, 분당 15건 이하로 유지
 
 SYSTEM = """당신은 국립공원(한국 국립공원 포함) 관리 실무 전문가입니다.
@@ -180,7 +181,12 @@ def analyze(api_key: str, paper: dict) -> dict | str | None:
             return "NOT_FOUND"
         r.raise_for_status()
         data = r.json()
-        text = data["candidates"][0]["content"]["parts"][0]["text"]
+        candidate = data["candidates"][0]
+        finish_reason = candidate.get("finishReason")
+        if finish_reason == "MAX_TOKENS":
+            print(f"  [Enricher] 응답이 출력 토큰 한도({MAX_OUTPUT_TOKENS})에 걸려 중간에 잘렸습니다. "
+                  f"MAX_OUTPUT_TOKENS를 더 늘려야 할 수 있습니다.")
+        text = candidate["content"]["parts"][0]["text"]
         result = extract_json(text)
         result["analyzed_at"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
         result["model"]       = GEMINI_MODEL
