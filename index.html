@@ -87,6 +87,8 @@ body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI',
 .pl-csv-btn { font-size: 13px; padding: 3px 10px; border: 1px solid var(--border); border-radius: 4px;
   background: white; cursor: pointer; color: var(--text); }
 .pl-csv-btn:hover { border-color: #93c5fd; color: var(--primary); }
+.pl-xlsx-count { width: 60px; font-size: 13px; padding: 3px 6px; border: 1px solid var(--border);
+  border-radius: 4px; color: var(--text); }
 .pl-count { font-size: 13px; color: var(--muted); white-space: nowrap; }
 .pl-cards { flex: 1; min-height: 0; overflow-y: auto; padding: 10px; display: flex; flex-direction: column; gap: 7px; }
 .pl-cards::-webkit-scrollbar { width: 5px; }
@@ -367,6 +369,7 @@ let selId = null;
 let pageSize = 10;
 let curPage = 1;
 let sortBy = 'default';   // 기본: AI 분석된 논문 우선 + 최신 논문(연도) 순
+let excelCount = null;    // 엑셀(전체 상세) 다운로드 건수. null이면 전체
 
 function sortPapers(list) {
   const arr = list.slice();
@@ -566,7 +569,12 @@ function renderToolbar() {
       <select onchange="changeSortBy(this.value)">
         ${sortOptions.map(([v,l])=>`<option value="${v}"${v===sortBy?' selected':''}>${l}</option>`).join('')}
       </select>
-      <button class="pl-csv-btn" onclick="downloadListExcel()" title="현재 검색·필터 결과를 상세 내용까지 포함해 엑셀로 다운로드">⬇ 엑셀 (전체 상세)</button>
+      <button class="pl-csv-btn" onclick="downloadListExcel()" title="현재 검색·필터 결과 중 앞에서부터 지정한 건수만큼 상세 내용을 포함해 엑셀로 다운로드">⬇ 엑셀 (상세)</button>
+      <input type="number" id="xlsxCount" class="pl-xlsx-count" min="1" max="${total}"
+        value="${excelCount ?? total}" placeholder="전체"
+        onchange="excelCount = (parseInt(this.value,10) > 0) ? parseInt(this.value,10) : null"
+        title="다운로드할 논문 건수 (비우면 전체 ${total.toLocaleString()}건)">
+      <span class="pl-count" style="white-space:nowrap;">건</span>
     </div>
     <div class="pl-toolbar-right">
       <select onchange="changePageSize(this.value)">
@@ -878,9 +886,12 @@ function downloadPaperExcel(id) {
 function downloadListExcel() {
   if (!FILTERED.length) return;
 
+  const n = (excelCount && excelCount > 0) ? Math.min(excelCount, FILTERED.length) : FILTERED.length;
+  const papers = FILTERED.slice(0, n);
+
   const summaryHeader = ['제목(한글)','원문 제목','저자','연도','학술지','국립공원 적용가능성','실무 활용도',
     '피인용수','태그','실무 적용방안','원문 링크'];
-  const summaryRows = FILTERED.map(p => {
+  const summaryRows = papers.map(p => {
     const ai = p.ai_analysis || {};
     return [
       ai.title_ko || '', p.title || '', (p.authors||[]).join('; '), p.year || '',
@@ -905,7 +916,7 @@ function downloadListExcel() {
     return name;
   };
 
-  FILTERED.forEach((p, idx) => {
+  papers.forEach((p, idx) => {
     const rows = [['항목', '내용'], ...paperToRows(p)];
     const ws = XLSX.utils.aoa_to_sheet(rows);
     ws['!cols'] = [{ wch: 22 }, { wch: 90 }];
@@ -913,7 +924,7 @@ function downloadListExcel() {
     XLSX.utils.book_append_sheet(wb, ws, name);
   });
 
-  XLSX.writeFile(wb, '국립공원_논문_분석_전체.xlsx');
+  XLSX.writeFile(wb, `국립공원_논문_분석_${papers.length}건.xlsx`);
 }
 
 document.getElementById('q').addEventListener('input', e => { F.q = e.target.value; applyFilter(); });
