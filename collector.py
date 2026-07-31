@@ -41,6 +41,18 @@ QUERIES = [
     "national park signage interpretation",
     "national park camping impact",
     "national park air quality monitoring",
+    "national park water quality monitoring",
+    "national park soil erosion control",
+    "national park economic valuation",
+    "national park community engagement",
+    "national park drone remote sensing",
+    "national park citizen science monitoring",
+    "national park wetland management",
+    "national park landscape connectivity corridor",
+    "national park disaster risk management",
+    "national park accessibility disability",
+    "national park volunteer program",
+    "national park noise light pollution",
 ]
 
 
