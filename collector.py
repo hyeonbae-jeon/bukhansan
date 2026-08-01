@@ -164,7 +164,9 @@ def fetch_query(query: str, email: str = "", limit: int = 100, deadline: float |
             params["mailto"] = email
 
         r = None
-        for attempt in range(5):
+        MAX_ATTEMPTS = 8
+        WAIT_CAP = 30
+        for attempt in range(MAX_ATTEMPTS):
             if deadline is not None and time.time() > deadline:
                 print(f"[Collector] 실행 시간 한도 도달 — '{query[:30]}' 재시도를 중단합니다.")
                 r = None
@@ -174,24 +176,24 @@ def fetch_query(query: str, email: str = "", limit: int = 100, deadline: float |
                 if r.status_code == 429:
                     # Retry-After 값이 비정상적으로 크게 와도 최대 20초까지만 대기
                     raw_wait = int(r.headers.get("Retry-After", 0)) or (2 ** attempt) * 3
-                    wait = min(raw_wait, 20)
+                    wait = min(raw_wait, WAIT_CAP)
                     if deadline is not None:
                         wait = min(wait, max(0, deadline - time.time()))
                     print(f"[Collector] 429 (요청 과다) — {wait:.0f}초 대기 후 재시도 "
-                          f"({attempt+1}/5) [{query[:30]}]")
+                          f"({attempt+1}/{MAX_ATTEMPTS}) [{query[:30]}]")
                     time.sleep(wait)
                     continue
                 r.raise_for_status()
                 break
             except requests.exceptions.RequestException as exc:
-                wait = min(2 ** attempt, 20)
+                wait = min(2 ** attempt, WAIT_CAP)
                 if deadline is not None:
                     wait = min(wait, max(0, deadline - time.time()))
                 print(f"[Collector] 오류 ({query[:30]}): {exc} — {wait:.0f}초 후 재시도")
                 time.sleep(wait)
                 r = None
         if r is None or r.status_code != 200:
-            print(f"[Collector] 포기 ({query[:30]}): 재시도 5회 모두 실패 — 이 검색어는 다음 실행에서 재시도")
+            print(f"[Collector] 포기 ({query[:30]}): 재시도 {MAX_ATTEMPTS}회 모두 실패 — 이 검색어는 다음 실행에서 재시도")
             return papers, False
 
         try:
