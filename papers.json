@@ -1,16 +1,16 @@
 {
   "meta": {
     "total": 3428,
-    "analyzed": 1246,
+    "analyzed": 1256,
     "avg_applicability": 3.8,
     "avg_utility": 3.8,
-    "high_applicability_count": 882,
+    "high_applicability_count": 889,
     "score_distribution": {
       "1": 1,
       "2": 54,
-      "3": 308,
-      "4": 687,
-      "5": 195
+      "3": 311,
+      "4": 693,
+      "5": 196
     },
     "year_distribution": {
       "1895": 1,
@@ -78,41 +78,41 @@
       "2025": 130,
       "2026": 62
     },
-    "updated_at": "2026-08-03T11:11:30.220950"
+    "updated_at": "2026-08-03T11:26:43.408623"
   },
   "tag_index": {
-    "국립공원관리": 107,
+    "국립공원관리": 108,
+    "생태관광": 66,
     "기후변화": 66,
-    "생태관광": 65,
     "생태계모니터링": 64,
     "탐방로관리": 62,
-    "생물다양성": 58,
-    "기후변화적응": 55,
-    "탐방객관리": 45,
+    "생물다양성": 59,
+    "기후변화적응": 56,
+    "탐방객관리": 46,
     "외래식물": 45,
-    "생물다양성보전": 43,
-    "주민참여": 43,
+    "생물다양성보전": 44,
+    "주민참여": 44,
     "국립공원 관리": 41,
     "거버넌스": 40,
     "보호지역관리": 38,
     "국립공원": 38,
-    "원격탐사": 35,
+    "원격탐사": 36,
     "생태모니터링": 34,
     "탐방로 관리": 34,
     "생태계복원": 28,
     "적응적관리": 27,
     "생태계 모니터링": 27,
+    "지역사회참여": 26,
     "산불관리": 26,
     "수용력": 25,
-    "지역사회참여": 25,
     "보호구역관리": 24,
     "탐방객 관리": 23,
     "토양침식": 23,
     "생태계관리": 23,
+    "야생동물관리": 22,
     "모니터링": 21,
     "서식지관리": 21,
     "생태복원": 21,
-    "야생동물관리": 20,
     "탐방객수용력": 20,
     "공원관리": 18,
     "보호지역": 18,
@@ -128,6 +128,7 @@
     "국립공원거버넌스": 15,
     "지속가능발전": 14,
     "국립공원정책": 13,
+    "GIS분석": 13,
     "이해관계자갈등": 13,
     "적응적 관리": 12,
     "생태계서비스": 12,
@@ -135,7 +136,6 @@
     "생태계보전": 12,
     "서식지 관리": 12,
     "탐방로침식": 12,
-    "GIS분석": 12,
     "시민과학": 12,
     "서식지복원": 12,
     "생태계교란종": 11,
@@ -143,17 +143,17 @@
     "유역관리": 11
   },
   "work_area_index": {
-    "생태계 모니터링·조사": 876,
-    "탐방로·탐방객 관리": 781,
-    "자원보전·복원": 574,
-    "지역사회·거버넌스": 365,
-    "공원계획·구역관리": 351,
-    "야생생물·서식지 관리": 245,
+    "생태계 모니터링·조사": 881,
+    "탐방로·탐방객 관리": 785,
+    "자원보전·복원": 576,
+    "지역사회·거버넌스": 368,
+    "공원계획·구역관리": 355,
+    "야생생물·서식지 관리": 250,
     "재난·안전 관리": 176,
     "탐방객 서비스·안전": 118,
     "시설·인프라 관리": 116,
-    "기후변화 대응": 93,
-    "관광·경제 정책": 67,
+    "기후변화 대응": 94,
+    "관광·경제 정책": 69,
     "환경질 모니터링": 39,
     "환경 모니터링": 1
   },
@@ -11715,6 +11715,92 @@
           "생태계 모니터링",
           "탐방객 이용행태 조사"
         ]
+      }
+    },
+    {
+      "id": "W7166551114",
+      "source": "openalex",
+      "title": "Balancing Conservation and Sustainable Development through Spatial Planning Zoning: Evidence from Sharri National Park, Kosovo",
+      "abstract": "Spatial zoning is a key environmental management instrument for balancing biodiversity conservation with socio-economic development in protected areas. In Southeast Europe, national parks face increasing development pressure driven by tourism, private land ownership, and local economic expectations. This study examines the zoning revision of Sharri National Park (Kosovo), based on an integrated methodological framework combining ecological assessment, GIS-based analysis, and a structured expert-based multi-criteria evaluation approach. The analysis uses orthophotos (2024), cadastral data, satellite imagery, field verification, and 105 zoning-related requests. The evaluation integrates environmental, socio-economic, and planning criteria through qualitative expert judgment supported by spatial analysis. Results show that zoning functions as an adaptive governance tool: while the drak plan proposed a 75% reduction of development zones, 78.1% of requests were ultimately approved, reflecting the need to balance ecological priorities with development pressures. The study highlights the importance of transparent criteria, expert evaluation, and stakeholder participation for achieving socially acceptable and ecologically sound zoning outcomes.",
+      "authors": [
+        "Riza Murseli",
+        "FADIL BAJRAKTARI",
+        "Romeo Hanxhari",
+        "Sonila Papathimiu"
+      ],
+      "year": 2026,
+      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+      "cited_by_count": 2,
+      "doi": "https://doi.org/10.5281/zenodo.20407890",
+      "is_oa": true,
+      "oa_url": "https://doi.org/10.5281/zenodo.20407890",
+      "concepts": [
+        "Zoning",
+        "Environmental planning",
+        "Spatial planning",
+        "Environmental resource management",
+        "Sustainable development",
+        "Business"
+      ],
+      "openalex_url": "https://openalex.org/W7166551114",
+      "ai_analysis": {
+        "title_ko": "공간 계획 구역 조정을 통한 보전과 지속 가능한 발전의 조화: 코소보 샤리 국립공원 사례 연구",
+        "abstract_ko": "공간 구역 설정은 보호지역에서 생물다양성 보전과 사회경제적 발전을 조화시키기 위한 핵심적인 환경 관리 수단입니다. 동남유럽의 국립공원들은 관광, 사유지 소유권, 지역 경제 발전 요구 등으로 인해 갈수록 개발 압력이 커지고 있는 상황입니다. 본 연구는 생태적 평가, GIS 기반 분석, 그리고 전문가 기반의 다기준 평가 접근법을 결합한 통합 방법론적 틀을 바탕으로 코소보 샤리 국립공원의 구역 재조정을 조사했습니다. 분석에는 2024년 정사영상, 지적 데이터, 위성 영상, 현장 검증 자료 및 구역 관련 민원·요청 105건이 활용되었습니다. 평가 과정에서는 공간 분석을 지원하는 정성적 전문가 판단을 통해 환경적, 사회경제적, 계획적 기준을 통합했습니다. 연구 결과, 구역 설정은 적응형 거버넌스 도구로 기능하는 것으로 나타났습니다. 초안 계획에서는 개발 구역을 75% 축소하는 방안이 제안되었으나, 최종적으로는 관련 요청의 78.1%가 승인되어 생태적 우선순위와 개발 압력 사이의 균형을 맞출 필요성을 보여주었습니다. 본 연구는 사회적으로 수용 가능하고 생태적으로 건전한 구역 조정 결과를 도출하기 위해 투명한 기준, 전문가 평가, 그리고 이해관계자의 참여가 중요하다는 점을 강조합니다.",
+        "summary_3lines": [
+          "보호지역 내 생물다양성 보전과 지역 개발 압력의 조화를 위해 공간 계획 구역 조정의 실효성을 분석하고자 했다.",
+          "GIS 분석과 전문가 평가를 결합하여 구역 재조정 요청을 검토한 결과, 생태적 보전과 개발 민원 간의 유연한 절충이 이루어졌다.",
+          "국립공원 구역 조정 시 투명한 평가 기준 마련과 이해관계자 참여를 통한 적응적 거버넌스 도입이 필수적이다."
+        ],
+        "research_purpose": "본 연구는 보호지역 내에서 증가하는 개발 압력과 생물다양성 보전의 갈등을 해결하기 위해, 공간 계획 구역 설정을 적응형 거버넌스 도구로 활용하는 방안을 검토하는 데 목적이 있습니다. 특히 코소보 샤리 국립공원의 구역 재조정 과정을 사례로 들어 생태적 평가와 사회경제적 요구를 조화시키는 방법론을 제시하고자 합니다.",
+        "key_findings": [
+          "초기 계획안은 개발 구역을 75% 대폭 축소하려 했으나, 실제 구역 변경 요청의 78.1%가 최종 승인되어 현실적인 타협점이 반영됨.",
+          "GIS 기반 공간 분석과 전문가 다기준 평가를 결합한 통합 방법론이 구역 조정 과정의 객관성을 높이는 데 기여함.",
+          "구역 설정은 고정된 규제가 아니라 생태적 우선순위와 지역 사회의 경제적 요구를 조율하는 적응형 거버넌스 도구로 작동함."
+        ],
+        "practical_applications": [
+          "공원계획 변경 시 사유지 소유자와 지역 주민의 토지이용 요구(민원)를 체계적으로 데이터베이스화하여 분석에 활용합니다.",
+          "생태적 가치 평가와 사회경제적 개발 압력을 동시에 고려할 수 있는 GIS 기반의 다기준 의사결정 체계를 도입합니다.",
+          "구역 조정 과정에서 투명한 평가 기준을 공개하고 이해관계자 참여 세션을 운영하여 정책 수용성을 높입니다."
+        ],
+        "korea_np_applicability_score": 5,
+        "korea_np_applicability_reason": "한국 국립공원 역시 사유지 포함 문제, 탐방 및 지역 개발 압력, 공원계획 변경(용도지구 조정) 시마다 발생하는 갈등이 매우 유사하므로, 구역 조정 방법론과 거버넌스 접근법을 현업에 즉시 응용할 수 있습니다.",
+        "related_work_areas": [
+          "공원계획·구역관리",
+          "지역사회·거버넌스"
+        ],
+        "related_laws": [
+          "자연공원법 제18조",
+          "자연공원법 제20조"
+        ],
+        "field_checklist": [
+          "용도지구 변경 요청지 및 사유지 현황에 대한 공간 데이터(GIS)가 최신 상태로 정비되어 있는가?",
+          "생태적 가치(식생보전등급 등)와 사회경제적 요구(개발 민원 등)를 통합 평가할 수 있는 객관적 기준이 마련되어 있는가?",
+          "구역 조정 초안 마련 시 지역 주민 및 이해관계자의 의견 수렴 절차가 충분히 반영되었는가?",
+          "현장 검증을 통해 구역 경계 변경 대상지의 실제 토지 이용 현황이 확인되었는가?",
+          "구역 조정에 따른 생태계 훼손 최소화 방안과 지역 발전 요구 간의 균형성이 검토되었는가?"
+        ],
+        "practical_utility_score": 5,
+        "cautions": [
+          "국내 자연공원법상 용도지구(공원자연보존지구, 공원자연환경지구 등) 변경은 법적 절차와 엄격한 기준을 따르므로 단순 민원 수용보다는 생태적 타당성이 우선되어야 함.",
+          "이해관계자 참여 과정에서 과도한 개발 요구로 인해 생태 보전 가치가 훼손되지 않도록 전문가 검증 장치를 철저히 유지해야 함."
+        ],
+        "tags": [
+          "공간구역설정",
+          "공원계획",
+          "용도지구",
+          "적응형거버넌스",
+          "이해관계자참여"
+        ],
+        "recommended_followup_research": [
+          "한국 국립공원 용도지구 조정 과정에서의 갈등 관리 및 다기준 의사결정 모델 적용 방안 연구",
+          "사유지 비율이 높은 국립공원을 대상으로 한 생태 보전과 주민 재산권 보장의 최적 균형점 도출 연구"
+        ],
+        "ai_recommended_topics": [
+          "Protected area zoning revision",
+          "Spatial planning and conservation"
+        ],
+        "analyzed_at": "2026-08-03T11:25:53Z",
+        "model": "gemini-flash-lite-latest"
       }
     },
     {
@@ -74676,6 +74762,92 @@
       }
     },
     {
+      "id": "W7128716605",
+      "source": "openalex",
+      "title": "From conflict management to collaborative adaptation: Designing participatory governance frameworks for Human–Wildlife relations in Sanjiangyuan National Park, China",
+      "abstract": "Human–wildlife relations in alpine ecosystems reflect the combined effects of climate change, land-use transitions, and governance capacity. Rather than focusing solely on local conflict dynamics, this study investigates how adaptive governance can be institutionally embedded to anticipate and respond to ecological and social uncertainties. Drawing on multiple data sources—including official and historical records of eco-ranger co-management policy, village-level focus group discussions. We also conducted a three-round Delphi process with 30 multidisciplinary experts (conservation scientists, rangeland managers, and policy practitioners)—we developed collaboratively a governance framework linking climate risk assessment to decision-making processes in Sanjiangyuan National Park (SNP). The evidence from multiple sources identified four core adaptation domains: (i) climate-informed spatial planning, (ii) flexible grazing regulation, (iii) participatory monitoring of wildlife mobility, and (iv) cross-sector coordination mechanisms. Expert consensus emphasized the need for adaptive feedback systems to integrate real-time ecological data (including opportunities to link with quantitative ecological indicators) into local decision cycles. By synthesizing insights across multiple perspectives, this study proposes an governance framework for operationalizing adaptive governance in climate-sensitive protected areas. Unlike previous work focusing on community-level perceptions or household adaptation strategies, this paper advances a participatory governance approach centered on institutional design and social learning. It contributes to broader debates on how conservation governance can evolve toward resilience-oriented, co-managed systems under environmental change. The proposed framework provides concrete steps for integrating climate information into routine protected area management. Future work should validate the framework with more representative data and a more diverse expert pool and cross-regional application. • Multi-source data were integrated to support adaptive governance in climate-sensitive parks. • Four key adaptation domains were identified to guide institutional transformation in SNP. • The study proposes a learning-based governance framework for collaborative conservation.",
+      "authors": [
+        "Ting Ma",
+        "Ke Wang",
+        "Di Fan"
+      ],
+      "year": 2026,
+      "journal": "Environmental and Sustainability Indicators",
+      "cited_by_count": 2,
+      "doi": "https://doi.org/10.1016/j.indic.2026.101165",
+      "is_oa": true,
+      "oa_url": "https://doi.org/10.1016/j.indic.2026.101165",
+      "concepts": [
+        "Corporate governance",
+        "Operationalization",
+        "Environmental resource management",
+        "Adaptive management",
+        "Multi-level governance",
+        "Environmental governance"
+      ],
+      "openalex_url": "https://openalex.org/W7128716605",
+      "ai_analysis": {
+        "title_ko": "갈등 관리에서 협력적응으로: 중국 싼장위안 국립공원의 인간-야생동물 관계를 위한 참여형 거버넌스 프레임워크 설계",
+        "abstract_ko": "고산 생태계에서의 인간과 야생동물 간의 관계는 기후 변화, 토지 이용 변화, 그리고 관리 역량이 복합적으로 작용한 결과입니다. 본 연구는 국지적인 갈등 양상에만 초점을 맞추는 대신, 생태적·사회적 불확실성을 예측하고 대응하기 위해 적응적 거버넌스를 제도적으로 어떻게 정착시킬 수 있는지 조사했습니다. 에코레인저 공동 관리 정책에 대한 공식 및 역사적 기록, 마을 단위 초점집단 면접 등 다중 데이터 소스를 활용했습니다. 또한 보전 과학자, 초지 관리자, 정책 실무자 등 30명의 다학제적 전문가를 대상으로 3라운드 델파이 조사를 실시하여, 싼장위안 국립공원(SNP)의 기후 리스크 평가와 의사결정 과정을 연결하는 거버넌스 프레임워크를 공동으로 개발했습니다. 여러 출처의 증거를 통해 (1) 기후 정보를 반영한 공간 계획, (2) 유연한 방목 규제, (3) 야생동물 이동성에 대한 참여형 모니터링, (4) 부문 간 협력 메커니즘이라는 4가지 핵심 적응 영역이 확인되었습니다. 전문가 합의는 실시간 생태 데이터를 지역 의사결정 주기에 통합하기 위한 적응형 피드백 시스템의 필요성을 강조했습니다. 본 연구는 다양한 관점의 통찰을 종합하여 기후에 민감한 보호지역에서 적응적 거버넌스를 실행하기 위한 거버넌스 프레임워크를 제안합니다. 지역사회 수준의 인식이나 가구별 적응 전략에 초점을 맞춘 이전 연구와 달리, 본 연구는 제도적 설계와 사회적 학습을 중심으로 하는 참여형 거버넌스 접근법을 발전시켰습니다. 이는 환경 변화 속에서 보전 거버넌스가 회복력 중심의 공동 관리 시스템으로 어떻게 진화할 수 있는지에 대한 광범위한 논쟁에 기여합니다. 제안된 프레임워크는 기후 정보를 일상적인 보호지역 관리에 통합하기 위한 구체적인 단계를 제공합니다. 향후 연구는 더 대표성 있는 데이터, 더 다양한 전문가 풀, 그리고 지역 간 적용을 통해 이 프레임워크를 검증해야 합니다.",
+        "summary_3lines": [
+          "기후변화와 생태계 변화에 대응하기 위해 국립공원의 인간-야생동물 갈등 관리 체계를 참여형 적응 거버넌스로 전환하는 방안을 연구했습니다.",
+          "문헌 분석과 전문가 델파이 조사를 통해 기후정보 활용 공간계획, 유연한 방목 규제, 주민 참여 모니터링, 부문 간 협력 등 4대 핵심 적응 영역을 도출했습니다.",
+          "실시간 생태 데이터를 의사결정에 반영하는 환류 시스템을 구축하여 현장 실무에서 즉시 활용할 수 있는 제도적 틀을 제공합니다."
+        ],
+        "research_purpose": "본 연구의 목적은 기후변화와 생태계 불확실성에 대응하기 위해 싼장위안 국립공원을 대상으로 인간-야생동물 관계를 개선할 수 있는 참여형 적응 거버넌스 프레임워크를 개발하는 것입니다. 기존의 단발성 갈등 해소 방식을 넘어, 지역 주민과 전문가가 참여하는 제도적 설계와 사회적 학습을 통해 일상적인 공원 관리 업무에 기후 정보와 생태 데이터를 통합하는 실행 방안을 제시하고자 합니다.",
+        "key_findings": [
+          "기후변화와 야생동물 이동을 고려한 공간 계획 및 유연한 관리의 필요성 확인",
+          "에코레인저와 지역 주민이 참여하는 야생동물 이동성 모니터링 체계 구축",
+          "지자체, 공원 관리기관, 지역 주민 간의 부문 간 협력 및 실시간 피드백 메커니즘 도출"
+        ],
+        "practical_applications": [
+          "국립공원 내 야생동물 출몰 및 이동 경로에 대한 지역 주민(마을 주민, 명예주민 등) 참여형 모니터링 시스템 구축",
+          "기후변화와 야생동물 서식지 변화를 반영한 탐방로 및 공원 구역 조정 시 의사결정 프로세스에 현장 데이터 실시간 연계",
+          "유관기관 및 지역 주민이 함께 참여하는 상시 협의체(거버넌스)를 통한 갈등 사전 예방 및 공동 대응"
+        ],
+        "korea_np_applicability_score": 4,
+        "korea_np_applicability_reason": "한국 국립공원도 멸종위기종(반달가슴곰, 산양 등) 복원 사업에 따른 지역 주민과의 마찰 및 기후변화 영향이 상존하므로, 지역사회 연계형 거버넌스와 주민 참여 모니터링 기법을 현장 관리 지침에 직접 활용할 수 있습니다.",
+        "related_work_areas": [
+          "야생생물·서식지 관리",
+          "지역사회·거버넌스",
+          "기후변화 대응"
+        ],
+        "related_laws": [
+          "자연공원법 제18조",
+          "야생생물 보호 및 관리에 관한 법률 제8조"
+        ],
+        "field_checklist": [
+          "야생동물 출몰 및 피해 지역에 대한 주민 의견 수렴 창구가 상시 운영되고 있는가",
+          "주민 및 명예치안원·자원봉사자를 활용한 야생동물 모니터링 체계가 마련되어 있는가",
+          "기후변화 및 서식지 환경 변화에 따른 탐방로 이용 제한 기준이 마련되어 있는가",
+          "지자체 및 관련 민간단체와 정례적인 협의체 회의가 개최되고 있는가",
+          "현장에서 수집된 생태 모니터링 데이터가 관리 계획에 피드백되는 절차가 있는가"
+        ],
+        "practical_utility_score": 4,
+        "cautions": [
+          "지역 주민 및 이해관계자 간의 이견 조율을 위한 충분한 사전 소통과 예산이 필요함",
+          "단기적인 성과보다는 장기적인 신뢰 구축 중심의 거버넌스 운영 접근이 요구됨"
+        ],
+        "tags": [
+          "적응거버넌스",
+          "야생동물관리",
+          "주민참여",
+          "기후변화적응",
+          "국립공원관리"
+        ],
+        "recommended_followup_research": [
+          "한국 국립공원 멸종위기종 복원 지역의 주민 참여형 모니터링 효과성 분석",
+          "기후변화 리스크를 반영한 국립공원 구역 및 탐방로 유연 관리 지침 개발 연구"
+        ],
+        "ai_recommended_topics": [
+          "Adaptive governance in protected areas",
+          "Human-wildlife conflict participatory management"
+        ],
+        "analyzed_at": "2026-08-03T11:24:58Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
       "id": "W114527054",
       "source": "openalex",
       "title": "Research to guide trail management at Acadia National Park, Maine",
@@ -78881,6 +79053,98 @@
       }
     },
     {
+      "id": "W7118074340",
+      "source": "openalex",
+      "title": "Spatial potential evaluation of ecotourism resources and functional zoning in the Qinghai lake basin",
+      "abstract": "Existing national park zoning studies exhibits significant gaps in integrating ecological sensitivity, tourism resource potential, and particularly the spatiotemporal dynamics of human activities. Against the backdrop of the Qinghai Lake National Park, which encompasses China’s largest inland saltwater lake and serves as the core tourism region of Qinghai Province, this study develops a tri-dimensional evaluation framework of “place, people and things”, where “place”—a multi-factors ecological sensitivity analysis, “people”—Mobile-data-based Active Population Estimation (MAPE) for spatiotemporal behavioral analysis and “things”—a comprehensive tourism resource potential assessment, and ultimately achieve functional zoning through multi-dimensional superposition. Key findings indicate that the overall ecological sensitivity of the basin is relatively high, with highly sensitive and extremely sensitive areas account for 46.24% of the total study area. Tourism potential has a highly uneven distribution, with limited-potential zones covering 42.90% of the basin, while top-level potential areas constitute merely 0.60%. Based on the integrated analysis, a refined five-zone functional system is proposed: strict protection zone, harmonious transition zone, innovative development zone, rational development zone, and stable maintenance zone, while the latter three account for less than 6%, revealing an extreme scarcity of “low ecological sensitivity, high tourism potential, and high tourist flow” areas. Each zone is coupled with differentiated control measures. This research provide quantitative support for the delineation of ecological protection redlines and sustainable tourism planning in Qinghai Lake National Park.",
+      "authors": [
+        "Yishan Xu",
+        "C. WANG",
+        "Zilin Chen",
+        "Nan Liu",
+        "Li Zhao",
+        "Dongyan Lin",
+        "Binqing Zhai",
+        "Weile Jiang"
+      ],
+      "year": 2026,
+      "journal": "Scientific Reports",
+      "cited_by_count": 1,
+      "doi": "https://doi.org/10.1038/s41598-025-34289-5",
+      "is_oa": true,
+      "oa_url": "https://www.nature.com/articles/s41598-025-34289-5_reference.pdf",
+      "concepts": [
+        "Zoning",
+        "Tourism",
+        "Resource (disambiguation)",
+        "Ecotourism",
+        "Geography",
+        "Environmental resource management"
+      ],
+      "openalex_url": "https://openalex.org/W7118074340",
+      "ai_analysis": {
+        "title_ko": "칭하이호 유역의 생태관광 자원 공간 잠재력 평가 및 기능 구역화",
+        "abstract_ko": "기존 국립공원 구역 설정 연구들은 생태적 민감성, 관광 자원 잠재력, 그리고 특히 인간 활동의 시공간적 역동성을 통합하는 데 있어 상당한 공백을 드러내고 있다. 중국 최대의 내륙 염호이자 칭하이성의 핵심 관광 지역인 칭하이호 국립공원을 배경으로, 본 연구는 '장소, 사람, 사물'이라는 3차원 평가 프레임워크를 개발하였다. '장소'는 다중 요소 생태적 민감도 분석, '사람'은 모바일 데이터 기반의 시공간적 행동 분석을 위한 활성 인구 추정(MAPE), '사물'은 종합적인 관광 자원 잠재력 평가를 의미하며, 이를 다차원 중첩하여 최종적으로 기능 구역화를 달성했다. 주요 연구 결과에 따르면 유역의 전반적인 생태적 민감도는 비교적 높은 편이며, 고도로 민감한 지역과 극도로 민감한 지역이 전체 연구 구역의 46.24%를 차지한다. 관광 잠재력은 매우 불균등하게 분포하여, 잠재력이 제한된 구역이 유역의 42.90%를 차지하는 반면 최고 등급 잠재력 지역은 겨우 0.60%에 불과하다. 통합 분석을 바탕으로 엄격 보호 구역, 조화 전향 구역, 혁신 개발 구역, 합리 개발 구역, 안정 유지 구역의 정교한 5대 기능 체계가 제안되었으며, 후자 3개 구역은 6% 미만을 차지하여 '낮은 생태적 민감도, 높은 관광 잠재력, 높은 관광객 유량' 지역의 극단적인 부족을 드러냈다. 각 구역에는 차별화된 관리 통제 조치가 결합된다. 본 연구는 칭하이호 국립공원의 생태보호 레드라인 설정과 지속 가능한 관광 계획을 위한 정량적 지원을 제공한다.",
+        "summary_3lines": [
+          "인간 활동의 시공간적 역동성과 생태적 민감성, 관광 잠재력을 통합한 새로운 국립공원 기능 구역화 프레임워크를 개발하고자 한다.",
+          "모바일 데이터와 GIS 기반 다차원 분석을 통해 칭하이호 유역을 5개 기능 구역으로 세분화하고 각 지역의 관리 방안을 도출했다.",
+          "생태 민감도가 높고 고부가가치 관광 자원과 탐방객 밀집 지역 간의 공간적 불일치를 정량적으로 규명하여 공원 구역 관리의 정밀성을 높였다."
+        ],
+        "research_purpose": "본 연구는 기존 국립공원 구역 설정 시 간과되었던 생태 민감성, 관광 자원 잠재력, 그리고 실제 탐방객의 시공간적 이동 패턴을 동시에 고려한 다차원 평가 체계를 구축하는 것을 목적으로 한다. 이를 통해 환경 보전과 지속 가능한 탐방 이용이 조화를 이룰 수 있는 정교한 국립공원 기능 구역화 방법론을 제시하고자 한다.",
+        "key_findings": [
+          "유역 전체 면적 중 고도로 민감하거나 극도로 민감한 생태 지역이 46.24%에 달해 철저한 보호가 요구됨",
+          "관광 잠재력은 극도로 불균등하여 상위 등급 지역은 0.6%에 불과하고, 제한 구역이 42.9%를 차지함",
+          "생태 민감도가 낮고 관광 잠재력과 방문객 유량이 모두 높은 최적의 개발 가용지는 전체의 6% 미만으로 매우 희소함"
+        ],
+        "practical_applications": [
+          "모바일 통신 데이터를 활용한 탐방객 실시간 위치 및 이동 패턴 추정 기법을 공원 탐방 관리 업무에 도입",
+          "생태적 민감도와 탐방 자원 잠재력을 중첩 분석한 GIS 기반의 과학적 공원 용도지구 재편 및 구역 관리",
+          "생태적 취약성과 탐방 수요를 반영한 차별화된 구역별 탐방객 총량제 및 출입 통제 조치 수립"
+        ],
+        "korea_np_applicability_score": 4,
+        "korea_np_applicability_reason": "한국 국립공원 역시 탐방 압력이 높은 지역과 생태적 보전 가치가 높은 지역이 혼재되어 있어, 모바일 빅데이터와 생태 민감도를 결합한 정밀한 공원계획 및 용도지구 재구조화 기법의 현장 적용성이 높다.",
+        "related_work_areas": [
+          "공원계획·구역관리",
+          "탐방로·탐방객 관리",
+          "생태계 모니터링·조사"
+        ],
+        "related_laws": [
+          "자연공원법 제18조",
+          "자연공원법 제23조",
+          "야생생물 보호 및 관리에 관한 법률 제27조"
+        ],
+        "field_checklist": [
+          "공원 내 구역별 생태적 민감도 등급 지도 최신화 여부 확인",
+          "통신사 빅데이터 등을 활용한 탐방객 시공간 이동량 및 체류 패턴 분석 완료 여부 확인",
+          "생태 보전이 시급한 민감 지역과 탐방 수요 집중 지역 간의 공간적 중첩 분석 실시 여부 확인",
+          "용도지구(자연보존지구, 자연환경지구 등)별 차별화된 관리 통제 기준 준수 여부 점검",
+          "탐방객 밀집 구역의 수용력 초과 여부 및 환경 영향 모니터링 체계 구축 여부 확인"
+        ],
+        "practical_utility_score": 4,
+        "cautions": [
+          "모바일 데이터 활용 시 개인정보 보호법 및 위치정보법 관련 규정 준수 필요",
+          "대규모 데이터 분석을 위한 전문 인력 및 예산이 수반되므로 단기 적용에 한계가 있을 수 있음"
+        ],
+        "tags": [
+          "국립공원 구역관리",
+          "생태적 민감도",
+          "모바일 빅데이터",
+          "탐방객 행동 분석",
+          "공간 다기준 평가"
+        ],
+        "recommended_followup_research": [
+          "국립공원 내 탐방객 실시간 이동 데이터의 정확도 검증 및 현장 적용성 평가 연구",
+          "기후변화와 탐방 압력을 동시에 고려한 동적 용도지구 조정 모델 개발 연구"
+        ],
+        "ai_recommended_topics": [
+          "Mobile phone data ecotourism spatial analysis",
+          "National park zoning ecological sensitivity"
+        ],
+        "analyzed_at": "2026-08-03T11:26:03Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
       "id": "W7135510866",
       "source": "openalex",
       "title": "Hiking trails in the Krkonoše Mountains National Park",
@@ -80981,6 +81245,360 @@
           "Climate change impacts on woodland distribution"
         ],
         "analyzed_at": "2026-08-03T11:10:31Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W7169599398",
+      "source": "openalex",
+      "title": "Four decades of spatio-temporal habitat dynamics in a human-wildlife co-existence landscape in the Liuwa ecosystem of Zambia",
+      "abstract": "Human encroachment into wildlife habitats has led to extensive habitat loss and fragmentation, often resulting in the displacement and decline of wildlife populations across African Ecosystem. Meanwhile, Habitat is operationally defined as natural land cover types that directly support wildlife, namely forest, grassland, and wetland, therefore, this study assessed four decades (1984—2024) of spatio-temporal habitat dynamics in Liuwa Plain National Park (NP), a human-wildlife co-existence landscape of Zambia. Habitat trajectories inside and outside the park were compared to evaluate the protective effect of co-management. Using Landsat satellite imagery classified at 10-year intervals (1984, 1994, 2004, 2014, and 2024) and a random forest algorithm with a two-step approach: pixel-based classification followed by an object-based refinement, we produced thematic maps with accuracies of 82—89%, with the 2024 map being the most accurate. This study assessed habitat extent rather than habitat quality. Results show a 20% decline in forest cover, a 5% loss of grasslands, and a 3% reduction in wetlands and water bodies in 2024, likely due to the 2023/2024 drought. Habitat loss was greater outside the park than inside, concentrated in the southern Kalabo Urban Zone and more evident outside the park boundaries. These shifts indicate rising anthropogenic pressure on habitat critical to wildlife persistence. The study underscores the need for integrated land-use planning, habitat management, adaptive park zonation and supports the identification of ecological hotspots to sustain co-existence and ecological integrity in Liuwa NP and similar landscapes.",
+      "authors": [
+        "Danny Chisanga Musenge",
+        "Darius Phiri",
+        "Ngawo Namukonde",
+        "Donald Zulu",
+        "Gift Mulenga",
+        "Vincent R. Nyirenda"
+      ],
+      "year": 2026,
+      "journal": "Discover Geoscience",
+      "cited_by_count": 0,
+      "doi": "https://doi.org/10.1007/s44288-026-00639-7",
+      "is_oa": true,
+      "oa_url": "https://link.springer.com/content/pdf/10.1007/s44288-026-00639-7.pdf",
+      "concepts": [
+        "Ecosystem",
+        "Ecology",
+        "Habitat",
+        "Geography",
+        "Environmental resource management",
+        "Environmental science"
+      ],
+      "openalex_url": "https://openalex.org/W7169599398",
+      "ai_analysis": {
+        "title_ko": "잠비아 류와 생태계의 인간-야생동물 공존 경관에서 나타난 40년간의 시공간적 서식지 동태",
+        "abstract_ko": "야생동물 서식지로의 인간 침입은 광범위한 서식지 손실과 단편화를 초래하여, 아프리카 생태계 전반에서 야생동물 개체군의 이동과 감소를 유발해왔다. 이 연구는 야생동물을 직접적으로 지지하는 자연 토지 피복 유형(숲, 초원, 습지)을 서식지로 정의하고, 인간과 야생동물이 공존하는 잠비아 류와 평원 국립공원에서 1984년부터 2024년까지 40년간의 시공간적 서식지 동태를 평가했다. 공동 관리의 보호 효과를 평가하기 위해 공원 내부와 외부의 서식지 변화 추세를 비교했다. 10년 주기(1984, 1994, 2004, 2014, 2024년)의 랜드샛(Landsat) 위성 이미지와 픽셀 기반 분류 후 객체 기반 정교화를 거치는 2단계 방식의 랜덤 포레스트 알고리즘을 사용하여, 2024년 지도가 가장 정확한 82~89% 정확도의 주제도를 제작했다. 이 연구는 서식지 질보다는 서식지 면적을 평가했다. 결과에 따르면 2024년 기준 숲 피복은 20%, 초원은 5%, 습지 및 수체는 3% 감소했으며, 이는 주로 2023/2024년 가뭄 때문인 것으로 나타났다. 서식지 손실은 공원 내부보다 외부에서 더 컸으며, 남부 칼라보 도시 지역에 집중되었고 공원 경계 밖에서 더 뚜렷했다. 이러한 변화는 야생동물 생존에 필수적인 서식지에 대한 인위적 압력이 증가하고 있음을 나타낸다. 이 연구는 류와 국립공원 및 유사한 경관에서 공존과 생태적 무결성을 유지하기 위해 통합 토지 이용 계획, 서식지 관리, 적응형 공원 구역 설정의 필요성을 강조하며 생태적 핫스팟의 식별을 지원한다.",
+        "summary_3lines": [
+          "인간과 야생동물이 공존하는 잠비아 류와 평원 국립공원을 대상으로 40년간의 시공간적 서식지 변화를 분석하여 공원 관리의 보호 효과를 평가하고자 했다.",
+          "위성 영상과 랜덤 포레스트 알고리즘을 활용해 분석한 결과, 40년 동안 공원 외부에서 서식지 손실이 더 뚜렷하게 나타났으며 기후변화와 인위적 압력이 주요 원인으로 확인되었다.",
+          "국립공원의 생태계 보전을 위해 통합적인 토지 이용 계획 수립과 더불어 공원 내외부를 아우르는 적응형 구역 관리 체계를 도입해야 한다."
+        ],
+        "research_purpose": "본 연구는 인간 활동으로 인한 서식지 파편화와 기후변화가 야생동물 서식지에 미치는 영향을 파악하기 위해 수행되었다. 특히 국립공원 지정 및 공동 관리 제도가 서식지 보호에 미친 실효성을 공원 내부와 외부를 비교하여 검증하고자 했다.",
+        "key_findings": [
+          "40년 동안(1984~2024) 숲 피복 20%, 초원 5%, 습지 3%가 감소했으며 기후 요인과 인위적 압력이 복합적으로 작용함",
+          "서식지 손실은 공원 내부보다 외부(특히 남부 도시 인접 지역)에서 훨씬 심각하게 발생함",
+          "랜덤 포레스트 알고리즘과 위성 영상 분석을 통해 82~89% 정확도의 시계열 서식지 변화 지도 제작에 성공함"
+        ],
+        "practical_applications": [
+          "원격탐사(위성 영상) 기술을 활용한 국립공원 내외의 장기 토지 피복 및 서식지 변화 모니터링 체계 구축",
+          "공원 경계부 완충지역(Buffer Zone)에서의 인위적 압력 요인을 분석하여 토지 이용 규제 강화",
+          "기후변화(가뭄 등)로 인한 취약 생태계 요충지를 '생태적 핫스팟'으로 지정하고 우선 관리 구역으로 설정"
+        ],
+        "korea_np_applicability_score": 4,
+        "korea_np_applicability_reason": "한국 국립공원 역시 공원 경계부가 사유지나 개발지와 맞닿아 있어 토지 이용 변화 및 서식지 단편화 문제가 발생하므로, 위성 영상을 활용한 시계열 서식지 모니터링 기법은 국립공원 구역 관리 및 완충지역 정책에 즉시 응용 가능함.",
+        "related_work_areas": [
+          "생태계 모니터링·조사",
+          "야생생물·서식지 관리",
+          "공원계획·구역관리"
+        ],
+        "related_laws": [
+          "자연공원법 제18조",
+          "야생생물 보호 및 관리에 관한 법률 제4조"
+        ],
+        "field_checklist": [
+          "공원 경계부 1km 이내의 토지 피복 및 이용 현황 변화를 5년 단위로 모니터링하고 있는가?",
+          "기후변화(가뭄, 폭우 등)로 인한 식생 지수 및 습지 면적 감소 추이를 파악하고 있는가?",
+          "인위적 훼손이 집중되는 공원 인접 지역(도시화 지역 등)에 대한 특별 순찰을 실시하고 있는가?",
+          "위성 영상 기반의 서식지 지도와 현장 야생동물 서식 실태 조사를 연계하고 있는가?",
+          "공원 구역 조정 및 용도지구 재정비 시 생태적 핫스팟 분석 결과를 반영하고 있는가?"
+        ],
+        "practical_utility_score": 4,
+        "cautions": [
+          "위성 영상 분류 정확도를 높이기 위해 현장 검증(Ground Truthing) 데이터가 필수적으로 뒷받침되어야 함",
+          "국외 생태계와 한국의 산림 중심 생태계 간의 차이를 고려하여 토지 피복 분류 항목을 국내 실정에 맞게 재정의해야 함"
+        ],
+        "tags": [
+          "서식지 동태",
+          "원격탐사",
+          "랜덤포레스트",
+          "공원경계관리",
+          "토지이용변화"
+        ],
+        "recommended_followup_research": [
+          "국내 국립공원 경계부의 토지 이용 변화가 핵심 야생동물 종의 이동 통로에 미치는 영향 분석",
+          "머신러닝 기반 위성 영상 분류를 통한 국립공원 서식지 질(Quality) 평가 모델 고도화 연구"
+        ],
+        "ai_recommended_topics": [
+          "Landsat habitat fragmentation national park",
+          "Random forest land cover classification wildlife"
+        ],
+        "analyzed_at": "2026-08-03T11:25:20Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W7127453579",
+      "source": "openalex",
+      "title": "Kózkowate (Coleoptera: Cerambycidae) Biebrzańskiego Parku Narodowego i jego otuliny",
+      "abstract": "The aim of this study was to investigate the distribution, habitat preferences, host plants, and other aspects of the biology of longhorn beetles, as well as to identify threats to individual species and propose measures for their mitigation within the Biebrza Valley, particularly in Biebrza National Park (BbNP). The paper presents the results of field research conducted between 1982 and 2025 (with periodic breaks) in the Biebrza Valley (NE Poland). A total of 95 Cerambycidae species were recorded in the study area, representing 48% of the Polish longhorn beetle fauna. Ninety-two species were found within the BbNP boundaries, while three species were recorded from its buffer zone exclusively. The highest species richness was observed in the Middle Basin (83 species) and the Lower Basin (78 species), whereas the Upper Basin yielded 54 species. The most widely distributed species was Strangalia attenuata, recorded in sixteen UTM squares (10x10 km) and common in all three Biebrza basins. Stenurella nigra occurred in fourteen squares, while Grammoptera ruficornis, Rhagium mordax, and S. melanura were found in thirteen squares. Among the longhorn beetle species identified in the Biebrza Valley, eleven were classified as very rare and should be considered as \"species of special concern\". These included Cerambyx scopolii, Cyrtoclytus capra, Molorchus marmottani, Euracmaeops septentrionis, Leptura thoracica, Lepturalia nigripes, Aegomorphus obscurior, Exocentrus stierlini, Oberea euphorbiae, O. pupillata, and Saperda similis. Among all recorded cerambycid species, 76 were documented based on rearing from plant material (dead wood, twigs etc.) of various host plants. These comprised 24 plant species: 21 woody plants – trees and shrubs – and three herbaceous species. Broad-leaved trees and shrubs were dominant, as only two coniferous species (Pinus sylvestris and Picea abies) were confirmed as hosts. The highest number of species developed on Quercus robur (23), followed by P. sylvestris and P. abies (17), Salix spp. (12), Betula pendula and Alnus glutinosa (11 each). Other plant species hosted between one and nine Cerambycidae species. The species with the broadest host plant range were Rhagium mordax (eight species), Saperda scalaris (six), and both Anaesthetis Testacea and S. attenuata (five each). Noteworthy host associations included Clytus arietis on Frangula alnus, A. obscurior on A. glutinosa, and Exocentrus punctipennis on Q. robur. Two species found in the Biebrza Valley – C. scopolii and L. thoracica – are under partial protection in Poland. Several other species are included in the Polish Red List of Threatened and Endangered Animals, including L. nigripes, classified as Critically Endangered (CR), and L. thoracica as Vulnerable (VU). L. thoracica is also listed among the relic saproxylic beetles of Central Europe in the group of relics sensu stricto. No major threats have been identified for most saproxylic Cerambycidae species, with one exception. Comparison of recent data (2021–2025) with earlier records (1982–2011) has revealed concerning signs of a declining trend in the local population of A. obscurior. Threats were also identified for certain species developing in herbaceous plants. These include: − ecological succession (encroachment of woody vegetation in open areas leading to increased shading), accelerated by drainage and lowering of groundwater levels; a threat to, for example, Agapanthia intermedia, O. euphorbiae, and Phytoecia virgula; − lack of suitable host trees or shrubs for infestation, such as sun-exposed oaks (A. obscurior, C. scopolii), fire weakened/killed birches (L. nigripes), and old honeysuckle shrubs (O. pupillata); − disruption in the continuity and regeneration of host plants, potentially leading to the degradation of breeding habitats, especially for A. obscurior and, to a lesser extent, for C. scopolii, which can develop in other tree species; − small population size and isolation, which pose threats for species such as C. scopolii, L. nigripes, and O. euphorbiae; entomological poachin; − illegal collection of imagines or larvae with their host material (infested wood) of collector-attractive species. Documented cases include attempts at illegall collection of A. obscurior. For certain species (e.g. A. obscurior, C. scopolii, L. nigripes), active conservation measures are essential to preserve their populations. For most saproxylic species, passive conservation is highly effective if the protected area is sufficiently large. It is recommended that such protection be implemented in forests with a natural or near-natural character, or in those with the potential to become natural (e.g. parts of the Grzędy forest, the Las Trzyrzeczki tree stand, and the Kopciowe complex). The immediate acquisition of ecologically valuable areas (sites of rare Coleoptera occurrence) currently in private or military ownership within or around BbNP is strongly advised. Monitoring is proposed for one saproxylic beetle species (C. capra) and one species developing in herbaceous plants (O. euphorbiae).",
+      "authors": [
+        "Jerzy M. Gutowski",
+        "Jacek Hilszczański",
+        "Jacek Kurzawa",
+        "Andrzej Lasoń",
+        "Radosław Lewa",
+        "Paweł Górski",
+        "Wojciech Jędryczkowski",
+        "Roman Królik",
+        "Jan Tatur-Dytkowski"
+      ],
+      "year": 2026,
+      "journal": "Forest Research Papers",
+      "cited_by_count": 0,
+      "doi": "https://doi.org/10.48538/lpb-2026-0001",
+      "is_oa": true,
+      "oa_url": "https://doi.org/10.48538/lpb-2026-0001",
+      "concepts": [
+        "Longhorn beetle",
+        "Species richness",
+        "Habitat",
+        "Structural basin",
+        "Host (biology)",
+        "Ecology"
+      ],
+      "openalex_url": "https://openalex.org/W7127453579",
+      "ai_analysis": {
+        "title_ko": "비에브자 국립공원 및 그 완충지대의 하늘소(딱정벌레목: 하늘소과)상",
+        "abstract_ko": "본 연구의 목적은 폴란드 비에브자 계곡, 특히 비에브자 국립공원 내에서 하늘소의 분포, 서식지 선호도, 기주식물, 생태적 특성을 조사하고 개별 종의 위협 요인을 파악하여 완화 방안을 제안하는 것입니다. 1982년부터 2025년 사이에 비에브자 계곡에서 수행된 현장 조사 결과, 폴란드 전체 하늘소상의 48%에 해당하는 총 95종이 기록되었습니다. 92종은 공원 경계 내에서, 3종은 완충지대에서만 발견되었습니다. 종 다양성은 중부 유역(83종)과 하부 유역(78종)에서 가장 높았으며, 상부 유역에서는 54종이 확인되었습니다. 가장 널리 분포한 종은 16개 UTM 격자에서 기록된 Strangalia attenuata였으며, Stenurella nigra, Grammoptera ruficornis, Rhagium mordax, S. melanura 등이 그 뒤를 이었습니다. 이 중 11종은 매우 희귀한 '특별 관심 종'으로 분류되었고, 일부 종은 법적 보호를 받거나 적색목록에 등재되어 있습니다. 기주식물 조사 결과 24종의 식물에서 76종의 하늘소가 우화하는 것이 확인되었으며, 참나무(Quercus robur)에서 가장 많은 종이 서식하는 것으로 나타났습니다.",
+        "summary_3lines": [
+          "폴란드 비에브자 국립공원 일대의 하늘소상 분포와 서식지 특성을 장기간 조사하여 종 다양성과 기주식물 관계를 파악하고자 함.",
+          "총 95종의 하늘소를 확인하였으며, 특히 고사목 등 다양한 기주식물과 좁은 연관성을 가진 희귀·보호종의 서식 현황을 규명함.",
+          "확인된 목식성 곤충의 서식지 특성과 기주식물 정보를 활용하여 국립공원 내 고사목 및 산림 생태계 보전 관리에 기여할 수 있음."
+        ],
+        "research_purpose": "본 연구는 폴란드 비에브자 국립공원과 그 완충지대를 대상으로 장기간(1982~2025년)에 걸쳐 하늘소(Cerambycidae)의 분포 현황, 서식지 선호도, 기주식물을 파악하기 위해 수행되었습니다. 이를 통해 지역 내 희귀 및 위기 종의 분포를 밝히고, 이들 곤충의 보전을 위한 실질적인 관리 및 완화 조치를 제안하는 것을 목적으로 합니다.",
+        "key_findings": [
+          "비에브자 계곡 일원에서 폴란드 전체 하늘소의 48%에 해당하는 총 95종 서식 확인",
+          "Cerambyx scopolii, Leptura thoracica 등 특별 관리가 필요한 희귀 하늘소 11종 발굴",
+          "참나무(Quercus robur)를 포함한 24종의 기주식물(주로 활엽수)과 목식성 곤충 간의 밀접한 생태적 연관성 규명"
+        ],
+        "practical_applications": [
+          "국립공원 내 고사목 및 노거수 제거 작업 시 목식성 곤충(하늘소 등)의 기주식물 가치를 고려하여 현장 존치 여부 결정",
+          "핵심 보전 지역 및 유역별 곤충 종 다양성 조사를 바탕으로 한 생태계 특별보호구역 지정 및 관리",
+          "법적 보호종 및 적색목록 등재종의 서식지 모니터링을 위한 장기 생태계 조사 지침 마련"
+        ],
+        "korea_np_applicability_score": 4,
+        "korea_np_applicability_reason": "한국 국립공원 역시 오대산, 설악산 등 주요 산림 생태계 내에 다양한 목식성 곤충(하늘소과)이 서식하고 있으며, 탐방로 정비나 탐방안내소 주변 숲가꾸기 사업 시 고사목 관리와 곤충 서식지 보전 기법을 직접적으로 적용할 수 있기 때문입니다.",
+        "related_work_areas": [
+          "생태계 모니터링·조사",
+          "야생생물·서식지 관리",
+          "자원보전·복원"
+        ],
+        "related_laws": [
+          "자연공원법 제18조(공원자원의 보존)",
+          "야생생물 보호 및 관리에 관한 법률 제2조(정의)"
+        ],
+        "field_checklist": [
+          "숲가꾸기 및 고사목 제거 사업 대상지의 수종별(참나무류, 소나무류 등) 고사목 현황 확인",
+          "현장 내 희귀 및 보호종 하늘소의 기주식물이 되는 고사목 및 노거수의 무단 반출 여부 점검",
+          "탐방로 주변 위험목 정비 시 생태적 가치가 높은 수목의 잔존 여부 사전 모니터링",
+          "유역별·고도별 곤충 다양성 조사를 위한 주기적인 모니터링 트랩 설치 및 관리",
+          "지역 내 법적 보호 야생생물 및 멸종위기 곤충의 서식 흔적(우화공, 배설물 등) 기록"
+        ],
+        "practical_utility_score": 4,
+        "cautions": [
+          "고사목 무단 방치 시 탐방객 안전사고 및 산불 확산 우려가 있으므로 안전 거리 확보 필수",
+          "희귀 곤충 채집 및 조사는 관련 법령에 따른 허가 절차와 전문가 협조가 선행되어야 함"
+        ],
+        "tags": [
+          "하늘소",
+          "목식성곤충",
+          "고사목관리",
+          "생물다양성",
+          "기주식물"
+        ],
+        "recommended_followup_research": [
+          "한국 국립공원 내 참나무류 및 침엽수 고사목 주변의 하늘소과 곤충 군집 구조 분석",
+          "기후변화에 따른 산림 내 목식성 곤충의 분포 변화 및 서식지 적합성 평가 연구"
+        ],
+        "ai_recommended_topics": [
+          "Saproxylic beetles national park",
+          "Cerambycidae host plants conservation"
+        ],
+        "analyzed_at": "2026-08-03T11:25:42Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W7162681597",
+      "source": "openalex",
+      "title": "Gate Fees and Gas Tanks: The Economics of U.S. National Park Visitations",
+      "abstract": "Understanding how park charges and travel-related expenses affect visitation patterns in U.S. national parks is critical amid rising concerns over overcrowding, funding gaps, and public accessibility. Drawing on the economic theory of price elasticity of demand and extending the work of Stevens et al. (2014), this study used 30 years of panel data from 30 national parks to assess how visitation levels respond to changes in entrance fees and fuel prices. Ordinary least squares (OLS) and estimated generalized least squares with fixed effects (FEGLS) regression models were employed to measure price sensitivity and identify variations across parks. Building on prior work, the study empirically assessed whether price responsiveness differed by park popularity and proximity to urban centers, offering insights for more targeted park management strategies. The findings indicate that national park visitation levels are insensitive to changes in entrance fees and are modestly responsive to changes in fuel prices. Fuel prices had a consistently stronger influence on visitation than entrance fees, underscoring the broader travel-related expenses visitors face. Popular parks and those located near urban centers did not exhibit lower sensitivity to price changes than less visited or non-urban parks. Several managerial implications emerge. Modest entrance fee increases are unlikely to deter most visitors and could be used to strengthen park operations, maintenance, and resource management. Dynamic pricing strategies, such as peak-season surcharges, could help manage congestion without significantly diminishing public accessibility. Furthermore, the findings highlight the importance of tailoring management strategies to the characteristics of individual parks rather than implementing uniform, system-wide policies. For example, because fuel costs represent a major component of total trip expenses, parks located farther from urban areas require different pricing and transportation strategies. The implications of this study extend beyond the National Park Service to state parks, regional recreation systems, and public lands agencies facing similar challenges. Grounded in economic theory and informed by an update to a widely cited study, this research offers actionable perspectives to park and recreation administrators who strive to balance financial sustainability with broad public accessibility.",
+      "authors": [
+        "Susan Steiner",
+        "John Stinespring",
+        "Suzanne Dieringer"
+      ],
+      "year": 2026,
+      "journal": "Journal of Park and Recreation Administration",
+      "cited_by_count": 0,
+      "doi": "https://doi.org/10.18666/jpra-2026-13064",
+      "is_oa": false,
+      "oa_url": "",
+      "concepts": [
+        "Popularity",
+        "Recreation",
+        "Ordinary least squares",
+        "National park",
+        "Public economics",
+        "Price elasticity of demand"
+      ],
+      "openalex_url": "https://openalex.org/W7162681597",
+      "ai_analysis": {
+        "title_ko": "입장료와 연료비: 미국 국립공원 방문객 경제학",
+        "abstract_ko": "미국 국립공원에서의 공원 요금과 여행 관련 비용이 방문 패턴에 미치는 영향을 이해하는 것은 과밀화, 재정 격차, 공공 접근성에 대한 우려가 커지는 상황에서 매우 중요합니다. 수요의 가격 탄력성이라는 경제 이론을 바탕으로 하고 Stevens 등(2014)의 선행 연구를 확장하여, 본 연구는 30개 국립공원의 30년 패널 데이터를 사용하여 방문객 수준이 입장료와 연료 가격의 변화에 어떻게 반응하는지 평가했습니다. 가격 민감도를 측정하고 공원 간의 차이를 파악하기 위해 최소제곱법(OLS)과 고정효과 일반화최소제곱법(FEGLS) 회귀 모형이 사용되었습니다. 선행 연구를 바탕으로, 본 연구는 가격 반응성이 공원의 인기도나 도심 지역과의 인접성에 따라 다른지 실증적으로 평가하여 보다 표적화된 공원 관리 전략에 대한 통찰력을 제공했습니다. 연구 결과, 국립공원 방문객 수는 입장료 변화에는 민감하지 않고 연료 가격 변화에는 완만하게 반응하는 것으로 나타났습니다. 연료 가격은 입장료보다 방문객 수에 일관되게 더 강한 영향을 미쳐, 방문객들이 직면하는 광범위한 여행 관련 비용의 중요성을 강조했습니다. 인기 있는 공원이나 도심 근처에 위치한 공원은 방문객이 적거나 비도시 지역 공원에 비해 가격 변화에 대한 민감도가 낮지 않았습니다. 몇 가지 경영학적 시사점이 도출됩니다. 적정한 입장료 인상은 대부분의 방문객을 단념시키지 않을 것이며 공원 운영, 유지 관리 및 자원 관리를 강화하는 데 사용될 수 있습니다. 성수기 할증료와 같은 동적 가격 책정 전략은 공공 접근성을 크게 떨어뜨리지 않으면서 혼잡을 관리하는 데 도움이 될 수 있습니다. 또한, 이번 연구 결과는 획일적이고 시스템 전반에 걸친 정책을 시행하기보다는 개별 공원의 특성에 맞게 관리 전략을 조정하는 것이 중요함을 강조합니다. 예를 들어, 연료비는 전체 여행 비용의 큰 비중을 차지하므로 도심에서 멀리 떨어진 공원은 차별화된 가격 및 교통 전략이 필요합니다. 본 연구의 시사점은 국립공원관리청을 넘어 유사한 도전에 직면한 주립공원, 지역 레크리에이션 시스템, 공공토지 기관으로 확장됩니다. 경제 이론에 근거하고 널리 인용된 연구의 최신 버전을 바탕으로 한 본 연구는 재정적 지속 가능성과 넓은 대중적 접근성 사이의 균형을 맞추기 위해 노력하는 공원 및 레크리에이션 관리자에게 실행 가능한 관점을 제공합니다.",
+        "summary_3lines": [
+          "미국 국립공원의 30년간 데이터를 활용하여 입장료와 연료비 변화가 탐방객 방문 패턴에 미치는 경제적 영향을 분석하였다.",
+          "분석 결과 탐방객 수는 입장료 변화에는 둔감하고 연료비 변화에는 완만하게 반응하여, 전체 여행 비용이 방문에 더 큰 영향을 미치는 것으로 나타났다.",
+          "따라서 일률적인 요금 인상보다는 개별 공원의 특성과 접근성을 고려한 탄력적 요금제 및 맞춤형 교통 관리 전략 도입이 필요하다."
+        ],
+        "research_purpose": "본 연구는 미국 국립공원의 입장료와 연료비 변화가 탐방객 방문 패턴에 미치는 영향을 분석하여, 과밀화 해소와 재정 건전성 확보를 위한 효과적인 공원 관리 및 가격 정책 전략을 수립하는 데 목적이 있습니다. 특히 공원의 인기도와 도시와의 접근성이 가격 민감도에 미치는 영향을 실증적으로 파악하고자 했습니다.",
+        "key_findings": [
+          "국립공원 탐방객 수는 입장료 인상에 대해 거의 반응하지 않으며(비탄력적), 이는 소폭의 요금 인상이 탐방객 감소로 이어지지 않음을 의미합니다.",
+          "탐방객 수는 연료비(교통비) 변화에 상대적으로 더 민감하게 반응하여, 전체 이동 비용이 방문 결정에 핵심 요인으로 작용합니다.",
+          "인기 공원이나 도심 인근 공원이라고 해서 가격 변화에 대한 민감도가 더 낮지 않으며, 공원별 특성에 따른 맞춤형 접근이 필요합니다."
+        ],
+        "practical_applications": [
+          "탐방객 감소 우려가 적은 소폭의 국립공원 입장료 인상을 검토하여 공원 운영 및 시설 유지보수 재원으로 활용합니다.",
+          "성수기 요금 할증 등 동적 가격 책정 제도를 도입하여 탐방객을 분산시키고 공원 혼잡도를 효과적으로 관리합니다.",
+          "도심 원거리 공원의 경우 대중교통 연계 강화 및 맞춤형 접근성 제고 대책을 가격 정책과 연계하여 수립합니다."
+        ],
+        "korea_np_applicability_score": 4,
+        "korea_np_applicability_reason": "한국 국립공원 역시 주말 및 성수기 특정 탐방로의 과밀화 문제와 입장료 폐지 이후 재정 확보 문제를 동시에 겪고 있으며, 탐방객의 이동 비용 및 체류 비용에 따른 방문 패턴 변화를 분석하여 탐방객 관리 정책을 수립하는 데 유용합니다.",
+        "related_work_areas": [
+          "탐방로·탐방객 관리",
+          "관광·경제 정책",
+          "공원계획·구역관리"
+        ],
+        "related_laws": [
+          "자연공원법 제37조",
+          "국립공원공단법 제7조"
+        ],
+        "field_checklist": [
+          "주요 탐방로의 성수기 및 비수기 탐방객 수 변동 추이를 주기적으로 측정하고 있는가?",
+          "탐방객들의 평균 이동 거리와 교통비 등 부대 비용에 대한 설문조사나 데이터가 구축되어 있는가?",
+          "공원 시설 유지보수 및 자원 보호를 위한 재원 조달 현황과 부족분을 분석했는가?",
+          "특정 공원의 과밀화 해소를 위한 요금제나 예약제 등의 분산 대책이 마련되어 있는가?",
+          "지역사회의 경제적 파급효과와 탐방객의 수용 능력을 고려한 관리 방안이 수립되었는가?"
+        ],
+        "practical_utility_score": 4,
+        "cautions": [
+          "입장료 징수는 국내 국립공원의 경우 제도적·법적 규제 및 과거 폐지 역사와 연관되므로 신중한 사회적 합의가 선행되어야 합니다.",
+          "연료비 등 외부 경제 요인은 공원 관리청이 통제할 수 없으므로, 이에 대응하는 교통·수송 대책은 지자체와의 협력이 필수적입니다."
+        ],
+        "tags": [
+          "입장료",
+          "연료비",
+          "수요탄력성",
+          "탐방객관리",
+          "공원경제학"
+        ],
+        "recommended_followup_research": [
+          "국내 국립공원 탐방객의 이동 비용 변화에 따른 방문 수요 탄력성 실증 분석",
+          "성수기 요금 차등화 및 동적 가격 제도가 탐방객 분산에 미치는 효과 연구"
+        ],
+        "ai_recommended_topics": [
+          "national park entrance fee elasticity",
+          "recreation demand travel cost method"
+        ],
+        "analyzed_at": "2026-08-03T11:26:15Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W7164477355",
+      "source": "openalex",
+      "title": "Integration of Biodiversity Conservation with Sustainable Ecotourism in Sri Lanka",
+      "abstract": "Sri Lanka's status as a biodiversity hotspot underpins a tourism industry with the symbiotic potential to fund conservation and foster local stewardship. However, translating this model from a theoretical ideal into a successfully implemented practice remains a complex global challenge. The objective of this qualitative study was to find themes for a quantitative survey to further investigate the above mentioned model. Through qualitative analysis of semi-structured interviews with 15 frontline forest and wildlife officers from Hurulu forest reserve of Polonnaruwa, Knuckles conservation forest of Matale, Udawattakele forest reserve of Kandy, Sinharaja world heritage site of Ratnapura, and Wilpattu national park of Puttalam, this research captures the critical perspectives of those responsible for managing this delicate balance. The data reveal six pivotal themes essential for achieving sustainability. Firstly, strengthening governance and enforcement including improved revenue reinvestment and clearer regulatory frameworks can be done by reinvesting revenue generated from park entry fees, guided tours, and accommodations directly into conservation efforts, such as anti-poaching patrols, habitat restoration, and scientific research. Secondly, investing in capacity and infrastructure to address critical gaps in staffing, equipment, and visitor facilities such as well-designed trails, adequate waste disposal systems, and informative signage, can minimize ecological footprints. Thirdly, promoting genuine community partnership to ensure local communities can derive tangible benefits and become active conservation stakeholders. Fourthly, prioritization of education and interpretation for both tourists and locals can be done to foster pro-conservation behavior. Ensuring meaningful stakeholder participation in policy decisions was proposed as the next step for sustainability. Lastly, it was proposed to leverage digitalization for enhanced monitoring, management, and visitor experience. The findings were used as themes for further investigation using a quantitative study to illustrate the synergy between conservation and ecotourism is not automatic but must be consciously built by listening to and empowering its frontline forest officers and wildlife officers, addressing their operational challenges, and building robust partnerships with local communities. This study concludes that the insights of frontline officers are indispensable for formulating effective policies and provides an evidence-based framework for enhancing the sustainability of Sri Lanka's ecotourism sector while safeguarding its unique biodiversity for future generations. Keywords: Biodiversity, Ecotourism, Sustainability, Conservation, Restoration",
+      "authors": [
+        "E.J.M.J.K. Ekanayake",
+        "H.C. Fernando",
+        "E.C.S. Widyasekera",
+        "S.M.A.K. Manchanayakke"
+      ],
+      "year": 2026,
+      "journal": "Proceedings of International Forestry and Environment Symposium",
+      "cited_by_count": 0,
+      "doi": "https://doi.org/10.31357/fesympo.v30.8847",
+      "is_oa": true,
+      "oa_url": "https://doi.org/10.31357/fesympo.v30.8847",
+      "concepts": [
+        "Business",
+        "Environmental resource management",
+        "Ecotourism",
+        "Environmental planning",
+        "Stakeholder",
+        "Sustainability"
+      ],
+      "openalex_url": "https://openalex.org/W7164477355",
+      "ai_analysis": {
+        "title_ko": "스리랑카의 생물다양성 보전과 지속 가능한 생태관광의 통합",
+        "abstract_ko": "스리랑카의 생물다양성 허브 지위는 보전 자금을 조달하고 지역사회의 주인의식을 고취할 수 있는 상생 잠재력을 가진 관광 산업을 뒷받침합니다. 그러나 이 모델을 이론적 이상에서 성공적인 현장 실천으로 전환하는 것은 여전히 복잡한 전 세계적 과제입니다. 본 질적 연구의 목적은 앞서 언급한 모델을 추가로 조사하기 위한 양적 조사 설문지의 주제를 도출하는 것입니다. 폴로나루와(Polonnaruwa)의 후룰루(Hurulu) 산림보호구역, 마탈레(Matale)의 너클즈(Knuckles) 보전림, 칸디(Kandy)의 우다왓탈레(Udawattakele) 산림보호구역, 라트나푸라(Ratnapura)의 신하라자(Sinharaja) 세계문화유산, 푸탈람(Puttalam)의 윌파트투(Wilpattu) 국립공원의 현장 산림 및 야생동물 관리 공무원 15명을 대상으로 한 반구조화 인터뷰의 질적 분석을 통해, 본 연구는 이 미묘한 균형을 관리할 책임이 있는 사람들의 비판적인 관점을 포착합니다. 데이터는 지속 가능성을 달성하는 데 필수적인 6가지 핵심 주제를 밝혀냅니다. 첫째, 공원 입장료, 가이드 투어, 숙박 시설에서 발생한 수익을 밀렵 단속, 서식지 복원, 과학 연구와 같은 보전 노력에 직접 재투자함으로써 수익 재투자 개선 및 규제 프레임워크 명확화를 포함한 거버넌스 및 집행을 강화할 수 있습니다. 둘째, 인력, 장비, 잘 설계된 탐방로, 적절한 폐기물 처리 시스템, 정보성 표지판과 같은 방문객 시설의 심각한 격차를 해소하기 위해 역량과 인프라에 투자함으로써 생태적 발자국을 최소화할 수 있습니다. 셋째, 지역사회가 실질적인 혜택을 얻고 적극적인 보전 이해관계자가 될 수 있도록 진정한 지역사회 파트너십을 촉진하는 것입니다. 넷째, 관광객과 지역 주민 모두를 위한 교육 및 해설을 우선시하여 보전 친화적인 행동을 유도할 수 있습니다. 정책 결정에 의미 있는 이해관계자의 참여를 보장하는 것이 지속 가능성을 위한 다음 단계로 제안되었습니다. 마지막으로, 향상된 모니터링, 관리 및 방문객 경험을 위해 디지털화를 활용할 것을 제안했습니다. 연구 결과는 보전과 생태관광 사이의 시너지가 자동으로 이루어지는 것이 아니라 현장 산림 및 야생동물 공무원의 의견을 경청하고 권한을 부여하며 운영상의 과제를 해결하고 지역사회와 강력한 파트너십을 구축함으로써 의도적으로 구축되어야 함을 설명하기 위한 양적 연구의 추가 조사를 위한 주제로 사용되었습니다. 본 연구는 현장 공무원의 통찰력이 효과적인 정책 수립에 필수적이며, 미래세대를 위해 독특한 생물다양성을 보호하는 동시에 스리랑카 생태관광 부문의 지속 가능성을 강화하기 위한 증거 기반 프레임워크를 제공한다고 결론짓습니다.",
+        "summary_3lines": [
+          "스리랑카 국립공원 및 보호지역의 최일선 관리자 인터뷰를 통해 생물다양성 보전과 생태관광의 실효성 있는 통합 방안을 도출하고자 하였다.",
+          "현장 관리자 분석 결과 거버넌스 강화, 인프라 투자, 지역사회 파트너십, 교육, 정책 참여, 디지털화 등 6가지 핵심 지속 가능성 주제가 확인되었다.",
+          "생태관광의 성공은 현장 실무자의 경험과 요구를 반영한 운영 체계 구축과 지역사회 협력이 필수적임을 시사한다."
+        ],
+        "research_purpose": "본 연구는 스리랑카 주요 보호구역의 현장 관리 공무원들을 대상으로 심층 인터뷰를 실시하여 생물다양성 보전과 생태관광의 상생 모델을 현장에 성공적으로 정착시키기 위한 핵심 요인을 파악하고, 향후 양적 연구를 위한 조사 주제를 도출하는 것을 목적으로 합니다.",
+        "key_findings": [
+          "입장료 수익의 보전 활동 직접 재투자 및 규제 프레임워크 정비를 통한 거버넌스 강화가 필요하다.",
+          "탐방객 편의시설, 인력, 장비 등 필수 인프라 투자가 생태적 발자국을 최소화한다.",
+          "지역사회의 실질적 참여와 경제적 혜택 공유가 지속 가능한 보전의 핵심 요소이다."
+        ],
+        "practical_applications": [
+          "탐방로, 쓰레기 처리 시설, 안내판 등 탐방 인프라를 정비하여 생태적 훼손을 최소화합니다.",
+          "공원 입장료 및 시설 이용 수익의 일부를 야생생물 서식지 복원 및 불법행위 단속 예산으로 직접 연계합니다.",
+          "지역 주민이 생태관광 운영에 주도적으로 참여하고 혜택을 공유할 수 있는 협력 프로그램을 활성화합니다."
+        ],
+        "korea_np_applicability_score": 4,
+        "korea_np_applicability_reason": "한국 국립공원 역시 탐방객 관리와 생물다양성 보전의 조화, 지역사회 상생, 수익 재투자의 필요성이 대두되고 있어 현장 관리 체계 개선에 직접적인 시사점을 제공합니다.",
+        "related_work_areas": [
+          "탐방로·탐방객 관리",
+          "자원보전·복원",
+          "지역사회·거버넌스"
+        ],
+        "related_laws": [
+          "자연공원법 제37조",
+          "야생생물 보호 및 관리에 관한 법률 제4조"
+        ],
+        "field_checklist": [
+          "공원 탐방로 주변의 훼손 상태 및 쓰레기 처리 시설 적정성 여부 확인",
+          "탐방객 안내판 및 환경해설 시설의 정보 전달력 점검",
+          "탐방료 및 공원 내 시설 수익의 보전 사업 재투자 비율 확인",
+          "지역 주민 대상 생태관광 프로그램 참여 실태 및 혜택 공유 구조 점검",
+          "현장 단속 인력의 장비 확보 상태 및 순찰 활동 적정성 확인"
+        ],
+        "practical_utility_score": 4,
+        "cautions": [
+          "수익 재투자 및 예산 배분 구조는 국가 재정법 및 공단 내부 지침에 따라 조정이 필요할 수 있습니다.",
+          "지역사회 파트너십 구축 시 주민 간 갈등 발생 가능성을 고려하여 신중한 접근이 요구됩니다."
+        ],
+        "tags": [
+          "생태관광",
+          "생물다양성보전",
+          "현장관리",
+          "지역사회참여",
+          "지속가능성"
+        ],
+        "recommended_followup_research": [
+          "현장 관리자 인터뷰 결과를 바탕으로 한 대규모 방문객 및 지역 주민 대상 설문조사 연구",
+          "생태관광 수익의 보전 기금 직접 재투자에 따른 생태계 개선 효과 분석 연구"
+        ],
+        "ai_recommended_topics": [
+          "Ecotourism and Biodiversity Conservation",
+          "Protected Area Governance and Local Community Partnership"
+        ],
+        "analyzed_at": "2026-08-03T11:26:37Z",
         "model": "gemini-flash-lite-latest"
       }
     },
@@ -85065,6 +85683,181 @@
           "생태계 모니터링",
           "탐방객 수용력 관리"
         ]
+      }
+    },
+    {
+      "id": "W7162861136",
+      "source": "openalex",
+      "title": "Assessing the Habitat Utilization, Occupancy, and Land Use Change for the Conservation of Elephants in Wilpattu National Park, Sri Lanka",
+      "abstract": "Sri Lanka is renowned for its significant population of Sri Lankan elephants (Elephas maximus maximus), an endangered subspecies that represents a keystone component of both ecological systems and its ancient cultural heritage. The coexistence of humans and elephants in shared landscapes presents significant challenges, with conflicts arising due to habitat loss, competition for resources, and human-elephant interactions. The case study was conducted in and around the southern boundary of Wilpattu National Park (WNP) from September 2024 to August 2025 to examine the land use and cover (LULC) change, along with the spatiotemporal habitat use of Sri Lankan elephants. Trail cameras (n=34) equipped with passive infrared sensors were deployed systematically within 3×3 km2 grids in the WNP. Visual encounter surveys were conducted outside the protected area. The Sentinel-2 satellite imagery from 2018 was obtained to evaluate the LULC and change using supervised classification. Ten covariates covering vegetation, physical, and food availability parameters at each camera station were obtained to assess the occupancy (ψ) of elephants within the park. The predicted hotspots and migration of elephants were analysed using the heat map developed by Empirical Bayesian Kriging (EBK) in ArcGIS Pro. A total of 81 footage of elephants was documented inside the park, and 102 sightings were recorded outside the southern boundary during the survey period. Interestingly, the elephants exhibited a higher preference (p) for the grassland (p=0.56±0.13), followed by scrubland and dry mixed evergreen forests inside the park, which satisfied their feeding ecology. The LULC change indicated that land encroachment in the protected corridors occurred moderately over the past years (r²=0.46). The occupancy analysis revealed a significant correlation with food availability parameters. The most important parameters for selecting a habitat for elephants were the distance to grasslands and crop fields, which may be correlated with their tendency to invade paddy crops. Keywords: Conflict, Elephant, Occupancy, Preference, Wilpattu",
+      "authors": [
+        "B.K.P.D. Rodrigo",
+        "E.G.D.P. Jayasekara",
+        "U.K.G.K. Padmalal",
+        "W.A.D. Mahaulpatha"
+      ],
+      "year": 2026,
+      "journal": "Proceedings of International Forestry and Environment Symposium",
+      "cited_by_count": 0,
+      "doi": "https://doi.org/10.31357/fesympo.v30.8906",
+      "is_oa": true,
+      "oa_url": "https://doi.org/10.31357/fesympo.v30.8906",
+      "concepts": [
+        "Geography",
+        "Habitat",
+        "National park",
+        "Shrubland",
+        "Land cover",
+        "Population"
+      ],
+      "openalex_url": "https://openalex.org/W7162861136",
+      "ai_analysis": {
+        "title_ko": "스리랑카 윌파트무 국립공원 내 코끼리 보전을 위한 서식지 이용, 점유율 및 토지 이용 변화 평가",
+        "abstract_ko": "스리랑카는 생태계의 핵심 요소이자 고대 문화유산인 멸종 위기 아브종인 스리랑카코끼리의 중요 서식지로 유명합니다. 공유된 경관 속에서 인간과 코끼리의 공존은 서식지 상실, 자원 경쟁, 인간과 코끼리의 상호작용으로 인해 갈등이 발생하면서 상당한 과제를 안겨줍니다. 본 사례 연구는 토지 이용 및 피복(LULC) 변화와 스리랑카코끼리의 시공간적 서식지 이용을 조사하기 위해 2024년 9월부터 2025년 8월까지 윌파트무 국립공원(WNP) 남쪽 경계 내부와 주변에서 수행되었습니다. 수동 적외선 센서가 장착된 무인 카메라(n=34)를 WNP 내 3×3 km² 그리드 내에 체계적으로 설치했습니다. 보호구역 외부에서는 시각적 조우 조사를 수행했습니다. 2018년 Sentinel-2 위성 영상을 확보하여 감독 분류를 통해 LULC와 그 변화를 평가했습니다. 공원 내 코끼리의 점유율(ψ)을 평가하기 위해 각 카메라 스테이션에서 식생, 물리적, 먹이 가용성 매개변수를 다루는 10개의 공변량을 확보했습니다. ArcGIS Pro의 경험적 베이지안 크리깅(EBK)으로 개발된 히트맵을 사용하여 예측된 핫스팟과 코끼리의 이동을 분석했습니다. 조사 기간 동안 공원 내부에서 총 81건의 코끼리 영상이 기록되었고, 남쪽 경계 외부에서 102건의 목격이 기록되었습니다. 흥미롭게도 코끼리는 공원 내에서 초지(p=0.56±0.13)를 가장 선호했으며, 그 뒤를 관목지와 건조 혼합 상록수림이 이어 먹이 생태를 충족했습니다. LULC 변화는 보호 회랑의 토지 침전이 지난 몇 년 동안 적당히 발생했음을 나타냈습니다(r²=0.46). 점유율 분석 결과 먹이 가용성 매개변수와 유의미한 상관관계가 나타났습니다. 코끼리의 서식지 선택에서 가장 중요한 매개변수는 초지와 경작지까지의 거리였으며, 이는 논농사 지역을 침범하려는 경향과 상관관계가 있을 수 있습니다.",
+        "summary_3lines": [
+          "위성 영상과 무인 카메라를 활용해 국립공원 내외 코끼리의 서식지 이용 패턴과 토지 이용 변화를 분석했습니다.",
+          "코끼리는 초지와 먹이 자원에 높은 서식 선호도를 보였으며, 경작지 인접 지역에서 출몰 빈도가 높았습니다.",
+          "보호구역 경계부의 토지 이용 변화 모니터링과 먹이원 관리를 결합한 완충지대 관리 대책이 필요합니다."
+        ],
+        "research_purpose": "스리랑카 윌파트무 국립공원 일대의 토지 이용 및 피복(LULC) 변화를 분석하고, 멸종 위기종인 스리랑카코끼리의 시공간적 서식지 이용 패턴과 점유율에 영향을 미치는 환경 요인을 파악하여 실효성 있는 보전 및 상생 관리 방안을 도출하는 것을 목적으로 합니다.",
+        "key_findings": [
+          "코끼리는 공원 내에서 초지(p=0.56)를 가장 선호했으며 관목지와 건조 상록수림이 그 뒤를 이었습니다.",
+          "보호구역 경계 외부에서 총 102건의 코끼리가 목격되어 인접 지역과의 접촉 빈도가 높음을 확인했습니다.",
+          "서식지 선택에 가장 큰 영향을 미치는 요인은 초지 및 농경지까지의 거리로 나타났습니다."
+        ],
+        "practical_applications": [
+          "공원 경계부 및 농경지 인접 지역에 무인 카메라와 센서를 집중 배치하여 대형 야생동물의 출몰을 실시간 모니터링합니다.",
+          "보호구역 내 초지 및 먹이원 분포를 주기적으로 조사하여 훼손된 서식지를 복원합니다.",
+          "공원 주변 토지 이용 변화를 정기적으로 위성 영상으로 분석하여 불법 전용이나 서식지 단절 구간을 파악합니다."
+        ],
+        "korea_np_applicability_score": 3,
+        "korea_np_applicability_reason": "한국 국립공원은 코끼리와 같은 대형 초식동물은 없으나, 멧돼지나 고라니 등 유해 야생동물의 농경지 출몰 및 서식지 분절화 문제에 동일한 공간 분석 및 무인 카메라 기반 점유율 모델링 기법을 적용할 수 있습니다.",
+        "related_work_areas": [
+          "생태계 모니터링·조사",
+          "야생생물·서식지 관리"
+        ],
+        "related_laws": [
+          "야생생물 보호 및 관리에 관한 법률 제12조",
+          "자연공원법 제23조"
+        ],
+        "field_checklist": [
+          "공원 경계부 농경지 인접 지역의 야생동물 출몰 빈도 현장 조사",
+          "무인 카메라를 활용한 주요 서식지 내 동물 점유율(Occupancy) 모니터링",
+          "GIS를 이용한 초지 및 먹이원까지의 거리 산출",
+          "위성 영상 기반 보호구역 주변 토지피복 변화 탐지",
+          "야생동물 이동 통로(Corridor) 상의 인위적 장애물 점검"
+        ],
+        "practical_utility_score": 4,
+        "cautions": [
+          "해외 대형 포유류(코끼리) 연구이므로 국내 적용 시 대상 종의 생태적 특성에 맞게 공변량과 분석 모델을 수정해야 합니다.",
+          "위성 영상 감독 분류 시 현장 검증(Ground-truthing) 정확도를 확보해야 합니다."
+        ],
+        "tags": [
+          "서식지 점유율",
+          "무인 카메라",
+          "토지이용변화",
+          "GIS분석",
+          "야생동물관리"
+        ],
+        "recommended_followup_research": [
+          "국내 국립공원 내 멧돼지 및 고라니의 농경지 인접 지역 서식지 선택성 분석 연구",
+          "공간 회귀 모델을 활용한 야생동물 찻길 사고(로드킬) 및 농작물 피해 핫스팟 예측 연구"
+        ],
+        "ai_recommended_topics": [
+          "Wildlife occupancy modeling",
+          "Land use and cover change wildlife conservation",
+          "Human-wildlife conflict spatial analysis"
+        ],
+        "analyzed_at": "2026-08-03T11:25:09Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W7138886055",
+      "source": "openalex",
+      "title": "Mammalian persistence and conservation priorities in a fragmented tropical refuge of Bangladesh",
+      "abstract": "Global mammalian diversity is declining rapidly due to habitat loss, fragmentation, and weak enforcement of conservation measures, raising fundamental questions about species persistence in human-modified landscapes. Protected areas serve as critical refuges, yet many in South Asia are small, degraded, and embedded within heavily human-dominated settings. In Bangladesh, Inani National Park supports iconic mammals, including the Endangered Asian Elephant and the Western Hoolock Gibbon. Despite serving as a corridor, the refuge’s conservation efficacy under increasing pressure remains poorly understood. To assess drivers of persistence and inform spatial management, we conducted a year-long survey (November 2022–November 2023) combining systematic line transects and extensive camera trapping (4771 trap-days). We documented 23 wild mammal species, including three globally Endangered and four Vulnerable taxa. Habitat gradients strongly shaped persistence: shrublands supported the highest richness, peaking in the monsoon, whereas plantations and modified habitats were least rich and diverse. Occupancy modelling revealed sharp contrasts in site use: the Asian Elephant showed near-complete occupancy (ψ = 1.00), whereas elusive carnivores such as the clouded leopard were rarely detected (ψ = 0.24; p = 0.04). Our findings highlight INP’s role as a key refuge and corridor, but also threats from deforestation, encroachment, and livestock grazing. Conservation priorities include restoring degraded habitats with native vegetation, strengthening boundary protection in high-diversity zones, and implementing community-based measures to mitigate human-elephant conflict. Targeted, evidence-based interventions are essential to secure the long-term persistence of Bangladesh’s priority mammal community.",
+      "authors": [
+        "Bipul Krishna Das",
+        "Mohammad Firoj Jaman",
+        "Mohammed Jashimuddin",
+        "Arnob Saha",
+        "Babla Mohajan",
+        "Pradip Kumar Sarker"
+      ],
+      "year": 2026,
+      "journal": "Journal for Nature Conservation",
+      "cited_by_count": 0,
+      "doi": "https://doi.org/10.1016/j.jnc.2026.127281",
+      "is_oa": true,
+      "oa_url": "https://doi.org/10.1016/j.jnc.2026.127281",
+      "concepts": [
+        "Endangered species",
+        "Geography",
+        "Ecology",
+        "Asian elephant",
+        "Habitat",
+        "Habitat destruction"
+      ],
+      "openalex_url": "https://openalex.org/W7138886055",
+      "ai_analysis": {
+        "title_ko": "방글라데시의 단절된 열대 보호구역 내 포유류의 존속 및 보전 우선순위",
+        "abstract_ko": "전 세계의 포유류 다양성은 서식지 상실, 단절, 그리고 미흡한 보전 대책 집행으로 인해 급격히 감소하고 있으며, 이는 인간에 의해 변형된 경관에서 종의 생존 가능성에 대한 근본적인 의문을 제기합니다. 보호구역은 중요한 피난처 역할을 하지만, 남아시아의 많은 보호구역은 규모가 작고 훼손되었으며 인간이 우세하게 거주하는 환경에 둘러싸여 있습니다. 방글라데시의 이나니 국립공원은 멸종위기종인 아시아코끼리와 서부훌록깁본을 비롯한 상징적인 포유류 서식지를 보호하고 있습니다. 생태통로 역할을 함에도 불구하고, 심화되는 압력 속에서 이 보호구역의 보전 효과는 여전히 잘 알려져 있지 않습니다. 생존 요인을 평가하고 공간 관리에 활용하기 위해, 저희는 2022년 11월부터 2023년 11월까지 체계적인 라인 트랜짓과 광범위한 무인센서 카메라(4,771 트랩-데이)를 결합한 1년 간의 조사를 수행했습니다. 그 결과 세계적 멸종위기종 3종과 취약종 4종을 포함하여 23종의 야생 포유류를 기록했습니다. 서식지 구배는 생존에 큰 영향을 미쳤으며, 관목림에서 가장 높은 종 풍부도를 보였고 이는 몬순 시기에 정점에 달한 반면, 조림지와 인위적으로 변형된 서식지에서는 풍부도와 다양성이 가장 낮았습니다. 점유 모델링 결과 서식지 이용에서 극명한 대조가 나타났는데, 아시아코끼리는 거의 완전한 점유율(ψ = 1.00)을 보인 반면 구름표범과 같은 은폐성 포식자는 드물게 감지되었습니다(ψ = 0.24, p = 0.04). 본 연구 결과는 핵심 피난처이자 생태통로로서 이나니 국립공원의 역할을 강조하는 동시에 삼림 벌채, 무단 점유, 가축 방목으로 인한 위협도 보여줍니다. 보전 우선순위로는 자생 식물로 훼손된 서식지 복원, 다양성이 높은 구역의 경계 보호 강화, 인간과 코끼리의 갈등을 완화하기 위한 지역사회 기반 대책의 실행 등이 있습니다. 방글라데시의 주요 포유류 군집의 장기적 존속을 확보하기 위해서는 표적화되고 증거에 기반한 개입이 필수적입니다.",
+        "summary_3lines": [
+          "방글라데시 단절된 보호구역 내 포유류의 서식 실태와 존속 요인을 파악하기 위해 무인센서 카메라와 트랜짓 조사를 수행함.",
+          "관목림이 포유류 다양성이 가장 높았으며 아시아코끼리는 높은 점유율을 보인 반면 대형 포식자는 드물게 관찰됨.",
+          "훼손된 서식지의 자생종 복원 및 경계 보호 강화 등 증거 기반의 구체적인 서식지 관리 전략이 필수적임."
+        ],
+        "research_purpose": "본 연구는 인간의 활동으로 단절되고 압박받는 열대 보호구역에서 포유류의 서식 실태와 존속 요인을 파악하여, 보호구역의 공간 관리 및 보전 우선순위를 도출하기 위한 현장 조사를 목적으로 함.",
+        "key_findings": [
+          "총 23종의 야생 포유류가 확인되었으며 이 중 3종이 멸종위기종, 4종이 취약종에 해당함.",
+          "서식지 유형별로 포유류의 다양성이 크게 달라 관목림에서 가장 높았고 인위적 조림지에서 가장 낮았음.",
+          "아시아코끼리는 거의 모든 구역을 이용(점유율 1.00)하고 있으나 은폐성 포식자는 매우 드물게 감지됨."
+        ],
+        "practical_applications": [
+          "단절된 보호구역 및 생태통로 내 자생 식물을 활용한 훼손지 생태 복원 사업 추진",
+          "생물다양성이 높은 핵심 구역을 중심으로 순찰 강화 및 불법 훼손·방목 행위 단속",
+          "인간과 야생동물(예: 코끼리)의 갈등 완화를 위한 지역사회 참여형 완화 대책 마련"
+        ],
+        "korea_np_applicability_score": 3,
+        "korea_np_applicability_reason": "한국 국립공원도 파편화된 서식지와 인위적 압박에 직면해 있어 무인센서 카메라를 활용한 포유류 점유율 분석과 생태통로 관리 기법을 현장에 직접 적용할 수 있음.",
+        "related_work_areas": [
+          "생태계 모니터링·조사",
+          "야생생물·서식지 관리"
+        ],
+        "related_laws": [
+          "자연공원법 제20조",
+          "야생생물 보호 및 관리에 관한 법률 제19조"
+        ],
+        "field_checklist": [
+          "주요 보호구역 내 무인센서 카메라 설치 밀도 및 작동 상태 확인",
+          "관목림 및 자연림 등 서식지 유형별 야생동물 출현 빈도 조사",
+          "보호구역 경계부에서의 불법 방목 및 인위적 훼손 여부 점검",
+          "멸종위기 야생생물의 이동 경향 및 생태통로 이용 실태 파악",
+          "지역 주민 대상 야생동물(맹수·대형 동물) 상충 방지 시설 점검"
+        ],
+        "practical_utility_score": 4,
+        "cautions": [
+          "계절적 요인(몬순 등)에 따라 야생동물의 활동성과 탐지율이 달라지므로 조사 시기 고려 필요",
+          "은폐성이 높은 대형 포식자의 경우 표준적인 조사 방법 외에 추가적인 정밀 탐색 기법 적용 필요"
+        ],
+        "tags": [
+          "포유류 점유 모델링",
+          "무인센서 카메라",
+          "서식지 파편화",
+          "생태통로",
+          "서식지 복원"
+        ],
+        "recommended_followup_research": [
+          "계절 변화에 따른 포유류의 공간 이용 패턴 변동 분석 연구",
+          "인간과 야생동물 갈등 저감을 위한 지역사회 협력 모델 효과성 검증 연구"
+        ],
+        "ai_recommended_topics": [
+          "Camera trapping occupancy model",
+          "Mammal persistence in fragmented landscapes"
+        ],
+        "analyzed_at": "2026-08-03T11:25:31Z",
+        "model": "gemini-flash-lite-latest"
       }
     },
     {
@@ -109871,6 +110664,92 @@
           "습지 보전 및 복원"
         ],
         "analyzed_at": "2026-08-02T10:24:00Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W7134025551",
+      "source": "openalex",
+      "title": "One year after the adjustment of Galápagos entrance fees: Are there changes in tourist demand?",
+      "abstract": "The Galápagos Islands face the challenge of conserving their biodiversity while moving toward a more sustainable tourism model. In August 2024, after 24 years without changes, the entrance fee for the Galápagos National Park and Marine Reserve was updated: from USD 100 to USD 200 for foreign visitors and from USD 6 to USD 30 for Ecuadorians. Comparing surveys conducted in 2024 and 2025, this policy brief examines how attitudes, spending, and satisfaction of tourists have evolved over time. Results show a decline in the share of visitors who were aware of the entrance fee adjustment, along with growing support for the measure among international tourists. Average spending and satisfaction levels remained stable for both domestic and foreign visitors, indicating that the adjustment did not affect tourism demand at the aggregate level. The findings highlight the need to strengthen participatory processes for co-creating and redesigning site-management plans; identify investment priorities for maintaining, renovating, and improving the accessibility of visit sites; and ensure transparent and efficient management of collected revenues to facilitate the timely implementation of conservation, ecological restoration, and local development actions.",
+      "authors": [
+        "Carlos A. Silva",
+        "Claudia Aravena",
+        "Eoin McLaughlin",
+        "Cesar Viteri"
+      ],
+      "year": 2026,
+      "journal": "Econstor (Econstor)",
+      "cited_by_count": 0,
+      "doi": "",
+      "is_oa": false,
+      "oa_url": "",
+      "concepts": [
+        "Tourism",
+        "Business",
+        "Revenue",
+        "Sustainability",
+        "Investment (military)",
+        "Citizen journalism"
+      ],
+      "openalex_url": "https://openalex.org/W7134025551",
+      "ai_analysis": {
+        "title_ko": "갈라파고스 입장료 인상 1년 후: 탐방객 수요에 변화가 있는가?",
+        "abstract_ko": "갈라파고스 제도는 생물다양성 보전과 지속 가능한 관광 모델 구축이라는 과제에 직면해 있습니다. 24년 동안 변함이 없었던 갈라파고스 국립공원 및 해양보호구역의 입장료는 2024년 8월에 인상되었습니다. 외국인 방문객은 100달러에서 200달러로, 에콰도르인은 6달러에서 30달러로 올랐습니다. 본 정책 브리프는 2024년과 2025년에 실시된 설문조사를 비교하여 탐방객의 태도, 지출, 만족도가 시간에 따라 어떻게 변화했는지 조사합니다. 연구 결과에 따르면, 입장료 인상 사실을 인지하고 있던 방문객의 비율은 감소한 반면, 국제 탐방객들 사이에서는 해당 조치에 대한 지지가 증가했습니다. 내국인과 외국인 방문객 모두 평균 지출과 만족도 수준이 안정적으로 유지되었으며, 이는 입장료 인상이 전체적인 탐방객 수요에 영향을 미치지 않았음을 나타냅니다. 본 연구 결과는 탐방지 관리 계획을 공동으로 수립하고 재설계하기 위한 참여형 프로세스 강화, 탐방 구역 유지·보수 및 접근성 개선을 위한 투자 우선순위 식별, 그리고 보전·생태 복원·지역 사회 발전 조치의 적기 이행을 촉진하기 위한 징수 수입의 투명하고 효율적인 관리의 필요성을 강조합니다.",
+        "summary_3lines": [
+          "장기간 동결되었던 갈라파고스 국립공원 입장료 인상이 탐방객 수요와 만족도에 미친 영향을 분석했습니다.",
+          "입장료를 대폭 인상했음에도 불구하고 전체 탐방객의 지출과 만족도는 안정적으로 유지되었으며 제도에 대한 지지가 증가했습니다.",
+          "공원 입장료 인상은 전반적인 탐방 수요를 위축시키지 않으며, 징수된 재정은 투명한 관리와 탐방 인프라 재투자에 쓰여야 합니다."
+        ],
+        "research_purpose": "본 연구는 갈라파고스 국립공원의 대폭적인 입장료 인상이 탐방객의 태도, 지출, 만족도 및 전체적인 관광 수요에 미친 영향을 분석하는 것을 목적으로 합니다. 이를 통해 보호지역의 지속 가능한 재정 확보 방안을 마련하고, 징수된 수익의 투명한 관리와 지역 사회 환원 및 생태 복원 연계의 중요성을 도출하고자 합니다.",
+        "key_findings": [
+          "입장료 인상 후 1년이 지난 시점에서 외국인 및 내국인 탐방객의 평균 지출과 만족도는 하락하지 않고 안정적으로 유지되었습니다.",
+          "입장료 인상 조치에 대해 사전에 인지하고 있던 탐방객의 비율은 감소했으나, 국제 탐방객들 사이에서 해당 정책에 대한 지지도는 오히려 증가했습니다.",
+          "입장료의 대폭적인 인상에도 불구하고 전체적인 탐방객 수요는 위축되지 않아 보호지역 재정 확충 수단으로 유효함이 증명되었습니다."
+        ],
+        "practical_applications": [
+          "국립공원 탐방료 또는 시설 이용료 현실화 검토 시, 적정 수준의 인상은 전체 탐방 수요에 악영향을 주지 않으므로 적극적인 재정 다각화 수단으로 활용합니다.",
+          "공원 입장료 및 이용료 인상 시, 징수된 재정이 생태계 보전과 탐방 환경 개선에 쓰인다는 점을 적극적으로 홍보하여 탐방객의 제도 수용성과 지지를 높입니다.",
+          "입장료 수입을 활용한 탐방 구역 정비, 노후 시설 개보수, 교통 약자 접근성 개선 등 구체적인 투자 우선순위 계획을 수립합니다."
+        ],
+        "korea_np_applicability_score": 3,
+        "korea_np_applicability_reason": "한국 국립공원은 현재 국립공원 입장료가 전면 폐지된 상태(탐방로 예약제 등 일부 제한적 운영)이므로 직접적인 입장료 인상 정책을 그대로 대입하기는 어렵습니다. 그러나 주차장 이용료, 탐방 프로그램 참가비, 대피소 이용료 등 공원 내 각종 수익자 부담 요금 체계 개편 시 탐방객 수용성 분석 방법론을 벤치마킹하는 데 유용합니다.",
+        "related_work_areas": [
+          "탐방로·탐방객 관리",
+          "관광·경제 정책"
+        ],
+        "related_laws": [
+          "자연공원법 제37조",
+          "국립공원공단법 제15조"
+        ],
+        "field_checklist": [
+          "공원 내 시설 이용료나 프로그램 참가비 조정 시 탐방객 설문조사를 통한 사전 수용성 조사가 수행되었는가?",
+          "요금 인상 또는 제도 변경 시 징수된 재정이 공원 자원 보전과 탐방 환경 개선에 재투자되는 계획이 수립되어 있는가?",
+          "탐방객 대상 요금 인상 취지 및 보전 기여 효과에 대한 안내와 홍보가 적절히 이루어지고 있는가?",
+          "요금 변경 전후의 탐방객 방문 총량 및 만족도 변화 추이가 모니터링되고 있는가?",
+          "수익금 배분 및 집행 과정에서 투명성이 확보되어 지역 주민과 탐방객의 신뢰를 얻고 있는가?"
+        ],
+        "practical_utility_score": 3,
+        "cautions": [
+          "한국은 국립공원 입장료가 폐지되어 있어 요금 신설이나 인상에 대한 사회적 저항이 클 수 있으므로 법적 근거와 정책적 공감대 형성이 선행되어야 합니다.",
+          "외국인과 내국인의 요금 차등 적용 등은 국내 법체계 및 국민 정서에 부합하는지 면밀한 검토가 필요합니다."
+        ],
+        "tags": [
+          "입장료 인상",
+          "탐방객 수요",
+          "관광 경제",
+          "재정 지속가능성",
+          "탐방객 만족도"
+        ],
+        "recommended_followup_research": [
+          "국립공원 내 특정 시설 이용료 인상이 지역 경제 및 소상공인 매출에 미치는 영향 분석",
+          "보호지역 방문객의 지불 의사(Willingness to Pay) 추정 및 적정 요금 산정 모델 연구"
+        ],
+        "ai_recommended_topics": [
+          "Protected area entrance fee adjustment tourist demand",
+          "National park pricing policy and visitor satisfaction"
+        ],
+        "analyzed_at": "2026-08-03T11:26:26Z",
         "model": "gemini-flash-lite-latest"
       }
     },
@@ -146486,33 +147365,6 @@
       "ai_analysis": null
     },
     {
-      "id": "W7128716605",
-      "source": "openalex",
-      "title": "From conflict management to collaborative adaptation: Designing participatory governance frameworks for Human–Wildlife relations in Sanjiangyuan National Park, China",
-      "abstract": "Human–wildlife relations in alpine ecosystems reflect the combined effects of climate change, land-use transitions, and governance capacity. Rather than focusing solely on local conflict dynamics, this study investigates how adaptive governance can be institutionally embedded to anticipate and respond to ecological and social uncertainties. Drawing on multiple data sources—including official and historical records of eco-ranger co-management policy, village-level focus group discussions. We also conducted a three-round Delphi process with 30 multidisciplinary experts (conservation scientists, rangeland managers, and policy practitioners)—we developed collaboratively a governance framework linking climate risk assessment to decision-making processes in Sanjiangyuan National Park (SNP). The evidence from multiple sources identified four core adaptation domains: (i) climate-informed spatial planning, (ii) flexible grazing regulation, (iii) participatory monitoring of wildlife mobility, and (iv) cross-sector coordination mechanisms. Expert consensus emphasized the need for adaptive feedback systems to integrate real-time ecological data (including opportunities to link with quantitative ecological indicators) into local decision cycles. By synthesizing insights across multiple perspectives, this study proposes an governance framework for operationalizing adaptive governance in climate-sensitive protected areas. Unlike previous work focusing on community-level perceptions or household adaptation strategies, this paper advances a participatory governance approach centered on institutional design and social learning. It contributes to broader debates on how conservation governance can evolve toward resilience-oriented, co-managed systems under environmental change. The proposed framework provides concrete steps for integrating climate information into routine protected area management. Future work should validate the framework with more representative data and a more diverse expert pool and cross-regional application. • Multi-source data were integrated to support adaptive governance in climate-sensitive parks. • Four key adaptation domains were identified to guide institutional transformation in SNP. • The study proposes a learning-based governance framework for collaborative conservation.",
-      "authors": [
-        "Ting Ma",
-        "Ke Wang",
-        "Di Fan"
-      ],
-      "year": 2026,
-      "journal": "Environmental and Sustainability Indicators",
-      "cited_by_count": 2,
-      "doi": "https://doi.org/10.1016/j.indic.2026.101165",
-      "is_oa": true,
-      "oa_url": "https://doi.org/10.1016/j.indic.2026.101165",
-      "concepts": [
-        "Corporate governance",
-        "Operationalization",
-        "Environmental resource management",
-        "Adaptive management",
-        "Multi-level governance",
-        "Environmental governance"
-      ],
-      "openalex_url": "https://openalex.org/W7128716605",
-      "ai_analysis": null
-    },
-    {
       "id": "W2980215304",
       "source": "openalex",
       "title": "Constantly adapting – Approaches for effective visitor monitoring and adaptive visitor guiding in the Black Forest National Park",
@@ -146855,34 +147707,6 @@
         "Biology"
       ],
       "openalex_url": "https://openalex.org/W2030904148",
-      "ai_analysis": null
-    },
-    {
-      "id": "W7166551114",
-      "source": "openalex",
-      "title": "Balancing Conservation and Sustainable Development through Spatial Planning Zoning: Evidence from Sharri National Park, Kosovo",
-      "abstract": "Spatial zoning is a key environmental management instrument for balancing biodiversity conservation with socio-economic development in protected areas. In Southeast Europe, national parks face increasing development pressure driven by tourism, private land ownership, and local economic expectations. This study examines the zoning revision of Sharri National Park (Kosovo), based on an integrated methodological framework combining ecological assessment, GIS-based analysis, and a structured expert-based multi-criteria evaluation approach. The analysis uses orthophotos (2024), cadastral data, satellite imagery, field verification, and 105 zoning-related requests. The evaluation integrates environmental, socio-economic, and planning criteria through qualitative expert judgment supported by spatial analysis. Results show that zoning functions as an adaptive governance tool: while the drak plan proposed a 75% reduction of development zones, 78.1% of requests were ultimately approved, reflecting the need to balance ecological priorities with development pressures. The study highlights the importance of transparent criteria, expert evaluation, and stakeholder participation for achieving socially acceptable and ecologically sound zoning outcomes.",
-      "authors": [
-        "Riza Murseli",
-        "FADIL BAJRAKTARI",
-        "Romeo Hanxhari",
-        "Sonila Papathimiu"
-      ],
-      "year": 2026,
-      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
-      "cited_by_count": 2,
-      "doi": "https://doi.org/10.5281/zenodo.20407890",
-      "is_oa": true,
-      "oa_url": "https://doi.org/10.5281/zenodo.20407890",
-      "concepts": [
-        "Zoning",
-        "Environmental planning",
-        "Spatial planning",
-        "Environmental resource management",
-        "Sustainable development",
-        "Business"
-      ],
-      "openalex_url": "https://openalex.org/W7166551114",
       "ai_analysis": null
     },
     {
@@ -151792,38 +152616,6 @@
       "ai_analysis": null
     },
     {
-      "id": "W7118074340",
-      "source": "openalex",
-      "title": "Spatial potential evaluation of ecotourism resources and functional zoning in the Qinghai lake basin",
-      "abstract": "Existing national park zoning studies exhibits significant gaps in integrating ecological sensitivity, tourism resource potential, and particularly the spatiotemporal dynamics of human activities. Against the backdrop of the Qinghai Lake National Park, which encompasses China’s largest inland saltwater lake and serves as the core tourism region of Qinghai Province, this study develops a tri-dimensional evaluation framework of “place, people and things”, where “place”—a multi-factors ecological sensitivity analysis, “people”—Mobile-data-based Active Population Estimation (MAPE) for spatiotemporal behavioral analysis and “things”—a comprehensive tourism resource potential assessment, and ultimately achieve functional zoning through multi-dimensional superposition. Key findings indicate that the overall ecological sensitivity of the basin is relatively high, with highly sensitive and extremely sensitive areas account for 46.24% of the total study area. Tourism potential has a highly uneven distribution, with limited-potential zones covering 42.90% of the basin, while top-level potential areas constitute merely 0.60%. Based on the integrated analysis, a refined five-zone functional system is proposed: strict protection zone, harmonious transition zone, innovative development zone, rational development zone, and stable maintenance zone, while the latter three account for less than 6%, revealing an extreme scarcity of “low ecological sensitivity, high tourism potential, and high tourist flow” areas. Each zone is coupled with differentiated control measures. This research provide quantitative support for the delineation of ecological protection redlines and sustainable tourism planning in Qinghai Lake National Park.",
-      "authors": [
-        "Yishan Xu",
-        "C. WANG",
-        "Zilin Chen",
-        "Nan Liu",
-        "Li Zhao",
-        "Dongyan Lin",
-        "Binqing Zhai",
-        "Weile Jiang"
-      ],
-      "year": 2026,
-      "journal": "Scientific Reports",
-      "cited_by_count": 1,
-      "doi": "https://doi.org/10.1038/s41598-025-34289-5",
-      "is_oa": true,
-      "oa_url": "https://www.nature.com/articles/s41598-025-34289-5_reference.pdf",
-      "concepts": [
-        "Zoning",
-        "Tourism",
-        "Resource (disambiguation)",
-        "Ecotourism",
-        "Geography",
-        "Environmental resource management"
-      ],
-      "openalex_url": "https://openalex.org/W7118074340",
-      "ai_analysis": null
-    },
-    {
       "id": "W4415361132",
       "source": "openalex",
       "title": "An Adaptive Management-Oriented Approach to Spatial Planning for Estuary National Parks: A Case Study of the Yangtze River Estuary, China",
@@ -156691,34 +157483,6 @@
       "ai_analysis": null
     },
     {
-      "id": "W7162861136",
-      "source": "openalex",
-      "title": "Assessing the Habitat Utilization, Occupancy, and Land Use Change for the Conservation of Elephants in Wilpattu National Park, Sri Lanka",
-      "abstract": "Sri Lanka is renowned for its significant population of Sri Lankan elephants (Elephas maximus maximus), an endangered subspecies that represents a keystone component of both ecological systems and its ancient cultural heritage. The coexistence of humans and elephants in shared landscapes presents significant challenges, with conflicts arising due to habitat loss, competition for resources, and human-elephant interactions. The case study was conducted in and around the southern boundary of Wilpattu National Park (WNP) from September 2024 to August 2025 to examine the land use and cover (LULC) change, along with the spatiotemporal habitat use of Sri Lankan elephants. Trail cameras (n=34) equipped with passive infrared sensors were deployed systematically within 3×3 km2 grids in the WNP. Visual encounter surveys were conducted outside the protected area. The Sentinel-2 satellite imagery from 2018 was obtained to evaluate the LULC and change using supervised classification. Ten covariates covering vegetation, physical, and food availability parameters at each camera station were obtained to assess the occupancy (ψ) of elephants within the park. The predicted hotspots and migration of elephants were analysed using the heat map developed by Empirical Bayesian Kriging (EBK) in ArcGIS Pro. A total of 81 footage of elephants was documented inside the park, and 102 sightings were recorded outside the southern boundary during the survey period. Interestingly, the elephants exhibited a higher preference (p) for the grassland (p=0.56±0.13), followed by scrubland and dry mixed evergreen forests inside the park, which satisfied their feeding ecology. The LULC change indicated that land encroachment in the protected corridors occurred moderately over the past years (r²=0.46). The occupancy analysis revealed a significant correlation with food availability parameters. The most important parameters for selecting a habitat for elephants were the distance to grasslands and crop fields, which may be correlated with their tendency to invade paddy crops. Keywords: Conflict, Elephant, Occupancy, Preference, Wilpattu",
-      "authors": [
-        "B.K.P.D. Rodrigo",
-        "E.G.D.P. Jayasekara",
-        "U.K.G.K. Padmalal",
-        "W.A.D. Mahaulpatha"
-      ],
-      "year": 2026,
-      "journal": "Proceedings of International Forestry and Environment Symposium",
-      "cited_by_count": 0,
-      "doi": "https://doi.org/10.31357/fesympo.v30.8906",
-      "is_oa": true,
-      "oa_url": "https://doi.org/10.31357/fesympo.v30.8906",
-      "concepts": [
-        "Geography",
-        "Habitat",
-        "National park",
-        "Shrubland",
-        "Land cover",
-        "Population"
-      ],
-      "openalex_url": "https://openalex.org/W7162861136",
-      "ai_analysis": null
-    },
-    {
       "id": "W2276773612",
       "source": "openalex",
       "title": "PROTECTED AREA MANAGEMENT THROUGH A COMMUNITY CENTERED APPROACH EXPERIENCE OF DUNUVILAPITIY A AND RATHTOTAYAYA VILLAGES IN WASGOMUWA NATIONAL PARK",
@@ -156844,66 +157608,6 @@
       "ai_analysis": null
     },
     {
-      "id": "W7169599398",
-      "source": "openalex",
-      "title": "Four decades of spatio-temporal habitat dynamics in a human-wildlife co-existence landscape in the Liuwa ecosystem of Zambia",
-      "abstract": "Human encroachment into wildlife habitats has led to extensive habitat loss and fragmentation, often resulting in the displacement and decline of wildlife populations across African Ecosystem. Meanwhile, Habitat is operationally defined as natural land cover types that directly support wildlife, namely forest, grassland, and wetland, therefore, this study assessed four decades (1984—2024) of spatio-temporal habitat dynamics in Liuwa Plain National Park (NP), a human-wildlife co-existence landscape of Zambia. Habitat trajectories inside and outside the park were compared to evaluate the protective effect of co-management. Using Landsat satellite imagery classified at 10-year intervals (1984, 1994, 2004, 2014, and 2024) and a random forest algorithm with a two-step approach: pixel-based classification followed by an object-based refinement, we produced thematic maps with accuracies of 82—89%, with the 2024 map being the most accurate. This study assessed habitat extent rather than habitat quality. Results show a 20% decline in forest cover, a 5% loss of grasslands, and a 3% reduction in wetlands and water bodies in 2024, likely due to the 2023/2024 drought. Habitat loss was greater outside the park than inside, concentrated in the southern Kalabo Urban Zone and more evident outside the park boundaries. These shifts indicate rising anthropogenic pressure on habitat critical to wildlife persistence. The study underscores the need for integrated land-use planning, habitat management, adaptive park zonation and supports the identification of ecological hotspots to sustain co-existence and ecological integrity in Liuwa NP and similar landscapes.",
-      "authors": [
-        "Danny Chisanga Musenge",
-        "Darius Phiri",
-        "Ngawo Namukonde",
-        "Donald Zulu",
-        "Gift Mulenga",
-        "Vincent R. Nyirenda"
-      ],
-      "year": 2026,
-      "journal": "Discover Geoscience",
-      "cited_by_count": 0,
-      "doi": "https://doi.org/10.1007/s44288-026-00639-7",
-      "is_oa": true,
-      "oa_url": "https://link.springer.com/content/pdf/10.1007/s44288-026-00639-7.pdf",
-      "concepts": [
-        "Ecosystem",
-        "Ecology",
-        "Habitat",
-        "Geography",
-        "Environmental resource management",
-        "Environmental science"
-      ],
-      "openalex_url": "https://openalex.org/W7169599398",
-      "ai_analysis": null
-    },
-    {
-      "id": "W7138886055",
-      "source": "openalex",
-      "title": "Mammalian persistence and conservation priorities in a fragmented tropical refuge of Bangladesh",
-      "abstract": "Global mammalian diversity is declining rapidly due to habitat loss, fragmentation, and weak enforcement of conservation measures, raising fundamental questions about species persistence in human-modified landscapes. Protected areas serve as critical refuges, yet many in South Asia are small, degraded, and embedded within heavily human-dominated settings. In Bangladesh, Inani National Park supports iconic mammals, including the Endangered Asian Elephant and the Western Hoolock Gibbon. Despite serving as a corridor, the refuge’s conservation efficacy under increasing pressure remains poorly understood. To assess drivers of persistence and inform spatial management, we conducted a year-long survey (November 2022–November 2023) combining systematic line transects and extensive camera trapping (4771 trap-days). We documented 23 wild mammal species, including three globally Endangered and four Vulnerable taxa. Habitat gradients strongly shaped persistence: shrublands supported the highest richness, peaking in the monsoon, whereas plantations and modified habitats were least rich and diverse. Occupancy modelling revealed sharp contrasts in site use: the Asian Elephant showed near-complete occupancy (ψ = 1.00), whereas elusive carnivores such as the clouded leopard were rarely detected (ψ = 0.24; p = 0.04). Our findings highlight INP’s role as a key refuge and corridor, but also threats from deforestation, encroachment, and livestock grazing. Conservation priorities include restoring degraded habitats with native vegetation, strengthening boundary protection in high-diversity zones, and implementing community-based measures to mitigate human-elephant conflict. Targeted, evidence-based interventions are essential to secure the long-term persistence of Bangladesh’s priority mammal community.",
-      "authors": [
-        "Bipul Krishna Das",
-        "Mohammad Firoj Jaman",
-        "Mohammed Jashimuddin",
-        "Arnob Saha",
-        "Babla Mohajan",
-        "Pradip Kumar Sarker"
-      ],
-      "year": 2026,
-      "journal": "Journal for Nature Conservation",
-      "cited_by_count": 0,
-      "doi": "https://doi.org/10.1016/j.jnc.2026.127281",
-      "is_oa": true,
-      "oa_url": "https://doi.org/10.1016/j.jnc.2026.127281",
-      "concepts": [
-        "Endangered species",
-        "Geography",
-        "Ecology",
-        "Asian elephant",
-        "Habitat",
-        "Habitat destruction"
-      ],
-      "openalex_url": "https://openalex.org/W7138886055",
-      "ai_analysis": null
-    },
-    {
       "id": "W645030443",
       "source": "openalex",
       "title": "Disease is a major cause of livestock loss in villages surrounding western Serengeti, Tanzania",
@@ -156981,39 +157685,6 @@
         "Ethnology"
       ],
       "openalex_url": "https://openalex.org/W2024983932",
-      "ai_analysis": null
-    },
-    {
-      "id": "W7127453579",
-      "source": "openalex",
-      "title": "Kózkowate (Coleoptera: Cerambycidae) Biebrzańskiego Parku Narodowego i jego otuliny",
-      "abstract": "The aim of this study was to investigate the distribution, habitat preferences, host plants, and other aspects of the biology of longhorn beetles, as well as to identify threats to individual species and propose measures for their mitigation within the Biebrza Valley, particularly in Biebrza National Park (BbNP). The paper presents the results of field research conducted between 1982 and 2025 (with periodic breaks) in the Biebrza Valley (NE Poland). A total of 95 Cerambycidae species were recorded in the study area, representing 48% of the Polish longhorn beetle fauna. Ninety-two species were found within the BbNP boundaries, while three species were recorded from its buffer zone exclusively. The highest species richness was observed in the Middle Basin (83 species) and the Lower Basin (78 species), whereas the Upper Basin yielded 54 species. The most widely distributed species was Strangalia attenuata, recorded in sixteen UTM squares (10x10 km) and common in all three Biebrza basins. Stenurella nigra occurred in fourteen squares, while Grammoptera ruficornis, Rhagium mordax, and S. melanura were found in thirteen squares. Among the longhorn beetle species identified in the Biebrza Valley, eleven were classified as very rare and should be considered as \"species of special concern\". These included Cerambyx scopolii, Cyrtoclytus capra, Molorchus marmottani, Euracmaeops septentrionis, Leptura thoracica, Lepturalia nigripes, Aegomorphus obscurior, Exocentrus stierlini, Oberea euphorbiae, O. pupillata, and Saperda similis. Among all recorded cerambycid species, 76 were documented based on rearing from plant material (dead wood, twigs etc.) of various host plants. These comprised 24 plant species: 21 woody plants – trees and shrubs – and three herbaceous species. Broad-leaved trees and shrubs were dominant, as only two coniferous species (Pinus sylvestris and Picea abies) were confirmed as hosts. The highest number of species developed on Quercus robur (23), followed by P. sylvestris and P. abies (17), Salix spp. (12), Betula pendula and Alnus glutinosa (11 each). Other plant species hosted between one and nine Cerambycidae species. The species with the broadest host plant range were Rhagium mordax (eight species), Saperda scalaris (six), and both Anaesthetis Testacea and S. attenuata (five each). Noteworthy host associations included Clytus arietis on Frangula alnus, A. obscurior on A. glutinosa, and Exocentrus punctipennis on Q. robur. Two species found in the Biebrza Valley – C. scopolii and L. thoracica – are under partial protection in Poland. Several other species are included in the Polish Red List of Threatened and Endangered Animals, including L. nigripes, classified as Critically Endangered (CR), and L. thoracica as Vulnerable (VU). L. thoracica is also listed among the relic saproxylic beetles of Central Europe in the group of relics sensu stricto. No major threats have been identified for most saproxylic Cerambycidae species, with one exception. Comparison of recent data (2021–2025) with earlier records (1982–2011) has revealed concerning signs of a declining trend in the local population of A. obscurior. Threats were also identified for certain species developing in herbaceous plants. These include: − ecological succession (encroachment of woody vegetation in open areas leading to increased shading), accelerated by drainage and lowering of groundwater levels; a threat to, for example, Agapanthia intermedia, O. euphorbiae, and Phytoecia virgula; − lack of suitable host trees or shrubs for infestation, such as sun-exposed oaks (A. obscurior, C. scopolii), fire weakened/killed birches (L. nigripes), and old honeysuckle shrubs (O. pupillata); − disruption in the continuity and regeneration of host plants, potentially leading to the degradation of breeding habitats, especially for A. obscurior and, to a lesser extent, for C. scopolii, which can develop in other tree species; − small population size and isolation, which pose threats for species such as C. scopolii, L. nigripes, and O. euphorbiae; entomological poachin; − illegal collection of imagines or larvae with their host material (infested wood) of collector-attractive species. Documented cases include attempts at illegall collection of A. obscurior. For certain species (e.g. A. obscurior, C. scopolii, L. nigripes), active conservation measures are essential to preserve their populations. For most saproxylic species, passive conservation is highly effective if the protected area is sufficiently large. It is recommended that such protection be implemented in forests with a natural or near-natural character, or in those with the potential to become natural (e.g. parts of the Grzędy forest, the Las Trzyrzeczki tree stand, and the Kopciowe complex). The immediate acquisition of ecologically valuable areas (sites of rare Coleoptera occurrence) currently in private or military ownership within or around BbNP is strongly advised. Monitoring is proposed for one saproxylic beetle species (C. capra) and one species developing in herbaceous plants (O. euphorbiae).",
-      "authors": [
-        "Jerzy M. Gutowski",
-        "Jacek Hilszczański",
-        "Jacek Kurzawa",
-        "Andrzej Lasoń",
-        "Radosław Lewa",
-        "Paweł Górski",
-        "Wojciech Jędryczkowski",
-        "Roman Królik",
-        "Jan Tatur-Dytkowski"
-      ],
-      "year": 2026,
-      "journal": "Forest Research Papers",
-      "cited_by_count": 0,
-      "doi": "https://doi.org/10.48538/lpb-2026-0001",
-      "is_oa": true,
-      "oa_url": "https://doi.org/10.48538/lpb-2026-0001",
-      "concepts": [
-        "Longhorn beetle",
-        "Species richness",
-        "Habitat",
-        "Structural basin",
-        "Host (biology)",
-        "Ecology"
-      ],
-      "openalex_url": "https://openalex.org/W7127453579",
       "ai_analysis": null
     },
     {
@@ -157192,33 +157863,6 @@
       "ai_analysis": null
     },
     {
-      "id": "W7162681597",
-      "source": "openalex",
-      "title": "Gate Fees and Gas Tanks: The Economics of U.S. National Park Visitations",
-      "abstract": "Understanding how park charges and travel-related expenses affect visitation patterns in U.S. national parks is critical amid rising concerns over overcrowding, funding gaps, and public accessibility. Drawing on the economic theory of price elasticity of demand and extending the work of Stevens et al. (2014), this study used 30 years of panel data from 30 national parks to assess how visitation levels respond to changes in entrance fees and fuel prices. Ordinary least squares (OLS) and estimated generalized least squares with fixed effects (FEGLS) regression models were employed to measure price sensitivity and identify variations across parks. Building on prior work, the study empirically assessed whether price responsiveness differed by park popularity and proximity to urban centers, offering insights for more targeted park management strategies. The findings indicate that national park visitation levels are insensitive to changes in entrance fees and are modestly responsive to changes in fuel prices. Fuel prices had a consistently stronger influence on visitation than entrance fees, underscoring the broader travel-related expenses visitors face. Popular parks and those located near urban centers did not exhibit lower sensitivity to price changes than less visited or non-urban parks. Several managerial implications emerge. Modest entrance fee increases are unlikely to deter most visitors and could be used to strengthen park operations, maintenance, and resource management. Dynamic pricing strategies, such as peak-season surcharges, could help manage congestion without significantly diminishing public accessibility. Furthermore, the findings highlight the importance of tailoring management strategies to the characteristics of individual parks rather than implementing uniform, system-wide policies. For example, because fuel costs represent a major component of total trip expenses, parks located farther from urban areas require different pricing and transportation strategies. The implications of this study extend beyond the National Park Service to state parks, regional recreation systems, and public lands agencies facing similar challenges. Grounded in economic theory and informed by an update to a widely cited study, this research offers actionable perspectives to park and recreation administrators who strive to balance financial sustainability with broad public accessibility.",
-      "authors": [
-        "Susan Steiner",
-        "John Stinespring",
-        "Suzanne Dieringer"
-      ],
-      "year": 2026,
-      "journal": "Journal of Park and Recreation Administration",
-      "cited_by_count": 0,
-      "doi": "https://doi.org/10.18666/jpra-2026-13064",
-      "is_oa": false,
-      "oa_url": "",
-      "concepts": [
-        "Popularity",
-        "Recreation",
-        "Ordinary least squares",
-        "National park",
-        "Public economics",
-        "Price elasticity of demand"
-      ],
-      "openalex_url": "https://openalex.org/W7162681597",
-      "ai_analysis": null
-    },
-    {
       "id": "W3202572278",
       "source": "openalex",
       "title": "ANALYSIS OF ECOTOURISM ENTRANCE TARIFF THE CASE OF BROMO TENGGER SEMERU NATIONAL PARK, INDONESIA",
@@ -157242,34 +157886,6 @@
         "Visitor pattern"
       ],
       "openalex_url": "https://openalex.org/W3202572278",
-      "ai_analysis": null
-    },
-    {
-      "id": "W7134025551",
-      "source": "openalex",
-      "title": "One year after the adjustment of Galápagos entrance fees: Are there changes in tourist demand?",
-      "abstract": "The Galápagos Islands face the challenge of conserving their biodiversity while moving toward a more sustainable tourism model. In August 2024, after 24 years without changes, the entrance fee for the Galápagos National Park and Marine Reserve was updated: from USD 100 to USD 200 for foreign visitors and from USD 6 to USD 30 for Ecuadorians. Comparing surveys conducted in 2024 and 2025, this policy brief examines how attitudes, spending, and satisfaction of tourists have evolved over time. Results show a decline in the share of visitors who were aware of the entrance fee adjustment, along with growing support for the measure among international tourists. Average spending and satisfaction levels remained stable for both domestic and foreign visitors, indicating that the adjustment did not affect tourism demand at the aggregate level. The findings highlight the need to strengthen participatory processes for co-creating and redesigning site-management plans; identify investment priorities for maintaining, renovating, and improving the accessibility of visit sites; and ensure transparent and efficient management of collected revenues to facilitate the timely implementation of conservation, ecological restoration, and local development actions.",
-      "authors": [
-        "Carlos A. Silva",
-        "Claudia Aravena",
-        "Eoin McLaughlin",
-        "Cesar Viteri"
-      ],
-      "year": 2026,
-      "journal": "Econstor (Econstor)",
-      "cited_by_count": 0,
-      "doi": "",
-      "is_oa": false,
-      "oa_url": "",
-      "concepts": [
-        "Tourism",
-        "Business",
-        "Revenue",
-        "Sustainability",
-        "Investment (military)",
-        "Citizen journalism"
-      ],
-      "openalex_url": "https://openalex.org/W7134025551",
       "ai_analysis": null
     },
     {
@@ -158199,34 +158815,6 @@
         "Geology"
       ],
       "openalex_url": "https://openalex.org/W4410001788",
-      "ai_analysis": null
-    },
-    {
-      "id": "W7164477355",
-      "source": "openalex",
-      "title": "Integration of Biodiversity Conservation with Sustainable Ecotourism in Sri Lanka",
-      "abstract": "Sri Lanka's status as a biodiversity hotspot underpins a tourism industry with the symbiotic potential to fund conservation and foster local stewardship. However, translating this model from a theoretical ideal into a successfully implemented practice remains a complex global challenge. The objective of this qualitative study was to find themes for a quantitative survey to further investigate the above mentioned model. Through qualitative analysis of semi-structured interviews with 15 frontline forest and wildlife officers from Hurulu forest reserve of Polonnaruwa, Knuckles conservation forest of Matale, Udawattakele forest reserve of Kandy, Sinharaja world heritage site of Ratnapura, and Wilpattu national park of Puttalam, this research captures the critical perspectives of those responsible for managing this delicate balance. The data reveal six pivotal themes essential for achieving sustainability. Firstly, strengthening governance and enforcement including improved revenue reinvestment and clearer regulatory frameworks can be done by reinvesting revenue generated from park entry fees, guided tours, and accommodations directly into conservation efforts, such as anti-poaching patrols, habitat restoration, and scientific research. Secondly, investing in capacity and infrastructure to address critical gaps in staffing, equipment, and visitor facilities such as well-designed trails, adequate waste disposal systems, and informative signage, can minimize ecological footprints. Thirdly, promoting genuine community partnership to ensure local communities can derive tangible benefits and become active conservation stakeholders. Fourthly, prioritization of education and interpretation for both tourists and locals can be done to foster pro-conservation behavior. Ensuring meaningful stakeholder participation in policy decisions was proposed as the next step for sustainability. Lastly, it was proposed to leverage digitalization for enhanced monitoring, management, and visitor experience. The findings were used as themes for further investigation using a quantitative study to illustrate the synergy between conservation and ecotourism is not automatic but must be consciously built by listening to and empowering its frontline forest officers and wildlife officers, addressing their operational challenges, and building robust partnerships with local communities. This study concludes that the insights of frontline officers are indispensable for formulating effective policies and provides an evidence-based framework for enhancing the sustainability of Sri Lanka's ecotourism sector while safeguarding its unique biodiversity for future generations. Keywords: Biodiversity, Ecotourism, Sustainability, Conservation, Restoration",
-      "authors": [
-        "E.J.M.J.K. Ekanayake",
-        "H.C. Fernando",
-        "E.C.S. Widyasekera",
-        "S.M.A.K. Manchanayakke"
-      ],
-      "year": 2026,
-      "journal": "Proceedings of International Forestry and Environment Symposium",
-      "cited_by_count": 0,
-      "doi": "https://doi.org/10.31357/fesympo.v30.8847",
-      "is_oa": true,
-      "oa_url": "https://doi.org/10.31357/fesympo.v30.8847",
-      "concepts": [
-        "Business",
-        "Environmental resource management",
-        "Ecotourism",
-        "Environmental planning",
-        "Stakeholder",
-        "Sustainability"
-      ],
-      "openalex_url": "https://openalex.org/W7164477355",
       "ai_analysis": null
     },
     {
