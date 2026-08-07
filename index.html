@@ -318,6 +318,13 @@ body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     <hr class="fl-divider">
 
     <div>
+      <div class="fl-title">연구 대상지</div>
+      <div class="score-btns" id="loc-btns"></div>
+    </div>
+
+    <hr class="fl-divider">
+
+    <div>
       <div class="fl-title">관련 업무 분야</div>
       <div id="work-fl"></div>
     </div>
@@ -363,8 +370,8 @@ body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI',
 /* ══════════════════════════════════════
    State
 ══════════════════════════════════════ */
-let ALL = [], FILTERED = [], tagIdx = {}, workIdx = {};
-const F = { q: '', app: new Set(), util: new Set(), work: new Set(), year: new Set(), tags: new Set() };
+let ALL = [], FILTERED = [], tagIdx = {}, workIdx = {}, locIdx = {};
+const F = { q: '', app: new Set(), util: new Set(), loc: new Set(), work: new Set(), year: new Set(), tags: new Set() };
 let selId = null;
 let pageSize = 10;
 let curPage = 1;
@@ -412,6 +419,7 @@ fetch('papers.json?v=' + Date.now(), { cache: 'no-store' })
     ALL     = data.papers || [];
     tagIdx  = data.tag_index || {};
     workIdx = data.work_area_index || {};
+    locIdx  = data.location_index || {};
     renderStats(data.meta || {});
     buildSidebar();
     applyFilter();
@@ -473,9 +481,38 @@ function buildScoreBtns(cid, fset) {
   el.appendChild(rst);
 }
 
+function buildLocationBtns(cid, fset) {
+  const el = document.getElementById(cid);
+  el.innerHTML = '';
+  const order = ['국내', '해외'];
+  order.forEach(loc => {
+    const b = document.createElement('button');
+    b.className = 'score-btn';
+    b.textContent = `${loc} (${locIdx[loc] || 0})`;
+    b.style.background = loc === '국내' ? '#dbeafe' : '#f1f5f9';
+    b.style.color      = loc === '국내' ? '#1d4ed8' : '#475569';
+    b.addEventListener('click', () => {
+      fset.has(loc) ? fset.delete(loc) : fset.add(loc);
+      b.classList.toggle('active', fset.has(loc));
+      applyFilter();
+    });
+    el.appendChild(b);
+  });
+  const rst2 = document.createElement('button');
+  rst2.className = 'score-btn-reset';
+  rst2.textContent = '전체';
+  rst2.addEventListener('click', () => {
+    fset.clear();
+    el.querySelectorAll('.score-btn').forEach(b => b.classList.remove('active'));
+    applyFilter();
+  });
+  el.appendChild(rst2);
+}
+
 function buildSidebar() {
   buildScoreBtns('app-btns',  F.app);
   buildScoreBtns('util-btns', F.util);
+  buildLocationBtns('loc-btns', F.loc);
 
   /* Work areas */
   const wc = document.getElementById('work-fl');
@@ -537,6 +574,7 @@ function applyFilter() {
     }
     if (F.app.size  && !F.app.has(ai.korea_np_applicability_score))  return false;
     if (F.util.size && !F.util.has(ai.practical_utility_score))       return false;
+    if (F.loc.size  && !F.loc.has(ai.study_location))                 return false;
     if (F.work.size && ![...(ai.related_work_areas||[])].some(a => F.work.has(a))) return false;
     if (F.year.size && !F.year.has(p.year)) return false;
     if (F.tags.size && ![...(ai.tags||[])].some(t => F.tags.has(t)))  return false;
