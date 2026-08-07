@@ -71,9 +71,6 @@ body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI',
   transition: all .15s; line-height: 1.3; }
 .loc-chip:hover { border-color: #93c5fd; color: var(--primary); }
 .loc-chip.active { border-color: var(--primary); background: var(--primary-dim); color: var(--primary); }
-.loc-chip-reset { font-size: 12px; font-weight: 500; padding: 7px 12px; border-radius: 999px;
-  border: 1px dashed var(--border); background: var(--border-2); color: var(--muted); cursor: pointer; }
-.loc-chip-reset:hover { background: var(--border); color: var(--text); }
 
 /* Checkbox filter */
 .cb-row { display: flex; align-items: center; gap: 7px; padding: 3px 0; cursor: pointer; }
@@ -507,15 +504,6 @@ function buildLocationBtns(cid, fset) {
     });
     el.appendChild(b);
   });
-  const rst2 = document.createElement('button');
-  rst2.className = 'loc-chip-reset';
-  rst2.textContent = '전체';
-  rst2.addEventListener('click', () => {
-    fset.clear();
-    el.querySelectorAll('.loc-chip').forEach(b => b.classList.remove('active'));
-    applyFilter();
-  });
-  el.appendChild(rst2);
 }
 
 function buildSidebar() {
