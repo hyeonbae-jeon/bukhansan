@@ -64,6 +64,17 @@ body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI',
   cursor: pointer; color: var(--muted); background: white; margin-left: 2px; }
 .score-btn-reset:hover { background: var(--border-2); }
 
+/* Location filter (연구 대상지) — pill buttons, 점수 원형 버튼과 별도 스타일 */
+.loc-btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.loc-chip { font-size: 13px; font-weight: 600; padding: 7px 14px; border-radius: 999px;
+  border: 1.5px solid var(--border); background: white; color: var(--muted); cursor: pointer;
+  transition: all .15s; line-height: 1.3; }
+.loc-chip:hover { border-color: #93c5fd; color: var(--primary); }
+.loc-chip.active { border-color: var(--primary); background: var(--primary-dim); color: var(--primary); }
+.loc-chip-reset { font-size: 12px; font-weight: 500; padding: 7px 12px; border-radius: 999px;
+  border: 1px dashed var(--border); background: var(--border-2); color: var(--muted); cursor: pointer; }
+.loc-chip-reset:hover { background: var(--border); color: var(--text); }
+
 /* Checkbox filter */
 .cb-row { display: flex; align-items: center; gap: 7px; padding: 3px 0; cursor: pointer; }
 .cb-row input { cursor: pointer; accent-color: var(--primary); }
@@ -319,7 +330,7 @@ body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI',
 
     <div>
       <div class="fl-title">연구 대상지</div>
-      <div class="score-btns" id="loc-btns"></div>
+      <div class="loc-btns" id="loc-btns"></div>
     </div>
 
     <hr class="fl-divider">
@@ -487,10 +498,8 @@ function buildLocationBtns(cid, fset) {
   const order = ['국내', '해외'];
   order.forEach(loc => {
     const b = document.createElement('button');
-    b.className = 'score-btn';
+    b.className = 'loc-chip';
     b.textContent = `${loc} (${locIdx[loc] || 0})`;
-    b.style.background = loc === '국내' ? '#dbeafe' : '#f1f5f9';
-    b.style.color      = loc === '국내' ? '#1d4ed8' : '#475569';
     b.addEventListener('click', () => {
       fset.has(loc) ? fset.delete(loc) : fset.add(loc);
       b.classList.toggle('active', fset.has(loc));
@@ -499,11 +508,11 @@ function buildLocationBtns(cid, fset) {
     el.appendChild(b);
   });
   const rst2 = document.createElement('button');
-  rst2.className = 'score-btn-reset';
+  rst2.className = 'loc-chip-reset';
   rst2.textContent = '전체';
   rst2.addEventListener('click', () => {
     fset.clear();
-    el.querySelectorAll('.score-btn').forEach(b => b.classList.remove('active'));
+    el.querySelectorAll('.loc-chip').forEach(b => b.classList.remove('active'));
     applyFilter();
   });
   el.appendChild(rst2);
