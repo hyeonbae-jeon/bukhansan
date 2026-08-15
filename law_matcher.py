@@ -17,6 +17,14 @@ AI가 생성한 법령명을 그대로 둡니다(기존 동작과 동일).
 실제로는 JSON 요청이 안정적으로 동작하지 않는 사례가 다수 보고되어 있습니다.
 그래서 이 모듈은 공식 문서·실제 응답 사례 모두에서 안정적으로 확인되는
 XML 응답을 파싱합니다.
+
+주의(클라우드 IP 차단 가능성): law.go.kr는 AWS/GCP/Azure 등 클라우드 호스팅 IP
+대역에서 오는 요청을 봇으로 간주해 차단하는 사례가 보고되어 있습니다. GitHub
+Actions의 실행 서버도 Azure 클라우드 IP를 쓰기 때문에, Actions에서 이 모듈을
+호출하면 연결이 타임아웃되며 실패할 수 있습니다(코드 문제가 아님). 아래
+브라우저 User-Agent 위장으로 일부 케이스는 우회되지만, 방화벽 단계에서 IP
+자체를 막는 경우엔 이것으로도 해결되지 않을 수 있습니다 — 그럴 땐 Actions가
+아닌 일반 네트워크(개인 PC 등)에서 실행해야 합니다.
 """
 import re
 import time
@@ -24,6 +32,12 @@ import requests
 import xml.etree.ElementTree as ET
 
 LAW_SEARCH_URL = "https://www.law.go.kr/DRF/lawSearch.do"
+
+# 클라우드 호스팅 IP에서의 봇 차단을 일부라도 피해보기 위한 일반 브라우저 UA 위장
+_HEADERS = {
+    "User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                    "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"),
+}
 
 # "자연공원법 제30조", "자연공원법 제3조제1항" 등에서 조항 표기를 떼어내기 위한 패턴
 _ARTICLE_SUFFIX = re.compile(r"\s*제\s*\d+.*$")
@@ -55,7 +69,8 @@ def search_law(law_name: str, oc: str) -> dict | None:
                 "query": law_name,
                 "display": 5,
             },
-            timeout=15,
+            headers=_HEADERS,
+            timeout=5,
         )
         r.raise_for_status()
         # law.go.kr 응답은 자체 XML 선언에 인코딩이 명시되어 있으므로 r.content(바이트)를
