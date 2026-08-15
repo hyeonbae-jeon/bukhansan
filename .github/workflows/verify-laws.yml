@@ -1,0 +1,50 @@
+name: Verify Related Laws (Backfill)
+
+# 이미 분석된 논문들의 related_laws를 국가법령정보 API로 검증/교체하는
+# 일회성/재실행 가능 백필 작업입니다. 매일 자동 실행되는 pipeline.yml과는
+# 별개로, 필요할 때 수동으로만 실행합니다.
+on:
+  workflow_dispatch:
+    inputs:
+      time_budget_sec:
+        description: '이번 실행에서 검증에 쓸 최대 시간(초, 기본 1200초=20분)'
+        required: false
+        default: '1200'
+
+jobs:
+  verify-laws:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: papers-pipeline   # collector/enricher와 동시에 raw_papers.json을 건드리지 않도록 같은 그룹 사용
+      cancel-in-progress: false
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run backfill
+        run: python verify_related_laws_backfill.py
+        env:
+          LAW_API_OC: ${{ secrets.LAW_API_OC }}
+          LAW_VERIFY_TIME_BUDGET_SEC: ${{ github.event.inputs.time_budget_sec }}
+
+      - name: Rebuild papers.json
+        run: python indexer.py
+
+      - name: Commit updated papers
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add raw_papers.json papers.json
+          git diff --staged --quiet || git commit -m "chore: verify related_laws against law.go.kr (backfill)"
+          git push
