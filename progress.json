@@ -63,6 +63,10 @@
     "national park wildlife management": "2026-09-14",
     "national park zoning planning": "2026-09-15"
   },
-  "fail_counts": {},
-  "updated_at": "2026-09-27T08:49:15.659281"
+  "fail_counts": {
+    "national park trail management": 1,
+    "national park visitor management": 1,
+    "national park ecosystem monitoring": 1
+  },
+  "updated_at": "2026-09-28T09:24:59.059238"
 }
