@@ -27,12 +27,12 @@
     "bukhansan": "2026-08-03",
     "national park accessibility disability": "2026-09-15",
     "national park air quality monitoring": "2026-09-15",
-    "national park biodiversity conservation": "2026-09-14",
+    "national park biodiversity conservation": "2026-09-29",
     "national park boundary encroachment": "2026-09-15",
     "national park camping impact": "2026-09-15",
     "national park carrying capacity": "2026-09-15",
     "national park citizen science monitoring": "2026-09-15",
-    "national park climate change adaptation": "2026-09-15",
+    "national park climate change adaptation": "2026-09-29",
     "national park community engagement": "2026-09-15",
     "national park cultural heritage management": "2026-09-15",
     "national park disaster risk management": "2026-09-15",
@@ -53,20 +53,21 @@
     "national park signage interpretation": "2026-09-15",
     "national park soil erosion control": "2026-09-16",
     "national park tourism impact": "2026-09-15",
-    "national park trail erosion": "2026-09-14",
+    "national park trail erosion": "2026-09-29",
     "national park trail management": "2026-09-14",
     "national park visitor experience": "2026-09-15",
     "national park visitor management": "2026-09-14",
     "national park volunteer program": "2026-09-16",
     "national park water quality monitoring": "2026-09-15",
     "national park wetland management": "2026-09-15",
-    "national park wildlife management": "2026-09-14",
+    "national park wildlife management": "2026-09-29",
     "national park zoning planning": "2026-09-15"
   },
   "fail_counts": {
     "national park trail management": 1,
     "national park visitor management": 1,
-    "national park ecosystem monitoring": 1
+    "national park ecosystem monitoring": 1,
+    "national park carrying capacity": 1
   },
-  "updated_at": "2026-09-28T09:24:59.059238"
+  "updated_at": "2026-09-29T09:33:10.918263"
 }
