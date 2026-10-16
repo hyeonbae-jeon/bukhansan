@@ -3,10 +3,10 @@
     "Bukhansan": "2026-10-01",
     "Byeonsanbando": "2026-10-01",
     "Chiaksan": "2026-10-01",
-    "Dadohaehaesang": "2026-10-01",
+    "Dadohaehaesang": "2026-10-16",
     "Deogyusan": "2026-10-01",
     "Gayasan": "2026-10-01",
-    "Geumjeongsan": "2026-10-01",
+    "Geumjeongsan": "2026-10-16",
     "Gyeongju": "2026-10-01",
     "Gyeryongsan": "2026-10-01",
     "Hallasan": "2026-10-01",
@@ -69,7 +69,13 @@
     "national park ecosystem monitoring": 1,
     "national park carrying capacity": 1,
     "national park accessibility disability": 1,
-    "national park volunteer program": 1
+    "national park volunteer program": 1,
+    "national park noise light pollution": 1,
+    "Gayasan": 1,
+    "Gyeongju": 1,
+    "Gyeryongsan": 1,
+    "Naejangsan": 1,
+    "Deogyusan": 1
   },
-  "updated_at": "2026-10-15T08:05:38.584810"
+  "updated_at": "2026-10-16T07:58:08.221069"
 }
