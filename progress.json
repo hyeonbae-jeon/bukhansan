@@ -1,7 +1,7 @@
 {
   "completed_keywords": {
     "Bukhansan": "2026-10-01",
-    "Byeonsanbando": "2026-10-01",
+    "Byeonsanbando": "2026-10-17",
     "Chiaksan": "2026-10-01",
     "Dadohaehaesang": "2026-10-16",
     "Deogyusan": "2026-10-01",
@@ -75,7 +75,13 @@
     "Gyeongju": 1,
     "Gyeryongsan": 1,
     "Naejangsan": 1,
-    "Deogyusan": 1
+    "Deogyusan": 1,
+    "Mudeungsan": 1,
+    "Bukhansan": 1,
+    "Seoraksan": 1,
+    "Sobaeksan": 1,
+    "Songnisan": 1,
+    "Odaesan": 1
   },
-  "updated_at": "2026-10-16T07:58:08.221069"
+  "updated_at": "2026-10-17T07:35:52.479669"
 }
