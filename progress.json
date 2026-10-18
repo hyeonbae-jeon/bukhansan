@@ -20,9 +20,9 @@
     "Seoraksan": "2026-10-01",
     "Sobaeksan": "2026-10-01",
     "Songnisan": "2026-10-01",
-    "Taeanhaean": "2026-10-01",
+    "Taeanhaean": "2026-10-18",
     "Taebaeksan": "2026-10-01",
-    "Wolchulsan": "2026-10-01",
+    "Wolchulsan": "2026-10-18",
     "Woraksan": "2026-10-01",
     "bukhansan": "2026-08-03",
     "national park accessibility disability": "2026-10-01",
@@ -81,7 +81,13 @@
     "Seoraksan": 1,
     "Sobaeksan": 1,
     "Songnisan": 1,
-    "Odaesan": 1
+    "Odaesan": 1,
+    "Woraksan": 1,
+    "Juwangsan": 1,
+    "Jirisan": 1,
+    "Chiaksan": 1,
+    "Taebaeksan": 1,
+    "Palgongsan": 1
   },
-  "updated_at": "2026-10-17T07:35:52.479669"
+  "updated_at": "2026-10-18T07:50:21.559063"
 }
