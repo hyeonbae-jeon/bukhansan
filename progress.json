@@ -68,12 +68,12 @@
     "national park visitor management": 2,
     "national park ecosystem monitoring": 2,
     "national park carrying capacity": 2,
-    "national park accessibility disability": 1,
-    "national park volunteer program": 1,
-    "national park noise light pollution": 1,
-    "Gayasan": 1,
-    "Gyeongju": 1,
-    "Gyeryongsan": 1,
+    "national park accessibility disability": 2,
+    "national park volunteer program": 2,
+    "national park noise light pollution": 2,
+    "Gayasan": 2,
+    "Gyeongju": 2,
+    "Gyeryongsan": 2,
     "Naejangsan": 1,
     "Deogyusan": 1,
     "Mudeungsan": 1,
@@ -91,5 +91,5 @@
     "Hallyeohaesang": 1,
     "Hallasan": 1
   },
-  "updated_at": "2026-10-19T08:32:39.564307"
+  "updated_at": "2026-10-20T08:16:35.836984"
 }
