@@ -74,12 +74,12 @@
     "Gayasan": 2,
     "Gyeongju": 2,
     "Gyeryongsan": 2,
-    "Naejangsan": 1,
-    "Deogyusan": 1,
-    "Mudeungsan": 1,
-    "Bukhansan": 1,
-    "Seoraksan": 1,
-    "Sobaeksan": 1,
+    "Naejangsan": 2,
+    "Deogyusan": 2,
+    "Mudeungsan": 2,
+    "Bukhansan": 2,
+    "Seoraksan": 2,
+    "Sobaeksan": 2,
     "Songnisan": 1,
     "Odaesan": 1,
     "Woraksan": 1,
@@ -91,5 +91,5 @@
     "Hallyeohaesang": 1,
     "Hallasan": 1
   },
-  "updated_at": "2026-10-20T08:16:35.836984"
+  "updated_at": "2026-10-21T08:22:27.763665"
 }
