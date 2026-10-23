@@ -64,8 +64,8 @@
     "national park zoning planning": "2026-10-14"
   },
   "fail_counts": {
-    "national park trail management": 2,
-    "national park visitor management": 2,
+    "national park trail management": 3,
+    "national park visitor management": 3,
     "national park ecosystem monitoring": 2,
     "national park carrying capacity": 2,
     "national park accessibility disability": 2,
@@ -86,10 +86,10 @@
     "Juwangsan": 2,
     "Jirisan": 2,
     "Chiaksan": 2,
-    "Taebaeksan": 1,
-    "Palgongsan": 1,
-    "Hallyeohaesang": 1,
-    "Hallasan": 1
+    "Taebaeksan": 2,
+    "Palgongsan": 2,
+    "Hallyeohaesang": 2,
+    "Hallasan": 2
   },
-  "updated_at": "2026-10-22T08:23:23.861671"
+  "updated_at": "2026-10-23T08:21:01.178657"
 }
