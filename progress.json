@@ -66,12 +66,12 @@
   "fail_counts": {
     "national park trail management": 3,
     "national park visitor management": 3,
-    "national park ecosystem monitoring": 2,
-    "national park carrying capacity": 2,
-    "national park accessibility disability": 2,
-    "national park volunteer program": 2,
-    "national park noise light pollution": 2,
-    "Gayasan": 2,
+    "national park ecosystem monitoring": 3,
+    "national park carrying capacity": 3,
+    "national park accessibility disability": 3,
+    "national park volunteer program": 3,
+    "national park noise light pollution": 3,
+    "Gayasan": 3,
     "Gyeongju": 2,
     "Gyeryongsan": 2,
     "Naejangsan": 2,
@@ -91,5 +91,5 @@
     "Hallyeohaesang": 2,
     "Hallasan": 2
   },
-  "updated_at": "2026-10-23T08:21:01.178657"
+  "updated_at": "2026-10-24T07:59:52.321826"
 }
