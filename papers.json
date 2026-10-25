@@ -1,16 +1,16 @@
 {
   "meta": {
-    "total": 5672,
-    "analyzed": 5626,
+    "total": 5673,
+    "analyzed": 5627,
     "avg_applicability": 3.7,
     "avg_utility": 3.7,
-    "high_applicability_count": 3476,
+    "high_applicability_count": 3477,
     "score_distribution": {
       "1": 90,
       "2": 391,
       "3": 1668,
       "4": 2334,
-      "5": 1142
+      "5": 1143
     },
     "year_distribution": {
       "1895": 1,
@@ -79,9 +79,9 @@
       "2023": 248,
       "2024": 279,
       "2025": 341,
-      "2026": 320
+      "2026": 321
     },
-    "updated_at": "2026-10-24T08:16:06.070429"
+    "updated_at": "2026-10-25T08:11:05.101068"
   },
   "tag_index": {
     "국립공원관리": 307,
@@ -146,12 +146,12 @@
     "지불의사액": 44
   },
   "work_area_index": {
-    "생태계 모니터링·조사": 2789,
+    "생태계 모니터링·조사": 2790,
     "탐방로·탐방객 관리": 2574,
     "자원보전·복원": 1878,
     "지역사회·거버넌스": 1558,
     "공원계획·구역관리": 1301,
-    "야생생물·서식지 관리": 1248,
+    "야생생물·서식지 관리": 1249,
     "탐방객 서비스·안전": 669,
     "환경 모니터링": 613,
     "기후변화 대응": 599,
@@ -161,7 +161,7 @@
   },
   "location_index": {
     "해외": 4500,
-    "국내": 1126
+    "국내": 1127
   },
   "papers": [
     {
@@ -101779,6 +101779,96 @@
           "도서지역 해양 불교 신앙"
         ],
         "analyzed_at": "2026-10-18T08:00:06Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W7223135275",
+      "source": "openalex",
+      "title": "Assessing mammal diversity in a national park containing a military zone: a case study from Gyeryongsan National Park",
+      "abstract": "Abstract Military zones (MZs) can provide important opportunities for conserving natural ecosystems. Gyeryongsan National Park contains both MZs and non-military zones (NMZs), offering a setting to assess the role of MZs in biodiversity conservation. To examine medium- and large-sized mammal distribution, we deployed 21 camera-traps from May to November 2021—six in the MZ and 15 in the NMZ—and compiled 36 environmental predictors across multiple spatial scales. Temporal activity patterns were compared between zones using kernel density estimation, and spatial habitat use was assessed with Bayesian single-species occupancy models. Community composition was broadly similar between zones; however, two disturbance-sensitive carnivores, the leopard cat ( Prionailurus bengalensis ) and yellow-throated marten ( Martes flavigula ), differed in their spatiotemporal responses. The leopard cat showed higher estimated occupancy in the MZ, whereas the marten exhibited zone-specific diel activity patterns. In contrast, several more disturbance-tolerant or generalist species, including water deer ( Hydropotes inermis ), wild boar ( Sus scrofa ), raccoon dog ( Nyctereutes procyonoides ), and Asian badger ( Meles leucurus ) were more strongly associated with the NMZ. Taken together, our results suggest that MZs can function as low-disturbance refuges for sensitive species and provide conservation value complementary to NMZs, although long-term, multi-site monitoring is needed to determine whether these findings can be generalized across military zones.",
+      "authors": [
+        "Mihyeon Kim",
+        "Chaeho Noe",
+        "Hyo Gyeom Kim",
+        "Jeong Chan Moon",
+        "Eui-Kyeong Kim",
+        "Sungwon Hong"
+      ],
+      "year": 2026,
+      "journal": "BMC Zoology",
+      "cited_by_count": 0,
+      "doi": "https://doi.org/10.1186/s40850-026-00296-w",
+      "is_oa": true,
+      "oa_url": "https://doi.org/10.1186/s40850-026-00296-w",
+      "concepts": [
+        "Leopard",
+        "National park",
+        "Meles",
+        "Geography",
+        "Habitat",
+        "Occupancy"
+      ],
+      "openalex_url": "https://openalex.org/W7223135275",
+      "ai_analysis": {
+        "title_ko": "군사구역을 포함한 국립공원 내 포유류 다양성 평가: 계룡산국립공원 사례 연구",
+        "abstract_ko": "군사구역(MZ)은 자연 생태계 보전을 위한 중요한 기회를 제공할 수 있다. 계룡산국립공원은 군사구역과 비군사구역(NMZ)을 모두 포함하고 있어 생물다양성 보전에서 군사구역의 역할을 평가할 수 있는 환경을 제공한다. 중대형 포유류의 분포를 조사하기 위해 2021년 5월부터 11월까지 21대의 무인센서카메라를 설치(군사구역 6대, 비군사구역 15대)하였고, 여러 공간 규모에 걸쳐 36개의 환경 예측 변수를 수집하였다. 시간적 활동 패턴은 커널 밀도 추정을 사용하여 구역 간 비교하였으며, 공간적 서식지 이용은 베이지안 단일 종 점유 모델을 사용하여 평가하였다. 군사구역과 비군사구역 간의 군집 구성은 전반적으로 유사했으나, 교란에 민감한 두 육식동물인 삵과 담비는 시공간적 반응에서 차이를 보였다. 삵은 군사구역에서 더 높은 점유율을 보였고, 담비는 구역별로 다른 일일 활동 패턴을 나타냈다. 반면, 고라니, 멧돼지, 너구리, 멧토끼 등 교란에 더 강한 내성을 보이거나 일반종인 동물들은 비군사구역과 더 강한 연관성을 보였다. 종합하자면, 본 연구 결과는 장기적인 다지점 모니터링이 필요하겠지만 군사구역이 민감한 종들을 위한 저교란 피난처로 기능하며 비군사구역을 보완하는 보전 가치를 제공할 수 있음을 시사한다.",
+        "summary_3lines": [
+          "군사구역이 국립공원 내 야생동물의 서식에 미치는 영향을 파악하기 위해 계룡산국립공원의 군사구역과 비군사구역에서 포유류 분포를 조사함",
+          "무인센서카메라 조사 결과, 삵과 같은 교란 민감종은 군사구역에서 높은 점유율을 보인 반면 일반종은 비군사구역과 더 강한 연관성을 나타냄",
+          "군사구역이 인위적 간섭이 적은 피난처 역할을 하므로, 향후 국립공원 내 군사보호구역 관리 시 생태계 보전 기능을 적극 반영해야 함"
+        ],
+        "research_purpose": "본 연구는 군사구역이 포함된 국립공원에서 군사구역이 포유류의 분포와 서식지 이용에 미치는 영향을 평가하는 것을 목적으로 한다. 특히 인간의 출입이 통제되는 군사구역이 교란에 민감한 포유류 종들에게 저교란 피난처 역할을 하는지 분석하고자 하였다.",
+        "key_findings": [
+          "포유류의 전반적인 군집 구성은 군사구역과 비군사구역 간에 유사함",
+          "교란에 민감한 육식동물인 삵은 군사구역에서 더 높은 서식 점유율을 보임",
+          "고라니, 멧돼지 등 교란에 강한 일반종은 주로 비군사구역에 분포함"
+        ],
+        "practical_applications": [
+          "국립공원 내 군사구역 인근 생태계 조사 시 군사당국과 협력하여 무인센서카메라 설치 지점을 확대함",
+          "삵, 담비 등 교란 민감종의 보호를 위해 군사구역 경계부의 인위적 간섭을 최소화하는 완충지대 관리 방안을 마련함",
+          "국립공원 보전 및 용도지구 재정비 시 군사구역의 생태적 가치를 반영한 맞춤형 서식지 관리 전략을 수립함"
+        ],
+        "korea_np_applicability_score": 5,
+        "korea_np_applicability_reason": "한국의 많은 국립공원(계룡산, 북한산 등)이 군사시설 및 군사구역을 다수 포함하고 있어, 군사구역의 생태적 기능 평가 및 관리 방안이 현업에 즉시 적용될 수 있기 때문입니다.",
+        "study_location": "국내",
+        "related_work_areas": [
+          "생태계 모니터링·조사",
+          "야생생물·서식지 관리"
+        ],
+        "related_laws": [
+          "자연공원법 제18조",
+          "야생생물 보호 및 관리에 관한 법률 제4조"
+        ],
+        "field_checklist": [
+          "공원 내 군사구역 및 인접 지역의 중대형 포유류 서식 현황 파악 여부",
+          "무인센서카메라 설치 시 군사 작전 보안 및 안전 협조 절차 이행 여부",
+          "삵, 담비 등 주요 보호종의 출현 빈도 및 시간대별 활동 패턴 분석 여부",
+          "군사구역 경계부의 인위적 교란 요인(탐방객, 차량 등) 존재 여부 확인",
+          "비군사구역과 군사구역 간 종별 서식 특성 차이를 고려한 관리 계획 수립 여부"
+        ],
+        "practical_utility_score": 4,
+        "cautions": [
+          "군사구역 내 조사 시 군부대와의 사전 협조 및 보안 규정 준수가 필수적임",
+          "단기 조사의 한계를 보완하기 위해 계절별·장기적 모니터링 병행이 필요함"
+        ],
+        "tags": [
+          "군사구역",
+          "포유류 다양성",
+          "무인센서카메라",
+          "서식지 점유율",
+          "계룡산국립공원"
+        ],
+        "recommended_followup_research": [
+          "다년도 장기 모니터링을 통한 군사구역 내 포유류 개체군 변동 추이 분석",
+          "군사구역 출입 통제 수준 변화가 야생동물 행동권에 미치는 영향 연구"
+        ],
+        "ai_recommended_topics": [
+          "military zone wildlife conservation",
+          "camera-trap mammal occupancy national park",
+          "Gyeryongsan National Park biodiversity"
+        ],
+        "analyzed_at": "2026-10-25T08:10:58Z",
         "model": "gemini-flash-lite-latest"
       }
     },
