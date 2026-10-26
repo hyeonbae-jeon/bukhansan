@@ -78,12 +78,12 @@
     "Deogyusan": 3,
     "Mudeungsan": 3,
     "Bukhansan": 3,
-    "Seoraksan": 2,
-    "Sobaeksan": 2,
-    "Songnisan": 2,
-    "Odaesan": 2,
-    "Woraksan": 2,
-    "Juwangsan": 2,
+    "Seoraksan": 3,
+    "Sobaeksan": 3,
+    "Songnisan": 3,
+    "Odaesan": 3,
+    "Woraksan": 3,
+    "Juwangsan": 3,
     "Jirisan": 2,
     "Chiaksan": 2,
     "Taebaeksan": 2,
@@ -91,5 +91,5 @@
     "Hallyeohaesang": 2,
     "Hallasan": 2
   },
-  "updated_at": "2026-10-25T08:10:51.135170"
+  "updated_at": "2026-10-26T08:32:55.718614"
 }
