@@ -84,12 +84,16 @@
     "Odaesan": 3,
     "Woraksan": 3,
     "Juwangsan": 3,
-    "Jirisan": 2,
-    "Chiaksan": 2,
+    "Jirisan": 3,
+    "Chiaksan": 3,
     "Taebaeksan": 2,
     "Palgongsan": 2,
     "Hallyeohaesang": 2,
-    "Hallasan": 2
+    "Hallasan": 2,
+    "national park biodiversity conservation": 1,
+    "national park trail erosion": 1,
+    "national park wildlife management": 1,
+    "national park climate change adaptation": 1
   },
-  "updated_at": "2026-10-26T08:32:55.718614"
+  "updated_at": "2026-10-27T08:44:53.582488"
 }
