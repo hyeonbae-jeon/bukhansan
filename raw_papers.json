@@ -500464,5 +500464,30 @@
       "analyzed_at": "2026-10-25T08:10:58Z",
       "model": "gemini-flash-lite-latest"
     }
+  },
+  {
+    "id": "W7222559980",
+    "source": "openalex",
+    "title": "National Parks and the governance of the rural environment",
+    "abstract": "No description provided",
+    "authors": [
+      "NP Thompson"
+    ],
+    "year": 2008,
+    "journal": "Newcastle University ePrints (Newcastle Univesity)",
+    "cited_by_count": 0,
+    "doi": "https://doi.org/10.25405/ncl.34565958",
+    "is_oa": true,
+    "oa_url": "https://doi.org/10.25405/ncl.34565958",
+    "concepts": [
+      "Corporate governance",
+      "Business",
+      "Environmental planning",
+      "Economic growth",
+      "Environmental resource management",
+      "Government (linguistics)"
+    ],
+    "openalex_url": "https://openalex.org/W7222559980",
+    "ai_analysis": null
   }
 ]

@@ -93,7 +93,13 @@
     "national park biodiversity conservation": 1,
     "national park trail erosion": 1,
     "national park wildlife management": 1,
-    "national park climate change adaptation": 1
+    "national park climate change adaptation": 1,
+    "national park management effectiveness": 1,
+    "national park invasive species management": 1,
+    "national park fire management": 1,
+    "national park recreation ecology": 1,
+    "national park governance": 1,
+    "national park restoration ecology": 1
   },
-  "updated_at": "2026-10-27T08:44:53.582488"
+  "updated_at": "2026-10-28T09:23:03.849395"
 }

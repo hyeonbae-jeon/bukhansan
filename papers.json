@@ -1,6 +1,6 @@
 {
   "meta": {
-    "total": 5673,
+    "total": 5674,
     "analyzed": 5627,
     "avg_applicability": 3.7,
     "avg_utility": 3.7,
@@ -61,7 +61,7 @@
       "2005": 105,
       "2006": 111,
       "2007": 118,
-      "2008": 151,
+      "2008": 152,
       "2009": 149,
       "2010": 163,
       "2011": 185,
@@ -81,7 +81,7 @@
       "2025": 341,
       "2026": 321
     },
-    "updated_at": "2026-10-27T08:44:57.092836"
+    "updated_at": "2026-10-28T09:23:07.596915"
   },
   "tag_index": {
     "국립공원관리": 307,
@@ -500628,6 +500628,31 @@
         "Chemistry"
       ],
       "openalex_url": "https://openalex.org/W3041235490",
+      "ai_analysis": null
+    },
+    {
+      "id": "W7222559980",
+      "source": "openalex",
+      "title": "National Parks and the governance of the rural environment",
+      "abstract": "No description provided",
+      "authors": [
+        "NP Thompson"
+      ],
+      "year": 2008,
+      "journal": "Newcastle University ePrints (Newcastle Univesity)",
+      "cited_by_count": 0,
+      "doi": "https://doi.org/10.25405/ncl.34565958",
+      "is_oa": true,
+      "oa_url": "https://doi.org/10.25405/ncl.34565958",
+      "concepts": [
+        "Corporate governance",
+        "Business",
+        "Environmental planning",
+        "Economic growth",
+        "Environmental resource management",
+        "Government (linguistics)"
+      ],
+      "openalex_url": "https://openalex.org/W7222559980",
       "ai_analysis": null
     }
   ]
