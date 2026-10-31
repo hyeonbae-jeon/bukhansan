@@ -111,7 +111,13 @@
     "national park signage interpretation": 1,
     "national park camping impact": 1,
     "national park air quality monitoring": 1,
-    "national park water quality monitoring": 1
+    "national park water quality monitoring": 1,
+    "national park soil erosion control": 1,
+    "national park economic valuation": 1,
+    "national park community engagement": 1,
+    "national park drone remote sensing": 1,
+    "national park citizen science monitoring": 1,
+    "national park wetland management": 1
   },
-  "updated_at": "2026-10-30T09:34:37.900690"
+  "updated_at": "2026-10-31T09:21:11.507520"
 }

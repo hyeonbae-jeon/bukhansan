@@ -500914,5 +500914,263 @@
       "analyzed_at": "2026-10-30T09:35:25Z",
       "model": "gemini-flash-lite-latest"
     }
+  },
+  {
+    "id": "W3198595629",
+    "source": "openalex",
+    "title": "The effectiveness of reforestation and other practices in controlling soil erosion",
+    "abstract": "reforestation offers practically the only economical means for restoring the fertility to the land and protecting the soil from further erosion.The trees will yield many indirect benefits but they will also partially pay for themselves through the production of needed wooden commodities. WHAT IS SOIL EROSION?Soil erosion is a natural condition on the earth's surface, and is very old.For countless ages wind, rain, running water, and other natural forces have been wearing away the earth's surface.Many great valleys have been carved and many areas of land have been reduced to level plains.This type of erosion is called natural, normal, or geological, and proceeds at rates not in excess of those of soil formation.Many areas in southwestern United States such as the Grand Canyon National Park, have",
+    "authors": [
+      "Glenn M. Schaap"
+    ],
+    "year": 1941,
+    "journal": "Deep Blue (University of Michigan)",
+    "cited_by_count": 0,
+    "doi": "",
+    "is_oa": true,
+    "oa_url": "https://hdl.handle.net/2027.42/115420",
+    "concepts": [
+      "Reforestation",
+      "Erosion",
+      "Environmental science",
+      "Agroforestry",
+      "Forestry",
+      "Geography"
+    ],
+    "openalex_url": "https://openalex.org/W3198595629",
+    "ai_analysis": {
+      "title_ko": "토양 침식 통제를 위한 식생 복구 및 기타 관행의 효과성",
+      "abstract_ko": "식생 복구는 토지의 지력을 회복하고 추가적인 토양 침식으로부터 보호할 수 있는 사실상 유일하고 경제적인 수단을 제공합니다. 나무들은 많은 간접적 이점을 제공할 뿐만 아니라, 필요한 목재 자원의 생산을 통해 비용을 부분적으로 충당할 수 있습니다. 토양 침식이란 무엇인가? 토양 침식은 지구 표면에서 일어나는 자연스러운 현상이며 매우 오래되었습니다. 수많은 세월 동안 바람, 비, 흐르는 물 및 기타 자연력은 지구 표면을 마모시켜 왔습니다. 많은 거대한 계곡이 형성되었고 많은 토지가 평평한 평야로 줄어들었습니다. 이러한 유형의 침식은 자연적, 정상적, 또는 지질학적 침식이라고 불리며, 토양 생성 속도를 초과하지 않는 속도로 진행됩니다. 그랜드 캐니언 국립공원을 비롯한 미국 남서부의 많은 지역에는...",
+      "summary_3lines": [
+        "토양 침식을 방어하고 지력을 회복하기 위한 가장 경제적이고 효과적인 수단으로 식생 복구의 필요성을 분석함",
+        "바람과 물에 의한 자연적 침식 과정과 토양 생성 속도의 관계를 고찰함",
+        "황폐화된 보호구역의 토양 유실을 막기 위해 나무 식재와 목재 생산을 병행하는 현장 관리 방안을 제시함"
+      ],
+      "research_purpose": "본 연구는 자연적인 토양 침식의 개념을 이해하고, 지력 회복과 추가 침식 방지를 위한 가장 경제적인 대안으로서 식생 복구(조림)의 효과를 검증하는 것을 목적으로 합니다. 특히 자연력에 의한 지표면 마모 현상을 분석하고 보호구역 내 토양 보전 방안을 모색합니다.",
+      "key_findings": [
+        "식생 복구는 토지 생산성 회복과 침식 방지를 위한 가장 경제적인 수단임",
+        "식재된 나무는 생태계에 다양한 간접적 혜택을 제공하며 목재 생산을 통한 경제적 자립성 일부를 확보할 수 있음",
+        "토양 침식은 바람과 물 등에 의해 발생하는 자연적 현상이지만 속도 관리가 중요함"
+      ],
+      "practical_applications": [
+        "나지 및 훼손된 탐방로 주변 사면에 자생 수종을 중심으로 한 식생 복구 사업 시행",
+        "토양 유실이 심화되는 지역에 목재 부산물을 활용한 친환경 사면 안정화 시설 설치",
+        "토양 침식 모니터링을 통한 침식 속도 측정 및 자연적 토양 생성 속도와의 비교 검증"
+      ],
+      "korea_np_applicability_score": 4,
+      "korea_np_applicability_reason": "한국 국립공원 내 집중호우로 인한 훼손 탐방로 및 나지 사면의 토양 유실 방지, 생태계 복원 사업에 직접적으로 적용할 수 있는 보편적이고 실효성 있는 원리를 다루고 있음",
+      "study_location": "해외",
+      "related_work_areas": [
+        "자원보전·복원",
+        "탐방로·탐방객 관리",
+        "환경 모니터링"
+      ],
+      "related_laws": [
+        "자연공원법 제2조",
+        "산림자원의 조성 및 관리에 관한 법률 제18조"
+      ],
+      "field_checklist": [
+        "식생 복구 대상지의 토양 유실 깊이 및 면적 측정 여부",
+        "자생 수종 식재를 위한 적정 수종 선정 및 토양 적합성 검토 여부",
+        "사면 안정을 위한 친환경 가설물 설치 필요성 확인 여부",
+        "집중호우 전후 토양 침식 모니터링 체계 구축 여부",
+        "복구지 주변 탐방객 유입 차단 및 샛길 폐쇄 조치 여부"
+      ],
+      "practical_utility_score": 4,
+      "cautions": [
+        "외래종 도입을 지양하고 반드시 해당 지역 자생 수종을 활용해야 함",
+        "식재 초기 활착률을 높이기 위한 수분 관리 및 사면 고정 대책이 선행되어야 함"
+      ],
+      "tags": [
+        "토양침식",
+        "식생복구",
+        "조림",
+        "사면안정",
+        "자원보전"
+      ],
+      "recommended_followup_research": [
+        "국내 국립공원 훼손 사면의 토양 침식 속도 정량적 평가 연구",
+        "자생 수종 식재가 토양 미생물 군집 및 지력 회복에 미치는 장기 효과 분석"
+      ],
+      "ai_recommended_topics": [
+        "soil erosion control in national parks",
+        "reforestation effectiveness on degraded slopes"
+      ],
+      "analyzed_at": "2026-10-31T09:21:39Z",
+      "model": "gemini-flash-lite-latest"
+    }
+  },
+  {
+    "id": "W7223662500",
+    "source": "openalex",
+    "title": "The Effect Of Local Community Engagement On Sustainable Tourism In Queen Elizabeth National Park",
+    "abstract": "This study investigated the effect of local community engagement on sustainable tourism in Queen Elizabeth National Park (QENP), Uganda. The research was guided by three specific objectives: to assess community participation in tourism planning, to examine the impact of benefit-sharing mechanisms on local livelihoods, and to evaluate the role of cultural heritage promotion in sustainable tourism development. A descriptive correlational research design was adopted, and data were collected from 245 respondents comprising park management officials, local community members, tour operators, and Uganda Wildlife Authority (UWA) staff using structured questionnaires and interview guides. Findings revealed a strong positive and statistically significant relationship between local community engagement and sustainable tourism outcomes (r = 0.712, p < 0.05). Multiple regression analysis indicated that community participation, benefit-sharing, and cultural heritage promotion collectively accounted for 68.4% of the variance in sustainable tourism (R² = 0.684). The study concluded that meaningful community engagement is a critical driver of sustainable tourism in QENP and recommended the formulation of inclusive tourism policies, equitable revenue-sharing frameworks, and cultural heritage preservation programs to bolster long-term sustainability.",
+    "authors": [
+      "Ainomugisha Catherine",
+      "Kamugira Apophia"
+    ],
+    "year": 2026,
+    "journal": "Metropolitan Journal of Academic Multidisciplinary Research",
+    "cited_by_count": 0,
+    "doi": "https://doi.org/10.68598/mjamr.489",
+    "is_oa": true,
+    "oa_url": "https://journals.miu.ac.ug/uploads/manuscripts/manuscript_6a4cd1ed5e0123.59928682.pdf",
+    "concepts": [
+      "Tourism",
+      "Sustainable tourism",
+      "Local community",
+      "Promotion (chess)",
+      "Community engagement",
+      "National park"
+    ],
+    "openalex_url": "https://openalex.org/W7223662500",
+    "ai_analysis": {
+      "title_ko": "퀸 엘리자베스 국립공원의 지속 가능한 관광에 미치는 지역사회 참여의 영향",
+      "abstract_ko": "본 연구는 우간다 퀸 엘리자베스 국립공원(QENP)을 대상으로 지역사회 참여가 지속 가능한 관광에 미치는 영향을 조사하였다. 연구의 구체적인 목적은 관광 계획에 대한 지역사회 참여 평가, 이익 공유 메커니즘이 지역 생계에 미치는 영향 조사, 지속 가능한 관광 개발에서 문화유산 홍보의 역할 평가 등 세 가지였다. 기술적 상관관계 연구 설계를 채택하였으며, 구조화된 설문지와 면담 가이드를 사용하여 공원 관리 공무원, 지역 주민, 여행사 직원, 우간다 야생동물청(UWA) 직원 등 245명의 응답자로부터 데이터를 수집했다. 연구 결과, 지역사회 참여와 지속 가능한 관광 성과 간에는 강한 양의 상관관계가 있으며 통계적으로 유의미한 관계가 있는 것으로 나타났다(r = 0.712, p < 0.05). 다중회귀분석 결과, 지역사회 참여, 이익 공유, 문화유산 홍보는 지속 가능한 관광 분산의 68.4%를 공동으로 설명하는 것으로 나타났다(R² = 0.684). 본 연구는 의미 있는 지역사회 참여가 QENP의 지속 가능한 관광을 이끄는 핵심 동력이라고 결론지었으며, 장기적인 지속 가능성을 강화하기 위해 포용적 관광 정책 수립, 공정한 수익 공유 체계, 문화유산 보존 프로그램 도입을 권장하였다.",
+      "summary_3lines": [
+        "우간다 퀸 엘리자베스 국립공원을 대상으로 지역사회 참여가 지속 가능한 관광에 미치는 영향을 분석하였다.",
+        "설문조사 및 회귀분석 결과, 지역사회 참여, 이익 공유, 문화유산 홍보는 지속 가능한 관광 성과를 68.4% 설명하는 것으로 나타났다.",
+        "국립공원 지속 가능성 확보를 위해 포용적 정책 수립, 공정한 수익 배분, 문화유산 보존 프로그램 도입이 필수적이다."
+      ],
+      "research_purpose": "본 연구는 국립공원 내 지속 가능한 관광 발전을 위해 지역사회의 참여, 이익 공유, 문화유산 홍보가 미치는 영향을 실증적으로 평가하는 것을 목적으로 한다. 이를 통해 공원 관리 기관과 지역사회 간의 협력적 거버넌스 모델을 구축하고, 장기적인 보호지역 관리 방안을 도출하고자 하였다.",
+      "key_findings": [
+        "지역사회 참여와 지속 가능한 관광 성과 간에는 통계적으로 유의미한 강한 양의 상관관계가 확인됨(r = 0.712)",
+        "지역사회 참여, 이익 공유 메커니즘, 문화유산 홍보는 지속 가능한 관광 분산의 68.4%를 설명함(R² = 0.684)",
+        "의미 있는 주민 참여와 공정한 혜택 분배가 보호지역 내 관광의 지속 가능성을 결정하는 핵심 동력임"
+      ],
+      "practical_applications": [
+        "국립공원 탐방 프로그램 및 계획 수립 시 지역 주민이 참여할 수 있는 공식적인 협의체 구성",
+        "공원 입장료 및 시설 운영 수익의 일부를 지역사회 주민 소득 증대 및 복지 사업으로 환원하는 실효성 있는 이익 공유 체계 마련",
+        "지역 고유의 역사·문화 자원을 활용한 탐방 콘텐츠 개발을 통해 주민 소득원 다변화 및 보전 의식 고취"
+      ],
+      "korea_np_applicability_score": 4,
+      "korea_np_applicability_reason": "한국 국립공원 역시 탐방객 증가에 따른 지역사회 상생 및 명품마을 사업, 주민 협력 사업이 중요하게 다뤄지고 있어, 주민 참여와 이익 공유 모델을 현장 관리와 정책에 직접 참고할 수 있음",
+      "study_location": "해외",
+      "related_work_areas": [
+        "지역사회·거버넌스",
+        "관광·경제 정책",
+        "탐방로·탐방객 관리"
+      ],
+      "related_laws": [
+        "자연공원법 제37조",
+        "국립공원공단법 제7조"
+      ],
+      "field_checklist": [
+        "탐방 프로그램 기획 단계에서 지역 주민 의견 수렴 절차가 포함되었는가",
+        "공원 이용으로 인한 경제적 혜택이 지역사회에 공유되는 구체적 메커니즘이 있는가",
+        "지역 고유의 문화유산이나 전통을 탐방 콘텐츠와 연계하여 보존하고 있는가",
+        "공원 관리청과 지역 주민 간 정기적인 소통 채널이 운영되고 있는가",
+        "주민 참여도가 지속 가능한 탐방 및 자원 보전에 미치는 영향이 모니터링되는가"
+      ],
+      "practical_utility_score": 4,
+      "cautions": [
+        "해외 국립공원의 사회경제적 여건 차이를 고려하여 국내 실정에 맞는 단계적 접근 필요",
+        "이익 공유 및 주민 참여 제도를 도입할 때 이해관계자 간 갈등 조정 방안 선행 필수"
+      ],
+      "tags": [
+        "지역사회참여",
+        "지속가능관광",
+        "이익공유",
+        "문화유산",
+        "거버넌스"
+      ],
+      "recommended_followup_research": [
+        "주민 참여형 탐방 프로그램이 실제 지역 경제에 미치는 정량적 경제 효과 분석 연구",
+        "한국 국립공원 특성에 맞는 이익 공유 모델 및 주민 참여 평가지표 개발 연구"
+      ],
+      "ai_recommended_topics": [
+        "Protected Area Community Engagement",
+        "Sustainable Tourism Revenue Sharing"
+      ],
+      "analyzed_at": "2026-10-31T09:21:18Z",
+      "model": "gemini-flash-lite-latest"
+    }
+  },
+  {
+    "id": "W7223860556",
+    "source": "openalex",
+    "title": "Community engagement as a driver of One Health ownership and community resilience in the Democratic Republic of Congo: lessons from a participatory approach around Kahuzi-Biega National Park",
+    "abstract": "In the Democratic Republic of Congo, communities living around Kahuzi-Biega National Park (KBNP) face interconnected zoonotic and environmental risks. Since 2022, Médecins du monde Belgium, VSF Belgium and the NGO ADMR have implemented a community based One Health programme in Kabare and Kalehe territories. This mid-term evaluation (period 2022-2024) examines how participatory approaches can strengthen community ownership, translate the One health approach into locally led actions, and contribute to community resilience. It also sets out recommendations to improve programme effectiveness and inclusiveness. The participatory approach was associated with observable changes in practices and strengthened local One Health structures. Co-constructed with communities, solutions were contextually relevant and more likely to support long-term community resilience. This experience illustrates the potential of PAR to translate One Health from a conceptual framework into contextually relevant solutions and locally owned actions, while supporting behavioural change and long-term community resilience.",
+    "authors": [
+      "Stéphanie Duhamel",
+      "Olga Bautista Cosa",
+      "Idrissa Kiemde",
+      "Gali Ngengele Tabusoga"
+    ],
+    "year": 2026,
+    "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+    "cited_by_count": 0,
+    "doi": "https://doi.org/10.5281/zenodo.23691256",
+    "is_oa": true,
+    "oa_url": "https://doi.org/10.5281/zenodo.23691256",
+    "concepts": [
+      "Citizen journalism",
+      "Community resilience",
+      "Community engagement",
+      "Participatory action research",
+      "Political science",
+      "Community participation"
+    ],
+    "openalex_url": "https://openalex.org/W7223860556",
+    "ai_analysis": {
+      "title_ko": "콩고민주공화국 카후지-비에가 국립공원의 원헬스(One Health) 주도권 및 지역사회 회복력 촉진제로서의 지역사회 참여: 참여형 접근 방식의 교훈",
+      "abstract_ko": "콩고민주공화국 카후지-비에가 국립공원 주변 지역사회는 서로 연계된 인수공통감염병 및 환경적 위험에 직면해 있습니다. 2022년부터 벨기에 국경없는의사회, 벨기에 VSF, 그리고 NGO ADMR은 카바레 및 칼레헤 지역에서 지역사회 기반 원헬스 프로그램을 시행해 왔습니다. 본 중간 평가(2022~2024년 기간)는 참여형 접근 방식이 지역사회의 주인의식을 강화하고, 원헬스 접근 방식을 지역 주도적 행동으로 전환하며, 지역사회 회복력에 어떻게 기여하는지 조사합니다. 또한 프로그램의 효과성과 포용성을 개선하기 위한 권고사항을 제시합니다. 참여형 접근 방식은 관찰 가능한 관행의 변화 및 강화된 지역 원헬스 구조와 연관되어 있습니다. 지역사회와 공동 구축한 솔루션은 맥락에 적절했으며 장기적인 지역사회 회복력을 지원할 가능성이 더 높았습니다. 이 경험은 원헬스를 개념적 프레임워크에서 맥락에 적절한 솔루션과 지역이 소유한 행동으로 전환하는 동시에 행동 변화와 장기적인 지역사회 회복력을 지원하는 참여적 연구(PAR)의 잠재력을 보여줍니다.",
+      "summary_3lines": [
+        "콩고민주공화국 국립공원 주변 지역사회를 대상으로 인수공통감염병 및 환경 위험에 대응하기 위한 참여형 원헬스 프로그램의 효과를 평가하고자 함",
+        "지역사회와 함께 구축한 참여형 접근 방식이 현장 실무 관행의 변화와 지역 주도적 원헬스 구조를 강화하는 데 기여함을 확인함",
+        "개념적 수준의 원헬스를 현장 맞춤형 지역 주도 행동으로 전환하기 위해 공원 관리청과 지역사회의 긴밀한 협력 거버넌스 구축이 필요함"
+      ],
+      "research_purpose": "본 연구는 국립공원 주변 지역사회가 직면한 인수공통감염병과 환경적 위험에 대응하기 위해 도입된 참여형 원헬스(One Health) 프로그램의 효과를 평가하는 것을 목적으로 합니다. 특히 참여적 접근 방식이 지역사회의 주인의식을 높이고, 추상적인 보건·환경 개념을 실제 현장 행동으로 전환하며, 장기적인 지역사회 회복력에 기여하는 방식을 분석하고자 합니다.",
+      "key_findings": [
+        "참여형 접근 방식은 지역사회의 눈높이에 맞는 맥락 적절한 해결책 도출로 이어져 장기적인 회복력을 강화함",
+        "주민들이 직접 참여하여 구축한 지역 원헬스 구조는 실제 현장의 행동 변화와 관행 개선을 유도함",
+        "개념적 수준에 머물기 쉬운 원헬스 접근 방식을 지역사회 주도형 실천 과제로 성공적으로 전환할 수 있음을 입증함"
+      ],
+      "practical_applications": [
+        "국립공원 인근 지역주민과 함께 인수공통감염병 및 야생동물 질병 예방을 위한 공동 협의체 및 거버넌스 구성",
+        "주민 참여형 워크숍을 정례화하여 공원 주변 환경 위험요소를 발굴하고 실천 가능한 행동 요령을 공동 수립",
+        "단방향 계도가 아닌 주민 주도의 현장 맞춤형 프로그램 운영을 통해 공원 보전 활동에 대한 수용성 제고"
+      ],
+      "korea_np_applicability_score": 3,
+      "korea_np_applicability_reason": "한국 국립공원은 아프리카와 같은 심각한 인수공통감염병 위협은 상대적으로 적으나, 멧돼지 등 야생동물에 의한 ASF(아프리카돼지열병) 발생 및 샛길 탐방 등으로 인한 환경·안전 리스크가 존재하므로 지역사회 연계형 관리 기법을 일부 차용할 수 있음",
+      "study_location": "해외",
+      "related_work_areas": [
+        "생태계 모니터링·조사",
+        "지역사회·거버넌스"
+      ],
+      "related_laws": [
+        "자연공원법 제2조",
+        "야생생물 보호 및 관리에 관한 법률 제4조"
+      ],
+      "field_checklist": [
+        "공원 주변 지역사회 대상 질병 및 환경 위험요인 실태조사 실시 여부",
+        "주민이 직접 참여하는 원헬스(사람-동물-환경) 협의체 구성 여부",
+        "현장 맞춤형 갈등 관리 및 주민 협력 프로그램 운영 실적 확인",
+        "주민 주도형 보전 활동 및 행동 변화를 유도하기 위한 인센티브 제공 방안 검토",
+        "프로그램 성과 평가를 위한 장기 모니터링 지표 설정 여부"
+      ],
+      "practical_utility_score": 3,
+      "cautions": [
+        "아프리카의 저개발 지역 사례이므로 국내 사회·제도적 환경에 맞게 적절한 변형이 필요함",
+        "주민 참여 유도를 위한 충분한 시간과 예산, 전문 촉진자(Facilitator) 확보가 선행되어야 함"
+      ],
+      "tags": [
+        "원헬스",
+        "지역사회 참여",
+        "국립공원 거버넌스",
+        "인수공통감염병",
+        "사회적 회복력"
+      ],
+      "recommended_followup_research": [
+        "한국 국립공원 특성에 맞는 원헬스 기반 야생동물 질병 관리 모델 개발 연구",
+        "공원 주변 지역주민 참여형 보전 프로그램의 장기적 경제·생태적 효과성 분석"
+      ],
+      "ai_recommended_topics": [
+        "One Health in protected areas",
+        "Community-based conservation and participatory approaches"
+      ],
+      "analyzed_at": "2026-10-31T09:21:29Z",
+      "model": "gemini-flash-lite-latest"
+    }
   }
 ]
