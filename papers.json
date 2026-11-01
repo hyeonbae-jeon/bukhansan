@@ -1,16 +1,16 @@
 {
   "meta": {
-    "total": 5682,
-    "analyzed": 5635,
+    "total": 5684,
+    "analyzed": 5637,
     "avg_applicability": 3.7,
     "avg_utility": 3.7,
-    "high_applicability_count": 3484,
+    "high_applicability_count": 3486,
     "score_distribution": {
       "1": 90,
       "2": 391,
       "3": 1669,
-      "4": 2341,
-      "5": 1143
+      "4": 2342,
+      "5": 1144
     },
     "year_distribution": {
       "1895": 1,
@@ -80,16 +80,16 @@
       "2023": 248,
       "2024": 280,
       "2025": 341,
-      "2026": 327
+      "2026": 329
     },
-    "updated_at": "2026-10-31T09:21:46.140681"
+    "updated_at": "2026-11-01T10:10:03.992350"
   },
   "tag_index": {
     "국립공원관리": 309,
     "탐방객관리": 230,
     "생태관광": 219,
     "생물다양성": 199,
-    "기후변화": 193,
+    "기후변화": 194,
     "지역사회참여": 162,
     "생태계모니터링": 158,
     "국립공원": 149,
@@ -148,21 +148,21 @@
   },
   "work_area_index": {
     "생태계 모니터링·조사": 2795,
-    "탐방로·탐방객 관리": 2577,
+    "탐방로·탐방객 관리": 2579,
     "자원보전·복원": 1880,
     "지역사회·거버넌스": 1560,
     "공원계획·구역관리": 1302,
     "야생생물·서식지 관리": 1249,
     "탐방객 서비스·안전": 669,
     "환경 모니터링": 618,
-    "기후변화 대응": 599,
-    "재난·안전 관리": 546,
+    "기후변화 대응": 600,
+    "재난·안전 관리": 547,
     "시설·인프라 관리": 535,
-    "관광·경제 정책": 529
+    "관광·경제 정책": 530
   },
   "location_index": {
-    "해외": 4508,
-    "국내": 1127
+    "해외": 4509,
+    "국내": 1128
   },
   "papers": [
     {
@@ -73286,6 +73286,93 @@
           "생태관광 경제적 파급효과"
         ],
         "analyzed_at": "2026-10-22T08:23:31Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W7160594200",
+      "source": "openalex",
+      "title": "Projecting national park closure days in response to climate change impacts",
+      "abstract": "This study aims to project the number of trail closure days in 18 mountainous national parks across South Korea based on climate change scenarios. Using SSP2-4.5 (intermediate scenario) and SSP5-8.5 (high-emission scenario), closure days caused by heavy rainfall, heavy snow, heatwaves, and cold waves were analyzed for the period from 2026 to 2100. Under SSP2-4.5, rainfall-induced closures gradually increased or remained steady, whereas SSP5-8.5 showed a more pronounced long-term increase. Snow-related closures remained constant under SSP2-4.5 but showed a mid-term rise followed by a slight decrease under SSP5-8.5, ultimately resulting in a net increase. Heatwave-induced closures increased under both scenarios, with a significantly sharper rise under SSP5-8.5, emphasizing the urgency of climate mitigation. Cold wave-related closures decreased overall, with a steeper decline under SSP5-8.5, indicating differentiated impacts depending on the climate pathway. Among the four climate hazards, heatwaves had the most notable influence. The average number of closure days due to heatwaves was projected to be 8.9, 13.8, and 16.4 days for the periods 2026 2050, 2051 2075, and 2076 2100 under SSP2-4.5, and 10, 22, and 42.8 days under SSP5-8.5, respectively. These findings highlight the need for proactive management strategies, including the establishment of preemptive closure criteria to prevent heat-related casualties. Additionally, as precipitation patterns show increasing variability rather than a steady rise, enhancing early warning systems and disaster infrastructure becomes essential. This study provides quantitative insights into climate-driven disaster risks, offering practical baseline data for scientific trail management, early warning improvements, and visitor safety enhancement in national parks.",
+      "authors": [
+        "JungDo HwangBo",
+        "Taelyn Kim"
+      ],
+      "year": 2026,
+      "journal": "Journal of Climate Change Research",
+      "cited_by_count": 0,
+      "doi": "https://doi.org/10.15531/ksccr.2026.17.2.281",
+      "is_oa": false,
+      "oa_url": "",
+      "concepts": [
+        "National park",
+        "Climate change",
+        "Closure (psychology)",
+        "Geography",
+        "Environmental science",
+        "Environmental resource management"
+      ],
+      "openalex_url": "https://openalex.org/W7160594200",
+      "ai_analysis": {
+        "title_ko": "기후변화 영향에 따른 국립공원 탐방로 폐쇄 일수 전망",
+        "abstract_ko": "본 연구는 기후변화 시나리오를 바탕으로 한국 내 18개 산악형 국립공원의 탐방로 폐쇄 일수를 전망하는 것을 목적으로 합니다. 중간 시나리오인 SSP2-4.5와 고배출 시나리오인 SSP5-8.5를 활용하여, 2026년부터 2100년까지 폭우, 폭설, 폭염, 한파로 인한 폐쇄 일수를 분석했습니다. SSP2-4.5 하에서 강우로 인한 폐쇄는 점진적으로 증가하거나 유지된 반면, SSP5-8.5에서는 장기적인 증가세가 더욱 뚜렷했습니다. 적설 관련 폐쇄는 SSP2-4.5에서 일정하게 유지되었으나 SSP5-8.5에서는 중기적 증가 후 소폭 감소하여 최종적으로는 순증가했습니다. 폭염으로 인한 폐쇄는 두 시나리오 모두에서 증가했으며, SSP5-8.5에서 훨씬 가파른 상승세를 보여 기후 완화의 시급성을 강조했습니다. 한파 관련 폐쇄는 전반적으로 감소했으며, SSP5-8.5에서 더 가파른 감소를 보여 기후 경로에 따른 차별적 영향을 나타냈습니다. 4가지 기후 위험 요소 중 폭염이 가장 두드러진 영향을 미쳤습니다. 폭염으로 인한 평균 폐쇄 일수는 SSP2-4.5의 경우 2026~2050년, 2051~2075년, 2076~2100년에 각각 8.9일, 13.8일, 16.4일로 전망되었고, SSP5-8.5에서는 각각 10일, 22일, 42.8일로 전망되었습니다. 이러한 결과는 온열 질환 사고를 예방하기 위한 선제적 통제 기준 마련을 포함한 적극적인 관리 전략의 필요성을 강조합니다. 또한 강수 패턴이 꾸준한 증가보다는 변동성이 커짐에 따라 조기경보시스템과 재난 인프라의 강화가 필수적입니다. 본 연구는 기후 유발 재난 위험에 대한 정량적 통찰을 제공하며, 국립공원 내 과학적 탐방로 관리, 조기경보 개선, 탐방객 안전 강화를 위한 실무적 기초 자료를 제공합니다.",
+        "summary_3lines": [
+          "기후변화 시나리오에 따른 국내 산악형 국립공원의 탐방로 폐쇄 일수 변화를 전망하고 재난 관리 대책을 수립하기 위함이다.",
+          "SSP 시나리오 분석 결과, 폭염으로 인한 탐방로 폐쇄 일수가 가장 크게 증가할 것으로 나타났으며 배출량이 높을수록 그 증가세가 가팔랐다.",
+          "온열 질환 등 기후 재난에 대응하기 위해 선제적 통제 기준 마련과 조기경보시스템 고도화 등 사전 예방 중심의 실무 전략이 필수적이다."
+        ],
+        "research_purpose": "본 연구는 기후변화 시나리오(SSP2-4.5, SSP5-8.5)를 적용하여 2026년부터 2100년까지 국내 주요 산악형 국립공원의 폭우, 폭설, 폭염, 한파 등 기상 재해로 인한 탐방로 폐쇄 일수를 정량적으로 전망하고, 이에 따른 공원 관리의 선제적 대응 방안을 도출하고자 합니다.",
+        "key_findings": [
+          "4가지 기후 위험 요소 중 폭염이 탐방로 폐쇄 일수에 가장 지대한 영향을 미치는 것으로 나타남",
+          "고배출 시나리오(SSP5-8.5)에서 폭염으로 인한 폐쇄 일수가 2076~2100년에 평균 42.8일까지 급증할 것으로 전망됨",
+          "강수 및 적설 패턴은 단순한 증가세보다 변동성이 커지며, 기후 경로에 따라 한파 일수는 감소하고 폭염은 급증하는 등 차별적 영향이 관찰됨"
+        ],
+        "practical_applications": [
+          "폭염 일수 증가에 대비하여 기온 임계치 기반의 선제적 탐방로 부분 통제 기준 및 온열 질환 예방 가이드라인 마련",
+          "강수 변동성 확대에 대응하기 위해 현장 재난 인프라를 점검하고 실시간 기상 연계형 조기경보시스템 고도화",
+          "미래 기후 시나리오별 리스크를 반영한 국립공원 중장기 탐방 관리 및 안전 대책 수립"
+        ],
+        "korea_np_applicability_score": 5,
+        "korea_np_applicability_reason": "대한민국 18개 산악형 국립공원을 직접 대상으로 한 연구이며, 기후변화에 따른 실질적인 탐방로 통제 및 안전관리 업무에 바로 적용할 수 있는 정량적 데이터를 제공하므로 국내 현장과의 부합도가 매우 높음",
+        "study_location": "국내",
+        "related_work_areas": [
+          "탐방로·탐방객 관리",
+          "재난·안전 관리",
+          "기후변화 대응"
+        ],
+        "related_laws": [
+          "자연공원법 제28조(출입의 금지 또는 제한)",
+          "자연공원법 제37조(재난 예방 및 대응)"
+        ],
+        "field_checklist": [
+          "폭염 특보 발령 시 탐방객 밀집 구간 및 장거리 탐방로에 대한 순찰 강화 계획이 수립되어 있는가?",
+          "기온 상승에 따른 탐방객 온열 질환 발생 위험 구간에 응급 구급함 및 그늘막 등 안전시설이 적정하게 배치되었는가?",
+          "강수 패턴 변화에 대비하여 탐방로 배수 시설 및 낙석·토사 유출 우려지에 대한 사전 점검이 완료되었는가?",
+          "기상 악화(폭우·폭설·폭염) 시 신속한 전파를 위한 재난 예경보 방송시설 및 문자 서비스 시스템이 정상 작동하는가?",
+          "기후 재해 유형별 탐방로 통제 기준(임계치)이 현장 여건을 반영하여 현실적으로 수립되어 있는가?"
+        ],
+        "practical_utility_score": 5,
+        "cautions": [
+          "시나리오 기반의 장기 전망이므로 단기 현장 예산 집행 시에는 당해 년도 기상 특성을 함께 고려해야 함",
+          "공원별 지형적 특성과 식생 분포에 따라 실제 폐쇄 일수 및 체감 위험도는 편차가 발생할 수 있음"
+        ],
+        "tags": [
+          "기후변화",
+          "탐방로폐쇄",
+          "폭염대응",
+          "재난안전",
+          "SSP시나리오"
+        ],
+        "recommended_followup_research": [
+          "개별 국립공원의 미기후 특성을 반영한 고해상도 탐방로 취약성 평가 연구",
+          "기후 재해에 따른 탐방객의 행동 반응 및 대피 순응도에 관한 실증 분석"
+        ],
+        "ai_recommended_topics": [
+          "국립공원 기후변화 적응 전략",
+          "폭염 시 탐방객 안전관리 기준",
+          "기상 재해에 따른 자연공원 통제 시스템"
+        ],
+        "analyzed_at": "2026-11-01T10:09:10Z",
         "model": "gemini-flash-lite-latest"
       }
     },
@@ -306967,6 +307054,94 @@
           "Sustainable Tourism Revenue Sharing"
         ],
         "analyzed_at": "2026-10-31T09:21:18Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W7172020086",
+      "source": "openalex",
+      "title": "Integrating Economic Contribution and Tourist Satisfaction: A New National Park Management Effectiveness Evaluation Framework",
+      "abstract": "Abstract National parks promote nature-based tourism, significantly contributing to regional economic development and ecological conservation. Despite their importance, more comprehensive research is needed to assess the effectiveness of national park management from both economic and visitor satisfaction perspectives. This study proposes a framework to address this gap by combining the economic contribution of national parks and visitor satisfaction, and then conducting a case study. A survey-based, quantitative approach was employed to assess the management effectiveness of Huangguoshu National Park in Guizhou, China. Four hundred twenty-four responses were collected from park visitors between August and December 2022. The economic contribution analysis revealed that Huangguoshu National Park generated a direct economic contribution of $546.3 million and a total of $978 million in 2022. Visitor satisfaction was rated at an average score of 3.87 out of 5, indicating a generally satisfactory trip for park visitors. These findings suggest that Huangguoshu National Park contributes to the local economy while providing a nearly satisfactory visitor experience. This highlights the significance of the evaluation framework in assessing and enhancing park management practices. The proposed framework effectively evaluates the effectiveness of national park management, offering novel and valuable insights for improving park management and development strategies, and provides a reference for future studies on the same topic.",
+      "authors": [
+        "Zeli Hu",
+        "Jeetesh Kumar",
+        "Jinfeng Wang",
+        "Suresh Kannan",
+        "Qu Qin"
+      ],
+      "year": 2026,
+      "journal": "Research Square",
+      "cited_by_count": 0,
+      "doi": "https://doi.org/10.21203/rs.3.rs-5380571/v1",
+      "is_oa": true,
+      "oa_url": "https://doi.org/10.21203/rs.3.rs-5380571/v1",
+      "concepts": [
+        "National park",
+        "Visitor pattern",
+        "Tourism",
+        "Environmental resource management",
+        "Economic impact analysis",
+        "Geography"
+      ],
+      "openalex_url": "https://openalex.org/W7172020086",
+      "ai_analysis": {
+        "title_ko": "경제적 기여와 탐방객 만족도의 통합: 새로운 국립공원 관리 효과성 평가 프레임워크",
+        "abstract_ko": "국립공원은 자연 기반 관광을 촉진하여 지역 경제 발전과 생태계 보전에 크게 기여합니다. 이러한 중요성에도 불구하고, 경제적 측면과 탐방객 만족도라는 두 가지 관점에서 국립공원 관리의 효과성을 종합적으로 평가하기 위한 심층적인 연구가 더 필요합니다. 본 연구는 국립공원의 경제적 기여와 탐방객 만족도를 결합한 새로운 평가 프레임워크를 제안하고, 이에 대한 사례 연구를 수행하였습니다. 중국 구이저우성 황궈수 국립공원의 관리 효과성을 평가하기 위해 설문조사 기반의 정량적 접근법을 활용하였습니다. 2022년 8월부터 12월 사이 공원을 방문한 탐방객으로부터 총 424부의 응답을 수집했습니다. 경제적 기여 분석 결과, 2022년 한 해 동안 황궈수 국립공원은 5억 4,630만 달러의 직접적인 경제 효과와 총 9억 7,800만 달러의 파급 효과를 창출한 것으로 나타났습니다. 탐방객 만족도는 5점 만점에 평균 3.87점으로, 대체로 만족스러운 탐방 경험을 한 것으로 분석되었습니다. 이러한 결과는 황궈수 국립공원이 만족스러운 탐방 경험을 제공하는 동시에 지역 경제에도 실질적으로 기여하고 있음을 보여줍니다. 이는 공원 관리 관행을 평가하고 개선하는 데 있어 본 평가 프레임워크가 가지는 중요성을 잘 보여줍니다. 제안된 프레임워크는 국립공원 관리 효과성을 효과적으로 평가하며, 공원 관리 및 개발 전략을 개선하는 데 새롭고 가치 있는 시사점을 제공하고, 향후 관련 연구를 위한 기준을 제시합니다.",
+        "summary_3lines": [
+          "국립공원의 경제적 기여도와 탐방객 만족도를 동시에 평가하여 관리 효과성을 측정할 수 있는 새로운 통합 프레임워크를 제안하고자 했다.",
+          "중국 황궈수 국립공원 방문객 424명을 대상으로 설문조사를 실시한 결과, 2022년 약 9억 7,800만 달러의 경제적 효과와 3.87점의 만족도를 확인했다.",
+          "본 평가 프레임워크는 공원의 경제적 파급효과와 탐방 품질을 동시에 관리 지표로 활용하여 지속가능한 공원 운영 전략을 수립하는 데 기여한다."
+        ],
+        "research_purpose": "본 연구는 국립공원의 생태적·환경적 가치뿐만 아니라 지역 경제에 미치는 파급효과와 탐방객의 주관적 만족도를 동시에 측정할 수 있는 통합 관리 효과성 평가 프레임워크를 개발하고 검증하는 것을 목적으로 한다. 이를 통해 공원 관리자가 경제적 성과와 탐방 서비스 품질을 균형 있게 향상시킬 수 있는 실무적 기준을 제공하고자 한다.",
+        "key_findings": [
+          "황궈수 국립공원은 2022년 기준 직접 경제 효과 5억 4,630만 달러를 포함하여 총 9억 7,800만 달러의 지역 경제 기여 효과를 창출함",
+          "공원 방문객의 전체 만족도는 5점 만점 중 평균 3.87점으로 대체로 높은 만족도를 보임",
+          "경제적 성과와 탐방객 만족도를 결합한 통합 평가 프레임워크가 공원의 실질적 운영 성과를 다각도로 진단하는 데 유효함이 입증됨"
+        ],
+        "practical_applications": [
+          "국립공원 지역 경제 기여도 산출 시 직접 지출 비용뿐만 아니라 파급효과 분석 모델을 현장 경영 평가에 도입한다.",
+          "탐방객 만족도 조사를 정기적으로 실시하여 서비스 품질 저하 요인을 파악하고 탐방 프로그램 개선에 활용한다.",
+          "경제적 성과와 탐방 만족도 지표를 연계하여 공원 관리 예산 배분 및 지역 상생 사업의 우선순위를 결정한다."
+        ],
+        "korea_np_applicability_score": 4,
+        "korea_np_applicability_reason": "한국 국립공원 역시 탐방객 유치에 따른 지역 경제 활성화와 탐방 서비스 만족도 제고가 핵심 과제이므로, 경제적 기여와 만족도를 결합한 본 프레임워크를 공원 관리 및 타당성 평가에 직접 활용할 수 있음.",
+        "study_location": "해외",
+        "related_work_areas": [
+          "탐방로·탐방객 관리",
+          "관광·경제 정책"
+        ],
+        "related_laws": [
+          "자연공원법 제37조",
+          "국립공원공단법 제7조"
+        ],
+        "field_checklist": [
+          "탐방객 대상 소비 지출 규모 조사를 위한 설문 항목이 마련되어 있는가?",
+          "탐방 서비스 만족도(시설, 프로그램, 편의성 등)에 대한 정기 모니터링이 수행되고 있는가?",
+          "공원 방문으로 인해 파생되는 지역 경제적 효과 산출 데이터가 확보되어 있는가?",
+          "탐방객 불만 사항이 시설 개선이나 경제적 상생 프로그램에 피드백되고 있는가?",
+          "관리 효과성 평가 결과를 바탕으로 한 연차별 개선 계획이 수립되어 있는가?"
+        ],
+        "practical_utility_score": 4,
+        "cautions": [
+          "경제적 기여도 산출 시 지역 특성에 맞는 정확한 승수(Multiplier) 모델 적용이 필요함",
+          "설문조사 시기나 표본 추출 방식에 따라 만족도 점수가 편향될 수 있으므로 계절별 분산 조사가 요구됨"
+        ],
+        "tags": [
+          "관리 효과성",
+          "경제적 기여",
+          "탐방객 만족도",
+          "지역 경제",
+          "탐방 관리"
+        ],
+        "recommended_followup_research": [
+          "한국 국립공원 특성을 반영한 지역 경제 기여도 산정 표준 모델 개발",
+          "탐방객 만족도와 지역 주민 소득 증대 간의 상관관계 분석 연구"
+        ],
+        "ai_recommended_topics": [
+          "National park economic impact",
+          "Visitor satisfaction framework"
+        ],
+        "analyzed_at": "2026-11-01T10:09:56Z",
         "model": "gemini-flash-lite-latest"
       }
     },
