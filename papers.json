@@ -1,15 +1,15 @@
 {
   "meta": {
-    "total": 5684,
-    "analyzed": 5637,
+    "total": 5688,
+    "analyzed": 5641,
     "avg_applicability": 3.7,
     "avg_utility": 3.7,
-    "high_applicability_count": 3486,
+    "high_applicability_count": 3489,
     "score_distribution": {
       "1": 90,
       "2": 391,
-      "3": 1669,
-      "4": 2342,
+      "3": 1670,
+      "4": 2345,
       "5": 1144
     },
     "year_distribution": {
@@ -76,13 +76,13 @@
       "2019": 259,
       "2020": 314,
       "2021": 289,
-      "2022": 233,
+      "2022": 235,
       "2023": 248,
       "2024": 280,
       "2025": 341,
-      "2026": 329
+      "2026": 331
     },
-    "updated_at": "2026-11-01T10:10:03.992350"
+    "updated_at": "2026-11-02T10:36:36.722758"
   },
   "tag_index": {
     "국립공원관리": 309,
@@ -90,12 +90,12 @@
     "생태관광": 219,
     "생물다양성": 199,
     "기후변화": 194,
-    "지역사회참여": 162,
+    "지역사회참여": 163,
     "생태계모니터링": 158,
+    "거버넌스": 150,
     "국립공원": 149,
-    "거버넌스": 149,
+    "보호지역관리": 137,
     "주민참여": 136,
-    "보호지역관리": 135,
     "생태모니터링": 124,
     "시민과학": 123,
     "탐방로관리": 113,
@@ -147,21 +147,21 @@
     "지속가능관광": 44
   },
   "work_area_index": {
-    "생태계 모니터링·조사": 2795,
-    "탐방로·탐방객 관리": 2579,
+    "생태계 모니터링·조사": 2796,
+    "탐방로·탐방객 관리": 2582,
     "자원보전·복원": 1880,
-    "지역사회·거버넌스": 1560,
-    "공원계획·구역관리": 1302,
-    "야생생물·서식지 관리": 1249,
+    "지역사회·거버넌스": 1563,
+    "공원계획·구역관리": 1303,
+    "야생생물·서식지 관리": 1250,
     "탐방객 서비스·안전": 669,
     "환경 모니터링": 618,
     "기후변화 대응": 600,
-    "재난·안전 관리": 547,
+    "재난·안전 관리": 548,
     "시설·인프라 관리": 535,
-    "관광·경제 정책": 530
+    "관광·경제 정책": 531
   },
   "location_index": {
-    "해외": 4509,
+    "해외": 4513,
     "국내": 1128
   },
   "papers": [
@@ -247891,6 +247891,182 @@
       }
     },
     {
+      "id": "W4412165592",
+      "source": "openalex",
+      "title": "Invasive alien plant species in Jigme Singye Wangchuck National Park, Bhutan: distribution patterns, invasion hotspots and management implications",
+      "abstract": "Abstract Invasive alien plant species (IAPS) are major drivers of biodiversity loss and ecosystem degradation, particularly in biodiversity-rich and topographically complex regions. This study presents the first systematic assessment of IAPS in Jigme Singye Wangchuck National Park (JSWNP), Bhutan, based on 375 vegetation plots surveyed along 16 transects using an adaptive sampling approach. We recorded 25 unique IAPS, including four listed among the world’s 100 worst invasive species. Ageratina adenophora was the most dominant and widespread species, present in over 60% of plots, followed by Solanum viarum , Bidens pilosa , and Chromolaena odorata . Species richness was highest in the southeastern and southwestern lowland zones, particularly within the Tingtibi and Nabji ranges. Chi-square tests revealed significant associations of many IAPS with altitude classes and habitat types, indicating that both environmental and anthropogenic factors influence their distribution. Spatial hotspot maps identified high-density invasion zones in disturbed and accessible areas. These findings provide a critical baseline for understanding IAPS spread in Himalayan protected landscapes and offer actionable insights for targeted management, early detection, and community-based intervention strategies to safeguard native biodiversity.",
+      "authors": [
+        "Abir Man Sinchuri",
+        "Phuentsho Phuentsho",
+        "Tashi Phuntsho"
+      ],
+      "year": 2026,
+      "journal": "Biological Invasions",
+      "cited_by_count": 1,
+      "doi": "https://doi.org/10.1007/s10530-026-03955-8",
+      "is_oa": true,
+      "oa_url": "https://www.researchsquare.com/article/rs-7002189/latest.pdf",
+      "concepts": [
+        "National park",
+        "Baseline (sea)",
+        "Invasive species",
+        "Geography",
+        "Alien",
+        "Ecology"
+      ],
+      "openalex_url": "https://openalex.org/W4412165592",
+      "ai_analysis": {
+        "title_ko": "부탄 지그메 싱예 왕축 국립공원의 침입 외래식물: 분포 패턴, 침입 핫스팟 및 관리 시사점",
+        "abstract_ko": "침입 외래식물(IAPS)은 생물다양성이 풍부하고 지형이 복잡한 지역에서 생물다양성 손실과 생태계 파괴를 일으키는 주요 원인입니다. 본 연구는 적응형 표본추출 방식을 활용해 16개의 트랜셉트를 따라 조사된 375개의 식생 구획을 바탕으로 부탄 지그메 싱예 왕축 국립공원(JSWNP) 내 침입 외래식물에 대한 최초의 체계적인 평가를 제시합니다. 세계 100대 악성 침입종 중 4종을 포함하여 총 25종의 고유 침입 외래식물이 기록되었습니다. 서양등골나물(Ageratina adenophora)이 전체 구획의 60% 이상에서 발견되며 가장 우점하고 널리 분포하는 종이었으며, 그 뒤를 솔라눔 비아룸(Solanum viarum), 미국가막사리(Bidens pilosa), 마른잎풀(Chromolaena odorata) 등이 이었습니다. 종 풍부도는 남동부 및 남서부 저지대 지역, 특히 팅티비와 나브지 구역에서 가장 높았습니다. 카이제곱 검정 결과, 많은 침입 외래식물이 고도 및 서식지 유형과 유의미한 연관성을 보여 환경적 요인과 인위적 요인이 모두 이들의 분포에 영향을 미치는 것으로 나타났습니다. 공간적 핫스팟 지도는 교란되고 접근성이 좋은 지역에 고밀도 침입 구역이 존재함을 밝혔습니다. 이러한 연구 결과는 히말라야 보호지역 내 침입 외래식물의 확산을 이해하기 위한 중요한 기초 자료를 제공하며, 고유 생물다양성을 보호하기 위한 표적 관리, 조기 탐지 및 지역사회 참여형 개입 전략에 대한 실행 가능한 통찰을 제공합니다.",
+        "summary_3lines": [
+          "부탄 지그메 싱예 왕축 국립공원을 대상으로 식생 구획 조사를 실시하여 침입 외래식물의 분포 패턴과 확산 요인을 분석했습니다.",
+          "조사 결과 총 25종의 침입 외래식물이 확인되었으며, 고도와 인위적 교란이 심한 저지대 접근 지역에 밀집 분포하는 것으로 나타났습니다.",
+          "확인된 침입 핫스팟 정보를 바탕으로 공원 내 외래식물 조기 탐지 및 지역사회 연계 방제 전략을 수립해야 합니다."
+        ],
+        "research_purpose": "본 연구는 생물다양성이 풍부한 히말라야 보호지역인 부탄 지그메 싱예 왕축 국립공원 내 침입 외래식물의 분포 현황을 체계적으로 파악하고, 환경적·인위적 요인이 외래식물 확산에 미치는 영향을 분석하는 것을 목적으로 합니다. 이를 통해 공원 관리자가 효과적인 외래식물 방제 및 생태계 보호 전략을 수립할 수 있는 기초 자료를 제공하고자 합니다.",
+        "key_findings": [
+          "총 25종의 침입 외래식물이 기록되었으며, 이 중 4종은 세계 100대 악성 침입종에 해당함",
+          "서양등골나물(Ageratina adenophora)이 전체 조사 구획의 60% 이상에서 발견되어 가장 우점하는 종으로 확인됨",
+          "종 풍부도와 침입 밀도는 주로 교란이 잦고 접근성이 좋은 남동부 및 남서부 저지대 구역(팅티비, 나브지 등)에서 높게 나타남"
+        ],
+        "practical_applications": [
+          "남동부 및 남서부 저지대 등 탐방객 출입이 잦고 인위적 교란이 발생한 지역을 우선 제거 대상지로 선정하여 집중 방제 실시",
+          "서양등골나물 등 주요 우점 침입 외래식물에 대한 정기적인 모니터링 체계를 구축하여 확산 추이 추적",
+          "공원 주변 지역주민과 협력하여 외래식물 조기 발견 및 수시 제거 활동을 수행하는 거버넌스 구축"
+        ],
+        "korea_np_applicability_score": 4,
+        "korea_np_applicability_reason": "한국 국립공원 역시 탐방로 주변 및 저지대 탐방객 밀집 지역을 중심으로 외래식물 유입과 확산 문제가 지속적으로 발생하므로, 공간 분포 분석 및 우선순위 선정 기법을 현장 관리(생태계 조사 및 제거 사업)에 직접 적용할 수 있습니다.",
+        "study_location": "해외",
+        "related_work_areas": [
+          "생태계 모니터링·조사",
+          "야생생물·서식지 관리",
+          "탐방로·탐방객 관리"
+        ],
+        "related_laws": [
+          "자연공원법 제23조",
+          "야생생물 보호 및 관리에 관한 법률 제24조"
+        ],
+        "field_checklist": [
+          "탐방로 주변 및 공원 경계부의 외래식물 주요 종 분포 현황 확인",
+          "저지대 및 인위적 교란지(공사 현장, 나지 등) 내 침입 핫스팟 존재 여부 점검",
+          "우점 외래식물(예: 서양등골나물 등 유사종)의 피도 및 개체군 크기 측정",
+          "고도별, 서식지 유형별 외래식물 유입 경로(탐방로, 도로 등)와의 연관성 조사",
+          "지역주민 및 자원봉사자 참여를 위한 외래식물 식별 가이드라인 비치 여부 확인"
+        ],
+        "practical_utility_score": 4,
+        "cautions": [
+          "외래식물 제거 시 자생종 식생에 미치는 2차 교란 및 훼손 방지 대책 마련 필요",
+          "제거 부산물 처리 과정에서 종자가 주변으로 재확산되지 않도록 철저한 수거 및 폐기 지침 준수"
+        ],
+        "tags": [
+          "침입외래식물",
+          "생태계교란생물",
+          "공간분포",
+          "핫스팟",
+          "보호지역관리"
+        ],
+        "recommended_followup_research": [
+          "기후변화에 따른 고도별 침입 외래식물 분포 상향 이동 예측 연구",
+          "외래식물 제거 방식(인력 제거 대 생태적 복원)에 따른 자생식물 회복 효과 비교 연구"
+        ],
+        "ai_recommended_topics": [
+          "생태계교란 식물 공간 분포 모니터링",
+          "보호지역 외래종 침입 핫스팟 분석"
+        ],
+        "analyzed_at": "2026-11-02T10:35:57Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W4308409472",
+      "source": "openalex",
+      "title": "Governance of National Parks influenced by Local Community Participation: China's Potatso National Park",
+      "abstract": "Abstract As a governance strategy, community participation is to implement the coordinated development of communities and protected areas. Therefore, the present study explored the community’s participation in the construction of Potatso National Park by means of a mixed-method approach that is derived from Ostrom’s (2007) socio-ecological systems and IUCN framework, calibrated to local residents’ self-assessments about the outcomes of community engagement on national park governance. From the six dimensions of ecological environment, livelihood assets, high-quality ecological products, management efficiency, social order and satisfaction that characterize the governance outcomes of protected areas, residents' attitudes and views on community participation in national park governance were analyzed. The results show that ecological environment has a positive impact on high-quality ecological products, on the contrary, livelihood assets are not significant; in addition, management efficiency has a significant positive impact on the ecological environment, livelihood assets, high-quality ecological products and social order. We concluded that community participation has a certain direct and indirect effect on the governance outcomes of Potatso National Park. It is suggested to continue to improve the community participation mechanism of residents from the two aspects of residents' subjective psychology and ecological compensation mechanism improvement. The transformation from the tourism development model to the national park is still in the process, and there existing quite a few problems. In the future, it is necessary to further realize the functions of national parks through institutional innovation, community participation capacity building, and the introduction of community institution participation.",
+      "authors": [
+        "Ting Ma",
+        "Lizhi Jia",
+        "Linsheng Zhong",
+        "Xinyu Gong",
+        "Yu Wei"
+      ],
+      "year": 2022,
+      "journal": "Research Square",
+      "cited_by_count": 1,
+      "doi": "https://doi.org/10.21203/rs.3.rs-2228414/v1",
+      "is_oa": true,
+      "oa_url": "https://www.researchsquare.com/article/rs-2228414/latest.pdf",
+      "concepts": [
+        "National park",
+        "China",
+        "Corporate governance",
+        "Political science",
+        "Public administration",
+        "Local governance"
+      ],
+      "openalex_url": "https://openalex.org/W4308409472",
+      "ai_analysis": {
+        "title_ko": "지역사회 참여가 국립공원 거버넌스에 미치는 영향: 중국 푸다춰 국립공원을 중심으로",
+        "abstract_ko": "거버넌스 전략의 일환으로서 지역사회 참여는 지역사회와 보호구역의 조화로운 발전을 실행하기 위한 것이다. 따라서 본 연구는 오스트롬(Ostrom, 2007)의 사회-생태계 프레임워크와 IUCN 프레임워크를 혼합 방법론에 적용하여 푸다춰 국립공원 조성 과정에 대한 지역사회의 참여를 탐구하였으며, 국립공원 거버넌스에 대한 지역주민의 참여 성과 자기평가를 보정하였다. 보호구역의 거버넌스 성과를 특징짓는 생태환경, 생계자산, 고품질 생태제품, 관리 효율성, 사회 질서, 만족도의 6가지 차원을 바탕으로 국립공원 거버넌스에 대한 지역사회 참여에 대한 주민들의 태도와 견해를 분석하였다. 연구 결과, 생태환경은 고품질 생태제품에 긍정적인 영향을 미치는 반면, 생계자산에는 유의미한 영향을 미치지 않는 것으로 나타났다. 또한 관리 효율성은 생태환경, 생계자산, 고품질 생태제품, 사회 질서에 유의미한 정(+)의 영향을 미치는 것으로 나타났다. 결론적으로 지역사회 참여는 푸다춰 국립공원의 거버넌스 성과에 직·간접적인 영향을 미치는 것으로 확인되었다. 향후 주민의 주관적 심리 측면과 생태보상 메커니즘 개선이라는 두 가지 측면에서 주민들의 지역사회 참여 메커니즘을 지속적으로 개선할 것을 제안한다. 관광 개발 모델에서 국립공원으로의 전환은 여전히 진행 중이며 꽤 많은 문제들이 존재한다. 향후 제도적 혁신, 지역사회 참여 역량 강화, 지역사회 제도 참여 도입을 통해 국립공원의 기능을 더욱 실현할 필요가 있다.",
+        "summary_3lines": [
+          "사회-생태계 프레임워크를 활용하여 국립공원 거버넌스 성과에 미치는 지역사회 참여의 영향을 분석함.",
+          "관리 효율성이 생태환경과 생계자산, 사회 질서 등에 유의미한 긍정적 영향을 미치는 것으로 나타남.",
+          "국립공원 거버넌스 향상을 위해 주민의 주관적 인식 개선과 실효성 있는 생태보상 제도의 도입이 필요함."
+        ],
+        "research_purpose": "본 연구는 보호구역 내 지역사회와 공원 관리 기관 간의 조화로운 상생 방안을 찾기 위해, 주민 참여가 국립공원 거버넌스 성과(생태환경, 생계자산, 관리 효율성 등)에 미치는 영향을 실증적으로 분석하고 제도적 개선 방안을 도출하는 것을 목적으로 한다.",
+        "key_findings": [
+          "생태환경의 보전은 고품질 생태제품(생태적 가치 환원 등)의 창출에 직접적인 긍정적 영향을 미침.",
+          "공원 관리 기관의 관리 효율성은 생태환경 보호, 지역 주민의 생계자산, 사회 질서 유지 전반에 유의미한 정(+)의 영향을 미침.",
+          "주민들의 지역사회 참여는 국립공원의 전반적인 거버넌스 성과에 직·간접적인 기여를 함."
+        ],
+        "practical_applications": [
+          "주민 참여형 거버넌스 구축 시, 단순 의견 수렴을 넘어 실질적인 제도적 참여 창구를 마련할 것",
+          "지역 주민의 생계 안정을 담보할 수 있는 실효성 있는 생태보상 메커니즘과 지역특산물 브랜드화 등 지원",
+          "공원 관리 기관의 행정 및 관리 효율성을 높여 주민과의 신뢰 관계를 구축하고 사회 질서 안정화 도모"
+        ],
+        "korea_np_applicability_score": 4,
+        "korea_np_applicability_reason": "한국 국립공원 역시 사유지 포함 문제와 지역 주민과의 상생, 공원구역 주민 지원 사업 등이 핵심 현안이므로, 지역사회 참여와 거버넌스 연구 결과를 직접 참고하여 정책 수립에 활용할 수 있음.",
+        "study_location": "해외",
+        "related_work_areas": [
+          "지역사회·거버넌스",
+          "관광·경제 정책",
+          "공원계획·구역관리"
+        ],
+        "related_laws": [
+          "자연공원법 제18조",
+          "자연공원법 제37조의2"
+        ],
+        "field_checklist": [
+          "지역 주민 대상 공원 관리 정책 설명회 및 의견 수렴 정례화 여부 확인",
+          "공원 내 생태보상 사업 및 주민 지원 사업의 실질적 만족도 조사 실시 여부 확인",
+          "탐방객 증가에 따른 지역 소득 창출 연계 프로그램(생태관광 등) 운영 실태 점검",
+          "주민 참여 조직의 제도적 운영 현황 및 자치 역량 수준 평가",
+          "공원 관리청과 지역 주민 간 갈등 관리 및 소통 채널 가동 여부 확인"
+        ],
+        "practical_utility_score": 4,
+        "cautions": [
+          "중국의 독특한 토지 소유 제도 및 공원 관리 체계에서 도출된 결과이므로 국내 적용 시 국내 법적 체계에 맞게 수정 필요",
+          "주민 생계 지원과 생태 보전 간의 균형을 맞추지 못할 경우 현장 갈등이 심화될 수 있으므로 예산 및 형평성 고려 필요"
+        ],
+        "tags": [
+          "지역사회참여",
+          "국립공원거버넌스",
+          "사회생태계프레임워크",
+          "생태보상",
+          "주민상생"
+        ],
+        "recommended_followup_research": [
+          "국내 국립공원 주민 지원 사업의 경제적·생태적 성과에 대한 장기 모니터링 연구",
+          "주민 주도형 생태관광이 지역 경제와 공원 보전에 미치는 영향 분석 연구"
+        ],
+        "ai_recommended_topics": [
+          "protected area governance local community participation",
+          "national park co-management ecological compensation"
+        ],
+        "analyzed_at": "2026-11-02T10:36:29Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
       "id": "W7135510866",
       "source": "openalex",
       "title": "Hiking trails in the Krkonoše Mountains National Park",
@@ -307142,6 +307318,95 @@
           "Visitor satisfaction framework"
         ],
         "analyzed_at": "2026-11-01T10:09:56Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W4298075277",
+      "source": "openalex",
+      "title": "A Social Network Assessment of the Sierra de Guadarrama National Park's Governance",
+      "abstract": "This Working Paper corresponds to Deliverable 5.2 and reports in the social network analysis of the governance system arround the Sierra de Guadarrama National Park (Spain). Inclusiveness and participation in protected area management is not only recognised as a challenge, particularly in National Parks, but it is also critical for the achievement of long term biodiversity conservation and respectful human-nature interactions, as has even been recognised in the development of the Post-2020 Global Biodiversity Framework. However, this implies dealing with contrasting views and power relations that create conflict. To unravel the structure and characteristics of relationships between different stakeholders, also in conservation governance, Social Network Analysis has proven to be a useful tool. How do the structures of protected area networks influence landscape management governance processes? Which stakeholders play significant roles in the networks of interaction, information sharing, economic flows, and conflicts? How do different stakeholders group together in terms of their patterns of interactions? What are the differences between state administration and other actors in the roles they play within the networks? We address these questions in the context of the Sierra de Guadarrama National Park, a seemingly recent protected area nearby the largest city in Spain. Through the review of policy document, stakeholder mapping and interviews, we carry out a social network analysis. The results show a centralized structure in the interactions network of the Sierra de Guadarrama, dominated by state administrations and in combination of a decentralized and cohesive network of other actors, different from governmental bodies, that are distributed regionally in Madrid and Segovia. This last finding suggests that such a network has excellent potential for future collective initiatives because of the existing informal alliances between different actors and their regional distribution. Other actors in the SGNP, which are well connected and therefore hold the potential to act as bridges between different stakeholders are an environmental education centre and a tertiary sector association. On the other hand, our results reveal that the network of conflicts cannot be underestimated, so inclusive conservation in protected areas should include social mediation and mitigation measures.",
+      "authors": [
+        "Elisa Oteros‐Rozas",
+        "María Dolores López-Rodríguez",
+        "Beatriz Patraca",
+        "José Luís Molina",
+        "Hug March",
+        "Isabel Ruíz-Mallén"
+      ],
+      "year": 2022,
+      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+      "cited_by_count": 0,
+      "doi": "https://doi.org/10.5281/zenodo.7130243",
+      "is_oa": true,
+      "oa_url": "https://doi.org/10.5281/zenodo.7130243",
+      "concepts": [
+        "National park",
+        "Corporate governance",
+        "Political science",
+        "Geography",
+        "Regional science",
+        "Archaeology"
+      ],
+      "openalex_url": "https://openalex.org/W4298075277",
+      "ai_analysis": {
+        "title_ko": "시에라 데 과다라마 국립공원의 거버넌스에 대한 사회 네트워크 평가",
+        "abstract_ko": "본 워킹페이퍼는 과제 5.2의 결과물로 스페인 시에라 데 과다라마 국립공원 주변의 거버넌스 시스템에 대한 사회 네트워크 분석을 다룹니다. 보호지역 관리에서 포용성과 참여는 특히 국립공원의 경우 오랜 과제로 인식될 뿐만 아니라, 장기적인 생물다양성 보전과 인간-자연의 조화로운 관계 형성을 위해 매우 중요합니다. 포스트-2020 글로벌 생물다양성 프레임워크에서도 이러한 점이 강조되고 있습니다. 그러나 이는 갈등을 유발하는 상반된 관점과 권력 관계를 다루어야 함을 의미합니다. 보전 거버넌스에서 다양한 이해관계자 간의 관계 구조와 특성을 파악하기 위해 사회 네트워크 분석은 유용한 도구로 입증되었습니다. 보호지역 네트워크의 구조는 경관 관리 거버넌스 프로세스에 어떤 영향을 미칠까요? 상호작용, 정보 공유, 경제적 흐름, 갈등 네트워크에서 중요한 역할을 하는 이해관계자는 누구입니까? 서로 다른 이해관계자들은 상호작용 패턴에 따라 어떻게 그룹화됩니까? 네트워크 내에서 국가 행정부와 다른 행정부 외의 주체들이 수행하는 역할의 차이는 무엇입니까? 우리는 스페인 최대 도시 인근에 비교적 최근에 지정된 보호지역인 시에라 데 과다라마 국립공원의 맥락에서 이러한 질문들을 다룹니다. 정책 문서 검토, 이해관계자 매핑, 인터뷰를 통해 사회 네트워크 분석을 수행했습니다. 결과에 따르면 시에라 데 과다라마의 상호작용 네트워크는 국가 행정기관이 주도하는 중앙집중형 구조를 보이며, 동시에 마드리드와 세고비아에 지역적으로 분포된 정부 기관 외의 다른 주체들로 구성된 분산되고 응집력 있는 네트워크가 결합되어 있습니다. 이 후자의 발견은 다양한 행정 외 주체들 간의 기존 비공식적 연대와 지역적 분포 덕분에 향후 집단적 이니셔티브를 위한 훌륭한 잠재력이 있음을 시사합니다. 국립공원 내에서 연결이 잘 되어 있어 서로 다른 이해관계자 간의 가교 역할을 할 수 있는 다른 주체로는 환경교육센터와 3차 부문(민간 비영리 등) 협회가 있습니다. 반면, 갈등 네트워크 역시 과소평가할 수 없으므로 보호지역의 포용적 보전에는 사회적 중재 및 갈등 완화 조치가 포함되어야 함을 우리의 결과는 보여줍니다.",
+        "summary_3lines": [
+          "보호지역 관리의 효과적인 거버넌스와 이해관계자 간 관계 구조를 파악하기 위해 스페인 시에라 데 과다라마 국립공원의 사회 네트워크 분석을 수행함",
+          "상호작용 네트워크는 국가 행정기관 중심의 중앙집중형인 동시에, 민간 및 지역 주체들은 분산형의 응집력 있는 비공식 연대를 형성하고 있음을 확인함",
+          "성공적인 공원 관리를 위해서는 정부 중심의 일방적 운영에서 벗어나, 가교 역할을 하는 환경교육센터 등을 활용한 사회적 중재와 갈등 완화 조치가 필수적임"
+        ],
+        "research_purpose": "본 연구는 스페인 시에라 데 과다라마 국립공원의 사례를 통해 보호지역 관리 내 다양한 이해관계자들 간의 상호작용, 정보 공유, 갈등 구조를 분석하고, 이들의 네트워크 특성이 공원 거버넌스에 미치는 영향을 파악하는 것을 목적으로 합니다. 특히 정부 행정기관과 민간·지역 사회 주체들 간의 역할 차이를 규명하고, 효과적인 장기 생물다양성 보전을 위한 포용적 관리 방안을 도출하고자 합니다.",
+        "key_findings": [
+          "상호작용 네트워크는 국가 행정기관이 주도하는 중앙집중형 구조와 민간·지역 주체들의 분산되고 응집력 있는 네트워크가 공존함",
+          "환경교육센터와 민간 협회 등의 조직이 서로 다른 이해관계자 그룹을 연결하는 중요한 가교(Bridge) 역할을 수행함",
+          "이해관계자 간의 갈등 네트워크가 뚜렷하게 존재하므로, 효과적인 보전을 위해서는 갈등 관리와 사회적 중재가 반드시 동반되어야 함"
+        ],
+        "practical_applications": [
+          "국립공원 관리공단은 지역사회와의 협력 시 정부 주도의 일방적 소통을 지양하고, 민간 비공식 네트워크와 협력 체계를 구축해야 함",
+          "공원 내 갈등 요인을 상시 모니터링하고 조정하기 위한 사회적 중재 프로그램과 갈등 관리 매뉴얼을 도입함",
+          "환경교육센터나 지역 민간단체를 공식·비공식 소통의 가교(Bridge)로 활용하여 공원 관리청과 지역 주민 간의 신뢰를 제고함"
+        ],
+        "korea_np_applicability_score": 4,
+        "korea_np_applicability_reason": "한국의 국립공원 역시 사유지 포함, 지역 주민, 지자체, 시민단체, 공단 등 다양한 이해관계자가 얽혀 있어 거버넌스 갈등이 빈번하므로, 본 논문의 사회 네트워크 분석 및 이해관계자 갈등 관리 접근법을 현장 공원 관리와 갈등 조정에 직접 적용할 수 있음",
+        "study_location": "해외",
+        "related_work_areas": [
+          "지역사회·거버넌스",
+          "탐방로·탐방객 관리"
+        ],
+        "related_laws": [
+          "자연공원법 제2조(정의) 및 제3조(국민의 참여)",
+          "국립공원공단법 제7조(사업)"
+        ],
+        "field_checklist": [
+          "공원 관리 구역 내 주요 이해관계자(주민, 지자체, 상인, 환경단체)의 지도화 및 관계망 파악 여부",
+          "행정기관과 민간 주체 간 정보 공유 및 소통 채널의 중앙집중화 혹은 분산화 상태 진단",
+          "이해관계자 간 대립과 갈등을 유발하는 주요 이슈 및 잠재적 갈등 지점 식별 여부",
+          "갈등 조정과 협력 촉진을 위해 가교 역할을 수행할 수 있는 지역 내 기관(환경교육센터 등) 발굴 여부",
+          "지역 주민 및 민간 단체와의 비공식적 연대와 협력 잠재력 평가 여부"
+        ],
+        "practical_utility_score": 4,
+        "cautions": [
+          "국가별·지역별 사회문화적 배경과 행정 시스템의 차이로 인해 네트워크 구조가 다를 수 있음",
+          "이해관계자 간 갈등 완화 조치 시 초기에는 상당한 시간과 중재 전문 인력이 필요함"
+        ],
+        "tags": [
+          "사회네트워크분석",
+          "거버넌스",
+          "이해관계자갈등",
+          "보호지역관리",
+          "포용적보전"
+        ],
+        "recommended_followup_research": [
+          "한국 국립공원 내 주요 이해관계자 간 상호작용 및 갈등 네트워크 구조 분석",
+          "환경교육센터를 가교로 활용한 국립공원 거버넌스 개선 효과성 평가"
+        ],
+        "ai_recommended_topics": [
+          "Social Network Analysis in Protected Areas",
+          "Protected Area Governance and Stakeholder Conflict"
+        ],
+        "analyzed_at": "2026-11-02T10:36:19Z",
         "model": "gemini-flash-lite-latest"
       }
     },
@@ -456663,6 +456928,94 @@
           "Community-based conservation and participatory approaches"
         ],
         "analyzed_at": "2026-10-31T09:21:29Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W7223351221",
+      "source": "openalex",
+      "title": "Functional Roles and Collaborative Action System of British Non-profit Organizations in National Park Governance: A Case Study of the Lake District National Park",
+      "abstract": "ObjectiveNon-profit organizations (NPOs) are important actors in public participation and collaborative governance of national parks. Existing studies often focus on individual organizations or projects and tend to treat NPOs as a homogeneous group, providing limited explanation of their internal functional differences and collaborative relationships. Taking the Lake District National Park in the United Kingdom as a case, this study identifies the functional dimensions and role types of NPOs, examines how differentiated organizations participate in different stages of collaborative governance, and clarifies the collaborative action system formed through their complementary roles.MethodsNPO samples were first identified from the official website of the Lake District National Park and supplemented by searches of the UK Charity Commission using the keywords “Lake District,” “the lakes,” and “Lakeland.” Organizations were included when they were formally registered with the Charity Commission, had verifiable activity records within the Lake District National Park, and had recent financial information indicating active operation. A final sample of 51 NPOs was obtained. Based on official organizational websites, Charity Commission records, relevant news reports, and previous studies on nonprofit participation in public services, collaborative governance, and national park management, 18 activity categories were developed as input variables. Each organization was binary coded according to whether its publicly available records explicitly demonstrated the corresponding activity within the Lake District. Exploratory factor analysis was conducted in SPSS 26.0 using principal axis factoring. The KMO value was 0.626 and Bartlett’s test of sphericity was significant. Considering the binary nature of the variables, an additional factor analysis based on a tetrachoric correlation matrix was performed in Stata 18.0 to test robustness. Factor scores were then used as inputs for clustering. Ward’s hierarchical clustering and the natural grouping pattern of the samples were used to determine K=4, followed by K-means clustering to identify role types.ResultsFive latent functional dimensions were identified: F1, policy advocacy and ecological governance; F2, cultural and recreational education and facility operation; F3, social welfare development; F4, resource mobilization and emergency support; and F5, grant-making and capacity empowerment. F5 was relatively independent, suggesting that grant-making and empowerment can either combine with other functions or operate as a specialized function. Based on factor-score combinations, the 51 organizations were grouped into four role types: the community service type (n=19), ecological advocacy type (n=6), all-round hub type (n=3), and specialized terminal support type (n=23). Community service organizations were characterized by strong social-welfare and public-service functions but weak direct involvement in macro-level policy processes. Ecological advocacy organizations concentrated on ecological monitoring, scientific research, restoration, environmental education, and policy advocacy. The three all-round hub organizations—Friends of the Lake District, National Trust, and Action with Communities in Cumbria—showed positive scores across all five functional dimensions and were all members of the Lake District National Park Partnership. Their broad resource bases, institutional embeddedness, and cross-scale connections enable them to integrate issues, translate resources, and coordinate among organizations and stakeholder groups. Specialized terminal support organizations were mostly small and place-based, focusing on cultural and heritage services, emergency rescue, fundraising, grant-making, or other specific tasks, and generally played implementation and professional-support roles. The four types also differed across the governance cycle. Partnership members could directly participate in plan formulation, while other organizations entered indirectly through consultation, evidence submission, community representation, or issue-specific communication. During implementation, specialized terminal support organizations ensured professional delivery, ecological advocacy and community service organizations respectively addressed conservation and community needs, and all-round hub organizations acted as both implementers and bridges. The Love Windermere partnership illustrates such complementarity, with different organizations contributing environmental monitoring, specialized pollution-control actions, land management, and cross-sector coordination. During monitoring and feedback, organizations supplied differentiated evidence, monitoring data, project experience, and public comments that fed into subsequent planning cycles. The Lake District National Park Partnership thus provides an institutional platform for sustained communication, while all-round hub organizations connect national-level resources and agendas with local communities, projects, and conservation needs. Together, role differentiation, platform-based collaboration, and bridging organizations form a relatively stable collaborative action system.ConclusionNPOs participating in the Lake District National Park are characterized by clear functional and role differentiation rather than homogeneous participation. Different organizations occupy different positions in the governance process according to their resources, professional capacities, service objectives, and degree of institutional embeddedness, and their complementary roles support the operation of collaborative governance under the multiple objectives of nature conservation, public enjoyment, and community development. For China, improving public participation in national parks requires management-authority-led collaborative platforms, clearer division of responsibilities among diverse actors, the introduction of mature social organizations together with the cultivation of place-based action units, and improved mechanisms for participation and joint supervision. Landscape architecture can serve as a technical intermediary by translating ecological protection objectives, community needs, and recreational demands into spatial strategies, action programs, and evaluation indicators, thereby extending professional practice from project-based design toward long-term governance and operational collaboration.",
+      "authors": [
+        "Jianrong ZHOU",
+        "Liang LI",
+        "Yinglin Wang",
+        "Liyuan QIAN"
+      ],
+      "year": 2026,
+      "journal": "Landscape Architecture",
+      "cited_by_count": 0,
+      "doi": "https://doi.org/10.3724/j.fjyl.la20260197",
+      "is_oa": true,
+      "oa_url": "https://doi.org/10.3724/j.fjyl.la20260197",
+      "concepts": [
+        "National park",
+        "Geography",
+        "Action (physics)",
+        "Lake district",
+        "Environmental planning",
+        "Environmental resource management"
+      ],
+      "openalex_url": "https://openalex.org/W7223351221",
+      "ai_analysis": {
+        "title_ko": "국립공원 거버넌스에서 영국 비영리단체의 기능적 역할과 협력적 행동 체계: 영국 레이크 디스트릭트 국립공원 사례 연구",
+        "abstract_ko": "연구 목적: 비영리단체(NPO)는 국립공원의 대중 참여와 협력적 거버넌스에서 중요한 역할을 담당합니다. 기존 연구들은 개별 조직이나 프로젝트에 집중하는 경향이 있으며 NPO를 동질적인 집단으로 취급하여, 그들 간의 내부적 기능 차이와 협력 관계에 대한 설명이 부족했습니다. 본 연구는 영국의 레이크 디스트릭트 국립공원을 사례로 삼아 NPO의 기능적 차원과 역할 유형을 파악하고, 차별화된 조직들이 협력적 거버넌스의 다양한 단계에 어떻게 참여하는지 검토하며, 상호보완적 역할을 통해 형성된 협력적 행동 체계를 규명하고자 합니다. 방법: 레이크 디스트릭트 국립공원 공식 웹사이트와 영국 자선위원회(Charity Commission) 검색을 통해 NPO 샘플을 수집하였으며, 최종적으로 51개의 NPO를 연구 대상으로 선정했습니다. 공식 웹사이트, 자선위원회 기록, 관련 뉴스 보고서 등을 바탕으로 18개의 활동 범주를 도출하였고, 탐색적 요인분석과 군집분석(계층적 군집분석 및 K-평균 군집분석)을 실시하여 역할 유형을 도출했습니다. 결과: 5가지 잠재적 기능 차원(정책옹호 및 생태 거버넌스, 문화·여가 교육 및 시설 운영, 사회복지 발전, 자원 동원 및 비상 지원, 기부금 지급 및 역량 강화)이 확인되었습니다. 요인 점수 조합을 바탕으로 51개의 조직은 지역사회 서비스형, 생태 옹호형, 전방위 허브형, 전문 말단 지원형의 4가지 역할 유형으로 분류되었습니다.",
+        "summary_3lines": [
+          "영국 레이크 디스트릭트 국립공원의 비영리단체(NPO)를 대상으로 기능적 차원과 협력적 거버넌스 내 역할 유형을 규명하고자 함",
+          "공식 기록과 활동 데이터를 바탕으로 탐색적 요인분석과 군집분석을 실시하여 5가지 기능 차원과 4가지 NPO 역할 유형을 도출함",
+          "국립공원 관리 시 비영리단체의 특성에 맞춘 차별화된 역할 분담과 협력 체계를 구축하여 공원 거버넌스의 효율성을 높여야 함"
+        ],
+        "research_purpose": "기존 연구들이 비영리단체(NPO)를 동질적인 집단으로 취급하여 내부적 기능 차이를 설명하지 못했던 한계를 극복하고자 합니다. 영국의 레이크 디스트릭트 국립공원 사례를 통해 NPO의 기능적 차원을 도출하고, 이들이 협력적 거버넌스에서 담당하는 역할 유형과 상호보완적 협력 행동 체계를 분석하는 것을 목적으로 합니다.",
+        "key_findings": [
+          "NPO의 활동은 정책옹호 및 생태 거버넌스, 문화·여가 교육 및 시설 운영, 사회복지 발전, 자원 동원 및 비상 지원, 기부금 지급 및 역량 강화의 5가지 기능 차원으로 분류됨",
+          "분석 대상 NPO는 지역사회 서비스형, 생태 옹호형, 전방위 허브형, 전문 말단 지원형의 4가지 역할 유형으로 군집화됨",
+          "각 NPO는 서로 다른 기능과 전문성을 바탕으로 국립공원 관리의 다양한 단계에서 상호보완적인 협력 체계를 형성함"
+        ],
+        "practical_applications": [
+          "국립공원 내 협력 단체 및 민간 파트너십을 운영할 때 단체의 고유 기능과 전문성에 따라 역할을 세분화하여 배치함",
+          "지역사회 밀착형 단체와 정책 옹호형 단체 간의 협력 네트워크를 구축하여 공원 관리의 사각지대를 해소함",
+          "자원봉사 및 기부금 운영, 비상 지원 등 현장 지원 체계에서 비영리조직과의 실질적인 공동 대응 매뉴얼을 마련함"
+        ],
+        "korea_np_applicability_score": 3,
+        "korea_np_applicability_reason": "한국 국립공원은 주로 국립공원공단이 직접 관리하는 중앙집권적 구조이나, 최근 지역사회 협력 및 자원봉사, 민간 참여가 확대되는 추세여서 비영리조직의 역할 분담 모델을 참고할 수 있습니다.",
+        "study_location": "해외",
+        "related_work_areas": [
+          "지역사회·거버넌스",
+          "탐방로·탐방객 관리",
+          "재난·안전 관리"
+        ],
+        "related_laws": [
+          "자연공원법 제37조",
+          "자연공원법 제42조"
+        ],
+        "field_checklist": [
+          "공원 내 활동 중인 민간 비영리단체 및 협력 조직의 현황과 주력 기능 파악 여부",
+          "단체의 역할 유형별(서비스형, 생태옹호형 등) 공원 관리 업무 연계 방안 수립 여부",
+          "비영리단체의 자원 동원 및 비상 지원 역량에 대한 사전 점검 여부",
+          "지역사회 주민 및 단체와의 소통을 위한 정기 협의체 운영 여부",
+          "민간 참여 사업에 대한 성과 평가 및 피드백 체계 구축 여부"
+        ],
+        "practical_utility_score": 3,
+        "cautions": [
+          "영국과 한국의 국립공원 토지 소유 구조 및 관리 거버넌스 체계에 차이가 있으므로 무분별한 도입에 유의해야 함",
+          "비영리단체의 재정 건전성과 활동 지속 가능성에 대한 검증이 선행되어야 함"
+        ],
+        "tags": [
+          "비영리단체",
+          "국립공원거버넌스",
+          "민관협력",
+          "레이크디스트릭트",
+          "조직유형분류"
+        ],
+        "recommended_followup_research": [
+          "한국 국립공원 내 활동하는 민간 단체의 기능 및 역할 분담 실태 조사",
+          "해외 NPO 거버넌스 모델의 국내 국립공원 현장 적용 성과 평가 연구"
+        ],
+        "ai_recommended_topics": [
+          "national park governance non-profit organizations",
+          "collaborative management protected areas"
+        ],
+        "analyzed_at": "2026-11-02T10:36:08Z",
         "model": "gemini-flash-lite-latest"
       }
     },
