@@ -501700,5 +501700,90 @@
       "analyzed_at": "2026-11-02T10:36:29Z",
       "model": "gemini-flash-lite-latest"
     }
+  },
+  {
+    "id": "W2800386545",
+    "source": "openalex",
+    "title": "Human-wildlife Conflict and Ecotourism : Comparing Pongara and Ivindo National Parks in Gabon",
+    "abstract": "Human-wildlife conflicts around protected areas are important issues affecting conservation, especially in Africa. In Gabon, this conflict revolves around crop-raiding by protected wildlife, especially elephants. Elephants’ crop-raiding threaten livelihoods and undermines conservation efforts. Gabon is currently using monetary compensation and electric fences to address this human-elephant conflict. This thesis compares the impacts of the human-elephant conflict in Pongara and Ivindo National Parks based on their idiosyncrasy. Information was gathered through systematic review of available literature and publications, observation, and semi-structured face to face interviews with local residents, park employees, and experts from the National Park Agency. This thesis argues that the impacts of human-elephant conflict are more severe in Ivindo compared to Pongara National Park due to their specific characteristics. To effectively address this human-elephant conflict, an adaptive management strategy is needed. This adaptive management strategy should integrate conservation, livelihood security, and combine to the specific characteristics of each park.",
+    "authors": [
+      "Avomo Ndong",
+      "Sandy Steven"
+    ],
+    "year": 2018,
+    "journal": "Scholars' Bank (University of Oregon)",
+    "cited_by_count": 1,
+    "doi": "",
+    "is_oa": false,
+    "oa_url": "",
+    "concepts": [
+      "Ecotourism",
+      "Wildlife",
+      "Human–wildlife conflict",
+      "Geography",
+      "Tourism",
+      "Wildlife conservation"
+    ],
+    "openalex_url": "https://openalex.org/W2800386545",
+    "ai_analysis": {
+      "title_ko": "야생동물과의 갈등과 생태관광: 가봉의 퐁가라 국립공원과 이빈도 국립공원 비교",
+      "abstract_ko": "보호지역 주변에서 발생하는 야생동물과 인간의 갈등은 특히 아프리카에서 보전에 영향을 미치는 중요한 문제입니다. 가봉에서는 이 갈등이 보호 야생동물, 특히 코끼리의 농작물 피해를 중심으로 전개됩니다. 코끼리의 농작물 습격은 생계유지를 위협하고 보전 노력을 약화시킵니다. 가봉은 현재 인간과 코끼리의 갈등을 해결하기 위해 금전적 보상과 전기 울타리를 사용하고 있습니다. 본 논문은 퐁가라 국립공원과 이빈도 국립공원의 특수성을 바탕으로 인간과 코끼리 갈등의 영향을 비교합니다. 정보는 가용한 문헌과 출판물의 체계적 검토, 관찰, 그리고 지역 주민, 공원 직원, 국립공원청 전문가와의 반구조화된 대면 인터뷰를 통해 수집되었습니다. 본 논문은 각 공원의 고유한 특성으로 인해 인간과 코끼리 갈등의 영향이 퐁가라에 비해 이빈도 국립공원에서 더 심각하다고 주장합니다. 이러한 인간과 코끼리 갈등을 효과적으로 해결하기 위해서는 적응형 관리 전략이 필요합니다. 이 적응형 관리 전략은 보전과 생계 안정을 통합하고 각 공원의 특수한 특성에 결합해야 합니다.",
+      "summary_3lines": [
+        "보호지역 인근 야생동물(코끼리)의 농작물 피해로 인한 인간-야생동물 갈등의 심각성을 비교하고 관리 방안을 도출하고자 함",
+        "문헌 검토, 현장 관찰, 이해관계자 면담을 통해 두 국립공원의 지리적·생태적 특성에 따른 갈등 양상의 차이를 분석함",
+        "획일적인 차단시설이나 보상을 넘어 지역주민의 생계 안정과 공원별 특성을 반영한 적응형 통합 관리 전략의 도입을 제안함"
+      ],
+      "research_purpose": "본 연구는 가봉의 퐁가라 국립공원과 이빈도 국립공원을 대상으로 보호지역 인근 야생동물(코끼리)로 인한 농작물 피해와 인간-야생동물 갈등의 양상을 비교 분석하는 것을 목적으로 합니다. 공원별 환경적·지리적 특성이 갈등의 심각성에 미치는 영향을 파악하고, 보전과 주민 생계를 동시에 고려하는 맞춤형 적응관리 전략의 필요성을 제시하고자 합니다.",
+      "key_findings": [
+        "인간-야생동물 갈등(코끼리의 농작물 습격)은 주민의 생계를 위협하고 자연공원 보전 노력의 정당성을 약화시키는 핵심 요인임",
+        "공원별 고유 특성(지형, 서식지 환경 등)에 따라 갈등의 심각성과 피해 규모에 확연한 차이가 나타남",
+        "현재 시행 중인 단순 금전적 보상이나 전기 울타리 설치와 같은 단편적 대응만으로는 갈등 해소에 한계가 있음"
+      ],
+      "practical_applications": [
+        "단일 방식의 차단시설 설치에서 벗어나 공원별 지형과 야생동물 이동 특성을 고려한 맞춤형 방호 시설을 설계하고 운영한다.",
+        "야생동물 피해 예방 시설 설치와 더불어 지역 주민의 생계 보장을 연계한 지원 프로그램(완충지역 주민 소득 지원 등)을 마련한다.",
+        "공원 관리청, 전문가, 지역 주민이 참여하는 정례 협의체를 구성하여 피해 상황을 모니터링하고 대응책을 주기적으로 수정한다."
+      ],
+      "korea_np_applicability_score": 3,
+      "korea_np_applicability_reason": "한국 국립공원도 멧돼지, 고라니, 곰 등 야생동물에 의한 농작물 및 탐방객 피해(인간-야생동물 갈등)가 현안이나, 아프리카의 코끼리 피해와는 종 및 규모 면에서 차이가 있음. 그러나 피해지 특성 분석, 적응형 관리, 지역사회 연계 방안 등은 벤치마킹이 가능함.",
+      "study_location": "해외",
+      "related_work_areas": [
+        "야생생물·서식지 관리",
+        "지역사회·거버넌스"
+      ],
+      "related_laws": [
+        "야생생물 보호 및 관리에 관한 법률 제00조",
+        "자연공원법 제00조"
+      ],
+      "field_checklist": [
+        "보호지역 경계부 야생동물(멧돼지, 곰 등) 출몰 빈도 및 농작물 피해 현황 조사 여부",
+        "기존 설치된 차단 울타리(전기울타리 등)의 파손 상태 및 유지관리 실태 점검 여부",
+        "피해 주민 대상 설문조사 또는 면담을 통한 실질적 요구사항 파악 여부",
+        "공원별 지형적·생태적 특성에 따른 피해 취약지 지도(Mapping) 구축 여부",
+        "주민 지원 사업 및 보상 제도의 집행 투명성 및 만족도 확인 여부"
+      ],
+      "practical_utility_score": 3,
+      "cautions": [
+        "가봉의 코끼리 피해 사례를 국내 산악형 국립공원의 중형 포유류(멧돼지, 곰 등) 피해에 직접 적용할 때 생태적 차이를 고려해야 함",
+        "지역 주민 지원 예산 및 법적 보상 근거 마련 시 국내 '야생생물 보호 및 관리에 관한 법률'에 따른 피해 보상 규정과의 정합성 검토 필요"
+      ],
+      "tags": [
+        "인간-야생동물갈등",
+        "적응형관리",
+        "보호지역관리",
+        "농작물피해",
+        "지역사회상생"
+      ],
+      "recommended_followup_research": [
+        "국내 국립공원 경계부 야생동물 피해 특성에 따른 공원별 취약성 지수 개발 연구",
+        "야생동물 차단시설 설치 효과성 분석 및 주민 체감도 조사 연구"
+      ],
+      "ai_recommended_topics": [
+        "Human-wildlife conflict adaptive management",
+        "Protected area buffer zone management"
+      ],
+      "analyzed_at": "2026-11-03T10:33:45Z",
+      "model": "gemini-flash-lite-latest"
+    }
   }
 ]

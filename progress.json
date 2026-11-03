@@ -100,12 +100,12 @@
     "national park recreation ecology": 2,
     "national park governance": 2,
     "national park restoration ecology": 2,
-    "national park human wildlife conflict": 1,
-    "national park visitor experience": 1,
-    "national park ranger management": 1,
-    "national park tourism impact": 1,
-    "national park boundary encroachment": 1,
-    "national park zoning planning": 1,
+    "national park human wildlife conflict": 2,
+    "national park visitor experience": 2,
+    "national park ranger management": 2,
+    "national park tourism impact": 2,
+    "national park boundary encroachment": 2,
+    "national park zoning planning": 2,
     "national park cultural heritage management": 1,
     "national park entrance fee policy": 1,
     "national park signage interpretation": 1,
@@ -121,5 +121,5 @@
     "national park landscape connectivity corridor": 1,
     "national park disaster risk management": 1
   },
-  "updated_at": "2026-11-02T10:35:49.619175"
+  "updated_at": "2026-11-03T10:33:37.792024"
 }
