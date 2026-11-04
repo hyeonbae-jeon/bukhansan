@@ -106,12 +106,12 @@
     "national park tourism impact": 2,
     "national park boundary encroachment": 2,
     "national park zoning planning": 2,
-    "national park cultural heritage management": 1,
-    "national park entrance fee policy": 1,
-    "national park signage interpretation": 1,
-    "national park camping impact": 1,
-    "national park air quality monitoring": 1,
-    "national park water quality monitoring": 1,
+    "national park cultural heritage management": 2,
+    "national park entrance fee policy": 2,
+    "national park signage interpretation": 2,
+    "national park camping impact": 2,
+    "national park air quality monitoring": 2,
+    "national park water quality monitoring": 2,
     "national park soil erosion control": 1,
     "national park economic valuation": 1,
     "national park community engagement": 1,
@@ -121,5 +121,5 @@
     "national park landscape connectivity corridor": 1,
     "national park disaster risk management": 1
   },
-  "updated_at": "2026-11-03T10:33:37.792024"
+  "updated_at": "2026-11-04T10:27:47.969586"
 }

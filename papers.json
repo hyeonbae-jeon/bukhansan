@@ -1,15 +1,15 @@
 {
   "meta": {
-    "total": 5689,
-    "analyzed": 5642,
+    "total": 5692,
+    "analyzed": 5645,
     "avg_applicability": 3.7,
     "avg_utility": 3.7,
-    "high_applicability_count": 3489,
+    "high_applicability_count": 3492,
     "score_distribution": {
       "1": 90,
       "2": 391,
       "3": 1671,
-      "4": 2345,
+      "4": 2348,
       "5": 1144
     },
     "year_distribution": {
@@ -71,7 +71,7 @@
       "2014": 241,
       "2015": 224,
       "2016": 246,
-      "2017": 218,
+      "2017": 220,
       "2018": 219,
       "2019": 259,
       "2020": 314,
@@ -80,20 +80,20 @@
       "2023": 248,
       "2024": 280,
       "2025": 341,
-      "2026": 331
+      "2026": 332
     },
-    "updated_at": "2026-11-03T10:33:52.230456"
+    "updated_at": "2026-11-04T10:28:23.681382"
   },
   "tag_index": {
     "국립공원관리": 309,
-    "탐방객관리": 230,
+    "탐방객관리": 232,
     "생태관광": 219,
     "생물다양성": 199,
     "기후변화": 194,
     "지역사회참여": 163,
     "생태계모니터링": 158,
+    "국립공원": 150,
     "거버넌스": 150,
-    "국립공원": 149,
     "보호지역관리": 138,
     "주민참여": 136,
     "생태모니터링": 124,
@@ -104,14 +104,14 @@
     "생물다양성보전": 100,
     "원격탐사": 100,
     "외래식물": 90,
-    "생태계서비스": 82,
+    "생태계서비스": 83,
     "국립공원 관리": 80,
     "보호구역관리": 79,
     "지리산국립공원": 78,
+    "조건부가치측정법": 77,
     "인간-야생동물 갈등": 76,
-    "조건부가치측정법": 76,
     "탐방객 관리": 75,
-    "탐방객만족도": 73,
+    "탐방객만족도": 74,
     "서식지관리": 72,
     "기후변화대응": 71,
     "역사문화자원": 70,
@@ -147,21 +147,21 @@
     "지속가능관광": 44
   },
   "work_area_index": {
-    "생태계 모니터링·조사": 2796,
-    "탐방로·탐방객 관리": 2582,
-    "자원보전·복원": 1880,
+    "생태계 모니터링·조사": 2798,
+    "탐방로·탐방객 관리": 2585,
+    "자원보전·복원": 1881,
     "지역사회·거버넌스": 1564,
     "공원계획·구역관리": 1303,
     "야생생물·서식지 관리": 1251,
-    "탐방객 서비스·안전": 669,
+    "탐방객 서비스·안전": 670,
     "환경 모니터링": 618,
     "기후변화 대응": 600,
     "재난·안전 관리": 548,
-    "시설·인프라 관리": 535,
-    "관광·경제 정책": 531
+    "시설·인프라 관리": 536,
+    "관광·경제 정책": 532
   },
   "location_index": {
-    "해외": 4514,
+    "해외": 4517,
     "국내": 1128
   },
   "papers": [
@@ -307407,6 +307407,267 @@
           "Protected Area Governance and Stakeholder Conflict"
         ],
         "analyzed_at": "2026-11-02T10:36:19Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W7165532351",
+      "source": "openalex",
+      "title": "Determinants of Visitors’ Willingness to Pay for Recreational Ecosystems Services in Kakum National Park, Ghana",
+      "abstract": "Abstract Kakum National Park (KNP) in Ghana is one of the most important conservation areas in West Africa. KNP provides numerous recreational ecosystem services for leisure enthusiasts. This study assesses the recreational benefits from visitors' perspectives and evaluates determinants of visitors’ willingness to pay for recreational ecosystem services. 350 visitors were systematically sampled and conveniently intercepted for the survey. A set of questionnaires was administered to collect data on visitors' socioeconomic attributes. In addition, entry fees were used as a payment mechanism to elicit visitors’ willingness to pay additional fees for improvements in recreational ecosystem services and to strengthen the park's conservation activities. Contingent Valuation Modelling was used within the utility maximisation framework to evaluate the link between WTP (willingness to pay) and socioeconomic predictors. The parameters were estimated using a generalised linear model with a Poisson log link function and the Newton-Raphson optimisation technique. The results indicate that age, marital status, gender, household size, education, location, number of park visits, country of origin, travel cost, expenditure, monthly income, and time spent travelling to the park are strong predictors of willingness to pay for improvements in recreational ecosystem services. The mean WTP for recreational ecosystem services among visitors to the park is GH₵37.47 (US$6.50). Overall, most visitors expressed the highest satisfaction with the provision of recreational amenities, particularly the canopy walk. In conclusion, a policy for an upward adjustment in entrance fees should take into account the socioeconomic characteristics of park visitors.",
+      "authors": [
+        "Jones Abrefa Danquah",
+        "Anthony Elorm Setorwofia"
+      ],
+      "year": 2026,
+      "journal": "Research Square",
+      "cited_by_count": 0,
+      "doi": "https://doi.org/10.21203/rs.3.rs-9809579/v1",
+      "is_oa": true,
+      "oa_url": "https://www.researchsquare.com/article/rs-9809579/latest.pdf",
+      "concepts": [
+        "Recreation",
+        "Willingness to pay",
+        "Ecosystem services",
+        "National park",
+        "Socioeconomic status",
+        "Payment"
+      ],
+      "openalex_url": "https://openalex.org/W7165532351",
+      "ai_analysis": {
+        "title_ko": "가나 카쿰 국립공원의 레크리에이션 생태계 서비스에 대한 방문객의 지불 용의 결정 요인",
+        "abstract_ko": "가나의 카쿰 국립공원(KNP)은 서아프리카에서 가장 중요한 보전 지역 중 하나로, 여가를 즐기는 이들에게 수많은 레크리에이션 생태계 서비스를 제공합니다. 본 연구는 방문객의 관점에서 레크리에이션 편익을 평가하고, 레크리에이션 생태계 서비스에 대한 방문객의 지불 용의(WTP) 결정 요인을 분석했습니다. 설문조사를 위해 350명의 방문객을 체계적으로 표본 추출 및 현장 면접하였으며, 방문객의 사회경제적 특성 데이터를 수집하기 위해 설문지를 배포했습니다. 또한, 레크리에이션 생태계 서비스 개선과 공원의 보전 활동 강화를 위해 추가 요금을 지불할 의향이 있는지를 이끌어내는 지불 메커니즘으로 입장료를 활용했습니다. 효용 극대화 프레임워크 내에서 조건부가치측정법(CVM)을 사용하여 지불 용의와 사회경제적 예측 변수 간의 관계를 평가했습니다. 매개변수는 포아송 로그 링크 함수와 뉴턴-랩슨 최적화 기법을 사용한 일반화 선형 모델을 통해 추정되었습니다. 연구 결과에 따르면 연령, 결혼 여부, 성별, 가구원 수, 교육 수준, 거주 지역, 공원 방문 횟수, 출신 국가, 여행 경비, 지출액, 월소득, 공원까지의 이동 시간이 레크리에이션 생태계 서비스 개선에 대한 지불 용의의 강력한 예측 변수인 것으로 나타났습니다. 공원 방문객의 레크리에이션 생태계 서비스에 대한 평균 지불 용의는 GH₵37.47(미화 6.50달러)입니다. 전반적으로 대부분의 방문객은 레크리에이션 편의 시설, 특히 캐노피 Walk(하늘길) 제공에 대해 가장 높은 만족도를 나타냈습니다. 결론적으로, 입장료 인상 정책은 공원 방문객의 사회경제적 특성을 고려해야 합니다.",
+        "summary_3lines": [
+          "가나 카쿰 국립공원을 대상으로 방문객의 사회경제적 특성이 레크리에이션 생태계 서비스에 대한 지불 용의(WTP)에 미치는 영향을 분석했습니다.",
+          "설문조사와 조건부가치측정법(CVM)을 활용한 일반화 선형 모델 분석 결과, 연령·소득·방문 횟수 등 다양한 요인이 지불 용의에 유의한 영향을 미치는 것으로 나타났습니다.",
+          "공원 입장료 인상 및 탐방 서비스 개선 정책 수립 시 탐방객의 사회경제적 특성과 지불 의사를 종합적으로 고려해야 합니다."
+        ],
+        "research_purpose": "본 연구는 국립공원의 레크리에이션 생태계 서비스에 대한 방문객의 만족도를 평가하고, 추가적인 보전 활동과 서비스 개선을 위한 재원 마련 목적으로 입장료 인상 시 방문객의 지불 용의(WTP)를 결정하는 사회경제적 요인을 규명하는 것을 목적으로 합니다.",
+        "key_findings": [
+          "방문객의 레크리에이션 생태계 서비스(특히 캐노피 워크 등 편의시설)에 대한 만족도가 매우 높음",
+          "연령, 결혼 여부, 성별, 교육 수준, 월소득, 여행 비용, 이동 시간 등이 지불 용의(WTP)에 강력한 영향을 미치는 주요 예측 변수로 확인됨",
+          "방문객의 평균 지불 용의(WTP)는 약 GH₵37.47(미화 6.50달러) 수준으로 나타남"
+        ],
+        "practical_applications": [
+          "국립공원 탐방 서비스 및 특화 시설(전망대, 탐방로 등)의 만족도 조사와 연계한 적정 입장료 산정 체계 구축",
+          "탐방객의 사회경제적 특성(소득, 연령, 방문 형태 등)을 반영한 차등형 탐방 요금제 및 프로그램 설계",
+          "확보된 입장료 수입을 국립공원 자원보전 및 생태계 서비스 품질 향상 재원으로 직접 연계하는 선순환 구조 마련"
+        ],
+        "korea_np_applicability_score": 4,
+        "korea_np_applicability_reason": "한국 국립공원 역시 탐방 서비스 제공 및 시설 확충을 위한 재원 확보, 탐방객 만족도 제고, 적정 입장료 및 이용료 산정 연구가 지속적으로 요구되므로 본 연구의 조건부가치측정법(CVM)과 지불 용의 분석 방법론을 현장 정책에 직접 적용할 수 있습니다.",
+        "study_location": "해외",
+        "related_work_areas": [
+          "탐방로·탐방객 관리",
+          "탐방객 서비스·안전",
+          "관광·경제 정책"
+        ],
+        "related_laws": [
+          "자연공원법 제37조",
+          "자연공원법 제38조"
+        ],
+        "field_checklist": [
+          "탐방객 대상 레크리에이션 생태계 서비스 및 주요 시설(탐방로, 편의시설 등) 만족도 조사 항목 마련",
+          "탐방객의 사회경제적 특성(소득, 연령, 거주지 등) 파악을 위한 설문 설계",
+          "추가 탐방 서비스 제공 시 적정 지불 용의(WTP) 금액 산정을 위한 조건부가치측정법 적용 검토",
+          "입장료 또는 이용료 조정 시 탐방객 수용태세 및 반발 가능성에 대한 사전 영향 분석",
+          "확충된 요금 수입의 공원 보전 및 서비스 개선 사업 환원 계획 수립"
+        ],
+        "practical_utility_score": 4,
+        "cautions": [
+          "지불 용의(WTP) 조사 결과는 응답자의 주관적 인식에 의존하므로 실제 요금 부과 시 저항감이 발생할 수 있음",
+          "국내 국립공원의 경우 무료화된 사찰암자 문화재관람료 폐지 이후의 정책적 특수성을 고려하여 적용해야 함"
+        ],
+        "tags": [
+          "지불용의",
+          "조건부가치측정법",
+          "생태계서비스",
+          "탐방객만족도",
+          "입장료정책"
+        ],
+        "recommended_followup_research": [
+          "국내 국립공원 탐방객의 특성을 반영한 생태계 서비스 지불 용의(WTP) 추정 연구",
+          "공원 이용료 인상이 탐방객 수요 및 지역 경제에 미치는 영향 분석"
+        ],
+        "ai_recommended_topics": [
+          "Willingness to pay recreational ecosystem services national park",
+          "Contingent valuation method national park entrance fee"
+        ],
+        "analyzed_at": "2026-11-04T10:27:55Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W3216980133",
+      "source": "openalex",
+      "title": "Assessment of the environmental impacts of campsite use in selected national parks of Dry-zone, Sri Lanka",
+      "abstract": "Camping is a popular nature based recreation activity in the contemporary nature-based tourism Parks.Recreational uses such as camping in natural areas can induce significant and often localized resource impacts that can affect soil, vegetation, wildlife, and water, with severity of such impacts tend to vary depending on the intensity of use.Hence, monitoring biophysical conditions of campsites has become an important component in reserve management agenda elsewhere, especially in developed countries.However, limited or no published researches have attempted to assess environmental impacts of campsite use in Sri Lankan context.Therefore, this study evaluated the current camp site conditions in selected dry zone National Parks using key biophysical attributes.",
+      "authors": [
+        "Shashini Tara Mallikage",
+        "Priyan Perera"
+      ],
+      "year": 2017,
+      "journal": "Murdoch University Research Portal",
+      "cited_by_count": 0,
+      "doi": "",
+      "is_oa": true,
+      "oa_url": "https://researchportal.murdoch.edu.au/view/delivery/61MUN_INST/12135293530007891/13136942200007891",
+      "concepts": [
+        "Sri lanka",
+        "Dry zone",
+        "Geography",
+        "Environmental protection",
+        "Socioeconomics",
+        "Environmental planning"
+      ],
+      "openalex_url": "https://openalex.org/W3216980133",
+      "ai_analysis": {
+        "title_ko": "스리랑카 건조지역 국립공원의 야영장 이용에 따른 환경 영향 평가",
+        "abstract_ko": "야영은 현대 자연 기반 관광에서 인기 있는 레저 활동입니다. 자연공원 내 야영과 같은 레저 이용은 토양, 식생, 야생동물, 수자원에 중대하고 종종 국지적인 자원 영향을 유발할 수 있으며, 이러한 영향의 심각성은 이용 강도에 따라 다르는 경향이 있습니다. 따라서 야영장의 생물물리학적 상태를 모니터링하는 것은 특히 선진국을 중심으로 보호구역 관리 의제에서 중요한 요소가 되었습니다. 그러나 스리랑카 맥락에서는 야영장 이용의 환경적 영향을 평가하려는 시도가 제한적이거나 발표된 연구가 거의 없습니다. 따라서 본 연구는 주요 생물물리학적 지표를 사용하여 선정된 건조지역 국립공원의 현재 야영장 상태를 평가했습니다.",
+        "summary_3lines": [
+          "자연공원 내 야영 활동이 토양, 식생, 수자원 등 생물물리학적 환경에 미치는 영향을 평가하고자 연구를 수행했습니다.",
+          "주요 생물물리학적 지표를 활용하여 스리랑카 건조지역 국립공원 내 야영장들의 현장 상태를 조사·분석했습니다.",
+          "야영장 이용 강도에 따른 환경 훼손 실태를 파악하여 향후 보호구역 내 지속 가능한 야영장 관리 방안의 기틀을 마련했습니다."
+        ],
+        "research_purpose": "본 연구는 현대 자연기반 관광에서 대중적인 야영 활동이 국립공원 내 생태계(토양, 식생, 야생동물, 수자원)에 미치는 부정적 영향을 진단하기 위해 수행되었습니다. 특히 선진국과 달리 야영장에 대한 환경 영향 평가가 미비했던 스리랑카의 건조지역 국립공원을 대상으로, 핵심 생물물리학적 지표를 활용하여 현장 상태를 객관적으로 평가하고 관리의 필요성을 제기하는 것을 목적으로 합니다.",
+        "key_findings": [
+          "야영 활동은 토양 압실화, 식생 훼손, 수질 오염 등 국지적인 환경 영향을 유발함",
+          "야영장의 환경 파괴 심각성은 방문객의 이용 강도와 밀접한 상관관계를 보임",
+          "스리랑카 국립공원 내 야영장들은 체계적인 생물물리학적 모니터링과 관리가 부족한 상태임"
+        ],
+        "practical_applications": [
+          "국립공원 내 야영장 이용객 수 제한 및 사전 예약제 운영을 통한 이용 강도 조절",
+          "야영장 주변 토양 압실화 및 식생 훼손 상태에 대한 정기적인 생물물리학적 모니터링 체계 구축",
+          "훼손된 야영장에 대한 휴식년제 도입 및 자연 생태계 복원 사업 시행"
+        ],
+        "korea_np_applicability_score": 4,
+        "korea_np_applicability_reason": "한국 국립공원 내 야영장 및 대피소 주변에서도 야영 활동으로 인한 토양 유실, 식생 훼손, 수질 오염 등의 문제가 빈발하므로, 야영장 환경 영향 평가 및 모니터링 기법을 현장에 직접 적용할 수 있습니다.",
+        "study_location": "해외",
+        "related_work_areas": [
+          "탐방로·탐방객 관리",
+          "생태계 모니터링·조사",
+          "자원보전·복원"
+        ],
+        "related_laws": [
+          "자연공원법 제23조",
+          "야생생물 보호 및 관리에 관한 법률 제12조"
+        ],
+        "field_checklist": [
+          "야영장 바닥의 토양 압실화 및 나지화 면적 확인",
+          "주요 수목의 뿌리 노출 및 고사 상태 점검",
+          "불법 취사 및 캠프파이어로 인한 지표면 훼손 여부 확인",
+          "야영장 주변 쓰레기 무단 투기 및 수자원 오염 여부 점검",
+          "탐방객 수용력을 초과한 텐트 설치 및 시설 확장 여부 확인"
+        ],
+        "practical_utility_score": 4,
+        "cautions": [
+          "탐방객 성수기와 비수기의 이용 패턴 차이를 고려하여 모니터링 주기를 설정해야 함",
+          "야영장 통제 시 탐방객의 반발을 최소화하기 위한 사전 안내 및 대안 제시가 필요함"
+        ],
+        "tags": [
+          "야영장관리",
+          "환경영향평가",
+          "생물물리학적지표",
+          "탐방객관리",
+          "국립공원"
+        ],
+        "recommended_followup_research": [
+          "야영장 이용 강도에 따른 토양 및 식생 회복력 실증 연구",
+          "한국 국립공원 야영장 수용력 산정 및 최적 관리 모델 개발"
+        ],
+        "ai_recommended_topics": [
+          "campsite environmental impact assessment",
+          "recreational ecology national parks"
+        ],
+        "analyzed_at": "2026-11-04T10:28:06Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W2903546945",
+      "source": "openalex",
+      "title": "Assessment of the environmental impact of campsite use by visitors in selected national parks of dry zone Sri Lanka",
+      "abstract": "Camping is a popular nature based recreation activity in the contemporary nature-based tourism Parks.Recreational uses such as camping in natural areas can induce significant and often localized resource impacts that can affect soil, vegetation, wildlife, and water, with severity of such impacts tend to vary depending on the intensity of use.Hence, monitoring biophysical conditions of campsites has become an important component in reserve management agenda elsewhere, especially in developed countries.However, limited or no published researches have attempted to assess environmental impacts of campsite use in Sri Lankan context.Therefore, this study evaluated the current camp site conditions in selected dry zone National Parks using key biophysical attributes.",
+      "authors": [
+        "Shashini Tara Mallikage",
+        "Priyan Perera"
+      ],
+      "year": 2017,
+      "journal": "Murdoch University Research Portal",
+      "cited_by_count": 0,
+      "doi": "",
+      "is_oa": true,
+      "oa_url": "https://researchportal.murdoch.edu.au/view/delivery/61MUN_INST/12135394690007891/13136887640007891",
+      "concepts": [
+        "Sri lanka",
+        "Dry zone",
+        "Geography",
+        "Environmental impact assessment",
+        "National park",
+        "Environmental protection"
+      ],
+      "openalex_url": "https://openalex.org/W2903546945",
+      "ai_analysis": {
+        "title_ko": "스리랑카 건조 지대 국립공원 내 방문객 야영장 이용에 따른 환경 영향 평가",
+        "abstract_ko": "야영은 현대 자연 기반 관광 공원에서 대중적인 자연 친화적 여가 활동입니다. 자연 지역에서의 야영과 같은 레크리에이션 이용은 토양, 식생, 야생동물 및 수자원에 영향을 미치는 중대하고 종종 국지적인 자원 훼손을 유발할 수 있으며, 이러한 영향의 심각성은 이용 강도에 따라 달라지는 경향이 있습니다. 따라서 야영장의 생물물리학적 상태를 모니터링하는 것은 선진국을 중심으로 보호구역 관리의 중요한 요소가 되었습니다. 그러나 스리랑카의 맥락에서는 야영장 이용의 환경적 영향을 평가하려는 발표된 연구가 거의 없거나 전무합니다. 이에 본 연구는 주요 생물물리학적 지표를 활용하여 건조 지대의 선정된 국립공원 내 현재 야영장 상태를 평가했습니다.",
+        "summary_3lines": [
+          "현대 자연공원에서 인기 있는 야영 활동이 토양, 식생 등 생태계에 미치는 국지적 영향을 평가하고자 했다.",
+          "선진국에서는 야영장 상태 모니터링이 필수적이나, 스리랑카에서는 관련 연구가 부족하여 건조 지대 국립공원을 대상으로 생물물리학적 지표 평가를 수행했다.",
+          "국립공원 내 야영장 이용에 따른 환경 훼손을 체계적으로 모니터링하고 이용 강도에 따른 관리 대책을 수립해야 한다."
+        ],
+        "research_purpose": "본 연구는 자연 기반 레크리에이션 활동인 야영이 국립공원 내 토양, 식생, 수자원 등 생물물리학적 환경에 미치는 영향을 평가하는 것을 목적으로 합니다. 특히 선진국과 달리 야영장 환경 영향 평가가 미비했던 스리랑카 건조 지대 국립공원을 대상으로 현장 상태를 진단하여 기초 자료를 제공하고자 하였습니다.",
+        "key_findings": [
+          "야영 활동은 토양 압실화, 식생 피도 감소, 나무 훼손 등 국지적인 자원 훼손을 유발합니다.",
+          "훼손의 심각성은 야영 이용의 강도와 빈도에 직접적으로 비례하여 증가합니다.",
+          "스리랑카 건조 지대 국립공원들은 체계적인 야영장 생물물리학적 모니터링 체계가 부족한 실정입니다."
+        ],
+        "practical_applications": [
+          "국립공원 내 야영장 주변의 토양 다짐 및 식생 훼손 상태를 주기적으로 조사하는 모니터링 체계를 구축합니다.",
+          "야영장 이용객 수와 체류 기간에 대한 총량제 또는 예약제를 도입하여 이용 강도를 조절합니다.",
+          "심각하게 훼손된 야영장은 일정 기간 휴식년제를 적용하거나 사이트를 재배치하여 자연 회복을 유도합니다."
+        ],
+        "korea_np_applicability_score": 4,
+        "korea_np_applicability_reason": "한국 국립공원 내 야영장(자동차 야영장, 일반 야영장 등)에서도 탐방객 증가로 인한 토양 침식과 식생 훼손 문제가 발생하므로, 생물물리학적 지표를 활용한 야영장 영향 평가는 현장 관리 기법으로 매우 유용합니다.",
+        "study_location": "해외",
+        "related_work_areas": [
+          "생태계 모니터링·조사",
+          "탐방로·탐방객 관리",
+          "시설·인프라 관리"
+        ],
+        "related_laws": [
+          "자연공원법 제2조",
+          "자연공원법 제23조",
+          "야생생물 보호 및 관리에 관한 법률 제12조"
+        ],
+        "field_checklist": [
+          "야영장 내 나지(풀이 자라지 않는 땅) 면적 비율 측정",
+          "주요 수목의 뿌리 노출 및 나무껍질 손상 여부 확인",
+          "토양 압실화(단단해짐) 정도 및 배수상태 점검",
+          "야영 데크 주변 쓰레기 무단 투기 및 오폐수 무단 방류 흔적 확인",
+          "허가되지 않은 구역으로의 무단 야영 및 샛길 형성 여부 점검"
+        ],
+        "practical_utility_score": 4,
+        "cautions": [
+          "계절별 탐방객 증감 패턴을 고려하여 모니터링 시기를 결정해야 합니다.",
+          "야영장 관리 시 지역 탐방객의 반발을 최소화하기 위한 사전 안내와 홍보가 병행되어야 합니다."
+        ],
+        "tags": [
+          "야영장",
+          "환경영향평가",
+          "생물물리학적모니터링",
+          "탐방객관리",
+          "국립공원생태계"
+        ],
+        "recommended_followup_research": [
+          "이용 강도에 따른 국립공원 야영장 토양 및 식생 회복력 분석 연구",
+          "한국 국립공원 야영장 특성에 맞는 수용력 산정 모델 개발 연구"
+        ],
+        "ai_recommended_topics": [
+          "campsite impact monitoring",
+          "recreational ecology national parks",
+          "soil compaction camping",
+          "visitor use management protected areas"
+        ],
+        "analyzed_at": "2026-11-04T10:28:16Z",
         "model": "gemini-flash-lite-latest"
       }
     },
