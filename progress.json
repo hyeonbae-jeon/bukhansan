@@ -112,14 +112,14 @@
     "national park camping impact": 2,
     "national park air quality monitoring": 2,
     "national park water quality monitoring": 2,
-    "national park soil erosion control": 1,
-    "national park economic valuation": 1,
-    "national park community engagement": 1,
-    "national park drone remote sensing": 1,
+    "national park soil erosion control": 2,
+    "national park economic valuation": 2,
+    "national park community engagement": 2,
+    "national park drone remote sensing": 2,
     "national park citizen science monitoring": 1,
     "national park wetland management": 1,
     "national park landscape connectivity corridor": 1,
     "national park disaster risk management": 1
   },
-  "updated_at": "2026-11-04T10:27:47.969586"
+  "updated_at": "2026-11-05T10:20:47.567337"
 }
