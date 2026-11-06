@@ -90,8 +90,8 @@
     "Palgongsan": 2,
     "Hallyeohaesang": 2,
     "Hallasan": 2,
-    "national park biodiversity conservation": 2,
-    "national park trail erosion": 2,
+    "national park biodiversity conservation": 3,
+    "national park trail erosion": 3,
     "national park wildlife management": 2,
     "national park climate change adaptation": 2,
     "national park management effectiveness": 2,
@@ -116,10 +116,10 @@
     "national park economic valuation": 2,
     "national park community engagement": 2,
     "national park drone remote sensing": 2,
-    "national park citizen science monitoring": 1,
-    "national park wetland management": 1,
-    "national park landscape connectivity corridor": 1,
-    "national park disaster risk management": 1
+    "national park citizen science monitoring": 2,
+    "national park wetland management": 2,
+    "national park landscape connectivity corridor": 2,
+    "national park disaster risk management": 2
   },
-  "updated_at": "2026-11-05T10:20:47.567337"
+  "updated_at": "2026-11-06T10:24:50.355979"
 }

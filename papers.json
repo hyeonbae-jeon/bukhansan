@@ -1,15 +1,15 @@
 {
   "meta": {
-    "total": 5692,
-    "analyzed": 5645,
+    "total": 5696,
+    "analyzed": 5649,
     "avg_applicability": 3.7,
     "avg_utility": 3.7,
-    "high_applicability_count": 3492,
+    "high_applicability_count": 3495,
     "score_distribution": {
       "1": 90,
       "2": 391,
-      "3": 1671,
-      "4": 2348,
+      "3": 1672,
+      "4": 2351,
       "5": 1144
     },
     "year_distribution": {
@@ -62,7 +62,7 @@
       "2005": 105,
       "2006": 111,
       "2007": 118,
-      "2008": 152,
+      "2008": 153,
       "2009": 149,
       "2010": 163,
       "2011": 185,
@@ -75,29 +75,29 @@
       "2018": 219,
       "2019": 259,
       "2020": 314,
-      "2021": 289,
+      "2021": 290,
       "2022": 235,
       "2023": 248,
       "2024": 280,
       "2025": 341,
-      "2026": 332
+      "2026": 334
     },
-    "updated_at": "2026-11-05T10:20:51.423867"
+    "updated_at": "2026-11-06T10:25:38.363999"
   },
   "tag_index": {
-    "국립공원관리": 309,
+    "국립공원관리": 310,
     "탐방객관리": 232,
     "생태관광": 219,
     "생물다양성": 199,
     "기후변화": 194,
     "지역사회참여": 163,
     "생태계모니터링": 158,
+    "거버넌스": 152,
     "국립공원": 150,
-    "거버넌스": 150,
     "보호지역관리": 138,
     "주민참여": 136,
-    "생태모니터링": 124,
-    "시민과학": 123,
+    "생태모니터링": 125,
+    "시민과학": 125,
     "탐방로관리": 113,
     "기후변화적응": 106,
     "수질모니터링": 102,
@@ -147,12 +147,12 @@
     "지속가능관광": 44
   },
   "work_area_index": {
-    "생태계 모니터링·조사": 2798,
-    "탐방로·탐방객 관리": 2585,
-    "자원보전·복원": 1881,
-    "지역사회·거버넌스": 1564,
+    "생태계 모니터링·조사": 2801,
+    "탐방로·탐방객 관리": 2586,
+    "자원보전·복원": 1882,
+    "지역사회·거버넌스": 1567,
     "공원계획·구역관리": 1303,
-    "야생생물·서식지 관리": 1251,
+    "야생생물·서식지 관리": 1253,
     "탐방객 서비스·안전": 670,
     "환경 모니터링": 618,
     "기후변화 대응": 600,
@@ -161,7 +161,7 @@
     "관광·경제 정책": 532
   },
   "location_index": {
-    "해외": 4517,
+    "해외": 4521,
     "국내": 1128
   },
   "papers": [
@@ -192919,6 +192919,95 @@
       }
     },
     {
+      "id": "W4225849200",
+      "source": "openalex",
+      "title": "Barriers and opportunities for cooperative wetland management: a case study in the greater Rocky Mountain National Park ecosystem",
+      "abstract": "Abstract The boundaries of most protected areas are not large enough to encompass natural processes such as hydrologic and ecological connections between wetlands and within watersheds. Therefore, management is likely to be improved by working across boundaries with multiple jurisdictions. This research explores barriers and opportunities for cross-boundary cooperation for wetland stewardship in Rocky Mountain National Park (RMNP), Colorado, USA, and surrounding areas, using semi-structured interviews with staff members of government agencies, nonprofits, research organizations, and municipalities. Results show that wetlands outside of RMNP are experiencing similar cross-boundary disturbances to those within the park. Although participants recognize that working cooperatively with neighboring jurisdictions can decrease the effects of boundaries on wetland integrity, they also reported that the most significant cross-boundary challenge is working with others to exchange resources, develop a common goal, and implement projects cooperatively. We provide recommendations on how to address cooperative management challenges while taking advantage of opportunities to facilitate cross-boundary wetland stewardship at the ecosystem-scale.",
+      "authors": [
+        "Meghan K. Tait",
+        "Mark W. Brunson"
+      ],
+      "year": 2021,
+      "journal": "Wetlands Ecology and Management",
+      "cited_by_count": 7,
+      "doi": "https://doi.org/10.1007/s11273-021-09849-x",
+      "is_oa": true,
+      "oa_url": "https://www.researchsquare.com/article/rs-409839/latest.pdf",
+      "concepts": [
+        "Stewardship (theology)",
+        "Wetland",
+        "Environmental resource management",
+        "Boundary (topology)",
+        "National park",
+        "Ecosystem"
+      ],
+      "openalex_url": "https://openalex.org/W4225849200",
+      "ai_analysis": {
+        "title_ko": "협력적 습지 관리를 위한 장애물과 기회: 로키산맥 국립공원 생태계 사례 연구",
+        "abstract_ko": "대부분의 보호구역 경계는 습지와 유역 간의 수문학적, 생태학적 연결과 같은 자연적 과정을 모두 아우를 만큼 충분히 넓지 않습니다. 따라서 여러 관할 구역이 경계를 넘어 협력함으로써 관리 효율성을 높일 수 있습니다. 본 연구는 미국 콜로라도주의 로키산맥 국립공원(RMNP) 및 주변 지역을 대상으로 정부 기관, 비영리단체, 연구기관, 지방자치단체 직원들과의 반구조화 인터뷰를 통해 습지 관리를 위한 경계 초월적 협력의 장애물과 기회 요인을 탐색합니다. 연구 결과, 로키산맥 국립공원 외곽의 습지 역시 공원 내부와 유사한 경계 초월적 교란을 겪고 있는 것으로 나타났습니다. 참가자들은 인접 관할 구역과의 협력이 습지 무결성에 미치는 경계의 부정적 영향을 줄일 수 있다는 점을 인지하고 있으나, 자원 교환, 공통 목표 설정, 공동 사업 추진 등에서 타 기관과의 협력이 가장 큰 과제라고 보고했습니다. 본 연구는 생태계 규모에서 경계 초월적 습지 관리를 촉진할 수 있는 기회를 활용하는 동시에 협력적 관리의 과제를 해결하는 방안을 제안합니다.",
+        "summary_3lines": [
+          "보호구역 경계를 넘는 생태계 관리를 위해 로키산맥 국립공원 사례를 바탕으로 기관 간 협력의 장애물과 기회를 분석함",
+          "인접 기관과의 협력 필요성에는 공감하나 자원 공유, 공통 목표 수립, 공동 사업 추진 과정에서 실무적 어려움이 큼을 확인함",
+          "생태계 단위의 효과적인 습지 보전을 위해 관할 구역을 넘어선 소통 채널 구축과 공동 목표 설정 등 제도적 보완이 필요함"
+        ],
+        "research_purpose": "본 연구는 국립공원과 주변 지역 간의 생태계적 연결성을 고려할 때 필수적인 '경계 초월적(Cross-boundary) 습지 관리'의 실태를 파악하고자 합니다. 미국 로키산맥 국립공원 사례를 통해 다양한 유관기관(정부, 지자체, 비영리단체 등) 간의 협력 과정에서 직면하는 구체적인 장애물과 기회 요인을 분석하고 실효성 있는 개선 방안을 도출하는 것을 목적으로 합니다.",
+        "key_findings": [
+          "공원 외곽의 습지들도 공원 내부와 동일하게 경계를 가로지르는 환경 교란과 훼손을 겪고 있음",
+          "참가자들은 인접 관할 구역과의 협력이 습지 건강성 유지에 필수적이라는 점에 깊이 공감함",
+          "협력 과정에서 가장 큰 걸림돌은 기관 간 자원 교환의 한계, 공통 목표 설정의 어려움, 공동 프로젝트 실행의 복잡성임"
+        ],
+        "practical_applications": [
+          "지자체 및 유관기관과의 정례 협의체를 구성하여 공유 유역 및 습지 관리를 위한 공동 목표 설정",
+          "공원 경계 외부의 습지 훼손 요인에 대응하기 위한 인접 기관 간 공동 모니터링 체계 구축",
+          "습지 복원 및 관리 사업 추진 시 예산과 인력을 상호 교환할 수 있는 제도적 근거 및 협약 체결"
+        ],
+        "korea_np_applicability_score": 4,
+        "korea_np_applicability_reason": "한국의 국립공원 역시 공원 구역 경계가 행정구역 경계 및 사유지와 인접해 있어 습지 등 수자원 관리 시 지자체 및 지역주민과의 협력이 필수적이므로 적용 타당성이 높음.",
+        "study_location": "해외",
+        "related_work_areas": [
+          "생태계 모니터링·조사",
+          "지역사회·거버넌스",
+          "자원보전·복원"
+        ],
+        "related_laws": [
+          "자연공원법 제2조",
+          "야생생물 보호 및 관리에 관한 법률 제4조",
+          "환경영향평가법 제9조"
+        ],
+        "field_checklist": [
+          "공원 경계 인접 지역의 습지 및 수계 현황이 파악되어 있는가",
+          "인접 지자체 및 유관기관과 습지 관리 관련 소통 채널이 마련되어 있는가",
+          "경계를 초월한 습지 훼손 요인(오염원, 수량 변화 등)에 대한 공동 조사가 이루어지고 있는가",
+          "기관 간 공동 사업 추진을 위한 예산이나 인력 분담 방안이 논의되었는가",
+          "습지 보전 및 복원을 위한 공통의 관리 목표가 기관 간 합의되었는가"
+        ],
+        "practical_utility_score": 4,
+        "cautions": [
+          "기관별로 예산 집행 시기와 행정 절차가 달라 단기간 내 공동 사업 추진에 한계가 있을 수 있음",
+          "사유지 내 습지의 경우 토지 소유자의 동의와 협조가 선행되어야 함"
+        ],
+        "tags": [
+          "경계초월관리",
+          "습지생태계",
+          "유관기관협력",
+          "생태계연결성",
+          "거버넌스"
+        ],
+        "recommended_followup_research": [
+          "한국 국립공원과 지자체 간 습지 관리 협력 사례 분석 및 장애 요인 연구",
+          "경계 초월적 생태계 관리를 위한 거버넌스 모델 개발 연구"
+        ],
+        "ai_recommended_topics": [
+          "cross-boundary wetland management",
+          "protected area governance",
+          "watershed collaboration",
+          "park-edge ecosystem management"
+        ],
+        "analyzed_at": "2026-11-06T10:25:20Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
       "id": "W2902658424",
       "source": "openalex",
       "title": "The Use of Microcomputers for Park Trail Information Dissemination",
@@ -248063,6 +248152,93 @@
           "national park co-management ecological compensation"
         ],
         "analyzed_at": "2026-11-02T10:36:29Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W7124454996",
+      "source": "openalex",
+      "title": "Co-Production Dilemma and Governance Optimization for Sustainable Management of National Wetland Parks in China：Evidence from Shandong, Province",
+      "abstract": "Abstract Exploring problems and their optimization paths in the management and conservation(MC) of National Wetland Parks(NWP) holds significant importance for the sustainable development of wetlands. This article employs Grounded Theory(GT) method to examine the formation mechanism underlying co-production dilemma in Bin Hu Wetland Park(BHWP) of Shandong Province. Research found that this mechanism is composed of factors such as an incomplete policy instruments combination system(PICS), residents' dissatisfaction, lack of social organizations' participation, and tourists' misconduct. Among them, an incomplete PICS is the key reason for emergence of other mechanism factors. Residents' dissatisfaction mainly stems from their economic loss and the various challenges brought about by their lifestyle changes. The lack of social organizations' participation led to the limited cognition of wetland functions and the lack of community social capital. The tourists' misconduct caused conflicts between local residents and tourists. The combined effect of these factors resulted in poor economic, ecological, and social benefits of BHWP. Finally, this article puts forward advice from the perspective of developing community economy and enriching community governance methods. This article incorporates the management problems of NWP into co-production theory, elucidating the formation mechanism of co-production dilemma and expanding the research theme of co-production dilemma.",
+      "authors": [
+        "X. L. Zhang",
+        "Fenghua Wen",
+        "Lapo Hou"
+      ],
+      "year": 2026,
+      "journal": "Research Square",
+      "cited_by_count": 1,
+      "doi": "https://doi.org/10.21203/rs.3.rs-6792169/v1",
+      "is_oa": true,
+      "oa_url": "https://www.researchsquare.com/article/rs-6792169/latest.pdf",
+      "concepts": [
+        "Dilemma",
+        "Corporate governance",
+        "Mechanism (biology)",
+        "Business",
+        "Wetland",
+        "Perspective (graphical)"
+      ],
+      "openalex_url": "https://openalex.org/W7124454996",
+      "ai_analysis": {
+        "title_ko": "중국 국가습지공원의 지속 가능한 관리를 위한 공동생산 딜레마와 거버넌스 최적화: 산동성 사례를 중심으로",
+        "abstract_ko": "국가습지공원의 관리와 보전 과정에서 발생하는 문제와 최적화 방안을 탐색하는 것은 습지의 지속 가능한 발전에 매우 중요하다. 본 논문은 근거이론 방법을 활용하여 산동성 빈후습지공원의 공동생산 딜레마 기저에 놓인 형성 메커니즘을 조사했다. 연구 결과, 이 메커니즘은 불완전한 정책 수단 조합 시스템, 주민의 불만, 사회 조직 참여 부족, 관광객의 무단 행동 등의 요인으로 구성되어 있음을 밝혔다. 그중 불완전한 정책 수단 조합 시스템이 다른 메커니즘 요인들을 유발하는 핵심 원인이었다. 주민의 불만은 주로 경제적 손실과 생활 방식 변화에 따른 다양한 어려움에서 비롯되었으며, 사회 조직의 참여 부족은 습지 기능에 대한 제한적 인식과 지역사회 사회 자본의 결핍으로 이어졌다. 또한 관광객의 무단 행동은 지역 주민과 관광객 간의 갈등을 유발했다. 이러한 요인들이 복합적으로 작용하여 빈후습지공원은 저조한 경제적, 생태적, 사회적 편익을 거두게 되었다. 결론적으로 이 논문은 지역사회 경제 활성화와 지역사회 거버넌스 방식 다변화라는 관점에서 개선 제언을 제시하며, 국가습지공원의 관리 문제를 공동생산 이론에 접목하여 공동생산 딜레마의 형성 메커니즘을 규명하고 연구 주제를 확장했다.",
+        "summary_3lines": [
+          "습지 보호구역 관리에서 주민과 방문객, 관리 주체 간 협력 부실로 발생하는 공동생산 딜레마의 원인을 분석하고자 했다.",
+          "근거이론 분석 결과 불완전한 제도, 주민 불만, 사회단체 참여 부족, 탐방객 무단 행동이 복합적으로 작용해 관리 성과를 저해함을 확인했다.",
+          "현장 관리 성과를 높이기 위해 지역사회 경제 활성화와 거버넌스 다변화를 통한 협력적 관리 체계 구축을 제언한다."
+        ],
+        "research_purpose": "본 연구는 중국 국가습지공원의 관리 및 보전 과정에서 발생하는 공동생산 딜레마의 구조적 원인을 진단하는 것을 목적으로 한다. 특히 지역 주민의 경제적 피해와 생활 변화, 사회조직의 참여 부족, 탐방객의 일탈 행동 등이 관리 성과에 미치는 복합적 영향을 규명하고, 이를 해결하기 위한 거버넌스 최적화 방안을 도출하고자 한다.",
+        "key_findings": [
+          "불완전한 정책 및 제도적 지원 체계가 주민 불만과 탐방객 갈등을 유발하는 근본 원인임",
+          "주민들의 경제적 손실과 생활 방식 변화에 대한 보상 및 대안 부족이 관리 주체와의 갈등으로 이어짐",
+          "사회단체 및 지역사회의 참여 부족은 습지 생태계 가치에 대한 공감대를 낮추고 사회적 자본을 훼손함"
+        ],
+        "practical_applications": [
+          "국립공원 내 지역주민 소득 창출을 위한 생태관광 프로그램 및 지역 특산물 판로 지원 방안 마련",
+          "탐방객의 무단 행위 예방을 위한 계도 활동 강화 및 주민 참여형 순찰·안내 시스템 도입",
+          "지자체, 지역주민, 시민단체가 참여하는 민관협력 거버넌스 협의체 정례화"
+        ],
+        "korea_np_applicability_score": 4,
+        "korea_np_applicability_reason": "한국 국립공원 역시 사유지 포함 및 지역주민과의 갈등, 탐방객 무단 출입 등의 문제를 겪고 있어, 지역사회와의 협력적 거버넌스 구축 및 주민 소득 연계 방안을 현장에 적용하기 매우 적합하다.",
+        "study_location": "해외",
+        "related_work_areas": [
+          "탐방로·탐방객 관리",
+          "지역사회·거버넌스"
+        ],
+        "related_laws": [
+          "자연공원법 제18조",
+          "야생생물 보호 및 관리에 관한 법률 제33조"
+        ],
+        "field_checklist": [
+          "국립공원 내 주민 대상 소득 지원 사업 및 경제적 영향 조사 여부",
+          "탐방객의 샛길 출입, 쓰레기 투기 등 무단 행동 발생 빈도 점검",
+          "지역 주민 간담회 및 민원 수렴 채널 운영 실태 확인",
+          "지역 사회단체나 민간 전문가의 공원 관리 참여 프로그램 유무",
+          "공원 관리 정책에 대한 주민 및 탐방객의 만족도 모니터링 실시 여부"
+        ],
+        "practical_utility_score": 4,
+        "cautions": [
+          "국내 국립공원의 경우 자연공원법 및 용도지구 규제에 따라 주민 지원 사업의 범위가 제한될 수 있음",
+          "지역사회 협력 거버넌스 구축 시 주민 간 이해관계 대립을 조정할 전담 인력과 예산이 선행되어야 함"
+        ],
+        "tags": [
+          "공동생산이론",
+          "근거이론",
+          "주민갈등",
+          "거버넌스",
+          "습지관리"
+        ],
+        "recommended_followup_research": [
+          "국립공원 지역주민의 경제적 혜택 체감도가 공원 보전 태도에 미치는 영향 분석",
+          "주민 참여형 공원 관리(공동생산) 모델의 국내 적용 효과성 평가"
+        ],
+        "ai_recommended_topics": [
+          "국립공원 지역주민 상생 모델",
+          "보호지역 거버넌스 최적화",
+          "탐방객 무단행동 저감 정책"
+        ],
+        "analyzed_at": "2026-11-06T10:25:09Z",
         "model": "gemini-flash-lite-latest"
       }
     },
@@ -307672,6 +307848,91 @@
       }
     },
     {
+      "id": "W7225270497",
+      "source": "openalex",
+      "title": "Identifying \"UFOs\" in Mooloolah River National Park: combining entomologist-led surveys with citizen science to document flowering plant-insect interactions",
+      "abstract": "Fundamental to pollinator conservation is surveying pollinators and their interactions with flora. Sweep netting has been found to be the most effective method for surveying pollinators and their interactions, however different sweep netting techniques may yield different results. Additionally, citizen scientists can aid in collecting data. We created the “Identifying UFOs in Mooloolah River National Park” project, a collaboration between an entomologist, Landcare coordinator, and citizen scientists, which aimed to assess effectiveness of different sweep netting methods, and provide citizen scientists the opportunity to learn how to conduct standardized monitoring of insect-flower interactions. Surveys were conducted monthly from Sept 2023 – March 2024. Along a transect, an entomologist trialled three sweep netting techniques: targeted sweep-netting (TSN), floral sweep-netting (FSN), and line transect sweeps (LTS). Citizen scientists then were assigned a target plant and conduct 30 minutes observations. Thirty-eight species, comprising 155 specimens of insects were collected by the entomologist, with the greatest number collected by TSN. All native bees were collected by TSN. Citizen scientists recorded 294 observations of arthropods (insects and arachnids). The most frequently observed were ants (104), followed by beetles (36); native bees were comparatively under-represented. In conclusion, projects such as this provide citizen scientists an opportunity to undertake research that mirrored ecological surveys, however experienced entomologists should be included for targeted taxon surveys. The datasets here include: Appendix A. UFO Identification team citizen science plant and insect visitor data Appendix B. Pollinator-plant networks per month from TSN surveys Appendix C. Citizen scientist participant feedback.",
+      "authors": [
+        "Kit Stasia Prendergast"
+      ],
+      "year": 2026,
+      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+      "cited_by_count": 0,
+      "doi": "https://doi.org/10.5281/zenodo.23965001",
+      "is_oa": true,
+      "oa_url": "https://doi.org/10.5281/zenodo.23965001",
+      "concepts": [
+        "Citizen science",
+        "Netting",
+        "Geography",
+        "Pollinator",
+        "Visitor pattern",
+        "Transect"
+      ],
+      "openalex_url": "https://openalex.org/W7225270497",
+      "ai_analysis": {
+        "title_ko": "물루라 강 국립공원의 '미확인 비행물체(UFO)' 식별: 전문가 주도 조사와 시민과학의 결합을 통한 개화 식물과 곤충의 상호작용 기록",
+        "abstract_ko": "화분매개자 보전의 핵심은 화분매개자와 이들과 식물의 상호작용을 조사하는 것입니다. 포충망을 이용한 스윕 네팅(sweep netting)이 화분매개자 조사를 위한 가장 효과적인 방법으로 밝혀졌으나, 구체적인 채집 기법에 따라 결과가 다를 수 있습니다. 아울러 시민과학자들은 데이터 수집에 크게 기여할 수 있습니다. 본 연구는 곤충학자, 지역환경관리 코디네이터, 시민과학자의 협업으로 '물루라 강 국립공원의 UFO 식별' 프로젝트를 기여하여, 다양한 스윕 네팅 방법의 효과를 평가하고 시민과학자들에게 곤충-꽃 상호작용의 표준화된 모니터링 방법을 교육하고자 했습니다. 조사는 2023년 9월부터 2024년 3월까지 월별로 수행되었습니다. 곤충학자는 탐방로를 따라 표적 스윕 네팅(TSN), 화분 스윕 네팅(FSN), 선형 트랜식트 스윕(LTS) 등 세 가지 기법을 시험했습니다. 이후 시민과학자들은 지정된 식물을 대상으로 30분간 관찰을 수행했습니다. 곤충학자는 총 38종, 155개체의 곤충을 채집했으며, 이 중 표적 스윕 네팅(TSN) 방식으로 가장 많은 개체가 채집되었습니다. 모든 토종 벌류도 TSN을 통해 채집되었습니다. 시민과학자들은 절지동물(곤충 및 거미류)을 대상으로 총 294회의 관찰 기록을 남겼습니다. 가장 빈번히 관찰된 것은 개미(104회)였으며, 딱정벌레(36회)가 그 뒤를 이었습니다. 반면 토종 벌류는 상대적으로 적게 관찰되었습니다. 결론적으로 이와 같은 프로젝트는 시민과학자들에게 생태 조사와 유사한 연구를 수행할 기회를 제공하지만, 특정 분류군에 대한 표적 조사의 경우 숙련된 곤충학자의 참여가 필수적입니다. 연구 데이터세트에는 시민과학자 팀의 식물 및 곤충 방문자 데이터, TSN 조사의 월별 화분매개자-식물 네트워크, 참가자 피드백이 포함되어 있습니다.",
+        "summary_3lines": [
+          "시민과학과 전문가 조사를 결합하여 국립공원 내 화분매개 곤충과 식물의 상호작용을 효과적으로 모니터링하는 방안을 검증하고자 했다.",
+          "곤충학자가 수행한 표적 스윕 네팅(TSN)이 토종 벌류 등 전문적인 곤충 채집에 가장 효과적이었으며, 시민과학자는 일반적인 절지동물 관찰에 기여했다.",
+          "시민과학 프로그램은 대중의 생태계 참여를 높이는 데 유용하나, 정확한 분류군 조사를 위해서는 전문가의 주도와 병행이 필수적이다."
+        ],
+        "research_purpose": "본 연구는 국립공원 내 화분매개 곤충과 식물의 상호작용을 정확히 파악하기 위해 곤충학자의 전문 조사 기법과 시민과학자의 참여를 결합한 모니터링 모델의 효과를 평가하고자 했다. 특히 다양한 포충망 채집 기법의 효율성을 비교하고, 시민과학자가 생태 조사에 기여할 수 있는 실효성 있는 협력 체계를 구축하는 것을 목적으로 했다.",
+        "key_findings": [
+          "곤충학자가 수행한 표적 스윕 네팅(TSN) 방식이 가장 많은 곤충과 모든 토종 벌류를 채집하는 데 가장 효과적이었다.",
+          "시민과학자들은 주로 개미와 딱정벌레 등 관찰이 용이한 대형 절지동물을 중심으로 풍부한 관찰 데이터를 수집했다.",
+          "시민과학 프로그램은 생태 조사 참여도를 높이고 대중 교육에 효과적이나, 미소 곤충이나 특정 분류군은 전문가의 개입이 필수적이다."
+        ],
+        "practical_applications": [
+          "국립공원 내 화분매개자 모니터링 시 정밀 조사가 필요한 분류군은 전문가 주도의 표적 포충망 기법을 적용한다.",
+          "탐방객 및 지역 주민을 대상으로 하는 시민과학 생태 모니터링 프로그램 운영 시 관찰 대상과 난이도를 적절히 조정한다.",
+          "시민과학자의 자원봉사 활동 데이터를 생태계 건강성 평가의 보조 자료로 활용하는 거버넌스 체계를 구축한다."
+        ],
+        "korea_np_applicability_score": 4,
+        "korea_np_applicability_reason": "한국 국립공원에서도 탐방객 참여형 생태계 모니터링(시민과학)과 법정보호종 및 화분매개 곤충 조사가 활발히 추진되고 있어, 전문가와 시민과학의 역할 분담 모델을 현장에 즉시 참고할 수 있기 때문이다.",
+        "study_location": "해외",
+        "related_work_areas": [
+          "생태계 모니터링·조사",
+          "야생생물·서식지 관리",
+          "지역사회·거버넌스"
+        ],
+        "related_laws": [
+          "자연공원법 제18조",
+          "야생생물 보호 및 관리에 관한 법률 제19조"
+        ],
+        "field_checklist": [
+          "화분매개 곤충 모니터링 시 전문가 조사와 시민과학자 참여 활동의 역할을 명확히 구분했는가",
+          "포충망 조사 시 대상 식물과 종의 특성에 맞는 채집 기법(표적 스윕 네팅 등)을 선정했는가",
+          "시민과학 참여자에게 관찰 대상 생물(곤충·식물)에 대한 사전 교육과 안전 수칙을 안내했는가",
+          "시민과학자가 수집한 관찰 데이터의 정확성 검증을 위한 전문가 검토 절차를 마련했는가",
+          "조사 과정에서 국립공원 내 보호식물과 서식지가 훼손되지 않도록 통제 지침을 준수했는가"
+        ],
+        "practical_utility_score": 4,
+        "cautions": [
+          "시민과학자가 미소 곤충이나 토종 벌류를 정확히 식별하기 어려우므로 결과 해석 시 오인식 가능성을 고려해야 한다.",
+          "국립공원 내 무분별한 포충망 사용은 탐방객 오해 및 자원 훼손을 유발할 수 있으므로 허가된 구역에서만 제한적으로 시행해야 한다."
+        ],
+        "tags": [
+          "화분매개자",
+          "시민과학",
+          "생태모니터링",
+          "곤충조사",
+          "국립공원관리"
+        ],
+        "recommended_followup_research": [
+          "한국 국립공원 생태계 특성에 맞는 시민과학자 주도형 곤충-식물 상호작용 모니터링 매뉴얼 개발 연구",
+          "전문가 조사와 시민과학 데이터 간의 정확도 비교 및 보완적 통합 방안 연구"
+        ],
+        "ai_recommended_topics": [
+          "pollinator monitoring citizen science",
+          "sweep netting insect survey methods"
+        ],
+        "analyzed_at": "2026-11-06T10:24:58Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
       "id": "W2011159906",
       "source": "openalex",
       "title": "Pretectonic and posttectonic emplacements of the granitoids in the south central Okchon belt, South Korea: Implications for the timing of strike‐slip shearing and thrusting",
@@ -334575,6 +334836,90 @@
           "Employee performance in park management"
         ],
         "analyzed_at": "2026-10-16T07:59:32Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W7220068025",
+      "source": "openalex",
+      "title": "Monitoring Common Loons in Glacier National Park",
+      "abstract": "The common loon (Gavia immer) has been documented from Glacier National Park since at least the early 20 th Century.Sporadic observations were recorded until 1986 when the Montana Loon Day Survey was initiated.Efforts by park employees and volunteers increased during the 1990s; number oflakes surveyed on Loon Day increased from 31 to 50, the number of lakes with loons varied between 13 and 19, the number of adults varied between 26 and 48, and the number of chicks detected varied between 2 and 14.Mean chick production for the park during 1989-2004 was ~ 5/yr.Some lakes, particularly in the northeast part of the park, appeared to decline in loon productivity, although others on the west side exhibited increased chick production.However, prior to the advent of the Citizen Science Loon Project in 2005, variability in annual survey effort, inconsistencies in the abilities, dedication, and dependability of volunteers, and the limited time devoted to sampling loons in the park together cast doubt on survey results and reliability of trends.Lack of adequate staff and funding to coordinate loon surveys precluded intensive educational efforts, confirmation of questionable observations, clarification of ambiguous information, or maintenance of long-term data bases.Non-biologist volunteers have been a powerful force in some wildlife survey efforts, but coordinating and supporting such endeavors can be very labor and time-intensive.Because Glacier NP is host to~ 20 percent of Montana's breeding Common Loons, a state species of special concern, improving reliability of park",
+      "authors": [
+        "Steve Gniadek"
+      ],
+      "year": 2008,
+      "journal": "Intermountain journal of sciences",
+      "cited_by_count": 0,
+      "doi": "",
+      "is_oa": true,
+      "oa_url": "https://arc.lib.montana.edu/ojs/index.php/IJS/article/download/2134/1790",
+      "concepts": [
+        "National park",
+        "Wildlife",
+        "Glacier",
+        "Geography",
+        "Aerial survey",
+        "Ecology"
+      ],
+      "openalex_url": "https://openalex.org/W7220068025",
+      "ai_analysis": {
+        "title_ko": "글레이셔 국립공원의 아비새(Common Loon) 모니터링",
+        "abstract_ko": "아비새(Gavia immer)는 적어도 20세기 초부터 글레이셔 국립공원에서 서식하는 것이 기록되었습니다. 1986년 몬태나 아비새 조사(Montana Loon Day Survey)가 시작될 때까지는 산발적인 관찰 기록만 있었습니다. 1990년대 동안 공원 직원과 자원봉사자의 노력이 증가함에 따라, 아비새 조사의 대상 호수는 31개에서 50개로 늘어났고, 아비새가 서식하는 호수는 13개에서 19개 사이였으며, 성체 수는 26마리에서 48마리, 확인된 새끼 수는 2마리에서 14마리 사이로 나타났습니다. 1989~2004년 기간 동안 공원의 평균 새끼 생산량은 연간 약 5마리였습니다. 공원 동북부 일부 호수에서는 아비새 번식 실적이 감소하는 경향을 보인 반면, 서부 지역의 다른 호수들은 새끼 생산이 증가했습니다. 그러나 2005년 시민과학 아비새 프로젝트(Citizen Science Loon Project)가 도입되기 전에는, 연도별 조사 노력의 편차, 자원봉사자의 역량·헌신도·신뢰성의 불일치, 그리고 공원 내 아비새 샘플링에 할애된 제한된 시간 등이 종합되어 조사 결과와 추세의 신뢰성에 의문을 제기하게 만들었습니다. 아비새 조사를 총괄할 적절한 직원과 예산의 부족은 심층적인 교육 노력, 의문스러운 관찰 결과의 확인, 모호한 정보의 명확화, 또는 장기 데이터베이스 유지 관리를 가로막았습니다. 비생물학자 자원봉사자는 일부 야생생물 조사에서 강력한 동력이 될 수 있으나, 이러한 노력을 조정하고 지원하는 일에는 상당한 인력과 시간이 소요될 수 있습니다. 글레이셔 국립공원은 몬태나주의 특별 관심 야생동물 종인 번식 아비새의 약 20퍼센트를 수용하고 있으므로, 공원 내 개체군 조사의 신뢰성을 높이는 것이 중요합니다.",
+        "summary_3lines": [
+          "글레이셔 국립공원 내 아비새(Common Loon)의 장기 개체군 모니터링 현황을 분석하고 자원봉사자 기반 조사의 한계와 개선점을 파악하였다.",
+          "1986년부터 2004년까지의 조사 데이터를 바탕으로 서식 호수와 번식 개체 수의 변동 폭을 분석한 결과, 조사 인력의 전문성과 일관성 부족이 데이터 신뢰성에 영향을 미쳤음을 확인했다.",
+          "정확한 생태계 모니터링을 위해서는 자원봉사자(시민과학) 활용 시 체계적인 교육과 전담 인력 및 예산 투입이 필수적이다."
+        ],
+        "research_purpose": "본 연구는 글레이셔 국립공원에서 수십 년간 수행된 아비새 모니터링 활동의 데이터와 그 한계를 검토하여, 야생생물 보호구역에서 자원봉사자 및 시민과학 기반 조사 체계의 신뢰성을 높이기 위한 개선 방안을 도출하고자 한다.",
+        "key_findings": [
+          "1989~2004년 기간 동안 공원 내 아비새의 평균 연간 새끼 생산량은 약 5마리로 파악됨",
+          "공원 동북부 일부 호수는 번식 실적이 감소한 반면 서부 지역은 증가하는 등 지역별 편차를 보임",
+          "자원봉사자의 역량 편차, 제한된 조사 시간, 전담 인력 및 예산 부족이 장기 모니터링 데이터의 신뢰성을 저해함"
+        ],
+        "practical_applications": [
+          "국립공원 내 멸종위기 야생생물 모니터링에 시민과학자를 참여시킬 때 현장 투입 전 필수 표준화 교육을 실시할 것",
+          "자원봉사자(시민과학) 운영 시 데이터를 검증할 수 있는 전담 전문가를 배치하여 관찰 결과의 신뢰도를 확보할 것",
+          "서식지별 번식 성공률의 공간적 편차를 고려하여 지역 맞춤형 생태계 보호 대책을 수립할 것"
+        ],
+        "korea_np_applicability_score": 3,
+        "korea_np_applicability_reason": "한국 국립공원도 자원봉사자와 시민과학을 활용한 조류 및 멸종위기종 모니터링을 확대하고 있으므로, 조사자 역량 관리와 데이터 신뢰성 확보 방안을 현장에 적용하기에 시사점이 큼.",
+        "study_location": "해외",
+        "related_work_areas": [
+          "생태계 모니터링·조사",
+          "야생생물·서식지 관리"
+        ],
+        "related_laws": [
+          "자연공원법 제18조",
+          "야생생물 보호 및 관리에 관한 법률 제8조"
+        ],
+        "field_checklist": [
+          "시민과학자 및 자원봉사자 대상 사전 종 식별 및 조사 방법 교육 이수 여부 확인",
+          "조사 구역별·시기별 조사 인원의 투입 시간 및 일관성 유지 여부 점검",
+          "제보되거나 관찰된 특이 개체 및 번식 기록에 대한 전문가 교차 검증 절차 마련",
+          "주요 물새류 및 멸종위기종 서식지의 연도별 개체 수 및 번식 성공률(새끼 수) 기록",
+          "모니터링 데이터베이스의 장기적 유지를 위한 담당 직원 지정 및 예산 확보 여부 점검"
+        ],
+        "practical_utility_score": 4,
+        "cautions": [
+          "자원봉사자의 전문성 부족으로 인한 오인 기록 발생 가능성을 항상 염두에 둘 것",
+          "자원봉사자 코디네이팅에는 상당한 행정적·인적 자원이 소모되므로 예산 편성 시 이를 고려할 것"
+        ],
+        "tags": [
+          "아비새",
+          "시민과학",
+          "야생생물모니터링",
+          "자원봉사자",
+          "개체군변동"
+        ],
+        "recommended_followup_research": [
+          "한국 국립공원 내 조류 모니터링에서 시민과학 참여 데이터의 정확도 평가 연구",
+          "자원봉사자 기반 야생생물 조사 효율성 극대화를 위한 표준화된 교육 프로그램 개발"
+        ],
+        "ai_recommended_topics": [
+          "citizen science wildlife monitoring reliability",
+          "Common Loon population trends monitoring"
+        ],
+        "analyzed_at": "2026-11-06T10:25:31Z",
         "model": "gemini-flash-lite-latest"
       }
     },
