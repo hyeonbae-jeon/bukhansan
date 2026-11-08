@@ -1,15 +1,15 @@
 {
   "meta": {
-    "total": 5696,
-    "analyzed": 5649,
+    "total": 5698,
+    "analyzed": 5651,
     "avg_applicability": 3.7,
     "avg_utility": 3.7,
-    "high_applicability_count": 3495,
+    "high_applicability_count": 3496,
     "score_distribution": {
       "1": 90,
       "2": 391,
-      "3": 1672,
-      "4": 2351,
+      "3": 1673,
+      "4": 2352,
       "5": 1144
     },
     "year_distribution": {
@@ -62,12 +62,12 @@
       "2005": 105,
       "2006": 111,
       "2007": 118,
-      "2008": 153,
+      "2008": 154,
       "2009": 149,
       "2010": 163,
       "2011": 185,
       "2012": 203,
-      "2013": 242,
+      "2013": 243,
       "2014": 241,
       "2015": 224,
       "2016": 246,
@@ -82,7 +82,7 @@
       "2025": 341,
       "2026": 334
     },
-    "updated_at": "2026-11-07T09:41:37.035745"
+    "updated_at": "2026-11-08T09:57:32.823281"
   },
   "tag_index": {
     "국립공원관리": 310,
@@ -92,7 +92,7 @@
     "기후변화": 194,
     "지역사회참여": 163,
     "생태계모니터링": 158,
-    "거버넌스": 152,
+    "거버넌스": 153,
     "국립공원": 150,
     "보호지역관리": 138,
     "주민참여": 136,
@@ -147,21 +147,21 @@
     "지속가능관광": 44
   },
   "work_area_index": {
-    "생태계 모니터링·조사": 2801,
-    "탐방로·탐방객 관리": 2586,
+    "생태계 모니터링·조사": 2802,
+    "탐방로·탐방객 관리": 2587,
     "자원보전·복원": 1882,
-    "지역사회·거버넌스": 1567,
-    "공원계획·구역관리": 1303,
+    "지역사회·거버넌스": 1568,
+    "공원계획·구역관리": 1305,
     "야생생물·서식지 관리": 1253,
     "탐방객 서비스·안전": 670,
     "환경 모니터링": 618,
     "기후변화 대응": 600,
     "재난·안전 관리": 548,
     "시설·인프라 관리": 536,
-    "관광·경제 정책": 532
+    "관광·경제 정책": 533
   },
   "location_index": {
-    "해외": 4521,
+    "해외": 4523,
     "국내": 1128
   },
   "papers": [
@@ -229426,6 +229426,88 @@
       }
     },
     {
+      "id": "W1011090066",
+      "source": "openalex",
+      "title": "Review of National Park Visitor Experience Indicators A Case Study of ROS, LAC and VERP",
+      "abstract": "国家公园建立的两大目标：一是为了保护自然人文资源,二是为国民提供一处游客体验的场所。美国国家公园以游客体验和资源保护为基础发展出一系列国家公园管理模型。选取ROS、LAC、VERP这3个管理模型为例进行游客体验指标的研究。3个模型均通过对公园物质环境、社会环境等进行分析,并制定相应的指标,通过一系列的指标控制,达到提高游客体验的目的,对我国风景名胜区规划管理具有借鉴意义。",
+      "authors": [
+        "沈海琴"
+      ],
+      "year": 2013,
+      "journal": "Landscape Architecture",
+      "cited_by_count": 2,
+      "doi": "",
+      "is_oa": false,
+      "oa_url": "",
+      "concepts": [
+        "Neuroscience",
+        "Psychology"
+      ],
+      "openalex_url": "https://openalex.org/W1011090066",
+      "ai_analysis": {
+        "title_ko": "국가公园 탐방객 경험 지표 검토: ROS, LAC, VERP 사례 연구",
+        "abstract_ko": "국가공원의 설립 목적은 크게 두 가지로, 자연 및 인문 자원의 보호와 국민에게 탐방객 경험의 장소를 제공하는 것이다. 미국 국가공원은 탐방객 경험과 자원 보호를 바탕으로 일련의 공원 관리 모델을 발전시켰다. 본 연구는 ROS(휴양기회공급), LAC(수용력한계관리), VERP(탐방객 경험 및 자원 보호) 등 3가지 관리 모델을 사례로 삼아 탐방객 경험 지표를 연구했다. 이들 3가지 모델은 모두 공원의 물리적 환경과 사회적 환경 등을 분석하고 이에 상응하는 지표를 설정하며, 일련의 지표 조절을 통해 탐방객 경험을 향상시키는 목적을 달성한다. 이는 우리나라 풍경명승구 계획 및 관리에 시사점을 제공한다.",
+        "summary_3lines": [
+          "미국의 대표적인 탐방객 관리 모델인 ROS, LAC, VERP의 핵심 개념과 지표 설정 방식을 검토하여 국내 공원 관리의 시사점을 도출하고자 했다.",
+          "세 가지 모델은 공원의 환경적·사회적 특성을 분석하고 구체적인 지표를 설정하여 자원 보호와 탐방객 만족도를 동시에 달성하도록 설계되었다.",
+          "국내 국립공원 및 탐방 구역에서도 이러한 선진 관리 모델의 지표 체계를 도입하여 탐방 수용력을 과학적으로 관리할 필요가 있다."
+        ],
+        "research_purpose": "본 연구는 자연자원 보호와 탐방객 경험 제공이라는 공원의 양대 목표를 조화롭게 달성하기 위해, 미국에서 발전한 대표적인 세 가지 탐방객 관리 모델(ROS, LAC, VERP)의 구조와 지표를 분석하는 것을 목적으로 한다. 이를 통해 환경적·사회적 지표를 활용한 체계적인 탐방객 관리 방안을 모색하고, 향후 공원 계획 및 관리 실무에 적용할 수 있는 시사점을 제공하고자 한다.",
+        "key_findings": [
+          "ROS 모델은 공원의 물리적·사회적·관리적 특성을 세분화하여 다양한 탐방 기회를 제공하는 틀을 제공한다.",
+          "LAC 모델은 자원과 사회적 조건의 바람직한 상태를 정의하고, 이를 초과할 경우 관리 조치를 취하는 수용력 관리 기법이다.",
+          "VERP 모델은 탐방객 경험의 질과 자원 보호를 동시에 유지하기 위해 지표와 기준을 모니터링하는 체계적 접근법이다."
+        ],
+        "practical_applications": [
+          "국립공원 구역별 특성에 맞는 탐방기회공급(ROS) 체계를 도입하여 구역별 이용 강도 조절",
+          "탐방로 및 주요 거점별 생태적·사회적 수용력 한계(LAC)를 설정하고 모니터링 체계 구축",
+          "탐방객 밀집 지역의 혼잡도와 자원 훼손 정도를 실시간으로 평가하는 VERP 기반 지표 개발"
+        ],
+        "korea_np_applicability_score": 4,
+        "korea_np_applicability_reason": "한국 국립공원도 탐방객 집중으로 인한 자원 훼손과 갈등 문제가 상존하므로, 미국식 수용력 관리 및 탐방객 경험 관리 모델의 지표 체계를 현장에 접목하여 과학적 공원 관리를 고도화할 수 있기 때문이다.",
+        "study_location": "해외",
+        "related_work_areas": [
+          "탐방로·탐방객 관리",
+          "공원계획·구역관리",
+          "생태계 모니터링·조사"
+        ],
+        "related_laws": [
+          "자연공원법 제20조",
+          "자연공원법 제28조"
+        ],
+        "field_checklist": [
+          "탐방로 구간별 일일 최대 탐방객 수 및 밀집도 측정",
+          "나지화, 토양 침식 등 물리적 자원 훼손 모니터링",
+          "탐방객 설문을 통한 만족도 및 군집(혼잡) 인식 조사",
+          "휴게시설 및 편의시설의 수용 용량 적정성 평가",
+          "관리 기준 초과 시 발동할 현장 대응 조치(예약제, 우회로 개설 등) 매뉴얼 점검"
+        ],
+        "practical_utility_score": 4,
+        "cautions": [
+          "외국의 관리 모델을 도입할 때 국내 국립공원의 고유한 법적 제도 및 높은 탐방객 밀도 특성을 고려해야 한다.",
+          "지표 설정과 모니터링에는 지속적인 예산과 전문 인력이 소요되므로 단계적 도입이 필요하다."
+        ],
+        "tags": [
+          "탐방객경험",
+          "수용력관리",
+          "ROS",
+          "LAC",
+          "VERP"
+        ],
+        "recommended_followup_research": [
+          "국내 국립공원 시범 지구를 대상으로 한 LAC 및 VERP 지표 적용 가능성 평가 연구",
+          "탐방객 밀도와 생태계 건강성 간의 상관관계 분석을 위한 실증 연구"
+        ],
+        "ai_recommended_topics": [
+          "국립공원 탐방 수용력 관리",
+          "VERP 모델 적용 사례",
+          "탐방객 경험 및 자원보호 지표"
+        ],
+        "analyzed_at": "2026-11-08T09:57:15Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
       "id": "W114527054",
       "source": "openalex",
       "title": "Research to guide trail management at Acadia National Park, Maine",
@@ -382936,6 +383018,92 @@
           "Use and non-use values of endangered species"
         ],
         "analyzed_at": "2026-09-01T08:30:27Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W1168518652",
+      "source": "openalex",
+      "title": "Shifting Governance in Slovensky Raj National Park.",
+      "abstract": "This paper explores the role of social capital and governance in rural development within Slovensky Raj National Park. Based on the theory of common pool resources and network governance, the case study explores the external and internal influences on cooperation. Current decision making in the Park is still affected by post socialist relations. In particular inefficient institutional design and non-robust governance of the resources have resulted in over-exploitation of natural resources and treating common property as open-access. Evidence emerged of domination of interpersonal trust and failure of institutional design. These were found as barriers for the National Park to be viewed by various actors as an asset. Concurrently, municipal and tourism networks reveal that cooperation is gradually moving from being externally to internally driven, while displaying characteristics of bottom-up development. A hierarchical governance structure is thus slowly opening up, shifting towards networks.",
+      "authors": [
+        "Tatiana Kluvánková‐Oravská",
+        "Veronika Chobotová"
+      ],
+      "year": 2008,
+      "journal": "RePEc: Research Papers in Economics",
+      "cited_by_count": 11,
+      "doi": "https://doi.org/10.22004/ag.econ.163456",
+      "is_oa": true,
+      "oa_url": "http://www.ssoar.info/ssoar/handle/document/11360",
+      "concepts": [
+        "Commons",
+        "Corporate governance",
+        "Political science",
+        "Government (linguistics)",
+        "Business",
+        "Law"
+      ],
+      "openalex_url": "https://openalex.org/W1168518652",
+      "ai_analysis": {
+        "title_ko": "슬로벤스키 라이 국립공원의 거버넌스 변화",
+        "abstract_ko": "이 논문은 슬로벤스키 라이 국립공원의 농촌 개발 과정에서 사회적 자본과 거버넌스가 담당하는 역할을 탐구합니다. 공유자원 이론과 네트워크 거버넌스 이론을 바탕으로, 이 사례 연구는 협력에 영향을 미치는 내외부적 요인을 분석합니다. 공원의 현재 의사결정은 여전히 탈사회주의 체제의 유산에 영향을 받고 있으며, 특히 비효율적인 제도 설계와 부실한 자원 거버넌스로 인해 자연자원의 과도한 이용이 발생하고 공유재산이 무단 개방된 상태처럼 다루어지고 있습니다. 개인 간 신뢰에 과도하게 의존하는 경향과 제도 설계의 실패가 공원이 다양한 이해관계자들로부터 자산으로 인식되는 것을 가로막는 장벽으로 작용하고 있음이 확인되었습니다. 동시에 지자체와 관광 네트워크를 통해 협력이 외부 주도에서 점차 내부 주도로 이동하며 상향식(bottom-up) 발전의 특성을 보이고 있음을 확인했습니다. 이에 따라 하향식 거버넌스 구조는 서서히 개방되며 네트워크 형태로 전환되고 있습니다.",
+        "summary_3lines": [
+          "슬로벤스키 라이 국립공원을 사례로 공유자원 관리와 거버넌스 구조가 지역 협력에 미치는 영향을 분석하고자 함.",
+          "과거 체제의 유산과 부실한 제도 설계가 자원 과잉 이용을 초래했으나, 지역 내 관광 네트워크를 중심으로 상향식 협력이 점진적으로 형성되고 있음.",
+          "국립공원 자원 관리를 위해 하향식 통제에서 벗어나 지역사회 및 이해관계자 중심의 네트워크 거버넌스로 전환해야 함."
+        ],
+        "research_purpose": "공유자원 이론과 네트워크 거버넌스 관점에서 국립공원 내 자원 이용과 협력 체계의 실태를 진단하고, 과거 체제 유산이 미치는 부정적 영향과 상향식 지역 협력으로의 전환 가능성을 파악하기 위해 수행되었습니다.",
+        "key_findings": [
+          "비효율적인 제도 설계와 부실한 거버넌스로 인해 국립공원 내 자연자원이 과도하게 이용되고 공유재산이 방치되고 있음.",
+          "제도적 장치 미비로 인해 공식적 신뢰보다는 사적 관계와 개인 간 신뢰에 과도하게 의존하는 한계가 나타남.",
+          "지자체와 관광 이해관계자들을 중심으로 한 네트워크에서 외부 주도 방식에서 내부 주도의 상향식 협력으로 변화하는 과도기적 특성이 관찰됨."
+        ],
+        "practical_applications": [
+          "국립공원 내 자원 이용 갈등 해소를 위해 지역 주민과 지자체가 참여하는 상향식 협의체를 구성하고 운영합니다.",
+          "사적 신뢰에만 의존하는 관행을 탈피하고, 투명하고 객관적인 자원 관리 규정과 제도적 장치를 정비합니다.",
+          "지역 관광 및 경제 네트워크와의 소통을 강화하여 공원 자원을 지역 사회의 핵심 자산으로 인식하도록 유도합니다."
+        ],
+        "korea_np_applicability_score": 3,
+        "korea_np_applicability_reason": "한국 국립공원 역시 지역사회와의 갈등, 탐방객 증가에 따른 자원 압박, 사유지 포함 문제 등을 겪고 있어 거버넌스 개선 및 주민 협력 측면에서 시사점이 있으나, 사회주의 체제 유산이라는 특수 배경은 한국의 현실과 직접 일치하지 않습니다.",
+        "study_location": "해외",
+        "related_work_areas": [
+          "지역사회·거버넌스",
+          "공원계획·구역관리",
+          "관광·경제 정책"
+        ],
+        "related_laws": [
+          "자연공원법 제2조(정의 및 기본원칙)",
+          "자연공원법 제16조(공원계획의 변경 등)"
+        ],
+        "field_checklist": [
+          "지역 주민 및 관광 이해관계자 간의 갈등 요인 조사",
+          "공원 내 자원 이용에 대한 현재 제도적 규정의 실효성 검토",
+          "상향식 의사소통을 위한 지역 협의체 운영 현황 파악",
+          "개인 간 친밀도에 의존하는 의사결정 구조의 투명성 진단",
+          "지역사회와의 파트너십을 통한 공원 자산 가치 공유 방안 마련"
+        ],
+        "practical_utility_score": 3,
+        "cautions": [
+          "해외의 사회주의 전환기 특수성을 담은 사례이므로 한국의 법제도 및 행정 환경에 맞춰 선별적으로 적용해야 합니다.",
+          "주민 참여 및 거버넌스 개편 과정에서 이해관계 상충으로 인한 갈등이 심화되지 않도록 사전 조율이 필요합니다."
+        ],
+        "tags": [
+          "거버넌스",
+          "공유자원",
+          "사회적자본",
+          "지역사회협력",
+          "상향식개발"
+        ],
+        "recommended_followup_research": [
+          "한국 국립공원 내 사유지 및 지역사회 협력 거버넌스 실태 분석",
+          "탐방 및 관광 네트워크를 활용한 상향식 공원 관리 모델 구축 연구"
+        ],
+        "ai_recommended_topics": [
+          "Protected area governance and common pool resources",
+          "Bottom-up conservation and community networks"
+        ],
+        "analyzed_at": "2026-11-08T09:57:26Z",
         "model": "gemini-flash-lite-latest"
       }
     },
