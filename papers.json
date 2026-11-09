@@ -1,16 +1,16 @@
 {
   "meta": {
-    "total": 5698,
-    "analyzed": 5651,
+    "total": 5701,
+    "analyzed": 5653,
     "avg_applicability": 3.7,
     "avg_utility": 3.7,
-    "high_applicability_count": 3496,
+    "high_applicability_count": 3497,
     "score_distribution": {
       "1": 90,
       "2": 391,
-      "3": 1673,
+      "3": 1674,
       "4": 2352,
-      "5": 1144
+      "5": 1145
     },
     "year_distribution": {
       "1895": 1,
@@ -47,7 +47,7 @@
       "1990": 20,
       "1991": 17,
       "1992": 17,
-      "1993": 22,
+      "1993": 23,
       "1994": 23,
       "1995": 23,
       "1996": 36,
@@ -66,12 +66,12 @@
       "2009": 149,
       "2010": 163,
       "2011": 185,
-      "2012": 203,
+      "2012": 204,
       "2013": 243,
       "2014": 241,
       "2015": 224,
       "2016": 246,
-      "2017": 220,
+      "2017": 221,
       "2018": 219,
       "2019": 259,
       "2020": 314,
@@ -82,7 +82,7 @@
       "2025": 341,
       "2026": 334
     },
-    "updated_at": "2026-11-08T09:57:32.823281"
+    "updated_at": "2026-11-09T10:56:53.790720"
   },
   "tag_index": {
     "국립공원관리": 310,
@@ -101,7 +101,7 @@
     "탐방로관리": 113,
     "기후변화적응": 106,
     "수질모니터링": 102,
-    "생물다양성보전": 100,
+    "생물다양성보전": 101,
     "원격탐사": 100,
     "외래식물": 90,
     "생태계서비스": 83,
@@ -136,8 +136,8 @@
     "환경모니터링": 48,
     "야생동물관리": 48,
     "재난관리": 48,
+    "설악산국립공원": 48,
     "생태계관리": 47,
-    "설악산국립공원": 47,
     "지질유산": 47,
     "모니터링": 46,
     "장기모니터링": 46,
@@ -148,11 +148,11 @@
   },
   "work_area_index": {
     "생태계 모니터링·조사": 2802,
-    "탐방로·탐방객 관리": 2587,
-    "자원보전·복원": 1882,
-    "지역사회·거버넌스": 1568,
-    "공원계획·구역관리": 1305,
-    "야생생물·서식지 관리": 1253,
+    "탐방로·탐방객 관리": 2589,
+    "자원보전·복원": 1883,
+    "지역사회·거버넌스": 1569,
+    "공원계획·구역관리": 1306,
+    "야생생물·서식지 관리": 1254,
     "탐방객 서비스·안전": 670,
     "환경 모니터링": 618,
     "기후변화 대응": 600,
@@ -161,8 +161,8 @@
     "관광·경제 정책": 533
   },
   "location_index": {
-    "해외": 4523,
-    "국내": 1128
+    "해외": 4524,
+    "국내": 1129
   },
   "papers": [
     {
@@ -40978,6 +40978,95 @@
           "자연공원 방문객 행동 의도 분석"
         ],
         "analyzed_at": "2026-10-19T08:43:02Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W3032940578",
+      "source": "openalex",
+      "title": "Preferences for management strategies aimed at conserving biodiversity in South Korea’s national parks: A case of Seoraksan National Park",
+      "abstract": "Increasing developmental pressures and high visitation numbers have resulted in considerable damage to the natural ecosystems of national parks in South Korea. Balancing the primary management goals of conserving natural resources while ensuring the sustainable use of park resources presents challenges to park managers, and there is a need for new and relevant information on various stakeholders to guide future park management decisions. In this study, a choice experiment is conducted to investigate visitor preferences and the willingness-to-pay for management strategies aimed at biodiversity conservation in Seoraksan National Park. The choice experiment investigated the preferences for restoration programs for endangered animals, construction of wildlife passages, area of Special Protection Zones, and environmental education programs. \\nThe main choice experiments visitor survey was conducted in April 2017 and a total of 252 valid responses were collected and analyzed. The marginal willingness to pay (MWTP) values for restoration programs to increase endangered animal populations by 15% and 30% from the present state are 3,249 KRW and 2,506 KRW per visit respectively, while those for the additional construction of 2 and 4 wildlife passages are 2,186 KRW and 5,323 KRW respectively. However, the MWTP values for reducing and expanding the area of Special Protection zones by 5% are -5,263 KRW and -2,402 KRW respectively – thereby indicating complexities in the preferences for such conservation strategies. The parameters for increases in environmental education-related programs were statistically insignificant. Visitors have positive values for biodiversity conservation in national parks, but may be indifferent as to how it is being protected. As the results indicate that visitors are willing to pay varying entrance fee amounts to contribute to the biodiversity conservation of the national park, possible policy recommendations such as voluntary donation schemes or zoning for visitor management purposes may prove to be feasible management options. \\n \\n우리나라의 국립공원은 보호지역으로서 생물다양성 보호 도구이자 다양한 생태계서비스의 제공자로 인식되고 있다. 설악산은 천연보호구역, 국립공원, 생물권 보전지역으로 지정된 우리나라 식물자원의 보고이며, 온대중부의 대표적인 삼림지대이다. 그러나 설악산 국립공원의 관리는 다양한 요구들에 의하여 큰 개발의 압박을 받고 있다. 설악산국립공원 관리자들은 탐방객이 생물다양성 보전을 위한 여러 가지의 조치에 대하여 어떻게 생각하는지에 대한 정보를 파악할 필요가 있다. \\n \\n이 연구는 선택실험법(choice experiment)이라는 비시장재 가치평가방법을 사용하여 설악산 국립공원의 생물다양성 보전을 위한 관리대안들에 대한 설악산 탐방객의 선호를 측정하였다. 이 방법은 비용을 포함해 중요 공원자원 관리 속성별 수준을 조합해 작성한 가상대안들을 응답자들에게 제시한 후, 그 중에서 하나를 선택하게 하는 방법을 사용하였다. 그럼으로써, 설악산을 방문하는 사람들이 선호하는 국립공원 관리대안이 무엇인지를 간접적으로 확인하고 각 대안 별로 그 경제적 가치를 추정하였다. \\n \\n본 연구는 설악산 국립공원의 보전을 위한 멸종위기동물 복원 사업, 야생동물 생태통로, 특별보호구역, 환경교육 등의 생물다양성 보전관리대안에 대한 지불의사금액(willingness to pay)을 평가하는 것을 통하여 탐방객들이 설악산의 생물다양성 보전을 위한 지불의사를 알아내고자 하였다. 이 연구는 탐방객들이 설악산의 보전관리에 대한 태도와 선호를 조사하여, 탐방객들의 편익을 더 높이는 동시에, 국립공원의 자연생태계를 보전할 수 있는 효과적인 생물다양성 보전관리정책을 추천하기 위하여 수행되었다. \\n \\n설악산 탐방객의 설악산 국립공원 보전에 대한 선호를 알아보기 위한 조사는 설문을 통해 이루어졌다. 2017녀 4월에 설악산 국립공원을 탐방한 탐방객들을 대상으로 설악산 소공원 인근에서 현장 설문조사를 실시되었으며 총 252명으로부터 자료를 수집하였다. 연구 결과, 4가지의 속성 가운데멸종위기동물 복원 사업과 야생동물 생태통로, 특별보호구역의 관리 수준이 탐방객의 후생에 영향을 미치는 것으로 나타났다. \\n \\n명종위기동물 복원 사업을 통하여 멸종위기동물의 개체수를 15% 또는 30% 증대시키는 것은 통계적으로 유의성 있는 수준이었다. 만약 이 수준들이 설악산 국립공원에 반영될 경우, 응답자들은 각각 약 3,249원과 약 2,506원의 입장료를 더 낼 용의가 있었다. 또한 야생동물 생태통로의 추가 설치가 통계적으로 유의성이 있는 것으로 나타났으며, 야생동물 생태통로 2개 또는 4개의 추가 설치를 설악산 국립공원에 설치하기 위해, 응답자들은 각각 약 2,186원과 약 5,323원의 입장료를 더 낼 용의가 있었다. 그러나 특별보호구역으로 지정한 지역이 현재의 설악산 국립공원 면적 대비 약 5% 축소와 약 15% 확대될 경우, 응답자들은 각각 약 -5,263원과 약 -2,402원의 입장료를 더 낼 용의가 있는 것으로 나타났다. 이러한 결과는 탐방객들은 특별보호구역의 설정에 대하여 복잡한 선호를 가지고 있으며 국립공원에서의 환경교육은 생물다양성 보전에 유의성이 없는 것으로 나타났다. \\n \\n탐방객들이 국립공원의 생물다양성 보전을 위하여 입장료를 낼 의사가 있는 반면에 생물다양성을 유지하거나 보호하는 수단에 무관심할 수도 있다. 연구 결과에 의하면 탐방객들이 국립공원의 생물다양성 보전을 위한 다양한 수준의 입장료를 낼 용의가 있음으로, 자발적인 기금 조성과 탐방객 관리를 위한 국립공원 탐방 지역지정제도가 적합한 관리대안이 될 수도 있다.",
+      "authors": [
+        "Emily Marie Lim"
+      ],
+      "year": 2017,
+      "journal": "Seoul National University Open Repository (Seoul National University)",
+      "cited_by_count": 1,
+      "doi": "",
+      "is_oa": false,
+      "oa_url": "",
+      "concepts": [
+        "National park",
+        "Biodiversity",
+        "Geography",
+        "Environmental resource management",
+        "Environmental planning",
+        "Ecology"
+      ],
+      "openalex_url": "https://openalex.org/W3032940578",
+      "ai_analysis": {
+        "title_ko": "대한민국 국립공원의 생물다양성 보전 관리 전략에 대한 선호: 설악산국립공원 사례",
+        "abstract_ko": "증가하는 개발 압력과 높은 탐방객 수는 대한민국 국립공원의 자연 생태계에 상당한 피해를 초래하고 있습니다. 자연자원 보전과 자원의 지속가능한 이용이라는 주요 관리 목표 사이의 균형을 맞추는 것은 공원 관리자들에게 도전 과제를 제시하며, 향후 공원 관리 결정을 안내할 다양한 이해관계자에 대한 새롭고 관련성 있는 정보가 필요합니다. 본 연구에서는 선택실험법을 사용하여 설악산국립공원의 생물다양성 보전을 위한 관리 전략에 대한 탐방객의 선호와 지불의사(WTP)를 조사했습니다. 선택실험은 멸종위기 동물 복원 프로그램, 야생동물 생태통로 건설, 특별보호구역 면적, 환경교육 프로그램에 대한 선호를 조사했습니다. 2017년 4월에 주요 선택실험 탐방객 설문조사가 실시되었고, 총 252개의 유효한 응답이 수집되어 분석되었습니다. 현재 상태에 비해 멸종위기 동물 개체군을 15% 및 30% 증가시키는 복원 프로그램에 대한 한계지불의사(MWTP)는 방문당 각각 3,249원과 2,506원인 반면, 2개 및 4개의 야생동물 생태통로 추가 건설에 대한 한계지불의사는 각각 2,186원과 5,323원이었습니다. 그러나 특별보호구역 면적을 5% 축소 및 확대하는 것에 대한 MWTP 값은 각각 -5,263원과 -2,402원으로 나타나, 이러한 보전 전략에 대한 선호의 복잡성을 나타냈습니다. 환경교육 관련 프로그램의 증가에 대한 매개변수는 통계적으로 유의하지 않았습니다. 탐방객들은 국립공원의 생물다양성 보전에 대해 긍정적인 가치를 부여하지만, 그것이 어떻게 보호되는지에 대해서는 무관심할 수 있습니다. 결과가 나타내듯이 탐방객들은 국립공원의 생물다양성에 기여하기 위해 다양한 입장료 금액을 지불할 의향이 있으므로, 자발적 기부 제도나 탐방객 관리 목적의 용도지구 지정과 같은 가능한 정책 권고사항이 실현 가능한 관리 옵션임이 증명될 수 있습니다. 우리나라의 국립공원은 보호지역으로서 생물다양성 보호 도구이자 다양한 생태계서비스의 제공자로 인식되고 있습니다. 설악산은 천연보호구역, 국립공원, 생물권 보전지역으로 지정된 우리나라 식물자원의 보고이며, 온대중부의 대표적인 삼림지대입니다. 그러나 설악산국립공원의 관리는 다양한 요구들에 의하여 큰 개발의 압박을 받고 있습니다. 설악산국립공원 관리자들은 탐방객이 생물다양성 보전을 위한 여러 가지의 조치에 대하여 어떻게 생각하는지에 대한 정보를 파악할 필요가 있습니다. 본 연구는 선택실험법이라는 비시장재 가치평가방법을 사용하여 설악산 국립공원의 생물다양성 보전을 위한 관리대안들에 대한 설악산 탐방객의 선호를 측정하였습니다. 이 방법은 비용을 포함해 중요 공원자원 관리 속성별 수준을 조합해 작성한 가상대안들을 응답자들에게 제시한 후, 그 중에서 하나를 선택하게 하는 방법을 사용하였습니다. 그럼으로써, 설악산을 방문하는 사람들이 선호하는 국립공원 관리대안이 무엇인지를 간접적으로 확인하고 각 대안 별로 그 경제적 가치를 추정하였습니다. 본 연구는 설악산 국립공원의 보전을 위한 멸종위기동물 복원 사업, 야생동물 생태통로, 특별보호구역, 환경교육 등의 생물다양성 보전관리대안에 대한 지불의사금액을 평가하는 것을 통하여 탐방객들이 설악산의 생물다양성 보전을 위한 지불의사를 알아내고자 하였습니다. 이 연구는 탐방객들이 설악산의 보전관리에 대한 태도와 선호를 조사하여, 탐방객들의 편익을 더 높이는 동시에, 국립공원의 자연생태계를 보전할 수 있는 효과적인 생물다양성 보전관리정책을 추천하기 위하여 수행되었습니다.",
+        "summary_3lines": [
+          "탐방객의 개발 압력과 생물다양성 보전 요구 사이의 균형을 맞추기 위해 설악산국립공원 탐방객의 관리 전략별 지불의사금액을 조사하였다.",
+          "선택실험법을 통해 멸종위기동물 복원과 생태통로 추가에 대해서는 긍정적 지불의사가 확인된 반면, 특별보호구역 면적 조정에는 복잡한 선호 양상이 나타났다.",
+          "탐방객의 생물다양성 보전 가치 인식을 활용하여 자발적 기부 제도나 용도지구 세분화 등 맞춤형 탐방객 관리 및 재원 마련 정책을 도입해야 한다."
+        ],
+        "research_purpose": [
+          "설악산국립공원을 방문하는 탐방객들이 생물다양성 보전 관리 대안에 대해 지불할 의사가 있는 경제적 가치(지불의사금액)를 측정한다.",
+          "멸종위기동물 복원, 야생동물 생태통로 설치, 특별보호구역 조정, 환경교육 프로그램 등 주요 관리 속성별 탐방객의 선호도를 분석한다.",
+          "분석 결과를 바탕으로 탐방객 편익을 높이고 생태계를 효과적으로 보전할 수 있는 현장 관리 정책 및 재원 마련 방안을 도출한다."
+        ],
+        "key_findings": [
+          "멸종위기동물 개체군을 15% 및 30% 증가시키는 복원 프로그램에 대한 방문객의 한계지불의사는 각각 3,249원과 2,506원으로 나타났다.",
+          "야생동물 생태통로를 2개 및 4개 추가 건설하는 것에 대한 한계지불의사는 각각 2,186원과 5,323원으로, 추가 건설 요구가 높음을 확인했다.",
+          "특별보호구역 면적을 축소(-5%)하거나 확대(+5%)하는 대안 모두에 대해 음(-)의 지불의사가 나타나 구역 조정 정책에는 신중한 접근이 필요함을 시사했다."
+        ],
+        "practical_applications": [
+          "탐방객의 생물다양성 보전 기여 의지를 활용할 수 있도록 자발적 기부 제도나 목적형 입장료 체계 도입을 검토한다.",
+          "야생동물 로드킬 저감 및 서식지 연결성 강화를 위한 생태통로 확충 사업에 탐방객의 수용성과 선호가 높음을 반영하여 예산을 우선 배정한다.",
+          "특별보호구역 조정 시 탐방객의 반발이나 복잡한 인식을 고려하여, 구역 변경 전 충분한 정보 제공과 대국민 소통 프로그램을 운영한다."
+        ],
+        "korea_np_applicability_score": 5,
+        "korea_np_applicability_reason": "대한민국 대표 국립공원인 설악산을 직접 대상으로 수행된 연구이며, 국내 국립공원이 직면한 탐방객 관리, 생태계 보전, 자발적 기부금 도입 등의 정책 현안에 즉시 활용 가능한 실무적 시사점을 제공한다.",
+        "study_location": "국내",
+        "related_work_areas": [
+          "야생생물·서식지 관리",
+          "탐방로·탐방객 관리",
+          "공원계획·구역관리"
+        ],
+        "related_laws": [
+          "자연공원법 제18조(용도지구의 지정)",
+          "야생생물 보호 및 관리에 관한 법률 제38조(생태통로의 설치 등)"
+        ],
+        "field_checklist": [
+          "멸종위기종 복원 사업 추진 시 탐방객 대상 홍보 및 자발적 모금 참여 프로그램 연계 여부 확인",
+          "야생동물 생태통로 추가 설치 대상지의 단절 생태축 현황 및 탐방객 지지율 조사 실시",
+          "특별보호구역 지정 및 변경 시 탐방객의 인식과 수용성 파악을 위한 사전 설문조사 진행",
+          "공원 내 탐방객 대상 환경교육 프로그램의 실효성 및 참여도 모니터링 체계 구축",
+          "탐방객 편익과 생태계 보전 가치를 연계한 지속가능한 공원 재원 확보 방안 검토"
+        ],
+        "practical_utility_score": 5,
+        "cautions": [
+          "특별보호구역 조정과 같은 규제 관련 정책은 탐방객의 부정적 반응이 클 수 있으므로 세심한 이해관계자 설득 과정이 필수적이다.",
+          "지불의사금액 수치는 물가 상승률과 설문 시점(2017년)을 고려하여 현장 적용 시 경제적 지표의 보정이 필요하다."
+        ],
+        "tags": [
+          "선택실험법",
+          "지불의사금액",
+          "생물다양성보전",
+          "설악산국립공원",
+          "탐방객선호"
+        ],
+        "recommended_followup_research": [
+          "설악산 외 다른 국립공원 탐방객을 대상으로 한 생물다양성 보전 관리 대안 선호도 비교 연구",
+          "자발적 기부금 제도가 실제 국립공원 보전 재원 확충에 미치는 효과 분석 연구"
+        ],
+        "ai_recommended_topics": [
+          "국립공원 탐방객 지불의사금액",
+          "선택실험법 기반 국립공원 관리"
+        ],
+        "analyzed_at": "2026-11-09T10:56:30Z",
         "model": "gemini-flash-lite-latest"
       }
     },
@@ -457879,6 +457968,88 @@
       }
     },
     {
+      "id": "W2600207771",
+      "source": "openalex",
+      "title": "The history of the american national parks",
+      "abstract": "Many people think that the conservation-movement started in the twentieth century; but contrary to that belief, it started in 1847 when George P. Marsh, a U.S. Congressman from Vermont, called attention to the destructive impact that people were having on the land, especially in deforestation. He called for a conservationist approach to the management of the forested land because we were depleting our nation???s natural resources with devastating speed. By 1860 the negative effect of exploitation of tourism and livestock grazing in the high country of Yosemite were causing rampant and irreversible damage. Ongoing poaching and park devastation in Yellowstone required Congress to deploy the U.S. Army to build a camp at Mammoth Hot Springs to protect wildlife and natural reserves in 1886. The rookeries that provided nurseries for nesting young birds and the egrets and herons that graced the Florida landscape were being slaughtered at a rate of 5 million a year in 1886 to provide feathers for women???s hats. Clearly, federal intervention and enforced protection would have to ensue before the integrity of the United States??? natural resources were permanently compromised and all wildlife would go the way of the passenger pigeon. \\n This thesis will examine the early United States conservation legislation that was introduced to Congress and became laws to protect our vanishing wilderness and wildlife. It will also investigate President Theodore Roosevelt and how he courageously and with conviction pursued the rights of ???Citizen Bird???. This project will include 9 lesson plans for the elementary and middle school students that will acquaint them with the early history of American conservation and the development of the National Park System. Most important of all, the students will come away from these lesson plans with a feeling of respect and stewardship for the natural world they share this earth with.",
+      "authors": [
+        "Shelly Slusser"
+      ],
+      "year": 2012,
+      "journal": "CSUN ScholarWorks (California State University, Northridge)",
+      "cited_by_count": 0,
+      "doi": "",
+      "is_oa": false,
+      "oa_url": "",
+      "concepts": [
+        "History",
+        "Political science",
+        "Geography"
+      ],
+      "openalex_url": "https://openalex.org/W2600207771",
+      "ai_analysis": {
+        "title_ko": "미국 국립공원의 역사",
+        "abstract_ko": "많은 사람들은 보전 운동이 20세기에 시작되었다고 생각하지만, 그 믿음과 달리 이 운동은 1847년 버몬트주 연방하원의원인 조지 P. 마시가 인간이 토지에 미치는 파괴적인 영향, 특히 산림 벌채에 주의를 환기하면서 시작되었습니다. 그는 미국이 파괴적인 속도로 천연자원을 고갈시키고 있기 때문에 산림 토지 관리에 대한 보전주의적 접근을 촉구했습니다. 1860년경 요세미티 고지대에서 관광 자원 개발과 가축 방목이 미치는 부정적인 영향은 걷잡을 수 없고 돌이킬 수 없는 피해를 야기하고 있었습니다. 옐로스톤에서 지속되는 밀렵과 공원 파괴로 인해 의회는 1886년 야생동물과 자연보호구역을 보호하기 위해 매머드 핫 스프링스에 캠프를 건설하도록 미국 육군을 파견해야 했습니다. 1886년 당시 어린 새들이 둥지를 틀 수 있는 서식지이자 플로리다 풍경을 아름답게 장식하던 백로와 왜로는 여성의 모자에 쓸 깃털을 제공하기 위해 연간 500만 마리씩 도살되고 있었습니다. 분명히 미국의 천연자원 무결성이 영구적으로 훼손되고 모든 야생동물이 여행비둘기의 전철을 밟기 전에 연방 차원의 개입과 강제적인 보호 조치가 뒤따라야 했습니다. 본 논문은 사라져가는 야생과 야생동물을 보호하기 위해 의회에 제출되어 법으로 제정된 초기 미국 보전 입법을 검토합니다. 또한 시어도어 루스벨트 대통령과 그가 용기와 신념을 가지고 '시민 새(Citizen Bird)'의 권리를 추구한 과정을 조사합니다. 이 프로젝트에는 초·중학생들이 미국 보전의 초기 역사와 국립공원 체계의 발전을 익힐 수 있는 9개의 수업 지도안이 포함될 것입니다. 무엇보다도 학생들은 이러한 수업 지도안을 통해 자신들이 지구를 공유하고 있는 자연 세계에 대한 존중과 관리자 정신(stewardship)을 가지고 돌아오게 될 것입니다.",
+        "summary_3lines": [
+          "미국 국립공원과 보전 운동의 역사적 기원과 초기 입법 과정을 고찰하고 차세대 환경 교육의 방향을 제시하고자 함",
+          "19세기 중후반의 난개발, 밀렵, 자원 고갈 사례를 분석하고 연방 정부의 개입과 대통령의 리더십을 통한 보호 조치 조사",
+          "과거의 자원 훼손 역사에 기반한 현장 관리의 엄격한 법 집행 필요성과 미래 세대를 위한 공원 관리자(stewardship) 교육의 중요성 시사"
+        ],
+        "research_purpose": "본 연구는 미국 국립공원 및 보전 운동의 역사적 뿌리를 추적하고, 19세기 무분별한 개발과 자원 착취에 대응하기 위한 연방 차원의 입법과 군대 파견 등 초기 보호 조치의 과정을 검토하는 것을 목적으로 합니다. 아울러 이러한 역사적 교훈을 바탕으로 자원 보전의 중요성을 알리고 미래 세대의 환경 관리자 정신을 함양하기 위한 교육 프로그램 및 수업 지도안 개발을 목표로 합니다.",
+        "key_findings": [
+          "미국의 보전 운동은 20세기가 아닌 1847년 조지 P. 마시의 산림 벌채 경고로부터 시작됨",
+          "요세미티의 과도한 관광과 방목, 옐로스톤의 밀렵 등 심각한 생태계 훼손으로 인해 1886년 미 육군이 투입되어 자원 보호를 수행함",
+          "조류 깃털 채취 등 상업적 남획으로 인한 야생동물 위기를 극복하기 위해 연방 정부의 강제적인 법적 보호와 대통령의 리더십이 결정적 역할을 함"
+        ],
+        "practical_applications": [
+          "공원 내 불법 무단출입, 밀렵, 자원 훼손 행위에 대해 과거 옐로스톤 사례와 같이 강력하고 실효성 있는 단속 및 유관기관(경찰 등)과의 협력 체계 구축",
+          "탐방객 증가로 인한 훼손이 우려되는 고지대 및 취약 생태계에 대한 특별 보호구역 지정 및 탐방객 총량제 등 사전 예방적 관리 적용",
+          "국립공원 역사와 자원 보전의 중요성을 담은 정규 탐방 해설 및 미래 세대(청소년) 대상 환경 교육 프로그램 개발·운영"
+        ],
+        "korea_np_applicability_score": 3,
+        "korea_np_applicability_reason": "미국의 초기 국립공원 역사와 제도 도입 과정을 다루어 직접적인 한국 생태계 관리 기술과는 거리가 있으나, 탐방객 증가로 인한 자원 훼손 대응, 불법행위 단속의 필요성, 공원 교육의 중요성 등은 국내 국립공원 보전 및 탐방 정책 수립에 유용한 시사점을 제공함.",
+        "study_location": "해외",
+        "related_work_areas": [
+          "자원보전·복원",
+          "탐방로·탐방객 관리",
+          "지역사회·거버넌스"
+        ],
+        "related_laws": [
+          "자연공원법 제20조",
+          "야생생물 보호 및 관리에 관한 법률 제8조"
+        ],
+        "field_checklist": [
+          "공원 내 불법 밀렵, 임산물 채취, 무단 캠핑 등 취약 지역 순찰 주기 및 단속 실적 확인",
+          "탐방객 집중으로 인한 훼손 우려 지역(고지대, 쉼터 주변 등)의 식생 및 토양 훼손 상태 점검",
+          "국립공원 역사 및 보전 가치 교육 프로그램 운영 시 청소년 참여율 및 만족도 조사",
+          "유관기관(지자체, 경찰 등)과의 합동 단속 체계 및 비상 대응 공조 상태 점검",
+          "탐방로 정비 및 훼손지 생태 복원 사업의 적기 시행 여부 확인"
+        ],
+        "practical_utility_score": 3,
+        "cautions": [
+          "역사적 문헌 분석 연구이므로 현대 한국 국립공원의 법체계 및 행정 여건과 직접 비교 시 제도적 차이를 고려해야 함",
+          "과거 미 육군 투입과 같은 강경한 공권력 행사 방식은 국내 실정에 맞지 않으므로 현행 자연공원법 및 특별사법경찰 제도의 테두리 내에서 적용해야 함"
+        ],
+        "tags": [
+          "미국국립공원역사",
+          "자원보전운동",
+          "야생동물보호",
+          "공원관리자정신",
+          "환경교육"
+        ],
+        "recommended_followup_research": [
+          "초기 국립공원 관리 제도가 현대 자연보호구역 법제화에 미친 영향 분석",
+          "국립공원 역사 교육 프로그램이 탐방객의 환경 보전 태도 변화에 미치는 장기적 효과 연구"
+        ],
+        "ai_recommended_topics": [
+          "history of national parks conservation",
+          "early conservation legislation United States"
+        ],
+        "analyzed_at": "2026-11-09T10:56:41Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
       "id": "W2262405326",
       "source": "openalex",
       "title": "Cretaceous Stratigraphy of Southeast Korea",
@@ -502724,6 +502895,31 @@
         "Government (linguistics)"
       ],
       "openalex_url": "https://openalex.org/W7222559980",
+      "ai_analysis": null
+    },
+    {
+      "id": "W1522924444",
+      "source": "openalex",
+      "title": "Park - People conflict in Langtang National Park, Nepal",
+      "abstract": "Out of 23 village units that are dependent on Park resources for wood and pasture, nine village units were randomly selected for detailed investigation. The investigation included structured questionnaire interviews of 212 randomly selected heads of households and 62 Park staff (who were currently working in different units within the Park administrative system). In addition, a self-administered questionnaire survey was done. This comprised 33 office-heads of Rasuwa administrative district headquarters at Dhunche located inside the Park boundary. Some in-depth interviews were carried out with selected people such as local leaders and wildlife biologists to get some additional qualitative information. \\n \\nA comparative study is made of local people's understanding of the purpose of \\nLangtang National Park with the other two groups (i.e., Park staff and office-heads). This study revealed a positive perception of each group on the issue and made it obvious that purposes of the Park do not appear to be an area of conflict between the park administration and the local population, but the degree of commitment to these purposes is less strongly held by local people. Wild-pig was found to be the principal crop raiding animal, followed by Himalayan black bear, monkey and deer species. This resulted in resentment of the local people towards the Park administration. Adoption of wild-pig farming by capturing young wild-pigs and selective culling of old ones has been proposed as a solution to the problem and also a source for income generation for the local people through meat trading. \\n \\n \\nAdoption of land-use zoning and the declaration of \"buffer-zones\" have been proposed as a solution to the problems of crop and livestock depredation by other park wildlife through implementation of community forest resource development activities in the buffer areas. Buffer zones can function as multiple-use management areas for the purposes of reducing the movement of park wildlife towards settlements, reducing encroachment of the park by the domestic stock of local people and providing the local people with access to additional Park resources in the future. \\n \\nTourism is seen as a source of national and local income in the Park area. \\nAlthough no negative impacts of tourism have been reported from this study, the adoption of a proper tourism planning procedure is needed to reduce or prevent negative impacts in the future. \\n \\nThe majority of the local people and the park staff are familiar with each other. The local people have perceived that the park staff were helpful and friendly. These positive relations can facilitate the involvement of local people in decision making regarding Park-people related problems in the future.",
+      "authors": [
+        "Fanindra Raj Kharel"
+      ],
+      "year": 1993,
+      "journal": "Lincoln University Research Archive (Lincoln University)",
+      "cited_by_count": 0,
+      "doi": "",
+      "is_oa": false,
+      "oa_url": "",
+      "concepts": [
+        "National park",
+        "Geography",
+        "Forestry",
+        "Environmental protection",
+        "Socioeconomics",
+        "Cartography"
+      ],
+      "openalex_url": "https://openalex.org/W1522924444",
       "ai_analysis": null
     }
   ]
