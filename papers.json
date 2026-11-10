@@ -1,14 +1,14 @@
 {
   "meta": {
     "total": 5701,
-    "analyzed": 5653,
+    "analyzed": 5654,
     "avg_applicability": 3.7,
     "avg_utility": 3.7,
     "high_applicability_count": 3497,
     "score_distribution": {
       "1": 90,
       "2": 391,
-      "3": 1674,
+      "3": 1675,
       "4": 2352,
       "5": 1145
     },
@@ -82,7 +82,7 @@
       "2025": 341,
       "2026": 334
     },
-    "updated_at": "2026-11-09T10:56:53.790720"
+    "updated_at": "2026-11-10T10:51:34.863925"
   },
   "tag_index": {
     "국립공원관리": 310,
@@ -90,7 +90,7 @@
     "생태관광": 219,
     "생물다양성": 199,
     "기후변화": 194,
-    "지역사회참여": 163,
+    "지역사회참여": 164,
     "생태계모니터링": 158,
     "거버넌스": 153,
     "국립공원": 150,
@@ -150,8 +150,8 @@
     "생태계 모니터링·조사": 2802,
     "탐방로·탐방객 관리": 2589,
     "자원보전·복원": 1883,
-    "지역사회·거버넌스": 1569,
-    "공원계획·구역관리": 1306,
+    "지역사회·거버넌스": 1570,
+    "공원계획·구역관리": 1307,
     "야생생물·서식지 관리": 1254,
     "탐방객 서비스·안전": 670,
     "환경 모니터링": 618,
@@ -161,7 +161,7 @@
     "관광·경제 정책": 533
   },
   "location_index": {
-    "해외": 4524,
+    "해외": 4525,
     "국내": 1129
   },
   "papers": [
@@ -457968,6 +457968,90 @@
       }
     },
     {
+      "id": "W1522924444",
+      "source": "openalex",
+      "title": "Park - People conflict in Langtang National Park, Nepal",
+      "abstract": "Out of 23 village units that are dependent on Park resources for wood and pasture, nine village units were randomly selected for detailed investigation. The investigation included structured questionnaire interviews of 212 randomly selected heads of households and 62 Park staff (who were currently working in different units within the Park administrative system). In addition, a self-administered questionnaire survey was done. This comprised 33 office-heads of Rasuwa administrative district headquarters at Dhunche located inside the Park boundary. Some in-depth interviews were carried out with selected people such as local leaders and wildlife biologists to get some additional qualitative information. \\n \\nA comparative study is made of local people's understanding of the purpose of \\nLangtang National Park with the other two groups (i.e., Park staff and office-heads). This study revealed a positive perception of each group on the issue and made it obvious that purposes of the Park do not appear to be an area of conflict between the park administration and the local population, but the degree of commitment to these purposes is less strongly held by local people. Wild-pig was found to be the principal crop raiding animal, followed by Himalayan black bear, monkey and deer species. This resulted in resentment of the local people towards the Park administration. Adoption of wild-pig farming by capturing young wild-pigs and selective culling of old ones has been proposed as a solution to the problem and also a source for income generation for the local people through meat trading. \\n \\n \\nAdoption of land-use zoning and the declaration of \"buffer-zones\" have been proposed as a solution to the problems of crop and livestock depredation by other park wildlife through implementation of community forest resource development activities in the buffer areas. Buffer zones can function as multiple-use management areas for the purposes of reducing the movement of park wildlife towards settlements, reducing encroachment of the park by the domestic stock of local people and providing the local people with access to additional Park resources in the future. \\n \\nTourism is seen as a source of national and local income in the Park area. \\nAlthough no negative impacts of tourism have been reported from this study, the adoption of a proper tourism planning procedure is needed to reduce or prevent negative impacts in the future. \\n \\nThe majority of the local people and the park staff are familiar with each other. The local people have perceived that the park staff were helpful and friendly. These positive relations can facilitate the involvement of local people in decision making regarding Park-people related problems in the future.",
+      "authors": [
+        "Fanindra Raj Kharel"
+      ],
+      "year": 1993,
+      "journal": "Lincoln University Research Archive (Lincoln University)",
+      "cited_by_count": 0,
+      "doi": "",
+      "is_oa": false,
+      "oa_url": "",
+      "concepts": [
+        "National park",
+        "Geography",
+        "Forestry",
+        "Environmental protection",
+        "Socioeconomics",
+        "Cartography"
+      ],
+      "openalex_url": "https://openalex.org/W1522924444",
+      "ai_analysis": {
+        "title_ko": "네팔 랑탕 국립공원의 공원과 주민 간 갈등",
+        "abstract_ko": "공원 자원인 목재와 방목지에 의존하는 23개 마을 단위 중 세부 조사를 위해 9개 마을이 무작위로 선정되었습니다. 조사는 무작위로 선정된 212명의 세대주와 공원 행정 시스템 내 다양한 부서에서 근무 중인 62명의 공원 직원을 대상으로 한 구조화된 설문조사 인터뷰를 포함했습니다. 또한 자가 기입식 설문조사도 진행되었는데, 이는 공원 경계 내에 위치한 둔체(Dhunche)의 라수와 행정구역 본부의 사무실 장 33명을 대상으로 했습니다. 추가적인 정성적 정보를 얻기 위해 지역 지도자 및 야생동물 생태학자와 같은 선정된 사람들과 심층 면접도 진행되었습니다. 랑탕 국립공원의 목적에 대한 지역 주민의 이해를 다른 두 그룹(공원 직원 및 사무실 장)과 비교 연구한 결과, 각 그룹은 이 문제에 대해 긍정적인 인식을 가지고 있었으며 공원의 목적이 공원 관리소와 지역 주민 간의 갈등 영역으로 보이지는 않지만, 이러한 목적에 대한 헌신의 정도는 지역 주민이 상대적으로 약한 것으로 나타났습니다. 농작물에 가장 큰 피해를 주는 동물은 멧돼지였으며, 히말라야 흑곰, 원숭이, 사슴 종류가그 뒤를 이었습니다. 이는 공원 행정에 대한 지역 주민들의 반감을 초래했습니다. 어린 멧돼지를 포획하여 멧돼지 사육을 도입하고 노산 개체를 선택적으로 도태시키는 것이 문제의 해결책이자 육류 거래를 통한 지역 주민의 소득 창출원으로 제안되었습니다. 완충지역 내에서 지역사회 산림 자원 개발 활동을 시행함으로써 다른 공원 야생동물에 의한 농작물 및 가축 피해 문제의 해결책으로 토지 이용 구역화 도입과 완충지역 지정이 제안되었습니다. 완충지역은 공원 야생동물의 정착지 이동을 줄이고, 지역 주민의 가축에 의한 공원 침해를 줄이며, 향후 지역 주민이 추가적인 공원 자원에 접근할 수 있도록 하는 다목적 관리 구역으로 기능할 수 있습니다. 관광은 공원 지역의 국가 및 지역 소득원으로 간주됩니다. 이 연구에서 관광의 부정적인 영향은 보고되지 않았지만, 향후 부정적인 영향을 줄이거나 예방하기 위해 적절한 관광 계획 절차의 도입이 필요합니다. 대다수의 지역 주민과 공원 직원은 서로 잘 알고 있습니다. 지역 주민들은 공원 직원이 도움이 되고 친절하다고 인식했습니다. 이러한 긍정적인 관계는 향후 공원과 주민 간의 문제와 관련된 의사결정에 지역 주민의 참여를 촉진할 수 있습니다.",
+        "summary_3lines": [
+          "네팔 랑탕 국립공원을 대상으로 공원 자원 의존 지역 주민과 공원 관리 주체 간의 갈등 요인과 인식을 파악하고자 하였다.",
+          "설문조사 및 면접 결과, 공원 목적에 대한 이해는 긍정적이나 야생동물에 의한 농작물 피해가 주요 갈등 원인으로 나타났다.",
+          "갈등 해결을 위해 완충지역 지정, 토지이용 구역화, 주민 참여형 완충지역 자원 관리 및 소득 창출 사업 도입이 필요하다."
+        ],
+        "research_purpose": "네팔 랑탕 국립공원을 사례로 공원 자원에 의존하는 지역 주민과 공원 관리청 간의 갈등 요인을 분석하고, 야생동물에 의한 피해 실태를 파악하여 이에 대한 실효성 있는 관리 및 상생 방안을 도출하는 데 목적이 있다.",
+        "key_findings": [
+          "공원의 설립 목적에 대해서는 주민과 관리자 모두 긍정적으로 인식하고 있어 목적 자체로 인한 갈등은 적음",
+          "멧돼지, 흑곰, 원숭이 등 야생동물에 의한 농작물 피해가 주민들의 공원 행정에 대한 불만과 갈등의 주요 원인임",
+          "주민과 공원 직원 간의 개인적 관계와 상호 인식이 전반적으로 우호적이어서 향후 협력적 거버넌스 구축 가능성이 높음"
+        ],
+        "practical_applications": [
+          "야생동물에 의한 농작물 피해 예방 및 완화를 위해 공원 외곽에 완충지역(Buffer-zone) 지정 및 토지이용 구역화 도입",
+          "완충지역 내 주민 소득 창출 및 대체 생계 수단 마련을 위한 지역사회 산림 자원 개발 및 친환경 소득 사업 추진",
+          "공원 관리 의사결정 과정에 지역 주민의 적극적 참여를 유도하는 소통 채널 및 협의체 운영"
+        ],
+        "korea_np_applicability_score": 3,
+        "korea_np_applicability_reason": "한국 국립공원도 멧돼지 등 야생동물에 의한 농작물 피해 및 주민 갈등이 존재하며 완충지역 및 주민지원사업 제도를 운영하고 있어 참고할 수 있으나, 네팔의 현지 사회경제적 여건과 제도적 환경에 차이가 있음",
+        "study_location": "해외",
+        "related_work_areas": [
+          "공원계획·구역관리",
+          "지역사회·거버넌스"
+        ],
+        "related_laws": [
+          "자연공원법 제18조",
+          "야생생물 보호 및 관리에 관한 법률 제2조"
+        ],
+        "field_checklist": [
+          "공원 경계부 야생동물 출몰 빈도 및 농작물 피해 규모 조사",
+          "주민들의 공원 관리 정책에 대한 인식 및 신뢰도 수준 확인",
+          "완충지역 내 토지 이용 실태 및 주민 자원 의존도 파악",
+          "공원 직원과 지역 주민 간 정기적인 소통 창설 및 운영 여부 점검",
+          "주민 소득 창출 및 피해 보상 관련 지원 프로그램 현황 검토"
+        ],
+        "practical_utility_score": 3,
+        "cautions": [
+          "야생동물 포획 및 동물 자원 활용 방안은 국내 야생생물 보호법 및 생태계 보호 규정에 저촉될 수 있으므로 국내 실정에 맞게 수정 적용해야 함",
+          "완충지역 지정 및 토지이용 규제 강화 시 사유재산권 침해 논란에 대한 사전 대책이 필요함"
+        ],
+        "tags": [
+          "공원주민갈등",
+          "야생동물피해",
+          "완충지역",
+          "지역사회참여",
+          "랑탕국립공원"
+        ],
+        "recommended_followup_research": [
+          "국립공원 완충지역 제도의 갈등 완화 효과성 분석",
+          "야생동물로 인한 농작물 피해 저감 시설의 비용 대비 효과 연구"
+        ],
+        "ai_recommended_topics": [
+          "Park-people conflict wildlife damage buffer zone",
+          "Community based conservation protected area management"
+        ],
+        "analyzed_at": "2026-11-10T10:51:27Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
       "id": "W2600207771",
       "source": "openalex",
       "title": "The history of the american national parks",
@@ -502895,31 +502979,6 @@
         "Government (linguistics)"
       ],
       "openalex_url": "https://openalex.org/W7222559980",
-      "ai_analysis": null
-    },
-    {
-      "id": "W1522924444",
-      "source": "openalex",
-      "title": "Park - People conflict in Langtang National Park, Nepal",
-      "abstract": "Out of 23 village units that are dependent on Park resources for wood and pasture, nine village units were randomly selected for detailed investigation. The investigation included structured questionnaire interviews of 212 randomly selected heads of households and 62 Park staff (who were currently working in different units within the Park administrative system). In addition, a self-administered questionnaire survey was done. This comprised 33 office-heads of Rasuwa administrative district headquarters at Dhunche located inside the Park boundary. Some in-depth interviews were carried out with selected people such as local leaders and wildlife biologists to get some additional qualitative information. \\n \\nA comparative study is made of local people's understanding of the purpose of \\nLangtang National Park with the other two groups (i.e., Park staff and office-heads). This study revealed a positive perception of each group on the issue and made it obvious that purposes of the Park do not appear to be an area of conflict between the park administration and the local population, but the degree of commitment to these purposes is less strongly held by local people. Wild-pig was found to be the principal crop raiding animal, followed by Himalayan black bear, monkey and deer species. This resulted in resentment of the local people towards the Park administration. Adoption of wild-pig farming by capturing young wild-pigs and selective culling of old ones has been proposed as a solution to the problem and also a source for income generation for the local people through meat trading. \\n \\n \\nAdoption of land-use zoning and the declaration of \"buffer-zones\" have been proposed as a solution to the problems of crop and livestock depredation by other park wildlife through implementation of community forest resource development activities in the buffer areas. Buffer zones can function as multiple-use management areas for the purposes of reducing the movement of park wildlife towards settlements, reducing encroachment of the park by the domestic stock of local people and providing the local people with access to additional Park resources in the future. \\n \\nTourism is seen as a source of national and local income in the Park area. \\nAlthough no negative impacts of tourism have been reported from this study, the adoption of a proper tourism planning procedure is needed to reduce or prevent negative impacts in the future. \\n \\nThe majority of the local people and the park staff are familiar with each other. The local people have perceived that the park staff were helpful and friendly. These positive relations can facilitate the involvement of local people in decision making regarding Park-people related problems in the future.",
-      "authors": [
-        "Fanindra Raj Kharel"
-      ],
-      "year": 1993,
-      "journal": "Lincoln University Research Archive (Lincoln University)",
-      "cited_by_count": 0,
-      "doi": "",
-      "is_oa": false,
-      "oa_url": "",
-      "concepts": [
-        "National park",
-        "Geography",
-        "Forestry",
-        "Environmental protection",
-        "Socioeconomics",
-        "Cartography"
-      ],
-      "openalex_url": "https://openalex.org/W1522924444",
       "ai_analysis": null
     }
   ]

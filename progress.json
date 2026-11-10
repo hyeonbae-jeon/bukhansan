@@ -110,16 +110,16 @@
     "national park entrance fee policy": 3,
     "national park signage interpretation": 3,
     "national park camping impact": 3,
-    "national park air quality monitoring": 2,
-    "national park water quality monitoring": 2,
-    "national park soil erosion control": 2,
-    "national park economic valuation": 2,
-    "national park community engagement": 2,
-    "national park drone remote sensing": 2,
+    "national park air quality monitoring": 3,
+    "national park water quality monitoring": 3,
+    "national park soil erosion control": 3,
+    "national park economic valuation": 3,
+    "national park community engagement": 3,
+    "national park drone remote sensing": 3,
     "national park citizen science monitoring": 2,
     "national park wetland management": 2,
     "national park landscape connectivity corridor": 2,
     "national park disaster risk management": 2
   },
-  "updated_at": "2026-11-09T10:56:21.340222"
+  "updated_at": "2026-11-10T10:51:19.940890"
 }
