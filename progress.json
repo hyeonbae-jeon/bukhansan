@@ -86,8 +86,8 @@
     "Juwangsan": 3,
     "Jirisan": 3,
     "Chiaksan": 3,
-    "Taebaeksan": 2,
-    "Palgongsan": 2,
+    "Taebaeksan": 3,
+    "Palgongsan": 3,
     "Hallyeohaesang": 2,
     "Hallasan": 2,
     "national park biodiversity conservation": 3,
@@ -116,10 +116,10 @@
     "national park economic valuation": 3,
     "national park community engagement": 3,
     "national park drone remote sensing": 3,
-    "national park citizen science monitoring": 2,
-    "national park wetland management": 2,
-    "national park landscape connectivity corridor": 2,
-    "national park disaster risk management": 2
+    "national park citizen science monitoring": 3,
+    "national park wetland management": 3,
+    "national park landscape connectivity corridor": 3,
+    "national park disaster risk management": 3
   },
-  "updated_at": "2026-11-10T10:51:19.940890"
+  "updated_at": "2026-11-11T10:19:32.661428"
 }

@@ -1,13 +1,13 @@
 {
   "meta": {
-    "total": 5701,
-    "analyzed": 5654,
+    "total": 5702,
+    "analyzed": 5655,
     "avg_applicability": 3.7,
     "avg_utility": 3.7,
     "high_applicability_count": 3497,
     "score_distribution": {
       "1": 90,
-      "2": 391,
+      "2": 392,
       "3": 1675,
       "4": 2352,
       "5": 1145
@@ -80,9 +80,9 @@
       "2023": 248,
       "2024": 280,
       "2025": 341,
-      "2026": 334
+      "2026": 335
     },
-    "updated_at": "2026-11-10T10:51:34.863925"
+    "updated_at": "2026-11-11T10:19:50.987750"
   },
   "tag_index": {
     "국립공원관리": 310,
@@ -137,8 +137,8 @@
     "야생동물관리": 48,
     "재난관리": 48,
     "설악산국립공원": 48,
+    "지질유산": 48,
     "생태계관리": 47,
-    "지질유산": 47,
     "모니터링": 46,
     "장기모니터링": 46,
     "공원관리": 46,
@@ -149,9 +149,9 @@
   "work_area_index": {
     "생태계 모니터링·조사": 2802,
     "탐방로·탐방객 관리": 2589,
-    "자원보전·복원": 1883,
+    "자원보전·복원": 1884,
     "지역사회·거버넌스": 1570,
-    "공원계획·구역관리": 1307,
+    "공원계획·구역관리": 1308,
     "야생생물·서식지 관리": 1254,
     "탐방객 서비스·안전": 670,
     "환경 모니터링": 618,
@@ -161,7 +161,7 @@
     "관광·경제 정책": 533
   },
   "location_index": {
-    "해외": 4525,
+    "해외": 4526,
     "국내": 1129
   },
   "papers": [
@@ -493782,6 +493782,97 @@
           "국립공원 역사문화 탐방 프로그램"
         ],
         "analyzed_at": "2026-10-18T07:59:54Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W7224999561",
+      "source": "openalex",
+      "title": "Spatio-temporal evolution of magmatism and metallogenesis in the Hwanggangri–Taebaeksan district, Korea",
+      "abstract": "The Hwanggangri–Taebaeksan district, a major metallogenic province of the Korean Peninsula, hosts W–Mo, Fe–Mo, and Zn-Pb systems formed during Jurassic to Paleogene magmatic–hydrothermal activity. We establish a district-scale chronology by integrating zircon U–Pb ages of ore-related granitoids with 40 Ar/ 39 Ar ages of hydrothermal muscovite and phlogopite and Re–Os ages of molybdenite. Late Cretaceous granitoids in the Hwanggangri district cluster at 96–86 Ma, whereas magmatism in the Taebaeksan district ranges from ca. 95 Ma to a Paleogene event at ca. 53 Ma, suggesting a general eastward-younging tendency. At Geumseong, duplicate molybdenite Re–Os ages of 185.9–186.6 Ma date the upper calcic-skarn molybdenite generation and reveal Jurassic Mo mineralization within a composite system that also records Cretaceous magmatic–hydrothermal activity. An early ca. 95 Ma W–Mo event at Imog preceded the principal regional W–Mo stage at ca. 93–87 Ma. Younger mineralization includes Fe–Mo systems at ca. 82–80 Ma, Zn-Pb systems at ca. 76–72 Ma, and localized Paleogene W–Fe mineralization at ca. 50 Ma. The age relationships indicate broad temporal coupling between magmatism and mineralization, although offsets vary among deposits and chronometers. The compiled record defines a regional shift from intrusion-proximal W–Mo/Mo mineralization to magnetite-skarn Fe–Mo and carbonate-hosted Zn-Pb systems, followed by localized Paleogene reactivation, and provides a temporal framework for metallogenic interpretation and exploration.",
+      "authors": [
+        "Tong Ha Lee",
+        "Jung Hun Seo",
+        "Yechan Jeon",
+        "Bum Han Lee",
+        "Bong Chul Yoo",
+        "Igor M. Villa",
+        "Jihyuk Kim",
+        "Holly Stein"
+      ],
+      "year": 2026,
+      "journal": "Gondwana Research",
+      "cited_by_count": 0,
+      "doi": "https://doi.org/10.1016/j.gr.2026.09.024",
+      "is_oa": true,
+      "oa_url": "https://doi.org/10.1016/j.gr.2026.09.024",
+      "concepts": [
+        "Geology",
+        "Magmatism",
+        "Geochemistry",
+        "Earth science",
+        "Petrology",
+        "Baltica"
+      ],
+      "openalex_url": "https://openalex.org/W7224999561",
+      "ai_analysis": {
+        "title_ko": "황강리-태백산 지역의 마그마 활동 및 광화작용의 시공간적 진화",
+        "abstract_ko": "한반도의 주요 광화대에 속하는 황강리-태백산 지역은 쥐라기에서 고신기 사이의 마그마-열수 활동으로 형성된 텅스텐-몰리브덴, 철-몰리브덴, 아연-납 광화계를 품고 있습니다. 본 연구는 광상 관련 화성암의 저어콘 U-Pb 연대, 열수 백운모 및 금운모의 Ar-Ar 연대, 휘수연석의 Re-Os 연대를 통합하여 지역 규모의 연대기를 구축했습니다. 황강리 지역의 후기 백악기 화성암은 96~86 Ma에 집중되는 반면, 태백산 지역의 마그마 활동은 약 95 Ma부터 약 53 Ma의 고신기까지 이어져 전반적으로 동쪽으로 갈수록 젊어지는 경향을 보입니다. 금성 지역에서는 중복된 휘수연석 Re-Os 연대(185.9~186.6 Ma)가 상부 칼슘 스카른 몰리브덴 광화시기를 나타내며, 백악기 마그마-열수 활동도 함께 기록된 복합 시스템 내에서 쥐라기 몰리브덴 광화작용을 밝혀냈습니다. 이목의 초기 약 95 Ma 텅스텐-몰리브덴 광화 이벤트는 약 93~87 Ma의 주요 지역 텅스텐-몰리브덴 단계에 선행했습니다. 더 젊은 광화작용에는 약 82~80 Ma의 철-몰리브덴 광화계, 약 76~72 Ma의 아연-납 광화계, 그리고 약 50 Ma의 국지적인 고신기 텅스텐-철 광화작용이 포함됩니다. 연대 관계는 광화작용과 마그마 활동 사이의 광범위한 시간적 연관성을 보여주며, 광상과 연대 측정법에 따라 차이가 존재합니다. 수집된 기록은 관입암 근접형 텅스텐-몰리브덴/몰리브덴 광화작용에서 자철석 스카른 철-몰리브덴 및 탄산염암 수용성 아연-납 광화계로의 지역적 이동을 정의하고, 뒤이어 국지적인 고신기 재활성화를 보여줌으로써 광화작용 해석과 탐사를 위한 시간적 틀을 제공합니다.",
+        "summary_3lines": [
+          "한반도 주요 광화대인 황강리-태백산 지역의 마그마 및 열수 광화작용의 시공간적 진화 과정을 정밀한 동위원소 연대측정으로 규명하였다.",
+          "쥐라기부터 고신기까지 이르는 화성활동과 광화작용이 시기별, 지역별로 동쪽 방향으로의 젊어짐과 함께 순차적으로 전개되었음을 밝혔다.",
+          "이번에 구축된 지질학적 연대 체계는 국립공원 내 지형·지질 자원의 기원 규명 및 지질유산 보전 정책 수립의 과학적 기초 자료로 활용될 수 있다."
+        ],
+        "research_purpose": "본 연구의 목적은 황강리-태백산 지역에 분포하는 다양한 금속 광화계(텅스텐-몰리브덴, 철-몰리브덴, 아연-납 등)와 관련 화성암의 정밀한 절대연대를 측정하여, 마그마-열수 활동의 시공간적 진화 과정과 광화작용의 시기를 규명하는 것입니다. 이를 통해 한반도의 지체구조적 진화와 광화 작용 간의 상관관계를 밝히고 지역적 광화 모델을 수립하고자 합니다.",
+        "key_findings": [
+          "황강리 지역의 후기 백악기 화성암은 96~86 Ma에 집중되며, 태백산 지역은 약 95 Ma에서 고신기 53 Ma까지 이어져 전반적으로 동쪽으로 갈수록 젊어지는 경향을 보임",
+          "금성 지역에서 쥐라기(약 186 Ma) 몰리브덴 광화작용의 존재를 확인하였으며, 이는 백악기 마그마 활동과 중복된 복합 시스템임",
+          "이목 지역의 조기 텅스텐-몰리브덴 광화작용(약 95 Ma) 이후 주된 광화 시기(93~87 Ma), 철-몰리브덴(82~80 Ma), 아연-납(76~72 Ma) 순으로 순차적인 광화계 이동이 발생함"
+        ],
+        "practical_applications": [
+          "국립공원 내 구불구불한 지질 명소 및 과거 광산 지역의 지사(地史) 해석과 지질교육 프로그램 콘텐츠 개발에 활용",
+          "공원 내 지질·광물 자원 분포 조사 시 정밀 연대측정 데이터를 연계한 지질유산 가치 평가 체계 구축",
+          "지질공원(Geopark) 운영 시 지역별 마그마 활동과 광화작용의 역사적 변천을 담은 해설판 및 탐방 안내 자료 작성에 반영"
+        ],
+        "korea_np_applicability_score": 2,
+        "korea_np_applicability_reason": "본 연구는 광물 자원 탐사와 금속 광화대의 지구조적 진화를 다룬 학술 논문으로, 국립공원 관리 실무(탐방로, 생태계 관리 등)보다는 공원 내 지질유산 보전 및 지질학적 가치 평가와 간접적으로 연관됩니다.",
+        "study_location": "해외",
+        "related_work_areas": [
+          "자원보전·복원",
+          "공원계획·구역관리"
+        ],
+        "related_laws": [
+          "자연공원법 제18조",
+          "자연공원법 제23조"
+        ],
+        "field_checklist": [
+          "공원 내 과거 광산 흔적 및 폐광 지역의 지질학적 안정성 확인",
+          "지질 명소 주변 암석의 풍화 및 변질 양상 모니터링",
+          "지질 탐방로 내 학술적 가치가 높은 노두(Outcrop) 보존 상태 점검",
+          "지질 교육 및 해설 자료에 반영된 지사(地史) 및 연대 정보의 정확성 검토",
+          "지질유산 보호구역 내 무단 채집 및 훼손 여부 순찰"
+        ],
+        "practical_utility_score": 2,
+        "cautions": [
+          "본 연구는 자원 탐사 및 학술적 연대측정에 중점을 두고 있어 직접적인 현장 관리 매뉴얼로 적용하기에는 거리가 있음",
+          "연구 대상 지역이 광범위하므로 특정 국립공원 현장에 적용할 때는 개별 공원의 세부 지질 특성을 별도로 검증해야 함"
+        ],
+        "tags": [
+          "지질유산",
+          "마그마활동",
+          "광화작용",
+          "동위원소연대",
+          "태백산"
+        ],
+        "recommended_followup_research": [
+          "국립공원 내 분포하는 주요 화성암 및 광화대의 정밀 연대측정 데이터베이스 구축",
+          "지질 탐방객을 위한 한반도 지체구조 및 광화 역사 교육 프로그램 효과성 검증 연구"
+        ],
+        "ai_recommended_topics": [
+          "Korean Peninsula metallogeny zircon U-Pb",
+          "Hwanggangri Taebaeksan magmatic hydrothermal evolution"
+        ],
+        "analyzed_at": "2026-11-11T10:19:44Z",
         "model": "gemini-flash-lite-latest"
       }
     },
