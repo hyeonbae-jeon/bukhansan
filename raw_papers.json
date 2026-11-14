@@ -503443,5 +503443,55 @@
       "analyzed_at": "2026-11-13T10:36:17Z",
       "model": "gemini-flash-lite-latest"
     }
+  },
+  {
+    "id": "W2980604730",
+    "source": "openalex",
+    "title": "Yellowstone Cougars: Ecology Before And During Wolf Restoration",
+    "abstract": "Examines the effect of wolf restoration on cougar population in Yellowstone National Park. No other study has addressed theoretical and practical aspects of competition between large carnivores. A thorough examination of cougar ecology, how they interact and are influenced by wolves, how this knowledge informs management and conservation.--Provided by publisher.",
+    "authors": [
+      "Toni K. Ruth",
+      "Polly C. Buotte",
+      "Maurice G. Hornocker"
+    ],
+    "year": 2019,
+    "journal": "University Press of Colorado eBooks",
+    "cited_by_count": 37,
+    "doi": "https://doi.org/10.5876/9781607328292",
+    "is_oa": false,
+    "oa_url": "",
+    "concepts": [
+      "Ecology",
+      "Geography",
+      "Restoration ecology",
+      "Biology"
+    ],
+    "openalex_url": "https://openalex.org/W2980604730",
+    "ai_analysis": null
+  },
+  {
+    "id": "W4395087809",
+    "source": "openalex",
+    "title": "Decoding Differences in Nature Park Visitors’ Experience: The Case of Pyhä-Luosto National Park",
+    "abstract": "This article aims to explore the discourse construction through the institutional apparatus and technologies within Pyhä-Luosto National Park, one of the first two national parks established in Finland, by analysing visitors’ reviews. This article investigates the causes behind the differing levels of emphasis that tourists of various languages (Finnish and other languages) and cultural backgrounds place on environmental values or physical activities during their visits. By employing a mixed-methods approach, merging quantitative (frequency analysis) and qualitative (discourse analysis) methodologies, the analysis reveals a distinct divergence in the visitor experiences of the national park based on the background of visitors. Finnish-speaking visitors exhibit a stronger preference for landscape, while international visitors empha- size the experiences derived from physical activities. Through a closer field study in Pyhä- Luosto National Park, it is proposed that these differences originate from distinct cultural contexts and environmental engagements that shape each visitor’s interaction with the natural landscape.",
+    "authors": [
+      "Chenru Xue"
+    ],
+    "year": 2024,
+    "journal": "Tahiti",
+    "cited_by_count": 1,
+    "doi": "https://doi.org/10.23995/tht.142757",
+    "is_oa": true,
+    "oa_url": "https://tahiti.journal.fi/article/download/142757/91554",
+    "concepts": [
+      "Decoding methods",
+      "Geography",
+      "Computer science",
+      "Communication",
+      "Psychology",
+      "Telecommunications"
+    ],
+    "openalex_url": "https://openalex.org/W4395087809",
+    "ai_analysis": null
   }
 ]

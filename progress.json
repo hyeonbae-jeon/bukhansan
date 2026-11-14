@@ -96,12 +96,12 @@
     "national park climate change adaptation": 4,
     "national park management effectiveness": 4,
     "national park invasive species management": 4,
-    "national park fire management": 3,
-    "national park recreation ecology": 3,
-    "national park governance": 3,
-    "national park restoration ecology": 3,
-    "national park human wildlife conflict": 3,
-    "national park visitor experience": 3,
+    "national park fire management": 4,
+    "national park recreation ecology": 4,
+    "national park governance": 4,
+    "national park restoration ecology": 4,
+    "national park human wildlife conflict": 4,
+    "national park visitor experience": 4,
     "national park ranger management": 3,
     "national park tourism impact": 3,
     "national park boundary encroachment": 3,
@@ -121,5 +121,5 @@
     "national park landscape connectivity corridor": 3,
     "national park disaster risk management": 3
   },
-  "updated_at": "2026-11-13T10:36:10.639527"
+  "updated_at": "2026-11-14T09:53:24.274378"
 }
