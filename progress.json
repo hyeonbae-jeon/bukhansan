@@ -1,12 +1,12 @@
 {
   "completed_keywords": {
     "Bukhansan": "2026-10-01",
-    "Byeonsanbando": "2026-11-01",
+    "Byeonsanbando": "2026-11-15",
     "Chiaksan": "2026-10-01",
-    "Dadohaehaesang": "2026-11-01",
+    "Dadohaehaesang": "2026-11-15",
     "Deogyusan": "2026-10-01",
     "Gayasan": "2026-10-01",
-    "Geumjeongsan": "2026-11-01",
+    "Geumjeongsan": "2026-11-15",
     "Gyeongju": "2026-10-01",
     "Gyeryongsan": "2026-10-01",
     "Hallasan": "2026-10-01",
@@ -20,9 +20,9 @@
     "Seoraksan": "2026-10-01",
     "Sobaeksan": "2026-10-01",
     "Songnisan": "2026-10-01",
-    "Taeanhaean": "2026-11-01",
+    "Taeanhaean": "2026-11-15",
     "Taebaeksan": "2026-10-01",
-    "Wolchulsan": "2026-11-01",
+    "Wolchulsan": "2026-11-15",
     "Woraksan": "2026-10-01",
     "bukhansan": "2026-08-03",
     "national park accessibility disability": "2026-10-01",
@@ -102,12 +102,12 @@
     "national park restoration ecology": 4,
     "national park human wildlife conflict": 4,
     "national park visitor experience": 4,
-    "national park ranger management": 3,
-    "national park tourism impact": 3,
-    "national park boundary encroachment": 3,
-    "national park zoning planning": 3,
-    "national park cultural heritage management": 3,
-    "national park entrance fee policy": 3,
+    "national park ranger management": 4,
+    "national park tourism impact": 4,
+    "national park boundary encroachment": 4,
+    "national park zoning planning": 4,
+    "national park cultural heritage management": 4,
+    "national park entrance fee policy": 4,
     "national park signage interpretation": 3,
     "national park camping impact": 3,
     "national park air quality monitoring": 3,
@@ -121,5 +121,5 @@
     "national park landscape connectivity corridor": 3,
     "national park disaster risk management": 3
   },
-  "updated_at": "2026-11-14T09:53:24.274378"
+  "updated_at": "2026-11-15T10:26:43.346888"
 }

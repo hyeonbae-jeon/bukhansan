@@ -1,16 +1,16 @@
 {
   "meta": {
-    "total": 5711,
-    "analyzed": 5661,
+    "total": 5715,
+    "analyzed": 5667,
     "avg_applicability": 3.7,
     "avg_utility": 3.7,
-    "high_applicability_count": 3502,
+    "high_applicability_count": 3506,
     "score_distribution": {
       "1": 90,
       "2": 392,
-      "3": 1676,
-      "4": 2353,
-      "5": 1149
+      "3": 1678,
+      "4": 2354,
+      "5": 1152
     },
     "year_distribution": {
       "1895": 1,
@@ -64,9 +64,9 @@
       "2007": 119,
       "2008": 154,
       "2009": 149,
-      "2010": 163,
+      "2010": 164,
       "2011": 185,
-      "2012": 204,
+      "2012": 205,
       "2013": 244,
       "2014": 241,
       "2015": 224,
@@ -77,12 +77,12 @@
       "2020": 315,
       "2021": 290,
       "2022": 236,
-      "2023": 248,
+      "2023": 249,
       "2024": 281,
       "2025": 341,
-      "2026": 335
+      "2026": 336
     },
-    "updated_at": "2026-11-14T09:53:40.546929"
+    "updated_at": "2026-11-15T10:27:50.954729"
   },
   "tag_index": {
     "국립공원관리": 311,
@@ -93,10 +93,10 @@
     "지역사회참여": 164,
     "생태계모니터링": 158,
     "거버넌스": 153,
-    "국립공원": 150,
+    "국립공원": 151,
     "보호지역관리": 138,
     "주민참여": 136,
-    "생태모니터링": 125,
+    "생태모니터링": 127,
     "시민과학": 125,
     "탐방로관리": 113,
     "기후변화적응": 106,
@@ -114,7 +114,7 @@
     "탐방객 관리": 75,
     "서식지관리": 72,
     "기후변화대응": 71,
-    "역사문화자원": 70,
+    "역사문화자원": 71,
     "공원계획": 69,
     "용도지구": 68,
     "생태계복원": 68,
@@ -147,22 +147,22 @@
     "지속가능관광": 44
   },
   "work_area_index": {
-    "생태계 모니터링·조사": 2804,
-    "탐방로·탐방객 관리": 2593,
-    "자원보전·복원": 1887,
-    "지역사회·거버넌스": 1571,
+    "생태계 모니터링·조사": 2808,
+    "탐방로·탐방객 관리": 2595,
+    "자원보전·복원": 1889,
+    "지역사회·거버넌스": 1572,
     "공원계획·구역관리": 1310,
-    "야생생물·서식지 관리": 1254,
-    "탐방객 서비스·안전": 672,
+    "야생생물·서식지 관리": 1257,
+    "탐방객 서비스·안전": 673,
     "환경 모니터링": 618,
-    "기후변화 대응": 601,
+    "기후변화 대응": 602,
     "재난·안전 관리": 548,
     "시설·인프라 관리": 537,
     "관광·경제 정책": 533
   },
   "location_index": {
-    "해외": 4530,
-    "국내": 1131
+    "해외": 4532,
+    "국내": 1135
   },
   "papers": [
     {
@@ -41153,6 +41153,95 @@
       }
     },
     {
+      "id": "W2256350305",
+      "source": "openalex",
+      "title": "Morphological changes of the beach and dune of The Taeanhaean National Park using VRS/RTK GPS - a case of Hakampo and Anmyeon beach-",
+      "abstract": "태안해안국립공원은 파랑의 에너지가 큰 해안과 조차가 큰 해안이 공존하고 있어, 갯벌, 모래해빈, 해안사구, 해식애 등의 해안지형이 잘 나타나고 해안생태계의 다양성이 매우 높다. 그러나 무분별한 모래채취와 인공구조물의 설치 등으로 인해 해빈과 해안사구의 침식이 심각한 실정이다. 이러한 문제의 원인을 파악하기 위해서는 현황에 대한 정확한 이해가 선행되어야 하는데, 해안에서의 이러한 변화를 정확히 계측하기 위해, 본 연구에서는 VRS 방식의 RTK GPS를 이용해 학암포 해안과 안면(창정교) 해안을 대상으로 3차례의 주기적인 측량을 실시하였고 장기적인 해안지형변화 모니터링을 위한 VRS 측량의 활용 가능성을 제시하였다.",
+      "authors": [
+        "박정원",
+        "오선관",
+        "서승적",
+        "서종철"
+      ],
+      "year": 2012,
+      "journal": "한국지형학회지",
+      "cited_by_count": 1,
+      "doi": "",
+      "is_oa": false,
+      "oa_url": "",
+      "concepts": [
+        "Global Positioning System",
+        "Geodesy",
+        "Remote sensing",
+        "Computer science",
+        "Geography",
+        "Telecommunications"
+      ],
+      "openalex_url": "https://openalex.org/W2256350305",
+      "ai_analysis": {
+        "title_ko": "VRS/RTK GPS를 이용한 태안해안국립공원 해빈 및 해안사구의 지형 변화 연구 - 학암포와 안면 해수욕장을 중심으로 -",
+        "abstract_ko": "태안해안국립공원은 파랑의 에너지가 큰 해안과 조차가 큰 해안이 공존하고 있어 갯벌, 모래해빈, 해안사구, 해식애 등 다양한 해안지형이 발달해 있으며 생태계의 다양성이 매우 높습니다. 그러나 무분별한 모래 채취와 인공구조물 설치로 인해 해빈과 해안사구의 침식이 심각한 실정입니다. 이러한 문제의 원인을 파악하기 위해서는 현황에 대한 정확한 이해가 선행되어야 하며, 해안의 지형 변화를 정밀하게 계측하기 위해 본 연구에서는 VRS 방식의 RTK GPS를 활용하여 학암포 해안과 안면(창정교) 해안을 대상으로 3차례에 걸쳐 주기적인 측량을 실시하였고, 장기적인 해안지형 변화 모니터링을 위한 VRS 측량의 현장 활용 가능성을 제시하였습니다.",
+        "summary_3lines": [
+          "태안해안국립공원의 해빈 및 해안사구 침식 원인 파악과 정밀한 지형 변화 모니터링 기법을 마련하기 위해 연구를 수행했습니다.",
+          "VRS 방식의 RTK GPS를 활용하여 학암포와 안면 해안을 대상으로 주기적인 3차례 정밀 측량을 실시하여 지형 변동을 계측했습니다.",
+          "VRS 측량이 국립공원의 장기적인 해안지형 변화 모니터링에 매우 효과적이며 현장 실무에 즉시 적용 가능함을 확인했습니다."
+        ],
+        "research_purpose": "본 연구는 무분별한 모래 채취와 인공구조물로 인해 침식이 심화되는 태안해안국립공원의 해빈과 해안사구 지형 변화를 정밀하게 파악하기 위해 수행되었습니다. 특히 가상기준국(VRS) 방식의 실시간 이동측위(RTK) GPS 측량 기법을 적용하여, 해안선과 사구의 장기적이고 정확한 모니터링 체계를 구축하기 위한 실효성 있는 조사 방법을 제시하고자 하였습니다.",
+        "key_findings": [
+          "VRS/RTK GPS를 활용하여 해안 지형의 미세한 고저 변화와 침식·퇴적 양상을 정확하게 계측할 수 있음을 확인했습니다.",
+          "학암포 해안과 안면 해안을 대상으로 한 주기적 측량을 통해 해빈 및 사구 지역의 공간적 지형 변화 데이터를 성공적으로 확보했습니다.",
+          "기존의 전통적인 측량 방식에 비해 시간과 인력을 대폭 절감하면서도 고정밀의 3차원 해안 지형 데이터를 구축할 수 있었습니다."
+        ],
+        "practical_applications": [
+          "해안형 국립공원의 침식 위험 지역에 VRS/RTK GPS 기반의 정기적인 지형 모니터링 시스템을 도입합니다.",
+          "인공구조물 설치나 해안사구 복원 사업 전후의 지형 변화 효과를 객관적으로 평가하는 검증 도구로 활용합니다.",
+          "확보된 고정밀 해안 지형 데이터를 바탕으로 장기적인 해안침식 대응 및 사구 보호 기본계획을 수립합니다."
+        ],
+        "korea_np_applicability_score": 5,
+        "korea_np_applicability_reason": "연구 대상지가 태안해안국립공원으로 국내 국립공원의 해안 침식 및 사구 복원 현장에 직접 적용되는 연구이며, 공단 실무자들이 현장에서 즉시 활용할 수 있는 정밀 측량 기법을 다루고 있습니다.",
+        "study_location": "국내",
+        "related_work_areas": [
+          "자원보전·복원",
+          "생태계 모니터링·조사",
+          "기후변화 대응"
+        ],
+        "related_laws": [
+          "자연공원법 제2조",
+          "자연공원법 제23조"
+        ],
+        "field_checklist": [
+          "해안사구 및 해빈 지역의 침식·퇴적 흔적을 정기적으로 육안 및 장비로 확인했는가",
+          "VRS/RTK GPS 장비를 활용하여 주요 지점의 3차원 좌표 및 고도 데이터를 확보했는가",
+          "과거 측량 데이터와 비교하여 해안선 후퇴 거리 및 모래 유실량을 산정했는가",
+          "인공구조물 주변의 국부적인 지형 교란 및 침식 가속화 여부를 점검했는가",
+          "해안사구 보호를 위한 출입금지 구역 및 식생 복원 상태를 모니터링했는가"
+        ],
+        "practical_utility_score": 5,
+        "cautions": [
+          "VRS 측량 시 통신 음영 지역이나 위성 신호 수신 장애가 발생하는 지점이 있는지 사전에 확인해야 합니다.",
+          "해안가 모래 환경 특성상 장비의 침하 및 염해에 대비하여 장비 관리에 주의를 기울여야 합니다."
+        ],
+        "tags": [
+          "태안해안국립공원",
+          "해안사구",
+          "해빈침식",
+          "VRS_RTK_GPS",
+          "지형모니터링"
+        ],
+        "recommended_followup_research": [
+          "계절별 파랑 에너지가 해안 지형 변화에 미치는 영향 분석 연구",
+          "무인항공기(드론)와 VRS/RTK GPS를 융합한 대규모 해안 지형 정밀 탐법 연구"
+        ],
+        "ai_recommended_topics": [
+          "해안사구 침식 모니터링",
+          "RTK GPS 해안선 측량",
+          "태안해안국립공원 지형변화"
+        ],
+        "analyzed_at": "2026-11-15T10:27:33Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
       "id": "W1737471164",
       "source": "openalex",
       "title": "Visitors' Satisfaction of Recreational Trail Conditions in Thingvellir National Park, Iceland",
@@ -73806,6 +73895,182 @@
           "Crowding and visitor behavior in parks"
         ],
         "analyzed_at": "2026-11-12T10:43:51Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W2469823132",
+      "source": "openalex",
+      "title": "Wind Alley and Flora Plant Species Diversity of the Wando Jeongdo-ri Windbreak Forests in Dadohaehaesang National Park",
+      "abstract": "The Wando Jeongdo-ri Windbreak Forest is located in region of Wando, where located between sea and land facing with the southward. Due to the strong winds from the southeast in the summer season, it is very important sites as an ecological succession areas that protect cultivated land and the fishing village. Flora of Wando Jeongdo-ri Windbreak Forest is recorded as 384 taxa with 93 families 250 genera 355 species 42 varieties and 7 forms. The Jeongdo-ri Windbreak Forest belongs to South coast province, and appeared Cymbidium nipponicum as Endangered Plant Species II. Rare Plants are recorded as 6 taxa; C. nipponicum, Arisaema heterophyllum, Lilium distichum, Koelreuteria paniculata, Monotropa uniflora and Ardisia macrocarpa. The Protection species which is designated by the CITES are 2 taxa; Cymbidium goeringii and C. nipponicum. Protection species of IUCN is 1 taxa; Cinnamomum japonicum. Endemic plant are 7 taxa; Poa annua, Polygonum lasianthum var. coreanum, Chloranthus fortunei, Carpinus coreana and Lonicera subhispida. The naturalized plant is recorded as 32 taxa with 11 families 23 genera 27 species 5 varieties. The Naturalization Index was 8.33%, and the Urbanization Index was 11.81%.",
+      "authors": [
+        "임동옥",
+        "최현우",
+        "황인천"
+      ],
+      "year": 2010,
+      "journal": "Korean Journal of Environment and Ecology",
+      "cited_by_count": 0,
+      "doi": "",
+      "is_oa": false,
+      "oa_url": "",
+      "concepts": [
+        "Geography",
+        "Botany",
+        "Biology",
+        "Taxon",
+        "IUCN Red List",
+        "Liana"
+      ],
+      "openalex_url": "https://openalex.org/W2469823132",
+      "ai_analysis": {
+        "title_ko": "다도해해상국립공원 완도 정도리 방풍림의 바람길과 식물상 및 식물종 다양성",
+        "abstract_ko": "완도 정도리 방풍림은 바다와 육지가 만나는 남향의 완도 지역에 위치해 있습니다. 여름철 남동풍의 강한 바람으로부터 경작지와 어촌마을을 보호하는 생태적 천이 지역으로서 매우 중요한 장소입니다. 완도 정도리 방풍림의 식물상은 93과 250속 355종 42변종 6품종 등 총 384분류군으로 기록되었습니다. 정도리 방풍림은 남해안 구계에 속하며, 멸종위기 야생생물 II급인 석곡이 출현했습니다. 희귀식물은 석곡, 천남성, 말나리, 모감주나무, 백합, 자금우 등 6분류군이 기록되었습니다. CITES 지정 보호종은 춘란과 석곡 등 2분류군이며, IUCN 보호종은 후박나무 1분류군입니다. 한국 특산식물은 실포풀, 참개소쟁이, 초록꽃나무, 개서어나무, 털화살나무 등 7분류군입니다. 귀화식물은 11과 23속 27종 5변종 등 총 32분류군으로 기록되었습니다. 귀화율은 8.33%, 도시화지수는 11.81%로 나타났습니다.",
+        "summary_3lines": [
+          "완도 정도리 방풍림의 식물상과 식물종 다양성을 조사하여 해안 방풍림의 생태적 가치를 평가하고자 했다.",
+          "총 384분류군의 관크식물이 확인되었으며, 멸종위기종 및 희귀식물, 특산식물이 서식하는 동시에 귀화식물도 유입되어 있음을 밝혔다.",
+          "해안 방풍림은 재해 방지와 생태적 보전 가치가 높으므로, 외래식물 유입 관리와 자생종 보호를 병행한 체계적 관리가 필요하다."
+        ],
+        "research_purpose": "본 연구는 다도해해상국립공원 내 위치한 완도 정도리 방풍림의 식물상과 식물종 다양성을 파악하고, 해안 방풍림이 지닌 생태적 중요성과 천이 양상을 분석하는 것을 목적으로 한다. 이를 통해 해안 지역의 바람길 환경 속에서 자생하는 식물의 분포 특성을 확인하고, 향후 국립공원 내 해안 생태계 보전 및 관리 방안을 수립하기 위한 기초 자료를 제공하고자 했다.",
+        "key_findings": [
+          "정도리 방풍림에서 총 384분류군(93과 250속 355종 42변종 6품종)의 관과식물이 확인됨",
+          "멸종위기 야생생물 II급인 석곡을 포함하여 희귀식물 6분류군과 한국 특산식물 7분류군이 서식함",
+          "귀화식물 32분류군이 확인되었으며 귀화율 8.33%, 도시화지수 11.81%로 외부 교란 요인이 존재함"
+        ],
+        "practical_applications": [
+          "방풍림 내 탐방객 출입 및 인위적 교란으로 인한 귀화식물 유입 구간에 대한 모니터링 강화",
+          "멸종위기종 및 희귀식물 자생지에 대한 보호 울타리 설치 및 정기적인 생육 상태 점검",
+          "해안 강풍 및 기후변화에 대응하기 위한 방풍림 복원 및 식생 천이 유도 계획 수립"
+        ],
+        "korea_np_applicability_score": 5,
+        "korea_np_applicability_reason": "대한민국 국립공원(다도해해상국립공원) 내 실제 해안 방풍림을 대상으로 한 연구로, 국내 국립공원의 해안 생태계 관리, 식물상 조사, 탐방로 주변 식생 관리 현장에 직접 적용할 수 있다.",
+        "study_location": "국내",
+        "related_work_areas": [
+          "생태계 모니터링·조사",
+          "야생생물·서식지 관리",
+          "자원보전·복원"
+        ],
+        "related_laws": [
+          "자연공원법 제23조",
+          "야생생물 보호 및 관리에 관한 법률 제14조"
+        ],
+        "field_checklist": [
+          "방풍림 내 멸종위기종 및 희귀식물(석곡 등)의 자생지 생육 상태 확인",
+          "탐방로 및 주변부 귀화식물 유입 여부 및 확산 면적 조사",
+          "해풍 및 바람길에 의한 수목 도복이나 생장 피해 흔적 파악",
+          "인위적 훼손 방지를 위한 보호시설 및 안내판 정비 상태 점검",
+          "방풍림 식생의 천이 단계 및 갱신 상태 확인"
+        ],
+        "practical_utility_score": 5,
+        "cautions": [
+          "계절별 식물상 변화가 크므로 조사는 특정 계절에 편중되지 않도록 연중 주기에 맞춰 수행해야 함",
+          "희귀식물 및 특산식물 자생지 위치 노출로 인한 불법 채취를 방지하기 위해 현장 관리 시 보안 유지 필요"
+        ],
+        "tags": [
+          "방풍림",
+          "식물상",
+          "식물종다양성",
+          "다도해해상국립공원",
+          "귀화식물"
+        ],
+        "recommended_followup_research": [
+          "기후변화에 따른 해안 방풍림 수종의 생육 변화 및 천이 경향 분석",
+          "귀화식물 유입이 자생 식물상에 미치는 생태적 영향 평가 연구"
+        ],
+        "ai_recommended_topics": [
+          "해안 방풍림 식생 구조",
+          "국립공원 귀화식물 분포 특성",
+          "도서지역 식물다양성"
+        ],
+        "analyzed_at": "2026-11-15T10:27:44Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W7225317300",
+      "source": "openalex",
+      "title": "Identifying Brachyura in tidal flats using UAV imaging and a deep-learning approach: a republic of Korea west coast case study",
+      "abstract": "Brachyura taxa serve as key bioindicators of tidal flat ecosystems, yet traditional monitoring methods are labor-intensive, ecologically invasive, and subject to access constraints. Here, we present a non-invasive monitoring approach combining unmanned aerial vehicle (UAV) imagery with a U-Net semantic segmentation model to detect and classify Brachyura species directly on the tidal flat surface. High-resolution images (~ 0.2 cm ground sampling distance) were acquired over the Baramarae tidal flat (Taeanhaean National Park, Republic of Korea), and a dataset of 103,792 images was used to train and evaluate the model for four species: Austruca lactea (nationally endangered), Tubuca arcuata , Macrophthalmus japonicus , and Scopimera globosa , including sex-level discrimination for the first two species. The model achieved overall precision, recall, and F1-scores of 0.84, 0.83, and 0.83, respectively, with a mean intersection over union (mIoU) of 0.67. Classification performance was high for most taxa but was markedly lower for female T. arcuata (IoU = 0.41), primarily due to limited training samples and morphological similarity to M. japonicus . Population estimates were within 18% of manual counts for all taxa. These results demonstrate that UAV-based deep learning can provide rapid, non-contact population assessments of tidal flat Brachyura, with accuracy sufficient for ecological monitoring while minimising habitat disturbance. Future work should focus on expanding training data for underrepresented taxa and integrating multi-temporal imagery to track population dynamics.",
+      "authors": [
+        "Dongwoo Kim",
+        "Daeseob Shin",
+        "Seung Woo Son"
+      ],
+      "year": 2026,
+      "journal": "Scientific Reports",
+      "cited_by_count": 0,
+      "doi": "https://doi.org/10.1038/s41598-026-72405-1",
+      "is_oa": true,
+      "oa_url": "https://www.nature.com/articles/s41598-026-72405-1.pdf",
+      "concepts": [
+        "Geography",
+        "Population",
+        "Taxon",
+        "Intersection (aeronautics)",
+        "Habitat",
+        "Segmentation"
+      ],
+      "openalex_url": "https://openalex.org/W7225317300",
+      "ai_analysis": {
+        "title_ko": "무인항공기(UAV) 영상과 딥러닝을 활용한 갯벌 게류 식별: 대한민국 서해안 사례 연구",
+        "abstract_ko": "갯벌 생태계의 핵심 생물지표인 게류는 전통적인 조사 방식이 노동 집약적이고 생태계 교란을 유발하며 접근성에 제약이 따르는 한계가 있습니다. 본 연구에서는 무인항공기(UAV) 영상과 U-Net 의미적 분할 모델을 결합하여 갯벌 표면의 게류를 직접 탐지하고 분류하는 비침습적 모니터링 기법을 제시합니다. 대한민국 태안해안국립공원 바람아래갯벌 상공에서 초고해상도 영상(지상 표본 거리 약 0.2cm)을 취득하였으며, 법정보호종인 흰발농게를 비롯해 칠성기스락게(Tubuca arcuata), 겟가재붙이(Macrophthalmus japonicus), 달랑게(Scopimera globosa) 등 4종(일부 종은 성별 구분 포함)을 대상으로 103,792장의 이미지 데이터셋을 구축하여 모델을 학습·평가하였습니다. 모델의 전체 정밀도, 재현율, F1 점수는 각각 0.84, 0.83, 0.83을 기록했으며, 평균 교차유니온(mIoU)은 0.67이었습니다. 대부분의 분류 성과가 우수했으나, 암컷 칠성기스락게는 학습 데이터 부족과 겟가재붙이와의 형태학적 유사성으로 인해 성능이 다소 낮았습니다(IoU = 0.41). 개체수 추정치는 모든 분류군에서 수작업 계수 결과의 18 이내 오차를 보였습니다. 본 연구 결과는 UAV 기반 딥러닝이 서식지 교란을 최소화하면서 생태 모니터링에 충분한 정확도로 갯벌 게류의 신속하고 비접촉적인 개체수 평가를 제공할 수 있음을 입증합니다. 향후 연구는 데이터 부족 분류군에 대한 학습 데이터 확충과 시계열 영상 통합을 통한 개체군 동태 추적에 초점을 맞춰야 합니다.",
+        "summary_3lines": [
+          "갯벌 생태계의 주요 지표종인 게류를 대상으로 전통적 조사의 한계를 극복하기 위해 UAV와 딥러닝을 활용한 비침습적 모니터링 기법을 개발하였다.",
+          "태안해안국립공원 바람아래갯벌에서 초고해상도 UAV 영상을 취득하고 U-Net 모델을 학습시킨 결과, 주요 게류 종의 개체수를 수작업 조사와 18 이내의 오차로 신속하게 파악할 수 있었다.",
+          "이 기술은 갯벌 생태계 훼손을 최소화하면서 대규모 개체군을 효율적으로 모니터링할 수 있는 실무적 대안을 제공한다."
+        ],
+        "research_purpose": "본 연구의 목적은 기존의 인력 중심적이고 갯벌 생태계를 교란하는 갯벌 게류 조사 방식의 한계를 극복하기 위해, UAV(무인항공기) 초고해상도 영상과 딥러닝(U-Net) 모델을 결합한 비침습적 자동 모니터링 기법의 현장 적용 가능성을 검증하는 것이다. 특히 법정보호종인 흰발농게를 포함한 4개 게류 종을 대상으로 자동 탐지, 분류 및 개체수 추정의 정확도를 평가하여 향후 국립공원 갯벌 생태계 조사 실무에 활용할 수 있는 기반을 마련하고자 한다.",
+        "key_findings": [
+          "UAV 초고해상도 영상과 U-Net 모델을 활용해 갯벌 게류 4종을 성공적으로 탐지 및 분류하였으며, 전체 F1 점수 0.83을 달성했다.",
+          "AI를 통한 개체수 추정 결과가 현장 연구원의 수작업 계수 결과와 비교하여 18 이내의 오차 범위를 보여 높은 정확도를 입증했다.",
+          "학습 데이터가 부족하고 형태가 유사한 일부 종(예: 암컷 칠성기스락게)의 경우 분류 정확도가 다소 낮게 나타나 데이터 보완의 필요성이 확인되었다."
+        ],
+        "practical_applications": [
+          "국립공원 내 갯벌 지역(예: 태안해안, 다도해해상 등)의 법정보호종(흰발농게 등) 서식 실태 조사 시 드론을 활용하여 조사자의 갯벌 답사로 인한 서식지 훼손을 방지한다.",
+          "광범위한 갯벌 면적에 대한 정기적인 드론 항공 촬영을 실시하고 AI 분석 모델을 적용하여 갯벌 생태계 건강성 평가 업무의 효율성을 대폭 높인다.",
+          "멸종위기 야생생물 및 주요 지표종의 개체군 변동 추이를 시계열 데이터로 구축하여 장기 생태 모니터링 및 보전 대책 수립에 활용한다."
+        ],
+        "korea_np_applicability_score": 5,
+        "korea_np_applicability_reason": "대한민국 국립공원(태안해안 등)의 실제 갯벌 현장에서 수집된 데이터와 법정보호종(흰발농게)을 대상으로 수행된 연구이므로, 국내 해상·해안 국립공원의 생태계 조사 및 자원관리 업무에 직접적으로 즉시 적용할 수 있다.",
+        "study_location": "국내",
+        "related_work_areas": [
+          "생태계 모니터링·조사",
+          "야생생물·서식지 관리"
+        ],
+        "related_laws": [
+          "자연공원법 제23조",
+          "야생생물 보호 및 관리에 관한 법률 제14조"
+        ],
+        "field_checklist": [
+          "조사 대상 갯벌의 간조 시간대 확인 및 드론 비행 가능 기상 조건(풍속, 시정 등) 충족 여부 확인",
+          "지상 기준점(GCP) 설치를 통한 초고해상도(0.2cm GSD 급) 항공 영상 촬영 정밀도 확보",
+          "법정보호종(흰발농게 등) 서식지 핵심 구역에 대한 비행 경로(Path) 설정 및 허가 절차 이행",
+          "딥러닝 모델(U-Net) 구동을 위한 고성능 컴퓨팅 장비 및 현장 분석용 소프트웨어 준비",
+          "현장 대조군(수작업 샘플링 조사)과 AI 모델 분석 결과 간의 오차 검증 체계 마련"
+        ],
+        "practical_utility_score": 5,
+        "cautions": [
+          "갯벌의 특성상 간조 시간대에만 촬영이 가능하므로 철저한 시간대 및 물때 관리가 필수적이다.",
+          "형태가 유사한 종이나 암수 구분이 필요한 종의 경우 오인식 가능성이 있으므로 추가 학습 데이터 확보 및 현장 검증이 병행되어야 한다."
+        ],
+        "tags": [
+          "UAV",
+          "드론",
+          "딥러닝",
+          "갯벌",
+          "흰발농게",
+          "생태모니터링",
+          "태안해안국립공원"
+        ],
+        "recommended_followup_research": [
+          "갯벌 게류의 계절별·시기별 행동 특성에 따른 탐지 정확도 변동 연구",
+          "다양한 국립공원 갯벌 환경(모래갯벌, 진흙갯벌 등)에 범용으로 적용 가능한 딥러닝 모델 고도화 연구"
+        ],
+        "ai_recommended_topics": [
+          "UAV 갯벌 생태계 모니터링",
+          "딥러닝 기반 저서생물 자동 분류"
+        ],
+        "analyzed_at": "2026-11-15T10:26:51Z",
         "model": "gemini-flash-lite-latest"
       }
     },
@@ -308533,6 +308798,90 @@
       }
     },
     {
+      "id": "W4386608490",
+      "source": "openalex",
+      "title": "Study of the East Asian Namhae Avalokiteshvara and Sacred Sites",
+      "abstract": "The East Asian South Sea refers to the southern seas of the continental terrain, such as the South Sea of South India, the South Sea of Indochina, the South Sea of China, and the South Sea of the Korean Peninsula. Along the coastal route of the Southern Sea, the god of navigational protection is appearing at the key point of maritime traffic. The god of navigation is the Guanyin of the South Sea. The Southern Sea Avalokiteshvara is subject to Water Moon Avalokiteshvara(水月觀音) and White-Clothed Avalokitesvara(白衣觀音). Namhae Avalokiteshvara was created at the place where Namhae Gwaneum appeared on the Namhae route. The origin of Guanyin in the South Sea is Potalaka in South India. The South Sea Guanyin of South India is a huge esoteric Guanyin that combines the Hindu god Vishnu and the Avalokiteshvara. big Namhae Avalokiteshvara, an esoteric system, follows trade ships through the Malacca Strait and comes up to the North Pacific Ocean. The South Sea Avalokiteshvara appears along the southeast coast of the Indochina Peninsula via Danang and Haenamdo(海南島), and then on Maejamdo(梅岑島), Jusangundo, which is the southeast coast of China. big Namhae Avalokiteshvara resides in Joeum-dong and Beomeum-dong seaside caves in Maejamdo Island and creates Namhae Avalokiteshvara Sanctuary at Botanakgasan(普陀洛迦山). big Namhae Guanyin of Potalaka, South India, appeared on Mt. The Chineseized Avalokiteshvara of Change appeared as 33 Avalokitesvara such as Dragon head Gwaneum(龍頭觀音), Eoram Gwaneum (魚籃觀音), and One Leaf Gwaneum(一葉觀音). The Eoram Gwaneum and the Dragonhead Gwaneum spread to Vietnam and Malaysia, and the One Leaf Gwaneum spread to Muwisa Temple in Wolchulsan Mountain and Seonunsa Temple in Gochang in Korea. Big Namhae Guanyin of Botanakgasan in China appeared on the southern coast of the Korean Peninsula. The South Sea Gwaneum of Korea appears in genre paintings in the late Joseon Dynasty. Namhae Avalokiteshvara genre paintings were accompanied by folk beliefs and folk tales of Namhae Avalokiteshvara. The Namhae Avalokiteshvara elements are not found in the Naksansa Beach Cave and the Gwaneum Yeongi narrative, where Uisang Master met in the 7th century. Gaeyang grandmother in Jukmak-dong and Seonmundae grandmother in Jeju-do are incarnated as a combination of the incarnation of Namhae Avalokiteshvara and the old woman of Botanakgasan. If Jukmak-dong Beach Gul is the residence of Grandmother Gaeyang, then Suseongdang is the shrine of Grandmother Gaeyang. The protoplasm of Namhae Avalokiteshvara and Namhae Gwaneum Sacred Sites from Potalaka in South India and Botanakgasan in China have been found at the Gwaneum Sacred Site in Jukmak-dong Beach Cave. Grandma Gaeyang shows the figure of Namhae Avalokiteshvara walking into the deep sea to rescue a fishing boat drifting in the sea while residing in a seaside cave in Jukmak-dong, and Grandma Gaeyang in Suseongdang shows Grandma Gaeyang wearing a white sheet(白衣). She has 8 daughters. In Jukmak-dong, the story of the performance of Namhae Avalokiteshvara, the incarnation of Namhae Avalokiteshvara, and the beach oyster where Namhae Avalokiteshvara resides are equipped, showing the aspect of a Koreanized Gwaneumjeon by the seashore(海邊窟觀音殿).",
+      "authors": [
+        "Hwa-seop Song"
+      ],
+      "year": 2023,
+      "journal": "Sogang Journal of Early Korean History",
+      "cited_by_count": 0,
+      "doi": "https://doi.org/10.35160/sjekh.2023.8.44.139.",
+      "is_oa": false,
+      "oa_url": "",
+      "concepts": [
+        "East Asia",
+        "Geography",
+        "Ancient history",
+        "History",
+        "Art",
+        "Archaeology"
+      ],
+      "openalex_url": "https://openalex.org/W4386608490",
+      "ai_analysis": {
+        "title_ko": "동아시아 남해 관음(Avalokiteshvara)과 성지 연구",
+        "abstract_ko": "동아시아의 남해는 인도차이나, 중국, 한반도 남부 등 대륙 지형의 남쪽 바다를 의미합니다. 해상 교통의 요충지마다 항해 안전을 지키는 수호신이 등장하는데, 이것이 바로 남해 관음입니다. 남해 관음은 수월관음과 백의관음의 성격을 띱니다. 남해 관음은 남해 항로상에서 남해 관음이 나타난 장소에 형성되었으며, 그 기원은 인도 남부의 포탈라카(Potalaka)입니다. 인도 남부의 남해 관음은 힌두교의 비슈누 신과 관음보살이 결합된 거대한 밀교적 형태입니다. 밀교 계통의 거대한 남해 관음은 말라카 해협을 거쳐 무역선을 따라 북태평양까지 올라왔습니다. 남해 관음은 다낭과 하이난섬을 거쳐 인도차이나반도의 동남해안을 따라 나타났으며, 이후 중국 동남해안인 저장성(주산군도)의 메젠다오(매잠도)에 이릅니다. 거대한 남해 관음은 메젠다오의 조음동과 범음동 해식동굴에 머물며 보타락가산에 남해 관음 성지를 조성했습니다. 인도 남부 포탈라카의 대남해관음은 보타락가산에 나타났습니다. 중국화된 변화관음은 용두관음, 어람관음, 일엽관음 등 33관음으로 나타났습니다. 어람관음과 용두관음은 베트남과 말레이시아로 전파되었고, 일엽관음은 한국의 월출산 무위사와 고창 선운사로 전파되었습니다. 중국 보타락가산의 대남해관음은 한반도 남해안에 나타났습니다. 한국의 남해 관음은 조선 후기 풍속화에 등장하며, 민간 신앙 및 전설과 동반되었습니다. 남해 관음 요소는 7세기 의상대사가 만났다는 낙산사 해수동굴 및 관음연기 설화에서는 발견되지 않습니다. 죽막동의 개양할맹이와 제주도의 설문대할망은 남해 관음의 화신과 보타락가산의 노파가 결합된 화신으로 나타납니다. 죽막동 해식동굴이 개양할맹이의 거처라면, 수성당은 개양할맹이의 사당입니다. 인도 남부 포탈라카와 중국 보타락가산에서 유래한 남해 관음 및 남해 관음 성지의 원형이 죽막동 해식동굴의 관음 성지에서 발견됩니다. 개양할맹이는 죽막동 해식동굴에 머물면서 바다에서 표류하는 어선을 구하기 위해 깊은 바다로 걸어 들어가는 남해 관음의 모습을 보여주고, 수성당의 개양할맹이는 백의를 입은 모습을 보여줍니다. 그녀에게는 8명의 딸이 있습니다.",
+        "summary_3lines": [
+          "본 연구는 동아시아 해상 항로를 따라 전파된 남해 관음 신앙의 기원과 전파 과정을 인도, 중국, 한국의 해안 성지를 중심으로 분석했습니다.",
+          "인도 남부 포탈라카와 중국 보타락가산의 관음 신앙이 해상 무역과 항해 안전 기원을 통해 한반도 남해안의 해식동굴 및 민간 신앙(개양할맹이)과 결합했음을 고찰했습니다.",
+          "국립공원 내 해안 지역의 역사·문화 자원 발굴과 민간신앙 유적의 인문학적 가치 해석을 위한 기초 자료를 제공합니다."
+        ],
+        "research_purpose": "본 연구의 목적은 동아시아 해역(인도, 중국, 한국)을 연결하는 해상 수호신인 남해 관음 신앙의 원형과 전파 경로를 추적하는 것입니다. 특히 한반도 남해안의 해식동굴 및 해양 민간신앙(개양할맹이 등) 속에 내재된 불교적·토속적 문화 요소를 분석하여 해양 문화권의 역사적 연계성을 밝히고자 합니다.",
+        "key_findings": [
+          "남해 관음 신앙은 인도 남부 포탈라카에서 시작되어 해상 무역로를 따라 중국 보타락가산을 거쳐 한반도 남해안으로 전파되었습니다.",
+          "한반도 남해안의 대표적 해양 민간신앙인 죽막동(변산반도 국립공원 내)의 개양할맹이 신앙은 남해 관음(백의관음 등) 및 해식동굴 거처 신앙과 깊은 연관이 있습니다.",
+          "조선 후기 풍속화, 설화, 해안가 사당(수성당 등)에 나타나는 해양 수호신앙은 단순한 토속신앙을 넘어 동아시아 해양 불교문화의 전파 양상을 보여줍니다."
+        ],
+        "practical_applications": [
+          "국립공원 내 해안·도서 지역(예: 변산반도 수성당 및 죽막동 일원)의 역사·문화 탐방 프로그램 기획 시 해양 불교문화와 토속신앙의 융합 스토리텔링을 적용합니다.",
+          "해식동굴 및 해양 유적지에 대한 문화재적·민속학적 가치를 재조명하여 탐방객 대상 해설 콘텐츠를 고도화합니다.",
+          "지역 주민과 협력하여 전통 해양 민속 신앙(해신제 등)과 연계된 친환경 탐방 및 지역 상생 프로그램을 개발합니다."
+        ],
+        "korea_np_applicability_score": 4,
+        "korea_np_applicability_reason": "변산반도국립공원 내 위치한 죽막동(수성당) 등 실제 국내 국립공원의 해안 문화자원을 직접적으로 다루고 있어, 공원 내 역사문화 자원 발굴 및 탐방 해설에 즉시 활용할 수 있습니다.",
+        "study_location": "국내",
+        "related_work_areas": [
+          "탐방로·탐방객 관리",
+          "지역사회·거버넌스"
+        ],
+        "related_laws": [
+          "자연공원법 제37조",
+          "문화재보호법 제2조"
+        ],
+        "field_checklist": [
+          "공원 구역 내 해안가 역사·문화 유적지(사당, 해식동굴 등) 현황 조사",
+          "탐방객 대상 해양 민속신앙 및 불교문화 연계 해설 프로그램 운영 여부 확인",
+          "지역 주민이 참여하는 전통 제의(해신제 등) 행사 시 안전 및 환경 관리 실태 점검",
+          "문화자원 주변 탐방로의 훼손 여부 및 안내판 정비 상태 확인",
+          "해안가 역사자원과 연계된 스토리텔링 콘텐츠의 정확성 검토"
+        ],
+        "practical_utility_score": 4,
+        "cautions": [
+          "종교적·민속적 신앙 대상지와 관련된 사안이므로 지역 주민 및 신앙 주체와의 마찰이 없도록 세심한 소통이 필요합니다.",
+          "해안가 해식동굴 등 탐방 시 안전사고 예방 조치와 자연환경 훼손 방지 대책을 병행해야 합니다."
+        ],
+        "tags": [
+          "남해관음",
+          "해양민속신앙",
+          "죽막동수성당",
+          "변산반도국립공원",
+          "역사문화자원"
+        ],
+        "recommended_followup_research": [
+          "국립공원 내 해안·도서 지역의 불교 유적 및 해양 민간신앙 자원의 전수 조사 및 데이터베이스 구축",
+          "역사문화 탐방로를 활용한 저탄소·친환경 탐방 프로그램의 교육적 효과 분석"
+        ],
+        "ai_recommended_topics": [
+          "한국 국립공원 해양 문화자원 스토리텔링",
+          "변산반도 죽막동 수성당 민속신앙 연구"
+        ],
+        "analyzed_at": "2026-11-15T10:27:13Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
       "id": "W2011159906",
       "source": "openalex",
       "title": "Pretectonic and posttectonic emplacements of the granitoids in the south central Okchon belt, South Korea: Implications for the timing of strike‐slip shearing and thrusting",
@@ -360376,6 +360725,90 @@
           "지진 발생 시 산악 국립공원 탐방객 안전 대책"
         ],
         "analyzed_at": "2026-08-26T04:17:27Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W2980604730",
+      "source": "openalex",
+      "title": "Yellowstone Cougars: Ecology Before And During Wolf Restoration",
+      "abstract": "Examines the effect of wolf restoration on cougar population in Yellowstone National Park. No other study has addressed theoretical and practical aspects of competition between large carnivores. A thorough examination of cougar ecology, how they interact and are influenced by wolves, how this knowledge informs management and conservation.--Provided by publisher.",
+      "authors": [
+        "Toni K. Ruth",
+        "Polly C. Buotte",
+        "Maurice G. Hornocker"
+      ],
+      "year": 2019,
+      "journal": "University Press of Colorado eBooks",
+      "cited_by_count": 37,
+      "doi": "https://doi.org/10.5876/9781607328292",
+      "is_oa": false,
+      "oa_url": "",
+      "concepts": [
+        "Ecology",
+        "Geography",
+        "Restoration ecology",
+        "Biology"
+      ],
+      "openalex_url": "https://openalex.org/W2980604730",
+      "ai_analysis": {
+        "title_ko": "옐로스톤 퓨마: 늑대 복원 전후의 생태",
+        "abstract_ko": "옐로스톤 국립공원에서 늑대 복원이 퓨마 개체군에 미치는 영향을 조사했습니다. 대형 식식동물과 포식자 간의 경쟁에 대한 이론적, 실무적 측면을 다룬 유일한 연구입니다. 퓨마의 생태에 대한 철저한 조사와 늑대와의 상호작용 및 영향 분석을 바탕으로 관리와 보전에 필요한 지식을 제공합니다.",
+        "summary_3lines": [
+          "옐로스톤 국립공원 내 늑대 복원이 퓨마 개체군의 생태와 행동에 미치는 영향을 분석하여 대형 식육목 간 경쟁 양상을 규명하고자 했다.",
+          "늑대 재도입 전후의 현장 조사를 통해 퓨마의 서식지 이용, 먹이 자원 경쟁, 행동권 변화를 비교 분석하였다.",
+          "대형 포식자 복원 시 기존 최상위 포식자 간의 경쟁 관계를 고려한 통합적 서식지 관리 전략 수립의 필요성을 제시하였다."
+        ],
+        "research_purpose": "본 연구는 옐로스톤 국립공원에 늑대가 복원된 전후의 시기를 기준으로, 기존 최상위 포식자였던 퓨마의 생태적 변화와 개체군 동태를 파악하는 것을 목적으로 합니다. 대형 식육목 간의 종간 경쟁 메커니즘을 이론적으로 규명하고, 이를 현장 보전 및 관리 정책에 활용할 수 있는 방안을 도출하고자 하였습니다.",
+        "key_findings": [
+          "늑대 복원 이후 퓨마는 늑대와의 직접적인 충돌을 피하기 위해 행동권과 서식지 이용 방식을 조정하였다.",
+          "먹이 자원과 사냥터가 늑대와 겹치면서 퓨마의 사냥 빈도와 먹이 이용 효율에 변화가 발생했다.",
+          "대형 포식자 간의 경쟁은 단순한 개체수 감소뿐만 아니라 공간적 분할과 행동 변화를 유도하는 복합적 양상을 보였다."
+        ],
+        "practical_applications": [
+          "국내 멸종위기 야생생물 복원(예: 반달가슴곰, 여우 등) 사업 시, 기존 중대형 포식동물이나 경쟁 종과의 서식지 겹침 현상을 사전 모니터링한다.",
+          "포식자 간 종간 경쟁으로 인한 행동권 변화를 파악하여 탐방객 안전사고 예방을 위한 구역별 출입 관리 대책을 수립한다.",
+          "생태계 복원 지역 내 주요 야생동물의 이동 통로 및 핵심 서식지 보호를 위한 공간 관리 지침을 개선한다."
+        ],
+        "korea_np_applicability_score": 3,
+        "korea_np_applicability_reason": "한국 국립공원은 옐로스톤과 같이 대형 맹수류(늑대, 퓨마)가 공존하는 생태계는 아니나, 반달가슴곰 복원 사업 등 대형 포식자 복원 및 종간 상호작용 관리에 있어 유사한 생태적 관리 원칙을 적용할 수 있습니다.",
+        "study_location": "해외",
+        "related_work_areas": [
+          "생태계 모니터링·조사",
+          "야생생물·서식지 관리"
+        ],
+        "related_laws": [
+          "야생생물 보호 및 관리에 관한 법률 제19조",
+          "자연공원법 제23조"
+        ],
+        "field_checklist": [
+          "복원 대상 포식자와 기존 야생동물의 행동권 중첩 여부를 조사했는가",
+          "주요 서식지 내 먹이 자원 분포 및 이용 현황을 파악했는가",
+          "종간 경쟁으로 인한 야생동물의 돌발적 이동 경로 변화를 모니터링하고 있는가",
+          "탐방로 주변 야생동물 출몰 빈도와 행동 특성 변화를 기록하고 있는가",
+          "포식자 복원에 따른 생태계 건전성 지표를 정기적으로 측정하고 있는가"
+        ],
+        "practical_utility_score": 3,
+        "cautions": [
+          "한국의 산악 지형 및 좁은 서식지 여건은 광활한 옐로스톤과 다르므로 공간적 규모 차이를 고려해야 한다.",
+          "현장에 직접적인 대형 맹수(늑대 등)가 서식하지 않는 국내 여건상, 본 연구 결과는 주로 곰 등 타 종 복원 관리의 참고 자료로 제한적으로 활용해야 한다."
+        ],
+        "tags": [
+          "포식자복원",
+          "종간경쟁",
+          "퓨마",
+          "늑대",
+          "생태모니터링"
+        ],
+        "recommended_followup_research": [
+          "국내 반달가슴곰 복원 지역 내 다른 중소형 야생동물과의 행동권 및 먹이 자원 경쟁 연구",
+          "대형 포식자 행동 변화가 탐방객 안전에 미치는 영향 분석 연구"
+        ],
+        "ai_recommended_topics": [
+          "Large carnivore competition Yellowstone",
+          "Wolf restoration cougar ecology"
+        ],
+        "analyzed_at": "2026-11-15T10:27:23Z",
         "model": "gemini-flash-lite-latest"
       }
     },
@@ -420710,6 +421143,90 @@
           "Protected area buffer zone management"
         ],
         "analyzed_at": "2026-11-03T10:33:45Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W4395087809",
+      "source": "openalex",
+      "title": "Decoding Differences in Nature Park Visitors’ Experience: The Case of Pyhä-Luosto National Park",
+      "abstract": "This article aims to explore the discourse construction through the institutional apparatus and technologies within Pyhä-Luosto National Park, one of the first two national parks established in Finland, by analysing visitors’ reviews. This article investigates the causes behind the differing levels of emphasis that tourists of various languages (Finnish and other languages) and cultural backgrounds place on environmental values or physical activities during their visits. By employing a mixed-methods approach, merging quantitative (frequency analysis) and qualitative (discourse analysis) methodologies, the analysis reveals a distinct divergence in the visitor experiences of the national park based on the background of visitors. Finnish-speaking visitors exhibit a stronger preference for landscape, while international visitors empha- size the experiences derived from physical activities. Through a closer field study in Pyhä- Luosto National Park, it is proposed that these differences originate from distinct cultural contexts and environmental engagements that shape each visitor’s interaction with the natural landscape.",
+      "authors": [
+        "Chenru Xue"
+      ],
+      "year": 2024,
+      "journal": "Tahiti",
+      "cited_by_count": 1,
+      "doi": "https://doi.org/10.23995/tht.142757",
+      "is_oa": true,
+      "oa_url": "https://tahiti.journal.fi/article/download/142757/91554",
+      "concepts": [
+        "Decoding methods",
+        "Geography",
+        "Computer science",
+        "Communication",
+        "Psychology",
+        "Telecommunications"
+      ],
+      "openalex_url": "https://openalex.org/W4395087809",
+      "ai_analysis": {
+        "title_ko": "자연공원 탐방객 경험의 차이 해독: 핀란드 퓌하-루오스토 국립공원 사례",
+        "abstract_ko": "본 논문은 핀란드에 최초로 설립된 두 곳의 국립공원 중 하나인 퓌하-루오스토 국립공원에서 탐방객 리뷰를 분석하여 제도적 장치와 기술을 통한 담론 구성을 탐구하는 것을 목적으로 합니다. 이 논문은 다양한 언어(핀란드어 및 기타 언어)와 문화적 배경을 가진 관광객들이 방문 중 환경적 가치나 신체 활동에 대해 서로 다른 수준의 중점을 두는 원인을 조사합니다. 양적(빈도 분석) 방법론과 질적(담론 분석) 방법론을 결합한 혼합 연구 방법을 사용하여, 탐방객의 배경에 따라 국립공원 탐방 경험에 명확한 차이가 있음을 밝혀냅니다. 핀란드어를 사용하는 탐방객은 경관에 대해 더 강한 선호를 보이는 반면, 외국인 탐방객은 신체 활동에서 얻는 경험을 강조합니다. 퓌하-루오스토 국립공원에 대한 현장 조사를 통해, 이러한 차이는 각 탐방객이 자연 경관과 상호 작용하는 방식을 형성하는 서로 다른 문화적 맥락과 환경적 참여에서 비롯된다는 점을 제안합니다.",
+        "summary_3lines": [
+          "탐방객의 언어와 문화적 배경에 따라 국립공원 이용 목적과 선호 경험에 차이가 발생하는 원인을 파악하고자 함",
+          "텍스트 마이닝과 담론 분석을 활용한 결과 내국인은 경관 감상을, 외국인은 신체 활동 중심의 경험을 중시하는 것으로 나타남",
+          "탐방객의 문화적 배경을 고려한 맞춤형 안내 체계와 프로그램 기획이 현장 운영에 필요함"
+        ],
+        "research_purpose": "본 연구는 핀란드 퓌하-루오스토 국립공원의 탐방객 리뷰 분석을 통해, 내국인과 외국인 등 문화적·언어적 배경이 다른 탐방객들이 국립공원 방문 시 환경적 가치나 신체 활동에 부여하는 가치의 차이를 규명하고자 합니다. 이를 통해 탐방객의 배경에 따른 자연 경관과의 상호작용 방식과 경험 형성 요인을 파악하는 것을 목적으로 합니다.",
+        "key_findings": [
+          "핀란드어 사용 내국인 탐방객은 자연 경관 감상과 정적인 환경 가치에 더 큰 선호를 보임",
+          "해외 국외 탐방객은 트레킹이나 야외 활동 등 신체 활동 중심의 경험을 훨씬 더 강하게 강조함",
+          "탐방객의 문화적 맥락과 환경적 참여 방식의 차이가 국립공원 이용 행태와 만족도에 직접적인 영향을 미침"
+        ],
+        "practical_applications": [
+          "외국인 탐방객을 위해 신체 활동 중심의 트레킹 코스와 액티ビ티 정보를 담은 다국어 안내 체계를 구축합니다.",
+          "내국인 탐방객을 위해서는 깊이 있는 경관 조망 지점 안내와 생태 해설 프로그램을 강화합니다.",
+          "탐방객 국적 및 문화적 특성을 반영한 맞춤형 탐방 프로그램과 홍보 콘텐츠를 기획·운영합니다."
+        ],
+        "korea_np_applicability_score": 3,
+        "korea_np_applicability_reason": "국내 국립공원에도 외국인 탐방객과 다국적 체류자가 증가하고 있어, 내·외국인 간 탐방 성향 차이를 분석하고 맞춤형 서비스를 제공하는 현장 행정에 직접 참고할 수 있습니다.",
+        "study_location": "해외",
+        "related_work_areas": [
+          "탐방로·탐방객 관리",
+          "탐방객 서비스·안전"
+        ],
+        "related_laws": [
+          "자연공원법 제28조",
+          "자연공원법 제37조"
+        ],
+        "field_checklist": [
+          "공원 내 탐방객 국적 및 언어별 이용 현황 통계 파악 여부",
+          "외국인 탐방객을 위한 다국어 탐방 안내판 및 지도 비치 상태",
+          "내국인과 외국인의 주요 이용 탐방로 및 선호 활동 유형 파악 여부",
+          "다국적 탐방객 맞춤형 해설 프로그램 및 안전 정보 제공 여부",
+          "온라인 리뷰 및 만족도 조사를 통한 탐방객 요구사항 피드백 반영 체계 구축 여부"
+        ],
+        "practical_utility_score": 3,
+        "cautions": [
+          "유럽의 광활한 자연공원과 밀집된 국내 국립공원의 탐방 환경 및 인프라 구조의 차이를 감안해야 합니다.",
+          "외국인 탐방객 대상 서비스 확대 시 예산 및 인력 배분의 효율성을 사전 검토해야 합니다."
+        ],
+        "tags": [
+          "탐방객경험",
+          "국립공원",
+          "문화적차이",
+          "외국인탐방객",
+          "탐방서비스"
+        ],
+        "recommended_followup_research": [
+          "국내 국립공원 방문 외국인 탐방객의 이용 행태 및 만족도 조사 연구",
+          "문화권별 탐방객 특성을 반영한 국립공원 다국어 안내 서비스 개선 방안 연구"
+        ],
+        "ai_recommended_topics": [
+          "Visitor experience in national parks",
+          "Cross-cultural differences in nature-based tourism"
+        ],
+        "analyzed_at": "2026-11-15T10:27:01Z",
         "model": "gemini-flash-lite-latest"
       }
     },
@@ -502353,31 +502870,6 @@
       }
     },
     {
-      "id": "W2980604730",
-      "source": "openalex",
-      "title": "Yellowstone Cougars: Ecology Before And During Wolf Restoration",
-      "abstract": "Examines the effect of wolf restoration on cougar population in Yellowstone National Park. No other study has addressed theoretical and practical aspects of competition between large carnivores. A thorough examination of cougar ecology, how they interact and are influenced by wolves, how this knowledge informs management and conservation.--Provided by publisher.",
-      "authors": [
-        "Toni K. Ruth",
-        "Polly C. Buotte",
-        "Maurice G. Hornocker"
-      ],
-      "year": 2019,
-      "journal": "University Press of Colorado eBooks",
-      "cited_by_count": 37,
-      "doi": "https://doi.org/10.5876/9781607328292",
-      "is_oa": false,
-      "oa_url": "",
-      "concepts": [
-        "Ecology",
-        "Geography",
-        "Restoration ecology",
-        "Biology"
-      ],
-      "openalex_url": "https://openalex.org/W2980604730",
-      "ai_analysis": null
-    },
-    {
       "id": "W2920962736",
       "source": "openalex",
       "title": "Trails‐as‐transects: phenology monitoring across heterogeneous microclimates in Acadia National Park, Maine",
@@ -502702,31 +503194,6 @@
         "Physical geography"
       ],
       "openalex_url": "https://openalex.org/W2415741337",
-      "ai_analysis": null
-    },
-    {
-      "id": "W4395087809",
-      "source": "openalex",
-      "title": "Decoding Differences in Nature Park Visitors’ Experience: The Case of Pyhä-Luosto National Park",
-      "abstract": "This article aims to explore the discourse construction through the institutional apparatus and technologies within Pyhä-Luosto National Park, one of the first two national parks established in Finland, by analysing visitors’ reviews. This article investigates the causes behind the differing levels of emphasis that tourists of various languages (Finnish and other languages) and cultural backgrounds place on environmental values or physical activities during their visits. By employing a mixed-methods approach, merging quantitative (frequency analysis) and qualitative (discourse analysis) methodologies, the analysis reveals a distinct divergence in the visitor experiences of the national park based on the background of visitors. Finnish-speaking visitors exhibit a stronger preference for landscape, while international visitors empha- size the experiences derived from physical activities. Through a closer field study in Pyhä- Luosto National Park, it is proposed that these differences originate from distinct cultural contexts and environmental engagements that shape each visitor’s interaction with the natural landscape.",
-      "authors": [
-        "Chenru Xue"
-      ],
-      "year": 2024,
-      "journal": "Tahiti",
-      "cited_by_count": 1,
-      "doi": "https://doi.org/10.23995/tht.142757",
-      "is_oa": true,
-      "oa_url": "https://tahiti.journal.fi/article/download/142757/91554",
-      "concepts": [
-        "Decoding methods",
-        "Geography",
-        "Computer science",
-        "Communication",
-        "Psychology",
-        "Telecommunications"
-      ],
-      "openalex_url": "https://openalex.org/W4395087809",
       "ai_analysis": null
     },
     {
