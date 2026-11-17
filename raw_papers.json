@@ -504064,5 +504064,25 @@
       "analyzed_at": "2026-11-16T10:39:55Z",
       "model": "gemini-flash-lite-latest"
     }
+  },
+  {
+    "id": "W4386997232",
+    "source": "openalex",
+    "title": "STAMP: A Method to Document, Monitor, and Manage Beached Shipwreck Sites with Citizen Science",
+    "abstract": "This chapter describes the development of Florida’s Shipwreck Tagging Archaeological Management Program (STAMP), a unique citizen science program designed to monitor shipwreck sites and disarticulated timbers. Historically, Florida’s coastal regions have been some of the most treacherous navigable waterways for mariners due to high wave turbidity, oceanic currents, and meteorological phenomena. As a result, thousands of ships have ultimately met their demise along Florida coasts. The Florida Public Archaeological Network (FPAN) began STAMP in 2019 to utilize citizen scientists to assist archaeologists in tracking the movement and degradation these sites and materials. The program, partnering with the National Park Service at Gulf Islands National Seashore, collects data for the continued enhancement of public archaeological programs, heritage resources management, and public engagement.",
+    "authors": [
+      "Austin L Burkhard"
+    ],
+    "year": 2023,
+    "journal": "University Press of Florida eBooks",
+    "cited_by_count": 0,
+    "doi": "https://doi.org/10.5744/florida/9780813069739.003.0010",
+    "is_oa": false,
+    "oa_url": "",
+    "concepts": [
+      "Computer science"
+    ],
+    "openalex_url": "https://openalex.org/W4386997232",
+    "ai_analysis": null
   }
 ]
