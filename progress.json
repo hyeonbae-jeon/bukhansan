@@ -74,12 +74,12 @@
     "Gayasan": 4,
     "Gyeongju": 4,
     "Gyeryongsan": 4,
-    "Naejangsan": 3,
-    "Deogyusan": 3,
-    "Mudeungsan": 3,
-    "Bukhansan": 3,
-    "Seoraksan": 3,
-    "Sobaeksan": 3,
+    "Naejangsan": 4,
+    "Deogyusan": 4,
+    "Mudeungsan": 4,
+    "Bukhansan": 4,
+    "Seoraksan": 4,
+    "Sobaeksan": 4,
     "Songnisan": 3,
     "Odaesan": 3,
     "Woraksan": 3,
@@ -121,5 +121,5 @@
     "national park landscape connectivity corridor": 4,
     "national park disaster risk management": 4
   },
-  "updated_at": "2026-11-18T11:08:30.357509"
+  "updated_at": "2026-11-19T11:10:50.309153"
 }

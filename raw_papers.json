@@ -504083,7 +504083,66 @@
       "Computer science"
     ],
     "openalex_url": "https://openalex.org/W4386997232",
-    "ai_analysis": null
+    "ai_analysis": {
+      "title_ko": "STAMP: 시민과학을 활용한 해안 좌초 난파선 유적 기록, 모니터링 및 관리 기법",
+      "abstract_ko": "이 장에서는 난파선 유적과 흩어진 선재를 모니터링하기 위해 고안된 독창적인 시민과학 프로그램인 플로리다 난파선 태깅 고고학 관리 프로그램(STAMP)의 개발 과정을 설명합니다. 역사적으로 플로리다 해안 지역은 높은 파도 혼탁도, 해류, 기상 현상으로 인해 항해사들에게 가장 험난한 수로 중 하나였습니다. 그 결과 플로리다 해안을 따라 수천 척의 배가 침몰했습니다. 플로리다 공공고고학 네트워크(FPAN)는 2019년에 STAMP를 시작하여 시민과학자들이 고고학자들을 도와 이러한 유적과 유물의 이동 및 훼손을 추적할 수 있도록 지원했습니다. 걸프 아일랜드 국립해안(Gulf Islands National Seashore)의 미국 국립공원청과 파트너십을 맺은 이 프로그램은 공공 고고학 프로그램의 지속적인 발전, 유산 자원 관리, 대중 참여를 위한 데이터를 수집합니다.",
+      "summary_3lines": [
+        "시민과학을 활용해 해안가에 방치된 난파선과 문화유적의 훼손 및 이동을 모니터링하는 관리 프로그램의 개발 과정을 소개함.",
+        "미국 국립공원청과 지역 고고학 네트워크가 협력하여 시민과학자들로부터 유적 모니터링 데이터를 효율적으로 수집함.",
+        "해안 국립공원 내 문화유산 보호와 대중 참여를 동시에 달성할 수 있는 현장 적용형 시민과학 모델을 제시함."
+      ],
+      "research_purpose": "본 연구의 목적은 해안가에 위치한 난파선 및 관련 문화자원의 체계적인 모니터링과 보전을 위해 시민과학을 활용하는 프로그램(STAMP)의 개발 배경과 운영 방식을 설명하는 것이다. 전문 인력의 한계를 극복하고 대중 참여를 통해 광범위한 해안 유적의 훼손 상태와 이동 경로를 상시 추적할 수 있는 관리 체계의 구축 방안을 제시하고자 한다.",
+      "key_findings": [
+        "시민과학 프로그램을 통해 전문 인력이 부족한 상황에서도 광범위한 해안가의 난파선 및 문화유적 모니터링이 가능해짐.",
+        "국립공원 관리기관과 지역 공공고고학 네트워크 간의 파트너십을 통해 효율적인 문화자원 데이터 수집 체계가 구축됨.",
+        "유적 관리뿐만 아니라 대중의 역사·문화유산 보호 의식 고취 및 공원 참여도를 높이는 부수적 효과를 거둠."
+      ],
+      "practical_applications": [
+        "해안형 국립공원(태안해안, 다도해해상 등) 내 도서·해안가 역사문화자원 및 침몰선 유적 실태조사에 자원봉사자 활용 체계 도입",
+        "공원 관리사무소와 지역 문화재 전문가·시민단체 간 협력 거버넌스를 구축하여 상시 모니터링망 운영",
+        "시민과학자 대상의 간단한 교육 및 태깅(Tagging) 매뉴얼을 제작하여 현장 조사 정확도 확보"
+      ],
+      "korea_np_applicability_score": 3,
+      "korea_np_applicability_reason": "한국의 해안·해상 국립공원(태안해안, 다도해해상, 한려해상 등)에도 역사·고고학적 해안 유적이 존재하며, 광범위한 해안선 관리에 시민과학을 도입하는 방안은 인력 부족 문제를 해결하는 데 유용하나, 국내는 문화재보호법 등 관련 법령에 따른 엄격한 자원 관리 절차가 요구되어 직접 적용 시 제도적 검토가 필요함.",
+      "study_location": "해외",
+      "related_work_areas": [
+        "자원보전·복원",
+        "지역사회·거버넌스"
+      ],
+      "related_laws": [
+        "문화재보호법 제00조",
+        "자연공원법 제00조"
+      ],
+      "field_checklist": [
+        "해안가 탐방 중 발견된 난파선 잔해나 고고학적 목재 유물의 위치(GPS 좌표) 기록 여부",
+        "유물의 파손, 이동, 매몰 등 시간에 따른 물리적 변화 상태 사진 촬영 및 기록 여부",
+        "시민과학자 및 자원봉사자를 위한 현장 조사 안전 수칙 및 행동 지침 숙지 여부",
+        "발견된 유물에 대한 훼손 징후 발견 시 즉시 공원 관리사무소 및 문화재 담당자 통보 여부",
+        "정기적인 모니터링 결과 데이터의 아카이빙 및 관리기관 공유 체계 구축 여부"
+      ],
+      "practical_utility_score": 3,
+      "cautions": [
+        "국내 국립공원 내 문화재 및 유적의 조사는 문화재보호법 등 관련 법령에 저촉되지 않도록 사전 협의가 필수적임.",
+        "시민과학자의 전문성 부족으로 인한 유물 훼손이나 안전사고 발생에 대비한 철저한 사전 교육과 안전관리 대책이 필요함."
+      ],
+      "tags": [
+        "시민과학",
+        "난파선관리",
+        "해안유적",
+        "문화자원모니터링",
+        "국립공원관리"
+      ],
+      "recommended_followup_research": [
+        "해안 국립공원 문화유산 모니터링을 위한 국내 자원봉사자 교육 프로그램 표준화 연구",
+        "ICT 기반의 시민참여형 해안 유적 훼손 신고 및 관리 시스템 구축 방안 연구"
+      ],
+      "ai_recommended_topics": [
+        "Citizen science in cultural heritage management",
+        "Beached shipwreck monitoring programs"
+      ],
+      "analyzed_at": "2026-11-19T11:11:31Z",
+      "model": "gemini-flash-lite-latest"
+    }
   },
   {
     "id": "W1512395751",
@@ -504107,7 +504166,67 @@
       "Life style"
     ],
     "openalex_url": "https://openalex.org/W1512395751",
-    "ai_analysis": null
+    "ai_analysis": {
+      "title_ko": "국립공원의 장애인 이용",
+      "abstract_ko": "야외 여가활동은 우리의 삶을 향상시키는 광범위한 기회와 경험을 제공한다. 장애인도 비장애인과 마찬가지로 이러한 기회에 대한 동일한 욕구와 바람을 가지고 있다. 야외 활동 참여는 장애인에게 큰 즐거움을 줄 수 있으며 독립성과 자기 주도성을 강화하는 데 도움을 준다. 그러나 수많은 장애인이 국가의 여가 자원이 주는 혜택을 받지 못하고 있는 것은 명백한 사실이다. 장애의 심각성, 건축학적 장벽, 사회의 비수용성, 그리고 여가 관련 전문가들이 장애인의 요구에 맞춰 프로그램과 시설을 조정하는 데 보인 더딘 태도 등이 심각한 기회 부족의 원인이 되었다. 치료, 교육, 재활 분야 특히 장애인 수용과 돌봄 측면에서 많은 발전을 이루었지만, 야외 여가 분야에서는 아직도 해야 할 일이 많다. 야외 프로그램과 시설을 장애인도 이용할 수 있게 함으로써 그들이 '여가적 장애인'이 되는 것을 예방할 수 있다. 본 연구는 뉴질랜드의 국립공원을 대상으로 장애인을 위한 야외 여가 활용 가능성을 살펴본다. 뉴질랜드에는 황금빛 해안에서 하늘을 찌를 듯한 산까지, 온대우림에서 메마른 사막까지의 특징을 아우르는 10개의 국립공원이 있다. 국립공원의 역할은 무엇보다도 이러한 자연 미관 지역을 보존하는 것이지만, 그만큼 중요한 것은 장애인을 포함한 모든 사람이 즐기고 감상할 수 있도록 접근성이 보장되어야 한다는 점이다. 본 연구의 목적은 다음과 같다. 1. 이동 및 조작 기능 장애를 중심으로 장애인의 여가 능력을 조사한다. 2. 뉴질랜드 국립공원, 특히 서해안 지역에서 제공되는 장애인 여가 기회를 개괄한다. 3. 국립공원에서 장애인을 위한 보다 통합적이고 광범위한 접근성 제공 잠재력을 고찰한다. 4. 장애인을 수용하기 위한 국립공원의 보다 세심한 설계 지침을 제공한다.",
+      "summary_3lines": [
+        "장애인의 야외 여가 접근성 향상을 위해 뉴질랜드 국립공원의 실태를 조사하고 통합적인 접근 방안을 마련하고자 함.",
+        "이동 및 조작 장애 유형을 분석하고 국립공원 내 탐방 기회와 시설 현황을 검토하여 설계 지침을 도출함.",
+        "장애인이 여가에서 소외되지 않도록 세심한 무장애 탐방 시설 설계와 정책적 통합을 현장에 적용해야 함."
+      ],
+      "research_purpose": "본 연구는 장애인들이 비장애인과 동등하게 국립공원의 자연을 누릴 수 있도록 이동 및 조작 장애인의 여가 능력을 분석하고, 국립공원 내 현황을 고찰하여 장애인 수용을 위한 통합적 접근성과 세심한 설계 지침을 제공하는 것을 목적으로 한다.",
+      "key_findings": [
+        "장애인은 비장애인과 동일한 야외 여가 및 자연 체험의 욕구를 가지고 있음.",
+        "건축학적 장벽과 편의시설 부족, 운영 프로그램의 미비로 인해 많은 장애인이 국립공원 혜택에서 소외됨.",
+        "뉴질랜드 국립공원 탐방로와 시설은 장애인이 자연을 감상하고 독립성을 기를 수 있도록 통합적 설계가 적용될 잠재력이 큼."
+      ],
+      "practical_applications": [
+        "국립공원 탐방로 설계 시 휠체어 이용자 등 이동 장애인의 물리적 장벽을 제거하기 위한 경사도 및 노면 정비",
+        "지체 및 조작 장애인이 쉽게 이용할 수 있는 안내판, 화장실, 탐방 안내소 등의 편의시설 리모델링",
+        "장애인의 신체적 특성을 고려한 맞춤형 탐방 프로그램 및 해설 서비스 기획·운영"
+      ],
+      "korea_np_applicability_score": 4,
+      "korea_np_applicability_reason": "한국 국립공원 역시 무장애 탐방로(나누리길 등)를 확대하고 있는 추세로, 탐방시설 설계 및 프로그램 운영에서 장애인 접근성 개선을 위한 본 논문의 시사점을 현장에 직접 적용할 수 있음.",
+      "study_location": "해외",
+      "related_work_areas": [
+        "탐방로·탐방객 관리",
+        "탐방객 서비스·안전",
+        "시설·인프라 관리"
+      ],
+      "related_laws": [
+        "자연공원법 제2조",
+        "장애인·노인·임산부 등의 편의증진 보장에 관한 법률"
+      ],
+      "field_checklist": [
+        "주요 탐방로의 휠체어 통행 가능 경사도(8% 미만 등) 확보 여부 확인",
+        "탐방로 노면 포장 재질이 휠체어와 유모차 이동에 적합한지 점검",
+        "장애인 전용 주차구역 및 탐방안내소까지의 연계 동선 단차 제거 여부 확인",
+        "화장실, 점자블록, 음성안내기 등 시각·지체 장애인 편의시설 작동 상태 점검",
+        "장애인 탐방객을 위한 전문 해설 프로그램 및 대피 유도 계획 수립 여부 확인"
+      ],
+      "practical_utility_score": 4,
+      "cautions": [
+        "급경사와 암석지가 많은 한국 국립공원의 지형 특성상 모든 탐방로에 무장애 시설을 일괄 적용하기는 어려우므로 구간별 선별적용 필요",
+        "시설 설치 시 자연환경 훼손을 최소화하고 법적 환경영향을 검토해야 함"
+      ],
+      "tags": [
+        "장애인접근성",
+        "무장애탐방로",
+        "국립공원편의시설",
+        "야외여가",
+        "유니버설디자인"
+      ],
+      "recommended_followup_research": [
+        "국내 국립공원 무장애 탐방로 이용 만족도 및 신체적·정신적 치유 효과 분석",
+        "한국 자연환경 특성을 고려한 친환경적 무장애 탐방시설 설계 가이드라인 개발"
+      ],
+      "ai_recommended_topics": [
+        "national park accessibility for disabled",
+        "universal design in protected areas"
+      ],
+      "analyzed_at": "2026-11-19T11:12:33Z",
+      "model": "gemini-flash-lite-latest"
+    }
   },
   {
     "id": "W7223654665",
@@ -504388,7 +504507,67 @@
       "Computer science"
     ],
     "openalex_url": "https://openalex.org/W4400216806",
-    "ai_analysis": null
+    "ai_analysis": {
+      "title_ko": "화학단지의 안전 환경 및 탄소 모니터링에서 대기 다파라미터 레이저 라이다의 응용",
+      "abstract_ko": "연구 목적: 화학산업은 국가 경제에서 중요한 위치를 차지하지만 환경 오염, 이산화탄소 배출, 자원 소비 및 안전 리스크 등의 과제에도 직면해 있다. 따라서 화학단지 내 오염물질 배출, 위험 가스 누출, 풍우 및 기타 기상 요소를 높은 민감도, 높은 안정성, 넓은 범위로 주야간 연속 모니터링할 수 있는 원격 탐사 기술을 개발하는 것이 특히 중요하다. 최근 1.5마이크로미터 라이다는 인체 눈의 안전성, 주야간 연속 관측, 높은 시공간 해상도, 전광섬유 통합, 낮은 소비전력 및 높은 안정성의 장점으로 인해 대기 환경 및 대기 파라미터 감지의 중요한 수단으로 여겨지고 있다. 현재 시차 흡수 라이다(DIAL)는 다양한 온실가스 및 위험 가스의 농도 분포와 플럭스 배출을 감지하는 데 사용되며, 간섭성 풍속 라이다(CDWL)는 풍场, 에어로졸, 강수 등 대기 다파라미터를 감지하는 데 널리 사용된다. 라이다는 점차 화학단지의 안전 및 환경 보호 모니터링을 위한 중요한 수단 중 하나가 되고 있다. 이를 위해 대기 다파라미터 감지 라이다를 화학산업 단지의 안전 및 환경 보호 분야에 적용하였다. 연구 방법: 에어로졸, 가스, 풍장을 동시 감지하기 위해 직동 감지 모듈과 간섭성 감지 모듈이 통합된 대기 다파라미터 라이다 시스템을 구축했다. 송출 광원은 튜너블 외부 공진기 반도체 레이저를 감지 광원으로, 광섬유 레이저를 기준 광원으로 사용한다. 수신 시스템은 직동 감지 모듈과 간섭성 감지 모듈의 두 부분으로 구성된다. 직동 감지 모듈은 분자 스펙트럼의 시차 흡수 기술을 사용하여 가스를 감지하고, 간섭성 감지 모듈은 거리 보정 에코 신호, 도플러 주파수 편이, 난류 운동에너지 소산율 등을 활용하여 오염물질, 바람, 비, 난류를 분석한다. 결과 및 토론: 대기 다파라미터 라이다는 거리 보정 에코 신호와 풍향 벡터를 결합하여 대기 환경을 조기에 모니터링할 수 있음을 확인했다.",
+      "summary_3lines": [
+        "화학단지 등에서 대기 환경과 위험 가스 누출을 주야간 연속으로 모니터링하기 위해 다파라미터 레이저 라이다 시스템을 개발하고 그 적용성을 검토하였다.",
+        "직동 감지 모듈과 간섭성 감지 모듈을 통합하여 에어로졸, 가스, 풍장 등 대기 요소를 동시에 고정밀로 감지할 수 있는 시스템을 구축하였다.",
+        "구축된 라이다 시스템은 대기 오염물질 확산 및 기상 요소를 실시간으로 파악하여 재난 예방 및 환경 관리에 활용될 수 있음을 확인하였다."
+      ],
+      "research_purpose": "본 연구는 화학단지 및 대기 환경에서 오염물질 배출, 위험 가스 누출, 기상 요소를 주야간 연속으로 고감도 감지하기 위한 대기 다파라미터 레이저 라이다 시스템의 개발과 현장 적용성 평가를 목적으로 한다. 직동 감지와 간섭성 감지 모듈을 결합하여 에어로졸, 가스, 풍장을 동시에 측정할 수 있는 통합 시스템을 구현하고자 했다.",
+      "key_findings": [
+        "직동 감지 모듈과 간섭성 감지 모듈을 결합한 다파라미터 레이저 라이다 시스템 구축",
+        "초전도 나노와이어 단광자 검출기(SNSPD)를 적용하여 가스 검출 시 높은 신호 대 잡음비 확보",
+        "거리 보정 에코 신호와 풍향 벡터 분석을 통한 대기 환경 및 위험 요소의 조기 모니터링 가능성 확인"
+      ],
+      "practical_applications": [
+        "국립공원 인근 대규모 공단이나 오염원 주변의 대기 오염물질 및 유해 가스 확산 모니터링에 적용",
+        "탐방로 및 주요 거점 지역의 국지적 기상 변화(풍향, 풍속, 강수, 난류) 실시간 관측을 통한 탐방객 안전사고 예방",
+        "기후변화 대응을 위한 탄소 배출원 추적 및 공원 내 온실가스 모니터링 체계 고도화"
+      ],
+      "korea_np_applicability_score": 2,
+      "korea_np_applicability_reason": "본 연구는 산업단지의 화학 물질 및 대기 환경 모니터링에 초점을 맞추고 있어, 자연 생태계 보전이 주인 한국 국립공원 현장에 직접 적용하기에는 목적과 대상에서 괴리가 있으나, 대기 환경 및 기상 관측 기술 관점에서 일부 응용 가능성이 있다.",
+      "study_location": "해외",
+      "related_work_areas": [
+        "환경 모니터링",
+        "재난·안전 관리",
+        "기후변화 대응"
+      ],
+      "related_laws": [
+        "자연공원법 제23조",
+        "야생생물 보호 및 관리에 관한 법률 제4조"
+      ],
+      "field_checklist": [
+        "공원 주변 대기 오염물질 및 가스 누출 상시 모니터링 지점 선정 여부",
+        "탐방객 밀집 지역 및 재난 취약지의 실시간 기상(풍향·풍속) 데이터 수집 체계 구축 여부",
+        "라이다 등 첨단 장비 설치를 위한 전력 및 통신 인프라 확보 여부",
+        "측정 장비의 주야간 연속 작동 안정성 및 정기 점검 계획 수립 여부",
+        "비상 상황 발생 시 유관기관(지자체·소방서 등)과의 실시간 정보 공유 체계 마련 여부"
+      ],
+      "practical_utility_score": 2,
+      "cautions": [
+        "고가의 레이저 라이다 시스템 도입에 따른 막대한 예산 소요",
+        "장비 운영을 위한 전문 인력 배치 및 현장 전력 공급의 제약"
+      ],
+      "tags": [
+        "레이저라이다",
+        "대기모니터링",
+        "유해가스",
+        "풍장관측",
+        "환경재난안전"
+      ],
+      "recommended_followup_research": [
+        "국립공원 내 자연 지형에서 대기 가스 확산 및 풍속 측정의 정확도 검증 연구",
+        "저비용·고효율 이동형 대기 모니터링 장비의 공원 관리 적용성 연구"
+      ],
+      "ai_recommended_topics": [
+        "Lidar atmospheric monitoring",
+        "Differential absorption lidar DIAL"
+      ],
+      "analyzed_at": "2026-11-19T11:11:20Z",
+      "model": "gemini-flash-lite-latest"
+    }
   },
   {
     "id": "W2137409715",
@@ -504664,6 +504843,587 @@
       "Computer science"
     ],
     "openalex_url": "https://openalex.org/W1507616043",
-    "ai_analysis": null
+    "ai_analysis": {
+      "title_ko": "선도(仙道)의 관점에서 본 계룡산 갑사 계곡의 일중도(一中圖) 해석에 관한 쟁점",
+      "abstract_ko": "조선 말기 공주 계룡산 일대에는 새로운 시대의 지도자가 출현하거나 갑사에 후천시대의 미륵불이 나타난다는 예언이 유행했다. 친일파 고위관리였던 윤덕영은 갑사 계곡에 별장을 짓고 '일중도'와 함께 글을 새긴 '일중석'을 남겼다. 일중석에는 유교의 심법과 유·불·도 삼교합일 사상이 담겨 있으며, 간방(한국)이 다시 세계의 중심이 된다는 이상이 내포되어 있다. 조선 선도의 전통을 이은 권태훈에 따르면, 일중도는 우리 민족 고유의 정신수련법이자 성인이 되는 방법을 뜻한다. 일중도의 제작자는 불분명하나 선도 수련자들 사이에서 전해 내려온 비기(秘記)일 가능성이 높으며, 한국 선도사의 독특한 자료로서 지속적인 연구 가치가 있다.",
+      "summary_3lines": [
+        "계룡산 갑사 계곡에 위치한 일중석과 일중도의 역사적·사상적 배경과 선도적 의미를 고찰하고자 하였다.",
+        "일중도는 유·불·도 삼교합일 사상과 민족 고유의 정신수련법인 선도의 전통이 결합된 비기로 확인되었다.",
+        "국립공원 내 문화자원 및 역사경관 해석 시 전통 사상과 선도 문화를 반영한 다양한 스토리텔링 활용이 가능하다."
+      ],
+      "research_purpose": "본 연구는 조선 말기 계룡산 갑사 계곡에 조성된 일중석의 역사적 배경을 살펴보고, 그 사상적 기반인 일중도가 유교 및 선도(仙道) 전통에서 가지는 의미를 분석하는 것을 목적으로 한다. 이를 통해 한국 선도사에서 일중도가 차지하는 위치를 조명하고자 한다.",
+      "key_findings": [
+        "윤덕영이 갑사 계곡에 조성한 일중석에는 유교의 심법과 유·불·도 삼교합일의 사상이 담겨 있음",
+        "일중석의 내용은 한국(간방)이 세계의 중심이 되어 빛을 발할 것이라는 이상을 함축함",
+        "조선 선도 계승자인 권태훈은 일중도를 민족 고유의 정신수련법이자 성인이 되기 위한 비기로 해석함"
+      ],
+      "practical_applications": [
+        "계룡산국립공원 내 갑사 계곡 탐방로 주변의 역사문화자원(일중석 등)에 대한 정확한 고증 자료로 활용",
+        "공원 내 전통 사상 및 선도 문화와 연계된 인문학적 탐방 프로그램 및 해설 콘텐츠 개발",
+        "문화재 및 역사경관 자원의 훼손 방지를 위한 정기적인 모니터링과 보존 대책 수립"
+      ],
+      "korea_np_applicability_score": 4,
+      "korea_np_applicability_reason": "연구 대상지가 계룡산국립공원 갑사 계곡으로 직접 관련되며, 공원 내 역사문화자원 발굴 및 탐방해설 프로그램 기획에 즉시 활용할 수 있기 때문입니다.",
+      "study_location": "국내",
+      "related_work_areas": [
+        "탐방로·탐방객 관리",
+        "자원보전·복원"
+      ],
+      "related_laws": [
+        "자연공원법 제2조",
+        "문화재보호법 제2조"
+      ],
+      "field_checklist": [
+        "갑사 계곡 일중석 주변 탐방로의 안전 및 훼손 여부 확인",
+        "일중석 안내판 및 역사문화 해설 내용의 정확성 점검",
+        "주변 식생이나 자연경관과 일중석의 조화 상태 확인",
+        "탐방객의 무단 접근으로 인한 문화재 훼손 가능성 모니터링",
+        "전통 사상 관련 탐방 프로그램 운영 시 안전관리 대책 수립"
+      ],
+      "practical_utility_score": 4,
+      "cautions": [
+        "문화재 및 역사경관 훼손 방지를 위해 탐방객 대상 계도 활동 강화 필요",
+        "종교적·사상적 해석에 있어 특정 관점에 치우치지 않는 객관적인 해설 적용 필요"
+      ],
+      "tags": [
+        "계룡산국립공원",
+        "갑사",
+        "일중도",
+        "선도",
+        "역사문화자원"
+      ],
+      "recommended_followup_research": [
+        "계룡산 국립공원 내 근대 역사문화유적의 현황 조사 및 보존 방안 연구",
+        "전통 사상과 연계된 국립공원 인문학 탐방 프로그램 개발 효과성 분석"
+      ],
+      "ai_recommended_topics": [
+        "계룡산 갑사 문화재",
+        "한국 선도와 국립공원 역사",
+        "자연공원 역사문화자원 활용"
+      ],
+      "analyzed_at": "2026-11-19T11:12:11Z",
+      "model": "gemini-flash-lite-latest"
+    }
+  },
+  {
+    "id": "W2417502403",
+    "source": "openalex",
+    "title": "Changes of Vegetation Structure in Naejangsan District, Najangsan National Park for Twenty Years(1991~2010), Korea",
+    "abstract": "본 연구는 내장산국립공원 내장산지구를 대상으로 20년(1991~2010년) 동안의 식생구조 변화 특성을 밝히고자 수행하였다. 현존식생 조사 결과, 굴참나무와 졸참나무가 혼효된 군집이 전체의 56.1%로 가장 높은 비율로 분포하였으며 남사면 급경사지의 굴참나무군집은 17.6%이었다. 능선부에는 소나무군집(5.8%), 계곡사면에는 개서어나무군집이 (6.6%) 분포하였으며, 기타 계곡부를 중심으로 느티나무군집과 산벚나무군집 등이 분포하였다. 상대우점치를 고려한 TWINSPAN에 의한 classification과 DCA에 의한 ordination을 분석한 결과, 군집 Ⅰ(소나무-굴참나무군집), 군집 Ⅱ(굴참나무군집), 군집 Ⅲ(개서어나무군집), 군집 Ⅳ(낙엽활엽수혼효군집)로 분류되었다. 군집 Ⅰ의 표본목 수령은 소나무 32년생, 졸참나무 36년생, 군집 Ⅱ는 굴참나무 64년생, 군집 Ⅲ은 졸참나무 46년생, 개서어나무 45년생, 군집 Ⅳ는 단풍나무 54년생, 층층나무 47년생 등 이었다. Shannon의 종다양도지수는 군집 Ⅰ은 0.9751~1.4199, 군집 Ⅱ는 1.0765~1.3278, 군집 Ⅲ은 1.0353~1.2881, 군집 Ⅳ는 1.1412~1.3807이었다. 20년전 연구결과와 비교하여 식생구조의 변화를 분석한 결과, 소나무의 도태, 굴참나무, 졸참나무 등 참나무류의 세력확장, 개서어나무의 세력 증가가 확인되었으며 20년 전의 천이예측과 같이 극상림으로의 천이가 진행되었다. 특히, 굴참나무와 내장산 대표수종인 단풍나무와의 군집분포 특성 및 조릿대 분포면적 변화 분석 결과, 굴참나무군집은 pH, 유기물함량, 치환성양이온함량, 유효인산이 낮은 건조한 지역에 분포하였으며 단풍나무군집은 아교목층을 형성하며 습윤한 계곡부와 사면에 분포하였다. 또한, 20년 전의 연구결과와 마찬가지로 단풍나무는 굴참나무가 교목층에서 우점하는 지역에서는 교목층을 형성하지 못하며 낙엽활엽수혼효군집에서만 14.6%로 교목층을 형성하였다. 20년전 관목층에서 광범위하게 분포하는 조릿대에 의한 종다양성의 감소 경향은 동일하였으나 내장산지구 전체 조릿대의 분포면적은 다소 감소하고 있는 경향이었다.",
+    "authors": [
+      "배지윤",
+      "김지석",
+      "KyungJae Rhee",
+      "김종엽",
+      "염정헌"
+    ],
+    "year": 2013,
+    "journal": "Korean Journal of Environment and Ecology",
+    "cited_by_count": 1,
+    "doi": "",
+    "is_oa": false,
+    "oa_url": "",
+    "concepts": [
+      "Medicine"
+    ],
+    "openalex_url": "https://openalex.org/W2417502403",
+    "ai_analysis": {
+      "title_ko": "한국 내장산국립공원 내장산지구의 20년(1991~2010년)간 식생구조 변화",
+      "abstract_ko": "본 연구는 내장산국립공원 내장산지구를 대상으로 20년(1991~2010년) 동안의 식생구조 변화 특성을 밝히고자 수행하였다. 현존식생 조사 결과, 굴참나무와 졸참나무가 혼효된 군집이 전체의 56.1%로 가장 높은 비율로 분포하였으며 남사면 급경사지의 굴참나무군집은 17.6%이었다. 능선부에는 소나무군집(5.8%), 계곡사면에는 개서어나무군집이(6.6%) 분포하였으며, 기타 계곡부를 중심으로 느티나무군집과 산벚나무군집 등이 분포하였다. 상대우점치를 고려한 TWINSPAN에 의한 classification과 DCA에 의한 ordination을 분석한 결과, 군집 Ⅰ(소나무-굴참나무군집), 군집 Ⅱ(굴참나무군집), 군집 Ⅲ(개서어나무군집), 군집 Ⅳ(낙엽활엽수혼효군집)로 분류되었다. 군집 Ⅰ의 표본목 수령은 소나무 32년생, 졸참나무 36년생, 군집 Ⅱ는 굴참나무 64년생, 군집 Ⅲ은 졸참나무 46년생, 개서어나무 45년생, 군집 Ⅳ는 단풍나무 54년생, 층층나무 47년생 등이었다. Shannon의 종다양도지수는 군집 Ⅰ은 0.9751~1.4199, 군집 Ⅱ는 1.0765~1.3278, 군집 Ⅲ은 1.0353~1.2881, 군집 Ⅳ는 1.1412~1.3807이었다. 20년 전 연구결과와 비교하여 식생구조의 변화를 분석한 결과, 소나무의 도태, 굴참나무와 졸참나무 등 참나무류의 세력 확장, 개서어나무의 세력 증가가 확인되었으며 20년 전의 천이 예측과 같이 극상림으로의 천이가 진행되었다. 특히, 굴참나무와 내장산 대표 수종인 단풍나무와의 군집 분포 특성 및 조릿대 분포 면적 변화 분석 결과, 굴참나무군집은 pH, 유기물함량, 치환성양이온함량, 유효인산이 낮은 건조한 지역에 분포하였으며 단풍나무군집은 아교목층을 형성하며 습윤한 계곡부와 사면에 분포하였다. 또한, 20년 전의 연구결과와 마찬가지로 단풍나무는 굴참나무가 교목층에서 우점하는 지역에서는 교목층을 형성하지 못하며 낙엽활엽수혼효군집에서만 14.6%로 교목층을 형성하였다. 20년 전 관목층에서 광범위하게 분포하는 조릿대에 의한 종다양성의 감소 경향은 동일하였으나 내장산지구 전체 조릿대의 분포 면적은 다소 감소하는 경향이었다.",
+      "summary_3lines": [
+        "내장산국립공원 내장산지구의 20년(1991~2010년)간 식생구조 변화와 장기 천이 과정을 분석하였다.",
+        "소나무의 도태와 참나무류·개서어나무의 세력 확장으로 극상림으로의 천이가 진행되고 있음을 확인했다.",
+        "수종별 입지 환경과 조릿대 분포 특성을 고려한 맞춤형 식생 복원 및 보전 관리가 필요하다."
+      ],
+      "research_purpose": "본 연구는 내장산국립공원 내장산지구를 대상으로 20년(1991~2010년) 동안의 식생구조 변화를 추적하여 식물의 천이 경향을 파악하고, 주요 수종의 입지 환경 및 분포 특성을 분석함으로써 국립공원 식생 보전 및 관리의 기초 자료를 제공하고자 했다.",
+      "key_findings": [
+        "소나무가 점차 도태되고 굴참나무, 졸참나무 등 참나무류와 개서어나무의 세력이 확장되며 극상림으로의 천이가 진행됨",
+        "굴참나무군집은 건조하고 척박한 지역에 주로 분포하며, 단풍나무군집은 습윤한 계곡부와 사면에 아교목층을 형성하며 분포함",
+        "관목층의 조릿대는 종다양성을 감소시키는 경향을 보이나, 지구 전체의 조릿대 분포 면적은 다소 감소하는 추세를 보임"
+      ],
+      "practical_applications": [
+        "소나무림 쇠퇴 지역에 대해 인위적인 간섭을 줄이고 자연스러운 천이 과정을 모니터링하여 극상림 유도",
+        "단풍나무 등 공원 대표 경관 수종의 생육 환경(습윤한 계곡부 및 사면)을 고려한 자생지 보호 대책 수립",
+        "조릿대가 밀생하여 종다양성이 저해되는 구역에 대한 정기적인 식생 및 종다양성 모니터링 실시"
+      ],
+      "korea_np_applicability_score": 5,
+      "korea_np_applicability_reason": "대한민국 대표 국립공원인 내장산의 실제 장기 식생 모니터링 데이터를 활용한 연구로, 국내 국립공원의 식생 관리, 천이 과정 이해, 탐방로 주변 식생 보전 정책 수립에 직접적으로 적용할 수 있음",
+      "study_location": "국내",
+      "related_work_areas": [
+        "생태계 모니터링·조사",
+        "자원보전·복원"
+      ],
+      "related_laws": [
+        "자연공원법 제18조",
+        "야생생물 보호 및 관리에 관한 법률 제2조"
+      ],
+      "field_checklist": [
+        "소나무림 및 참나무림 지역의 고사목 발생 현황 및 치수(어린나무) 유입 상태 확인",
+        "주요 계곡부 및 사면의 단풍나무 생육 밀도 및 아교목층 형성 여부 조사",
+        "관목층 내 조릿대 분포 면적 변화 및 하층식생 종다양성 모니터링",
+        "토양 환경(pH, 유기물 함량 등)에 따른 식생 군집 분포 특성 대조",
+        "장기 생태계 변화 예측을 위한 고정 조사구(Permanent Plot) 정기 현장 점검"
+      ],
+      "practical_utility_score": 5,
+      "cautions": [
+        "식생 천이는 장기간에 걸쳐 서서히 진행되므로 단기적인 성과 위주의 복원 사업 지양",
+        "조릿대 제거 등 인위적 식생 조절 시 주변 생태계에 미치는 영향을 신중히 검토할 것"
+      ],
+      "tags": [
+        "내장산국립공원",
+        "식생구조변화",
+        "천이",
+        "참나무류",
+        "단풍나무"
+      ],
+      "recommended_followup_research": [
+        "기후변화에 따른 주요 수종(단풍나무, 참나무류 등)의 생육지 이동 및 영향 분석",
+        "조릿대 분포 변화가 하층 식생의 종다양성과 천이에 미치는 세부 기작 연구"
+      ],
+      "ai_recommended_topics": [
+        "국립공원 장기 식생 변화",
+        "활엽수림 천이 경향"
+      ],
+      "analyzed_at": "2026-11-19T11:12:23Z",
+      "model": "gemini-flash-lite-latest"
+    }
+  },
+  {
+    "id": "W3041583531",
+    "source": "openalex",
+    "title": "Engineering Characteristics of Mudeungsan Tuff and Ipseok-dae Columnar Joints",
+    "abstract": "본 연구는 세계지질공원인 무등산국립공원 내 주상절리대의 공학적 특성을 살펴보고 위한 것으로서, 대상 암석인 무등산응회암의 물리·역학적 성질 파악, 주상절리 풍화정도 산정, 그리고 주상절리 내 균열거동 모니터링 등을 실시하였다. 무등산응회암의 물리적 성질은 평균 공극률의 경우 1.02%, 평균 흡수율은 0.38%, 평균 비중은 2.69 g/㎤, 그리고 평균 종파속도는 4,948 m/s로 나타났다. 역학적 성질의 경우 평균 일축압축강도는 337 MPa, 평균 탄성계수는 68 GPa, 평균 포아송비는 0.29, 평균 점착력은 41.3 MPa, 평균 마찰각은 62.8°로 나타났다. 실버슈미트해머 평균 반발경도 Q값은 49.3이며, 이를 일축압축강도로 환산하면 70.5 MPa로 신선한 일축압축강도의 약 21%에 해당되었다. 그리고 입석대 주상절리 3개 블록에 대한 균열 모니터링 측정 결과, 균열 거동은 블록 모두에서 1 mm 이하로 나타나 주상절리 내 균열 거동은 현재까지 거의 발생하지 않은 것으로 판단된다. This study is to examine the engineering characteristics of colunmar joints in Mudeugsan National Park, a global geopark. For these purposes, physical and mechanical properties of Mudeungsan Tuff, evaluation for the weathering degree of columnar joints, and crack behavior monitoring in columnar joints were conducted. The physical properties of Mudeungsan tuff were 1.02% for the average porosity, 0.38% for the average absorption, 2.69 g/㎤ for the average specific gravity, and 4,948 m/s for the average elastic wave velocity. Its mechanical properties were 337 MPa for the average uniaxial compressive strength, 68 GPa for the average elastic modulus, 0.29 for the average Poisson's ratio, 41.3 MPa for the average cohesion strength, and 62.8° for the average friction angle. the average rebound Q-value of the silver Schmidt hammer for the three columnar joint blocks at the Ipseok-dae was shown as 49.3. when this value is converted into uniaxial compressive strength, it becomes 70.5 MPa, which is about 21% of the uniaxial compression strength of Mudeungsan tuff. In addition, according to the results of crack monitoring measurements for the three columnar joint blocks at the Ipseok-dae, the crack behavior is less than 1 mm, so it is believed that its behavior in Ipseak-dae columnar joints has hardly occured to date.",
+    "authors": [
+      "Jeongdu Noh",
+      "Heewon Jang",
+      "Chaehun Lim",
+      "Namhyun Hwang",
+      "Seong‐Seung Kang"
+    ],
+    "year": 2020,
+    "journal": "The Journal of Engineering Geology",
+    "cited_by_count": 1,
+    "doi": "https://doi.org/10.9720/kseg.2020.2.161",
+    "is_oa": false,
+    "oa_url": "",
+    "concepts": [
+      "Geology",
+      "Engineering"
+    ],
+    "openalex_url": "https://openalex.org/W3041583531",
+    "ai_analysis": {
+      "title_ko": "무등산 응회암 및 입석대 주상절리의 공학적 특성",
+      "abstract_ko": "본 연구는 세계지질공원인 무등산국립공원 내 주상절리대의 공학적 특성을 파악하기 위해 수행되었다. 이를 위해 대상 암석인 무등산응회암의 물리적·역학적 성질을 분석하고, 주상절리의 풍화 정도를 산정하였으며, 균열 거동을 모니터링하였다. 무등산응회암의 물리적 성질 분석 결과, 평균 공극률 1.02%, 평균 흡수율 0.38%, 평균 비중 2.69 g/㎤, 평균 종파속도 4,948 m/s로 나타났다. 역학적 성질은 평균 일축압축강도 337 MPa, 평균 탄성계수 68 GPa, 평균 포아송비 0.29, 평균 점착력 41.3 MPa, 평균 마찰각 62.8°로 측정되었다. 실버슈미트해머를 이용한 입석대 3개 주상절리 블록의 평균 반발경도 Q값은 49.3이었으며, 이를 일축압축강도로 환산하면 70.5 MPa로 신선한 암석 강도의 약 21% 수준이었다. 또한 입석대 주상절리 3개 블록의 균열 모니터링 결과, 모든 블록에서 균열 변동량이 1 mm 미만으로 나타나 현재까지 주상절리 내 균열 거동은 거의 발생하지 않은 것으로 판단된다.",
+      "summary_3lines": [
+        "세계지질공원인 무등산국립공원 입석대 주상절리대의 공학적 특성과 풍화 상태를 파악하고 균열 거동을 모니터링하였다.",
+        "무등산응회암의 물리·역학적 성질을 실내외 시험으로 측정하고, 반발경도와 균열 모니터링을 통해 주상절리의 안정성을 분석하였다.",
+        "입석대 주상절리 블록의 균열 변동이 1 mm 이하로 안정적이나, 풍화에 따른 지속적인 모니터링과 안전관리 체계 구축이 필요하다."
+      ],
+      "research_purpose": "본 연구는 무등산국립공원 내 대표적인 지질유산인 입석대 주상절리를 대상으로 암석의 물리적·역학적 성질을 규명하고, 현재의 풍화 정도와 균열 거동을 모니터링하여 지질명소의 보존 및 안전관리 기초자료를 제공하는 것을 목적으로 한다.",
+      "key_findings": [
+        "무등산응회암은 평균 공극률 1.02%, 평균 일축압축강도 337 MPa로 매우 견고한 물리·역학적 성질을 보임",
+        "실버슈미트해머로 측정한 입석대 주상절리의 환산 일축압축강도는 70.5 MPa로, 신선한 암석 강도의 약 21% 수준으로 풍화가 진행됨",
+        "입석대 주상절리 3개 블록에 대한 균열 모니터링 결과 변동량이 1 mm 이하로 현재까지 안정적인 상태를 유지함"
+      ],
+      "practical_applications": [
+        "주상절리 및 암반 지질명소에 대한 비파괴 강도 측정(실버슈미트해머 등)을 정기적으로 실시하여 풍화 진행 상황 평가",
+        "균열 게이지(Crack meter) 등을 활용한 주요 지질유산의 미소 변위 및 균열 거동 상시 모니터링 체계 구축",
+        "지질공원 내 탐방객 안전사고 예방을 위한 낙석 및 암반 안정성 평가 기초자료로 활용"
+      ],
+      "korea_np_applicability_score": 5,
+      "korea_np_applicability_reason": "무등산국립공원을 직접 대상지로 하여 수행된 연구로, 국내 국립공원 내 지질유산 보존 및 탐방객 안전관리 실무에 직접적으로 적용할 수 있는 구체적인 수치와 방법을 제공함.",
+      "study_location": "국내",
+      "related_work_areas": [
+        "자원보전·복원",
+        "탐방로·탐방객 관리",
+        "재난·안전 관리"
+      ],
+      "related_laws": [
+        "자연공원법 제2조",
+        "자연공원법 제23조",
+        "문화재보호법 제2조"
+      ],
+      "field_checklist": [
+        "지질유산 주변 낙석 위험 및 암반 절리 상태 육안 점검",
+        "실버슈미트해머를 활용한 주요 암석 노두 및 주상절리 반발경도 측정",
+        "설치된 균열 측정기(Crack meter)의 변위 값 주기적 읽기 및 기록",
+        "풍화로 인한 암석 탈락 및 토사 유출 여부 확인",
+        "탐방로변 지질 명소 안내판 및 안전 펜스 등 방재 시설물 이상 유무 점검"
+      ],
+      "practical_utility_score": 5,
+      "cautions": [
+        "측정 장비(슈미트해머 등) 사용 시 문화재 및 자연경관 훼손에 주의하고 비파괴 검사 원칙 준수",
+        "탐방객 밀집 지역에서의 현장 조사 시 안전사고 예방 조치 선행 필요"
+      ],
+      "tags": [
+        "무등산국립공원",
+        "주상절리",
+        "무등산응회암",
+        "공학적특성",
+        "균열모니터링"
+      ],
+      "recommended_followup_research": [
+        "계절별 온도 변화에 따른 주상절리 미소 균열의 신축 거동 특성 분석",
+        "장기적인 풍화 속도 예측을 위한 지질유산 주변 미기상 환경 영향 연구"
+      ],
+      "ai_recommended_topics": [
+        "주상절리대 풍화도 평가",
+        "암반 지질유산 모니터링",
+        "국립공원 지질명소 안전관리"
+      ],
+      "analyzed_at": "2026-11-19T11:11:51Z",
+      "model": "gemini-flash-lite-latest"
+    }
+  },
+  {
+    "id": "W3126154175",
+    "source": "openalex",
+    "title": "A Study on the Flora and its Introduced Disturbing Plants in Damyang Area of Mudeungsan National Park, Korea",
+    "abstract": "본 연구는 무등산국립공원 담양권역의 전체 식물상 및 특기 할만한 식물의 분포를 파악하고 생태계교란 야생식물의 유입요인 및 관리방안을 모색해보기 위해 수행되었다. 조사는 2019년 5월부터 2020년 10월까지 총 8차례에 걸쳐 실시되었다. 무등산국립공원 담양권역의 식물상은 107과 349속 531종 57변종 5아종 10품종 총 603 분류군이 분포하는 것으로 확인하였다. 이는 우리나라 관속식물 총 4,881 분류군의 약 12.33%로 나타났다. 무등산국립공원 담양권역에서 출현한 희귀식물은 총 15 분류군이 관찰되었다. 멸종위기종(CR)은 목련, 위기종(EN)은 댕강나무 등이 출현하였다. 취약종(VU)은 개박하, 나도옥잠화, 땅나리 그리고 주목이 관찰되었다. 무등산국립공원 담양권역의 식물구계학적 특정식물은 50과 73속 81종 3변종 1아종으로 총 85 분류군이 출현하였다. V등급은 승마 등 3분류군, IV등급은 선주름잎, 고로쇠나무, 털조장나무 등 5분류군, III등급은 청시닥나무, 산황나무 등이 관찰되었고, 특산식물은 노각나무, 닥나무, 각시서덜취, 백운산원추리, 병꽃나무, 검팽나무, 진범 등 총 13 분류군으로 파악되었다. 무등산국립공원 담양권역에서 출현한 귀화식물은 미국자리공, 방가지똥 등 16과 36속 45종 총 45 분류군으로 관찰되었고, 귀화율은 7.46%로 나타났으며, 도시화지수는 14.01%로 계산되었다. 생태계교란 야생식물은 돼지풀, 애기수영, 도깨비가지, 및 양미역취 총 4 분류군이 관찰되었다. 신선대억새평전에 생육하는 생태계교란 야생식물인 애기수영에 대한 장기적인 모니터링이 요구되고, 특히 물리적이고 생물학적인 방제가 지속되어야 할 것이다. This study was investigated to find out the distribution of flora and remarkable plants and factors and management measures for influx of wild disturbed plants in the Damyang area of Mudeungsan National Park. The field survey was carried out 8 times from May 2019 to October 2020. First of all, in the Damyang area of Mudeungsan National Park, a total of 603 taxa in 107 families, 349 genera, 531 species, 57 varieties, 5 subspecies and 10 forms. This result was found to be about 12.33% of the total 4,881 taxa of vascular plants in Korea. In addition, Rare plants were classified as 15 taxa. Floristic special and Korean endemic plants were identified as 85 taxa and 13 taxa, respectively. Lastly, the naturalized plants that appeared in the Damyang area of Mudeungsan National Park were observed in 45 taxa with 45 species of 16 families and 36 genera. Moreover the naturalization rate was 7.46% and the urbanization index was calculated to be 14.01%. The wild disturbed plants were found in a total of 4 taxa. Especially, a sheep sorrel(Rumex acetosella) was focused on managing for physica and biological control at Sinseondae Eoksaepyungjeon.",
+    "authors": [
+      "Jong-Won Lee",
+      "Suhong Lee",
+      "Shin-Ho Kang"
+    ],
+    "year": 2021,
+    "journal": "한국자원식물학회지",
+    "cited_by_count": 3,
+    "doi": "https://doi.org/10.7732/kjpr.2021.34.1.103",
+    "is_oa": true,
+    "oa_url": "https://koreascience.or.kr:443/article/JAKO202111735183195.pdf",
+    "concepts": [
+      "Flora (microbiology)",
+      "National park",
+      "Geography",
+      "Environmental protection",
+      "Biology",
+      "Archaeology"
+    ],
+    "openalex_url": "https://openalex.org/W3126154175",
+    "ai_analysis": {
+      "title_ko": "무등산국립공원 담양권역의 식물상 및 생태계교란 야생식물 분포 연구",
+      "abstract_ko": "본 연구는 무등산국립공원 담양권역의 전체 식물상 분포를 파악하고, 희귀식물 및 특산식물의 서식 현황을 조사하여 생태계교란 야생식물의 유입 요인과 효율적인 관리 방안을 모색하고자 수행되었습니다. 2019년 5월부터 2020년 10월까지 총 8차례에 걸쳐 현장 조사를 실시한 결과, 담양권역에서는 총 603 분류군의 관속식물이 확인되어 국내 전체 관속식물의 약 12.33%를 차지하는 것으로 나타났습니다. 이 중 희귀식물은 목련, 댕강나무, 주목 등 15 분류군이 관찰되었고, 식물구계학적 특정식물은 85 분류군, 한국 특산식물은 13 분류군이 확인되었습니다. 귀화식물은 45 분류군으로 귀화율은 7.46%, 도시화지수는 14.01%로 분석되었으며, 생태계교란 야생식물은 돼지풀, 애기수영, 도깨비가지, 양미역취 등 4 분류군이 출현했습니다. 특히 신선대억새평전에 생육하는 생태계교란 야생식물인 애기수영에 대해서는 장기적인 모니터링과 함께 지속적인 물리적·생물학적 방제 조치가 시급한 것으로 나타났습니다.",
+      "summary_3lines": [
+        "무등산국립공원 담양권역의 식물상 분포 현황을 파악하고 생태계교란 야생식물의 유입 실태와 관리 방안을 도출하기 위해 수행되었습니다.",
+        "현장 조사 결과 총 603 분류군의 식물이 확인되었으며, 희귀·특산식물과 함께 4종의 생태계교란 야생식물이 분포하는 것으로 나타났습니다.",
+        "신선대억새평전 등 주요 자생지에 출현한 애기수영 등 교란식물에 대해 지속적인 물리적·생물학적 방제와 장기 모니터링 체계 구축이 필요합니다."
+      ],
+      "research_purpose": "본 연구는 무등산국립공원 담양권역의 식물상과 주요 자원식물의 분포 현황을 정밀 파악하고, 외래식물 및 생태계교란 야생식물의 유입 실태를 분석하여 공원 자원 보전을 위한 맞춤형 관리 방안을 수립하는 것을 목적으로 합니다.",
+      "key_findings": [
+        "담양권역에서 관속식물 총 107과 349속 531종 57변종 5아종 10품종 등 총 603 분류군이 확인됨.",
+        "목련(CR), 댕강나무(EN) 등 희귀식물 15 분류군과 노각나무 등 특산식물 13 분류군이 서식하는 것으로 확인됨.",
+        "귀화식물 45 분류군(귀화율 7.46%, 도시화지수 14.01%)과 생태계교란 야생식물 4종(돼지풀, 애기수영, 도깨비가지, 양미역취)이 출현함."
+      ],
+      "practical_applications": [
+        "신선대억새평전 내 군락을 형성한 애기수영 등 생태계교란 야생식물에 대한 집중적인 인력 투입 및 물리적·생물학적 제거 작업을 실시합니다.",
+        "희귀 및 특산식물 자생지 주변으로 외래식물 유입 경로를 차단하기 위한 상시 모니터링 구간을 설정하고 계절별 조사를 정례화합니다.",
+        "탐방로 및 훼손지 주변의 외래식물 확산 방지를 위한 자생식물 복원 및 식생 정비 계획을 수립합니다."
+      ],
+      "korea_np_applicability_score": 5,
+      "korea_np_applicability_reason": "국내 국립공원 구역 내 실제 식물상 조사 결과와 교란식물 분포 현황을 다루고 있어, 전국 국립공원의 생태계 건강성 평가 및 외래식물 방제 실무에 직접적으로 적용할 수 있습니다.",
+      "study_location": "국내",
+      "related_work_areas": [
+        "생태계 모니터링·조사",
+        "자원보전·복원",
+        "야생생물·서식지 관리"
+      ],
+      "related_laws": [
+        "자연공원법 제23조",
+        "야생생물 보호 및 관리에 관한 법률 제24조"
+      ],
+      "field_checklist": [
+        "탐방로 주변 및 나지에서의 생태계교란 야생식물(애기수영, 돼지풀 등) 출현 여부 확인",
+        "신선대억새평전 등 주요 억새 군락지 내 외래식물 확산 면적 측정",
+        "희귀식물 자생지 주변 인위적 교란 요인 및 훼손 상태 점검",
+        "외래식물 유입 경로(탐방객 통행로, 배수로 등) 주변 식생 모니터링",
+        "제거 작업 대상 교란식물의 결실기 전 물리적 제거 실적 기록"
+      ],
+      "practical_utility_score": 5,
+      "cautions": [
+        "교란식물 제거 시 뿌리나 종자에 의한 2차 확산이 발생하지 않도록 철저한 수거 및 폐기 조치가 필요합니다.",
+        "제거 작업 시 자생하는 희귀·특산식물이 훼손되지 않도록 사전 식물상 식별 교육이 선행되어야 합니다."
+      ],
+      "tags": [
+        "식물상",
+        "생태계교란야생식물",
+        "무등산국립공원",
+        "희귀식물",
+        "외래식물"
+      ],
+      "recommended_followup_research": [
+        "신선대억새평전 내 애기수영 제거 공법별(물리적·생물학적) 방제 효과 비교 연구",
+        "기후변화에 따른 국립공원 내 고지대 외래식물 유입 및 확산 속도 예측 연구"
+      ],
+      "ai_recommended_topics": [
+        "국립공원 외래식물 방제",
+        "식물구계학적 특정식물 분포",
+        "생태계교란 야생식물 모니터링"
+      ],
+      "analyzed_at": "2026-11-19T11:11:41Z",
+      "model": "gemini-flash-lite-latest"
+    }
+  },
+  {
+    "id": "W7159583121",
+    "source": "openalex",
+    "title": "A Study on Visitors’ Satisfaction of Regional Festival by Types of Visiting Motivation Using Importance-Performance Analysis: Focused on Mudeungsan Humanities Festival",
+    "abstract": "본 논문의 연구목적은 무등산 인문축제 <인문 For:rest>를 사례로, 관람객의 방문동기에 따른 세분집단별로 관람객이 지각하는 축제 서비스의 사전 중요도와 사후 성취도 간 비교분석을 실시하고, 이를 바탕으로 지역축제 서비스 개선을 위한 기초자료를 제공하는 것이다. 관람객의 방문동기에 대한 요인분석을 실시한 결과, ‘일탈성’, ‘학습성’, ‘사교성’, ‘축제 매력성’과 같은 4개의 요인을 도출하였고, 이를 바탕으로 군집분석을 실시하여 ‘친목 추구형’, ‘학습 추구형’, ‘휴식 추구형’과 같은 3개의 유효한 세분집단으로 분류하였다. 무등산 인문축제 서비스에 대한 중요도-성취도 분석을 실시한 결과, 전반적으로 관람객이 지각하는 실제 만족도가 사전 기대수준에 비해 높게 나타났다. 특히 IP matrix상에서 살펴보면, 프로그램 콘텐츠 등 인문축제의 축제소프트 측면과 행사 진행체계는 사전 중요도와 사후 성취도가 높아 인문축제의 장점으로 지속적으로 발전시켜야 되는 반면에, 편의시설 등 행사장 기반시설과 홈페이지 등 안내정보체계는 정책적 시급성이 떨어져 점진적인 개선 항목으로 확인되었다. 친목추구형 집단은 전체 표본 분포패턴과 비교하여, 안내요원의 친절성, 관람객 요구에 대한 대응태도, 편의시설, 안내정보 제공 항목은 IP matrix상에서 사분면 변동이 나타났다. 학습 추구형 집단에서는 관람객의 수요에 신속하게 대응하고, 화장실 등 편의시설에 대한 보완이 필요한 것으로 나타났다. 휴식 추구형 집단에서는 프로그램의 흥미성 및 다양성과 행사 기반 시설은 과잉 노력 투자가 지양되어야 하는 반면에, 홈페이지 등 안내정보 제공 항목은 시급히 개선될 필요가 있는 것으로 평가되었다.",
+    "authors": [
+      "문창현"
+    ],
+    "year": 2026,
+    "journal": "Journal of Regional Studies",
+    "cited_by_count": 0,
+    "doi": "https://doi.org/10.31324/jrs.2026.34.1.003",
+    "is_oa": false,
+    "oa_url": "",
+    "concepts": [
+      "Sociology",
+      "Psychology",
+      "Public relations",
+      "Pedagogy",
+      "Media studies",
+      "Medical education"
+    ],
+    "openalex_url": "https://openalex.org/W7159583121",
+    "ai_analysis": {
+      "title_ko": "방문 동기 유형에 따른 지역축제 방문객 만족도 분석: 중요도-성취도 분석(IPA)을 활용한 무등산 인문축제 사례",
+      "abstract_ko": "본 연구의 목적은 무등산 인문축제인 '인문 For:rest'를 사례로 들어, 관람객의 방문 동기에 따른 세분 집단별로 축제 서비스의 사전 중요도와 사후 성취도를 비교 분석하여 지역축제 서비스 개선을 위한 기초 자료를 제공하는 것이다. 요인분석 결과 관람객의 방문 동기는 '일탈성', '학습성', '사교성', '축제 매력성' 등 4가지로 도출되었으며, 군집분석을 통해 '친목 추구형', '학습 추구형', '휴식 추구형' 등 3개의 세분 집단으로 분류되었다. 중요도-성취도 분석(IPA) 결과, 전반적인 실제 만족도는 사전 기대수준보다 높았다. 프로그램 콘텐츠와 같은 소프트웨어 측면과 진행 체계는 중요도와 성취도가 모두 높아 지속 발전시켜야 하며, 편의시설과 홈페이지 등 안내체계는 점진적 개선 항목으로 나타났다. 집단별로는 친목추구형에서 안내요원 친절성과 편의시설 등의 항목에서 사분면 변동이 있었고, 학습추구형은 신속한 대응과 화장실 등 편의시설 보완이, 휴식추구형은 프로그램의 과잉 노력 지양 및 안내정보 제고의 시급성이 확인되었다.",
+      "summary_3lines": [
+        "무등산 인문축제를 사례로 탐방객의 방문 동기 유형별 축제 서비스 중요도와 만족도를 분석하여 맞춤형 개선 방안을 도출하였다.",
+        "탐방객 동기는 친목, 학습, 휴식 추구형으로 나뉘며, 프로그램 등 콘텐츠 만족도는 높으나 편의시설 및 안내체계는 개선이 필요한 것으로 나타났다.",
+        "국립공원 내 대규모 행사 및 탐방객 밀집 프로그램 운영 시 집단별 특성을 고려한 시설 정비와 맞춤형 안내 전략 수립이 필요하다."
+      ],
+      "research_purpose": "본 연구는 국립공원 내 개최되는 문화·인문 행사의 탐방객 방문 동기를 분석하고, 이에 따른 집단별 서비스 중요도와 성취도(만족도)의 차이를 파악하여 향후 국립공원 탐방 프로그램 및 행사 운영의 효율성을 높이기 위한 기초 자료를 제공하는 것을 목적으로 한다.",
+      "key_findings": [
+        "탐방객의 방문 동기는 일탈성, 학습성, 사교성, 축제 매력성의 4가지 요인으로 분류된다.",
+        "방문 동기에 따라 친목 추구형, 학습 추구형, 휴식 추구형의 3개 집단으로 세분화된다.",
+        "프로그램 콘텐츠는 만족도가 높아 유지해야 하나, 편의시설 및 안내정보 체계는 집단별로 보완이 필요하다."
+      ],
+      "practical_applications": [
+        "국립공원 내 탐방 프로그램 기획 시 참여 동기(친목, 학습, 휴식)를 고려한 맞춤형 콘텐츠를 구성한다.",
+        "학습 추구형 탐방객을 위해 신속한 현장 대응 체계를 갖추고, 화장실 등 필수 편의시설을 사전 점검한다.",
+        "휴식 추구형 탐방객을 위해 과도한 프로그램 경쟁을 지양하고, 홈페이지 및 안내판 등 정보 제공 체계를 신속히 개선한다."
+      ],
+      "korea_np_applicability_score": 5,
+      "korea_np_applicability_reason": "무등산국립공원에서 실제 개최된 행사를 대상으로 한 연구로, 전국의 국립공원에서 시행하는 탐방 문화 행사 및 축제 운영에 직접적으로 적용할 수 있는 실무적 시사점을 제공한다.",
+      "study_location": "국내",
+      "related_work_areas": [
+        "탐방로·탐방객 관리",
+        "탐방객 서비스·안전"
+      ],
+      "related_laws": [
+        "자연공원법 제2조",
+        "자연공원법 제28조"
+      ],
+      "field_checklist": [
+        "행사 및 탐방 프로그램 기획 시 참여 대상자의 방문 동기(학습, 휴식, 친목 등)를 사전에 파악했는가?",
+        "화장실, 휴식 공간 등 기본 편의시설이 탐방객 수용 인원에 맞게 적절히 배치되었는가?",
+        "현장 안내요원의 친절 교육 및 민원 대응 태도 점검이 이루어졌는가?",
+        "누리집(홈페이지) 및 현장 안내판에 행사 및 탐방 정보가 정확하고 시의성 있게 제공되고 있는가?",
+        "프로그램 콘텐츠와 기반 시설에 대한 탐방객 만족도 조사를 정기적으로 실시하고 있는가?"
+      ],
+      "practical_utility_score": 5,
+      "cautions": [
+        "탐방객의 방문 동기 유형은 계절별, 탐방지 특성별로 다를 수 있으므로 일괄 적용에 주의해야 한다.",
+        "행사 기반 시설 개선 시 자연공원법에 따른 공원구역 내 행위 제한 및 환경 훼손 여부를 면밀히 검토해야 한다."
+      ],
+      "tags": [
+        "탐방객 만족도",
+        "방문 동기",
+        "중요도-성취도 분석",
+        "무등산국립공원",
+        "탐방 프로그램"
+      ],
+      "recommended_followup_research": [
+        "타 국립공원 생태·문화 축제와의 비교를 통한 탐방객 동기 및 만족도 연구",
+        "행사 참여가 국립공원 재방문 의도 및 환경 보전 태도에 미치는 영향 분석"
+      ],
+      "ai_recommended_topics": [
+        "국립공원 탐방 프로그램 만족도",
+        "IPA 기법을 활용한 공원 시설 관리",
+        "탐방객 세분화 및 맞춤형 서비스 전략"
+      ],
+      "analyzed_at": "2026-11-19T11:10:58Z",
+      "model": "gemini-flash-lite-latest"
+    }
+  },
+  {
+    "id": "W3109344518",
+    "source": "openalex",
+    "title": "Spatial Distribution of Evergreen Coniferous Dead Trees in Seoraksan National Park -In the Case of Northwestern Ridge-",
+    "abstract": "Using high-resolution stereoscopic aerial images (in 2008, 2012 and 2016), we conducted to analyze the spatial characteristics affecting evergreen coniferous die-off in the northwestern ridge (major distribution area such as Abies nephrolepis), Seoraksan National Park. The detected number of dead trees at evergreen coniferous forest (5.24㎢) was 1,223 in 2008, was 2,585 in 2012 and was 3,239 in 2016. The number of cumulated dead trees was 7,047 in 2016. In recent years, the number of dead trees increased relatively in the northwest ridge, Seoraksan National Park. Among the analysed spatial factor (altitude, aspect, slope, solar radiation and topographic wetness index), the number of dead trees was increased in the conditions with high altitude, steep slope and dry soil moisture. A spatial distribution of dead tree was divided into 2 groups largely (high altitude with high solar radiation, low altitude with steep slope). In conclusion, the dead trees of evergreen coniferous were concentrated at spatial distribution characteristics causing dryness in the northwestern ridge, Seoraksan National Park.",
+    "authors": [
+      "Jin‐Won Kim",
+      "Hong-chul Park",
+      "Eunha Park",
+      "Na-Yeon Lee",
+      "Choong-Hyeon Oh"
+    ],
+    "year": 2020,
+    "journal": "Journal of the Korea Society of Environmental Restoration Technology",
+    "cited_by_count": 2,
+    "doi": "https://doi.org/10.13087/kosert.2020.23.5.59",
+    "is_oa": true,
+    "oa_url": "http://koreascience.or.kr:80/article/JAKO202032265178976.pdf",
+    "concepts": [
+      "Evergreen",
+      "Ridge",
+      "National park",
+      "Geography",
+      "Spatial distribution",
+      "Distribution (mathematics)"
+    ],
+    "openalex_url": "https://openalex.org/W3109344518",
+    "ai_analysis": {
+      "title_ko": "설악산국립공원 상록침엽수 고사목의 공간적 분포 특성 - 북서 능선을 중심으로 -",
+      "abstract_ko": "고해상도 입체 항공사진(2008년, 2012년, 2016년)을 활용하여 설악산국립공원 북서 능선(분비나무 등 주요 분포지역)의 상록침엽수 고사 현상에 미치는 공간적 특성을 분석했습니다. 대상지(5.24㎢) 내 상록침엽수 고사목은 2008년 1,223그루, 2012년 2,585그루, 2016년 3,239그루로 확인되었으며, 2016년 기준 누적 고사목은 7,047그루였습니다. 최근 들어 설악산 북서 능선에서 고사목 수가 상대적으로 증가하는 추세를 보였습니다. 고도, 사면 방향, 경사도, 일사량, 지형습윤지수 등 공간 요인을 분석한 결과, 고도가 높고 경사가 급하며 토양 수분이 건조한 조건에서 고사목이 증가했습니다. 고사목의 공간적 분포는 크게 두 가지 그룹(일사량이 높은 고고도 지역, 경사가 급한 저고도 지역)으로 나뉘었습니다. 결론적으로 설악산 북서 능선의 상록침엽수 고사목은 건조를 유발하는 공간적 분포 특성과 밀접하게 집중되어 있었습니다.",
+      "summary_3lines": [
+        "설악산국립공원 북서 능선을 대상으로 고해상도 항공사진을 활용하여 상록침엽수 고사목의 공간적 분포와 확산 추이를 분석했습니다.",
+        "2008년부터 2016년까지 누적 고사목이 급증했으며, 특히 고도가 높고 경사가 급하며 토양 수분이 건조한 지역에서 고사가 집중되었습니다.",
+        "기후변화와 건조 스트레스에 취약한 상록침엽수림 지역을 중심으로 맞춤형 식생 보전 및 모니터링 체계를 구축해야 합니다."
+      ],
+      "research_purpose": "본 연구는 설악산국립공원 북서 능선 내 상록침엽수(분비나무 등)의 고사 현황을 파악하고, 고사목의 공간적 분포에 영향을 미치는 지형 및 환경 요인을 규명하여 기후변화에 따른 고산 침엽수림 보전 대책의 기초 자료를 제공하는 것을 목적으로 합니다.",
+      "key_findings": [
+        "2008년 1,223그루였던 고사목이 2016년 3,239그루로 증가하여 북서 능선 일대의 상록침엽수 고사가 지속적으로 확산됨",
+        "고사목은 고도가 높고 경사가 급하며 토양 수분이 부족한 건조한 환경 조건에서 집중적으로 발생함",
+        "고사 유형은 크게 일사량이 많은 고고도 지역과 경사가 급한 저고도 지역의 두 가지 그룹으로 구분됨"
+      ],
+      "practical_applications": [
+        "고산지대 상록침엽수 고사목 밀집 지역에 대한 주기적인 항공사진 및 드론 모니터링 정례화",
+        "토양 건조 및 일사량이 높은 취약 지역을 선정하여 수분 유지 및 자생식물 보호 대책 수립",
+        "기후변화에 취약한 설악산 등 주요 국립공원 고산 침엽수림 복원 사업의 우선순위 선정에 활용"
+      ],
+      "korea_np_applicability_score": 5,
+      "korea_np_applicability_reason": "대한민국 대표 고산 지역인 설악산국립공원을 직접 조사 대상으로 삼았으며, 국내 국립공원 내 기후변화로 인한 고산 침엽수(분비나무 등) 고사 문제 해결을 위한 실무 지침으로 즉시 활용 가능합니다.",
+      "study_location": "국내",
+      "related_work_areas": [
+        "생태계 모니터링·조사",
+        "자원보전·복원",
+        "기후변화 대응"
+      ],
+      "related_laws": [
+        "자연공원법 제18조",
+        "야생생물 보호 및 관리에 관한 법률 제16조"
+      ],
+      "field_checklist": [
+        "조사 대상 고산 침엽수림 지역의 항공사진 또는 드론 영상 주기적 촬영 및 비교",
+        "고사목 발생 구역의 고도, 경사, 사면 방향 등 지형적 특성 현장 조사",
+        "토양 수분 상태 및 일사량 유입 정도 파악을 위한 환경 인자 측정",
+        "분비나무 등 주요 침엽수 수종의 생육 밀도 및 고사율 변화 추이 기록",
+        "건조 스트레스 가중 지역 내 추가 고사 방지를 위한 모니터링 지점(루트) 설정"
+      ],
+      "practical_utility_score": 5,
+      "cautions": [
+        "고산지대 특성상 기상 악화 시 현장 조사 및 드론 운용에 제약이 따를 수 있음",
+        "고사 원인이 기후변화에 따른 복합적 요인인 만큼 단기적인 처방보다는 장기 생태계 모니터링과 연계해야 함"
+      ],
+      "tags": [
+        "상록침엽수",
+        "고사목",
+        "설악산국립공원",
+        "기후변화",
+        "공간분포"
+      ],
+      "recommended_followup_research": [
+        "기온 상승 및 강수량 변화가 고산 침엽수림의 수분 스트레스에 미치는 생리학적 정밀 분석",
+        "고사목 발생 지역의 식생 천이 과정 및 후속 식생 회복 양상에 대한 장기 연구"
+      ],
+      "ai_recommended_topics": [
+        "고산 침엽수림 고사",
+        "분비나무 서식지 모니터링",
+        "기후변화 식생 변화",
+        "드론 기반 생태계 조사"
+      ],
+      "analyzed_at": "2026-11-19T11:12:02Z",
+      "model": "gemini-flash-lite-latest"
+    }
+  },
+  {
+    "id": "W7223570978",
+    "source": "openalex",
+    "title": "The Dual Structure of Safety Accident Occurrence Frequency and Severity: Focusing on a Comparison of Safety Accidents in Bukhansan and Seoraksan National Parks",
+    "abstract": "This study analyzed the occurrence characteristics and demographic differences of visitor safety accidents at Bukhansan and Seoraksan National Parks using 906 accident cases recorded between 2016 and 2025. During the study period, 618 accidents (68.2%) occurred at Bukhansan and 288 (31.8%) at Seoraksan, whereas the fatality rate at Seoraksan was approximately 2.5 times higher. Safety accidents in both parks were concentrated among visitors in their 50s and 60s, on weekends, and during autumn. A significant decreasing trend in annual accidents was observed only at Bukhansan. Chi-square analysis revealed significant differences between the two parks in gender, accident type, and time of occurrence. Binary logistic regression showed that the risk of fatal accidents was 2.587 times higher at Seoraksan than at Bukhansan and approximately 2.5 times higher for males than for females, while the afternoon period had a lower fatality risk than the morning period (OR = 0.486). These findings demonstrate that accident patterns and severity vary according to park characteristics and provide evidence for developing park-specific safety management strategies.",
+    "authors": [
+      "Crisis and Emergency Management: Theory and Praxis",
+      "Ju-Ung Yun",
+      "Dong-Hoon Kim"
+    ],
+    "year": 2026,
+    "journal": "",
+    "cited_by_count": 0,
+    "doi": "https://doi.org/10.14251/crisisonomy.2026.22.8.49",
+    "is_oa": false,
+    "oa_url": "",
+    "concepts": [
+      "Logistic regression",
+      "Visitor pattern",
+      "Accident (philosophy)",
+      "Case fatality rate",
+      "Environmental health",
+      "Demography"
+    ],
+    "openalex_url": "https://openalex.org/W7223570978",
+    "ai_analysis": {
+      "title_ko": "안전사고 발생 빈도와 심각도의 이중 구조: 북한산국립공원과 설악산국립공원의 안전사고 비교를 중심으로",
+      "abstract_ko": "본 연구는 2016년부터 2025년까지 북한산국립공원과 설악산국립공원에서 발생한 906건의 안전사고 기록을 바탕으로 탐방객 안전사고의 발생 특성과 인구통계학적 차이를 분석했다. 연구 기간 동안 북한산은 618건(68.2%), 설악산은 288건(31.8%)의 사고가 발생한 반면, 사망률은 설악산이 약 2.5배 더 높았다. 양 공원 모두 50~60대 탐방객, 주말, 가을철에 사고가 집중되었다. 연간 사고 발생 건수의 유의미한 감소 추세는 북한산에서만 관찰되었다. 카이검증 분석 결과 두 공원 간 성별, 사고 유형, 발생 시간대에서 유의미한 차이가 나타났다. 이항 로지스틱 회귀분석 결과, 사망사고 위험은 북한산보다 설악산에서 2.587배 높았고, 여성보다 남성이 약 2.5배 높았으며, 오후 시간대는 오전에 비해 사망 위험이 낮았다(OR = 0.486). 이러한 결과는 사고 양상과 심각도가 공원의 특성에 따라 다름을 보여주며, 공원 맞춤형 안전관리 전략 수립을 위한 근거를 제공한다.",
+      "summary_3lines": [
+        "북한산과 설악산국립공원의 10년간 안전사고 906건을 분석하여 공원 특성에 따른 사고 빈도와 심각도의 이중 구조를 규명함.",
+        "북한산은 사고 건수가 많고(68.2%), 설악산은 사고 건수는 적으나 사망률이 약 2.5배 높게 나타나는 등 차이를 보임.",
+        "도시 근교형과 산악 종주형 등 국립공원 유형별 특성을 고려한 맞춤형 안전관리 및 순찰 전략 수립이 필요함."
+      ],
+      "research_purpose": "본 연구는 북한산국립공원과 설악산국립공원의 안전사고 발생 특성과 인구통계학적 차이를 비교 분석하여, 공원 유형별 특성에 맞는 맞춤형 안전관리 전략 수립의 기초 자료를 제공하는 것을 목적으로 한다. 도시 근교형 공원과 심산유곡형 산악공원의 위험 요소를 대조하여 실효성 있는 안전대책을 도출하고자 했다.",
+      "key_findings": [
+        "전체 906건 중 북한산이 618건(68.2%), 설악산이 288건(31.8%)으로 북한산의 발생 빈도가 훨씬 높았음.",
+        "사망률은 설악산이 북한산에 비해 약 2.5배 높게 나타나 심각도에 차이가 있음.",
+        "두 공원 모두 50~60대 연령층, 주말, 가을철에 안전사고가 집중되는 공통점을 보였음."
+      ],
+      "practical_applications": [
+        "설악산과 같이 사망률이 높은 산악형 공원은 오전 시간대 고위험 탐방로 구간에 순찰 인력을 집중 배치한다.",
+        "북한산과 같이 사고 빈도가 높은 도심형 공원은 50~60대 중장년층을 타겟으로 한 주말 및 가을철 집중 안전 캠페인을 실시한다.",
+        "성별, 시간대, 사고 유형별 통계 분석 결과를 활용해 공원별 특성에 맞춘 재난·안전 관리 매뉴얼을 차별화하여 적용한다."
+      ],
+      "korea_np_applicability_score": 5,
+      "korea_np_applicability_reason": "실제 국내 대표 국립공원인 북한산과 설악산을 대상으로 한 10년간의 방대한 사고 데이터를 분석하여, 국내 국립공원 현장의 안전관리 및 순찰 인력 배치에 직접적으로 적용할 수 있기 때문임.",
+      "study_location": "국내",
+      "related_work_areas": [
+        "탐방로·탐방객 관리",
+        "탐방객 서비스·안전",
+        "재난·안전 관리"
+      ],
+      "related_laws": [
+        "자연공원법 제28조",
+        "국립공원공단법 제7조"
+      ],
+      "field_checklist": [
+        "주말 및 가을철 성수기 주요 탐방로 입구에 안전 현수막 및 계도 안내판이 설치되어 있는가?",
+        "50~60대 탐방객을 대상으로 한 산행 안전수칙(일몰 전 하산 등) 홍보가 이루어지고 있는가?",
+        "설악산 등 산악형 공원의 고위험 탐방로 및 오전 시간대 취약 구간에 안전 순찰 인력이 배치되어 있는가?",
+        "성별 및 사고 유형별 통계에 기반한 맞춤형 응급구조 장비(AED, 구급함 등)가 점검 및 비치되어 있는가?",
+        "오후 시간대 하산 완료를 독려하는 안내 방송 및 현장 계도가 원활히 이루어지고 있는가?"
+      ],
+      "practical_utility_score": 5,
+      "cautions": [
+        "북한산(도심형)과 설악산(산악형)의 지형적·탐방객 특성 차이가 크므로, 타 공원 적용 시 해당 공원의 입지적 특성을 고려해야 함.",
+        "계절별·시간대별 안전사고 통계 변동에 따라 한정된 순찰 인력과 예산을 효율적으로 재배분해야 함."
+      ],
+      "tags": [
+        "안전사고",
+        "북한산국립공원",
+        "설악산국립공원",
+        "탐방객 안전",
+        "이항로지스틱회귀"
+      ],
+      "recommended_followup_research": [
+        "전국 22개 국립공원 전체를 대상으로 한 유형별(해상·해안형, 도심형, 산악형) 안전사고 이중 구조 비교 연구",
+        "탐방객의 행동 특성 및 생체 데이터를 활용한 실시간 안전사고 위험 예측 모델 개발"
+      ],
+      "ai_recommended_topics": [
+        "국립공원 탐방객 안전사고 요인 분석",
+        "산악공원 사망사고 위험성 평가"
+      ],
+      "analyzed_at": "2026-11-19T11:11:08Z",
+      "model": "gemini-flash-lite-latest"
+    }
   }
 ]
