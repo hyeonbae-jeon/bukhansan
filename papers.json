@@ -1,16 +1,16 @@
 {
   "meta": {
-    "total": 5732,
-    "analyzed": 5684,
+    "total": 5749,
+    "analyzed": 5696,
     "avg_applicability": 3.7,
     "avg_utility": 3.7,
-    "high_applicability_count": 3519,
+    "high_applicability_count": 3527,
     "score_distribution": {
       "1": 90,
-      "2": 393,
-      "3": 1681,
+      "2": 395,
+      "3": 1683,
       "4": 2360,
-      "5": 1159
+      "5": 1167
     },
     "year_distribution": {
       "1895": 1,
@@ -59,36 +59,36 @@
       "2002": 77,
       "2003": 84,
       "2004": 89,
-      "2005": 105,
+      "2005": 106,
       "2006": 112,
       "2007": 119,
       "2008": 154,
-      "2009": 150,
-      "2010": 164,
-      "2011": 185,
+      "2009": 151,
+      "2010": 165,
+      "2011": 189,
       "2012": 205,
       "2013": 245,
       "2014": 242,
-      "2015": 224,
+      "2015": 226,
       "2016": 246,
-      "2017": 222,
-      "2018": 219,
-      "2019": 260,
+      "2017": 223,
+      "2018": 220,
+      "2019": 264,
       "2020": 317,
       "2021": 292,
       "2022": 236,
       "2023": 250,
-      "2024": 282,
-      "2025": 342,
+      "2024": 283,
+      "2025": 343,
       "2026": 341
     },
-    "updated_at": "2026-11-19T11:12:40.914208"
+    "updated_at": "2026-11-20T11:03:44.898496"
   },
   "tag_index": {
     "국립공원관리": 312,
     "탐방객관리": 233,
     "생태관광": 219,
-    "생물다양성": 199,
+    "생물다양성": 200,
     "기후변화": 195,
     "지역사회참여": 164,
     "생태계모니터링": 158,
@@ -112,8 +112,8 @@
     "인간-야생동물 갈등": 76,
     "탐방객만족도": 76,
     "탐방객 관리": 75,
-    "서식지관리": 72,
-    "역사문화자원": 72,
+    "서식지관리": 73,
+    "역사문화자원": 73,
     "기후변화대응": 71,
     "공원계획": 69,
     "용도지구": 68,
@@ -147,22 +147,22 @@
     "지속가능관광": 44
   },
   "work_area_index": {
-    "생태계 모니터링·조사": 2812,
-    "탐방로·탐방객 관리": 2606,
-    "자원보전·복원": 1895,
-    "지역사회·거버넌스": 1574,
-    "공원계획·구역관리": 1310,
-    "야생생물·서식지 관리": 1258,
-    "탐방객 서비스·안전": 679,
+    "생태계 모니터링·조사": 2818,
+    "탐방로·탐방객 관리": 2610,
+    "자원보전·복원": 1901,
+    "지역사회·거버넌스": 1576,
+    "공원계획·구역관리": 1312,
+    "야생생물·서식지 관리": 1260,
+    "탐방객 서비스·안전": 680,
     "환경 모니터링": 620,
-    "기후변화 대응": 605,
-    "재난·안전 관리": 553,
-    "시설·인프라 관리": 543,
+    "기후변화 대응": 607,
+    "재난·안전 관리": 555,
+    "시설·인프라 관리": 545,
     "관광·경제 정책": 533
   },
   "location_index": {
     "해외": 4539,
-    "국내": 1145
+    "국내": 1157
   },
   "papers": [
     {
@@ -17888,6 +17888,92 @@
       }
     },
     {
+      "id": "W2563557995",
+      "source": "openalex",
+      "title": "Vegetation Succession and Vegetation Management of the Pinus densiflora S. et Z. Forest in the Beopjusa Area, Songnisan National Park",
+      "abstract": "This study is to establish a management method for conservation through comparison and analysis on vegetation structures of Pinus densiflora forest around Beopjusa area for past 17-year. The spatial range of the study was 3.6km2 from maintenance office to Beopjusa area. The analysis results of the actual vegetation showed that the ratio of vegetation were composed of 64.7% of Pinus densiflora forest, 3.2% of mixed forest of P. densiflora and deciduous broadleaf trees and 5.9% of deciduous broadleaf tree community out of overall area, 360ha. The type of P. densiflora forest were categorized into four communities; community having high potential of succession, community having low potential of it, the community being in the process of succession and community being in the process of natural selection. The succession tendency was in order of the community having low potential of succession(P. densiflora forest), having high potential of it(P. densiflora forest which is deciduous broadleaf trees are dominating in sub-canopy layer), being in the process of succession(P. densiflora-Prunus sargentii and P. densiflora-Quercus serrata community) and being in the process of natural selection(Q. serrata-P. densiflora and Q. aliena-P. densiflora community). In terms of vegetation management, P. densiflora forest having high potential of succession was needed to remove deciduous broadleaf trees in the sub-canopy layer and the community being in the process of succession was required to be pruning the branch in the canopy layer. Lastly, the community being in the process of natural selection was suggested to let it be in succession, since it is hard to be in the status of P. densiflora Forest.",
+      "authors": [
+        "KyungJae Rhee",
+        "기경석",
+        "최진우"
+      ],
+      "year": 2009,
+      "journal": "Korean Journal of Environment and Ecology",
+      "cited_by_count": 7,
+      "doi": "",
+      "is_oa": false,
+      "oa_url": "",
+      "concepts": [
+        "Pinus densiflora",
+        "Ecological succession",
+        "Quercus serrata",
+        "Deciduous",
+        "Canopy",
+        "Vegetation (pathology)"
+      ],
+      "openalex_url": "https://openalex.org/W2563557995",
+      "ai_analysis": {
+        "title_ko": "속리산국립공원 법주사 일원 소나무림의 식생 천이 및 식생 관리",
+        "abstract_ko": "본 연구는 지난 17년간 법주사 주변 소나무림의 식생 구조 변화를 비교 분석하여 보전 관리 방안을 수립하고자 수행되었습니다. 연구 대상지는 공원 관리사무소에서 법주사 일원까지 3.6제곱킬로미터 범위(총 360헥타르)입니다. 현존식생 분석 결과, 전체 면적 중 소나무림이 64.7%, 소나무와 낙엽활엽수 혼효림이 3.2%, 낙엽활엽수 군락이 5.9%를 차지했습니다. 소나무림은 천이 진행 가능성이 높은 군락, 낮은 군락, 천이 진행 중인 군락, 자연선택(갱신) 과정에 있는 군락 등 4가지 유형으로 분류되었습니다. 천이 경향은 천이 가능성이 낮은 소나무림, 높은 소나무림(아관목층에 낙엽활엽수가 우점), 천이 진행 중인 군락(소나무-신나무, 소나무-졸참나무 군락), 자연선택 과정 군락(졸참나무-소나무, 갈참나무-소나무 군락) 순이었습니다. 식생 관리 측면에서, 천이 가능성이 높은 소나무림은 아관목층의 낙엽활엽수를 제거해야 하며, 천이 진행 중인 군락은 교관목층의 가지치기가 요구됩니다. 마지막으로 자연선택 과정에 있는 군락은 소나무림 상태 유지가 어려우므로 자연 천이에 맡기는 것이 제안되었습니다.",
+        "summary_3lines": [
+          "속리산국립공원 법주사 일원 소나무림의 17년간 식생 구조 변화를 분석하여 장기적인 보전 관리 방안을 마련하고자 하였습니다.",
+          "현존식생 조사 결과 소나무림이 대부분을 차지하며, 천이 단계에 따라 네 가지 군락 유형으로 분류되고 각각 다른 천이 경향을 보였습니다.",
+          "천이 단계와 소나무 유지 가능성에 따라 아관목층 제거, 가지치기, 자연 천이 유도 등 차별화된 맞춤형 식생 관리 기법을 적용해야 합니다."
+        ],
+        "research_purpose": "본 연구는 속리산국립공원 법주사 일대의 소나무림을 대상으로 지난 17년간의 식생 구조 변화를 비교·분석하여, 소나무림의 생태적 건전성을 유지하고 효과적인 보전 관리 방안을 도출하는 것을 목적으로 합니다. 특히 식생 천이 단계에 따른 군락별 특성을 파악하여 획일적인 관리에서 벗어나 현장 맞춤형 관리 지침을 제공하고자 합니다.",
+        "key_findings": [
+          "연구 대상지 총 360헥타르 중 소나무림이 64.7%로 가장 높은 비율을 차지함",
+          "소나무림은 천이 가능성과 갱신 상태에 따라 4가지 군락 유형(천이 가능성 낮음, 높음, 천이 진행 중, 자연선택 과정)으로 구분됨",
+          "천이 단계에 따라 아관목층 낙엽활엽수 제거, 수관층 가지치기, 자연 천이 방치 등 서로 다른 관리 처방이 필요함"
+        ],
+        "practical_applications": [
+          "천이 진행 가능성이 높은 소나무림 구역은 아관목층에 우점하는 낙엽활엽수를 인위적으로 제거하여 소나무 생육 공간을 확보함",
+          "천이 진행 중인 소나무림 구역은 수관층의 가지치기를 시행하여 광환경을 개선하고 소나무의 우점도를 유지함",
+          "소나무림으로의 회복이 어려운 자연선택(갱신) 과정 군락은 억지 복원보다는 자연스러운 천이 과정을 그대로 수용하여 관리함"
+        ],
+        "korea_np_applicability_score": 5,
+        "korea_np_applicability_reason": "한국 국립공원 내 주요 자원인 소나무림의 천이 관리와 숲가꾸기 정책에 직접적으로 적용할 수 있는 실증적 연구임",
+        "study_location": "국내",
+        "related_work_areas": [
+          "자원보전·복원",
+          "생태계 모니터링·조사"
+        ],
+        "related_laws": [
+          "자연공원법 제18조",
+          "산림자원의 조성 및 관리에 관한 법률 제23조"
+        ],
+        "field_checklist": [
+          "조사 대상 소나무림 내 수관층 및 아관목층의 활엽수 우점 비율을 측정했는가",
+          "소나무림의 천이 단계(천이 가능성 고/저, 진행 중, 자연선택)를 구분했는가",
+          "천이 진행 구역 내 낙엽활엽수 제거 대상목의 위치와 밀도를 파악했는가",
+          "교관목층 가지치기 작업이 필요한 수관층 대상목을 선별했는가",
+          "자연 천이에 맡겨야 할 갱신 군락과 인공 관리가 필요한 군락의 경계를 설정했는가"
+        ],
+        "practical_utility_score": 5,
+        "cautions": [
+          "인위적인 활엽수 제거 및 가지치기 작업 시 국립공원 내 자연경관 훼손 및 생태계 교란이 발생하지 않도록 주의해야 함",
+          "사찰 주변이나 탐방객 밀집 지역의 특성을 고려하여 작업 시기 및 소음·진동 발생을 최소화해야 함"
+        ],
+        "tags": [
+          "소나무림",
+          "식생천이",
+          "식생관리",
+          "속리산국립공원",
+          "숲가꾸기"
+        ],
+        "recommended_followup_research": [
+          "활엽수 제거 및 가지치기 작업 이후 소나무 유묘의 생존율과 갱신에 미치는 장기 모니터링 연구",
+          "기후변화에 따른 소나무림 쇠퇴 지역과 활엽수림으로의 전환 속도에 관한 공간 분석 연구"
+        ],
+        "ai_recommended_topics": [
+          "소나무림 식생구조 변화",
+          "국립공원 소나무림 복원 및 관리"
+        ],
+        "analyzed_at": "2026-11-20T11:03:23Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
       "id": "W3000509570",
       "source": "openalex",
       "title": "The problem of solid waste on the tourist trails of Tatra National Park, Poland",
@@ -22251,6 +22337,94 @@
       }
     },
     {
+      "id": "W2265097546",
+      "source": "openalex",
+      "title": "Determinants of Users' Satisfaction and Behavioral Intention in Jirisan Trail of Korea",
+      "abstract": "본 연구는 지리산숲길 이용객의 만족도와 행동의도에 영향을 미치는 요인을 파악하여 숲길 조성 및 관리방안 수립의 기초 자료 제공을 위하여 수행되었다. 645명의 이용객을 대상으로 지리산숲길 탐방 만족 요인에 대한 설문 분석 결과, ``숲길경관체험``, ``숲길숙박체험``, ``숲길관련정보``, ``숲길편의시설`` 등 모두 4개 요인이 도출되었으며, 숲길경관체험(자연경관, 숲길 개발정도, 숲길 관리상태, 문화·관광자원, 주민 친절)이 전반적인 만족도 및 행동의도(재방문의도, 추천의도, 탐방지속의도)에 가장 크게 영향을 미치는 것으로 나타났다. 세부변수별 분석 결과, 전반적 만족도와 행동의도에 가장 크게 영향을 미치는 변수는 ``자연경관``으로 나타났고, 그 밖에 유의미하게 영향을 미치는 변수는 ``안내표지판``, ``주민 친절``, ``안내센터 숲길 정보제공`` 등으로 나타났다.",
+      "authors": [
+        "이혜린",
+        "김재준",
+        "조은경",
+        "강민지",
+        "한상열"
+      ],
+      "year": 2011,
+      "journal": "한국산림과학회지(구 한국임학회지)",
+      "cited_by_count": 5,
+      "doi": "",
+      "is_oa": false,
+      "oa_url": "",
+      "concepts": [
+        "Traditional medicine",
+        "Chemistry",
+        "Mathematics",
+        "Medicine"
+      ],
+      "openalex_url": "https://openalex.org/W2265097546",
+      "ai_analysis": {
+        "title_ko": "지리산숲길 이용객의 만족도와 행동의도 결정요인",
+        "abstract_ko": "본 연구는 지리산숲길 이용객의 만족도와 행동의도에 영향을 미치는 요인을 분석하여, 숲길의 조성 및 관리 방안을 수립하기 위한 기초 자료를 제공하고자 수행되었습니다. 645명의 탐방객을 대상으로 설문조사를 실시한 결과, 탐방 만족 요인은 숲길경관체험, 숲길숙박체험, 숲길관련정보, 숲길편의시설 등 4가지로 도출되었습니다. 이 중 자연경관, 개발 정도, 관리 상태, 문화·관광자원, 지역주민 친절 등을 포함하는 '숲길경관체험'이 전반적인 만족도와 재방문 및 추천 의도 같은 행동의도에 가장 큰 영향을 미치는 것으로 나타났습니다. 세부 변수 중에서는 '자연경관'이 만족도와 행동의도에 가장 큰 영향을 미쳤으며, 그 외에도 안내표지판, 지역주민 친절, 안내센터의 숲길 정보 제공 등이 유의미한 영향을 미치는 것으로 확인되었습니다.",
+        "summary_3lines": [
+          "지리산숲길 이용객의 만족도와 행동의도에 미치는 영향 요인을 파악하여 실효성 있는 숲길 관리 방안의 기초 자료를 마련하고자 연구를 진행하였다.",
+          "645명의 탐방객을 대상으로 설문 분석을 실시한 결과 숲길경관체험, 숙박체험, 관련정보, 편의시설의 4개 요인이 도출되었으며 자연경관이 만족도에 가장 큰 영향을 미쳤다.",
+          "자연경관의 보전과 함께 안내표지판 정비, 안내센터 정보 제공 강화, 지역주민과의 협력이 탐방객 만족도와 재방문의도를 높이는 핵심 요소임을 확인하였다."
+        ],
+        "research_purpose": "지리산숲길 이용객의 만족도와 재방문 및 추천 등 행동의도에 영향을 미치는 주요 요인을 실증적으로 파악하고자 합니다. 이를 통해 향후 숲길 조성 및 유지 관리 과정에서 한정된 자원을 효율적으로 배분하고 탐방객 만족도를 높이기 위한 정책적 시사점을 도출하는 것을 목적으로 합니다.",
+        "key_findings": [
+          "탐방 만족 요인은 숲길경관체험, 숲길숙박체험, 숲길관련정보, 숲길편의시설의 4가지로 구분된다.",
+          "전반적인 만족도와 행동의도(재방문, 추천 의도)에 가장 큰 영향을 미치는 요인은 '숲길경관체험'이다.",
+          "세부 변수 중 '자연경관'이 가장 큰 영향력을 보였으며, '안내표지판', '지역주민 친절', '안내센터 정보 제공'도 유의미한 영향을 미쳤다."
+        ],
+        "practical_applications": [
+          "숲길 주변의 원시 자연경관을 훼손하지 않고 본래의 가치를 유지할 수 있도록 보전 중심의 관리 지침을 적용한다.",
+          "탐방객이 길을 잃지 않고 유익한 정보를 얻을 수 있도록 주요 분기점마다 시인성이 높은 안내표지판을 정비하고 안내센터의 정보 제공 기능을 강화한다.",
+          "지역주민과의 우호적 관계를 유지하기 위해 주민 참여형 프로그램 및 친절 응대 교육 등을 지원하여 탐방객에게 긍정적인 지역 이미지를 전달한다."
+        ],
+        "korea_np_applicability_score": 5,
+        "korea_np_applicability_reason": "대한민국의 대표적인 국립공원인 지리산과 그 일대의 숲길(둘레길)을 직접 조사 대상으로 삼았으며, 전국의 국립공원 탐방로 및 둘레길 운영·관리 현장에 즉시 적용할 수 있는 탐방객 만족도 결정 요인을 분석했기 때문입니다.",
+        "study_location": "국내",
+        "related_work_areas": [
+          "탐방로·탐방객 관리",
+          "탐방객 서비스·안전",
+          "지역사회·거버넌스"
+        ],
+        "related_laws": [
+          "자연공원법 제20조",
+          "자연공원법 제28조"
+        ],
+        "field_checklist": [
+          "탐방로 주변의 자연경관이 훼손되거나 인공 시설물이 과도하게 설치되지 않았는지 확인",
+          "주요 갈림길과 위험 구간에 탐방객이 쉽게 알아볼 수 있는 안내표지판이 설치되어 있는지 점검",
+          "탐방안내센터 및 탐방지원센터에서 최신 숲길 정보와 지도 등이 원활하게 제공되고 있는지 확인",
+          "지역주민과의 소통 채널이 유지되고 있으며 주민 친절도 향상을 위한 협력이 이루어지고 있는지 점검",
+          "탐방로 시설물의 파손 상태 및 청결도가 정기적으로 점검되고 있는지 확인"
+        ],
+        "practical_utility_score": 5,
+        "cautions": [
+          "자연경관 중심의 관리를 강조하되, 탐방객 안전을 위한 필수 시설(데크, 난간 등)이 경관을 해치지 않는 범위 내에서 조화롭게 설치되도록 설계해야 한다.",
+          "안내표지판 및 편의시설 설치 시 예산 수립과 더불어 공원 내 자연환경에 미치는 영향(환경성 검토)을 사전 고려해야 한다."
+        ],
+        "tags": [
+          "지리산숲길",
+          "탐방객 만족도",
+          "행동의도",
+          "자연경관",
+          "안내표지판"
+        ],
+        "recommended_followup_research": [
+          "국립공원 유형별(산악형 vs 해상·해안형) 탐방로 이용객의 만족도 및 행동의도 비교 연구",
+          "지역주민과의 파트너십이 국립공원 숲길 탐방 만족도에 미치는 장기적 영향 분석"
+        ],
+        "ai_recommended_topics": [
+          "국립공원 탐방로 만족도",
+          "숲길 이용행태 및 행동의도",
+          "자연공원 탐방프레임워크"
+        ],
+        "analyzed_at": "2026-11-20T11:03:00Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
       "id": "W4308914436",
       "source": "openalex",
       "title": "Efficacy of Combining Education and Site Management in Reducing Off-Trail Travel in a Fragile Biotic Community, Acadia National Park",
@@ -24849,6 +25023,95 @@
           "National park natural disaster vulnerability mapping"
         ],
         "analyzed_at": "2026-09-15T08:25:13Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W2336040520",
+      "source": "openalex",
+      "title": "Habitat Connectivity between Soraksan and Odaesan National Parks with a Consideration of Wildlife Home Range",
+      "abstract": "설악산국립공원과 오대산국립공원은 20.7km 떨어져 있으나 백두대간의 중심에 위치하기 때 문에 야생동식물의 서식지와 이통통로로서 매우 중요하다 그러나 협소한 크기, 조각화, 지 리적 격리와 같은 경관적 특성에 의해 이 두 국립공원은 적절한 생태적 기능을 다하지 못하고 있다. 본 연구에서는 GIS 기법을 이용하여 두 국립공원과 인근 속초시, 고성군, 인제군, 양양군, 홍천군 일대 총 면적 $4573.6 km^2$ 인 지역을 대상으로 조각화 현상을 파악하였다. 또한 육식동물이며 보호종으로 지정된 삵의 서식지조건에 부합하는 경관조각을 파악하고 삵의 이동이 가능한 경관조각들의 연결망과 연결지점을 설정하였다. 다양한 도로와 인위적 시설로 인해 조사지역은 총 24,701개의 경관조각으로 단절되어 있었다. 식생과 최소 서식지면적, 조각간 거리와 같은 서식지 조건을 고려하였을 때 이 중 39개 경관조각이 삵의 잠재서식지로 선택되었다. 나아가 계방산과 방태산 일대의 3개 조각이 국립공원의 조각화와 고립화를 완화시킬 수 있는 연결망의 중심으로 확인되었다. 본 연구는 또한 점봉산과 방태산 일대의 조각이 삵이 두 국립공원으로 분산할 수 있는, 공급지로서 작용할 수 있음을 보여 주었다. 거의 모든 국립공원이 조사된 두 국립공원과 유사한 경관적 문제를 가지고 있기 때문에 야생 생물을 보전하기 위해서는 국립 공원과 인근 지역에서의 조각화 현상과 경관조각의 연결성을 평가하는 과제가 매우 시급하다고 사료된다. 【Soraksan National Park and Odaesan National Park, that are 20.7 km apart, should play an important role as habitats and corridors for wildlife because they are located in the center of Baekdudaegan. However, landscape features such as small area, fragmentation, and geographic isolation seem to impede the proper ecological functions of these two national parks. Using GIS technique, we examined the pattern of fragmentation in these two national parks and adjacent regions (Sokcho-si, Goseong-gun, Inje-gun, Yangyang-gun, and Hongcheon-gun) encompassing a total of $4573.5km^2$ in area. We then selected the patches suitable for an endangered carnivorous species, leopard cat, based on habitat conditions, and identified the network and stepping stone among patches to enable leopard cats to migrate. Diverse roads and artificial facilities in the study area generated a total of 24,701 patches: 39 patches among these were selected as potential habitats upon considering the habitat condition such as vegetation types and minimum area for leopard cat. Three patches nearby Gyebangsan and Bangtaesan were identified as a potential network center to relieve the effects of fragmentation and isolation of the two national parks. Our results also showed that patches containing Jombongsan and Bangtaesan would act as a source patch from there leopard cats can disperse to both national parks. It is an urgent task to identify the pattern of fragmentation and the connectivity between patches in national parks and adjacent areas for wildlife conservation because almost all national parks confront land- scape problems similar to the two national parks examined in this study.】",
+      "authors": [
+        "강혜순",
+        "Jin‐Young Kim",
+        "박경"
+      ],
+      "year": 2005,
+      "journal": "Korean Journal of Environment and Ecology",
+      "cited_by_count": 4,
+      "doi": "",
+      "is_oa": false,
+      "oa_url": "",
+      "concepts": [
+        "National park",
+        "Geography",
+        "Leopard",
+        "Wildlife",
+        "Habitat",
+        "Endangered species"
+      ],
+      "openalex_url": "https://openalex.org/W2336040520",
+      "ai_analysis": {
+        "title_ko": "야생동물의 행동권을 고려한 설악산국립공원과 오대산국립공원 간의 서식지 연결성 연구",
+        "abstract_ko": "설악산국립공원과 오대산국립공원은 20.7km 떨어져 있으나 백두대간의 중심에 위치하기 때문에 야생동식물의 서식지와 이동통로로서 매우 중요하다. 그러나 협소한 크기, 조각화, 지리적 격리와 같은 경관적 특성에 의해 이 두 국립공원은 적절한 생태적 기능을 다하지 못하고 있다. 본 연구에서는 GIS 기법을 이용하여 두 국립공원과 인근 속초시, 고성군, 인제군, 양양군, 홍천군 일대 총 면적 4,573.6㎢인 지역을 대상으로 조각화 현상을 파악하였다. 또한 육식동물이며 보호종으로 지정된 삵의 서식지조건에 부합하는 경관조각을 파악하고 삵의 이동이 가능한 경관조각들의 연결망과 연결지점을 설정하였다. 다양한 도로와 인위적 시설로 인해 조사지역은 총 24,701개의 경관조각으로 단절되어 있었다. 식생과 최소 서식지면적, 조각간 거리와 같은 서식지 조건을 고려했을 때 이 중 39개 경관조각이 삵의 잠재서식지로 선택되었다. 나아가 계방산과 방태산 일대의 3개 조각이 국립공원의 조각화와 고립화를 완화시킬 수 있는 연결망의 중심으로 확인되었다. 본 연구는 또한 점봉산과 방태산 일대의 조각이 삵이 두 국립공원으로 분산할 수 있는 공급지로서 작용할 수 있음을 보여주었다. 거의 모든 국립공원이 조사된 두 국립공원과 유사한 경관적 문제를 가지고 있기 때문에 야생 생물을 보전하기 위해서는 국립공원과 인근 지역에서의 조각화 현상과 경관조각의 연결성을 평가하는 과제가 매우 시급하다고 사료된다.",
+        "summary_3lines": [
+          "백두대간 중심부에 위치한 설악산과 오대산국립공원은 도로와 인위적 시설로 인해 심각한 서식지 조각화와 고립 문제를 겪고 있다.",
+          "GIS 기법과 삵의 생태적 특성을 활용하여 분석한 결과, 조사지역 내 24,701개의 조각 중 39개가 잠재서식지로 도출되었다.",
+          "계방산과 방태산 일대가 두 국립공원의 서식지 연결성을 회복하는 핵심 생태축이자 공급지 역할을 하는 것으로 확인되었다."
+        ],
+        "research_purpose": "본 연구는 설악산국립공원과 오대산국립공원 및 인근 지역의 경관 조각화 실태를 파악하고, 보호종인 삵의 서식지 조건과 행동권을 고려하여 두 공원 간의 생태적 연결망과 핵심 이동 거점을 규명하는 것을 목적으로 한다.",
+        "key_findings": [
+          "다양한 도로와 인위적 시설로 인해 연구 대상 지역 전체가 24,701개의 경관조각으로 심각하게 단절됨",
+          "삵의 식생, 최소 서식지 면적, 조각 간 거리 조건을 충족하는 잠재서식지 조각 39개소 도출",
+          "계방산 및 방태산 일대의 3개 조각이 국립공원 간 고립을 완화하는 핵심 연결망 중심지 및 개체군 공급지로 작용함을 확인"
+        ],
+        "practical_applications": [
+          "국립공원 외곽 인근 지역의 경관 조각화 및 생태축 단절 현황 모니터링 체계 구축에 활용",
+          "멸종위기종 및 핵심 야생동물의 행동권을 반영한 생태통로(Eco-bridge) 설치 위치 선정 시 기초자료로 활용",
+          "백두대간 보호지역 및 인접 완충지역의 토지 이용 및 개발 계획 수립 시 생태적 연결성 평가 지표로 적용"
+        ],
+        "korea_np_applicability_score": 5,
+        "korea_np_applicability_reason": "대한민국의 대표적인 백두대간 산악형 국립공원인 설악산과 오대산을 직접 다루고 있으며, 국내 국립공원 전반의 공통적인 과제인 서식지 단절과 생태축 연결성 평가에 직접적인 방법론을 제공하기 때문입니다.",
+        "study_location": "국내",
+        "related_work_areas": [
+          "야생생물·서식지 관리",
+          "자원보전·복원",
+          "공원계획·구역관리"
+        ],
+        "related_laws": [
+          "자연공원법 제18조",
+          "야생생물 보호 및 관리에 관한 법률 제4조",
+          "백두대간 보호에 관한 법률 제6조"
+        ],
+        "field_checklist": [
+          "공원 경계 외부 인접 지역의 도로 및 인위적 시설에 의한 서식지 단절 구간 현황 확인",
+          "목표 깃대종 및 중대형 포유류의 행동권 및 최소 서식지 면적 기준 충족 여부 점검",
+          "핵심 생태축(계방산, 방태산 등) 주변의 산림 훼손 및 개발 압력 실태 조사",
+          "국립공원 간 개체군 이동을 매개할 수 있는 징검다리(Stepping stone) 조각의 식생 상태 확인",
+          "단절된 생태축 상에 설치된 기존 생태통로의 이용 효율성 및 훼손 여부 모니터링"
+        ],
+        "practical_utility_score": 5,
+        "cautions": [
+          "대상 종의 생태적 특성(행동권, 이동 거리 등)에 따라 도출되는 핵심 연결 거점이 달라질 수 있으므로 종별 특성 고려 필요",
+          "공원 구역 외 사유지 및 인근 지자체 관할 구역에 걸쳐 있는 연결지에 대해서는 유관기관과의 협력 체계 구축 선행 필요"
+        ],
+        "tags": [
+          "서식지 연결성",
+          "경관 조각화",
+          "백두대간",
+          "생태축",
+          "삵"
+        ],
+        "recommended_followup_research": [
+          "현장 무인센서카메라 조사를 통한 도출된 연결지점(징검다리 조각)의 실제 야생동물 이용 빈도 검증 연구",
+          "기후변화와 서식지 이동 거리를 고려한 장기적인 국립공원 간 생태 네트워크 변화 예측 모델링"
+        ],
+        "ai_recommended_topics": [
+          "백두대간 생태축 연결성 평가",
+          "GIS 기반 야생동물 서식지 네트워크 분석",
+          "국립공원 경관 조각화 및 생태통로 최적지 선정"
+        ],
+        "analyzed_at": "2026-11-20T11:03:38Z",
         "model": "gemini-flash-lite-latest"
       }
     },
@@ -33527,6 +33790,274 @@
       }
     },
     {
+      "id": "W2980902630",
+      "source": "openalex",
+      "title": "Distribution of spontaneously growing mushrooms in the juwangsan national park",
+      "abstract": "주왕산국립공원 내 자생버섯 자원의 서식지별 관리방안을 수립하고 생물다양성, 생태계다양성을 유지하기 위한 기초자료를 제공하기 위해서 2017년 4월부터 10월까지 7개월 동안 버섯조사를 실시하였다. 총 조사된 버섯은 2문, 8강, 21목, 85과 225속, 503분류군이 조사되었다. 분류군별로 보면 주름버섯목이 247분류군으로 48.8%의 분포를 보였으며, 구멍장이버섯목과 무당버섯목이 뒤를 이어 다수 발생하는 종으로 확인되었다. 8월에 가장 많은 종이 출현하였고 해발고도 300-400m 사이에서 가장 많은 분포를 보였는데 이 중 상의지구, 대전사 인근지역과, 거대리 샘골 지역에서 가장 많은 버섯 종류가 조사되었다. 기후변화지표종 중 큰갓버섯과 노루털버섯(능이)이 출현하였다. Mushrooms growing spontaneously in the Juwangsan National Park were surveyed from April to October 2017 for supporting management of higher fungi and creating a bio-diversity database of the park. In total, two divisions, eight classes, 21 orders, 85 families, 225 genera, and 503 species were detected. Among them, 247 species belonged to order Agaricales, which occupied 48.8% of the population, followed by members of orders Polyporales and Russulales. The mushrooms were abundant in August, and an altitude of 300-400 m above sea level was optimal for their growth, such as those found at Sanguijigu, Deajeonsa, and Geodaeri semgoal areas. Furthermore, Macrolepiota procera and Sarcodon aspratus, which belong to criteria of climate change, were detected in this survey.",
+      "authors": [
+        "Pyung Yeol Ko",
+        "Seung-Hak Lee",
+        "Tae-Heon Kim",
+        "Suck-Young Choe",
+        "Ki-Sung Hong",
+        "Yong Chull Jeun"
+      ],
+      "year": 2018,
+      "journal": "Journal of Mushrooms",
+      "cited_by_count": 2,
+      "doi": "https://doi.org/10.14480/jm.2018.16.2.65",
+      "is_oa": true,
+      "oa_url": "https://www.koreascience.kr:443/article/JAKO202028959352857.pdf",
+      "concepts": [
+        "National park",
+        "Mushroom",
+        "Distribution (mathematics)",
+        "Environmental science",
+        "Ecology",
+        "Chemistry"
+      ],
+      "openalex_url": "https://openalex.org/W2980902630",
+      "ai_analysis": {
+        "title_ko": "주왕산국립공원 내 자생버섯 분포 특성",
+        "abstract_ko": "주왕산국립공원 내 자생버섯 자원의 서식지별 관리 방안을 수립하고 생물다양성 및 생태계다양성을 유지하기 위한 기초자료를 확보하기 위해 2017년 4월부터 10월까지 7개월 동안 버섯 조사를 실시하였다. 조사 결과 총 2문, 8강, 21목, 85과, 225속에 속하는 503분류군의 버섯이 확인되었다. 분류군별로는 주름버섯목이 247분류군(48.8%)으로 가장 높은 비율을 차지했으며, 구멍장이버섯목과 무당버섯목이 뒤를 이었다. 시기별로는 8월에 가장 많은 종이 출현하였고, 해발고도 300~400m 구간에서 가장 높은 분포를 보였다. 지역별으로는 상의지구, 대전사 인근, 거대리 샘골 지역에서 버섯 종류가 가장 다양하게 조사되었다. 특히 기후변화 지표종인 큰갓버섯과 노루털버섯(능이)이 발견되어 기후변화 모니터링의 중요성이 확인되었다.",
+        "summary_3lines": [
+          "주왕산국립공원의 생물다양성 유지와 자생버섯 서식지 관리를 위한 기초자료 확보를 목적으로 버섯상 조사를 수행했다.",
+          "7개월간의 조사 결과 503분류군의 버섯이 확인되었으며 8월, 해발 300~400m 구간, 특정 탐방 지구 인근에서 출현 빈도가 높았다.",
+          "확인된 기후변화 지표종 등의 분포 데이터를 활용하여 국립공원 내 서식지 관리 및 기후변화 모니터링 체계를 고도화해야 한다."
+        ],
+        "research_purpose": "본 연구는 주왕산국립공원 내 자생버섯의 종 다양성과 서식 분포 특성을 파악하여 고등균류 관리 방안을 수립하고, 공원 내 생물다양성 및 생태계다양성 데이터베이스를 구축하기 위한 기초자료를 제공하고자 수행되었다.",
+        "key_findings": [
+          "총 2문 8강 21목 85과 225속 503분류군의 자생버섯이 서식하는 것으로 확인됨",
+          "주름버섯목(48.8%), 구멍장이버섯목, 무당버섯목 순으로 종 다양성이 높게 나타남",
+          "8월과 해발고도 300~400m 구간(상의지구, 대전사, 샘골 지역 등)에서 버섯 출현 빈도와 종 다양성이 가장 높음",
+          "기후변화 지표종인 큰갓버섯과 노루털버섯(능이)의 서식이 확인됨"
+        ],
+        "practical_applications": [
+          "탐방객 밀집 지역 및 저지대(해발 300~400m) 버섯 풍부 지역에 대한 서식지 보호 안내판 설치 및 훼손 방지 대책 수립",
+          "기후변화 지표종(큰갓버섯, 노루털버섯 등)의 정기적인 계절별 모니터링을 통한 기후변화 영향 평가 지표 활용",
+          "가을철 탐방객의 임산물(버섯 등) 불법 채취 성행 지역에 대한 순찰 강화 및 단속 활동 전개"
+        ],
+        "korea_np_applicability_score": 5,
+        "korea_np_applicability_reason": "국내 국립공원의 생태계 건강성 평가 및 자생 버섯류 모니터링 방법에 직접 적용할 수 있으며, 탐방객의 불법 채취 방지 및 서식지 보호 실무에 곧바로 활용 가능하다.",
+        "study_location": "국내",
+        "related_work_areas": [
+          "생태계 모니터링·조사",
+          "야생생물·서식지 관리"
+        ],
+        "related_laws": [
+          "자연공원법 제23조",
+          "야생생물 보호 및 관리에 관한 법률 제14조"
+        ],
+        "field_checklist": [
+          "주요 탐방로 주변 해발 300~400m 구간의 버섯 서식 밀집 지역 확인 여부",
+          "8월 집중 출현 시기 대비 생태계 교란 및 불법 채취 우려 지역 순찰 계획 수립 여부",
+          "큰갓버섯, 능이 등 기후변화 지표종의 서식지 현황 및 개체수 변동 모니터링 실시 여부",
+          "탐방객 대상 무단 임산물 채취 금지 계도 현수막 및 안내판 설치 상태 점검",
+          "탐방로변 서식지 훼손을 막기 위한 샛길 통제 시설 점검 여부"
+        ],
+        "practical_utility_score": 5,
+        "cautions": [
+          "독버섯과 식용버섯을 오인하여 탐방객이 무단 채취하는 행위가 발생하지 않도록 적극적인 계도가 필요함",
+          "버섯 조사는 계절적 요인(특히 4월~10월)과 기상 상황에 크게 좌우되므로 현장 조사 일정 수립 시 전문가와 협력해야 함"
+        ],
+        "tags": [
+          "자생버섯",
+          "생물다양성",
+          "주왕산국립공원",
+          "기후변화지표종",
+          "서식지관리"
+        ],
+        "recommended_followup_research": [
+          "기후변화에 따른 국립공원 내 버섯류 출현 시기 및 분포 변화 장기 모니터링 연구",
+          "탐방객 이용 압력이 자생 고등균류의 종 다양성에 미치는 영향 분석"
+        ],
+        "ai_recommended_topics": [
+          "국립공원 버섯 생물다양성",
+          "기후변화 지표 버섯 모니터링"
+        ],
+        "analyzed_at": "2026-11-20T11:01:44Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W3146664731",
+      "source": "openalex",
+      "title": "Floristic Study of Juwangsan National Park in Korea",
+      "abstract": "주왕산국립공원의 관속식물상을 2017년도 3월부터 10월까지 총 13회에 걸쳐 조사하였다. 증거표본과 사진을 바탕으로 작성한 소산 관속식물은 112과 399속 672종 4아종 72변종 10품종의 총 758분류군으로 확인되었다. 이 중 기존의 조사에서는 발견되지 않았으나 본 조사에서 최초로 밝혀진 분류군은 221분류군이었다. 멸종위기야생식물은 가시오갈피, 큰바늘꽃 등 2분류군이 확인되었고, 희귀식물은 깽깽이풀, 백작약, 꼭지연잎꿩의다리 등 5분류군이 관찰되었다. 한반도 고유식물은 날개현호색, 노랑무늬붓꽃, 몽울토현삼 등 20분류군이 조사되었고, 식물구계학적 특정식물종은 III~V등급에 해당하는 40분류군이 확인되었다. 귀화식물은 총 55분류군으로 조사되었고, 생태계교란종은 가시상추, 돼지풀, 미국쑥부쟁이 등 3분류군이 확인되었다. 기후변화 취약종은 총 36분류군이 분포하였고, 북방계 21분류군, 남방계 2분류군, 관심식물은 13분류군으로 확인되었다. A floristic study on the vascular plants from Juwangsan National Park was conducted 13 times in total, from March to October 2017. Based on the voucher specimens and pictures, it was revealed that the vascular plants in this region comprised 758 taxa: 112 families, 399 genera, 672 species, 4 subspecies, 72 varieties, and 10 forma. Among these plants, 221 taxa were recorded for the first time from this region. The taxa in category II of endangered plants designated by the Korean Ministry of Environment were two taxa, including Eleutherococcus senticosus (Rupr. & Maxim.) Maxim. and Epilobium hirsutum L. The rare plants numbered 5 taxa designated by National Institute of Biological Resources were also found. 20 taxa of Korean endemic plants including Corydalis alata B.U.Oh & W.R.Lee, Iris odaesanensis Y.N.Lee, and Scrophularia cephalantha Nakai were investigated in this region. 40 taxa of floristic regional indicator plants in the 3rd to the 5th degrees were identified. Naturalized plants of 55 taxa were recorded, and 3 taxa of ecosystem disturbance plants, which were Ambrosia artemisiifolia L., Aster pilosus Willd., and Lactuca scariola L., also found.",
+      "authors": [
+        "Hyun‐Do Jang",
+        "Hyosun Leem",
+        "Seahee Han",
+        "Soonku So"
+      ],
+      "year": 2019,
+      "journal": "한국자원식물학회지",
+      "cited_by_count": 2,
+      "doi": "https://doi.org/10.7732/kjpr.2019.32.4.379",
+      "is_oa": true,
+      "oa_url": "http://koreascience.or.kr/journal/view.jsp?kj=JOSMBA&py=2019&vnc=v32n4&sp=379",
+      "concepts": [
+        "Floristics",
+        "Geography",
+        "National park",
+        "Forestry",
+        "Ecology",
+        "Archaeology"
+      ],
+      "openalex_url": "https://openalex.org/W3146664731",
+      "ai_analysis": {
+        "title_ko": "주왕산국립공원의 관속식물상 연구",
+        "abstract_ko": "주왕산국립공원의 관속식물상 분포 현황을 파악하기 위해 2017년 3월부터 10월까지 총 13회에 걸쳐 조사를 실시하였다. 증거표본과 사진을 바탕으로 확인된 소산 관속식물은 총 112과 399속 672종 4아종 72변종 10품종의 총 758분류군이며, 이 중 221분류군은 이번 조사에서 새롭게 확인되었다. 주요 보호 대상 식물로는 멸종위기야생식물 2분류군(가시오갈피, 큰바늘꽃), 희귀식물 5분류군, 한반도 고유식물 20분류군, 식물구계학적 특정식물종(III~V등급) 40분류군이 조사되었다. 또한 귀화식물은 55분류군이 확인되었으며, 이 중 생태계교란종은 가시상추, 돼지풀, 미국쑥부쟁이 등 3분류군이 포함되었다. 기후변화 취약종은 북방계 21분류군, 남방계 2분류군을 포함하여 총 36분류군이 분포하는 것으로 나타났다.",
+        "summary_3lines": [
+          "주왕산국립공원의 생물다양성 보전과 관리 체계 수립을 위해 관속식물상 현황을 조사하였다.",
+          "총 758분류군의 관속식물을 확인하였고, 이 중 신규 발견 종과 멸종위기종, 귀화식물 및 기후변화 취약종의 분포를 파악하였다.",
+          "확인된 보호 야생식물 및 생태계교란종의 분포 현황을 바탕으로 맞춤형 공원 자원 관리 및 교란 생물 방제에 활용한다."
+        ],
+        "research_purpose": "본 연구는 주왕산국립공원 내 자생하는 관속식물의 전체적인 종 구성과 분포 현황을 정확히 파악하여 공원 자원 보전 및 관리 계획 수립의 기초 자료를 제공하는 것을 목적으로 한다. 아울러 신규 출현종, 희귀 및 고유식물, 그리고 생태계교란종과 기후변화 취약종의 현황을 분석하여 효과적인 현장 관리 방안을 도출하고자 하였다.",
+        "key_findings": [
+          "주왕산국립공원에서 총 112과 399속 672종 4아종 72변종 10품종 등 총 758분류군의 관속식물 확인 (신규 221분류군 포함)",
+          "멸종위기야생식물 2분류군(가시오갈피, 큰바늘꽃), 희귀식물 5분류군, 한반도 고유식물 20분류군 서식 확인",
+          "귀화식물 55분류군 중 생태계교란종 3분류군(가시상추, 돼지풀, 미국쑥부쟁이)과 기후변화 취약종 36분류군 분포 확인"
+        ],
+        "practical_applications": [
+          "탐방로 주변 및 교란 지역에 서식하는 생태계교란종(가시상추, 돼지풀, 미국쑥부쟁이)에 대한 집중 제거 및 모니터링 실시",
+          "멸종위기식물 및 희귀식물 자생지의 불법 채취 방지를 위한 순찰 강화 및 보호울타리 설치 등 서식지 보호 조치",
+          "기후변화 취약종(북방계 및 남방계 식물)의 장기 생태 변화 모니터링을 통한 기후변화 대응 전략 수립"
+        ],
+        "korea_np_applicability_score": 5,
+        "korea_np_applicability_reason": "대한민국 국립공원(주왕산)을 직접 조사한 현장 연구로, 국내 국립공원 자원 모니터링, 생태계 보전 및 훼손지 복원 사업에 직접적이고 즉각적인 근거 자료로 활용될 수 있음.",
+        "study_location": "국내",
+        "related_work_areas": [
+          "생태계 모니터링·조사",
+          "자원보전·복원",
+          "기후변화 대응"
+        ],
+        "related_laws": [
+          "자연공원법 제23조(행위허가 등)",
+          "야생생물 보호 및 관리에 관한 법률 제14조(멸종위기 야생생물의 포획·채취 등 금지)"
+        ],
+        "field_checklist": [
+          "탐방로 주변 생태계교란 야생식물(가시상추, 돼지풀 등) 서식 여부 및 확산 상태 확인",
+          "멸종위기야생식물 및 희귀식물 자생지 내 인위적 훼손 또는 불법 채취 흔적 점검",
+          "기후변화 취약종(북방계·남방계 식물)의 군락지 생육 상태 및 환경 변화 모니터링",
+          "신규 발견 식물 및 구계학적 특정식물종 분포 지역의 공원계획 적합성 검토",
+          "탐방객 출입이 잦은 지역의 외래식물 유입 및 정착 현황 주기적 조사"
+        ],
+        "practical_utility_score": 5,
+        "cautions": [
+          "식물상 조사는 계절적 요인(생육기 및 개화기)에 따라 결과가 달라질 수 있으므로 조사 시기 준수 필요",
+          "멸종위기종 및 희귀식물 자생지 위치 정보 노출 시 불법 채취 우려가 있으므로 보안 유지 철저"
+        ],
+        "tags": [
+          "주왕산국립공원",
+          "관속식물상",
+          "생태계교란종",
+          "멸종위기식물",
+          "기후변화취약종"
+        ],
+        "recommended_followup_research": [
+          "기후변화에 따른 주왕산국립공원 북방계 및 남방계 식물의 장기 생태 변화 추적 조사",
+          "생태계교란 야생식물의 확산 경로 분석 및 효율적인 제거·복원 공법 연구"
+        ],
+        "ai_recommended_topics": [
+          "국립공원 식물상 조사",
+          "외래식물 및 교란종 모니터링",
+          "기후변화 취약 식물종 관리"
+        ],
+        "analyzed_at": "2026-11-20T11:00:14Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W4408044251",
+      "source": "openalex",
+      "title": "Construction of Tree-based Forest Management Digital Twin Database with Airborne Laser Surveying",
+      "abstract": "Recently, in the forestry sector, the carbon fixation capacity of forests has been highlighted for climate change response.In addition, the need for reliable forest management information is increasing for large-scale forest disaster response such as landslides and forest fires.In order to generate essential data for forest management, horizontal structure surveys, such as tree species and forest type, and vertical structure surveys, such as tree height and diameter at breast height (DBH), must be conducted.In this study, a comprehensive survey method using multisensor airborne LiDAR surveying was introduced for Chiaksan National Park (8.32 km 2 ), which is a natural forest.The forest survey method applied in this study was a two-step method that performed object-based forest type classification using high-resolution orthoimages, and then performed individual tree detection (ITD) for each forest using high-density ALS data.As a result of this study, object-based forest type classification using orthophotos showed a classification accuracy of more than 95% for both coniferous and deciduous trees.In addition, in the ITD of natural forests by forest type, the quality of conifers was good, but the ITD quality was higher than 73%.In this process, a method for generating essential data for tree-based forest management, such as tree height and DBH, was established.In addition, we established a process for calculating the stem volume, biomass, and carbon storage capacity of the extracted trees, and created a total of 18 forest management digital twin databases for all trees in the research area.The tree-based forest management digital twin database for national park natural forests constructed through this study was used for the 2D and 3D visualization of various forest management information as well as for the demonstration construction of a forest management digital twin pilot system.Such a tree-based forest management digital twin can quickly confirm more accurate information necessary for forest management by tree unit, so it is expected to be efficiently utilized for establishing a carbon neutrality transition strategy as well as for simulating forest disasters for the conservation management of forest resources.",
+      "authors": [
+        "Seong Hwan Jo",
+        "Sang In Park",
+        "Sung Ryong Yang",
+        "Hyun Jik Lee"
+      ],
+      "year": 2025,
+      "journal": "Sensors and Materials",
+      "cited_by_count": 2,
+      "doi": "https://doi.org/10.18494/sam5346",
+      "is_oa": true,
+      "oa_url": "https://sensors.myu-group.co.jp/sm_pdf/SM3950.pdf",
+      "concepts": [
+        "Database",
+        "Tree (set theory)",
+        "Remote sensing",
+        "Laser",
+        "Computer science",
+        "Environmental science"
+      ],
+      "openalex_url": "https://openalex.org/W4408044251",
+      "ai_analysis": {
+        "title_ko": "항공 라이다 측량을 이용한 수목 기반 산림관리 디지털 트윈 데이터베이스 구축",
+        "abstract_ko": "최근 임업 부문에서는 기후변화 대응을 위해 산림의 탄소 흡수 능력이 주목받고 있으며, 산사태 및 산불 등 대규모 산림 재난 대응을 위해 신뢰할 수 있는 산림 관리 정보의 필요성도 증가하고 있다. 산림 관리에 필수적인 데이터를 생성하기 위해서는 수종 및 숲 유형과 같은 수평 구조 조사와 수고 및 흉고직경(DBH)과 같은 수직 구조 조사가 수행되어야 한다. 본 연구에서는 자연림인 치악산국립공원(8.32㎢)을 대상으로 다중 센서 항공 라이다(LiDAR) 측량을 활용한 종합적인 조사 기법을 도입하였다. 본 연구에 적용된 산림 조사 방법은 고해상도 정사영상을 이용하여 객체 기반 수종 분류를 수행한 뒤, 고밀도 항공 라이다 데이터를 활용하여 각 산림 내 개별 나무 탐지(ITD)를 수행하는 2단계 방식이었다. 연구 결과, 정사영상을 이용한 객체 기반 수종 분류는 침엽수와 활엽수 모두에서 95% 이상의 분류 정확도를 보였다. 또한 수종별 자연림 개별 나무 탐지(ITD) 과정에서 침엽수의 품질은 양호하였으며, 개별 나무 탐지 품질은 73% 이상이었다. 이 과정에서 수고 및 흉고직경 등 수목 기반 산림 관리 필수 데이터를 생성하는 방법론이 확립되었다. 아울러 추출된 나무의 재적, 생체량, 탄소 저장량을 산정하는 프로세스를 구축하여 연구 지역 내 모든 나무에 대한 총 18개의 산림 관리 디지털 트윈 데이터베이스를 생성하였다. 본 연구를 통해 구축된 국립공원 자연림 수목 기반 산림 관리 디지털 트윈 데이터베이스는 다양한 산림 관리 정보의 2차원 및 3차원 시각화뿐만 아니라 산림 관리 디지털 트윈 파일럿 시스템의 실증 구축에도 활용되었다. 이러한 수목 기반 산림 관리 디지털 트윈은 수목 단위로 산림 관리에 필요한 보다 정확한 정보를 신속하게 확인할 수 있어, 산림 자원의 보전 관리를 위한 산림 재난 시뮬레이션뿐만 아니라 탄소중립 전환 전략 수립에도 효율적으로 활용될 것으로 기대된다.",
+        "summary_3lines": [
+          "기후변화 대응과 산림 재난 관리를 위한 정밀한 수목 단위 산림 정보 구축의 필요성이 대두됨에 따라 본 연구는 항공 라이다와 고해상도 정사영상을 활용한 디지털 트윈 DB 구축 방안을 제시하였다.",
+          "치악산국립공원을 대상으로 2단계 객체 기반 수종 분류 및 개별 나무 탐지(ITD)를 수행한 결과, 95% 이상의 수종 분류 정확도와 73% 이상의 개별 나무 탐지 품질을 달성하고 탄소저장량 산정 프로세스를 확립하였다.",
+          "구축된 수목 기반 디지털 트윈 데이터베이스는 2·3차원 시각화와 재난 시뮬레이션 및 탄소중립 전략 수립에 효율적으로 활용될 수 있다."
+        ],
+        "research_purpose": "본 연구의 목적은 기후변화 대응 및 산림 재난(산불, 산사태 등) 대응을 위한 고정밀 산림 관리 정보를 확보하기 위해, 항공 라이다와 고해상도 정사영상을 융합한 수목 기반의 산림 디지털 트윈 데이터베이스 구축 방법론을 개발하고 그 적용성을 검증하는 것이다.",
+        "key_findings": [
+          "고해상도 정사영상을 이용한 객체 기반 수종 분류 결과 침엽수와 활엽수 모두 95% 이상의 높은 분류 정확도를 기록함",
+          "고밀도 항공 라이다를 활용한 자연림 내 개별 나무 탐지(ITD) 품질이 73% 이상으로 나타나 수목 단위 분석의 신뢰성을 확보함",
+          "추출된 수목 데이터를 바탕으로 수고, 흉고직경, 재적, 생체량, 탄소 저장량을 산정하여 총 18개의 산림 관리 디지털 트윈 DB를 구축함"
+        ],
+        "practical_applications": [
+          "국립공원 내 대규모 산림 재난(산불, 산사태 등) 예측 및 시뮬레이션 시스템 구축에 항공 라이다 기반 수목 데이터 활용",
+          "탄소중립 정책 수립 및 공원 내 산림 생태계의 탄소 흡수량 산정을 위한 수목 단위 디지털 트윈 DB 적용",
+          "공원 내 탐방로 주변 및 주요 생태 경관 지역의 3차원 가상공간(디지털 트윈) 시각화를 통한 정밀 자원 관리 체계 도입"
+        ],
+        "korea_np_applicability_score": 5,
+        "korea_np_applicability_reason": "실제 국내 국립공원(치악산)을 대상으로 연구가 수행되었으며, 산악 지형이 대부분인 국내 국립공원의 특성상 수목 단위의 정밀 생태계 조사 및 탄소 흡수량 산정, 재난 관리에 즉시 적용 가능한 실효성을 지님",
+        "study_location": "국내",
+        "related_work_areas": [
+          "생태계 모니터링·조사",
+          "재난·안전 관리",
+          "기후변화 대응"
+        ],
+        "related_laws": [
+          "자연공원법 제18조",
+          "산림자원의 조성 및 관리에 관한 법률 제18조",
+          "기후위기 대응을 위한 탄소중립·녹색성장 기본법 제25조"
+        ],
+        "field_checklist": [
+          "연구 대상 국립공원 내 고밀도 항공 라이다(ALS) 및 고해상도 정사영상 취득 계획 수립 여부",
+          "객체 기반 수종 분류(침엽수/활엽수) 정확도가 현장 검증(GCP 등)을 통해 95% 수준을 충족하는지 확인",
+          "개별 나무 탐지(ITD) 알고리즘을 통한 수고 및 흉고직경(DBH) 추출 결과의 현장 오차 범위 분석",
+          "추출된 수목 데이터를 기반으로 한 생체량 및 탄소 저장량 산정 공식의 국내 임상 적합성 검토",
+          "구축된 디지털 트윈 DB의 2D·3D 시각화 시스템 연계 및 재난 시뮬레이션 활용 가능성 점검"
+        ],
+        "practical_utility_score": 5,
+        "cautions": [
+          "고밀도 항공 라이다 및 고해상도 영상 구축을 위해 초기 예산과 전문 인력이 소요됨",
+          "수관이 겹치는 조밀한 활엽수림의 경우 개별 나무 탐지(ITD) 정확도가 떨어질 수 있으므로 현장 검측을 통한 보정이 필수적임"
+        ],
+        "tags": [
+          "디지털 트윈",
+          "항공 라이다",
+          "수종 분류",
+          "탄소 흡수량",
+          "산림 재난 관리"
+        ],
+        "recommended_followup_research": [
+          "국내 타 국립공원의 다양한 임상(소나무림, 참나무림 등)을 대상으로 한 개별 나무 탐지 알고리즘 고도화 연구",
+          "항공 라이다 기반 디지털 트윈 데이터를 활용한 실시간 산불 확산 및 산사태 위험 예측 시뮬레이션 고도화 연구"
+        ],
+        "ai_recommended_topics": [
+          "Airborne LiDAR forest digital twin",
+          "Individual tree detection national park"
+        ],
+        "analyzed_at": "2026-11-20T10:59:48Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
       "id": "W4391926546",
       "source": "openalex",
       "title": "Water Erosion Processes on the Geotouristic Trails of Serra da Bocaina National Park Coast, Rio de Janeiro State, Brazil",
@@ -41669,6 +42200,180 @@
           "국립공원 지질명소 안전관리"
         ],
         "analyzed_at": "2026-11-19T11:11:51Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W2782101463",
+      "source": "openalex",
+      "title": "Vascular Plants Distributed in the Berchemia berchemiaefolia of Special Protection Zones of Songnisan National Park",
+      "abstract": "This study investigated in the vascular plants of special protection zones (the native land of Berchemia berchemiaefolia in Sadam-ri and Gallon valley) of Songnisan National Park and identified the whole vascular plants. The numbers of vascular plants were summarized as 273 taxa including 82 families, 182 genera, 236 species, 3 subspecies, 28 varieties and 6 forms. Woody plants were identified as 124 taxa (45.4%) and herbaceous plants as 149 taxa (54.6%). A total of 107 taxa were identified in the area of Sadam-ri, and 246 taxa were found in the Gallon valley. A total of 8 taxa of rare plants were identified, each of which was divided into 1 taxa of endangered (EN; Daphne pseudomezereum var. koreana), 3 taxa of vulnerable (VU; Paeonia japonica, Berchemia berchemiaefolia and Iris minutiaurea), 3 taxa of least concern (LC; Aristolochia contorta, Syringa patula var. kamibayshii and Goodyera schlechtendaliana) and 1 taxa of data deficient (DD; Alangium platanifolium). The Korean endemic plants were 9 taxa (Clematis trichotoma, Thalictrum actaefolium var. brevistylum, Aster koraiensis, Cirsium setidens, etc.). In the specific plants by floristic region were 34 taxa, a degree I were 17 taxa (Chloranthus japonicus, Celastrus stephanotifolius, etc.), 9 taxa of a degree II (Euonymus pauciflorus, Acer triflorum, etc.), 4 taxa of a degree III (Aconitum longecassidatum, Angelica gigas, etc.), 2 taxa of a degree IV (Ulmus macrocarpa and Daphne pseudomezereum var. koreana), 2 taxa of a degree V (Berchemia berchemiaefolia and Alangium platanifolium). The naturalized plants were 5 taxa including Fallopia dumetorum, Trifolium repens, Ailanthus altissima, Oenothera biennis, Erigeron annuus. Naturalization rate (NR) was 1.8% of all 273 taxa of vascular plants and the invasive alien plants were not found. The purpose of this study is to identify the flora that grows in the special protection zones of Songnisan National Park and provide the basic data for the management of the special protection zone in the future.",
+      "authors": [
+        "Hyun‐Kyung Oh",
+        "Young‐Ha Kim",
+        "Sang-Gi Yun"
+      ],
+      "year": 2017,
+      "journal": "Journal of the Korea Society of Environmental Restoration Technology",
+      "cited_by_count": 1,
+      "doi": "https://doi.org/10.13087/kosert.2017.20.3.33",
+      "is_oa": true,
+      "oa_url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002242685",
+      "concepts": [
+        "Geography",
+        "National park",
+        "Forestry",
+        "Archaeology"
+      ],
+      "openalex_url": "https://openalex.org/W2782101463",
+      "ai_analysis": {
+        "title_ko": "속리산국립공원 특별보호구역(망개나무 자생지)의 관속식물 분포 특성",
+        "abstract_ko": "본 연구는 속리산국립공원 특별보호구역(사담리 및 갈론계곡의 망개나무 자생지)에 분포하는 관속식물을 조사하여 전체 식물상을 파악하였다. 관속식물은 총 82과 182속 236종 3아종 28변종 6품종 등 총 273분류군으로 정리되었다. 목본식물은 124분류군(45.4%), 초본식물은 149분류군(54.6%)으로 나타났다. 사담리 지역에서는 총 107분류군, 갈론계곡에서는 246분류군이 확인되었다. 희귀식물은 총 8분류군이 확인되었으며, 멸종위기종(EN) 1분류군(개서어나무), 취약종(VU) 3분류군(모란, 망개나무, 각시원추리), 약관심종(LC) 3분류군(쥐방울덩굴, 털개회나무, 백운란), 정보부족종(DD) 1분류군(참나무잎피나무)으로 분류되었다. 한국 특산식물은 싹싯누리, 할미밀망 등 9분류군이었다. 식물구계학적 특정식물은 34분류군으로, I등급 17분류군, II등급 9분류군, III등급 4분류군, IV등급 2분류군, V등급 2분류군이 확인되었다. 귀화식물은 덩굴개별꽃, 토끼풀, 가죽나무, 달맞이꽃, 개망초 등 5분류군이었으며, 귀화율은 전체 관속식물의 1.8%였고 생태계교종은 발견되지 않았다. 본 연구의 목적은 속리산국립공원 특별보호구역에 자생하는 식물상을 파악하고 향후 특별보호구역 관리를 위한 기초 자료를 제공하는 것이다.",
+        "summary_3lines": [
+          "속리산국립공원 특별보호구역 내 망개나무 자생지의 관속식물 분포 현황과 식물상을 정밀 조사하여 보전 기초 자료를 확보하고자 하였다.",
+          "조사 결과 총 273분류군의 관속식물이 확인되었으며, 8종의 희귀식물과 9종의 특산식물, 그리고 식물구계학적 특정식물 34분류군이 자생하는 것으로 나타났다.",
+          "본 조사에서 파악된 보호가치 높은 식물 자원과 구역별 식생 특성은 향후 국립공원 특별보호구역의 맞춤형 식생 관리 및 보전 전략 수립에 활용해야 한다."
+        ],
+        "research_purpose": "본 연구는 속리산국립공원 내 대표적인 식물 자생지인 특별보호구역(사담리, 갈론계곡)의 관속식물상 분포를 정밀 파악하고, 희귀식물 및 특산식물의 현황을 조사하여 향후 공원 자원 보전과 특별보호구역 관리의 과학적 기초 자료를 제공하는 것을 목적으로 합니다.",
+        "key_findings": [
+          "총 273분류군(목본 124, 초본 149)의 관속식물이 확인되었으며, 사담리 107분류군, 갈론계곡 246분류군이 분포함",
+          "개서어나무(EN), 망개나무(VU) 등 총 8분류군의 희귀식물과 9분류군의 한국 특산식물이 생육하고 있음",
+          "식물구계학적 특정식물 34분류군(IV등급 2, V등급 2 포함)이 확인되었으며, 귀화식물은 5분류군(귀화율 1.8%)으로 교란이 적은 양호한 상태임"
+        ],
+        "practical_applications": [
+          "특별보호구역 내 희귀식물(망개나무 등) 및 특산식물 자생지에 대한 정기적인 모니터링과 출입 통제 조치를 강화합니다.",
+          "식물구계학적 특정식물 IV·V등급 종의 서식 환경 변화를 추적하여 자생지 복원 및 보호 지침을 마련합니다.",
+          "귀화식물 유입 경로를 점검하고 초기 차단 작업을 통해 생태계 교란을 예방합니다."
+        ],
+        "korea_np_applicability_score": 5,
+        "korea_np_applicability_reason": "국내 국립공원의 실제 특별보호구역을 대상으로 수행된 식물상 조사 연구로, 현장공원 사무소의 자원 보전 및 구역 관리 업무에 직접적으로 활용할 수 있습니다.",
+        "study_location": "국내",
+        "related_work_areas": [
+          "생태계 모니터링·조사",
+          "자원보전·복원",
+          "공원계획·구역관리"
+        ],
+        "related_laws": [
+          "자연공원법 제28조(자연공원에서의 금지행위 등)",
+          "자연공원법 제29조(국립공원 특별보호구역의 지정)",
+          "야생생물 보호 및 관리에 관한 법률 제14조(멸종위기 야생생물의 포획ㆍ채취 등 금지)"
+        ],
+        "field_checklist": [
+          "특별보호구역 내 탐방객 무단 출입 및 샛길 이용 여부 확인",
+          "망개나무 및 희귀식물 자생지의 인위적 훼손 여부 및 생육 상태 점검",
+          "식물구계학적 특정식물 및 특산식물 분포지의 미기상 및 토양 환경 변화 관찰",
+          "인근 탐방로 주변 귀화식물 유입 및 확산 여부 모니터링",
+          "자생지 보호를 위한 경고판, 울타리 등 시설물의 파손 여부 점검"
+        ],
+        "practical_utility_score": 5,
+        "cautions": [
+          "식물 조사 시 자생지 토양 답압 및 훼손을 최소화하기 위한 사전 동선 계획이 필요합니다.",
+          "멸종위기 및 희귀식물 위치 정보는 무단 채취 방지를 위해 보안 관리가 요구됩니다."
+        ],
+        "tags": [
+          "속리산국립공원",
+          "특별보호구역",
+          "망개나무",
+          "식물상",
+          "희귀식물"
+        ],
+        "recommended_followup_research": [
+          "기후변화에 따른 속리산국립공원 희귀·특산식물 자생지의 생육 변화 추적 연구",
+          "특별보호구역 내 식생 구조와 토양 환경 간의 상관관계 분석"
+        ],
+        "ai_recommended_topics": [
+          "국립공원 특별보호구역 식물상 조사",
+          "망개나무 자생지 생태 특성"
+        ],
+        "analyzed_at": "2026-11-20T11:01:57Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W3005513525",
+      "source": "openalex",
+      "title": "Evaluation of Slope Stability of Taebaeksan National Park using Detailed Soil Map",
+      "abstract": "한국은 국토의 64%이상이 산지로 구성되어 있어 산지재해에 취약한 지형적 특성을 가진다. 연구대상지역인 태백산국립공원 당골유역은 탐방로 대부분이 급경사지와 인접해 있어 집중호우 시 산사태와 토석류에 취약한 지역이다. 본 연구에서는 결정론적 분석방법인 사면안정성 모델을 이용하여 사면재해 발생예측 가능성을 검토하였다. 모델의 매개변수는 정밀토양도의 토양분류에 따라 토질의 단위중량, 유효점착력, 흙의 내부마찰각, 유효토심, 지표경사 등을 이용하였고 1 m격자의 DEM을 바탕으로 사면안정성 평가를 실시하였다. 사면안정성평가 분석결과 지하수/ 유효토심과의 비가 1.0에 가까워질수록 위험지역이 높게 나타났으며, 국립공원 하류지역의 민가와 상업시설 상당수가 위험에 노출된 것으로 나타났다. More than 64% of Korea's land is occupied by mountain regions, which have terrain characteristics that make it vulnerable to mountain disasters. The trails of Taebaeksan Mountain National Park-the region considered in this study-are located in the vicinity of steep slopes, and therefore, the region is vulnerable to landslides and debris flow during heavy storms. In this study, a slope stability model, which is a deterministic analysis method, was used to examine the potential occurrence of landslides. According to the soil classification of the detailed soil map, the specific weight of soil, effective cohesion, internal friction angle of soil, effective soil depth, and ground slope were used as the parameters of the model, and slope stability was evaluated based on the DEM of a 1 m grid. The results of the slope stability analysis showed that the more hazardous the area was, the closer the ratio of groundwater/effective soil depth is to 1.0. Further, many of the private houses and commercial facilities in the lower part of the national park were shown to be exposed to danger.",
+      "authors": [
+        "Young‐Hwan Kim",
+        "Byong-Hee Jun",
+        "Kye-Won Jun"
+      ],
+      "year": 2019,
+      "journal": "Journal of Korean Society of Disaster and Security",
+      "cited_by_count": 1,
+      "doi": "https://doi.org/10.21729/ksds.2019.12.2.65",
+      "is_oa": true,
+      "oa_url": "http://www.koreascience.kr:80/article/JAKO201919867048877.pdf",
+      "concepts": [
+        "National park",
+        "Stability (learning theory)",
+        "Environmental science",
+        "Hydrology (agriculture)",
+        "Geography",
+        "Geology"
+      ],
+      "openalex_url": "https://openalex.org/W3005513525",
+      "ai_analysis": {
+        "title_ko": "정밀토양도를 이용한 태백산국립공원 사면안정성 평가",
+        "abstract_ko": "한국은 국토의 64% 이상이 산지로 구성되어 있어 산지재해에 취약한 지형적 특성을 가진다. 연구 대상 지역인 태백산국립공원 당골유역은 탐방로 대부분이 급경사지와 인접해 있어 집중호우 시 산사태와 토석류에 취약한 지역이다. 본 연구에서는 결정론적 분석방법인 사면안정성 모델을 이용하여 사면재해 발생 예측 가능성을 검토하였다. 모델의 매개변수는 정밀토양도의 토양분류에 따라 토질의 단위중량, 유효점착력, 흙의 내부마찰각, 유효토심, 지표경사 등을 이용하였고 1m 격자의 DEM을 바탕으로 사면안정성 평가를 실시하였다. 사면안정성 평가 분석 결과 지하수와 유효토심의 비가 1.0에 가까워질수록 위험지역이 높게 나타났으며, 국립공원 하류 지역의 민가와 상업시설 상당수가 위험에 노출된 것으로 나타났다.",
+        "summary_3lines": [
+          "태백산국립공원 당골유역의 급경사지 탐방로 및 인접 지역을 대상으로 집중호우 시 산사태 및 토석류 위험성을 예측하고자 했다.",
+          "정밀토양도와 1m 격자 DEM을 기반으로 사면안정성 모델을 적용한 결과, 지하수위가 유효토심에 근접할수록 재해 위험도가 급증함을 확인했다.",
+          "국립공원 상하류의 탐방객 안전 확보 및 인근 민가·시설물 보호를 위한 정밀 사면 재해 예방 대책 마련이 시급하다."
+        ],
+        "research_purpose": "본 연구는 태백산국립공원 당골유역의 급경사지 및 탐방로 주변을 대상으로, 정밀토양도와 사면안정성 모델을 활용하여 집중호우 시 발생하는 산사태 및 토석류의 위험 지역을 예측하고 사면 안정성을 평가하는 것을 목적으로 한다.",
+        "key_findings": [
+          "지하수위와 유효토심의 비가 1.0에 가까워질수록 사면 붕괴 및 재해 위험도가 현저히 높아짐",
+          "태백산국립공원 당골유역의 탐방로 주변 급경사지는 집중호우 시 산사태와 토석류 발생 취약성이 매우 높음",
+          "국립공원 하류 지역에 위치한 민가와 상업시설 상당수가 산사태 및 토석류 위험에 직접 노출되어 있음"
+        ],
+        "practical_applications": [
+          "집중호우 시 위험도가 높은 탐방로 구간에 대한 사전 통제 기준 및 비상 대피 계획에 본 모델 결과 활용",
+          "정밀토양도 데이터를 기반으로 공원 내 급경사지 재해 취약 지역 등급화 및 우선순위별 정비 사업 시행",
+          "국립공원 경계부 하류 지역의 민가 및 상업시설 보호를 위한 사방시설 설치 및 지자체 연계 재해 예방 대책 수립"
+        ],
+        "korea_np_applicability_score": 5,
+        "korea_np_applicability_reason": "한국 국립공원은 산지 비율이 높아 태백산국립공원과 유사하게 탐방로가 급경사지와 인접해 있으며, 전국의 정밀토양도와 DEM 데이터를 공통으로 활용할 수 있어 현장 재해 관리 업무에 즉시 적용 가능합니다.",
+        "study_location": "국내",
+        "related_work_areas": [
+          "탐방로·탐방객 관리",
+          "시설·인프라 관리",
+          "재난·안전 관리"
+        ],
+        "related_laws": [
+          "자연공원법 제23조",
+          "자연공원법 제28조"
+        ],
+        "field_checklist": [
+          "탐방로 주변 급경사지의 경사도 및 유효토심 현장 상태 확인",
+          "집중호우 시 토양 내 지하수위 상승 및 포화도 변화 모니터링 체계 점검",
+          "사면안정성 위험 등급 지역 내 탐방객 대피소 및 안내판 설치 상태 확인",
+          "공원 하류부 민가 및 상업시설 인접 급경사지의 붕괴 징후 확인",
+          "기상특보(호우주의보·경보) 발령 시 탐방로 통제 기준 이행 여부 점검"
+        ],
+        "practical_utility_score": 5,
+        "cautions": [
+          "1m 격자 DEM 및 정밀토양도의 해상도와 현장 미기상학적 특성 차이에 따른 오차 가능성 고려",
+          "지하수위 변동은 강우 강도와 지속 시간에 따라 실시간으로 달라지므로 단순 정적 분석의 한계 보완 필요"
+        ],
+        "tags": [
+          "사면안정성",
+          "산사태",
+          "토석류",
+          "정밀토양도",
+          "태백산국립공원"
+        ],
+        "recommended_followup_research": [
+          "강우 강도와 지속 시간을 변수로 한 실시간 사면 붕괴 예측 시스템 고도화 연구",
+          "국립공원 내 사방시설 설치 위치 최적화 및 저감 효과 분석 연구"
+        ],
+        "ai_recommended_topics": [
+          "산사태 취약지 분석 GIS 모델",
+          "국립공원 급경사지 재해 예방",
+          "정밀토양도 기반 사면안정성"
+        ],
+        "analyzed_at": "2026-11-20T11:00:49Z",
         "model": "gemini-flash-lite-latest"
       }
     },
@@ -422448,6 +423153,94 @@
       }
     },
     {
+      "id": "W2988406262",
+      "source": "openalex",
+      "title": "Carbonate Breccias of the Middle Cambrian Daegi Formation, Taebaeksan Basin",
+      "abstract": "태백산분지 백운산 향사대의 남쪽 경계부를 따라 대상으로 분포하는 캠브리아 중기 대기층 내에는 탄산염 각력암들이 국부적으로 발달한다. 대기층 내에 발달하는 탄산염 각력암들은 그동안 단층과 연계되어 발달하는 단층 각력암, 또는 퇴적 당시의 요인에 의한 퇴적 각력암 등으로 해석되어 왔다. 그러나 최근의 연구결과는 이러한 탄산염 각력암들의 대부분이 고기 카르스트의 형성과 성인적으로 연계되어 발달하는 용식 붕락 각력암이라는 것을 지시한다. 카르스트의 형성은 탄산염 대지의 장기간에 걸친 대기 노출에 기인하며 탄산염 대지에 있어서 퇴적작용의 중단을 의미한다. 대기 노출 과정 동안 카르스트의 발달과 연계되어 형성된 이러한 퇴적층들은 층서 기록상 천수에 의한 속성작용, 고토양층 및 용식 붕락 각력암 등으로 인지될 수 있다. 특히, 대기 노출면 하부에 발달하는 용식 붕락 각력암들은 비교적 보존이 잘 되기 때문에 탄산염 대지의 대기 노출에 대한 증거로 삼고 있으며, 층서 기록상 부정합과 밀접한 관계를 가지며 부정합면 직하부의 탄산염암층에 잘 나타난다. 캠브리아 중기 대기층 내에 발달하는 탄산염 각력암들의 대부분은 이러한 고기 카르스트의 형성과 연관된 용식 붕락 각력암의 예를 잘 보여준다. 대기층 내에 발달하는 용식 붕락 각력암들의 존재는, 곧 대기층 내에 고기 카르스트의 형성과 성인적으로 연계되는 대기 노출면 및 이에 따른 층서적 불연속면(부정합)의 존재를 시사한다. Carbonate breccias occur sporadically in the Middle Cambrian Daegi Formation on the southern limb of the Baegunsan Syncline, Taebaeksan Basin. These carbonate breccias have been largely interpreted either as sedimentary breccias or as tectonic, fault-related breccias. Recent study, however, indicates that the majority of these breccias are a solution-collapse breccia which is causally linked to the paleokarstification. Extensive karstification is attributed to prolonged subaerial exposure of the carbonate platform. The exposed surface is a record of interruption in sedimentation on the carbonate platform. In the stratigraphic record, such karst-related post-depositional features are recognized as meteoric diagenetic features, paleosols, and solution-collapse breccias. Solution-collapse breccias are particularly well preserved and most profound in the carbonate rocks below the major unconformities, which also are evidence of prolonged subaerial exposure. The Middle Cambrian Daegi Formation provides an example of solution-collapse breccias. The formation and preservation of the solution-collapse breccias imply that a stratigraphic discontinuity surface (unconformity) can be designated within the Daegi Formation.",
+      "authors": [
+        "Hwimin Jang",
+        "Mira Son",
+        "In‐Chang Ryu"
+      ],
+      "year": 2019,
+      "journal": "Economic and Environmental Geology",
+      "cited_by_count": 1,
+      "doi": "https://doi.org/10.9719/eeg.2019.52.5.381",
+      "is_oa": true,
+      "oa_url": "http://koreascience.or.kr/journal/view.jsp?kj=JOHGB2&py=2019&vnc=v52n5&sp=381",
+      "concepts": [
+        "Breccia",
+        "Geology",
+        "Carbonate",
+        "Paleontology",
+        "Geochemistry",
+        "Carbonate platform"
+      ],
+      "openalex_url": "https://openalex.org/W2988406262",
+      "ai_analysis": {
+        "title_ko": "태백산분지 중부 캠브리아기 대기층의 탄산염 각력암",
+        "abstract_ko": "태백산분지 백운산 향사대 남쪽 경계부를 따라 분포하는 중부 캠브리아기 대기층에는 탄산염 각력암이 국부적으로 나타납니다. 이 탄산염 각력암들은 그동안 단층 작용에 의한 단층 각력암이나 퇴적 당시의 요인에 의한 퇴적 각력암으로 해석되어 왔습니다. 그러나 최근 연구에 따르면 이 각력암의 대부분은 고기 카르스트(고대 석회동굴 환경) 형성과 연관된 용식 붕락 각력암입니다. 카르스트는 탄산염 대지가 오랜 기간 대기에 노출되면서 형성되며, 이는 퇴적 작용이 중단되었음을 의미합니다. 대기 노출 시기에는 천수(지표수)에 의한 속성작용, 고토양층, 용식 붕락 각력암 등이 형성되며, 특히 대기 노출면 아래에 발달하는 용식 붕락 각력암은 보존이 잘 되어 대기 노출의 확실한 증거가 됩니다. 이는 층서적 부정합면과 밀접한 관련이 있습니다. 대기층 내 탄산염 각력암의 존재는 이 지층 내에 고기 카르스트와 연계된 대기 노출면 및 층서적 불연속면이 존재함을 시사합니다.",
+        "summary_3lines": [
+          "태백산분지 대기층 내 탄산염 각력암의 성인을 규명하여 고기 카르스트 환경과 대기 노출의 증거를 제시하고자 함",
+          "지질학적 조사와 분석을 통해 기존에 단층이나 단순 퇴적작용으로 보았던 각력암이 고기 카르스트에 의한 용식 붕락 각력암임을 밝혀냄",
+          "해당 지층 내에 층서적 불연속면(부정합)과 대기 노출면이 존재함을 시사하며, 공원 내 지질유산 가치 평가 및 층서 해석에 활용 가능함"
+        ],
+        "research_purpose": "본 연구는 태백산분지 대기층에 국부적으로 분포하는 탄산염 각력암의 정확한 형성 원인을 밝히고, 이를 통해 지질학적 대기 노출면과 층서적 불연속면의 존재를 규명하는 것을 목적으로 합니다.",
+        "key_findings": [
+          "대기층 내 탄산염 각력암의 대부분은 단층 각력암이나 퇴적 각력암이 아님",
+          "탄산염 대지의 장기간 대기 노출로 인해 형성된 고기 카르스트와 연계된 용식 붕락 각력암임",
+          "용식 붕락 각력암의 존재는 대기층 내에 층서적 불연속면(부정합)이 존재함을 지시함"
+        ],
+        "practical_applications": [
+          "태백산권 등 카르스트 지형이 발달한 국립공원 내 지질명소 발굴 및 학술적 가치 평가에 활용",
+          "탐방로 주변 절개면 및 지질 조사 시 낙석 위험이 있는 용식 붕락 각력암 분포 지역 파악",
+          "공원 내 지질도 구축 및 층서 해석 업무 시 부정합면 추적의 지표로 활용"
+        ],
+        "korea_np_applicability_score": 3,
+        "korea_np_applicability_reason": "태백산국립공원 등 고생대 석회암 지층이 분포하는 국내 국립공원의 지질학적 특성 이해, 지질유산 보전 및 탐방로 안전 진단에 직접적으로 응용할 수 있으나, 학술적 비중이 높아 실무적 즉시 적용에는 한계가 있음",
+        "study_location": "국내",
+        "related_work_areas": [
+          "생태계 모니터링·조사",
+          "자원보전·복원",
+          "시설·인프라 관리"
+        ],
+        "related_laws": [
+          "자연공원법 제23조",
+          "문화재보호법 제25조"
+        ],
+        "field_checklist": [
+          "탐방로 주변 석회암 지역의 각력암 분포 여부 확인",
+          "각력암의 형태가 단층에 의한 것인지 용식 붕락에 의한 것인지 지질학적 특징 관찰",
+          "대기 노출면 및 고토양층 등 층서적 불연속면 흔적 탐색",
+          "용식 붕락 각력암 분포지의 지반 안정성 및 낙석 위험성 모니터링",
+          "지질명소로서의 가치 평가 및 안내판 설치 필요성 검토"
+        ],
+        "practical_utility_score": 3,
+        "cautions": [
+          "용식 붕락 각력암 분포 지역은 내부 공극이나 지반 약화로 인한 낙석 및 함몰 위험이 있으므로 탐방객 안전 관리에 유의해야 함",
+          "전문적인 지질학적 지식이 요구되므로 현장 조사 시 관련 전문가와의 협업이 필요함"
+        ],
+        "tags": [
+          "대기층",
+          "탄산염각력암",
+          "용식붕락각력암",
+          "고기카르스트",
+          "태백산분지"
+        ],
+        "recommended_followup_research": [
+          "태백산국립공원 내 대기층 분포 지역의 정밀 지질도 작성 및 카르스트 지형 분포 조사",
+          "용식 붕락 각력암 주변의 지반 안정성 평가 및 낙석 저감 방안 연구"
+        ],
+        "ai_recommended_topics": [
+          "카르스트 지형 용식 붕락 각력암",
+          "캠브리아기 대기층 층서",
+          "국립공원 지질유산 안전 관리"
+        ],
+        "analyzed_at": "2026-11-20T11:00:35Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
       "id": "W2743416915",
       "source": "openalex",
       "title": "Nature & Nation: The Civilian Conservation Corps in Zion and Bryce Canyon National Parks",
@@ -461146,6 +461939,89 @@
       }
     },
     {
+      "id": "W2199147062",
+      "source": "openalex",
+      "title": "Jirisan, a Virgin Forest of Exploration and Conquest - focusing on student essays in 1930s",
+      "abstract": "In this essay, recognition of and attitude toward Jirisan, as well as the implied characteristics of the recognition, are studied among the travel essays in mid to late 1930s. Also, to help understanding, hiking’s example and meaning are viewed from tentative perspective, from 1900s to the liberation in 1945. The summary is as follows. In chapter 2, examples and meaning of hiking are divided into five. In this chapter, the term ‘hiking’ is used with ‘play’, ‘exploration’, ‘health’, ‘Alpinism’, ‘exercise’, and ‘entertainment’, and by doing so, hiking has a purpose of play, historical exploration, research exploration, conquest, exercise and entertainment of labor, and include dual meaning. In chapter 3, among two student travel essays, it is found that Jirisan is described as the object of exploration and conquest. Oyongsa(five warriors), who are hiking club members of Yang Chung High School, saw Jirisan as an object of conquest from alpinist perspective, but for Lee Hak-don of Gyeongseong School of Pharmacy, it was an object of conquest through aesthetic and scholastic research. For the two subjects, who had rational view on the nature, Jirisan is a virgin forest conquerable without contamination by nationalism ideology.",
+      "authors": [
+        "박찬모"
+      ],
+      "year": 2011,
+      "journal": "한국문학이론과 비평",
+      "cited_by_count": 2,
+      "doi": "",
+      "is_oa": false,
+      "oa_url": "",
+      "concepts": [
+        "CONQUEST",
+        "Meaning (existential)",
+        "Entertainment",
+        "Object (grammar)",
+        "Aesthetics",
+        "Perspective (graphical)"
+      ],
+      "openalex_url": "https://openalex.org/W2199147062",
+      "ai_analysis": {
+        "title_ko": "탐험과 정복의 원시림, 지리산 - 1930년대 학생들의 기행문을 중심으로",
+        "abstract_ko": "이 논문은 1930년대 중후반의 기행문을 통해 지리산에 대한 인식과 태도, 그리고 그 인식의 이면적 특징을 연구하였다. 또한 이해를 돕기 위해 1900년대부터 1945년 해방까지 등산의 사례와 의미를 잠정적 관점에서 살펴보았다. 요약은 다음과 같다. 제2장에서는 등산의 사례와 의미를 5가지로 나누었다. 이 장에서 '등산'이라는 용어는 '놀이', '탐험', '건강', '알피니즘', '운동', '오락'과 함께 사용되었으며, 이를 통해 등산은 놀이, 역사적 탐험, 학술적 탐험, 정복, 노동의 운동 및 오락의 목적을 가지며 이중적 의미를 포함하게 되었다. 제3장에서는 두 편의 학생 기행문을 통해 지리산이 탐험과 정복의 대상으로 묘사되고 있음을 밝혔다. 양정고등학교 산악부원인 '오용사'는 알피니즘적 관점에서 지리산을 정복의 대상으로 보았고, 경성약전의 이학돈에게는 미학적·학술적 연구를 통한 정복의 대상이었다. 자연에 대해 합리적 시각을 가졌던 두 주체에게 지리산은 민족주의 이데올로기로 오염되지 않고 정복할 수 있는 원시림이었다.",
+        "summary_3lines": [
+          "1930년대 학생들의 기행문을 분석하여 당시 지리산 탐방에 나타난 인식과 등산의 역사적 의미를 고찰함.",
+          "등산이 놀이, 탐험, 건강, 알피니즘 등 다양한 목적과 이중적 의미를 지니며 지리산이 탐험과 정복의 대상으로 인식되었음을 밝힘.",
+          "과거 탐방객들의 자연 인식 변화를 이해함으로써 현대 국립공원 탐방객 관리 및 프로그램 기획에 역사적 시사점을 제공함."
+        ],
+        "research_purpose": "1930년대 중후반 기행문 분석을 통해 일제강점기 학생들의 지리산에 대한 인식과 태도를 파악하고, 당시 근대적 등산이 지닌 역사적·문화적 의미를 규명하는 것을 목적으로 한다.",
+        "key_findings": [
+          "1900년대부터 해방까지 등산은 놀이, 역사 및 학술 탐험, 정복, 운동 등 다양한 목적과 이중적 의미로 수행되었다.",
+          "1930년대 학생 산악부원들은 알피니즘적 관점에서 지리산을 도전과 정복의 대상으로 인식하였다.",
+          "일부 탐방객들은 미학적·학술적 연구를 목적으로 지리산을 탐방하며 합리적인 자연관을 드러냈다."
+        ],
+        "practical_applications": [
+          "지리산국립공원 내 역사적 탐방 기록과 기행문을 활용한 인문학적 탐방 프로그램 개발",
+          "탐방객의 자연 인식 변화를 반영한 시대별·테마별 탐방 안내 해설 콘텐츠 구축",
+          "안전하고 교육적인 산악 탐방 문화 조성을 위한 탐방객 의식 개선 캠페인 기획"
+        ],
+        "korea_np_applicability_score": 3,
+        "korea_np_applicability_reason": "연구 대상지가 지리산국립공원이므로 직접적인 지리적 연관성이 있으나, 본문은 생태 관리나 시설 공학적 내용보다는 문학·역사적 인식을 다루어 현장 실무 적용에는 제한이 있음.",
+        "study_location": "국내",
+        "related_work_areas": [
+          "탐방로·탐방객 관리"
+        ],
+        "related_laws": [
+          "자연공원법 제2조",
+          "자연공원법 제28조"
+        ],
+        "field_checklist": [
+          "역사적 탐방로 구간 내 안내판 및 스토리텔링 스토리 정비 여부 확인",
+          "탐방객 대상 인문학적·역사적 탐방 프로그램 운영 실태 점검",
+          "지리산 관련 근현대 문학 및 기행문 자료 아카이브 구축 현황 확인",
+          "탐방객의 안전한 산악 탐방(알피니즘)을 위한 안전 지침 준수 여부 점검",
+          "자연 환경 훼손 없는 건전한 탐방 문화 유도 홍보물 비치 확인"
+        ],
+        "practical_utility_score": 2,
+        "cautions": [
+          "학술 논문이 문학 및 역사적 해석에 치중되어 있어 직접적인 공원 시설 관리나 생태 복원 현장에 즉시 적용하기는 어려움",
+          "탐방객의 과도한 '정복' 위주 산악 인식이 안전사고나 자연 훼손으로 이어지지 않도록 주의 필요"
+        ],
+        "tags": [
+          "지리산",
+          "기행문",
+          "등산사",
+          "알피니즘",
+          "탐방객인식"
+        ],
+        "recommended_followup_research": [
+          "해방 이후 한국 국립공원 탐방객의 인식 변화에 관한 역사사회학적 연구",
+          "지리산 역사 탐방로의 문화재 및 스토리텔링 자원 발굴 연구"
+        ],
+        "ai_recommended_topics": [
+          "근대 한국 등산사",
+          "국립공원 탐방 문화 변천사"
+        ],
+        "analyzed_at": "2026-11-20T11:02:36Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
       "id": "W2539867054",
       "source": "openalex",
       "title": "Can the National Park Service cope?",
@@ -496372,6 +497248,171 @@
       }
     },
     {
+      "id": "W2284667148",
+      "source": "openalex",
+      "title": "On between the life and death: One study on the death of Jirisan partisans",
+      "abstract": "In this paper, I have considered the issue of a death of Jirisan partisans. Every human being dies. Jirisan partisans were killed in Jirisan. Jirisan partisans were standing in front of biological death. They were being chased to punitive force. They were standing in front of the cold and hunger. They were standing in front of the death in poor struggle condition. In such a situation, they died in the Jirisan. But their death is not in vain death. Their death is not a simple death. Their death is a true death, and is a death accepted his death itself. Their death is a death accepted death as he ran toward death. So they are the people who choosing own death. Through such a choice they are the people who lives an original life. If so, they are those who have lived an another life, not an everyday life. The death of Jirisan partisans was towards the original death through the existential decision according to the anxiety in the face of death. But if that death is part of the existence, Jirisan partisans will living life to the way of an original existence. Because they selected from themselves the possibility of his own existence.",
+      "authors": [
+        "문동규"
+      ],
+      "year": 2015,
+      "journal": "인문과학연구논총",
+      "cited_by_count": 0,
+      "doi": "https://doi.org/10.22947/ihmju.2015.36.3.012",
+      "is_oa": false,
+      "oa_url": "",
+      "concepts": [
+        "Front (military)",
+        "Natural death",
+        "Death anxiety",
+        "Medicine",
+        "Medical emergency",
+        "Anxiety"
+      ],
+      "openalex_url": "https://openalex.org/W2284667148",
+      "ai_analysis": {
+        "title_ko": "삶과 죽음의 경계에서: 지리산 파르티잔의 죽음에 대한 고찰",
+        "abstract_ko": "이 논문에서 필자는 지리산 파르티잔들의 죽음 문제를 고찰하였다. 모든 인간은 죽음을 맞이한다. 지리산 파르티잔들은 지리산에서 사망했다. 그들은 생물학적 죽음의 기로에 서 있었고, 토벌대에 쫓기며, 혹독한 추위와 배고픔 속에서 열악한 투쟁 조건 속의 죽음과 직면해 있었다. 그러한 상황 속에서 그들은 지리산에서 목숨을 잃었다. 그러나 그들의 죽음은 결코 헛된 죽음이나 단순한 죽음이 아니었다. 그것은 진정한 죽음이었으며, 자신의 죽음 그 자체를 받아들인 죽음이었다. 그들은 죽음을 향해 달려가면서 그것을 수용했기에 스스로 죽음을 선택한 사람들이었다. 이러한 선택을 통해 그들은 본래적인 삶을 살아간 이들이었다. 그렇다면 그들은 일상적인 삶이 아닌 또 다른 삶을 살아낸 이들이라고 볼 수 있다. 지리산 파르티잔의 죽음은 죽음에 직면한 불안 속에서 실존적 결단을 통해 본래적 죽음을 향해 나아간 것이었다. 만약 그 죽음이 존재의 일부라면, 지리산 파르티잔들은 자신의 존재 가능성을 스스로 선택했기에 본래적 존재의 방식으로 삶을 살아내고 있었던 셈이다.",
+        "summary_3lines": [
+          "지리산 파르티잔들이 극한의 상황에서 맞이한 죽음의 의미를 실존철학적 관점에서 분석하고자 함",
+          "파르티잔들의 죽음이 단순한 생물학적 사망이 아니라 스스로 선택한 본래적 존재 방식의 실현임을 규명함",
+          "국립공원 내 역사·문화 자원의 인문학적 가치 재조명과 탐방객 대상 스토리텔링 활용 방안을 시사함"
+        ],
+        "research_purpose": "본 연구는 극한의 생존 환경 속에서 지리산 파르티잔들이 겪은 죽음의 의미를 실존철학적 관점에서 분석하는 것을 목적으로 한다. 역사적 비극의 현장인 지리산에서 이들이 마주한 죽음을 단순한 사건이 아닌 주체적인 실존적 선택으로 해석하고자 하였다.",
+        "key_findings": [
+          "지리산 파르티잔들의 죽음은 토벌대와 추위, 배고픔이라는 극한의 상황 속에서 발생한 생물학적 사건이다.",
+          "그들의 죽음은 단순한 희생이나 허무한 죽음이 아니라, 불안 속에서 자신들의 존재를 걸고 선택한 실존적 결단이었다.",
+          "이러한 죽음의 수용은 일상적 삶을 넘어선 본래적 삶과 존재 방식을 회복하는 과정이었다."
+        ],
+        "practical_applications": [
+          "지리산국립공원 내 근현대 역사 유적지 및 비극적 사건 현장의 인문학적 해설 프로그램 개발에 활용한다.",
+          "단순한 지형 안내를 넘어 공원이 품고 있는 역사적 아픔과 인간의 실존에 대한 깊이 있는 탐방 해설 콘텐츠를 구축한다.",
+          "공원 내 역사 문화 자원 조사 시 생태적 가치뿐만 아니라 인문학적·역사적 사건의 기록을 함께 보존한다."
+        ],
+        "korea_np_applicability_score": 2,
+        "korea_np_applicability_reason": "지리산국립공원을 배경으로 한 역사적 사건을 다루고 있으나, 내용이 철학적 사유와 실존주의 분석에 치중되어 있어 직접적인 공원 시설 관리나 탐방객 안전 실무에 곧바로 적용하기에는 한계가 있음",
+        "study_location": "국내",
+        "related_work_areas": [
+          "탐방로·탐방객 관리"
+        ],
+        "related_laws": [
+          "자연공원법 제2조",
+          "자연공원법 제25조"
+        ],
+        "field_checklist": [
+          "공원 내 근현대 역사 유적 및 사건 현장의 정확한 위치와 현황 파악",
+          "역사 탐방로 구간별 스토리텔링 해설판 및 안내판 정비 상태 점검",
+          "탐방객 대상 역사 문화 프로그램 운영 시 편향되지 않은 객관적 사실 전달 여부 확인",
+          "비극적 역사 현장 주변의 무단 출입 및 훼손 방지 대책 수립",
+          "공원 관리 직원의 인문학적 소양 및 역사 자원 해설 역량 교육 실시 여부 확인"
+        ],
+        "practical_utility_score": 2,
+        "cautions": [
+          "이념적 갈등의 소지가 있는 역사적 사건이므로 탐방 해설 시 객관적이고 중립적인 시각 유지 필요",
+          "철학적 논문을 현장 실무에 적용할 때는 일반 탐방객의 눈높이에 맞춘 순화된 해설 기법 적용 필요"
+        ],
+        "tags": [
+          "지리산",
+          "파르티잔",
+          "실존주의",
+          "죽음",
+          "역사문화자원"
+        ],
+        "recommended_followup_research": [
+          "지리산국립공원 내 근현대 역사 유적의 보존 및 활용 실태 조사",
+          "국립공원 역사 문화 탐방 프로그램이 탐방객의 역사 인식에 미치는 영향 분석"
+        ],
+        "ai_recommended_topics": [
+          "지리산 파르티잔 역사 유적",
+          "국립공원 인문학적 탐방 해설",
+          "실존철학적 죽음 이해"
+        ],
+        "analyzed_at": "2026-11-20T11:02:07Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W2508488365",
+      "source": "openalex",
+      "title": "Application of 'Sinsoseol' Corpus to Stylistics : Authorship and Style of Chiaksan and Hongdohwa",
+      "abstract": "The objectives of this paper is to confirm 'Sinsosoel' authorship through quantitative approach to stylistics. In 1900s when the new form of...",
+      "authors": [
+        "김진실"
+      ],
+      "year": 2015,
+      "journal": "The Korean Language and Literature",
+      "cited_by_count": 0,
+      "doi": "",
+      "is_oa": false,
+      "oa_url": "",
+      "concepts": [
+        "Computer science"
+      ],
+      "openalex_url": "https://openalex.org/W2508488365",
+      "ai_analysis": {
+        "title_ko": "신소설 코퍼스의 문체론적 적용: 치악산과 홍도화의 작가와 문체 분석",
+        "abstract_ko": "이 논문의 목적은 계량문체론적 접근을 통해 '신소설'의 작가를 확인하는 것이다. 새로운 문학 형식이 대두되었던 1900년대의 맥락 속에서, 본 연구는 치악산과 홍도화 등의 작품을 대상으로 텍스트 데이터 분석을 수행하여 작가의 문체적 특성과 저작권(작가)의 실체를 과학적으로 검증하고자 하였다.",
+        "summary_3lines": [
+          "계량문체론적 접근을 활용하여 1900년대 신소설 작품인 치악산과 홍도화의 작가와 문체적 특성을 규명하고자 함.",
+          "텍스트 코퍼스 분석 기법을 통해 작품별 어휘 사용 양상과 문체적 차이를 정량적으로 도출함.",
+          "문학작품의 텍스트 분석 방법론을 공원 내 문화자원 및 스토리텔링 자료 고증에 응용할 수 있음."
+        ],
+        "research_purpose": "본 연구는 1900년대 신소설인 치악산과 홍도화의 텍스트를 계량문체론적 방법으로 분석하여 작가 정체성을 확인하고 문체적 특성을 밝히는 것을 목적으로 합니다. 문학 텍스트의 정량적 분석을 통해 객관적인 작가 규명 방법론을 제시하고자 합니다.",
+        "key_findings": [
+          "계량문체론을 활용한 신소설 텍스트의 객관적 분석 기법 적용",
+          "치악산과 홍도화의 어휘 빈도 및 문체적 특성 차이 도출",
+          "텍스트 데이터를 통한 저작자 식별 가능성 확인"
+        ],
+        "practical_applications": [
+          "국립공원 내 명소(치악산 등)와 연계된 역사·문화 자원의 스토리텔링 고증 자료로 활용",
+          "공원 내 문학비, 역사 유적지 안내판 등의 문안 검증 및 학술적 근거 자료로 활용",
+          "지역 문화 자원 데이터베이스 구축 시 텍스트 분석 기법 원용"
+        ],
+        "korea_np_applicability_score": 2,
+        "korea_np_applicability_reason": "본 논문은 문학 작품의 문체 분석을 다루고 있어 국립공원의 자연 생태나 탐방객 관리 등 현장 직접 관련성은 낮으나, 치악산 등 특정 공원 명칭을 포함한 문화 자원 및 역사 스토리텔링 고증 분야에 간접적으로 응용될 수 있습니다.",
+        "study_location": "국내",
+        "related_work_areas": [
+          "자원보전·복원",
+          "지역사회·거버넌스"
+        ],
+        "related_laws": [
+          "자연공원법 제2조(정의)",
+          "문화재보호법 제2조(정의)"
+        ],
+        "field_checklist": [
+          "공원 내 역사·문화 자원(문학, 전설 등) 관련 안내판 문안의 사실관계 확인",
+          "지명(예: 치악산) 유래 및 관련 문헌 기록의 정확성 검증",
+          "탐방로 주변 문화재 및 역사 스토리텔링 콘텐츠의 학술적 타당성 점검",
+          "지역 문화관광 자원 연계 프로그램 운영 시 기초 문헌 고증 여부 확인",
+          "공원 내 문화적 가치 보존을 위한 기초 자료 아카이빙 상태 점검"
+        ],
+        "practical_utility_score": 2,
+        "cautions": [
+          "본 연구는 순수 문학 및 문체론 연구로 국립공원 자연 생태 현장에 직접 적용하기에는 한계가 있음",
+          "문화 자원 스토리텔링 활용 시 현장 적용을 위한 추가적인 역사·지리적 고증이 필요함"
+        ],
+        "tags": [
+          "계량문체론",
+          "신소설",
+          "치악산",
+          "홍도화",
+          "스토리텔링"
+        ],
+        "recommended_followup_research": [
+          "국립공원 지명 및 관련 고문헌의 텍스트 마이닝 및 스토리텔링 활용 방안 연구",
+          "공원 내 역사·문화 자원의 정량적 분석을 통한 관광 콘텐츠 개발 연구"
+        ],
+        "ai_recommended_topics": [
+          "계량문체론",
+          "치악산 문학",
+          "신소설 작가 분석",
+          "국립공원 문화자원 스토리텔링"
+        ],
+        "analyzed_at": "2026-11-20T11:02:17Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
       "id": "W809704",
       "source": "openalex",
       "title": "PHOTOMETRIC STUDY OF A W UMa TYPE CONTACT BINARY AH CNC",
@@ -504369,6 +505410,32 @@
       }
     },
     {
+      "id": "W2983958432",
+      "source": "openalex",
+      "title": "Basin Evolution of the Taebaeksan Basin during the Early Paleozoic",
+      "abstract": "본 연구는 최근 수행된 퇴적층서학 및 고생물학적 연구결과를 종합하고, 새롭게 분석된 자료를 보강하여, 전기 고생대 태백산분지의 고환경과 고지리를 복원하였다. 또한 순차층서학적 방법을 사용하여 조구조적 운동과 해수면 변동을 추적하여 종합적인 분지해석을 수행하였다. 태백산분지는 태백, 정선-평창, 영월-제천, 문경 지역에 넓게 분포하고 있으며, 암상 및 층서 특성에 따라 태백, 영월, 용탄, 평창, 문경 층군으로 구분되어 조사 및 연구가 진행되어 왔다. 태백산분지의 퇴적체는 탄산염암과 규산쇄설성 퇴적암이 혼합되어 있는데, 최근 쇄설성 퇴적물의 기원과 퇴적 연대에 대한 연구가 집중적으로 이루어졌다. 태백산분지에 공급되는 쇄설성 퇴적물의 근원지는 크게 곤드와나지괴와 한중지괴 기원지로 나누어진다. 태백산분지의 형성 초기에 태백대지와 정선-평창대지는 주로 한중지괴 기원지로부터 퇴적물을 공급 받았으며, 영월-제천 대지는 지리적 혹은 지형적 분리에 의해 한중지괴의 영향이 차단되고, 주로 곤드와나지괴 기원지로부터 퇴적층을 공급받았다. 쇄설성 저어콘 분석 결과는 중기 캠브리아 시기의 전 지구적 해수면 상승으로 인해 태백산분지 전체적으로 곤드와나지괴 기원의 퇴적물이 공급되었으며, 한중지괴 기원의 퇴적물은 공급이 멈추었음을 보여주고 있다. 한편, 태백산분지의 북쪽에 분포하는 정선-평창 대지의 퇴적체는 전기 캠브리아기와 오르도비스기 지층사이에 부정합 관계를 보여주고 있는데, 이것은 중기-후기 캠브리아 시기에 전 지구적 해수면 상승효과를 상쇄할 규모의 지역적 융기 운동이 정선-평창 대지 인근에서 존재했음을 보여준다. 이러한 융기운동은 최후기 캠브리아기와 최전기 오르도비스기에 태백산 분지 전역으로 확대되었다. 최전기 오르도비스기 이후에 태백산 분지는 조구조적으로 안정화되었고, 분지 전체적으로 해수면이 상승하면서 천해 탄산염 퇴적환경이 조성되어 두꺼운 탄산염암이 형성되었다. 전기 고생대 태백산분지의 퇴적작용은 후기 오르도비스기 동안 태백산분지와 한중지괴 전역에서 발생한 융기운동에 의해 종료되었다. This study reconstructed the paleoenvironments and paleogeography of the Taebaeksan Basin, through a review of the previous researches on sedimentology, paleontology and stratigraphy. This study also carried out a sequence stratigraphic analysis on regional tectonism and sea-level fluctuations on the basin during the Early Paleozoic. The basin broadly occur in the Taebaek, Yeongweol-Jecheon, Jeongseon-Pyeongchang, and Mungyeong areas, Gangwon province, South Korea. The basin-fills are composed mainly of mixed carbonates and siliciclastics, divided into the Taebaek, Yeongweol, Yongtan, Pyeongchang and Mungyeong groups according to lithologies and stratigraphic characteristics. Recently, there are a lot of studies on the provenance and depositional ages of the siliciclastic sequences of the basin. The detrital sediments of the basin would be derived from two separated provenances of the core-Gondwana and Sino-Korean cratons. In the Early Cambrian, the Taebaek and Jeongseon-Pyeongchang platforms have most likely received detrital sediments from the provenance of the Sino-Korean craton. On the other hand, the detrital sediments of the Yeongweol-Jecheon platform was probably sourced by those of the core-Gondwana craton. This separation of provenance can be interpreted as the result of the paleogeographic and paleotopographic separation of the Yeongweol-Jecheon platform from the Taebaek and Jeongseon-Pyeongchang platforms. The analyses on detrital zircons additionally reveal that the separation of provenance was ceased by the eustatic rise of sea-level during the Middle Cambrian, and the detrital sediments of the Taebaeksan Basin were entirely supplied from those of the core-Gondwana craton. During that period, sediment supply from the Sino-Korean craton would be restricted due to inundation of the provenance area of the craton. On the other hand, the Jeongseon-Pyeongchang platform sequences show the unconformable relationship between the Early Cambrian siliciclastic and the Early Ordovician carbonate strata. It is indicative of presence of regional uplift movements around the platform which would be to the extent offset of the effects of the Middle to Late Cambrian eustatic sealevel rise. These movements expanded and were reinforced across the basin in the latest Cambrian and earliest Ordovician. After the earliest Ordovician, the basin was tectonically stabilized, and the shallow marine carbonate environments were developed on the whole-platform by the Early Ordovician global eustatic sea-level rise, forming very thick carbonate strata in the basin. In the Late Ordovician, the Early Paleozoic sedimentation on the basin was terminated by the large-scale tectonic uplift across the Sino-Korean platform including the Taebaeksan Basin.",
+      "authors": [
+        "Yi Kyun Kwon",
+        "Yoo Jin Kwon",
+        "Jung Min Yeo",
+        "Changyoon Lee"
+      ],
+      "year": 2019,
+      "journal": "Economic and Environmental Geology",
+      "cited_by_count": 11,
+      "doi": "https://doi.org/10.9719/eeg.2019.52.5.427",
+      "is_oa": true,
+      "oa_url": "https://www.koreascience.kr:443/article/JAKO201931961769762.pdf",
+      "concepts": [
+        "Paleozoic",
+        "Structural basin",
+        "Geology",
+        "Paleontology"
+      ],
+      "openalex_url": "https://openalex.org/W2983958432",
+      "ai_analysis": null
+    },
+    {
       "id": "W1971466649",
       "source": "openalex",
       "title": "Corrigendum: Good governance and tourism development in protected areas: The case of Phong Nha-Ke Bang National Park, central Vietnam",
@@ -504451,6 +505518,36 @@
         "Environmental resource management"
       ],
       "openalex_url": "https://openalex.org/W3157672412",
+      "ai_analysis": null
+    },
+    {
+      "id": "W2271091929",
+      "source": "openalex",
+      "title": "Relationship between Macrofungi Fruiting and Environmental Factors in Songnisan National Park",
+      "abstract": "버섯발생과 환경요인(강수랑, 토양수분량, 온도, 식생)과의 관계를 이해하기 위하여 2003년부터 2008년까지 6년 동안 매년 6월∼10월에 속리산 국립공원 내 소나무 우점림과 참나무 우점림에서 버섯 발생종을 조사하고 분석하였다. 버섯 발생종은 연간 94종~167종으로 연간 변이가 있었으며 그 중 가장 큰 비중을 차지하는 것은 주로 외생균근성 버섯으로 송이과(Tricholomataceae), 광대버섯과(Amanitaceae), 무당버섯과(Russulaceae), 끈적버섯과(Cortinariaceae), 그물버섯과(Boletaceae)의 종이었으며, 가장 많이 발생한 시기는 7월부터 8월에 l3~90종이었다. 버섯발생종수는 6월∼10월의 강수랑과 r=0.897의 정의 상관관계가 있었고, 장기적으로는 파머가뭄지수와 단기적으로는 표준강수지수와도 관련이 있었다. 또한 토양수분량에 따라 버섯발생종과 수가 달랐다. 토양수분량이 20% 이상인 시기에 버섯발생종수는 50여종이었으나, 10％이하 에서는 5∼20종이었다. 노란젖버섯(Lactarius chrysorrheus), 기와버섯(Russula virescens) 등은 토양수분량이 20% 이상일 때 발생하였다. 발생버섯의 종수는 대기온도와 r=0.77의 상관관계가 있었으며, 21℃~25℃에서 많았다. 대기온도가 25℃이상에서 주로 발생하는 종은 금버섯(Tricholoma flayayirens), 구근광대버섯(Amanita gymnopus), 굴털이젖버섯(Lactarius piperatus), 삿갓땀버섯(Inocybe asteropora), 마른산그물버섯(Xerocomus chrysenteron) 등이었고, 온도변화에 큰 영향을 받지 않고 장기간 발생하는 버섯은 졸각버섯(Laccaria laccata), 독우산 광대버섯(Amanita virosa), 수원무당버섯(Russula mariae) 등이었다. 식생에 따라 발생버섯종이 달랐는데, 소나무 우점림에서만 발생한 종은 황소비단그물버섯(Suillus bovinus), 흰굴뚝버섯(Boletopsis leucomelas) 등 38종이었다. 굴참나무 우점림에서만 발생한 종은 좀벌집버섯(Polyporus arcularius), 노루궁뎅이(Hericium erinaceum) 등 42종이었다. 그리고 졸각버섯(Laccaria laccata), 말불버섯(Lycoperdon perlatum) 등 50종은 두 식생림에서 모두 발생하였다. 결론적으로 버섯 발생종과 종수는 강수량, 토양수분, 온도 그리고 우점 기주수종에 따라 크게 달라졌다.",
+      "authors": [
+        "박용우",
+        "구창덕",
+        "이화용",
+        "류성렬",
+        "Taeheon Kim",
+        "조영걸"
+      ],
+      "year": 2010,
+      "journal": "Korean Journal of Environment and Ecology",
+      "cited_by_count": 7,
+      "doi": "",
+      "is_oa": false,
+      "oa_url": "",
+      "concepts": [
+        "Lactarius",
+        "Russula",
+        "Biology",
+        "Boletus",
+        "Botany",
+        "Mushroom"
+      ],
+      "openalex_url": "https://openalex.org/W2271091929",
       "ai_analysis": null
     },
     {
@@ -504552,6 +505649,33 @@
         "Environmental protection"
       ],
       "openalex_url": "https://openalex.org/W2790040354",
+      "ai_analysis": null
+    },
+    {
+      "id": "W2472755263",
+      "source": "openalex",
+      "title": "Vegetation Structures of Stewartia koreana Forest in Mt. Jirisan",
+      "abstract": "본 연구는 지리산지역의 노각나무림을 대상으로 식물사회학적 방법으로 군락을 분류하고, 식생과 토양과의 상관관계를 밝히고자 구배분석을 실시하였다. 노각나무림은 노각나무-졸참나무군락, 노각나무-신갈나무군락, 노각나무전형군락으로 분류되었으며, 노각나무-졸참나무군락은 서어나무아군락과 전형아군락으로 구분되었다. 노각나무는 해발고 409m에서 최고 1,604m까지 자생하였다. 노각나무군락의 중요치 분석결과 노각나무가 75.47%로 가장 높았으며, 졸참나무 21.83%, 신갈나무 18.65%, 당단풍나무 18.19%, 철쭉 10.56%, 때죽나무 10.36% 순으로 나타났다. 본 조사지의 토양분석 결과 평균적으로 유기물함량 3.15~39.1%, 전질소함량 0.37~11.7%, 유효인산함량 0.9~45.4mg/kg, 치환성 양이온 K+ 0.09~1.48cmol+/kg, 토양 수분 19.28~55.47%, 토양 pH는 4.08~5.65인 것으로 조사되었다. DCCA ordination을 이용한 노각나무군락과 환경요인과의 상관관계 분석결과, 해발고에 의해 노각나무-신갈나무군락, 노각나무전형군락, 노각나무-졸참나무전형아군락, 서어나무아군락 순으로 분포하였다.",
+      "authors": [
+        "권혜진",
+        "권재환",
+        "정혜란",
+        "이지혜",
+        "송호경"
+      ],
+      "year": 2011,
+      "journal": "Korean Journal of Environment and Ecology",
+      "cited_by_count": 2,
+      "doi": "",
+      "is_oa": false,
+      "oa_url": "",
+      "concepts": [
+        "Chemistry",
+        "Food science",
+        "Traditional medicine",
+        "Medicine"
+      ],
+      "openalex_url": "https://openalex.org/W2472755263",
       "ai_analysis": null
     },
     {
@@ -504659,6 +505783,30 @@
         "Physical geography"
       ],
       "openalex_url": "https://openalex.org/W2415741337",
+      "ai_analysis": null
+    },
+    {
+      "id": "W1900849369",
+      "source": "openalex",
+      "title": "Distribution of the Ural Owl Strix uralensis in Odaesan National Park",
+      "abstract": "이 조사는 2009-2010년에 오대산국립공원에서 수행되었다. 긴점박이올빼미(Strix uralensis)가 관찰된 지역은 명계리, 북대사, 동피골, 영감사, 월정사, 방아다리 6개의 12개 지점이었다. 긴점박이올빼미가 빈번하게 관찰된 지역은 월정사 지역이었다.",
+      "authors": [
+        "김창회",
+        "강종현",
+        "원혁재",
+        "김남호",
+        "김동원"
+      ],
+      "year": 2011,
+      "journal": "한국조류학회지",
+      "cited_by_count": 1,
+      "doi": "",
+      "is_oa": false,
+      "oa_url": "",
+      "concepts": [
+        "Computer science"
+      ],
+      "openalex_url": "https://openalex.org/W1900849369",
       "ai_analysis": null
     },
     {
@@ -505590,6 +506738,32 @@
         "Environmental resource management"
       ],
       "openalex_url": "https://openalex.org/W7205583410",
+      "ai_analysis": null
+    },
+    {
+      "id": "W4401403145",
+      "source": "openalex",
+      "title": "A study of Dongyakro (東略路) of the Biography of Gung-ye (弓裔傳) in Samguksagi (The Chronicles of the Three States): With focus on estimating the location of ‘Eojin (御珍)’",
+      "abstract": "The purpose of this article is to determine the location of Dongyakro (東略路), which created the opportunity for Gung-ye (弓裔) to break away from Yang-gil (梁吉), declare himself a general (將軍) in Myeongju (present-day Gangneung), become practically independent, and in particular, determine the location of 'Eojin (御珍)', which is the most controversial. First, as for the place names ‘Sedalsa Temple (世達寺)’ and ‘Chiaksan Seoknamsa Temple (雉岳山 石南寺)’, which appear in connection with Gung-ye’s birth and growth, I accepted the results of previous research. In other words, I admitted that Sedalsa Temple was located in 'Heunggyobungyo [a.k.a. Heunggyo-Jeol]' in Heungwol-ri, Nam-myeon, Yeongwol-gun, where the 'Seodal' name tile piece was excavated, and Chiaksan Seoknamsa Temple was located in 'Jeolgol', Seongnam-ri, Sillim-myeon, Wonju City, where the 'Seoknamsa Temple' name tile piece was excavated. Next, I explained that the place names 'Jucheon (酒泉)', 'Naeseong (奈 城)', 'Uloh (鬱烏)', and 'Eojin (御珍)' seen in Dongyakro are controversial, and based on Samguksagi ｢Jiriji (Geography Section)｣, the location of Jucheon was determined as Jucheon-myeon in present-day Yeongwol, Naeseong as present-day Yeongwol-eup, and Uloh as present-day Pyeongchang-eup. Lastly, I tried to determine the location of ‘Eojin (御珍)’. Most people believe that the location of ‘Eojin’ is what is now ‘Uljinseol (蔚珍說)’, but it is not certain and is open to discussion. Therefore, I attempted to find various related literature and archaeological materials, and intensively analyze them. Consequently, I established that ‘Eojin’ is present-day Imge-myeon, Jeongseon-gun. Ultimately, to determine the location of Dongyakro of Gung-ye after identifying the location of 'Eojin', we can see that Gung-ye advanced in the southern region of Gangwon-do, that is, Chiaksan Seoknamsa Temple－ Jucheon (Yeongwol)－Naeseong (Yeongwol-eup)－Uloh (Pyeongchang-eup) －Jeongseon- It can be seen that it was moved to eup－Eojin (Imgye)－ Sapdangryeong－Myeongju (Gangneung).",
+      "authors": [
+        "Society for the Study of Early Korean History",
+        "Young-ho Hong"
+      ],
+      "year": 2024,
+      "journal": "",
+      "cited_by_count": 0,
+      "doi": "https://doi.org/10.35160/sjekh.2024.4.46.431.",
+      "is_oa": false,
+      "oa_url": "",
+      "concepts": [
+        "Biography",
+        "Focus (optics)",
+        "History",
+        "Art history",
+        "Physics",
+        "Optics"
+      ],
+      "openalex_url": "https://openalex.org/W4401403145",
       "ai_analysis": null
     }
   ]

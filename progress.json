@@ -2,7 +2,7 @@
   "completed_keywords": {
     "Bukhansan": "2026-10-01",
     "Byeonsanbando": "2026-11-15",
-    "Chiaksan": "2026-10-01",
+    "Chiaksan": "2026-11-20",
     "Dadohaehaesang": "2026-11-15",
     "Deogyusan": "2026-10-01",
     "Gayasan": "2026-10-01",
@@ -80,13 +80,12 @@
     "Bukhansan": 4,
     "Seoraksan": 4,
     "Sobaeksan": 4,
-    "Songnisan": 3,
-    "Odaesan": 3,
-    "Woraksan": 3,
-    "Juwangsan": 3,
-    "Jirisan": 3,
-    "Chiaksan": 3,
-    "Taebaeksan": 3,
+    "Songnisan": 4,
+    "Odaesan": 4,
+    "Woraksan": 4,
+    "Juwangsan": 4,
+    "Jirisan": 4,
+    "Taebaeksan": 4,
     "Palgongsan": 3,
     "Hallyeohaesang": 3,
     "Hallasan": 3,
@@ -121,5 +120,5 @@
     "national park landscape connectivity corridor": 4,
     "national park disaster risk management": 4
   },
-  "updated_at": "2026-11-19T11:10:50.309153"
+  "updated_at": "2026-11-20T10:59:33.088008"
 }
