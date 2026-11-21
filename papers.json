@@ -1,16 +1,16 @@
 {
   "meta": {
-    "total": 5749,
-    "analyzed": 5696,
+    "total": 5755,
+    "analyzed": 5699,
     "avg_applicability": 3.7,
     "avg_utility": 3.7,
-    "high_applicability_count": 3527,
+    "high_applicability_count": 3530,
     "score_distribution": {
       "1": 90,
       "2": 395,
       "3": 1683,
-      "4": 2360,
-      "5": 1167
+      "4": 2361,
+      "5": 1169
     },
     "year_distribution": {
       "1895": 1,
@@ -72,17 +72,17 @@
       "2015": 226,
       "2016": 246,
       "2017": 223,
-      "2018": 220,
-      "2019": 264,
-      "2020": 317,
-      "2021": 292,
+      "2018": 221,
+      "2019": 266,
+      "2020": 318,
+      "2021": 293,
       "2022": 236,
       "2023": 250,
       "2024": 283,
-      "2025": 343,
+      "2025": 344,
       "2026": 341
     },
-    "updated_at": "2026-11-20T11:03:44.898496"
+    "updated_at": "2026-11-21T10:44:09.540172"
   },
   "tag_index": {
     "국립공원관리": 312,
@@ -98,7 +98,7 @@
     "주민참여": 136,
     "생태모니터링": 127,
     "시민과학": 126,
-    "탐방로관리": 114,
+    "탐방로관리": 115,
     "기후변화적응": 106,
     "수질모니터링": 102,
     "생물다양성보전": 101,
@@ -139,20 +139,20 @@
     "생태계관리": 48,
     "재난관리": 48,
     "지질유산": 48,
+    "식생구조": 47,
     "모니터링": 46,
     "장기모니터링": 46,
     "공원관리": 46,
-    "식생구조": 46,
     "공동관리": 46,
-    "지속가능관광": 44
+    "태백산분지": 45
   },
   "work_area_index": {
-    "생태계 모니터링·조사": 2818,
-    "탐방로·탐방객 관리": 2610,
-    "자원보전·복원": 1901,
+    "생태계 모니터링·조사": 2821,
+    "탐방로·탐방객 관리": 2612,
+    "자원보전·복원": 1904,
     "지역사회·거버넌스": 1576,
     "공원계획·구역관리": 1312,
-    "야생생물·서식지 관리": 1260,
+    "야생생물·서식지 관리": 1261,
     "탐방객 서비스·안전": 680,
     "환경 모니터링": 620,
     "기후변화 대응": 607,
@@ -162,7 +162,7 @@
   },
   "location_index": {
     "해외": 4539,
-    "국내": 1157
+    "국내": 1160
   },
   "papers": [
     {
@@ -75383,6 +75383,94 @@
       }
     },
     {
+      "id": "W2946929625",
+      "source": "openalex",
+      "title": "Analysis of the Differences in the Vascular Flora Distributed in the Gatbawi District of Palgongsan Natural Park",
+      "abstract": "본 연구는 팔공산자연공원 갓바위지구에 분포하는 관속식물상을 조사함과 아울러 자연자원의 보존과 관리를 위한 기초자료를 제공하기 위해 수행하였다. 갓바위지구를 대상으로 2015년 4월부터 2017년 10월까지 식물상을 조사한 결과는 다음과 같다. 조사한 자료를 바탕으로 식물상 목록을 작성한 결과, 전체 식물상은 75과 167속 214종 3아종 18변종 3품종으로 총 238분류군이 확인되었으며, 2012년 확인된 관속식물상 59과 108속 117종 14변종 3품종 등 총 134분류군(You, 2012)과는 다소 차이가 있었다. 식물구계학적 특정종은 20종, 귀화식물은 총 18종이 확인되었다. 조사지역을 지형적 특성, 이용적 특성, 수광량 등에 따라 3개 권역으로 구분 조사를 실시한 결과 출현 식물종수는 A 구간(119종)<C 구간(147종)<B 구간(161종)순으로 나타났으나 식물상 다양성은 A 구간(126.60)<B 구간(127.78)<C 구간(132.43) 순으로 확인되었다. 즉, C 구간이 A B 구간에 비해 다양한 종과 속을 포함하고 있는 것으로 분석되었다. 갓바위지구는 팔공산의 다른 지구와 비교시 다양한 식물상이 관찰되지는 않았으나 생태학적으로 중요종인 특정 식물종 등이 서식하고 있고 지구 곳곳에 다양한 지형자원이 산재되어 있으므로 중요종의 서식처 보호 및 자연자원 보존을 위한 관리계획 수립이 필요하며, 인위적 간섭과 교란정도가 상대적으로 높은 A B 지역은 환경 압력을 저감시킬 수 있도록 등산로 폐쇄, 휴식년제 도입, 훼손지 복원, 귀화식물에 대한 장기 모니터링 등 건전한 산림생태계 복원을 위한 노력이 필요할 것으로 판단된다. This study was conducted to investigate the vascular flora distributed in the Gatbawi District of Palgongsan Natural Park and to provide basic data for the conservation and management of the natural resources. The results of the investigation of the flora with the Gatbawi District from April 2015 through October 2017 are as follows. As a result of drawing up a list of flora based on the specimens of evidence, as for the entire flora, 238 taxa were identified in total: 75 families, 167 genera, 214 species, 3 subspecies, 18 variants and 3 varieties. Also, one species of rare plant, 20 particular floristic species and a total of 18 species of naturalized plant were found.",
+      "authors": [
+        "Tae Kyu Kim",
+        "Hwa Jung",
+        "Won Hyeon Lim"
+      ],
+      "year": 2019,
+      "journal": "한국자원식물학회지",
+      "cited_by_count": 0,
+      "doi": "https://doi.org/10.7732/kjpr.2019.32.1.072",
+      "is_oa": true,
+      "oa_url": "http://koreascience.or.kr/journal/view.jsp?kj=JOSMBA&py=2019&vnc=v32n1&sp=72",
+      "concepts": [
+        "Flora (microbiology)",
+        "Geography",
+        "Natural (archaeology)",
+        "Natural park",
+        "Ecology",
+        "Archaeology"
+      ],
+      "openalex_url": "https://openalex.org/W2946929625",
+      "ai_analysis": {
+        "title_ko": "팔공산자연공원 갓바위지구 분포 관속식물상 차이 분석",
+        "abstract_ko": "본 연구는 팔공산자연공원 갓바위지구에 분포하는 관속식물상을 조사하고 자연자원의 보존과 관리를 위한 기초자료를 제공하기 위해 수행되었다. 2015년 4월부터 2017년 10월까지 조사한 결과, 전체 식물상은 75과 167속 214종 3아종 18변종 3품종 등 총 238분류군이 확인되었으며, 과거 2012년 조사 결과인 134분류군과는 차이가 있었다. 식물구계학적 특정종 20종과 귀화식물 18종이 확인되었다. 지형적·이용적 특성에 따른 구역별 조사 결과, 출현 종수는 B 구간에서 가장 많았으나 식물상 다양성은 C 구간이 가장 높았다. 갓바위지구는 인위적 간섭과 교란 정도가 높은 A·B 지역을 중심으로 등산로 폐쇄, 휴식년제 도입, 훼손지 복원 및 귀화식물 장기 모니터링 등 건전한 산림생태계 복원을 위한 노력이 필요하다.",
+        "summary_3lines": [
+          "팔공산자연공원 갓바위지구의 관속식물상 변화를 파악하고 자연자원 보전 관리 방안을 마련하기 위해 식물상 조사를 수행했다.",
+          "총 238분류군의 관속식물이 확인되었으며, 식물구계학적 특정종 20종과 귀화식물 18종이 분포하는 것으로 나타났다.",
+          "인위적 간섭이 심한 구역은 휴식년제와 훼손지 복원 등 생태계 회복 조치를 시행하고 귀화식물 모니터링을 강화해야 한다."
+        ],
+        "research_purpose": "팔공산자연공원 갓바위지구의 관속식물상 현황을 정확히 파악하여 과거 자료와 비교하고, 구역별 식물 다양성 분석을 통해 공원 내 자연자원 보존 및 탐방로 관리의 기초자료를 제공하기 위함이다.",
+        "key_findings": [
+          "총 75과 167속 214종 3아종 18변종 3품종 등 총 238분류군의 관속식물 서식 확인",
+          "식물구계학적 특정종 20종과 귀화식물 18종 분포 확인",
+          "인위적 이용 압력이 높은 구간과 식물 다양성이 높은 구간 간의 차이 확인 및 교란지역 관리 필요성 대두"
+        ],
+        "practical_applications": [
+          "인위적 간섭과 교란이 심한 탐방로 구간에 대한 휴식년제 도입 및 등산로 정비",
+          "귀화식물 유입이 우려되는 지역에 대한 장기 모니터링 및 제거 작업 실시",
+          "식물구계학적 특정종 서식처 주변의 보호 울타리 설치 및 출입 제한 구역 지정"
+        ],
+        "korea_np_applicability_score": 5,
+        "korea_np_applicability_reason": "대한민국 국립공원(팔공산 등) 내 탐방로 구간별 식물상 변화와 귀화식물 현황을 분석한 연구로, 현장공원사무소의 자원 모니터링 및 탐방로 휴식년제 운영에 직접 적용할 수 있음",
+        "study_location": "국내",
+        "related_work_areas": [
+          "생태계 모니터링·조사",
+          "자원보전·복원",
+          "탐방로·탐방객 관리"
+        ],
+        "related_laws": [
+          "자연공원법 제23조(행위허가 등)",
+          "야생생물 보호 및 관리에 관한 법률 제21조(야생생물 보호구역)"
+        ],
+        "field_checklist": [
+          "조사 대상 탐방로 구간별 관속식물상 및 출현 종수 변화 확인",
+          "식물구계학적 특정종의 자생지 생육 상태 및 훼손 여부 점검",
+          "귀화식물의 유입 경로 및 분포 면적 파악",
+          "인위적 샛길 이용 등으로 인한 식생 훼손 및 토양 유출 여부 확인",
+          "휴식년제 도입 검토 대상 구역의 탐방객 출입 통제 시설 상태 점검"
+        ],
+        "practical_utility_score": 5,
+        "cautions": [
+          "식물상 조사는 계절별 식생 변화를 고려하여 연중 다회차 수행 필요",
+          "휴식년제 도입 시 지역 주민 및 탐방객과의 갈등 조율 선행 필요"
+        ],
+        "tags": [
+          "관속식물상",
+          "팔공산국립공원",
+          "식물구계학적특정종",
+          "귀화식물",
+          "탐방로관리"
+        ],
+        "recommended_followup_research": [
+          "기후변화에 따른 국립공원 내 고지대 식물상 변화 추적 조사",
+          "탐방객 이용 강도와 식생 훼손 간의 상관관계 정량화 연구"
+        ],
+        "ai_recommended_topics": [
+          "국립공원 식물상 모니터링",
+          "탐방로 휴식년제 생태적 효과 분석",
+          "자연공원 귀화식물 확산 방지 대책"
+        ],
+        "analyzed_at": "2026-11-21T10:43:44Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
       "id": "W2080685132",
       "source": "openalex",
       "title": "Place attachment and pro-environmental behaviour in national parks: the development of a conceptual framework",
@@ -93097,6 +93185,100 @@
         ],
         "analyzed_at": "2026-10-22T08:42:05Z",
         "model": "gemini-flash-latest"
+      }
+    },
+    {
+      "id": "W3214642406",
+      "source": "openalex",
+      "title": "Ecological Characteristics of Natural Habits of Deutzia paniculata, a Rare and Endemic Woody Species in Korea",
+      "abstract": "Deutzia paniculata Nakai, a rare and endemic plant, has limited distribution throughout the North and South Gyeongsang provinces of South Korea. The D. paniculata community grows mostly on the stony slopes of forests, valley edges, and rock layers at 250-960 m in altitude, where deciduous trees are dominant and high humidity is maintained. Correlation analysis of vegetation and environmental factors found that the Walter's dogwood-mulberry community was correlated with soil acidity (pH). Whilst the queritron community had correlations with distance from the valley, rock rate and slope. The natural habitat of the Palgongsan Mountain in Daegu is known to have high genetic diversity, had eight D. paniculata individuals recorded from 2014 to 2018, and 12 individuals recorded in 2020 (new individuals due to a newly created space within the herbaceous layer caused by grass mowing works), it is therefore unlikely that the community would perish unless there was an artificial disturbance. To conserve the natural habitats of D. paniculata, oppression by Sasa borealis, damage, increase in crown density of the upper layer, overexploitation, and absence of seedlings should be carefully investigated. In addition, response measures should also be established and the impact on seed fullness and the reproductive characteristics of D. paniculata recorded. To restore declined genetic diversity, individuals from high genetic diversity regions, such as Palgongsan Mountain, should be artificially transplanted.",
+      "authors": [
+        "Jin‐Sun Park",
+        "Jong-Bin An",
+        "Ho-Geun Yun",
+        "Myung Hoon Yi",
+        "Wan-Geun Park",
+        "Hyun‐Tak Shin",
+        "Yong-Sik Hong",
+        "Kyeong-Cheol Lee",
+        "Yun-Jin Shim",
+        "Jung-Won Sung"
+      ],
+      "year": 2021,
+      "journal": "Journal of Forest and Environmental Science",
+      "cited_by_count": 1,
+      "doi": "https://doi.org/10.7747/jfes.2021.37.3.206",
+      "is_oa": true,
+      "oa_url": "http://www.koreascience.or.kr/article/JAKO202127452864425.page",
+      "concepts": [
+        "Ecology",
+        "Geography",
+        "Natural (archaeology)",
+        "Endemism",
+        "Rare species",
+        "Biology"
+      ],
+      "openalex_url": "https://openalex.org/W3214642406",
+      "ai_analysis": {
+        "title_ko": "한국의 희귀 특산 목본식물 말발도리(Deutzia paniculata)의 자연서식지 생태적 특성",
+        "abstract_ko": "희귀 특산식물인 말발도리(Deutzia paniculata Nakai)는 대한민국 경상북도와 경상남도 지역에 국한되어 분포합니다. 말발도리 군락은 주로 낙엽수림이 우세하고 습도가 높으며 고도 250~960m 범위의 돌이 많은 산림 사면, 계곡부 가장자리, 암석 지대에 생육합니다. 식생과 환경 요인의 상관분석 결과, 말발도리-뽕나무 군락은 토양 산도(pH)와 상관관계를 보였고, 갈참나무 군락은 계곡으로부터의 거리, 암석 비율, 경사도와 상관관계를 나타냈습니다. 대구 팔공산의 자연서식지는 높은 유전적 다양성을 가지는 것으로 알려져 있으며, 2014년부터 2018년까지 8개체가 기록되었으나 2018년 이후 풀베기 작업으로 초본층에 새로운 공간이 형성되면서 2020년에는 12개체로 증가하여 인위적인 교란이 없는 한 군락이 소멸할 가능성은 낮습니다. 말발도리의 자연서식지를 보존하기 위해서는 조릿대(Sasa borealis)의 압박, 훼손, 상층부 수관밀도 증가, 남분, 유묘의 부재 등을 면밀히 조사해야 합니다. 또한 대응 방안을 마련하고 종자 충실률 및 번역 특성에 미치는 영향을 기록해야 합니다. 떨어진 유전적 다양성을 복원하기 위해서는 팔공산과 같이 유전적 다양성이 높은 지역의 개체를 인공적으로 이식해야 합니다.",
+        "summary_3lines": [
+          "희귀 특산식물인 말발도리의 자생지 생태적 특성을 분석하고 서식지 보전 및 복원 방안을 도출하기 위함이다.",
+          "식생 조사와 환경 요인 분석 결과, 말발도리 군락은 토양 산도, 계곡 거리, 암석 비율 등과 밀접한 관련이 있으며 적절한 햇빛과 공간이 개체군 유지에 중요함을 확인했다.",
+          "자연서식지 보호를 위해 조릿대 경쟁 압박 제거, 상층부 수관 조절, 유전적 다양성 회복을 위한 인공 이식 등의 실무적 조치가 필요하다."
+        ],
+        "research_purpose": "본 연구는 한국 고유의 희귀 특산식물인 말발도리의 자생지 환경 요인과 식생 구조를 분석하고, 서식지 내 개체군 변화 양상을 파악하여 구체적인 보전 및 복원 전략을 수립하는 것을 목적으로 합니다.",
+        "key_findings": [
+          "말발도리 군락은 주로 고도 250~960m의 낙엽수림 사면, 계곡부, 암석지에 분포하며 높은 습도를 유지하는 곳에 생육한다.",
+          "군락 분포는 토양 산도(pH), 계곡과의 거리, 암석 비율, 경사도 등의 환경 요인과 유의한 상관관계를 보인다.",
+          "풀베기 작업 등으로 초본층에 공간이 확보되면서 개체수가 증가한 사례를 통해, 과도하지 않은 적절한 광환경 유지가 개체군 생존에 긍정적임을 확인했다."
+        ],
+        "practical_applications": [
+          "말발도리 자생지 내 상층부 수관 밀도가 높아지면 하부 광환경이 악화되므로 적정 수준의 가지치기나 수관 조절을 시행한다.",
+          "하부 식생을 잠식하는 조릿대(Sasa borealis)의 확산을 모니터링하고 필요시 국부적인 제거 작업을 실시하여 생육 공간을 확보한다.",
+          "유전적 다양성이 낮아진 자생지 복원을 위해 팔공산 등 유전적 다양성이 우수한 원산지의 개체를 확보하여 인공 이식 및 복원을 추진한다."
+        ],
+        "korea_np_applicability_score": 5,
+        "korea_np_applicability_reason": "대구 팔공산 등 국내 국립공원 및 보호지역에 자생하는 희귀 특산식물의 보전·복원 업무에 직접적으로 활용할 수 있는 현장 밀착형 연구입니다.",
+        "study_location": "국내",
+        "related_work_areas": [
+          "생태계 모니터링·조사",
+          "야생생물·서식지 관리",
+          "자원보전·복원"
+        ],
+        "related_laws": [
+          "자연공원법 제23조",
+          "야생생물 보호 및 관리에 관한 법률 제14조"
+        ],
+        "field_checklist": [
+          "자생지 내 말발도리 성체 및 유묘의 개체수 증감 현황 확인",
+          "상층부 수관 밀도 과다로 인한 하층부 광선 차단 여부 조사",
+          "자생지 주변 조릿대(Sasa borealis)의 침입 및 확산 정도 파악",
+          "토양 산도(pH) 및 계곡부와의 거리 등 서식 환경 요인 변화 점검",
+          "탐방객이나 인위적 요인으로 인한 훼손 및 남분(채취) 흔적 확인"
+        ],
+        "practical_utility_score": 4,
+        "cautions": [
+          "서식지 내 인위적 교란(풀베기 등)은 긍정적 효과를 줄 수도 있으나 과도할 경우 자생지 파괴로 이어질 수 있으므로 신중하게 접근해야 한다.",
+          "멸종위기야생식물 또는 희귀식물 이식 및 복원 시 관련 법령에 따른 허가와 전문가 자문이 선행되어야 한다."
+        ],
+        "tags": [
+          "말발도리",
+          "희귀특산식물",
+          "자생지복원",
+          "식생구조",
+          "유전적다양성"
+        ],
+        "recommended_followup_research": [
+          "국내 주요 말발도리 자생지의 전수 조사 및 유전적 다양성 비교 연구",
+          "상층 수관 조절 및 조릿대 제거가 말발도리 유묘 정착에 미치는 영향 실험"
+        ],
+        "ai_recommended_topics": [
+          "희귀 특산식물 자생지 환경요인 분석",
+          "식물계절 및 유전적 다양성 기반 복원"
+        ],
+        "analyzed_at": "2026-11-21T10:43:14Z",
+        "model": "gemini-flash-lite-latest"
       }
     },
     {
@@ -181602,6 +181784,92 @@
           "habitat fragmentation in national parks"
         ],
         "analyzed_at": "2026-10-13T10:12:25Z",
+        "model": "gemini-flash-lite-latest"
+      }
+    },
+    {
+      "id": "W2983958432",
+      "source": "openalex",
+      "title": "Basin Evolution of the Taebaeksan Basin during the Early Paleozoic",
+      "abstract": "본 연구는 최근 수행된 퇴적층서학 및 고생물학적 연구결과를 종합하고, 새롭게 분석된 자료를 보강하여, 전기 고생대 태백산분지의 고환경과 고지리를 복원하였다. 또한 순차층서학적 방법을 사용하여 조구조적 운동과 해수면 변동을 추적하여 종합적인 분지해석을 수행하였다. 태백산분지는 태백, 정선-평창, 영월-제천, 문경 지역에 넓게 분포하고 있으며, 암상 및 층서 특성에 따라 태백, 영월, 용탄, 평창, 문경 층군으로 구분되어 조사 및 연구가 진행되어 왔다. 태백산분지의 퇴적체는 탄산염암과 규산쇄설성 퇴적암이 혼합되어 있는데, 최근 쇄설성 퇴적물의 기원과 퇴적 연대에 대한 연구가 집중적으로 이루어졌다. 태백산분지에 공급되는 쇄설성 퇴적물의 근원지는 크게 곤드와나지괴와 한중지괴 기원지로 나누어진다. 태백산분지의 형성 초기에 태백대지와 정선-평창대지는 주로 한중지괴 기원지로부터 퇴적물을 공급 받았으며, 영월-제천 대지는 지리적 혹은 지형적 분리에 의해 한중지괴의 영향이 차단되고, 주로 곤드와나지괴 기원지로부터 퇴적층을 공급받았다. 쇄설성 저어콘 분석 결과는 중기 캠브리아 시기의 전 지구적 해수면 상승으로 인해 태백산분지 전체적으로 곤드와나지괴 기원의 퇴적물이 공급되었으며, 한중지괴 기원의 퇴적물은 공급이 멈추었음을 보여주고 있다. 한편, 태백산분지의 북쪽에 분포하는 정선-평창 대지의 퇴적체는 전기 캠브리아기와 오르도비스기 지층사이에 부정합 관계를 보여주고 있는데, 이것은 중기-후기 캠브리아 시기에 전 지구적 해수면 상승효과를 상쇄할 규모의 지역적 융기 운동이 정선-평창 대지 인근에서 존재했음을 보여준다. 이러한 융기운동은 최후기 캠브리아기와 최전기 오르도비스기에 태백산 분지 전역으로 확대되었다. 최전기 오르도비스기 이후에 태백산 분지는 조구조적으로 안정화되었고, 분지 전체적으로 해수면이 상승하면서 천해 탄산염 퇴적환경이 조성되어 두꺼운 탄산염암이 형성되었다. 전기 고생대 태백산분지의 퇴적작용은 후기 오르도비스기 동안 태백산분지와 한중지괴 전역에서 발생한 융기운동에 의해 종료되었다. This study reconstructed the paleoenvironments and paleogeography of the Taebaeksan Basin, through a review of the previous researches on sedimentology, paleontology and stratigraphy. This study also carried out a sequence stratigraphic analysis on regional tectonism and sea-level fluctuations on the basin during the Early Paleozoic. The basin broadly occur in the Taebaek, Yeongweol-Jecheon, Jeongseon-Pyeongchang, and Mungyeong areas, Gangwon province, South Korea. The basin-fills are composed mainly of mixed carbonates and siliciclastics, divided into the Taebaek, Yeongweol, Yongtan, Pyeongchang and Mungyeong groups according to lithologies and stratigraphic characteristics. Recently, there are a lot of studies on the provenance and depositional ages of the siliciclastic sequences of the basin. The detrital sediments of the basin would be derived from two separated provenances of the core-Gondwana and Sino-Korean cratons. In the Early Cambrian, the Taebaek and Jeongseon-Pyeongchang platforms have most likely received detrital sediments from the provenance of the Sino-Korean craton. On the other hand, the detrital sediments of the Yeongweol-Jecheon platform was probably sourced by those of the core-Gondwana craton. This separation of provenance can be interpreted as the result of the paleogeographic and paleotopographic separation of the Yeongweol-Jecheon platform from the Taebaek and Jeongseon-Pyeongchang platforms. The analyses on detrital zircons additionally reveal that the separation of provenance was ceased by the eustatic rise of sea-level during the Middle Cambrian, and the detrital sediments of the Taebaeksan Basin were entirely supplied from those of the core-Gondwana craton. During that period, sediment supply from the Sino-Korean craton would be restricted due to inundation of the provenance area of the craton. On the other hand, the Jeongseon-Pyeongchang platform sequences show the unconformable relationship between the Early Cambrian siliciclastic and the Early Ordovician carbonate strata. It is indicative of presence of regional uplift movements around the platform which would be to the extent offset of the effects of the Middle to Late Cambrian eustatic sealevel rise. These movements expanded and were reinforced across the basin in the latest Cambrian and earliest Ordovician. After the earliest Ordovician, the basin was tectonically stabilized, and the shallow marine carbonate environments were developed on the whole-platform by the Early Ordovician global eustatic sea-level rise, forming very thick carbonate strata in the basin. In the Late Ordovician, the Early Paleozoic sedimentation on the basin was terminated by the large-scale tectonic uplift across the Sino-Korean platform including the Taebaeksan Basin.",
+      "authors": [
+        "Yi Kyun Kwon",
+        "Yoo Jin Kwon",
+        "Jung Min Yeo",
+        "Changyoon Lee"
+      ],
+      "year": 2019,
+      "journal": "Economic and Environmental Geology",
+      "cited_by_count": 11,
+      "doi": "https://doi.org/10.9719/eeg.2019.52.5.427",
+      "is_oa": true,
+      "oa_url": "https://www.koreascience.kr:443/article/JAKO201931961769762.pdf",
+      "concepts": [
+        "Paleozoic",
+        "Structural basin",
+        "Geology",
+        "Paleontology"
+      ],
+      "openalex_url": "https://openalex.org/W2983958432",
+      "ai_analysis": {
+        "title_ko": "전기 고생대 태백산분지의 분지 진화",
+        "abstract_ko": "본 연구는 최근 수행된 퇴적층서학 및 고생물학적 연구 결과를 종합하고 새롭게 분석된 자료를 보강하여 전기 고생대 태백산분지의 고환경과 고지리를 복원하였다. 또한 순차층서학적 방법을 사용하여 조구조적 운동과 해수면 변동을 추적하여 종합적인 분지해석을 수행하였다. 태백산분지는 태백, 정선-평창, 영월-제천, 문경 지역에 넓게 분포하고 있으며 암상 및 층서 특성에 따라 태백, 영월, 용탄, 평창, 문경 층군으로 구분되어 조사 및 연구가 진행되어 왔다. 태백산분지의 퇴적체는 탄산염암과 규산쇄설성 퇴적암이 혼합되어 있는데 최근 쇄설성 퇴적물의 기원과 퇴적 연대에 대한 연구가 집중적으로 이루어졌다. 태백산분지에 공급되는 쇄설성 퇴적물의 근원지는 크게 곤드와나지괴와 한중지괴 기원지로 나누어진다. 태백산분지의 형성 초기에 태백대지와 정선-평창대지는 주로 한중지괴 기원지로부터 퇴적물을 공급받았으며, 영월-제천 대지는 지리적 혹은 지형적 분리에 의해 한중지괴의 영향이 차단되고 주로 곤드와나지괴 기원지로부터 퇴적층을 공급받았다. 쇄설성 저어콘 분석 결과는 중기 캠브리아 시기의 전 지구적 해수면 상승으로 인해 태백산분지 전체적으로 곤드와나지괴 기원의 퇴적물이 공급되었으며 한중지괴 기원의 퇴적물은 공급이 멈추었음을 보여주고 있다. 한편, 태백산분지의 북쪽에 분포하는 정선-평창 대지의 퇴적체는 전기 캠브리아기와 오르도비스기 지층 사이에 부정합 관계를 보여주는데, 이것은 중기-후기 캠브리아 시기에 전 지구적 해수면 상승효과를 상쇄할 규모의 지역적 융기 운동이 정선-평창 대지 인근에서 존재했음을 보여준다. 이러한 융기 운동은 최후기 캠브리아기와 최전기 오르도비스기에 태백산 분지 전역으로 확대되었다. 최전기 오르도비스기 이후에 태백산 분지는 조구조적으로 안정화되었고 분지 전체적으로 해수면이 상승하면서 천해 탄산염 퇴적환경이 조성되어 두꺼운 탄산염암이 형성되었다. 전기 고생대 태백산분지의 퇴적작용은 후기 오르도비스기 동안 태백산분지와 한중지괴 전역에서 발생한 융기운동에 의해 종료되었다.",
+        "summary_3lines": [
+          "전기 고생대 태백산분지의 퇴적층서와 지질구조 분석을 통해 고환경 변화와 분지 진화 과정을 규명하였다.",
+          "쇄설성 저어콘 분석과 순차층서학적 접근을 통해 퇴적물 근원지의 변화와 해수면 변동 및 지역적 융기 운동을 추적하였다.",
+          "태백산분지의 지질학적 특성 이해를 높이고 국립공원 내 고기 지층 분포 지역의 지질 자원 보전 및 학술적 해석 기반을 제공한다."
+        ],
+        "research_purpose": "본 연구는 최근의 퇴적층서학 및 고생물학적 연구 결과를 종합하고 쇄설성 저어콘 분석 등의 신뢰도 높은 자료를 보강하여, 전기 고생대 태백산분지의 고환경과 고지리적 발달 과정을 복원하고자 한다. 아울러 순차층서학적 기법을 적용하여 당시의 조구조 운동과 해수면 변동 양상을 추적하고 종합적인 분지 해석을 수행하는 것을 목적으로 한다.",
+        "key_findings": [
+          "태백산분지 초기 퇴적물은 태백 및 정선-평창대지는 한중지괴에서, 영월-제천대지는 지형적 격리로 인해 곤드와나지괴에서 주로 공급받았다.",
+          "중기 캠브리아기 전 지구적 해수면 상승으로 분지 전역에 곤드와나지괴 기원 퇴적물이 공급되었고 한중지괴 기원 퇴적물 공급은 중단되었다.",
+          "중기-후기 캠브리아기 및 후기 오르도비스기 전반에 걸쳐 지역적 융기 운동이 발생하여 지층 간 부정합 관계를 형성하고 퇴적 작용이 종료되었다."
+        ],
+        "practical_applications": [
+          "태백산국립공원 등지고원 및 퇴적암 지형 내 탐방로 조성 시 지질 명소의 형성과정을 설명하는 안내판 및 해설 자료에 고환경 변동 정보를 반영한다.",
+          "공원 내 고생대 퇴적층 분포 지역의 지질학적 가치를 재평가하고 지형·지질 자원 보전 계획 수립 시 기초 자료로 활용한다.",
+          "지질학적 중요 지점에 대한 정밀 모니터링을 실시하여 낙석 및 지층 훼손 우려 지역의 안전 점검을 강화한다."
+        ],
+        "korea_np_applicability_score": 4,
+        "korea_np_applicability_reason": "태백산국립공원 등 국내 주요 고생대 지층 분포 지역의 지질학적 형성 배경을 직접적으로 다루고 있어, 공원 내 지질 자원 해설 및 학술적 보전 관리 업무에 매우 유용하다.",
+        "study_location": "국내",
+        "related_work_areas": [
+          "생태계 모니터링·조사",
+          "자원보전·복원",
+          "탐방로·탐방객 관리"
+        ],
+        "related_laws": [
+          "자연공원법 제2조",
+          "자연공원법 제18조"
+        ],
+        "field_checklist": [
+          "태백산국립공원 내 고생대 지층(탄산염암 및 쇄설성 퇴적암) 노두의 풍화 및 훼손 여부 확인",
+          "지질 명소 주변 탐방로의 낙석 및 사면 안정성 정기 점검",
+          "지질 해설판 내용 중 최신 고환경 복원 및 지사(地史) 연구 결과 반영 여부 검토",
+          "퇴적암층 분포 지역 내 불법 굴착 및 지형 훼손 행위 단속",
+          "학술적 가치가 높은 지질·고생물 산출지의 보호 구역 지정 타당성 조사"
+        ],
+        "practical_utility_score": 4,
+        "cautions": [
+          "지질학적 전문 용어가 많으므로 탐방객 대상 해설 시 쉬운 언어로 재가공이 필요하다.",
+          "지층 노두 조사 및 시료 채취 시 자연공원법에 따른 허가 절차를 반드시 준수해야 한다."
+        ],
+        "tags": [
+          "태백산분지",
+          "전기고생대",
+          "순차층서",
+          "쇄설성저어콘",
+          "지질공원"
+        ],
+        "recommended_followup_research": [
+          "태백산국립공원 내 세부 층준별 고환경 변화에 따른 미화석 및 고생물 군집 분석",
+          "기후변화 및 풍화 작용에 따른 고생대 지층 노두의 훼손 속도 정량화 연구"
+        ],
+        "ai_recommended_topics": [
+          "Taebaeksan Basin stratigraphy",
+          "Cambrian-Ordovician sedimentary provenance Korea"
+        ],
+        "analyzed_at": "2026-11-21T10:43:34Z",
         "model": "gemini-flash-lite-latest"
       }
     },
@@ -505410,32 +505678,6 @@
       }
     },
     {
-      "id": "W2983958432",
-      "source": "openalex",
-      "title": "Basin Evolution of the Taebaeksan Basin during the Early Paleozoic",
-      "abstract": "본 연구는 최근 수행된 퇴적층서학 및 고생물학적 연구결과를 종합하고, 새롭게 분석된 자료를 보강하여, 전기 고생대 태백산분지의 고환경과 고지리를 복원하였다. 또한 순차층서학적 방법을 사용하여 조구조적 운동과 해수면 변동을 추적하여 종합적인 분지해석을 수행하였다. 태백산분지는 태백, 정선-평창, 영월-제천, 문경 지역에 넓게 분포하고 있으며, 암상 및 층서 특성에 따라 태백, 영월, 용탄, 평창, 문경 층군으로 구분되어 조사 및 연구가 진행되어 왔다. 태백산분지의 퇴적체는 탄산염암과 규산쇄설성 퇴적암이 혼합되어 있는데, 최근 쇄설성 퇴적물의 기원과 퇴적 연대에 대한 연구가 집중적으로 이루어졌다. 태백산분지에 공급되는 쇄설성 퇴적물의 근원지는 크게 곤드와나지괴와 한중지괴 기원지로 나누어진다. 태백산분지의 형성 초기에 태백대지와 정선-평창대지는 주로 한중지괴 기원지로부터 퇴적물을 공급 받았으며, 영월-제천 대지는 지리적 혹은 지형적 분리에 의해 한중지괴의 영향이 차단되고, 주로 곤드와나지괴 기원지로부터 퇴적층을 공급받았다. 쇄설성 저어콘 분석 결과는 중기 캠브리아 시기의 전 지구적 해수면 상승으로 인해 태백산분지 전체적으로 곤드와나지괴 기원의 퇴적물이 공급되었으며, 한중지괴 기원의 퇴적물은 공급이 멈추었음을 보여주고 있다. 한편, 태백산분지의 북쪽에 분포하는 정선-평창 대지의 퇴적체는 전기 캠브리아기와 오르도비스기 지층사이에 부정합 관계를 보여주고 있는데, 이것은 중기-후기 캠브리아 시기에 전 지구적 해수면 상승효과를 상쇄할 규모의 지역적 융기 운동이 정선-평창 대지 인근에서 존재했음을 보여준다. 이러한 융기운동은 최후기 캠브리아기와 최전기 오르도비스기에 태백산 분지 전역으로 확대되었다. 최전기 오르도비스기 이후에 태백산 분지는 조구조적으로 안정화되었고, 분지 전체적으로 해수면이 상승하면서 천해 탄산염 퇴적환경이 조성되어 두꺼운 탄산염암이 형성되었다. 전기 고생대 태백산분지의 퇴적작용은 후기 오르도비스기 동안 태백산분지와 한중지괴 전역에서 발생한 융기운동에 의해 종료되었다. This study reconstructed the paleoenvironments and paleogeography of the Taebaeksan Basin, through a review of the previous researches on sedimentology, paleontology and stratigraphy. This study also carried out a sequence stratigraphic analysis on regional tectonism and sea-level fluctuations on the basin during the Early Paleozoic. The basin broadly occur in the Taebaek, Yeongweol-Jecheon, Jeongseon-Pyeongchang, and Mungyeong areas, Gangwon province, South Korea. The basin-fills are composed mainly of mixed carbonates and siliciclastics, divided into the Taebaek, Yeongweol, Yongtan, Pyeongchang and Mungyeong groups according to lithologies and stratigraphic characteristics. Recently, there are a lot of studies on the provenance and depositional ages of the siliciclastic sequences of the basin. The detrital sediments of the basin would be derived from two separated provenances of the core-Gondwana and Sino-Korean cratons. In the Early Cambrian, the Taebaek and Jeongseon-Pyeongchang platforms have most likely received detrital sediments from the provenance of the Sino-Korean craton. On the other hand, the detrital sediments of the Yeongweol-Jecheon platform was probably sourced by those of the core-Gondwana craton. This separation of provenance can be interpreted as the result of the paleogeographic and paleotopographic separation of the Yeongweol-Jecheon platform from the Taebaek and Jeongseon-Pyeongchang platforms. The analyses on detrital zircons additionally reveal that the separation of provenance was ceased by the eustatic rise of sea-level during the Middle Cambrian, and the detrital sediments of the Taebaeksan Basin were entirely supplied from those of the core-Gondwana craton. During that period, sediment supply from the Sino-Korean craton would be restricted due to inundation of the provenance area of the craton. On the other hand, the Jeongseon-Pyeongchang platform sequences show the unconformable relationship between the Early Cambrian siliciclastic and the Early Ordovician carbonate strata. It is indicative of presence of regional uplift movements around the platform which would be to the extent offset of the effects of the Middle to Late Cambrian eustatic sealevel rise. These movements expanded and were reinforced across the basin in the latest Cambrian and earliest Ordovician. After the earliest Ordovician, the basin was tectonically stabilized, and the shallow marine carbonate environments were developed on the whole-platform by the Early Ordovician global eustatic sea-level rise, forming very thick carbonate strata in the basin. In the Late Ordovician, the Early Paleozoic sedimentation on the basin was terminated by the large-scale tectonic uplift across the Sino-Korean platform including the Taebaeksan Basin.",
-      "authors": [
-        "Yi Kyun Kwon",
-        "Yoo Jin Kwon",
-        "Jung Min Yeo",
-        "Changyoon Lee"
-      ],
-      "year": 2019,
-      "journal": "Economic and Environmental Geology",
-      "cited_by_count": 11,
-      "doi": "https://doi.org/10.9719/eeg.2019.52.5.427",
-      "is_oa": true,
-      "oa_url": "https://www.koreascience.kr:443/article/JAKO201931961769762.pdf",
-      "concepts": [
-        "Paleozoic",
-        "Structural basin",
-        "Geology",
-        "Paleontology"
-      ],
-      "openalex_url": "https://openalex.org/W2983958432",
-      "ai_analysis": null
-    },
-    {
       "id": "W1971466649",
       "source": "openalex",
       "title": "Corrigendum: Good governance and tourism development in protected areas: The case of Phong Nha-Ke Bang National Park, central Vietnam",
@@ -505679,6 +505921,24 @@
       "ai_analysis": null
     },
     {
+      "id": "W4246332032",
+      "source": "openalex",
+      "title": "Evaluación de senderos de montaña y medidas de manejo para mitigar impactos en el Parque Nacional Torres del Paine, Chile",
+      "abstract": "Este estudio evalúa los impactos en las proximidades de los campamentos en los principales senderos de montaña del Parque Nacional Torres del Paine, reconocido actualmente como uno de los lugares más populares para realizar senderismo en Chile, y que en las últimas décadas ha experimentado un constante y progresivo aumento de visitantes en busca de naturaleza y aventura.Los cambios biofísicos identificados en el área de estudio, como el ancho de los senderos, profundidad de la huella, exposición de raíces, transformación del suelo y formación de multihuellas debido al tránsito de visitantes por los circuitos de montaña, indican la necesidad de implementar acciones de manejo que permitan disminuir los impactos ambientales y mejorar la calidad de experiencia de los visitantes.Analizando el tipo y grado de impacto en los tramos de senderos evaluados, así como su relación con las actividades recreativas ofrecidas en el parque nacional, se tiene un mejor conocimiento sobre el estado en que se encuentran, además de tener argumentos y proponer acciones para mitigar los impactos negativos actuales y prevenir los riesgos futuros.En este sentido, se han reconocido las problemáticas y/o conflictos que afectan directamente al estado de los senderos; se han propuesto acciones a los administradores y gestores de esta área silvestre protegida y del área privada inserta dentro del parque para disminuir y mitigar los impactos encontrados, lo que permite trabajar en pro del gran reto de encontrar un equilibrio adecuado entre la conservación y el uso turístico, como prioridad para el Parque Nacional Torres del Paine.",
+      "authors": [],
+      "year": 2018,
+      "journal": "Áreas Naturales Protegidas Scripta",
+      "cited_by_count": 2,
+      "doi": "https://doi.org/10.18242/anpscripta.2018.04.04.02.0001",
+      "is_oa": true,
+      "oa_url": "https://doi.org/10.18242/anpscripta.2018.04.04.02.0001",
+      "concepts": [
+        "Geography"
+      ],
+      "openalex_url": "https://openalex.org/W4246332032",
+      "ai_analysis": null
+    },
+    {
       "id": "W4248812053",
       "source": "openalex",
       "title": "Supplemental Material: U-Pb detrital zircon ages of Cambrian–Ordovician sandstones from the Taebaeksan Basin, Korea: Provenance variability in platform shelf sequences and paleogeographic implications",
@@ -505807,6 +506067,53 @@
         "Computer science"
       ],
       "openalex_url": "https://openalex.org/W1900849369",
+      "ai_analysis": null
+    },
+    {
+      "id": "W3008522732",
+      "source": "openalex",
+      "title": "Vascular Plants Distributed in Honam-Jeongmeak(Mandeoksan, Chuwolsan, Cheonunsan, Jeamsan) and Geumnamhonam-Jeongmaek(Jangansan, Palgongsan)",
+      "abstract": "The purpose of this study is to present the basic data for establishing the management plan of forest ecosystem in Honam-Jeongmeak and Geumnamhonam-Jeongmaek by surveying and analysing the vascular plants distributed in Jangansan(A-site), Palgongsan(B-site), Mandeoksan(C-site), Chuwolsan (D-site), Cheonunsan(E-site) and Jeamsan(F-site). The numbers of flora were 813 taxa including 115 families, 406 genera, 700 species, 4 subspecies, 94 varieties and 15 forms. There were 500 taxa in A-site, 427 taxa in B-site, 402 taxa in C-site, 449 taxa in D-site, 345 taxa in E-site and 524 taxa in F-site. The rare plants were 12 taxa including Paeonia japonica, Iris minutoaurea, Chloranthus fortunei and so forth. In IUCN Red List categories, there were 1 taxon of EN, 2 taxa of VU, 8 taxa of LC and 1 taxon of DD. The Korean endemic plants were 20 taxa including Salix koriyanagi, Thalictrum actaefolium var. brevistylum, Saussurea pseudogracilis and so forth. The specific plants by floristic region were 108 taxa including 58 taxa of grade I, 30 taxa of grade II, 16 taxa of grade III, 2 taxa of grade IV and grade V, respectively. The plants adaptable to climate change were 18 taxa including 11 taxa of southern plant and 7 taxa of northern plants. The naturalized plants were 49 taxa including Rumex nipponicus, Brassica juncea, Trifolium repens and so forth. The invasive alien plants were 4 taxa including Rumex acetocella, Solanum carolinense, Ambrosia artemisiifolia and Aster pilosus.",
+      "authors": [
+        "Hyun‐Kyung Oh",
+        "You Ju Han"
+      ],
+      "year": 2019,
+      "journal": "Journal of the Korea Society of Environmental Restoration Technology",
+      "cited_by_count": 1,
+      "doi": "https://doi.org/10.13087/kosert.2019.22.3.31",
+      "is_oa": true,
+      "oa_url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002483253",
+      "concepts": [
+        "Biology"
+      ],
+      "openalex_url": "https://openalex.org/W3008522732",
+      "ai_analysis": null
+    },
+    {
+      "id": "W3042568380",
+      "source": "openalex",
+      "title": "Wind Castle: The Natural Intelligence Control of Hallasan-Oreum-Batdam I",
+      "abstract": "제주 윈드캐슬을 정의하고 그 주체인 한라산-오름-밭담의 상호관계를 최초로 분석했다. 제주에는 높이 1.5m의 밭담(Black Silk Road), 368개의 오름, 한라산 1950m, 모두 유니크한 풍광이다. 본 논문의 검증은 삼다수 지하수 채취 해수면이 한라산 높이와 같고 중성대 이론에서 이 문제를 수학적으로 완전하게 증명한다. 돈내코(해발700m)-백록담동릉-진달레밭-성판악-교래(453m)-윗세오름(1700m)은 Rain belt로 남동쪽에서 올라오는 북태평양 습도를 먹은 저기압 기단과 한라산 봉우리의 고기압의 찬공기가 부딪치는 -와+가 합해져서 제로가 되는 중성대이기 때문에 비가 많이 온다. 제주역사에서 한라산을 진산(鎭山)이라고 하는데 그 답은 윈드캐슬이다. 제주 오름 수는 한라산 포함 369이며 50m/s이상 불어오는 태풍에도 약 1.5m 높이인 밭담은 무너지지 않는다. 윈드캐슬의 핵(核)은 밭담 1.5m이고 그것은 삼각수이기 때문이다. We defined Jeju Wind Castle and analyzed the relationship between Hallasan-Oreum-Batdam, the main subject, for the first time. In Jeju, 1.5m high Batdam(Black Silk Road), 368 Oreums, Hallasan Mountain 1950m are all unique scenery. The verification of this paper demonstrates that Samdasoo's groundwater extraction sea level is equal to the height of Hallasan and that this problem is mathematically complete in neutral plane theory. Donnaeko(700meters above sea level)-Baeknokdamdongneung-Jindallebat-Seongpanak-Gyorae(453 meters)-Witsaeoreum(1700meters) is a rain belt that hits the low-air pressure air-conditioned North Pacific humidity rising from the southeast and the high-pressure cold air of Hallasan Peak. It rains a lot because - and + are neutral plane, which adds to zero. Hallasan is called Jinsan in Jeju history. The answer is Wind Castle. The number of Oreum in Jeju is 369 including Hallasan, and Batdam, which is about 1.5m high, does not collapse even with a typhoon blowing over 50m/s. Because the wind castle's core is 1.5 meters of Batdam and it is a triangular number.",
+      "authors": [
+        "Moon-Ho Lee",
+        "Jeong-Su Kim"
+      ],
+      "year": 2020,
+      "journal": "The Journal of the Institute of Webcasting, Internet and Telecommunication",
+      "cited_by_count": 1,
+      "doi": "https://doi.org/10.7236/jiibc.2020.20.3.105",
+      "is_oa": true,
+      "oa_url": "https://www.earticle.net/Article/A377926",
+      "concepts": [
+        "Natural (archaeology)",
+        "Environmental science",
+        "Meteorology",
+        "Marine engineering",
+        "Aeronautics",
+        "Engineering"
+      ],
+      "openalex_url": "https://openalex.org/W3042568380",
       "ai_analysis": null
     },
     {
@@ -506764,6 +507071,31 @@
         "Optics"
       ],
       "openalex_url": "https://openalex.org/W4401403145",
+      "ai_analysis": null
+    },
+    {
+      "id": "W7235829012",
+      "source": "openalex",
+      "title": "Development and application of aquatic ecosystem monitoring approaches for the Peace-Athabasca Delta and Whooping Crane Nesting Region of Wood Buffalo National Park",
+      "abstract": "Shallow waterbodies are abundant in northern regions where their small water volume and large surface area-to-volume ratio make them vulnerable to effects of climate change, natural resource development and long-distance transport of contaminants. Canada’s largest national park, Wood Buffalo National Park, spans the NWT-Alberta border and contains two Ramsar Wetlands of International Importance: The Peace-Athabasca Delta (PAD) and the Whooping Crane Nesting Region (WCNR; hereafter referred to as the Whooping Crane Summer Range (WCSR)). These aquatic landscapes play vital roles in supporting biodiversity and traditional livelihoods of Indigenous Peoples of the region, and in providing habitat for the threatened wood bison (Bison bison athabascae) and the endangered whooping crane (Grus americana). They also underpin the park’s designation as an UNESCO World Heritage Site. Despite these recognitions, increasing concern over aquatic ecosystem degradation due to climate change and industrial development prompted UNESCO to evaluate the park’s status in 2017 and whether it should be downgraded to ‘World Heritage in Danger’. In response, Parks Canada developed an Action Plan in 2019, which was supported by federal investment of $87 million towards its implementation. Key actions include the development and implementation of an integrated aquatic ecosystem monitoring program for the PAD and WCSR to assess how aquatic ecosystems in these landscapes respond to multiple potential stressors – a need that has long been recognized. Monitoring aquatic ecosystems in remote, hydrologically diverse landscapes poses significant challenges, particularly in balancing the need for comprehensive spatial and temporal data with logistical and financial constraints. Effective sampling methodologies that can track changes across a range of timescales (e.g., from hours to years) at a landscape scale can help overcome these barriers and generate critical knowledge to support aquatic ecosystem monitoring programs. At the PAD and WCSR, hydrological processes strongly influence the physical, chemical, and biological conditions of waterbodies. Thus, tracking these processes across space and time must serve as the cornerstone of an aquatic ecosystem monitoring program designed to address longstanding concerns about reduced freshwater availability due to hydroelectric regulation of the Peace River by the WAC Bennett Dam and potential contamination from upstream Alberta Oil Sands operations. This thesis reports results obtained during 2015-2022 using integrated, multi-faceted field-sampling approaches to investigate the responses of shallow waterbodies in two ecologically significant landscapes to anthropogenic stressors. Given the foundational role of hydrology in shaping these aquatic ecosystems, a multi-method approach was used to characterize influential hydrological processes, including episodic river flooding at the PAD, groundwater discharge in the WCSR, as well as precipitation and evaporation. The sampling spanned from continuous hourly water depth measurements to systematic seasonal (spring, summer, fall) measurement of water isotope tracers and water chemistry surveys at ≥60 waterbodies across both landscapes over multiple consecutive years. Additional approaches were employed to assess enrichment of nickel and vanadium, key oil sands indicators, at lakes across the PAD. Key findings presented in this thesis are organized across three data chapters, each contributing advancements to understanding the hydrological processes shaping shallow waterbodies in the PAD and WCSR, as well as contaminant enrichment in fluvial-derived sediment to lakes in the PAD. In Chapter 2 continuous water depth measurements were used to develop a new lake classification scheme for the PAD based on four distinct depth variation patterns associated with a singular, dominant hydrological process: 1) ‘Drawdown’ (≥15 cm decline) by evaporation and/or outflow after ice-jam floods, 2) ‘Stable’ lake levels (<15 cm change) sustained by rainfall, 3) ‘Gradual Rise’ by inundation from the open-drainage network, and 4) ‘Rapid Rise’ by input of river floodwater. River flooding during the open-water season has not been well recognized as an important recharge mechanism for lakes in the PAD, yet it occurred extensively in the Athabasca sector in 2018 and 2019. Retrospective analysis of past peak summer levels of the Athabasca River revealed that open-water flooding equivalent to that of 2018 has likely occurred during 16 years since 1982 (42% of the years). Thus, open-water flooding, a phenomenon rarely reported on in the scientific literature, is a common hydrological process affecting broad areas of the Athabasca sector of the delta. Chapter 3 synthesizes evidence gathered during a 7-year research program at the PAD (from which Chapter 2 emerged) to explore the associations between lake ecosystem processes in the PAD and climate indices, assess if upstream industrial activities have enriched concentrations of substances of concern, and provide a foundation for multi-faceted aquatic ecosystem monitoring at the PAD. Integration of evidence from key metrics, including isotope-inferred lake water balance, water chemistry and contaminant enrichment, was used to identify status and trends over space and time and assist with identifying causes of change. The research coincided with a period of marked climatic variation, which provided opportunity to evaluate the effectiveness of the methodologies and responses of lakes to changes in hydrology and climate. Four key recommendations are provided to operationalize the methodologies and approaches presented in Chapter 3, which strive to maximize the information content of cost-effective measurements to sustain a long-term monitoring program. Chapter 4 extends use of the methodologies beyond the PAD to 63 shallow ponds in the WCSR, to characterize key hydrological processes and their spatial and seasonal patterns in 2022. Peak water levels occurred in spring when consistently low isotope compositions and low concentrations of major nutrients and ions reveal widespread, profound influence of snowmelt runoff. Spatial variability of these measurements increased during summer and fall as connectivity to groundwater waned and influence of evaporation increased at some waterbodies. Water level drawdown was less at waterbodies with strong versus weak groundwater connectivity (median = 23% vs 44% of initial depth, respectively). Geospatial interpolation of a multi-metric ‘Vulnerability Index’, based on isotope-inferred evaporation-to-inflow ratios, water-level drawdown and water chemistry ordination sample scores, identified that Whooping Crane nest locations in 2022 cluster within areas where waterbodies retained strong connectivity to groundwater. Collectively, this research aims to inform the design and implementation of sustainable, long-term monitoring programs for shallow aquatic ecosystems in the PAD and WCSR to enable rapid detection of changes and their causes in the face of accelerating industrial development and climate change. The knowledge gained can be used to guide policy decisions under the WBNP Action Plan, and the methodologies may be applied at other remote, water-rich landscapes to evaluate for changes caused by multiple potential stressors.",
+      "authors": [
+        "Laura Neary"
+      ],
+      "year": 2025,
+      "journal": "UWSpace (University of Waterloo)",
+      "cited_by_count": 0,
+      "doi": "",
+      "is_oa": true,
+      "oa_url": "https://uwspace.uwaterloo.ca/bitstreams/18bd1311-3436-4168-8eee-d3fdaf36be84/download",
+      "concepts": [
+        "National park",
+        "Wetland",
+        "Geography",
+        "Biodiversity",
+        "Threatened species",
+        "Endangered species"
+      ],
+      "openalex_url": "https://openalex.org/W7235829012",
       "ai_analysis": null
     }
   ]
